@@ -1,10 +1,8 @@
-@mixin btn-variant ($color, $background, $border){
+@mixin btn-variant ($color, $background){
 	color: $color;
 	background: $background;
-	border: 1px solid $border;
 	&:hover, &:active, &:focus{
-    	background: darken($background,10%);
-    	border-color:	darken($border,10%);
+    	background: lighten($background, 7.5%);
   	}
 }
 
@@ -14,7 +12,8 @@
 	display: inline-block;
 	margin: 2px 0;
 	padding: 6px 12px;
-	@include btn-variant($btn-color, $btn-background-color, $btn-border-color);
+	border: 0;
+	@include btn-variant($btn-color, $btn-background-color);
 	&.disabled, &[disabled], &fieldset[disabled]{
 		cursor: not-allowed;
 		opacity: .65;
@@ -22,23 +21,15 @@
 }
 
 .btn.btn-b{
-	@include btn-variant($btn-b-color, $btn-b-background-color, $btn-b-border-color);
+	@include btn-variant($btn-color-alt, $btn-b-background-color);
 }
 
 .btn.btn-g{
-	@include btn-variant($btn-g-color, $btn-g-background-color, $btn-g-border-color);
-}
-
-.btn.btn-c{
-	@include btn-variant($btn-c-color, $btn-c-background-color, $btn-c-border-color);
-}
-
-.btn.btn-y{
-	@include btn-variant($btn-y-color, $btn-y-background-color, $btn-y-border-color);
+	@include btn-variant($btn-color-alt, $btn-g-background-color);
 }
 
 .btn.btn-r{
-	@include btn-variant($btn-r-color, $btn-r-background-color, $btn-r-border-color);
+	@include btn-variant($btn-color-alt, $btn-r-background-color);
 }
 
 .btn.btn-lg{

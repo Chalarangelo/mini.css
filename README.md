@@ -4,8 +4,8 @@ A minimal, responsive CSS framework to get you started.
 ## Components
 
 - **base**: normalize.css & basic typography `GZIPPED SIZE`: 1,183 bytes
-- **grid**:	coming soon
-- **button**: coming soon
+- **button**: button styles `GZIPPED SIZE`: 439 bytes
 - **form**: coming soon
-- **table**: coming soon
+- **grid**:	coming soon 
 - **nav**: coming soon
+- **table**: coming soon

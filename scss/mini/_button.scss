@@ -1,0 +1,51 @@
+@mixin btn-variant ($color, $background, $border){
+	color: $color;
+	background: $background;
+	border: 1px solid $border;
+	&:hover, &:active, &:focus{
+    	background: darken($background,10%);
+    	border-color:	darken($border,10%);
+  	}
+}
+
+.btn{
+	border-radius: 4px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 2px 0;
+	padding: 6px 12px;
+	@include btn-variant($btn-color, $btn-background-color, $btn-border-color);
+	&.disabled, &[disabled], &fieldset[disabled]{
+		cursor: not-allowed;
+		opacity: .65;
+	}
+}
+
+.btn.btn-b{
+	@include btn-variant($btn-b-color, $btn-b-background-color, $btn-b-border-color);
+}
+
+.btn.btn-g{
+	@include btn-variant($btn-g-color, $btn-g-background-color, $btn-g-border-color);
+}
+
+.btn.btn-c{
+	@include btn-variant($btn-c-color, $btn-c-background-color, $btn-c-border-color);
+}
+
+.btn.btn-y{
+	@include btn-variant($btn-y-color, $btn-y-background-color, $btn-y-border-color);
+}
+
+.btn.btn-r{
+	@include btn-variant($btn-r-color, $btn-r-background-color, $btn-r-border-color);
+}
+
+.btn.btn-lg{
+	padding: 9px 15px;
+	font-size: 135%;
+}
+.btn.btn-sm{
+	padding: 4px 8px;
+	font-size: 80%;
+}

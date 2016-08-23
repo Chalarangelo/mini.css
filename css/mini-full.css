@@ -12,7 +12,7 @@ html {
 body {
   margin: 0;
   color: #222;
-  background-color: #efefef; }
+  background-color: #f5f5f5; }
 
 /*
 	Correct display in IE 9-.
@@ -65,7 +65,7 @@ hr {
   margin: 0.7em 0;
   height: 0;
   border: 0;
-  border-top: 1px solid #c9c9c9; }
+  border-top: 1px solid #cfcfcf; }
 
 /*
 	Style for all small text and size for sub and sup.
@@ -100,10 +100,10 @@ kbd, code, pre {
   border-radius: 4px; }
 
 code, pre {
-  background-color: #d5d5d5; }
+  background-color: gainsboro; }
 
 kbd {
-  color: #f8f8f8;
+  color: #fefefe;
   background-color: #222; }
 
 pre {
@@ -252,7 +252,7 @@ button, html [type="button"], [type="reset"], [type="submit"] {
 	Style for fieldset.
 */
 fieldset {
-  border: 1px solid #c9c9c9;
+  border: 1px solid #cfcfcf;
   border-radius: 4px;
   margin: 0 2px;
   padding: 0.35em 0.65em 0.75em; }
@@ -627,3 +627,73 @@ textarea {
 
   .lg-no {
     display: none; } }
+/*
+	Mixin for the forms.
+	Parameters:
+	- $frm-name                  :	The class name of the form.
+	- $frm-border                :	The border of the form elements.
+	- $frm-border-radius         :	The border-radius of the form elements.
+	- $frm-margin                :	The margin of the form elements.
+	- $frm-padding               :	The padding of the form elements.
+	- $frm-focus-color           :	The color used to mark the focused form element.
+	- $frm-invalid-color         :	The color used to mark an invalid form element.
+	- $frm-disabled-cursor       :	The cursor style when hovering over disabled form elements.
+	- $frm-disabled-opacity      :	The opacity of the form elements when disabled.
+	- $frm-readonly-bg-color     :  The background color of the form elements when they are readonly.
+	- $frm-readonly-border-color :	The border color of the form elements when they are readonly.
+	- $frm-select-height         :	The height for non-multiline select elements in the form.
+	- $frm-label-margin          :	The margin for the form's label elements.
+	- $frm-ctrl-group-name       :	The class name of the control groups in the form.
+	- $frm-ctl-group-margin      :	The margin for control groups inside the form.
+	- $frm-inline-name           :	The class name for forms with inline style.
+	- $frm-aligned-name          :	The class name for forms with aligned style.
+	- $frm-aligned-label-width   :	The width of labels in forms with aligned style. [1]	
+	Notes:
+	// TODO: write notes - does [1] qualify? Should I write more notes? We'll see - probably note that elements like submit and button are not styled etc.
+*/
+.frm input[type="color"], .frm input[type^="date"], .frm input[type$="time"], .frm input[type="email"],
+.frm input[type="month"], .frm input[type="week"], .frm input[type="text"], .frm input[type="password"],
+.frm input[type="url"], .frm input[type="number"], .frm input[type="search"], .frm input[type="tel"],
+.frm select, .frm textarea {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: none; }
+.frm input:not([type]) {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: none; }
+.frm input, .frm select, .frm textarea {
+  display: block;
+  margin: 0.2em;
+  padding: 0.3em; }
+  .frm input:focus, .frm select:focus, .frm textarea:focus {
+    border-color: #2678b3; }
+  .frm input[disabled], .frm select[disabled], .frm textarea[disabled] {
+    cursor: not-allowed;
+    opacity: 0.65; }
+  .frm input:invalid, .frm input:focus:invalid, .frm input:focus:invalid:focus, .frm select:invalid, .frm select:focus:invalid, .frm select:focus:invalid:focus, .frm textarea:invalid, .frm textarea:focus:invalid, .frm textarea:focus:invalid:focus {
+    border-color: #e9322d; }
+  .frm input[readonly], .frm select[readonly], .frm textarea[readonly] {
+    background-color: gainsboro;
+    border-color: #b5b5b5; }
+.frm input[type="checkbox"], .frm input[type="radio"] {
+  display: inline-block; }
+.frm select {
+  height: 1.9em; }
+  .frm select[multiple] {
+    height: auto; }
+.frm label {
+  margin: 0.5em 0 0 0.2em; }
+.frm.inline input, .frm.inline select, .frm.inline textarea, .frm.inline label, .frm.aligned input, .frm.aligned select, .frm.aligned textarea, .frm.aligned label {
+  display: inline-block; }
+.frm.inline .ctrl-group {
+  display: inline-block; }
+.frm.aligned .ctrl-group label {
+  text-align: right;
+  vertical-align: middle;
+  width: 15em;
+  margin-top: 0; }
+.frm .ctrl-group {
+  margin: 0 0 0.3em 0; }

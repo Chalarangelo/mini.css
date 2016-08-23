@@ -3,7 +3,7 @@ $base-fonts:					"\"Helvetica Neue\", Helvetica, sans-serif";	// Font-family
 $base-font-size:				1em;											// Font-size
 $base-line-height:				1.5;											// Line-height
 $body-margin:					0;												// Margin for body
-$body-bg-color:					#efefef;										// Body background color
+$body-bg-color:					#f5f5f5;										// Body background color
 $body-color:					#222;											// Body text color
 $header-line-height-multiplier:	0.8;											// Multiplier for line height of headers					 
 $header-margin:					0.7em 0;										// Margin for headers
@@ -32,7 +32,7 @@ $kbd-color:						lighten($body-bg-color, 3.5%);					// Kbd text color
 $a-color:						#2678b3;										// Hyperlink text color
 $a-hover-color:					lighten($a-color, 10%);							// Hyperlink hover text color
 $a-visited-color:				darken($a-color, 10%);							// Hyperlink visited text color
-$a-visited-hover-color:			#2678b3;										// Hyperlink visited hover text color
+$a-visited-hover-color:			$a-color;										// Hyperlink visited hover text color
 $mark-bg-color:					#ffff33;										// Mark background color
 $mark-color:					$body-color;									// Mark text color
 $sub-bottom:					-0.25em;										// Sub bottom

@@ -11,3 +11,6 @@
 @import 'mini/grid';
 // Use grid mixin to create grid with default specs.
 @include make-grid(grid-container, 0, row, col, 12, 12px, xs, sm, md, lg, no, 768px, 1024px, 1280px);
+@import 'mini/form';
+// Use form mixin to create form with default specs.
+@include make-frm(frm, 1px solid #ccc, 4px, 0.2em, 0.3em, #2678b3, #e9322d, not-allowed, .65, darken($body-bg-color,10%), darken($body-bg-color,25%), 1.9em, 0.5em 0 0 0.2em, ctrl-group,  0 0 0.3em 0, inline, aligned,15em);

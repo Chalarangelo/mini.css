@@ -1,43 +1,106 @@
-@mixin btn-variant ($color, $background){
-	color: $color;
-	background: $background;
+/*
+	Mixin for button color variant. 
+	Parameters:
+	- $btn-variant-color                  :	The text color of the button variant.
+	- $btn-variant-bg-color               :	The background color of the button variant.
+	- $btn-variant-hover-style	          :	Hover/active/focus style of the button variant. [1]
+	- $btn-variant-hover-style-percentage :	Hover/active/focus style of the button variant percentage modifier.
+	Notes:
+	- [1] : The values that $btn-variant-hover-style can take are `lighten` and `darken`. The inside condition
+		only checks if the value is `lighten` and acts accordingly. Invalid values are treated as `darken`.
+	- [2] : Do not use this mixin directly, use `make-btn-style` instead.
+*/
+@mixin btn-variant ($btn-variant-color, $btn-variant-bg-color, $btn-variant-hover-style, $btn-variant-hover-style-percentage){
+	color: $btn-variant-color;
+	background: $btn-variant-bg-color;
 	&:hover, &:active, &:focus{
-    	background: lighten($background, 7.5%);
+		@if $btn-variant-hover-style == 'lighten'{
+    		background: lighten($btn-variant-bg-color, $btn-variant-hover-style-percentage);
+    	}
+    	@else{
+    		background: darken($btn-variant-bg-color, $btn-variant-hover-style-percentage); // 7.5%
+    	}
+
   	}
 }
-
-.btn, a.btn, a.btn:visited{
-	border-radius: 4px;
-	cursor: pointer;
-	display: inline-block;
-	margin: 2px 0;
-	padding: 6px 12px;
-	border: 0;
-	@include btn-variant($btn-color, $btn-background-color);
-	&.disabled, &[disabled], &fieldset[disabled]{
-		cursor: not-allowed;
-		opacity: .65;
+/*
+	Mixin for the buttons.
+	Parameters:
+	- $btn-name                   :	The class name of the buttons.
+	- $btn-border                 :	The border of the buttons.
+	- $btn-border-radius          :	The border-radius of the buttons.
+	- $btn-margin                 :	The margin of the buttons.
+	- $btn-padding                :	The padding of the buttons.
+	- $btn-color                  :	The text color of the buttons.
+	- $btn-bg-color               :	The background color of the buttons.
+	- $btn-hover-style            :	Hover/active/focus style of the buttons. [1]
+	- $btn-hover-style-percentage :	Hover/active/focus style of the buttons percentage modifier.
+	- $btn-cursor                 :	The cursor style when hovering over the buttons.
+	- $btn-disabled-cursor        :	The cursor style when hovering over the buttons whie disabled.
+	- $btn-disabled-opacity       :	The opacity of the buttons when disabled.
+	Notes:
+	- [1] : The values that $btn-hover-style can take are `lighten` and `darken`. The inside condition only 
+		checks if the value is `lighten` and acts accordingly. Invalid values are treated as `darken`.
+	- [2] : This only creates a basic button style. For more styles use `make-btn-style`.
+*/
+@mixin make-btn(	$btn-name, $btn-border, $btn-border-radius, $btn-margin, 
+					$btn-padding, $btn-color, $btn-bg-color,
+					$btn-hover-style, $btn-hover-style-percentage, 
+					$btn-cursor, $btn-disabled-cursor, $btn-disabled-opacity){
+	.#{$btn-name}, a.#{$btn-name}, a.#{$btn-name}:visited{
+		display: inline-block;
+		border: $btn-border;
+		border-radius: $btn-border-radius;
+		margin: $btn-margin;
+		padding: $btn-padding;
+		@include btn-variant($btn-color, $btn-bg-color, $btn-hover-style, $btn-hover-style-percentage);
+		cursor: $btn-cursor;
+		&.disabled, &[disabled], &fieldset[disabled]{
+			cursor: $btn-disabled-cursor;
+			opacity: $btn-disabled-opacity;
+		}
 	}
 }
-
-
-.btn.blue, a.btn.blue, a.btn.blue:visited{
-	@include btn-variant($btn-color-alt, $btn-b-background-color);
+/*
+	Mixin for button styles. 
+	Parameters:
+	- $btn-name                         : The class name of the buttons. [1]
+	- $btn-style-name                   : The class name of the button style.
+	- $btn-style-color                  : The text color of the button style.
+	- $btn-style-bg-color               : The background color of the button style.
+	- $btn-style-hover-style	        : Hover/active/focus style of the button style. [2][3]
+	- $btn-style-hover-style-percentage : Hover/active/focus style of the button style percentage modifier.[3]
+	Notes:
+	- [1] : The value of $btn-name must be the same as the value specified when using `make-btn`, otherwise
+		the specified style will not work correctly.
+	- [2] : The values that $btn-style-hover-style can take are `lighten` and `darken`. The inside condition
+		only checks if the value is `lighten` and acts accordingly. Invalid values are treated as `darken`.
+	- [3] : The values of $btn-style-hover-style and $btn-style-hover-style-percentage default to `lighten`
+		and `7.5%` if not specified.
+	- [4] : This mixin should be used in combination with `make-btn` and is suggested that you use it after
+		`make-btn`.
+*/
+@mixin make-btn-style($btn-name, $btn-style-name, $btn-style-color, $btn-style-bg-color, $btn-style-hover-style: lighten, $btn-style-hover-style-percentage: 7.5%){
+	.#{$btn-name}.#{$btn-style-name}, a.#{$btn-name}.#{$btn-style-name}, a.#{$btn-name}.#{$btn-style-name}:visited{
+		@include btn-variant($btn-alt-color, $btn-style-bg-color, $btn-style-hover-style, $btn-style-hover-style-percentage);
+	}
 }
-
-.btn.green, a.btn.green, a.btn.green:visited{
-	@include btn-variant($btn-color-alt, $btn-g-background-color);
-}
-
-.btn.red, a.btn.red, a.btn.red:visited{
-	@include btn-variant($btn-color-alt, $btn-r-background-color);
-}
-
-.btn.lg{
-	padding: 9px 15px;
-	font-size: 135%;
-}
-.btn.sm{
-	padding: 4px 8px;
-	font-size: 80%;
+/*
+	Mixin for button sizes. 
+	Parameters:
+	- $btn-name           : The class name of the buttons. [1]
+	- $btn-size-name      : The class name of the button size.
+	- $btn-size-padding   : The padding of the button size.
+	- $btn-size-font-size : The font-size of the button size.
+	Notes:
+	- [1] : The value of $btn-name must be the same as the value specified when using `make-btn`, otherwise
+		the specified style will not work correctly.
+	- [2] : This mixin should be used in combination with `make-btn` and is suggested that you use it after
+		`make-btn`.
+*/
+@mixin make-btn-size($btn-name, $btn-size-name, $btn-size-padding, $btn-size-font-size){
+	.#{$btn-name}.#{$btn-size-name}{
+		padding: $btn-size-padding;
+		font-size: $btn-size-font-size;
+	}
 }

@@ -14,7 +14,7 @@ $h3-multiplier:					1.15;											// Header 3 font-sze multiplier
 $h4-multiplier:					1;												// Header 4 font-sze multiplier
 $h5-multiplier:					0.8;											// Header 5 font-sze multiplier
 $h6-multiplier:					0.7;											// Header 6 font-sze multiplier
-$header-small-color:			lighten($body-color, 15%);						// Header small text color
+$header-small-color:			lighten($body-color, 20%);						// Header small text color
 $header-small-font-weight:		200;											// Header small font weight
 $hr-line-height-multiplier:		0.8;											// Multiplier for line height of horizontal rule
 $hr-margin:						0.7em 0;										// Margin for horizontal rule
@@ -45,12 +45,10 @@ $fieldset-border:				1px solid darken($body-bg-color, 15%);			// Border style fo
 $fieldset-border-radius:		4px;											// Border radius for fieldset
 $fieldset-margin:				0 2px;											// Margin for fieldset
 $fieldset-padding:				0.35em 0.65em 0.75em;							// Padding for fieldset
-
-
-// Button defaults							
-$btn-color:									#2a2a2a;
-$btn-color-alt:								#eeeeee;
-$btn-background-color:						#c2c2c2;
-$btn-b-background-color:					#3f84b3;
-$btn-g-background-color:					#2db747;
-$btn-r-background-color:					#ea4848;
+// Button default colors						
+$btn-default-color:							#2a2a2a;							// Default text color for buttons
+$btn-alt-color:								#eeeeee;							// Alternative text color for buttons
+$btn-default-bg-color:						#c2c2c2;							// Default background color for buttons
+$btn-b-bg-color:							#3f84b3;							// Color for button style 1
+$btn-g-bg-color:							#2db747;							// Color for button style 2
+$btn-r-bg-color:							#ea4848;							// Color for button style 3

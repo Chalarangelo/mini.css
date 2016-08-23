@@ -2,3 +2,5 @@
 @import 'mini/base';
 @import 'mini/button';
 @import 'mini/grid';
+// Use grid mixin to create grid with default specs.
+@include make-grid(grid-container, 12px, row, col, 12, 12px, xs, sm, md, lg, no, 768px, 1024px, 1280px);

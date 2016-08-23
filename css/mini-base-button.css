@@ -203,43 +203,44 @@ textarea {
   -webkit-appearance: button;
   font: inherit; }
 
-.btn {
+.btn, a.btn, a.btn:visited {
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
   margin: 2px 0;
   padding: 6px 12px;
   border: 0;
+  text-decoration: none;
   color: #2a2a2a;
-  background: #dbdbdb; }
-  .btn:hover, .btn:active, .btn:focus {
-    background: #eeeeee; }
-  .btn.disabled, .btn[disabled], .btnfieldset[disabled] {
+  background: #c2c2c2; }
+  .btn:hover, .btn:active, .btn:focus, a.btn:hover, a.btn:active, a.btn:focus, a.btn:visited:hover, a.btn:visited:active, a.btn:visited:focus {
+    background: #d5d5d5; }
+  .btn.disabled, .btn[disabled], .btnfieldset[disabled], a.btn.disabled, a.btn[disabled], a.btnfieldset[disabled], a.btn:visited.disabled, a.btn:visited[disabled], a.btn:visitedfieldset[disabled] {
     cursor: not-allowed;
     opacity: .65; }
 
-.btn.btn-b {
+.btn.blue, a.btn.blue, a.btn.blue:visited {
   color: #eeeeee;
   background: #3f84b3; }
-  .btn.btn-b:hover, .btn.btn-b:active, .btn.btn-b:focus {
+  .btn.blue:hover, .btn.blue:active, .btn.blue:focus, a.btn.blue:hover, a.btn.blue:active, a.btn.blue:focus, a.btn.blue:visited:hover, a.btn.blue:visited:active, a.btn.blue:visited:focus {
     background: #5597c3; }
 
-.btn.btn-g {
+.btn.green, a.btn.green, a.btn.green:visited {
   color: #eeeeee;
   background: #2db747; }
-  .btn.btn-g:hover, .btn.btn-g:active, .btn.btn-g:focus {
+  .btn.green:hover, .btn.green:active, .btn.green:focus, a.btn.green:hover, a.btn.green:active, a.btn.green:focus, a.btn.green:visited:hover, a.btn.green:visited:active, a.btn.green:visited:focus {
     background: #3bcf57; }
 
-.btn.btn-r {
+.btn.red, a.btn.red, a.btn.red:visited {
   color: #eeeeee;
   background: #ea4848; }
-  .btn.btn-r:hover, .btn.btn-r:active, .btn.btn-r:focus {
+  .btn.red:hover, .btn.red:active, .btn.red:focus, a.btn.red:hover, a.btn.red:active, a.btn.red:focus, a.btn.red:visited:hover, a.btn.red:visited:active, a.btn.red:visited:focus {
     background: #ee6a6a; }
 
-.btn.btn-lg {
+.btn.lg {
   padding: 9px 15px;
   font-size: 135%; }
 
-.btn.btn-sm {
+.btn.sm {
   padding: 4px 8px;
   font-size: 80%; }

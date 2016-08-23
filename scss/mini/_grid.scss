@@ -1,140 +1,112 @@
-.grid-container *{
-	box-sizing: border-box; 
-}
-
-.row:before, .row:after {
-	content:"";
-	display: table ;
-	clear:both;
-}
-
-.col{
-	float: left;
-	padding: 12px;
-}
-
-.xs-3-1{
-	width: (100% / 3);
-}
-.xs-3-2{
-	width: 2 * (100% / 3);
-}
-.xs-3-3{
-	width: 3 * (100% / 3);
-}
-
-.xs-4-1{
-	width: (100% / 4);
-}
-.xs-4-2{
-	width: 2 * (100% / 4);
-}
-.xs-4-3{
-	width: 3 * (100% / 4);
-}
-.xs-4-4{
-	width: 4 * (100% / 4);
-}
-
-.xs-no{
-	display: none;
-}
-.sm-no, .md-no, .lg-no{
-	display: block;
-}
-
-@media (min-width: 768px){
-	.sm-3-1{
-		width: (100% / 3);
+/*
+	Mixin for responsive, mobile-first grid. 
+	Parameters:
+	- $container-name    :	The class name of the container for the grid.
+	- $container-padding :	The left and right padding of the container. [1]
+	- $row-name          :	The class name of the grid's rows.
+	- $col-name          :	The class name of the grid's columns.
+	- $col-number        :	The amount of columns in the grid.
+	- $xs-prefix         : 	Class prefix for extra small screens.
+	- $sm-prefix         : 	Class prefix for small screens.
+	- $md-prefix         : 	Class prefix for medium screens.
+	- $lg-prefix         : 	Class prefix for large screens.
+	- $hide-suffix       : 	Class suffix for hidden columns. [2]
+	- $sm-breakpoint     : 	Breakpoint for small screens.
+	- $md-breakpoint     : 	Breakpoint for medium screens.
+	- $lg-breakpoint     : 	Breakpoint for large screens.
+	Notes:
+	- [1] : The padding of the container might cause the page to grow by $container-padding to the right. This 
+			can be fixed either via @media queries or setting the padding to 0.
+	- [2] :	Columns with the $hide-suffix will be only hidden in the screen size specified.
+*/
+@mixin make-grid(	$container-name, $container-padding, 
+					$row-name, $col-name, $col-number, $col-padding, 
+					$xs-prefix, $sm-prefix, $md-prefix, $lg-prefix, $hide-suffix,
+					$sm-breakpoint, $md-breakpoint, $lg-breakpoint	){
+	// Container
+	.#{$container-name}{
+		padding-right: $container-padding;
+		padding-left: $container-padding;
+		margin-right: auto;
+		margin-left: auto;
+		width: 100%;
+		*{
+			box-sizing: border-box;
+		}
 	}
-	.sm-3-2{
-		width: 2 * (100% / 3);
+	// Row
+	.#{$row-name}{
+		&:before, &:after{
+			content: "";
+			display: table;
+			clear: both;
+		}
 	}
-	.sm-3-3{
-		width: 3 * (100% / 3);
+	// Column
+	.#{$col-name}{
+		float: left;
+		padding: $col-padding;
 	}
-
-	.sm-4-1{
-		width: (100% / 4);
+	// Extra small screen
+	@for $i from 1 through $col-number{
+		.#{$xs-prefix}-#{$i}{
+			width: #{($i * 100% / $col-number)};
+		}
 	}
-	.sm-4-2{
-		width: 2 * (100% / 4);
-	}
-	.sm-4-3{
-		width: 3 * (100% / 4);
-	}
-	.sm-4-4{
-		width: 4 * (100% / 4);
-	}
-
-	.sm-no{
-		display: none;
-	}
-	.xs-no, .md-no, .lg-no{
+	.#{$sm-prefix}-#{$hide-suffix}, 
+	.#{$md-prefix}-#{$hide-suffix}, 
+	.#{$lg-prefix}-#{$hide-suffix}{
 		display: block;
 	}
-}
-
-@media (min-width: 1024px){
-	.md-3-1{
-		width: (100% / 3);
-	}
-	.md-3-2{
-		width: 2 * (100% / 3);
-	}
-	.md-3-3{
-		width: 3 * (100% / 3);
-	}
-
-	.md-4-1{
-		width: (100% / 4);
-	}
-	.md-4-2{
-		width: 2 * (100% / 4);
-	}
-	.md-4-3{
-		width: 3 * (100% / 4);
-	}
-	.md-4-4{
-		width: 4 * (100% / 4);
-	}
-
-	.md-no{
+	.#{$xs-prefix}-#{$hide-suffix}{
 		display: none;
 	}
-	.xs-no, .sm-no, .lg-no{
-		display: block;
-	}	
-}
-
-@media (min-width: 1280px){
-	.lg-3-1{
-		width: (100% / 3);
+	// Small screen
+	@media (min-width: $sm-breakpoint){
+		@for $i from 1 through $col-number{
+			.#{$sm-prefix}-#{$i}{
+				width: #{($i * 100% / $col-number)};
+			}
+		}
+		.#{$xs-prefix}-#{$hide-suffix}, 
+		.#{$md-prefix}-#{$hide-suffix}, 
+		.#{$lg-prefix}-#{$hide-suffix}{
+			display: block;
+		}
+		.#{$sm-prefix}-#{$hide-suffix}{
+			display: none;
+		}	
 	}
-	.lg-3-2{
-		width: 2 * (100% / 3);
+	// Medium screen
+	@media (min-width: $md-breakpoint){
+		@for $i from 1 through $col-number{
+			.#{$md-prefix}-#{$i}{
+				width: #{($i * 100% / $col-number)};
+			}
+		}
+		.#{$xs-prefix}-#{$hide-suffix}, 
+		.#{$sm-prefix}-#{$hide-suffix}, 
+		.#{$lg-prefix}-#{$hide-suffix}{
+			display: block;
+		}
+		.#{$md-prefix}-#{$hide-suffix}{
+			display: none;
+		}	
 	}
-	.lg-3-3{
-		width: 3 * (100% / 3);
-	}
-
-	.lg-4-1{
-		width: (100% / 4);
-	}
-	.lg-4-2{
-		width: 2 * (100% / 4);
-	}
-	.lg-4-3{
-		width: 3 * (100% / 4);
-	}
-	.lg-4-4{
-		width: 4 * (100% / 4);
-	}
-
-	.lg-no{
-		display: none;
-	}
-	.xs-no, .sm-no, .md-no{
-		display: block;
+	// Large screen
+	@media (min-width: $lg-breakpoint){
+		@for $i from 1 through $col-number{
+			.#{$lg-prefix}-#{$i}{
+				width: #{($i * 100% / $col-number)};
+			}
+		}
+		.#{$xs-prefix}-#{$hide-suffix}, 
+		.#{$sm-prefix}-#{$hide-suffix}, 
+		.#{$md-prefix}-#{$hide-suffix}{
+			display: block;
+		}
+		.#{$lg-prefix}-#{$hide-suffix}{
+			display: none;
+		}
 	}
 }

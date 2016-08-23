@@ -1,94 +1,101 @@
+/*
+	Set font-family, line-height, prevent adjustments of font size after orientation changes in IE and iOS.
+	Set body colors and margin.
+*/
 html {
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 1em;
-	line-height: 1.5;
+	font-family: #{$base-fonts};
+	font-size: $base-font-size;
+	line-height: $base-line-height;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%; 
 }
 body {
-	margin: 0;
+	margin: $body-margin;
 	color: $body-color;
-	background-color: $body-background-color;
+	background-color: $body-bg-color;
 }
+/*
+	Correct display in IE 9-.
+*/
 article,	aside,	footer,	header,	nav,	section,	figcaption,	figure,	main,	details, 	menu {
 	display: block;
 }
-
-h1, h2, h3, h4, h5, h6, hr{
-	line-height: 1.3;
-	margin: 0.7em 0;
-	font-weight: 500;
+/*
+	Correct margin in IE 8.
+*/
+figure {
+	margin: 1em 40px;
+}
+/*
+	Styles for  headers.
+*/
+h1, h2, h3, h4, h5, h6{
+	line-height:  $base-line-height * $header-line-height-multiplier;
+	margin: $header-margin ;
+	font-weight: $header-font-weight ;
 	small{
-		color: lighten($body-color, 15%);
-		font-weight: 200;
+		color: $header-small-color ;
+		font-weight: $header-small-font-weight ;
 	}
 }
-
-h1{
-	font-size: 2em;
+h1{	font-size: $base-font-size  * $h1-multiplier;	}
+h2{	font-size: $base-font-size  * $h2-multiplier;	}
+h3{	font-size: $base-font-size  * $h3-multiplier;	}
+h4{	font-size: $base-font-size  * $h4-multiplier;	}
+h5{	font-size: $base-font-size  * $h5-multiplier;	}
+h6{	font-size: $base-font-size  * $h6-multiplier;	}
+/*
+	Correct box-sizing in Firefox.
+	Style for horizontal rule.
+*/
+hr {
+	box-sizing: content-box; 
+	line-height: $base-line-height * $hr-line-height-multiplier ;
+	margin: $hr-margin ;
+	height: 0;
+	border: 0;
+	border-top: $hr-border-style;
 }
-
-h2{
-	font-size: 1.5em;
+/*
+	Style for all small text and size for sub and sup.
+*/
+small, sub,	sup{
+	font-size: $small-font-size;
 }
-
-h3{
-	font-size: 1.15em;
-}
-
-h4{
-	font-size: 1em;
-}
-
-h5{
-	font-size: 0.8em;
-}
-
-h6{
-	font-size: 0.7em;
-}
-
-small{
-	font-size: 75%;
-}
-
+/*
+	Style for paragraph and preformatted elements.
+*/
 p, pre {
-  margin: 0 0 0.6em;
+  margin: $p-margin;
 }
-
+/*
+	Style for lists.
+*/
 ul,	ol {
-	margin-top: 0;
-	margin-bottom: 0.6em;
+	margin-top: $list-margin-top;
+	margin-bottom: $list-margin-bottom;
 	ul,	ol {
 		margin-bottom: 0;
 	}
 }
-
-hr {
-	box-sizing: content-box; 
-	height: 0;
-	border:0;
-	border-top:1px solid darken($body-background-color, 15%);
+/*
+	Styles for code and preformatted.
+*/
+samp,	kbd,	code,	pre{
+	font-family: $code-fonts;
+	font-size: $base-font-size;
 }
-
-code,	pre,	kbd,	samp{
-	font-family: monospace;
-	font-size: 1em;
+kbd, code, pre {
+	padding: $code-padding;
+	border-radius: $code-border-radius;
 }
-
-code, pre {
-	padding: 2px 4px;
-	background-color: darken($body-background-color, 8.5%);
-	border-radius: 4px;
+code, pre{
+	background-color: $code-bg-color;
 }
-
 kbd {
-	padding: 2px 4px;
-	color: $body-background-color;
-	background-color: lighten($body-color, 3.5%);
-	border-radius: 4px;
+	color: $kbd-color;
+	background-color: $kbd-bg-color;
 }
-
 pre {
 	display: block;
 	word-break: break-all;
@@ -102,101 +109,132 @@ pre {
 		border-radius: 0;
 	}
 }
-
+/*
+	Style for hyperlinks, remove underline.
+	Remove gray background on active links in IE 10.
+	Remove outline on focused links when they are also active or hovered.
+*/
 a {
 	background-color: transparent; 
-	-webkit-text-decoration-skip: objects;
+	text-decoration: none;
 	color: $a-color; 
 	&:active, &:hover{
 		outline-width: 0;
-		color: lighten($a-color, 10%);
+		color: $a-hover-color;
 	}
 	&:visited{
-		color: darken($a-color, 10%);
+		color: $a-visited-color;
 		&:active, &:hover{
-			color: $a-color; 
+			color: $a-visited-hover-color; 
 		}
 	}
 }
-
-figure {
-	margin: 1em 40px;
+/*
+	Prevent the duplicate application of `bolder` in Safari 6.
+*/
+b,	strong {
+	font-weight: inherit;
 }
-
+/*
+	Correct font weight in Chrome, Edge, Safari.
+*/
+b,	strong {
+	font-weight: bolder;
+}
+/*
+	Correct font style in Android 4.3-.
+*/
+dfn {
+  font-style: italic;
+}
+/*
+	Remove botom border in Firefox 39-.
+	Correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+*/
 abbr[title] {
 	border-bottom: none; 
 	text-decoration: underline; 
 	text-decoration: underline dotted; 
 }
-
-b,	strong {
-	font-weight: inherit;
-}
-
-b,	strong {
-	font-weight: bolder;
-}
-
-dfn {
-	font-style: italic;
-}
-
+/*
+	Style for mark.
+*/
 mark {
-	background-color: $mark-color;
-	color: $body-color;
+	background-color: $mark-bg-color;
+	color: $mark-color;
 }
-
-sub,	sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sub {
-	bottom: -0.25em;
-}
-
-sup {
-	top: -0.5em;
-}
-
-[hidden], .hidden, template {
+/*
+	Styling for hidden elements.
+	Correct display for template in IE.
+	Correct display for audio:not([controls]) in iOS 4-7.	
+*/
+[hidden], .hidden, template, audio:not([controls]) {
 	display: none;
 }
-
-audio,	video {
-	display: inline-block;
-}
-
 audio:not([controls]) {
-	display: none;
 	height: 0;
 }
-
+/*
+	Correct display in IE 9-.
+*/
+audio,	video, 	progress {
+	display: inline-block;
+}
+/*
+	Styles for sub and sup.
+	Prevent `sub` and `sup` elements from affecting the line height.
+	Correct vertical alignment of progress in Chrome, Firefox, and Opera.
+*/
+sub,	sup, 	progress{
+	vertical-align: baseline;
+}
+sub, 	sup {
+	line-height: 0;
+	position: relative;
+	
+}
+sub {
+	bottom: $sub-bottom;
+}
+sup {
+	top: $sup-top;
+}
+/*
+	Remove the border on images inside links in IE 10-.
+*/
 img {
 	border-style: none;
 }
-
+/*
+	Hide the overflow in IE.
+*/
 svg:not(:root) {
 	overflow: hidden;
 }
-
-button,	input,	optgroup,	select,	textarea {
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 100%; 
-	line-height: 1.3; 
-	margin: 0; 
-}
-
+/*
+	Show the overflow in IE and Edge.
+*/
 button,	input, hr { 
 	overflow: visible;
 }
-
+/*
+	Style for buttons and input elements.
+*/
+button,	input,	optgroup,	select,	textarea {
+	font-family: $button-fonts;
+	font-size: $button-font-size; 
+	line-height: $base-line-height * $button-line-height-multiplier; 
+	margin: $button-margin; 
+}
+/*
+	Remove the inheritance of text transform in Edge, Firefox, and IE.
+*/
 button,	select { 
 	text-transform: none;
 }
-
+/*
+	Correct styling for iOS, Safari and Firefox.
+*/
 button,	html [type="button"], 	[type="reset"],	[type="submit"] {
 	-webkit-appearance: button; 
 	&::-moz-focus-inner{
@@ -207,39 +245,50 @@ button,	html [type="button"], 	[type="reset"],	[type="submit"] {
 		outline: 1px dotted ButtonText;
 	}
 }
-
+/*
+	Style for fieldset.
+*/
 fieldset {
-	border: 1px solid darken($body-background-color, 15%);
-	border-radius: 4px;
-	margin: 0 2px;
-	padding: 0.35em 0.65em 0.75em;
+	border: $fieldset-border;
+	border-radius: $fieldset-border-radius;
+	margin: $fieldset-margin;
+	padding: $fieldset-padding;
 }
-
+/*
+	Add correct box sizing and remove padding in IE 10-.
+*/
 [type="checkbox"],	[type="radio"],	legend {
 	box-sizing: border-box; 
 	padding: 0; 
 }
+/*
 
+	Correct text wrapping and color inheritance from `fieldset` elements in Edge and IE.
+	Remove the padding so developers are not caught out when they zero out `fieldset` 
+	elements in all browsers.
+*/
 legend {
 	color: inherit; 
 	display: table; 
 	max-width: 100%; 
 	white-space: normal; 
 }
-
-progress {
-	display: inline-block; 
-	vertical-align: baseline; 
-}
-
+/*
+	Remove the default vertical scrollbar in IE.
+*/
 textarea {
 	overflow: auto;
 }
-
+/*
+	Correct the cursor style of increment and decrement buttons in Chrome.
+*/
 [type="number"]::-webkit-inner-spin-button,	[type="number"]::-webkit-outer-spin-button {
 	height: auto;
 }
-
+/*
+	Correct styling in Chrome and Safari.
+	Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+*/
 [type="search"] {
 	-webkit-appearance: textfield; 
 	outline-offset: -2px; 
@@ -247,7 +296,10 @@ textarea {
 		-webkit-appearance: none;
 	}
 }
-
+/*
+	Correct the inability to style clickable types in iOS and Safari.
+	Change font properties to `inherit` in Safari.
+*/
 ::-webkit-file-upload-button {
 	-webkit-appearance: button; 
 	font: inherit; 

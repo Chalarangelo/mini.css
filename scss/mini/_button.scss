@@ -13,7 +13,6 @@
 	margin: 2px 0;
 	padding: 6px 12px;
 	border: 0;
-	text-decoration: none;
 	@include btn-variant($btn-color, $btn-background-color);
 	&.disabled, &[disabled], &fieldset[disabled]{
 		cursor: not-allowed;

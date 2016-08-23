@@ -18,6 +18,7 @@
 	- [1] : The padding of the container might cause the page to grow by $container-padding to the right. This 
 			can be fixed either via @media queries or setting the padding to 0.
 	- [2] :	Columns with the $hide-suffix will be only hidden in the screen size specified.
+	- [3] :	Refer to https://github.com/Chalarangelo/mini.css/wiki/Grid for additional information.
 */
 @mixin make-grid(	$container-name, $container-padding, 
 					$row-name, $col-name, $col-number, $col-padding, 

@@ -1,5 +1,7 @@
-/*			Base 									*/
-/*			Button									*/
+/*
+	Set font-family, line-height, prevent adjustments of font size after orientation changes in IE and iOS.
+	Set body colors and margin.
+*/
 html {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1em;
@@ -10,16 +12,28 @@ html {
 body {
   margin: 0;
   color: #222;
-  background-color: #eee; }
+  background-color: #efefef; }
 
+/*
+	Correct display in IE 9-.
+*/
 article, aside, footer, header, nav, section, figcaption, figure, main, details, menu {
   display: block; }
 
-h1, h2, h3, h4, h5, h6, hr {
-  line-height: 1.3;
+/*
+	Correct margin in IE 8.
+*/
+figure {
+  margin: 1em 40px; }
+
+/*
+	Styles for  headers.
+*/
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
   margin: 0.7em 0;
   font-weight: 500; }
-  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, hr small {
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     color: #484848;
     font-weight: 200; }
 
@@ -41,38 +55,56 @@ h5 {
 h6 {
   font-size: 0.7em; }
 
-small {
+/*
+	Correct box-sizing in Firefox.
+	Style for horizontal rule.
+*/
+hr {
+  box-sizing: content-box;
+  line-height: 1.2;
+  margin: 0.7em 0;
+  height: 0;
+  border: 0;
+  border-top: 1px solid #c9c9c9; }
+
+/*
+	Style for all small text and size for sub and sup.
+*/
+small, sub, sup {
   font-size: 75%; }
 
+/*
+	Style for paragraph and preformatted elements.
+*/
 p, pre {
   margin: 0 0 0.6em; }
 
+/*
+	Style for lists.
+*/
 ul, ol {
   margin-top: 0;
   margin-bottom: 0.6em; }
   ul ul, ul ol, ol ul, ol ol {
     margin-bottom: 0; }
 
-hr {
-  box-sizing: content-box;
-  height: 0;
-  border: 0;
-  border-top: 1px solid #c8c8c8; }
-
-code, pre, kbd, samp {
-  font-family: monospace;
+/*
+	Styles for code and preformatted.
+*/
+samp, kbd, code, pre {
+  font-family: monospace, monospace;
   font-size: 1em; }
 
-code, pre {
+kbd, code, pre {
   padding: 2px 4px;
-  background-color: #d8d8d8;
   border-radius: 4px; }
 
+code, pre {
+  background-color: #d5d5d5; }
+
 kbd {
-  padding: 2px 4px;
-  color: #eee;
-  background-color: #2b2b2b;
-  border-radius: 4px; }
+  color: #f8f8f8;
+  background-color: #222; }
 
 pre {
   display: block;
@@ -86,9 +118,14 @@ pre {
     background-color: transparent;
     border-radius: 0; }
 
+/*
+	Style for hyperlinks, remove underline.
+	Remove gray background on active links in IE 10.
+	Remove outline on focused links when they are also active or hovered.
+*/
 a {
   background-color: transparent;
-  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
   color: #2678b3; }
   a:active, a:hover {
     outline-width: 0;
@@ -98,32 +135,68 @@ a {
     a:visited:active, a:visited:hover {
       color: #2678b3; }
 
-figure {
-  margin: 1em 40px; }
+/*
+	Prevent the duplicate application of `bolder` in Safari 6.
+*/
+b, strong {
+  font-weight: inherit; }
 
+/*
+	Correct font weight in Chrome, Edge, Safari.
+*/
+b, strong {
+  font-weight: bolder; }
+
+/*
+	Correct font style in Android 4.3-.
+*/
+dfn {
+  font-style: italic; }
+
+/*
+	Remove botom border in Firefox 39-.
+	Correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+*/
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   text-decoration: underline dotted; }
 
-b, strong {
-  font-weight: inherit; }
-
-b, strong {
-  font-weight: bolder; }
-
-dfn {
-  font-style: italic; }
-
+/*
+	Style for mark.
+*/
 mark {
   background-color: #ffff33;
   color: #222; }
 
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
+/*
+	Styling for hidden elements.
+	Correct display for template in IE.
+	Correct display for audio:not([controls]) in iOS 4-7.	
+*/
+[hidden], .hidden, template, audio:not([controls]) {
+  display: none; }
+
+audio:not([controls]) {
+  height: 0; }
+
+/*
+	Correct display in IE 9-.
+*/
+audio, video, progress {
+  display: inline-block; }
+
+/*
+	Styles for sub and sup.
+	Prevent `sub` and `sup` elements from affecting the line height.
+	Correct vertical alignment of progress in Chrome, Firefox, and Opera.
+*/
+sub, sup, progress {
   vertical-align: baseline; }
+
+sub, sup {
+  line-height: 0;
+  position: relative; }
 
 sub {
   bottom: -0.25em; }
@@ -131,34 +204,42 @@ sub {
 sup {
   top: -0.5em; }
 
-[hidden], .hidden, template {
-  display: none; }
-
-audio, video {
-  display: inline-block; }
-
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
+/*
+	Remove the border on images inside links in IE 10-.
+*/
 img {
   border-style: none; }
 
+/*
+	Hide the overflow in IE.
+*/
 svg:not(:root) {
   overflow: hidden; }
 
-button, input, optgroup, select, textarea {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 100%;
-  line-height: 1.3;
-  margin: 0; }
-
+/*
+	Show the overflow in IE and Edge.
+*/
 button, input, hr {
   overflow: visible; }
 
+/*
+	Style for buttons and input elements.
+*/
+button, input, optgroup, select, textarea {
+  font-family: '"Helvetica Neue", Helvetica, sans-serif';
+  font-size: 100%;
+  line-height: 1.2;
+  margin: 0; }
+
+/*
+	Remove the inheritance of text transform in Edge, Firefox, and IE.
+*/
 button, select {
   text-transform: none; }
 
+/*
+	Correct styling for iOS, Safari and Firefox.
+*/
 button, html [type="button"], [type="reset"], [type="submit"] {
   -webkit-appearance: button; }
   button::-moz-focus-inner, html [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
@@ -167,296 +248,65 @@ button, html [type="button"], [type="reset"], [type="submit"] {
   button:-moz-focusring, html [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText; }
 
+/*
+	Style for fieldset.
+*/
 fieldset {
-  border: 1px solid #c8c8c8;
+  border: 1px solid #c9c9c9;
   border-radius: 4px;
   margin: 0 2px;
   padding: 0.35em 0.65em 0.75em; }
 
+/*
+	Add correct box sizing and remove padding in IE 10-.
+*/
 [type="checkbox"], [type="radio"], legend {
   box-sizing: border-box;
   padding: 0; }
 
+/*
+
+	Correct text wrapping and color inheritance from `fieldset` elements in Edge and IE.
+	Remove the padding so developers are not caught out when they zero out `fieldset` 
+	elements in all browsers.
+*/
 legend {
   color: inherit;
   display: table;
   max-width: 100%;
   white-space: normal; }
 
-progress {
-  display: inline-block;
-  vertical-align: baseline; }
-
+/*
+	Remove the default vertical scrollbar in IE.
+*/
 textarea {
   overflow: auto; }
 
+/*
+	Correct the cursor style of increment and decrement buttons in Chrome.
+*/
 [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
+/*
+	Correct styling in Chrome and Safari.
+	Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+*/
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px; }
   [type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
     -webkit-appearance: none; }
 
+/*
+	Correct the inability to style clickable types in iOS and Safari.
+	Change font properties to `inherit` in Safari.
+*/
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit; }
 
-.btn, a.btn, a.btn:visited {
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
-  margin: 2px 0;
-  padding: 6px 12px;
-  border: 0;
-  text-decoration: none;
-  color: #2a2a2a;
-  background: #c2c2c2; }
-  .btn:hover, .btn:active, .btn:focus, a.btn:hover, a.btn:active, a.btn:focus, a.btn:visited:hover, a.btn:visited:active, a.btn:visited:focus {
-    background: #d5d5d5; }
-  .btn.disabled, .btn[disabled], .btnfieldset[disabled], a.btn.disabled, a.btn[disabled], a.btnfieldset[disabled], a.btn:visited.disabled, a.btn:visited[disabled], a.btn:visitedfieldset[disabled] {
-    cursor: not-allowed;
-    opacity: .65; }
-
-.btn.blue, a.btn.blue, a.btn.blue:visited {
-  color: #eeeeee;
-  background: #3f84b3; }
-  .btn.blue:hover, .btn.blue:active, .btn.blue:focus, a.btn.blue:hover, a.btn.blue:active, a.btn.blue:focus, a.btn.blue:visited:hover, a.btn.blue:visited:active, a.btn.blue:visited:focus {
-    background: #5597c3; }
-
-.btn.green, a.btn.green, a.btn.green:visited {
-  color: #eeeeee;
-  background: #2db747; }
-  .btn.green:hover, .btn.green:active, .btn.green:focus, a.btn.green:hover, a.btn.green:active, a.btn.green:focus, a.btn.green:visited:hover, a.btn.green:visited:active, a.btn.green:visited:focus {
-    background: #3bcf57; }
-
-.btn.red, a.btn.red, a.btn.red:visited {
-  color: #eeeeee;
-  background: #ea4848; }
-  .btn.red:hover, .btn.red:active, .btn.red:focus, a.btn.red:hover, a.btn.red:active, a.btn.red:focus, a.btn.red:visited:hover, a.btn.red:visited:active, a.btn.red:visited:focus {
-    background: #ee6a6a; }
-
-.btn.lg {
-  padding: 9px 15px;
-  font-size: 135%; }
-
-.btn.sm {
-  padding: 4px 8px;
-  font-size: 80%; }
-
-/*
-	Mixin for responsive, mobile-first grid. 
-	Parameters:
-	- $container-name    :	The class name of the container for the grid.
-	- $container-padding :	The left and right padding of the container. [1]
-	- $row-name          :	The class name of the grid's rows.
-	- $col-name          :	The class name of the grid's columns.
-	- $col-number        :	The amount of columns in the grid.
-	- $xs-prefix         : 	Class prefix for extra small screens.
-	- $sm-prefix         : 	Class prefix for small screens.
-	- $md-prefix         : 	Class prefix for medium screens.
-	- $lg-prefix         : 	Class prefix for large screens.
-	- $hide-suffix       : 	Class suffix for hidden columns. [2]
-	- $sm-breakpoint     : 	Breakpoint for small screens.
-	- $md-breakpoint     : 	Breakpoint for medium screens.
-	- $lg-breakpoint     : 	Breakpoint for large screens.
-	Notes:
-	- [1] : The padding of the container might cause the page to grow by $container-padding to the right. This 
-			can be fixed either via @media queries or setting the padding to 0.
-	- [2] :	Columns with the $hide-suffix will be only hidden in the screen size specified.
-*/
-.grid-container {
-  padding-right: 12px;
-  padding-left: 12px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%; }
-  .grid-container * {
-    box-sizing: border-box; }
-
-.row:before, .row:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.col {
-  float: left;
-  padding: 12px; }
-
-.xs-1 {
-  width: 8.33333%; }
-
-.xs-2 {
-  width: 16.66667%; }
-
-.xs-3 {
-  width: 25%; }
-
-.xs-4 {
-  width: 33.33333%; }
-
-.xs-5 {
-  width: 41.66667%; }
-
-.xs-6 {
-  width: 50%; }
-
-.xs-7 {
-  width: 58.33333%; }
-
-.xs-8 {
-  width: 66.66667%; }
-
-.xs-9 {
-  width: 75%; }
-
-.xs-10 {
-  width: 83.33333%; }
-
-.xs-11 {
-  width: 91.66667%; }
-
-.xs-12 {
-  width: 100%; }
-
-.sm-no,
-.md-no,
-.lg-no {
-  display: block; }
-
-.xs-no {
-  display: none; }
-
-@media (min-width: 768px) {
-  .sm-1 {
-    width: 8.33333%; }
-
-  .sm-2 {
-    width: 16.66667%; }
-
-  .sm-3 {
-    width: 25%; }
-
-  .sm-4 {
-    width: 33.33333%; }
-
-  .sm-5 {
-    width: 41.66667%; }
-
-  .sm-6 {
-    width: 50%; }
-
-  .sm-7 {
-    width: 58.33333%; }
-
-  .sm-8 {
-    width: 66.66667%; }
-
-  .sm-9 {
-    width: 75%; }
-
-  .sm-10 {
-    width: 83.33333%; }
-
-  .sm-11 {
-    width: 91.66667%; }
-
-  .sm-12 {
-    width: 100%; }
-
-  .xs-no,
-  .md-no,
-  .lg-no {
-    display: block; }
-
-  .sm-no {
-    display: none; } }
-@media (min-width: 1024px) {
-  .md-1 {
-    width: 8.33333%; }
-
-  .md-2 {
-    width: 16.66667%; }
-
-  .md-3 {
-    width: 25%; }
-
-  .md-4 {
-    width: 33.33333%; }
-
-  .md-5 {
-    width: 41.66667%; }
-
-  .md-6 {
-    width: 50%; }
-
-  .md-7 {
-    width: 58.33333%; }
-
-  .md-8 {
-    width: 66.66667%; }
-
-  .md-9 {
-    width: 75%; }
-
-  .md-10 {
-    width: 83.33333%; }
-
-  .md-11 {
-    width: 91.66667%; }
-
-  .md-12 {
-    width: 100%; }
-
-  .xs-no,
-  .sm-no,
-  .lg-no {
-    display: block; }
-
-  .md-no {
-    display: none; } }
-@media (min-width: 1280px) {
-  .lg-1 {
-    width: 8.33333%; }
-
-  .lg-2 {
-    width: 16.66667%; }
-
-  .lg-3 {
-    width: 25%; }
-
-  .lg-4 {
-    width: 33.33333%; }
-
-  .lg-5 {
-    width: 41.66667%; }
-
-  .lg-6 {
-    width: 50%; }
-
-  .lg-7 {
-    width: 58.33333%; }
-
-  .lg-8 {
-    width: 66.66667%; }
-
-  .lg-9 {
-    width: 75%; }
-
-  .lg-10 {
-    width: 83.33333%; }
-
-  .lg-11 {
-    width: 91.66667%; }
-
-  .lg-12 {
-    width: 100%; }
-
-  .xs-no,
-  .sm-no,
-  .md-no {
-    display: block; }
-
-  .lg-no {
-    display: none; } }
+/*@import 'mini/button';
+@import 'mini/grid';
+// Use grid mixin to create grid with default specs.
+@include make-grid(grid-container, 0, row, col, 12, 12px, xs, sm, md, lg, no, 768px, 1024px, 1280px);*/

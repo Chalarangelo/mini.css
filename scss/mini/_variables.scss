@@ -1,9 +1,53 @@
-/*			Base 									*/
-$body-background-color:						#eee;
-$body-color:								#222;
-$a-color:									#2678b3;
-$mark-color:								#ffff33;
-/*			Button									*/
+// Base
+$base-fonts:					"\"Helvetica Neue\", Helvetica, sans-serif";	// Font-family
+$base-font-size:				1em;											// Font-size
+$base-line-height:				1.5;											// Line-height
+$body-margin:					0;												// Margin for body
+$body-bg-color:					#efefef;										// Body background color
+$body-color:					#222;											// Body text color
+$header-line-height-multiplier:	0.8;											// Multiplier for line height of headers					 
+$header-margin:					0.7em 0;										// Margin for headers
+$header-font-weight:			500;											// Font weight for headers
+$h1-multiplier:					2;												// Header 1 font-sze multiplier
+$h2-multiplier:					1.5;											// Header 2 font-sze multiplier
+$h3-multiplier:					1.15;											// Header 3 font-sze multiplier
+$h4-multiplier:					1;												// Header 4 font-sze multiplier
+$h5-multiplier:					0.8;											// Header 5 font-sze multiplier
+$h6-multiplier:					0.7;											// Header 6 font-sze multiplier
+$header-small-color:			lighten($body-color, 15%);						// Header small text color
+$header-small-font-weight:		200;											// Header small font weight
+$hr-line-height-multiplier:		0.8;											// Multiplier for line height of horizontal rule
+$hr-margin:						0.7em 0;										// Margin for horizontal rule
+$hr-border-style:				1px solid darken($body-bg-color, 15%);			// Color and style of horizontal rule
+$small-font-size:				75%;											// Font size for small, sub and sup elements
+$p-margin:						0 0 0.6em;										// Margin for paragraph and pre elements
+$list-margin-top:				0;												// Top margin for lists
+$list-margin-bottom:			0.6em;											// Bottom margin for lists
+$code-fonts:					monospace, monospace;							// Font-family for code, pre, kbd, samp elements
+$code-padding:					2px 4px;										// Padding for code and pre elements
+$code-bg-color:					darken($body-bg-color, 10%);					// Code and pre background color	
+$code-border-radius:			4px;											// Border radius for code, pre and kbd elements
+$kbd-bg-color:					$body-color; 									// Kbd background color
+$kbd-color:						lighten($body-bg-color, 3.5%);					// Kbd text color
+$a-color:						#2678b3;										// Hyperlink text color
+$a-hover-color:					lighten($a-color, 10%);							// Hyperlink hover text color
+$a-visited-color:				darken($a-color, 10%);							// Hyperlink visited text color
+$a-visited-hover-color:			#2678b3;										// Hyperlink visited hover text color
+$mark-bg-color:					#ffff33;										// Mark background color
+$mark-color:					$body-color;									// Mark text color
+$sub-bottom:					-0.25em;										// Sub bottom
+$sup-top:						-0.5em;											// Sup top
+$button-fonts:					$base-fonts;									// Font-family for buttons and inputs
+$button-font-size:				100%;											// Font size for buttons and inputs
+$button-line-height-multiplier:	0.8;											// Multiplier for line height of buttons and inputs
+$button-margin:					0;												// Margin for buttons and inputs
+$fieldset-border:				1px solid darken($body-bg-color, 15%);			// Border style for fieldset
+$fieldset-border-radius:		4px;											// Border radius for fieldset
+$fieldset-margin:				0 2px;											// Margin for fieldset
+$fieldset-padding:				0.35em 0.65em 0.75em;							// Padding for fieldset
+
+
+// Button defaults							
 $btn-color:									#2a2a2a;
 $btn-color-alt:								#eeeeee;
 $btn-background-color:						#c2c2c2;

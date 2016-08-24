@@ -16,8 +16,9 @@ body {
 }
 /*
 	Correct display in IE 9-.
+	Give images display: block to be responsive.
 */
-article,	aside,	footer,	header,	nav,	section,	figcaption,	figure,	main,	details, 	menu {
+article,	aside,	footer,	header,	nav,	section,	figcaption,	figure,	main,	details, 	menu, img {
 	display: block;
 }
 /*
@@ -201,9 +202,11 @@ sup {
 }
 /*
 	Remove the border on images inside links in IE 10-.
+	Make images responsive.
 */
 img {
 	border-style: none;
+	max-width: 100%;
 }
 /*
 	Hide the overflow in IE.
@@ -281,8 +284,9 @@ textarea {
 }
 /*
 	Correct the cursor style of increment and decrement buttons in Chrome.
+	Make images responsive.
 */
-[type="number"]::-webkit-inner-spin-button,	[type="number"]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,	[type="number"]::-webkit-outer-spin-button, img {
 	height: auto;
 }
 /*

@@ -647,9 +647,10 @@ textarea {
 	- $frm-ctl-group-margin      :	The margin for control groups inside the form.
 	- $frm-inline-name           :	The class name for forms with inline style.
 	- $frm-aligned-name          :	The class name for forms with aligned style.
-	- $frm-aligned-label-width   :	The width of labels in forms with aligned style. [1]	
+	- $frm-aligned-label-width   :	The width of labels in forms with aligned style.	
 	Notes:
-	// TODO: write notes - does [1] qualify? Should I write more notes? We'll see - probably note that elements like submit and button are not styled etc.
+	- [1] : Input elements with button-like style (i.e. submit, reset, button etc.) are not affected by form styling.
+		Please use the button styles and mixins provided to properly style them to your liking.
 */
 .frm input[type="color"], .frm input[type^="date"], .frm input[type$="time"], .frm input[type="email"],
 .frm input[type="month"], .frm input[type="week"], .frm input[type="text"], .frm input[type="password"],

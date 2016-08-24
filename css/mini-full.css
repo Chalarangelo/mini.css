@@ -698,3 +698,47 @@ textarea {
   margin-top: 0; }
 .frm .ctrl-group {
   margin: 0 0 0.3em 0; }
+
+/*
+	Mixin for the tables.
+	Parameters:
+	- $tbl-name                  :	The class name of the table.
+	- $tbl-border                :	The border of the table and cells. [1]
+	- $tbl-margin                :	The margin of the table cells.
+	- $tbl-padding               :	The padding of the table cells.
+	- $tbl-head-bg-color         :	The color of the thead background.
+	- $tbl-head-color            :	The color of the thead text.
+	- $tbl-body-bg-color         :	The color of the even-numbered rows in tbody.
+	- $tbl-body-alt-bg-color     :	The color of the odd-numbered rows in tbody.
+	- $tbl-body-color            :  The color of the text in tbody.
+	- $tbl-horizontal-name       :	The class name for the horizontal style table.
+	- $tbl-bordered-name         :	The class name for the bordered style table.
+	Notes:
+	- [1] : This style will apply to the table and cells. All styles applied to 
+		the table (horizontal, bordered) will use the same style of border.
+*/
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #bdbdbd; }
+  .tbl td, .tbl th {
+    overflow: visible;
+    border-left: 1px solid #bdbdbd;
+    border-bottom: none;
+    margin: 0;
+    padding: 0.5em; }
+  .tbl thead {
+    background-color: #d9d9d9;
+    color: #111;
+    text-align: left; }
+  .tbl tbody {
+    background-color: #f5f5f5;
+    color: #111; }
+    .tbl tbody tr:nth-child(2n-1) {
+      background-color: #ececec; }
+  .tbl.hor td, .tbl.hor th {
+    border-left: none;
+    border-bottom: 1px solid #bdbdbd; }
+  .tbl.bor td, .tbl.bor th {
+    border-bottom: 1px solid #bdbdbd; }

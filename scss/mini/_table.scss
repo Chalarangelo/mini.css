@@ -1,0 +1,59 @@
+/*
+	Mixin for the tables.
+	Parameters:
+	- $tbl-name                  :	The class name of the table.
+	- $tbl-border                :	The border of the table and cells. [1]
+	- $tbl-margin                :	The margin of the table cells.
+	- $tbl-padding               :	The padding of the table cells.
+	- $tbl-head-bg-color         :	The color of the thead background.
+	- $tbl-head-color            :	The color of the thead text.
+	- $tbl-body-bg-color         :	The color of the even-numbered rows in tbody.
+	- $tbl-body-alt-bg-color     :	The color of the odd-numbered rows in tbody.
+	- $tbl-body-color            :  The color of the text in tbody.
+	- $tbl-horizontal-name       :	The class name for the horizontal style table.
+	- $tbl-bordered-name         :	The class name for the bordered style table.
+	Notes:
+	- [1] : This style will apply to the table and cells. All styles applied to 
+		the table (horizontal, bordered) will use the same style of border.
+*/
+@mixin make-tbl(	$tbl-name, $tbl-border, $tbl-margin, $tbl-padding,
+					$tbl-head-bg-color, $tbl-head-color, $tbl-body-bg-color,
+					$tbl-body-alt-bg-color, $tbl-body-color, 
+					$tbl-horizontal-name, $tbl-bordered-name				){
+	.#{$tbl-name}{
+		border-collapse: collapse;
+		border-spacing: 0;
+		empty-cells: show;
+		border: $tbl-border;
+		td, th{
+			overflow: visible;
+			border-left: $tbl-border;
+			border-bottom: none;
+			margin: $tbl-margin;	
+			padding: $tbl-padding;
+		}
+		thead {
+			background-color: $tbl-head-bg-color;
+			color: $tbl-head-color;
+			text-align: left;
+		}
+		tbody {
+			background-color: $tbl-body-bg-color;
+			color: $tbl-body-color;
+			tr:nth-child(2n-1) {
+				background-color: $tbl-body-alt-bg-color;
+			}
+		}
+		&.#{$tbl-horizontal-name}{ 
+			td,th{
+				border-left: none;
+				border-bottom: $tbl-border;
+			}
+		}
+		&.#{$tbl-bordered-name}{
+			td,th{
+				border-bottom: $tbl-border;
+			}
+		}
+	}
+}

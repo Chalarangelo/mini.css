@@ -746,3 +746,174 @@ textarea {
     border-bottom: 1px solid #bdbdbd; }
   .tbl.bor td, .tbl.bor th {
     border-bottom: 1px solid #bdbdbd; }
+
+/*
+	Image thumbnail style mixin. [1]
+	Parameters:
+	- $thumb-name          : 	The class name for the thumbnail style.
+	- $thumb-padding       :	The padding between the image and the border.
+	- $thumb-border	       :	The style of the thumbnail's border.
+	- $thumb-border-radius :	The border radius of the thumbnail.
+	Notes:
+	- [1] : This style only applies to `img` elements with the class specified in
+		`$thumb-name`.
+*/
+/*
+	Mixin for generic border style.
+	Parameters:
+	- $border-generic-name :	The class name for the generic border.
+	Notes:
+	- [1] : The border style uses rgba to create a 1px solid border with 0.25 
+		opacity around an element, which makes it look properly bordered. 
+		Might be incompatible with older browsers.
+	- [2] : The border style overwrites any border style as it uses 
+		`!important`, exercise caution when using.
+*/
+/*
+	Mixin for generic border radius styles.
+	Parameters:
+	- $border-style-name   :	The class name for the generic border radius style.
+	- $border-style-radius :	The radius for the generic border radius style.
+	Notes:
+	- [1] : The border style overwrites any border style as it uses 
+		`!important`, exercise caution when using.
+*/
+/*
+	Mixin for generic contextual color text styles.
+	Parameters:
+	- $colored-text-name  :	The class name for the contextual color text style.
+	- $colored-text-color :	The color for the contextual color text style.
+	Notes:
+	- [1] : The contextual color text style overwrites any text color as it uses 
+		`!important`, exercise caution when using.
+*/
+/*
+	Mixin for generic contextual background text styles.
+	Parameters:
+	- $colored-bg-text-name  :	The class name for the contextual background text style.
+	- $colored-bg-text-color :	The background color for the contextual background text style.
+	Notes:
+	- [1] : The contextual background text style overwrites any text color as it 
+		uses  `!important`, exercise caution when using.
+*/
+/*
+	Mixin for simple caret utility class.
+	Parameters:
+	- $caret-name  :	The class name for caret utility class.
+	- $caret-size  :	The size of the caret utility element. [1]
+	- $caret-color :	The color of the caret utility element.
+	Notes:
+	- [1] : The caret is built using the border trick. Sizes can be specified
+		in either `px` or `em`, but they might take a bit of tweaking to
+		get right.
+*/
+/*
+	Mixin for simple close sign utility class.
+	Parameters:
+	- $close-name        :	The class name for close utility class.
+	- $close-color       :	The color of the close utility element.
+	- $close-cursor      :	The cursor for the close utility element.
+	- $close-font-size   :	The font-size for the close utility element.
+	- $close-font-weight :	The font-weight for the close utility element.
+	- $close-hover-color :	The color of the close utility element when hovering over it.
+*/
+/*
+	Mixin for quick float classes. [1]
+	Parameters:
+	- $drag-left-name  :	The class name for left drags.
+	- $drag-right-name :	The class name for right drags.
+	Notes:
+	- [1] : These classes use `!important` to set the float properties, 
+		exercise caution when using.
+*/
+/*
+	Mixin for center block class.
+	Parameters:
+	- $center-block-name :	The class name for center block class.
+*/
+/*
+	Mixin for clearfix class.
+	Parameters:
+	- $clearfix-name :	The class name for the clearfix class.
+*/
+/*
+	Mixin for hidden class. [1]
+	Parameters:
+	- $hidden-name :	The class name for hidden elements.
+	Notes:
+	- [1] : This class uses `!important` to set the display property, 
+		exercise caution when using.
+*/
+img.thumb {
+  padding: 0.25em;
+  border: 1px solid #ccc;
+  border-radius: 4px; }
+
+.bordered {
+  border: 1px solid rgba(0, 0, 0, 0.25) !important; }
+
+.rounded {
+  border-radius: 4px !important; }
+
+.circle {
+  border-radius: 50% !important; }
+
+.txt-blue {
+  color: #3f84b3 !important; }
+
+.txt-green {
+  color: #2db747 !important; }
+
+.txt-red {
+  color: #ea4848 !important; }
+
+.bg-blue {
+  background-color: #3f84b3 !important; }
+
+.bg-green {
+  background-color: #2db747 !important; }
+
+.bg-red {
+  background-color: #ea4848 !important; }
+
+.caret {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  width: 0;
+  height: 0;
+  border-left: 0.35em solid transparent;
+  border-right: 0.35em solid transparent;
+  border-top: 0.35em solid #222; }
+
+.close {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  color: #aaa;
+  font-size: 1.3em;
+  font-weight: 700;
+  cursor: pointer; }
+  .close:before {
+    content: '\00d7'; }
+  .close:hover {
+    color: #777; }
+
+.drg-left {
+  float: left !important; }
+
+.drg-right {
+  float: right !important; }
+
+.ct-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.hidden {
+  display: none !important; }

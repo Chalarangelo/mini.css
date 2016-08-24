@@ -12,7 +12,7 @@
     <h2>Heading 2 <small>smaller</small></h2><br>
     <p><strong>Paragraph</strong>: Lorem ipsum dolor sit amet, <mark>consectetur</mark> adipiscing elit. <code>Praesent est mi</code>, commodo vitae mauris at, sagittis vehicula sem. Quisque malesuada dui at justo maximus, vel placerat nibh blandit. Phasellus <sub>quis</sub> ipsum aliquam, <sup>fringilla</sup> ante <kbd>sit</kbd> amet, sagittis magna. In at dignissim eros, id vulputate tellus. Quisque orci urna, pretium in porttitor et, rhoncus in nulla. Aenean viverra ante in velit tincidunt, <kbd>sit</kbd> amet tincidunt ante suscipit. In malesuada consectetur molestie.</p>
     <br>
-    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzE0MHgxNDAKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTZiYmE2OTM4NyB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NmJiYTY5Mzg3Ij48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQzLjUiIHk9Ijc0LjgiPjE0MHgxNDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" class="circle">
     <br>
     <hr>
     <br>
@@ -50,16 +50,16 @@ Suspendisse varius turpis et dui viverra semper.</pre>
     <textarea rows="4" cols="16">This is a textarea.</textarea>
     <h6>Heading 6 <small>smaller</small></h6>
     <ul>
-      <li>Suspendisse convallis ac metus non efficitur.</li>
+      <li>Suspendisse convallis ac metus non efficitur.<span class="caret"></span></li>
       <li>Donec consectetur eu nisi luctus bibendum.</li>
       <li>Nam tempor facilisis sem vitae mattis.</li>
       <li>Fusce feugiat rhoncus eros, id auctor mauris facilisis quis.</li>
     </ul>
     <br>
-    <div>Etiam maximus, ante vitae porttitor tincidunt, sem erat pharetra turpis, a ornare tortor purus <a href="https://www.google.com" class="btn lg">ut justo</a>.
+    <div>Etiam maximus, <span class="txt-blue">ante vitae porttitor tincidunt, sem erat</span> pharetra turpis, a ornare tortor purus <a href="https://www.google.com" class="btn lg bordered">ut justo</a>.
     </div>
     <br>
-    <h3>TODO: Add helper class for bordered that uses 1px solid rgba(0,0,0,0.25) to add a border to elements easily</h3>
+    <h3>TODO: Add helper class for <span class="bg-red">bordered that uses 1px solid</span> rgba(0,0,0,0.25) to add a border to elements easily</h3>
     <table class="tbl">
     <thead>
         <tr>
@@ -94,7 +94,7 @@ Suspendisse varius turpis et dui viverra semper.</pre>
     </tbody>
 </table>
 <br>
-    <button type="button" class="green sm btn">Sample button</button>
+    <button type="button bordered" class="green lg btn">Sample button</button>
     <blockquote cite="https://www.google.com">Nam non diam ante. Curabitur non enim vitae eros luctus porta.</blockquote>
     <div class="grid-container"><div class="row"><div class="col xs-4 sm-6" style="background: red;">1c</div><div class="col xs-8 sm-6" style="background: blue;">2c</div></div><div class="row"><div class="col xs-1 sm-no md-no lg-no" style="background: purple;"></div><div class="col xs-10 sm-12" style="background: yellow;">3c</div></div></div>
     <br><br>

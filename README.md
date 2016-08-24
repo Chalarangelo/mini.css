@@ -9,4 +9,4 @@ A minimal, responsive CSS framework to get you started.
 - **grid**:	default 12-column grid `GZIPPED SIZE`: 447 bytes
 - **nav**: coming soon
 - **table**: table styles `GZIPPED SIZE`: 243 bytes
-- **helper and utility classes**: coming soon
+- **helper and utility classes**: classes for quick floats, border styling, contextual text and more `GZIPPED SIZE`: 441 bytes

@@ -1,0 +1,153 @@
+
+
+
+@mixin make-nav(	$nav-name, $nav-vertical-name, $nav-fixed-name, $nav-logo-name,
+					$nav-logo-size, $nav-padding, $nav-color, $nav-bg-color, $nav-hover-style,  
+					$nav-hover-style-percentage, $nav-disabled-cursor, $nav-disabled-opacity,
+					$nav-fixed-left-right, $grid-columns-total, 
+					$grid-columns-count-for-nav-fixed-vertical, $nav-fixed-collapse-breakpoint,
+					$nav-fixed-collapse-label-location, $nav-fixed-collapse-label-margin,
+					$nav-fixed-collapse-label-font-size											){
+	.#{$nav-name}{
+		box-sizing: border-box;
+		background-color: #{$nav-bg-color};
+		.#{$nav-logo-name}{
+			font-size: $nav-logo-size;
+		}
+		ul{
+			display: inline-block;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li{
+				display: inline-block;		
+				margin: 0;
+				white-space: nowrap;
+				* {
+					display: inline-block;
+					padding: #{$nav-padding};
+					color: #{$nav-color};
+					margin: 0;
+				}
+				& a{
+					&:hover, &:active, &:focus{
+						@if $nav-hover-style == 'lighten'{
+							background: lighten($nav-bg-color, $nav-hover-style-percentage);
+						}
+						@else{
+							background: darken($nav-bg-color, $nav-hover-style-percentage);
+						}
+					}
+					&.disabled, &[disabled]{
+						cursor: $nav-disabled-cursor;
+						opacity: $nav-disabled-opacity;
+					}
+				}
+			}
+		}
+		&.#{$nav-vertical-name}{
+			ul{
+				display: block;
+				li{
+					display: block;					
+					* {
+						width: 100%;
+						padding: #{$nav-padding} 0;
+					}
+				}
+			}
+		}
+		&.#{$nav-fixed-name}{
+			position: fixed;
+			@if $nav-fixed-left-right == 'left'{
+				left: 0;
+			}
+			@else{
+				right: 0;
+			}			
+			top: 0;
+			z-index: 999;
+			width: 100%;
+			&.#{$nav-vertical-name}{
+				height: 100%;
+				width: #{($grid-columns-count-for-nav-fixed-vertical * 100%/ $grid-columns-total)};
+				ul{
+					width: 100%;
+					li{
+						display: block;
+					}
+				}
+			}
+		}
+		& + label{
+			display: none;
+			font-weight: 700;
+			margin: $nav-fixed-collapse-label-margin;
+			font-size: $nav-fixed-collapse-label-font-size;
+			padding: #{$nav-padding};		
+			background-color: $nav-bg-color;
+			width: auto;
+			position: fixed;
+			z-index: 1000;
+			@if $nav-fixed-collapse-label-location == 'top-left'{
+				top: 0;
+				left: 0;
+			}
+			@else if $nav-fixed-collapse-label-location == 'top-right'{
+				top: 0;
+				right: 0;
+			}
+			@else if $nav-fixed-collapse-label-location == 'bottom-left'{
+				bottom: 0;
+				left: 0;
+			}
+			@else{
+				bottom: 0;
+				right: 0;
+			}		
+			&:before{
+				position: relative;
+				content: '\2630';
+			}
+			&:hover, &:active, &:focus{
+				@if $nav-hover-style == 'lighten'{
+					background: lighten($nav-bg-color, $nav-hover-style-percentage);
+				}
+				@else{
+					background: darken($nav-bg-color, $nav-hover-style-percentage);
+				}
+			}
+		}
+	}
+	@media (max-width: $nav-fixed-collapse-breakpoint){
+		.#{$nav-name}{
+			overflow: auto;
+			&.#{$nav-fixed-name}{
+				display: none;
+				& + label{
+					display: block;
+				}
+			}		
+		}
+		input[type="checkbox"]:checked + .#{$nav-name}.#{$nav-fixed-name}{
+			display: block;
+			width: 100%;
+			height: 100%;
+			ul{
+				display: block;
+				li{
+					display: block;
+					* {
+						width: 100%;
+						padding: #{$nav-padding} 0;
+					}
+				}
+			}
+			& + label{			
+				&:before{
+					content: '\00d7';
+				}
+			}
+		}
+	}
+}

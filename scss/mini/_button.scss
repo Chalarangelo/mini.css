@@ -18,7 +18,7 @@
     		background: lighten($btn-variant-bg-color, $btn-variant-hover-style-percentage);
     	}
     	@else{
-    		background: darken($btn-variant-bg-color, $btn-variant-hover-style-percentage); // 7.5%
+    		background: darken($btn-variant-bg-color, $btn-variant-hover-style-percentage);
     	}
 
   	}

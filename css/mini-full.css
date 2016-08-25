@@ -917,3 +917,87 @@ img.thumb {
 
 .hidden {
   display: none !important; }
+
+.nav {
+  box-sizing: border-box;
+  background-color: #ddd; }
+  .nav .logo {
+    font-size: 135%; }
+  .nav ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .nav ul li {
+      display: inline-block;
+      margin: 0;
+      white-space: nowrap; }
+      .nav ul li * {
+        display: inline-block;
+        padding: 8px;
+        color: #272727;
+        margin: 0; }
+      .nav ul li a:hover, .nav ul li a:active, .nav ul li a:focus {
+        background: #cacaca; }
+      .nav ul li a.disabled, .nav ul li a[disabled] {
+        cursor: not-allowed;
+        opacity: 0.65; }
+  .nav.vertical ul {
+    display: block; }
+    .nav.vertical ul li {
+      display: block; }
+      .nav.vertical ul li * {
+        width: 100%;
+        padding: 8px 0; }
+  .nav.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%; }
+    .nav.fixed.vertical {
+      height: 100%;
+      width: 16.66667%; }
+      .nav.fixed.vertical ul {
+        width: 100%; }
+        .nav.fixed.vertical ul li {
+          display: block; }
+  .nav + label {
+    display: none;
+    font-weight: 700;
+    margin: 10px;
+    font-size: 1.75em;
+    padding: 8px;
+    background-color: #ddd;
+    width: auto;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0; }
+    .nav + label:before {
+      position: relative;
+      content: '\2630'; }
+    .nav + label:hover, .nav + label:active, .nav + label:focus {
+      background: #cacaca; }
+
+@media (max-width: 768px) {
+  .nav {
+    overflow: auto; }
+    .nav.fixed {
+      display: none; }
+      .nav.fixed + label {
+        display: block; }
+
+  input[type="checkbox"]:checked + .nav.fixed {
+    display: block;
+    width: 100%;
+    height: 100%; }
+    input[type="checkbox"]:checked + .nav.fixed ul {
+      display: block; }
+      input[type="checkbox"]:checked + .nav.fixed ul li {
+        display: block; }
+        input[type="checkbox"]:checked + .nav.fixed ul li * {
+          width: 100%;
+          padding: 8px 0; }
+    input[type="checkbox"]:checked + .nav.fixed + label:before {
+      content: '\00d7'; } }

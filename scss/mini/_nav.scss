@@ -54,6 +54,7 @@
 		background-color: #{$nav-bg-color};
 		.#{$nav-logo-name}{
 			font-size: $nav-logo-size;
+			color: #{$nav-color};
 		}
 		ul{
 			display: inline-block;
@@ -70,8 +71,9 @@
 					color: #{$nav-color};
 					margin: 0;
 				}
-				& .#{$nav-link-name}{
+				.#{$nav-link-name}{
 					&:hover, &:active, &:focus{
+						color: #{$nav-color};
 						@if $nav-hover-style == 'lighten'{
 							background: lighten($nav-bg-color, $nav-hover-style-percentage);
 						}
@@ -126,6 +128,7 @@
 			margin: $nav-fixed-collapse-label-margin;
 			font-size: $nav-fixed-collapse-label-font-size;
 			padding: #{$nav-padding};		
+			color: #{$nav-color};
 			background-color: $nav-bg-color;
 			width: auto;
 			position: fixed;

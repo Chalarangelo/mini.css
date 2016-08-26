@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework">
+    <meta name="keywords" content="mini, mini.css, CSS, responsive, framework, mobile first, style agnostic, Sass">
+    <meta name="author" content="Angelos Chalaris (chalarangelo)">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="../flavors/mini-default.min.css">
+  </head>
+  <body>
+    <input type="checkbox" class="hidden" id="nav-toggle">
+    <div class="nav fixed">
+      <span class="logo">&nbsp;<img src="favicon.png" style="height: 34px; width: auto; display: inline-block; vertical-align: middle;">&nbsp;mini.css&nbsp;</span>
+      <ul>
+        <li><a href="#why-mini-css" class="link">Why mini.css?</a></li>
+        <li><a href="#core-modules" class="link">Core modules</a></li>
+        <li><a href="#customization" class="link">Customization</a></li>
+        <li><a href="#extra-modules" class="link">Extra modules</a></li>
+      </ul>
+    </div>
+    <label for="nav-toggle"></label>
+    <br>
+    <div class="grid-container">
+      <div class="row">
+        <div class="col xs-no md-1"></div>
+        <div class="col xs-12 md-10">
+          <h1>mini.css<small> a minimal Sass-y responsive mobile-first style-agnostic CSS framework</small></h1>
+          <p>If you want to create your own flavor, get involved or report an issue, head over to <strong>mini.css</strong>'s <a href="https://github.com/Chalarangelo/mini.css">Github page</a>. If you want to give <strong>mini.css</strong> a try using the default flavor, paste the following code inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
+          <pre style="overflow: auto;">&lt;link rel="stylesheet" href="https://github.com/Chalarangelo/mini.css/tree/master/flavors/mini-default.min.css"&gt;</pre>
+
+          <!-- <p>TODO: INSERT IMAGE SHOWCASING IT HERE!</p> -->
+          <br>
+
+          <h2 id="why-mini-css">Why mini.css?</h2><hr>
+          <p><strong>mini.css</strong> is a very light framework without any Javascript or excessive styling, that allows you to quickly build your own styles exactly the way you want them. Also, it works great on mobile devices. So, the three main reasons to give it a try are</p>
+          <ul>
+            <li>Size</li>
+            <li>Responsiveness</li>
+            <li>Customization</li>
+          </ul>
+          <h3>mini.css is tiny</h3>
+          <p><strong>mini.css</strong> is really small, just below 3KB gzipped, making it ideal if you want to build a page that load really fast. Comparing this to <a href="http://getbootstrap.com">Twitter Bootstrap</a>, one of the most popular frameworks out there which is about 100KB gzipped, you can probably see why you might want to try out mini.css.</p>
+
+          <h3>mini.css is mobile-friendly</h3>
+          <p>Mobile devices are becoming more and more important when designing for web and <strong>mini.css</strong> knows that. In fact, it is built with mobile devices as a priority, not an afterthought. What this means is that your websites will work well on mobile devices without a lot of tweaking.<sup>*</sup> If you are not convinced, open this page in your phone.</p>
+          <small>(*): We do not want to claim that any website will ever instantly work 100% the way you want on mobile, but mini.css eliminates a lot of the tedious work of making your websites mobile-friendly, so you can focus on the interesting parts that actually need your attention.</small>
+          
+          <h3>mini.css is style-agnostic</h3>
+          <p><strong>mini.css</strong> does not force you to use some default colors that make all websites look similar. In fact it does not force you to use any styling that is preset by the author of the framework. It comes in <strong>flavors</strong>. That's right, everything is customizable to the point that you can make it look entirely different from almost any other website built with mini.css. How? Well, using the very powerful features that <a href="http://sass-lang.com/">Sass (SCSS)</a> provides and by having a well-documented <a href="https://github.com/Chalarangelo/mini.css/wiki">Wiki</a> to help you customize it as much as you like.</p>
+          <br>
+
+          <h2 id="core-modules">Core modules</h2><hr>
+          <p>Frameworks are all about modules. Some are important, others not so much. This is why <strong>mini.css</strong> allows you to pick which modules you want in your custom flavor. We have already separated them into core modules and extras, so that you can easily choose what you like. What we think is vital to the core experience:</p>
+          
+          <h3>Base</h3>
+          <p>By using a modified version of <a href="https://necolas.github.io/normalize.css/">normalize.css</a> combined with a long list of variables, a customized base is created that makes your pages work well in all browsers and devices. The base is usually about 1.2KB<sup>*</sup> making it so tiny you'll hardly even notice it in page loading. Also, the framework's base contains your customized typography rules and colors.</p>
+
+          <h3>Responsive grid</h3>
+          <p><strong>mini.css</strong> comes with a reponsive grid that lets you build pages that look great on all devices without having to constantly tweak your page's layout. It can be customized to as many columns as you like, too, and it's only about 450 bytes.<sup>*</sup></p>
+
+          <h3>Navigation</h3>
+          <p>Navigation is made simple with the navigation bar module, that lets you build customized navigation bars that work great in mobile devices. These navigation elements are probably one of the heavier modules at about 530 bytes.<sup>*</sup></p>
+
+          <h3>Tables</h3>
+          <p>Instead of the old-school default tables that you usually see, you can style them the way you like them without overloading your page. The tables module is about 250 bytes<sup>*</sup> and allows you to utilise a variety of styles for your tables.</p>
+
+          <h3>Forms</h3>
+          <p>Custom styling for forms is also available as a module and it allows you to make pretty forms the way you like them, without a lot of effort. Another reasonably heavy component in comparison to some other, with its size being about 520 bytes.<sup>*</sup></p>
+
+          <h3>Buttons</h3>
+          <p>Button styles are tiny and they work great without excessive fluff. You can have as many as you like and they almost do not affect your page's performance, as their size is about 430 bytes.<sup>*</sup></p>
+
+          <h3>Utilities and helper classes</h3>
+          <p>Lots of things that you might use quite often are not included in the framework's base module. This is where the utilities module comes in with a variety of classes for quick floats, centering content, making generic borders and simple icons or just hiding elements. This module is entirely customizable, allowing you to pick any pieces you like, but in total its size is about 450 bytes.<sup>*</sup></p>
+
+          <small>(*): Size metrics are based on gzipped size of each module for the default flavor. Your flavor might be larger or smaller, depending on how you use the variables provided. However, for most cases, the provided metrics are representative of your final size. Combining all modules might make your final gzipped CSS file smaller than the sum of the modules' sizes. </small>
+          <br><br>
+
+          <h2 id="customization">Customization</h2><hr>
+          <p><strong>mini.css</strong> does not force you to use a default style, instead it claims to be style-agnostic and wears this title like a badge, allowing you to create unique flavors that you can use any way you like. You can customize virtually anything using the provided Sass mixins and variables, so that you include exactly what you want in your stylesheet without any excessive styles. Or you can build a bunch of flavors and change them on the fly to see what fits better. It's up to you, the developer, to design a great website and we do not want to take that away from you. We just provide the tools and you can use them in any way you see fit. by the way, the <a href="https://github.com/Chalarangelo/mini.css/wiki">wiki</a> is a great place for you to start customizing your flavor!</p>
+          <br>
+
+          <h2 id="extra-modules">Extra modules</h2><hr>
+          <p>Coming soon! <small>In the meantime, why don't you check out the framework's <a href="https://github.com/Chalarangelo/mini.css">Github page</a>?</small></p>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

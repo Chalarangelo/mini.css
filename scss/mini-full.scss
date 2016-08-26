@@ -37,4 +37,4 @@
 @include make-hidden(hidden);
 @import 'mini/nav';
 // Use nav mixin to create nav with default specs.
-@include make-nav(nav, vertical, fixed, logo, 135%, 8px, #272727, #ddd, darken, 7.5%, not-allowed, .65, left, 12, 2, 768px, top-right, 10px, 1.75em);
+@include make-nav(nav, vertical, fixed, logo, 135%, link, 8px, #272727, #ddd, darken, 7.5%, not-allowed, .65, left, 12, 2, 768px, top-right, 10px, 1.75em);

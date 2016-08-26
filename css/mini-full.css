@@ -918,6 +918,50 @@ img.thumb {
 .hidden {
   display: none !important; }
 
+/*
+	Mixin for navigation bar and complementary styles.
+	Parameters:
+	- $nav-name                                   :	The class name for the navigation bar.
+	- $nav-vertical-name                          :	The class name for the vertical style of the navigation bar.
+	- $nav-fixed-name                             :	The class name for the fixed style of the navigation bar.
+	- $nav-logo-name                              :	The class name for the logo item of the navigation bar.
+	- $nav-logo-size                              :	The font-size of the logo item of the navigation bar.
+	- $nav-link-name                              :	The class name for the navigation links of the navigation bar.
+	- $nav-padding                                :	The padding of the elements of the navigation bar. [1]
+	- $nav-color                                  :	The text color of the navigation elements.
+	- $nav-bg-color                               :	The background color of the navigation bar.
+	- $nav-hover-style                            :	Hover/active/focus style of the navigation elements. [2]
+	- $nav-hover-style-percentage                 :	Hover/active/focus style of the navigation elements percentage modifier.
+	- $nav-disabled-cursor                        :	The cursor style when hovering over the navigation elements whie disabled.
+	- $nav-disabled-opacity                       :	The opacity of the navigation elements when disabled.
+	- $nav-fixed-left-right                       :	The orientation of the fixed navigation bar. [3][4]
+	- $grid-columns-total                         :	Total amount fo columns in the used grid. [5]
+	- $grid-coloumns-count-for-nav-fixed-vertical :	Desired amount of columns occupied by the vertical navigation bar in the grid. [5]
+	- $nav-fixed-collapse-breakpoint              :	The breakpoint below which fixed navigation bars will collapse to a menu toggle button.
+	- $nav-fixed-collapse-label-location          :	Location of the collapsed menu button label. [6]
+	- $nav-fixed-collapse-label-margin            :	The margin for the collapsed menu button label.
+	- $nav-fixed-collapse-label-font-size         :	The font size of the collapsed menu button label.
+	Notes:
+	- [1] : This padding applies to all elements of the navigation bar and all styles(e.g. vertical or fixed). 
+		For vertical styles it adapts to apply properly. It also adapts to apply properly to the collapse 
+		label of the navigation bar. Please specify only a single padding value (i.e. 6px, 1.25em etc.) to 
+		avoid CSS errors and ultimately the style not being applied to some elements.
+	- [2] : The values that $nav-hover-style can take are `lighten` and `darken`. The inside condition only 
+		checks if the value is `lighten` and acts accordingly. Invalid values are treated as `darken`.
+	- [3] : The values of $nav-fixed-left-right recognizes are `left` and `right`. However if invalid values
+		are provided, due to the inside condition only checking for `left`, `right` will be used as the
+		default value.
+	- [4]: The values of $nav-fixed-left-right will apply to all fixed navigation bars. The horizontal bars
+		should not be affected as they are 100% width, meaning that anchoring to left or right should have
+		the same result.
+	- [5] : These values are used to make the navigation bar work better with the grid system. Values do not have 
+		to be the same as the grid or integer values, meaning that values like 12 and 1.5 could work great leaving
+		a small gap just before the third column in the grid. If no grid is specified, you can use percentage
+		values like 100 and 15 to get a 15% width for example.
+	- [6] : The value $nav-fixed-collapse-label-location recognizes are `top-left`, `top-right`, `bottom-left`
+		and `bottom-right`. Due to the way the conditional checking is implemented, `bottom-right` will be
+		used as a default if no valid value is specified.
+*/
 .nav {
   box-sizing: border-box;
   background-color: #ddd; }
@@ -937,9 +981,9 @@ img.thumb {
         padding: 8px;
         color: #272727;
         margin: 0; }
-      .nav ul li a:hover, .nav ul li a:active, .nav ul li a:focus {
+      .nav ul li .link:hover, .nav ul li .link:active, .nav ul li .link:focus {
         background: #cacaca; }
-      .nav ul li a.disabled, .nav ul li a[disabled] {
+      .nav ul li .link.disabled, .nav ul li .link[disabled] {
         cursor: not-allowed;
         opacity: 0.65; }
   .nav.vertical ul {

@@ -1,4 +1,9 @@
 /*
+	Flavor name: Default (mini-default)
+	Author: Angelos Chalaris (chalarangelo@gmail.com)
+	mini.css version: v1.0 (September, 2016)
+*/
+/*
 	Set font-family, line-height, prevent adjustments of font size after orientation changes in IE and iOS.
 	Set body colors and margin.
 */
@@ -384,28 +389,28 @@ textarea {
   background: #eaeaea;
   cursor: pointer; }
   .btn:hover, .btn:active, .btn:focus, a.btn:hover, a.btn:active, a.btn:focus, a.btn:visited:hover, a.btn:visited:active, a.btn:visited:focus {
-    background: #d7d7d7; }
+    background: #fdfdfd; }
   .btn.disabled, .btn[disabled], .btnfieldset[disabled], a.btn.disabled, a.btn[disabled], a.btnfieldset[disabled], a.btn:visited.disabled, a.btn:visited[disabled], a.btn:visitedfieldset[disabled] {
     cursor: not-allowed;
     opacity: 0.65; }
 
 .btn.blue, a.btn.blue, a.btn.blue:visited {
   color: #eeeeee;
-  background: #337ab7; }
+  background: #3f84b3; }
   .btn.blue:hover, .btn.blue:active, .btn.blue:focus, a.btn.blue:hover, a.btn.blue:active, a.btn.blue:focus, a.btn.blue:visited:hover, a.btn.blue:visited:active, a.btn.blue:visited:focus {
-    background: #2b6699; }
+    background: #5597c3; }
 
 .btn.green, a.btn.green, a.btn.green:visited {
   color: #eeeeee;
-  background: #5cb85c; }
+  background: #2db747; }
   .btn.green:hover, .btn.green:active, .btn.green:focus, a.btn.green:hover, a.btn.green:active, a.btn.green:focus, a.btn.green:visited:hover, a.btn.green:visited:active, a.btn.green:visited:focus {
-    background: #48a648; }
+    background: #3bcf57; }
 
 .btn.red, a.btn.red, a.btn.red:visited {
   color: #eeeeee;
-  background: #d9534f; }
+  background: #ea4848; }
   .btn.red:hover, .btn.red:active, .btn.red:focus, a.btn.red:hover, a.btn.red:active, a.btn.red:focus, a.btn.red:visited:hover, a.btn.red:visited:active, a.btn.red:visited:focus {
-    background: #d23430; }
+    background: #ee6a6a; }
 
 .btn.lg {
   padding: 9px 15px;
@@ -725,28 +730,158 @@ textarea {
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
-  border: 1px solid #777; }
+  border: 1px solid #bdbdbd; }
   .tbl td, .tbl th {
     overflow: visible;
-    border-left: 1px solid #777;
+    border-left: 1px solid #bdbdbd;
     border-bottom: none;
     margin: 0;
     padding: 0.5em; }
   .tbl thead {
-    background-color: #4e4e4e;
-    color: #f5f5f5;
+    background-color: #d9d9d9;
+    color: #111;
     text-align: left; }
   .tbl tbody {
-    background-color: #ddd;
+    background-color: #f5f5f5;
     color: #111; }
     .tbl tbody tr:nth-child(2n-1) {
-      background-color: #f4f4f4; }
+      background-color: #ececec; }
   .tbl.hor td, .tbl.hor th {
     border-left: none;
-    border-bottom: 1px solid #777; }
+    border-bottom: 1px solid #bdbdbd; }
   .tbl.bor td, .tbl.bor th {
-    border-bottom: 1px solid #777; }
+    border-bottom: 1px solid #bdbdbd; }
 
+/*
+	Mixin for navigation bar and complementary styles.
+	Parameters:
+	- $nav-name                                   :	The class name for the navigation bar.
+	- $nav-vertical-name                          :	The class name for the vertical style of the navigation bar.
+	- $nav-fixed-name                             :	The class name for the fixed style of the navigation bar.
+	- $nav-logo-name                              :	The class name for the logo item of the navigation bar.
+	- $nav-logo-size                              :	The font-size of the logo item of the navigation bar.
+	- $nav-link-name                              :	The class name for the navigation links of the navigation bar.
+	- $nav-padding                                :	The padding of the elements of the navigation bar. [1]
+	- $nav-color                                  :	The text color of the navigation elements.
+	- $nav-bg-color                               :	The background color of the navigation bar.
+	- $nav-hover-style                            :	Hover/active/focus style of the navigation elements. [2]
+	- $nav-hover-style-percentage                 :	Hover/active/focus style of the navigation elements percentage modifier.
+	- $nav-disabled-cursor                        :	The cursor style when hovering over the navigation elements whie disabled.
+	- $nav-disabled-opacity                       :	The opacity of the navigation elements when disabled.
+	- $nav-fixed-left-right                       :	The orientation of the fixed navigation bar. [3][4]
+	- $grid-columns-total                         :	Total amount fo columns in the used grid. [5]
+	- $grid-coloumns-count-for-nav-fixed-vertical :	Desired amount of columns occupied by the vertical navigation bar in the grid. [5]
+	- $nav-fixed-collapse-breakpoint              :	The breakpoint below which fixed navigation bars will collapse to a menu toggle button.
+	- $nav-fixed-collapse-label-location          :	Location of the collapsed menu button label. [6]
+	- $nav-fixed-collapse-label-margin            :	The margin for the collapsed menu button label.
+	- $nav-fixed-collapse-label-font-size         :	The font size of the collapsed menu button label.
+	Notes:
+	- [1] : This padding applies to all elements of the navigation bar and all styles(e.g. vertical or fixed). 
+		For vertical styles it adapts to apply properly. It also adapts to apply properly to the collapse 
+		label of the navigation bar. Please specify only a single padding value (i.e. 6px, 1.25em etc.) to 
+		avoid CSS errors and ultimately the style not being applied to some elements.
+	- [2] : The values that $nav-hover-style can take are `lighten` and `darken`. The inside condition only 
+		checks if the value is `lighten` and acts accordingly. Invalid values are treated as `darken`.
+	- [3] : The values of $nav-fixed-left-right recognizes are `left` and `right`. However if invalid values
+		are provided, due to the inside condition only checking for `left`, `right` will be used as the
+		default value.
+	- [4]: The values of $nav-fixed-left-right will apply to all fixed navigation bars. The horizontal bars
+		should not be affected as they are 100% width, meaning that anchoring to left or right should have
+		the same result.
+	- [5] : These values are used to make the navigation bar work better with the grid system. Values do not have 
+		to be the same as the grid or integer values, meaning that values like 12 and 1.5 could work great leaving
+		a small gap just before the third column in the grid. If no grid is specified, you can use percentage
+		values like 100 and 15 to get a 15% width for example.
+	- [6] : The value $nav-fixed-collapse-label-location recognizes are `top-left`, `top-right`, `bottom-left`
+		and `bottom-right`. Due to the way the conditional checking is implemented, `bottom-right` will be
+		used as a default if no valid value is specified.
+*/
+.nav {
+  box-sizing: border-box;
+  background-color: #ddd; }
+  .nav .logo {
+    font-size: 135%;
+    color: #272727; }
+  .nav ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .nav ul li {
+      display: inline-block;
+      margin: 0;
+      white-space: nowrap; }
+      .nav ul li * {
+        display: inline-block;
+        padding: 8px;
+        color: #272727;
+        margin: 0; }
+      .nav ul li .link:hover, .nav ul li .link:active, .nav ul li .link:focus {
+        color: #272727;
+        background: #cacaca; }
+      .nav ul li .link.disabled, .nav ul li .link[disabled] {
+        cursor: not-allowed;
+        opacity: 0.65; }
+  .nav.vertical ul {
+    display: block; }
+    .nav.vertical ul li {
+      display: block; }
+      .nav.vertical ul li * {
+        width: 100%;
+        padding: 8px 0; }
+  .nav.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%; }
+    .nav.fixed.vertical {
+      height: 100%;
+      width: 16.66667%; }
+      .nav.fixed.vertical ul {
+        width: 100%; }
+        .nav.fixed.vertical ul li {
+          display: block; }
+  .nav + label {
+    display: none;
+    font-weight: 700;
+    margin: 10px;
+    font-size: 1.75em;
+    padding: 8px;
+    color: #272727;
+    background-color: #ddd;
+    width: auto;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0; }
+    .nav + label:before {
+      position: relative;
+      content: '\2630'; }
+    .nav + label:hover, .nav + label:active, .nav + label:focus {
+      background: #cacaca; }
+
+@media (max-width: 768px) {
+  .nav {
+    overflow: auto; }
+    .nav.fixed {
+      display: none; }
+      .nav.fixed + label {
+        display: block; }
+
+  input[type="checkbox"]:checked + .nav.fixed {
+    display: block;
+    width: 100%;
+    height: 100%; }
+    input[type="checkbox"]:checked + .nav.fixed ul {
+      display: block; }
+      input[type="checkbox"]:checked + .nav.fixed ul li {
+        display: block; }
+        input[type="checkbox"]:checked + .nav.fixed ul li * {
+          width: 100%;
+          padding: 8px 0; }
+    input[type="checkbox"]:checked + .nav.fixed + label:before {
+      content: '\00d7'; } }
 /*
 	Image thumbnail style mixin. [1]
 	Parameters:
@@ -859,22 +994,22 @@ img.thumb {
   border-radius: 50% !important; }
 
 .txt-blue {
-  color: #337ab7 !important; }
+  color: #3f84b3 !important; }
 
 .txt-green {
-  color: #5cb85c !important; }
+  color: #2db747 !important; }
 
 .txt-red {
-  color: #d9534f !important; }
+  color: #ea4848 !important; }
 
 .bg-blue {
-  background-color: #337ab7 !important; }
+  background-color: #3f84b3 !important; }
 
 .bg-green {
-  background-color: #5cb85c !important; }
+  background-color: #2db747 !important; }
 
 .bg-red {
-  background-color: #d9534f !important; }
+  background-color: #ea4848 !important; }
 
 .caret {
   display: inline-block;
@@ -917,134 +1052,3 @@ img.thumb {
 
 .hidden {
   display: none !important; }
-
-/*
-	Mixin for navigation bar and complementary styles.
-	Parameters:
-	- $nav-name                                   :	The class name for the navigation bar.
-	- $nav-vertical-name                          :	The class name for the vertical style of the navigation bar.
-	- $nav-fixed-name                             :	The class name for the fixed style of the navigation bar.
-	- $nav-logo-name                              :	The class name for the logo item of the navigation bar.
-	- $nav-logo-size                              :	The font-size of the logo item of the navigation bar.
-	- $nav-link-name                              :	The class name for the navigation links of the navigation bar.
-	- $nav-padding                                :	The padding of the elements of the navigation bar. [1]
-	- $nav-color                                  :	The text color of the navigation elements.
-	- $nav-bg-color                               :	The background color of the navigation bar.
-	- $nav-hover-style                            :	Hover/active/focus style of the navigation elements. [2]
-	- $nav-hover-style-percentage                 :	Hover/active/focus style of the navigation elements percentage modifier.
-	- $nav-disabled-cursor                        :	The cursor style when hovering over the navigation elements whie disabled.
-	- $nav-disabled-opacity                       :	The opacity of the navigation elements when disabled.
-	- $nav-fixed-left-right                       :	The orientation of the fixed navigation bar. [3][4]
-	- $grid-columns-total                         :	Total amount fo columns in the used grid. [5]
-	- $grid-coloumns-count-for-nav-fixed-vertical :	Desired amount of columns occupied by the vertical navigation bar in the grid. [5]
-	- $nav-fixed-collapse-breakpoint              :	The breakpoint below which fixed navigation bars will collapse to a menu toggle button.
-	- $nav-fixed-collapse-label-location          :	Location of the collapsed menu button label. [6]
-	- $nav-fixed-collapse-label-margin            :	The margin for the collapsed menu button label.
-	- $nav-fixed-collapse-label-font-size         :	The font size of the collapsed menu button label.
-	Notes:
-	- [1] : This padding applies to all elements of the navigation bar and all styles(e.g. vertical or fixed). 
-		For vertical styles it adapts to apply properly. It also adapts to apply properly to the collapse 
-		label of the navigation bar. Please specify only a single padding value (i.e. 6px, 1.25em etc.) to 
-		avoid CSS errors and ultimately the style not being applied to some elements.
-	- [2] : The values that $nav-hover-style can take are `lighten` and `darken`. The inside condition only 
-		checks if the value is `lighten` and acts accordingly. Invalid values are treated as `darken`.
-	- [3] : The values of $nav-fixed-left-right recognizes are `left` and `right`. However if invalid values
-		are provided, due to the inside condition only checking for `left`, `right` will be used as the
-		default value.
-	- [4]: The values of $nav-fixed-left-right will apply to all fixed navigation bars. The horizontal bars
-		should not be affected as they are 100% width, meaning that anchoring to left or right should have
-		the same result.
-	- [5] : These values are used to make the navigation bar work better with the grid system. Values do not have 
-		to be the same as the grid or integer values, meaning that values like 12 and 1.5 could work great leaving
-		a small gap just before the third column in the grid. If no grid is specified, you can use percentage
-		values like 100 and 15 to get a 15% width for example.
-	- [6] : The value $nav-fixed-collapse-label-location recognizes are `top-left`, `top-right`, `bottom-left`
-		and `bottom-right`. Due to the way the conditional checking is implemented, `bottom-right` will be
-		used as a default if no valid value is specified.
-*/
-.nav {
-  box-sizing: border-box;
-  background-color: #222; }
-  .nav .logo {
-    font-size: 135%;
-    color: #fff; }
-  .nav ul {
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    .nav ul li {
-      display: inline-block;
-      margin: 0;
-      white-space: nowrap; }
-      .nav ul li * {
-        display: inline-block;
-        padding: 10px;
-        color: #fff;
-        margin: 0; }
-      .nav ul li .link:hover, .nav ul li .link:active, .nav ul li .link:focus {
-        color: #fff;
-        background: #353535; }
-      .nav ul li .link.disabled, .nav ul li .link[disabled] {
-        cursor: not-allowed;
-        opacity: 0.65; }
-  .nav.vertical ul {
-    display: block; }
-    .nav.vertical ul li {
-      display: block; }
-      .nav.vertical ul li * {
-        width: 100%;
-        padding: 10px 0; }
-  .nav.fixed {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 999;
-    width: 100%; }
-    .nav.fixed.vertical {
-      height: 100%;
-      width: 16.66667%; }
-      .nav.fixed.vertical ul {
-        width: 100%; }
-        .nav.fixed.vertical ul li {
-          display: block; }
-  .nav + label {
-    display: none;
-    font-weight: 700;
-    margin: 10px;
-    font-size: 1.75em;
-    padding: 10px;
-    color: #fff;
-    background-color: #222;
-    width: auto;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0; }
-    .nav + label:before {
-      position: relative;
-      content: '\2630'; }
-    .nav + label:hover, .nav + label:active, .nav + label:focus {
-      background: #353535; }
-
-@media (max-width: 768px) {
-  .nav {
-    overflow: auto; }
-    .nav.fixed {
-      display: none; }
-      .nav.fixed + label {
-        display: block; }
-
-  input[type="checkbox"]:checked + .nav.fixed {
-    display: block;
-    width: 100%;
-    height: 100%; }
-    input[type="checkbox"]:checked + .nav.fixed ul {
-      display: block; }
-      input[type="checkbox"]:checked + .nav.fixed ul li {
-        display: block; }
-        input[type="checkbox"]:checked + .nav.fixed ul li * {
-          width: 100%;
-          padding: 10px 0; }
-    input[type="checkbox"]:checked + .nav.fixed + label:before {
-      content: '\00d7'; } }

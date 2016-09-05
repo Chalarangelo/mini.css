@@ -32,8 +32,6 @@
           <h1>mini.css<small> a minimal Sass-y responsive mobile-first style-agnostic CSS framework</small></h1>
           <p>If you want to create your own flavor, get involved or report an issue, head over to <strong>mini.css</strong>'s <a href="https://github.com/Chalarangelo/mini.css">Github page</a>. If you want to give <strong>mini.css</strong> a try using the default flavor, paste the following code inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
           <pre style="overflow: auto;">&lt;link rel="stylesheet" href="https://github.com/Chalarangelo/mini.css/tree/master/flavors/mini-default.min.css"&gt;</pre>
-
-          <!-- <p>TODO: INSERT IMAGE SHOWCASING IT HERE!</p> -->
           <br>
 
           <h2 id="why-mini-css">Why mini.css?</h2><hr>
@@ -63,6 +61,73 @@
           <h3>Responsive grid</h3>
           <p><strong>mini.css</strong> comes with a reponsive grid that lets you build pages that look great on all devices without having to constantly tweak your page's layout. It can be customized to as many columns as you like, too, and it's only about 450 bytes.<sup>*</sup></p>
 
+          <h4><strong>Grid example (12-columns)</strong><sup>**</sup></h4>
+          <div class="grid-container">
+            <div class="row">
+              <div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div>
+              <div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div>
+            </div>
+            <div class="row">
+              <div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div>
+            </div>
+            <div class="row">
+              <div class="col xs-3 bordered">1/4</div><div class="col xs-3 bordered">1/4</div><div class="col xs-3 bordered">1/4</div><div class="col xs-3 bordered">1/4</div>
+            </div>
+            <div class="row">
+              <div class="col xs-4 bordered">1/3</div><div class="col xs-4 bordered">1/3</div><div class="col xs-4 bordered">1/3</div>
+            </div>
+            <div class="row">
+              <div class="col xs-6 bordered">1/2</div><div class="col xs-6 bordered">1/2</div>
+            </div>
+            <div class="row">
+              <div class="col xs-12 bordered">1/1</div>
+            </div>
+          </div>
+          <h4><strong>Code</strong></h4>
+          <pre>&lt;div class="grid-container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col xs-1"&gt;&lt;/div&gt;
+    &lt;div class="col xs-1"&gt;&lt;/div&gt;
+    &lt;div class="col xs-1"&gt;&lt;/div&gt;
+    &lt;div class="col xs-1"&gt;&lt;/div&gt;
+    &lt;div class="col xs-1"&gt;&lt;/div&gt;
+    &lt;div class="col xs-1"&gt;&lt;/div&gt;
+    &lt;div class="col xs-1"&gt;&lt;/div&gt;
+    &lt;div class="col xs-1"&gt;&lt;/div&gt;
+    &lt;div class="col xs-1"&gt;&lt;/div&gt;
+    &lt;div class="col xs-1"&gt;&lt;/div&gt;
+    &lt;div class="col xs-1"&gt;&lt;/div&gt;
+    &lt;div class="col xs-1"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col xs-2"&gt;&lt;/div&gt;
+    &lt;div class="col xs-2"&gt;&lt;/div&gt;
+    &lt;div class="col xs-2"&gt;&lt;/div&gt;
+    &lt;div class="col xs-2"&gt;&lt;/div&gt;
+    &lt;div class="col xs-2"&gt;&lt;/div&gt;
+    &lt;div class="col xs-2"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col xs-3"&gt;&lt;/div&gt;
+    &lt;div class="col xs-3"&gt;&lt;/div&gt;
+    &lt;div class="col xs-3"&gt;&lt;/div&gt;
+    &lt;div class="col xs-3"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col xs-4"&gt;&lt;/div&gt;
+    &lt;div class="col xs-4"&gt;&lt;/div&gt;
+    &lt;div class="col xs-4"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col xs-6"&gt;&lt;/div&gt;
+    &lt;div class="col xs-6"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col xs-12"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+
           <h3>Navigation</h3>
           <p>Navigation is made simple with the navigation bar module, that lets you build customized navigation bars that work great in mobile devices. These navigation elements are probably one of the heavier modules at about 530 bytes.<sup>*</sup></p>
 
@@ -78,7 +143,8 @@
           <h3>Utilities and helper classes</h3>
           <p>Lots of things that you might use quite often are not included in the framework's base module. This is where the utilities module comes in with a variety of classes for quick floats, centering content, making generic borders and simple icons or just hiding elements. This module is entirely customizable, allowing you to pick any pieces you like, but in total its size is about 450 bytes.<sup>*</sup></p>
 
-          <small>(*): Size metrics are based on gzipped size of each module for the default flavor. Your flavor might be larger or smaller, depending on how you use the variables provided. However, for most cases, the provided metrics are representative of your final size. Combining all modules might make your final gzipped CSS file smaller than the sum of the modules' sizes. </small>
+          <small>(*): Size metrics are based on gzipped size of each module for the default flavor. Your flavor might be larger or smaller, depending on how you use the variables provided. However, for most cases, the provided metrics are representative of your final size. Combining all modules might make your final gzipped CSS file smaller than the sum of the modules' sizes. </small><br>
+          <small>(**): Provided examples are based on the naming conventions and the styling of the default flavor. If you create your own flavor, results might vary. </small>
           <br><br>
 
           <h2 id="customization">Customization</h2><hr>

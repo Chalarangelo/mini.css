@@ -72,7 +72,7 @@ $fieldset-border-radius:		4px;											// Border radius for fieldset
 $fieldset-margin:				0 2px;											// Margin for fieldset
 $fieldset-padding:				0.35em 0.65em 0.75em;							// Padding for fieldset
 //	Enable base (_base.scss) and use the variables defined above.
-@import '../scss/mini/base';
+@import 'mini/base';
 //====================================================================
 //	Variable definitions for the Button module (_button.scss)
 //====================================================================
@@ -93,7 +93,7 @@ $btn-style3-name:							'red';								// Name for button style 3 class
 $btn-size1-name:							lg;									// Name for the button size 1 class
 $btn-size2-name:							sm;									// Name for the button size 2 class
 //	Enable buttons (_button.scss). (Use individual mixins below to use.)
-@import '../scss/mini/button';
+@import 'mini/button';
 // Use button mixins to create buttons with given specs. For more information
 // refer to the _button.scss file to check the definitions.
 @include make-btn($btn-class-name, 0, 4px, 2px 0, 6px 12px, $btn-default-color, $btn-default-bg-color, lighten, 7.5%, pointer, not-allowed, .65);
@@ -117,9 +117,9 @@ $grid-no-show-name:							no;									// Name for hidden grid elements class
 //	Grid breakpoints for different screens
 $grid-small-breakpoint:						768px;								// Breakpoint for extra small to small devices
 $grid-medium-breakpoint:					1024px;								// Breakpoint for small to medium devices
-$grid-large-breakpoint:						1280px;								// Breakpoint for medium to large devices
+$grid-large-breakpong:						1280px;								// Breakpoint for medium to large devices
 //	Enable grid(s) (_grid.scss). (Use individual mixins below to use.)
-@import '../scss/mini/grid';
+@import 'mini/grid';
 // Use grid mixin to create grid with given specs. For more information
 // refer to the grid.scss file to check the definitions.
 @include make-grid($grid-container-name, 0, $grid-row-name, $grid-column-name, 12, 12px, $grid-extra-small-device-name, $grid-small-device-name, $grid-medium-device-name, $grid-large-device-name, $grid-no-show-name, $grid-small-breakpoint, $grid-medium-breakpoint, $grid-large-breakpoint);
@@ -133,7 +133,7 @@ $form-control-group-name:					ctrl-group;							// Name for the form's control g
 $form-focus-color:							#2678b3;							// Color for focused form element outline
 $form-invalid-color:						#e9322d;							// Color for invalid form element outline
 //	Enable forms (_form.scss). (Use individual mixins below to use.)
-@import '../scss/mini/form';
+@import 'mini/form';
 // Use form mixin to create form with given specs. For more information
 // refer to the _form.scss file to check the definitions.
 @include make-frm($form-class-name, 1px solid #ccc, 4px, 0.2em, 0.3em, $form-focus-color, $form-invalid-color, not-allowed, .65, darken($body-bg-color,10%), darken($body-bg-color,25%), 1.9em, 0.5em 0 0 0.2em, $form-control-group-name,  0 0 0.3em 0, inline, aligned,15em);
@@ -151,7 +151,7 @@ $table-body-bg-color:						#f5f5f5;							// Table body bakground color
 $table-body-alt-bg-color:					#ececec;							// Table body alternative background color
 $table-body-color:							#111;								// Table body text color
 //	Enable tables (_table.scss). (Use individual mixins below to use.)
-@import '../scss/mini/table';
+@import 'mini/table';
 // Use table mixin to create table with given specs. For more information
 // refer to the _table.scss file to check the definitions.
 @include make-tbl($table-class-name, 1px solid #bdbdbd, 0, 0.5em, $table-head-bg-color, $table-head-color, $table-body-bg-color,$table-body-alt-bg-color, $table-body-color, $table-horizontal-name, $table-bordered-name);
@@ -169,7 +169,7 @@ $navigation-bg-color:						#272727;							// Background color for the navigation
 $navigation-color:							#ddd;								// Color for the navigation text
 $navigation-fixed-collapse-breakpoint:		768px;								// Breakpoint for fixed naviation collapse
 //	Enable navigation (_nav.scss). (Use individual mixins below to use.)
-@import '../scss/mini/nav';
+@import 'mini/nav';
 // Use nav mixin to create nav with default specs. For more information
 // refer to the _nav.scss file to check the definitions.
 @include make-nav($navigation-class-name, $navigation-vertical-name, $navigation-fixed-name, $navigation-logo-name, 135%, $navigation-link-name, 8px, $navigation-bg-color, $navigation-color, darken, 7.5%, not-allowed, .65, left, 12, 2, $navigation-fixed-collapse-breakpoint, top-right, 10px, 1.75em);
@@ -206,7 +206,7 @@ $colored-bg-text1-bg-color:					$btn-b-bg-color;					// Background color for the
 $colored-bg-text2-bg-color:					$btn-g-bg-color;					// Background color for the colored text style 2 class
 $colored-bg-text3-bg-color:					$btn-r-bg-color;					// Background color for the colored text style 3 class
 //	Enable utilities (_utility.scss). (Use individual mixins below to use.)
-@import '../scss/mini/utility';
+@import 'mini/utility';
 // Use utility mixins to create utility classes with given specs. For more information
 // refer to the _utility.scss file to check the definitions.
 @include make-thumb($thumbnail-class-name, 0.25em, 1px solid #ccc, 4px);

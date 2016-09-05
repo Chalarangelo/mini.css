@@ -82,7 +82,7 @@
 */
 @mixin make-btn-style($btn-name, $btn-style-name, $btn-style-color, $btn-style-bg-color, $btn-style-hover-style: lighten, $btn-style-hover-style-percentage: 7.5%){
 	.#{$btn-name}.#{$btn-style-name}, a.#{$btn-name}.#{$btn-style-name}, a.#{$btn-name}.#{$btn-style-name}:visited{
-		@include btn-variant($btn-alt-color, $btn-style-bg-color, $btn-style-hover-style, $btn-style-hover-style-percentage);
+		@include btn-variant($btn-style-color, $btn-style-bg-color, $btn-style-hover-style, $btn-style-hover-style-percentage);
 	}
 }
 /*

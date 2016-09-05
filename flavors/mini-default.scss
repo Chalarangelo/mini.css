@@ -14,6 +14,11 @@
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
 	mini.css version: v1.0 (September, 2016)
 */
+//====================================================================
+//
+//		CORE COMPONENTS (located in `mini`):
+//
+//====================================================================
 //	Variable definitions for the Base module (_base.scss)
 //====================================================================
 //	Basic rules for body
@@ -172,7 +177,7 @@ $navigation-fixed-collapse-breakpoint:		768px;								// Breakpoint for fixed na
 @import '../scss/mini/nav';
 // Use nav mixin to create nav with default specs. For more information
 // refer to the _nav.scss file to check the definitions.
-@include make-nav($navigation-class-name, $navigation-vertical-name, $navigation-fixed-name, $navigation-logo-name, 135%, $navigation-link-name, 8px, $navigation-bg-color, $navigation-color, darken, 7.5%, not-allowed, .65, left, 12, 2, $navigation-fixed-collapse-breakpoint, top-right, 10px, 1.75em);
+@include make-nav($navigation-class-name, $navigation-vertical-name, $navigation-fixed-name, $navigation-logo-name, 135%, $navigation-link-name, 8px, $navigation-color, $navigation-bg-color, darken, 7.5%, not-allowed, .65, left, 12, 2, $navigation-fixed-collapse-breakpoint, top-right, 10px, 1.75em);
 //====================================================================
 //	Variable definitions for the Utilities and Helper Classes module (_utility.scss)
 //====================================================================
@@ -225,3 +230,36 @@ $colored-bg-text3-bg-color:					$btn-r-bg-color;					// Background color for the
 @include make-center-block($center-block-name);
 @include make-clearfix($clearfix-class-name);
 @include make-hidden($hidden-class-name);
+//====================================================================
+//
+//		EXTRA COMPONENTS (located in `mini-extra`):
+//
+//====================================================================
+//	Variable definitions for the Label module (_label.scss)
+//====================================================================
+// 	Colors and styles (you can remove things you don't need or define more
+//	colors if you need them).
+$lbl-default-color:							$btn-alt-color;						// Default text color for labels/badges
+$lbl-default-bg-color:						#777;								// Default background color for labels/badges
+$lbl-b-bg-color:							$btn-b-bg-color;					// Color for labels/badges style 1
+$lbl-g-bg-color:							$btn-g-bg-color;					// Color for labels/badges style 2
+$lbl-r-bg-color:							$btn-r-bg-color;					// Color for labels/badges style 3
+//	Label class names (you can remove things you don't need or define more
+//	classes if you need them).
+$lbl-class-name:							lbl;								// Name for the base labels class
+$lbl-style1-name:							'blue';								// Name for labels/badges style 1 class
+$lbl-style2-name:							'green';							// Name for labels/badges style 2 class
+$lbl-style3-name:							'red';								// Name for labels/badges style 3 class
+$badge-class-name:							bdg;								// Name for the base badges class
+//	Enable labels (_label.scss). (Use individual mixins below to use.)
+@import '../scss/mini-extra/label';
+// Use label mixins to create labels with given specs. For more information
+// refer to the _label.scss file to check the definitions.
+@include make-lbl($lbl-class-name, $lbl-default-bg-color, $lbl-default-color, 4px, 6px 10px, hide);
+@include make-lbl-style($lbl-class-name, $lbl-style1-name, $lbl-default-color, $lbl-b-bg-color);
+@include make-lbl-style($lbl-class-name, $lbl-style2-name, $lbl-default-color, $lbl-g-bg-color);
+@include make-lbl-style($lbl-class-name, $lbl-style3-name, $lbl-default-color, $lbl-r-bg-color);
+@include make-lbl($badge-class-name, $lbl-default-bg-color, $lbl-default-color, 8px, 3px 8px, hide);
+@include make-lbl-style($badge-class-name, $lbl-style1-name, $lbl-default-color, $lbl-b-bg-color);
+@include make-lbl-style($badge-class-name, $lbl-style2-name, $lbl-default-color, $lbl-g-bg-color);
+@include make-lbl-style($badge-class-name, $lbl-style3-name, $lbl-default-color, $lbl-r-bg-color);

@@ -1,0 +1,44 @@
+/*
+	Mixin for the labels/badges.
+	Parameters:
+	- $lbl-name          :	The class name of the labels/badges.
+	- $lbl-bg-color      :	The background color of the labels/badges.
+	- $lbl-color         :	The text color of the labels/badges.
+	- $lbl-border-radius :	The border-radius of the labels/badges.
+	- $lbl-padding       :	The padding of the labels/badges.
+	- $lbl-hide-on-empty :	Style of the label/badges when empty. [1]
+	Notes:
+	- [1] : The values that $lbl-hide-on-empty can take are `hide` or `show`. The inside condition only 
+		checks if the value is `hide` and acts accordingly. Invalid values are treated as `show`.
+*/
+@mixin make-lbl($lbl-name, $lbl-bg-color, $lbl-color, $lbl-border-radius, $lbl-padding, $lbl-hide-on-empty){
+	.#{$lbl-name}{
+		display: inline;
+		padding: $lbl-padding;
+		color: $lbl-color;
+		background-color: $lbl-bg-color;
+		border-radius: $lbl-border-radius;
+		@if $lbl-hide-on-empty == 'hide'{
+			&:empty{
+				display: none;
+			}
+		}
+	}
+}
+/*
+	Mixin for labels/badges styles. 
+	Parameters:
+	- $lbl-name                         : The class name of the labels/badges. [1]
+	- $lbl-style-name                   : The class name of the labels/badges style.
+	- $lbl-style-color                  : The text color of the labels/badges style.
+	- $lbl-style-bg-color               : The background color of the labels/badges style.
+	Notes:
+	- [1] : The value of $lbl-name must be the same as the value specified when using `make-lbl`, otherwise
+		the specified style will not work correctly.
+*/
+@mixin make-lbl-style($lbl-name, $lbl-style-name, $lbl-style-color, $lbl-style-bg-color){
+	.#{$lbl-name}.#{$lbl-style-name}{
+		color: $lbl-style-color;
+		background: $lbl-style-bg-color;
+	}
+}

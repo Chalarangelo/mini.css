@@ -798,10 +798,10 @@ textarea {
 */
 .nav {
   box-sizing: border-box;
-  background-color: #ddd; }
+  background-color: #272727; }
   .nav .logo {
     font-size: 135%;
-    color: #272727; }
+    color: #ddd; }
   .nav ul {
     display: inline-block;
     list-style: none;
@@ -814,11 +814,11 @@ textarea {
       .nav ul li * {
         display: inline-block;
         padding: 8px;
-        color: #272727;
+        color: #ddd;
         margin: 0; }
       .nav ul li .link:hover, .nav ul li .link:active, .nav ul li .link:focus {
-        color: #272727;
-        background: #cacaca; }
+        color: #ddd;
+        background: #141414; }
       .nav ul li .link.disabled, .nav ul li .link[disabled] {
         cursor: not-allowed;
         opacity: 0.65; }
@@ -848,8 +848,8 @@ textarea {
     margin: 10px;
     font-size: 1.75em;
     padding: 8px;
-    color: #272727;
-    background-color: #ddd;
+    color: #ddd;
+    background-color: #272727;
     width: auto;
     position: fixed;
     z-index: 1000;
@@ -859,7 +859,7 @@ textarea {
       position: relative;
       content: '\2630'; }
     .nav + label:hover, .nav + label:active, .nav + label:focus {
-      background: #cacaca; }
+      background: #141414; }
 
 @media (max-width: 768px) {
   .nav {
@@ -1052,3 +1052,69 @@ img.thumb {
 
 .hidden {
   display: none !important; }
+
+/*
+	Mixin for the labels/badges.
+	Parameters:
+	- $lbl-name          :	The class name of the labels/badges.
+	- $lbl-bg-color      :	The background color of the labels/badges.
+	- $lbl-color         :	The text color of the labels/badges.
+	- $lbl-border-radius :	The border-radius of the labels/badges.
+	- $lbl-padding       :	The padding of the labels/badges.
+	- $lbl-hide-on-empty :	Style of the label/badges when empty. [1]
+	Notes:
+	- [1] : The values that $lbl-hide-on-empty can take are `hide` or `show`. The inside condition only 
+		checks if the value is `hide` and acts accordingly. Invalid values are treated as `show`.
+*/
+/*
+	Mixin for labels/badges styles. 
+	Parameters:
+	- $lbl-name                         : The class name of the labels/badges. [1]
+	- $lbl-style-name                   : The class name of the labels/badges style.
+	- $lbl-style-color                  : The text color of the labels/badges style.
+	- $lbl-style-bg-color               : The background color of the labels/badges style.
+	Notes:
+	- [1] : The value of $lbl-name must be the same as the value specified when using `make-lbl`, otherwise
+		the specified style will not work correctly.
+*/
+.lbl {
+  display: inline;
+  padding: 6px 10px;
+  color: #eeeeee;
+  background-color: #777;
+  border-radius: 4px; }
+  .lbl:empty {
+    display: none; }
+
+.lbl.blue {
+  color: #eeeeee;
+  background: #3f84b3; }
+
+.lbl.green {
+  color: #eeeeee;
+  background: #2db747; }
+
+.lbl.red {
+  color: #eeeeee;
+  background: #ea4848; }
+
+.bdg {
+  display: inline;
+  padding: 3px 8px;
+  color: #eeeeee;
+  background-color: #777;
+  border-radius: 8px; }
+  .bdg:empty {
+    display: none; }
+
+.bdg.blue {
+  color: #eeeeee;
+  background: #3f84b3; }
+
+.bdg.green {
+  color: #eeeeee;
+  background: #2db747; }
+
+.bdg.red {
+  color: #eeeeee;
+  background: #ea4848; }

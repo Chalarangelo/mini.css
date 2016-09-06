@@ -263,3 +263,22 @@ $badge-class-name:							bdg;								// Name for the base badges class
 @include make-lbl-style($badge-class-name, $lbl-style1-name, $lbl-default-color, $lbl-b-bg-color);
 @include make-lbl-style($badge-class-name, $lbl-style2-name, $lbl-default-color, $lbl-g-bg-color);
 @include make-lbl-style($badge-class-name, $lbl-style3-name, $lbl-default-color, $lbl-r-bg-color);
+//====================================================================
+//	Variable definitions for the Tab module (_tab.scss)
+//====================================================================
+//	Tab class names.
+$tabs-class-name:							tabs;								// Name for the tab system container class
+// 	Colors and styles (you can remove things you don't need or define more
+//	colors if you need them).
+$tabs-border-color:							#ccc;								// Border color for the tabs system
+$tabs-content-bg-color:						#fff;								// Background for the active tab's content
+$tabs-color:								$a-color;							// Color for the text in the tab labels
+$tabs-bg-color:								$body-bg-color;						// Background color for the tab labels
+$tabs-active-color:							$body-color;						// Color for the text in the active tab's label
+$tabs-active-bg-color:						$tabs-content-bg-color;				// Background color for the active tab's label
+$tabs-active-stripe-style:					3px solid $a-color;					// Style for the active tab label's stripe
+//	Enable tabs (_tab.scss). (Use individual mixins below to use.)
+@import '../scss/mini-extra/tab';
+// Use tabs mixin to create tab system with given specs. For more information
+// refer to the _tab.scss file to check the definitions.
+@include make-tabs($tabs-class-name, 250px, 3px, 40px, 8px 14px, $tabs-color, $tabs-bg-color, $tabs-active-color, $tabs-active-bg-color, $tabs-border-color, 4px 4px 0 0, $tabs-active-stripe-style, 'darken', 10%, $tabs-content-bg-color, 20px);

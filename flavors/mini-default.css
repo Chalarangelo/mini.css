@@ -1118,3 +1118,69 @@ img.thumb {
 .bdg.red {
   color: #eeeeee;
   background: #ea4848; }
+
+/*
+	Mixin for tab system.
+	Parameters:
+	- $tabs-name                                  :	The class name for the tab system's container.
+	- $tabs-label-spacing                         :	The spacing between tab labels.
+	- $tabs-label-height                          : The height of the tab labels.
+	- $tabs-label-padding                         :	The padding of the tab labels.
+	- $tabs-label-color                           :	The text color of the tab labels.
+	- $tabs-label-bg-color                        : The background color of the tab labels.
+	- $tabs-active-label-color                    : The text color of the active tab's label.
+	- $tabs-active-label-bg-color                 :	The background color of the active tab's label.
+	- $tabs-border-color                          :	Border color for the tab system. [1]
+	- $tabs-label-border-radius                   : Border radius for the tab labels.
+	- $tabs-active-label-stripe                   : The style of the colored stripe that appears on the active tab's label. [2]
+	- $tabs-inactive-label-hover-style            :	Hover/active/focus style of the tab labels. [3]
+	- $tabs-inactive-label-hover-style-percentage :	Hover/active/focus style of the tab labels percentage modifier.
+	- $tabs-content-bg-color                      : The background color of the active tab's content.
+	- $tabs-content-padding                       :	The padding of the active tab's content.
+	Notes:
+	- [1] : The color specified in $tabs-border-color applies to all borders in the tab system. This
+		includes borders in the tab labels and active tab's content.
+	- [2] : The style of the colored stripe is a border style so you should specify it as such.
+	- [3] : The values that $tabs-hover-style can take are `lighten` and `darken`. The inside condition only 
+		checks if the value is `lighten` and acts accordingly. Invalid values are treated as `darken`.
+*/
+.tabs {
+  position: relative;
+  min-height: 250px;
+  width: 100%; }
+  .tabs input[type="radio"] {
+    display: none; }
+    .tabs input[type="radio"] + div {
+      display: inline; }
+      .tabs input[type="radio"] + div > label {
+        position: reative;
+        float: left;
+        margin-right: 3px;
+        left: 1px;
+        height: 40px;
+        padding: 8px 14px;
+        color: #2678b3;
+        background-color: #f5f5f5;
+        border: 1px solid #ccc;
+        border-radius: 4px 4px 0 0;
+        cursor: pointer; }
+        .tabs input[type="radio"] + div > label:hover, .tabs input[type="radio"] + div > label:active, .tabs input[type="radio"] + div > label:focus {
+          background: gainsboro; }
+        .tabs input[type="radio"] + div > label + div {
+          position: absolute;
+          z-index: -2;
+          left: 0;
+          top: 39px;
+          bottom: 0;
+          right: 0;
+          padding: 20px;
+          background: #fff;
+          border: 1px solid #ccc; }
+    .tabs input[type="radio"]:checked + div > label {
+      color: #222;
+      background: #fff;
+      border-top: 3px solid #2678b3;
+      border-bottom: 1px solid #fff; }
+      .tabs input[type="radio"]:checked + div > label + div {
+        position: absolute;
+        z-index: -1; }

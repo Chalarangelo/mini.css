@@ -14,10 +14,10 @@ A minimal, responsive pure CSS framework to get you started.
 ## Extra Components
 
 - **label**: label and badge styles `GZIPPED SIZE`: 208 bytes
+- **tab**: tabbed navigation `GZIPPED SIZE`: 347 bytes
 
 TODO:
-- Tabbed navigation (radio button based)
-- Dropdowns (checkbox based)
+- Dropdowns (checkbox based?)
 - Modals (checkbox based)
 - Pure css progress bars
 - Maybe breadcrumbs
@@ -30,6 +30,7 @@ TODO:
 - Buttons with states (implemented using a checkbox)
 - Checbox collapses
 - Is a Pure CSS Carousel even possible?
+- Material design theme and module
 
 ON A MORE SERIOUS NOTE:
 - Make a set of pages for the live version like base-modules, customization, extra-modules to showcase the modules and not clutter the main page

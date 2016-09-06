@@ -1,0 +1,86 @@
+/*
+	Mixin for tab system.
+	Parameters:
+	- $tabs-name                                  :	The class name for the tab system's container.
+	- $tabs-label-spacing                         :	The spacing between tab labels.
+	- $tabs-label-height                          : The height of the tab labels.
+	- $tabs-label-padding                         :	The padding of the tab labels.
+	- $tabs-label-color                           :	The text color of the tab labels.
+	- $tabs-label-bg-color                        : The background color of the tab labels.
+	- $tabs-active-label-color                    : The text color of the active tab's label.
+	- $tabs-active-label-bg-color                 :	The background color of the active tab's label.
+	- $tabs-border-color                          :	Border color for the tab system. [1]
+	- $tabs-label-border-radius                   : Border radius for the tab labels.
+	- $tabs-active-label-stripe                   : The style of the colored stripe that appears on the active tab's label. [2]
+	- $tabs-inactive-label-hover-style            :	Hover/active/focus style of the tab labels. [3]
+	- $tabs-inactive-label-hover-style-percentage :	Hover/active/focus style of the tab labels percentage modifier.
+	- $tabs-content-bg-color                      : The background color of the active tab's content.
+	- $tabs-content-padding                       :	The padding of the active tab's content.
+	Notes:
+	- [1] : The color specified in $tabs-border-color applies to all borders in the tab system. This
+		includes borders in the tab labels and active tab's content.
+	- [2] : The style of the colored stripe is a border style so you should specify it as such.
+	- [3] : The values that $tabs-hover-style can take are `lighten` and `darken`. The inside condition only 
+		checks if the value is `lighten` and acts accordingly. Invalid values are treated as `darken`.
+*/
+@mixin make-tabs(	$tabs-name, $tabs-min-height, $tabs-label-spacing, $tabs-label-height,
+					$tabs-label-padding,  $tabs-label-color, $tabs-label-bg-color,
+					$tabs-active-label-color, $tabs-active-label-bg-color,
+					$tabs-border-color, $tabs-label-border-radius, $tabs-active-label-stripe,
+					$tabs-inactive-label-hover-style, $tabs-inactive-label-hover-style-percentage,
+					$tabs-content-bg-color, $tabs-content-padding									){
+	.#{$tabs-name}{
+		position: relative;
+		min-height: $tabs-min-height;
+		width: 100%;
+		& input[type="radio"]{
+			display: none;
+			& + div{
+				display: inline;
+				& > label{
+					position: reative;
+					float: left;
+					margin-right: $tabs-label-spacing;
+					left: 1px;
+					height: $tabs-label-height;
+					padding: $tabs-label-padding;
+					color: $tabs-label-color;
+					background-color: $tabs-label-bg-color;
+					border: 1px solid $tabs-border-color;
+					border-radius: $tabs-label-border-radius;	
+					cursor: pointer;
+					&:hover, &:active, &:focus{
+						@if $tabs-inactive-label-hover-style == 'lighten'{
+							background: lighten($tabs-label-bg-color, $tabs-inactive-label-hover-style-percentage);
+						}
+						@else{
+							background: darken($tabs-label-bg-color, $tabs-inactive-label-hover-style-percentage);
+						}
+					}
+					& + div{
+						position: absolute;
+						z-index: -2;
+						left: 0; 
+						top: ($tabs-label-height - 1px); 
+						bottom: 0; 
+						right: 0; 
+						padding: $tabs-content-padding; 
+						background: $tabs-content-bg-color; 			
+						border: 1px solid $tabs-border-color;					
+					}
+				}
+			}
+			&:checked + div > label{
+				color: $tabs-active-label-color; 
+				background: $tabs-active-label-bg-color; 
+				//	border: 1px solid #ccc;
+				border-top: $tabs-active-label-stripe;
+				border-bottom: 1px solid $tabs-content-bg-color;
+				& + div{
+					position: absolute; 
+					z-index: -1; 
+				}
+			}
+		}
+	}
+}

@@ -1,5 +1,6 @@
 # mini.css
-A minimal, responsive pure CSS framework to get you started.
+
+A minimal Sass-y responsive mobile-first style-agnostic CSS framework.
 
 ## Core Components
 
@@ -17,30 +18,34 @@ A minimal, responsive pure CSS framework to get you started.
 - **tab**: tabbed navigation `GZIPPED SIZE`: 347 bytes
 
 TODO:
-- Dropdowns (checkbox based?)
-- Modals (checkbox based)
-- Pure css progress bars
-- Maybe breadcrumbs
-- Maybe button groups (with radios maybe? - use first and last to style borders)
-- Alerts with checkbox?
-- Add more utilities for Media objects
-- Possibly panels
-- Responsive embed?
-- Are tooltips even doable? (they are on-click as popovers for sure with checkboxes)
-- Buttons with states (implemented using a checkbox)
-- Checbox collapses
-- Is a Pure CSS Carousel even possible?
-- Material design theme and module
-
-ON A MORE SERIOUS NOTE:
-- Make a set of pages for the live version like base-modules, customization, extra-modules to showcase the modules and not clutter the main page
-- Link to said pages from main page (move the grid's stuff to the other page and also the minimal note with the two **)
-- Update wiki with changes, write missing pages (documentation etc.)
-- Add the missing extra components, try to stay below 5KB
-- Add images and make two live pages to showcase vastly different flavors
-- Make NiteOwl flavor (dark flavor, like the thing that cquanu (my star in html template) has for github, colors look cool)
-- Make a Bootstrap flavor to ease the transition from that framework
-- Make more flavors
-- Promote in reddit etc.
-- Write a blog post about it
-- Use it
+- Components
+  - Modals (checkbox-hack)
+  - Dropdowns (possibly checkbox-hack)
+  - Collapse (checkbox based)
+    - Also accordion (radio based)
+  - Progress bar styles (maybe also spinners)
+  - Button groups (maybe)
+  - Button states (checkbox based)
+  - Alerts (maybe, can use checkbox to dismiss)
+  - Carousel
+  - Utilities
+    -  Breadcrumbs
+    -  Panels
+    -  Responsive embed and utils for Media objects
+- Later down the line 
+  - A *material-design* module and/or flavor could be added
+  - An alternative grid system using `flexbox` or `grid`
+- Documentation and packaging
+  - Live pages, showcase the modules, customization and flavors
+  - Update menu's and stuff
+  - Update wiki accordingly, fix incomplete pages with proper documentation
+  - Add pictures in README.md and showcase flavors (also in wiki)
+- Flavors
+  - NiteOwl Flavor (dark flavor, like the thing that cquanu has for github, colors look cool)
+  - Bootstrap Flavor (to ease transition from that framework)
+  - Pure.CSS Flavor (maybe?)
+  - More
+- Others
+  - Promote in reddit, blog, etc
+  - Write about the development process in blog
+  - Use it forever 

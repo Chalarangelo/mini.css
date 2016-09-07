@@ -811,7 +811,7 @@ textarea {
       display: inline-block;
       margin: 0;
       white-space: nowrap; }
-      .nav ul li * {
+      .nav ul li > * {
         display: inline-block;
         padding: 8px;
         color: #ddd;
@@ -826,7 +826,7 @@ textarea {
     display: block; }
     .nav.vertical ul li {
       display: block; }
-      .nav.vertical ul li * {
+      .nav.vertical ul li > * {
         width: 100%;
         padding: 8px 0; }
   .nav.fixed {
@@ -1253,3 +1253,29 @@ img.thumb {
   position: absolute;
   top: 20px;
   right: 20px; }
+
+/*
+	Mixin for navigation bar's dropdown element.
+	Parameters:
+	- $nav-name             :	The class name for the navigation bar. [1]
+	- $nav-link-name        :	The class name for the navigation links of the navigation bar. [1]
+	- $dropdown-name        :	The class name for the dropdown element. [2]
+	- $dropdown-left-margin :	The left margin of the dropdown element's contents. [3]
+	- $dropdown-font-size   :	The font size of the dropdown element's contents.
+	Notes:
+	- [1] : The values of $nav-name and $nav-link-name must match those specified in the navigation bar's
+		definition, otherwise the dropdown element will not work properly.
+	- [2] : The value of $dropdown-name is used in two distinct elements of the component, namely the
+		checkbox and the dropdown toggle.
+	- [3] : The value of $dropdown-left-margin will affect all open dropdown menus, as well as dropdown
+		menus on mobile screens. It is suggested that you set this value to something different than
+		0 to visually represent the menu hierarchy in devices with smaller screens.
+*/
+.nav .link.dropdown {
+  cursor: pointer; }
+.nav input[type="checkbox"].dropdown + div {
+  display: none; }
+.nav input[type="checkbox"]:checked.dropdown + div {
+  display: block;
+  font-size: 0.8em;
+  margin-left: 20px; }

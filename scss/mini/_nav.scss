@@ -65,7 +65,7 @@
 				display: inline-block;		
 				margin: 0;
 				white-space: nowrap;
-				* {
+				> * {
 					display: inline-block;
 					padding: #{$nav-padding};
 					color: #{$nav-color};
@@ -93,7 +93,7 @@
 				display: block;
 				li{
 					display: block;					
-					* {
+					> * {
 						width: 100%;
 						padding: #{$nav-padding} 0;
 					}

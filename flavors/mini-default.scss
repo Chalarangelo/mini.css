@@ -298,3 +298,13 @@ $modal-border:								1px solid #ccc;						// Border style for the modal
 // refer to the _modal.scss file to check the definitions.
 @include make-modal($modal-class-name, $modal-color, $modal-bg-color, 'enabled', 'enabled', $modal-border, 4px, 18px, 8.5%, 45%);
 @include make-modal-close-support($modal-class-name, $close-class-name, 20px);
+//====================================================================
+//	Variable definitions for the Dropdown module (_dropdown.scss)
+//====================================================================
+//	Dropdown class names.
+$dropdown-class-name:						dropdown;							// Name for the modal class
+//	Enable dropdown (_dropdown.scss). (Use individual mixins below to use.)
+@import '../scss/mini-extra/dropdown';
+// Use dropdown mixin to create dropdown with given specs. For more information
+// refer to the _dropdown.scss file to check the definitions.
+@include make-dropdown($navigation-class-name, $navigation-link-name,$dropdown-class-name, 20px, 0.8em);

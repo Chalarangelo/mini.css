@@ -16,10 +16,10 @@ A minimal Sass-y responsive mobile-first style-agnostic CSS framework.
 
 - **label**: label and badge styles `GZIPPED SIZE`: 208 bytes
 - **tab**: tabbed navigation `GZIPPED SIZE`: 347 bytes
+- **modal**: modal dialog prompts `GZIPPED SIZE`: 298 bytes
 
 TODO:
 - Components
-  - Modals (checkbox-hack)
   - Dropdowns (possibly checkbox-hack)
   - Collapse (checkbox based)
     - Also accordion (radio based)

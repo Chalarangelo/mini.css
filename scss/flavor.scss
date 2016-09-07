@@ -282,3 +282,19 @@ $tabs-active-stripe-style:					3px solid $a-color;					// Style for the active t
 // Use tabs mixin to create tab system with given specs. For more information
 // refer to the _tab.scss file to check the definitions.
 @include make-tabs($tabs-class-name, 250px, 3px, 40px, 8px 14px, $tabs-color, $tabs-bg-color, $tabs-active-color, $tabs-active-bg-color, $tabs-border-color, 4px 4px 0 0, $tabs-active-stripe-style, 'darken', 10%, $tabs-content-bg-color, 20px);
+//====================================================================
+//	Variable definitions for the Modal module (_modal.scss)
+//====================================================================
+//	Modal class names.
+$modal-class-name:							modal;								// Name for the modal class
+// 	Colors and styles (you can remove things you don't need or define more
+//	colors if you need them).
+$modal-bg-color:							$body-bg-color;						// Background color for the modal
+$modal-color:								$body-color;						// Color for the text in the modal
+$modal-border:								1px solid #ccc;						// Border style for the modal
+//	Enable modal (_modal.scss). (Use individual mixins below to use.)
+@import 'mini-extra/modal';
+// Use modal mixin to create modal with given specs. For more information
+// refer to the _modal.scss file to check the definitions.
+@include make-modal($modal-class-name, $modal-color, $modal-bg-color, 'enabled', 'enabled', $modal-border, 4px, 18px, 8.5%, 45%);
+@include make-modal-close-support($modal-class-name, $close-class-name, 20px);

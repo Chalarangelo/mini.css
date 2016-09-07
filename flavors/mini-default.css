@@ -1184,3 +1184,72 @@ img.thumb {
       .tabs input[type="radio"]:checked + div > label + div {
         position: absolute;
         z-index: -1; }
+
+/*
+	Mixin for modal dialogs.
+	Parameters:
+	- $modal-name               :	The class name for the modal dialog.
+	- $modal-color              :	The text color of the modal dialog.
+	- $modal-bg-color           :	The background color of the modal dialog.
+	- $modal-transition-enabled :	Determines if a transition style will be applied when the modal changes states. [1]
+	- $modal-shadow-enabled     :	Determines if a shadow should be cast from the modal dialog. [1]
+	- $modal-border             :	The border style of the modal dialog.
+	- $modal-border-radius      :	The border radius of the modal dialog's border.
+	- $modal-padding            :	The padding of the modal dialog's contents.
+	- $modal-top-margin         :	The distance of the modal dialog from the top of the parent container. [2]
+	- $modal-width              :	The width of the modal dialog. [2]
+	Notes:
+	- [1] : The values of $modal-transition-enabled and $modal-shadow-enabled should be `enabled` or `disabled`.
+		If an invalid value is supplied, the mixin will act as if it was `disabled`.
+	- [2] : The values of $modal-top-margin and $modal-width should be in percentage (%) values to properly scale
+		on all devices. However, there are no restrictions.
+*/
+/*
+	Mixin for close button support inside of modal dialogs.
+	Parameters:
+	- $modal-name    :	The class name for the modal dialog. [1]
+	- $close-name    :	The class name for the close sign utility class. [2]
+	- $modal-padding :	The padding of the close button. [3]
+	Notes:
+	- [1] : The value of $modal-name should match the value specified in the modal dialog's
+		mixin, in order for this to work correctly.
+	- [2] : The value of $close-name should match the value specified in the close sign utility's
+		mixin, in order for this to work correctly.
+	- [3] : The close button will be placed at the top right of the modal dialog. Its padding
+		should be similar to the value specified for padding in the modal dialog itself, however
+		it could vary based on personal preference.
+*/
+.modal {
+  display: none; }
+  .modal + div {
+    z-index: 997;
+    position: fixed;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: opacity .3s ease-out; }
+    .modal + div > div {
+      z-index: 998;
+      position: relative;
+      width: 45%;
+      color: #222;
+      background-color: #f5f5f5;
+      margin: 8.5% auto 0;
+      padding: 18px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+  .modal:checked + div {
+    height: 100%;
+    opacity: 1; }
+    .modal:checked + div > label {
+      background-color: rgba(0, 0, 0, 0.35);
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0; }
+
+.modal + div > div .close {
+  position: absolute;
+  top: 20px;
+  right: 20px; }

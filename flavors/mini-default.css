@@ -1279,3 +1279,83 @@ img.thumb {
   display: block;
   font-size: 0.8em;
   margin-left: 20px; }
+
+/*
+	Mixin for collapse component. 
+	Parameters:
+	- $collapse-name          : The class name of the collapse component.
+	- $collapse-border        :	The border style of the collapse contents.
+	- $collapse-border-radius :	The border radius of the collapse contents.
+	- $collapse-padding       :	The padding of the collapse contents.
+	- $collapse-margin-top    : The margin above the collapse contents. [1]
+	- $collapse-color         : The collapse contents' text color.
+	- $collapse-bg-color      :	The collapse contents' background color.
+	Notes:
+	- [1] : The value of $collapse-margin-top is used for spacing between the button label that is usually
+		above the collapsed contents and the contents themselves.
+*/
+/*
+	Mixin for accordion component. 
+	Parameters:
+	- $accordion-name                   :	The class name of the accordion component.
+	- $accordion-border                 :	The border style of the accordion component.
+	- $accordion-border-radius          :	The border radius of the accordion component. [1]
+	- $accordion-padding                :	The padding of the accordion's contents.
+	- $accordion-margin                 :	The margin between accordion's parts. [2]
+	- $accordion-color                  : 	The accordion contents' text color.
+	- $accordion-bg-color               :	The accordion contents' background color.
+	- $accordion-label-color            : 	The accordion labels' text color.
+	- $accordion-label-bg-color         :	The accordion labels' background color.
+	- $accordion-label-padding          :	The padding of the accordion's labels.
+	- $accordion-hover-style            :	Hover/active/focus style of the accordion's labels. [3]
+	- $accordion-hover-style-percentage :	Hover/active/focus style of the accordion's labels percentage modifier.
+	Notes:
+	- [1] : The value of $accordion-border-radius will be applied to labels along with their contents.
+		Closed labels will have the border-radius applied to all of their corners, while open labels will
+		change accordingly to combine their border with the shown contents.
+	- [2] : The value of $accordion-margin will be applied only to margin-bottom of all parts in order
+		to space them out evenly. This does not apply to label and related content margins.
+	- [3] : The values that $accordion-hover-style can take are `lighten` and `darken`. The inside condition only 
+		checks if the value is `lighten` and acts accordingly. Invalid values are treated as `darken`.
+*/
+input[type="checkbox"].clps {
+  display: none; }
+  input[type="checkbox"].clps + div {
+    display: none;
+    color: #222;
+    background-color: #eeeeee;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px; }
+input[type="checkbox"]:checked.clps + div {
+  display: block; }
+
+input[type="radio"].acrd {
+  display: none; }
+  input[type="radio"].acrd + label {
+    width: 100%;
+    display: block;
+    color: #222;
+    background-color: #eeeeee;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer; }
+    input[type="radio"].acrd + label:hover, input[type="radio"].acrd + label:active, input[type="radio"].acrd + label:focus {
+      background: #dbdbdb; }
+    input[type="radio"].acrd + label + div {
+      display: none;
+      color: #222;
+      background-color: #f5f5f5;
+      padding: 10px;
+      margin-top: -1px;
+      margin-bottom: 5px;
+      border: 1px solid #ccc;
+      border-radius: 0 0 4px 4px; }
+input[type="radio"]:checked.acrd + label {
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 0; }
+  input[type="radio"]:checked.acrd + label + div {
+    display: block; }

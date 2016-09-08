@@ -308,3 +308,27 @@ $dropdown-class-name:						dropdown;							// Name for the modal class
 // Use dropdown mixin to create dropdown with given specs. For more information
 // refer to the _dropdown.scss file to check the definitions.
 @include make-dropdown($navigation-class-name, $navigation-link-name,$dropdown-class-name, 20px, 0.8em);
+//====================================================================
+//	Variable definitions for the Collapse module (_collapse.scss)
+//====================================================================
+//	Collapse and accordion class names.
+$collapse-class-name:						clps;								// Name for the collapse class
+$accordion-class-name:						acrd;								// Name for the accordion class
+// 	Collapse colors and styles (you can remove things you don't need or 
+//	define more colors if you need them).
+$collapse-border:							1px solid #ccc;						// Border style for the collapse
+$collapse-color:							$body-color;						// Color for the text in the collapse
+$collapse-bg-color:							#eeeeee;							// Background color for the collapse
+// 	Accordion colors and styles (you can remove things you don't need or 
+//	define more colors if you need them).
+$accordion-border:							$collapse-border;					// Border style for the accordion
+$accordion-color:							$collapse-color;					// Color for the text in the accordion
+$accordion-bg-color:						$body-bg-color;						// Background color for the accordion
+$accordion-label-color:						$collapse-color;					// Color for the text in the accordion's label
+$accordion-label-bg-color:					$collapse-bg-color;					// Background color for the accordion's label
+//	Enable collapse (_collapse.scss). (Use individual mixins below to use.)
+@import 'mini-extra/collapse';
+// Use collapse and accordion mixins to create components wit the given specs.
+// For more information refer to the _collapse.scss file to check the definitions.
+@include make-collapse($collapse-class-name, $collapse-border, 4px, 10px, 5px, $collapse-color, $collapse-bg-color);
+@include make-accordion($accordion-class-name, $accordion-border, 4px, 10px, 5px, $accordion-color, $accordion-bg-color, $accordion-label-color, $accordion-label-bg-color, 8px, 'darken', 7.5%);

@@ -1,0 +1,108 @@
+/*
+	Mixin for collapse component. 
+	Parameters:
+	- $collapse-name          : The class name of the collapse component.
+	- $collapse-border        :	The border style of the collapse contents.
+	- $collapse-border-radius :	The border radius of the collapse contents.
+	- $collapse-padding       :	The padding of the collapse contents.
+	- $collapse-margin-top    : The margin above the collapse contents. [1]
+	- $collapse-color         : The collapse contents' text color.
+	- $collapse-bg-color      :	The collapse contents' background color.
+	Notes:
+	- [1] : The value of $collapse-margin-top is used for spacing between the button label that is usually
+		above the collapsed contents and the contents themselves.
+*/
+@mixin make-collapse(	$collapse-name, $collapse-border, $collapse-border-radius, $collapse-padding, 
+						$collapse-margin-top, $collapse-color, $collapse-bg-color						){
+	input[type="checkbox"]{
+		&.#{$collapse-name}{
+			display: none;
+			& + div{
+				display: none;
+				color: $collapse-color;
+				background-color: $collapse-bg-color;
+				padding: $collapse-padding;
+				margin-top: $collapse-margin-top;
+				border: $collapse-border;
+				border-radius: $collapse-border-radius;
+			}
+		}
+		&:checked.#{$collapse-name}{
+			& + div{
+				display: block;
+			}
+		}
+	}
+}
+/*
+	Mixin for accordion component. 
+	Parameters:
+	- $accordion-name                   :	The class name of the accordion component.
+	- $accordion-border                 :	The border style of the accordion component.
+	- $accordion-border-radius          :	The border radius of the accordion component. [1]
+	- $accordion-padding                :	The padding of the accordion's contents.
+	- $accordion-margin                 :	The margin between accordion's parts. [2]
+	- $accordion-color                  : 	The accordion contents' text color.
+	- $accordion-bg-color               :	The accordion contents' background color.
+	- $accordion-label-color            : 	The accordion labels' text color.
+	- $accordion-label-bg-color         :	The accordion labels' background color.
+	- $accordion-label-padding          :	The padding of the accordion's labels.
+	- $accordion-hover-style            :	Hover/active/focus style of the accordion's labels. [3]
+	- $accordion-hover-style-percentage :	Hover/active/focus style of the accordion's labels percentage modifier.
+	Notes:
+	- [1] : The value of $accordion-border-radius will be applied to labels along with their contents.
+		Closed labels will have the border-radius applied to all of their corners, while open labels will
+		change accordingly to combine their border with the shown contents.
+	- [2] : The value of $accordion-margin will be applied only to margin-bottom of all parts in order
+		to space them out evenly. This does not apply to label and related content margins.
+	- [3] : The values that $accordion-hover-style can take are `lighten` and `darken`. The inside condition only 
+		checks if the value is `lighten` and acts accordingly. Invalid values are treated as `darken`.
+*/
+@mixin make-accordion(	$accordion-name, $accordion-border, $accordion-border-radius, $accordion-padding,
+						$accordion-margin, $accordion-color, $accordion-bg-color, $accordion-label-color,
+						$accordion-label-bg-color, $accordion-label-padding, $accordion-hover-style, 
+						$accordion-hover-style-percentage													){
+	input[type="radio"]{
+		&.#{$accordion-name}{
+			display: none;
+			& + label{
+				width: 100%;
+				display: block;
+				color: $accordion-label-color;
+				background-color: $accordion-label-bg-color;
+				padding: $accordion-label-padding;
+				margin-bottom: $accordion-margin;
+				border: $accordion-border;
+				border-radius: $accordion-border-radius;			
+				cursor: pointer;
+				&:hover, &:active, &:focus{
+					@if $accordion-hover-style == 'lighten'{
+    					background: lighten($accordion-label-bg-color, $accordion-hover-style-percentage);
+    				}
+    				@else{
+    					background: darken($accordion-label-bg-color, $accordion-hover-style-percentage);
+    				}
+  				}
+				& + div{
+					display: none;
+					color: $accordion-color;
+					background-color: $accordion-bg-color;
+					padding: $accordion-padding;
+					margin-top: -1px;
+					margin-bottom: $accordion-margin;
+					border: $accordion-border;
+					border-radius: 0 0 $accordion-border-radius $accordion-border-radius;
+				}
+			}
+		}
+		&:checked.#{$accordion-name}{
+			& + label{
+				border-radius: $accordion-border-radius $accordion-border-radius 0 0;
+				margin-bottom: 0;
+				& + div{
+					display: block;
+				}
+			}
+		}
+	}
+}

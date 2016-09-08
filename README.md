@@ -18,11 +18,10 @@ A minimal Sass-y responsive mobile-first style-agnostic CSS framework.
 - **tab**: tabbed navigation `GZIPPED SIZE`: 347 bytes
 - **modal**: modal dialog prompts `GZIPPED SIZE`: 298 bytes
 - **dropdown**: dropdown menu for the navigation bar `GZIPPED SIZE`: 136 bytes
+- **collapse**: collapse and accordion components `GZIPPED SIZE`: 286 bytes
 
 TODO:
 - Components
-  - Collapse (checkbox based)
-    - Also accordion (radio based)
   - Progress bar styles (maybe also spinners)
   - Button groups (maybe)
   - Button states (checkbox based)

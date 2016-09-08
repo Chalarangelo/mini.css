@@ -19,18 +19,17 @@ A minimal Sass-y responsive mobile-first style-agnostic CSS framework.
 - **modal**: modal dialog prompts `GZIPPED SIZE`: 298 bytes
 - **dropdown**: dropdown menu for the navigation bar `GZIPPED SIZE`: 136 bytes
 - **collapse**: collapse and accordion components `GZIPPED SIZE`: 286 bytes
+- **progress**: progress bar styles `GZIPPED SIZE`: 193 bytes
 
 TODO:
 - Components
-  - Progress bar styles (maybe also spinners)
-  - Button groups (maybe)
-  - Button states (checkbox based)
-  - Alerts (maybe, can use checkbox to dismiss)
-  - Carousel
+  - Carousel (if possible)
   - Utilities
     -  Breadcrumbs
-    -  Panels
+    -  Panels, Wells & Alerts (alerts will support closing via checkbox)
     -  Responsive embed and utils for Media objects
+    -  Hover-able styling (maybe)
+    -  Button states and groups (mostly for style if impemented, not much more than that)
 - Later down the line 
   - A *material-design* module and/or flavor could be added
   - An alternative grid system using `flexbox` or `grid`

@@ -1359,3 +1359,54 @@ input[type="radio"]:checked.acrd + label {
   margin-bottom: 0; }
   input[type="radio"]:checked.acrd + label + div {
     display: block; }
+
+/*
+	Mixin for the progress element. 
+	Parameters:
+	- $progress-name          : The class name of the progress wrapper.
+	- $progress-height        :	The height of the progress wrapper.
+	- $progress-border-radius :	The border radius of the progress wrapper.
+	- $progress-bg-color      :	The background color of the progress wrapper. [1]
+	- $progress-font-size     : The font size of the progress bar's text (if any).
+	- $progress-bar-color     : The progress bar's text color.
+	- $progress-bar-bg-color  :	The progress bar's background color.
+	Notes:
+	- [1] : The background color of the progress wrapper should be a different color than the
+		page's background to make sure that it is visible. 
+	- [2] : This only creates a basic progress style. For more progress bar styles use `make-progress-bar-variant`.
+*/
+/*
+	Mixin for progress bar styles. 
+	Parameters:
+	- $progress-name                : 	The class name of the progress wrapper. [1]
+	- $progress-bar-variant-name    :	The class name of the progress bar variant.
+	- $progress-bar-variant-color   :	The progress bar variant's text color.
+	- $progress-bar-variant-bg-coor :	The progress bar variant's background color.
+	Notes:
+	- [1] : The name of $progress-name should match the one specified in `make-progress` for the
+		progress bar variant to work correctly.
+	- [2] : This mixin should be used in combination with `make-progress` and is suggested that you 
+		use it after `make-progress`.
+*/
+.prg {
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+  background-color: #d7d7d7;
+  border-radius: 4px; }
+  .prg > span {
+    float: left;
+    width: 0;
+    height: 100%;
+    background-color: #3f84b3;
+    text-align: center;
+    font-size: 0.8em;
+    color: #eeeeee; }
+
+.prg > span.green {
+  background-color: #2db747;
+  color: #eeeeee; }
+
+.prg > span.red {
+  background-color: #ea4848;
+  color: #eeeeee; }

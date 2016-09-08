@@ -332,3 +332,26 @@ $accordion-label-bg-color:					$collapse-bg-color;					// Background color for t
 // For more information refer to the _collapse.scss file to check the definitions.
 @include make-collapse($collapse-class-name, $collapse-border, 4px, 10px, 5px, $collapse-color, $collapse-bg-color);
 @include make-accordion($accordion-class-name, $accordion-border, 4px, 10px, 5px, $accordion-color, $accordion-bg-color, $accordion-label-color, $accordion-label-bg-color, 8px, 'darken', 7.5%);
+//====================================================================
+//	Variable definitions for the Progress module (_progress.scss)
+//====================================================================
+//	Progress and progress variants class names.
+$progress-class-name:						prg;								// Name for the progress class
+$progress-bar-style1-name:					'green';							// Name for the progress bar style 1 class
+$progress-bar-style2-name:					'red';								// Name for the progress bar style 2 class
+// Progress and p progress variants colors (you can remove things you 
+//	don't need or define more colors if you need them).
+$progress-bg-color:							#d7d7d7;							// Background color for the progress bar container
+$progress-bar-color:						$btn-alt-color;						// Color for the text of the progress bar
+$progress-bar-style1-color:					$btn-alt-color;						// Color for the text of the style 1 progress bar
+$progress-bar-style2-color:					$btn-alt-color;						// Color for the text of the style 2 progress bar
+$progress-bar-bg-color:						$btn-b-bg-color;					// Background color for the progress bar
+$progress-bar-style1-bg-color:				$btn-g-bg-color;					// Background color for the style 1 progress bar
+$progress-bar-style2-bg-color:				$btn-r-bg-color;					// Background color for the style 2 progress bar
+//	Enable progress (_progress.scss). (Use individual mixins below to use.)
+@import 'mini-extra/progress';
+// Use progress mixins to create progress bars with given specs. For more 
+// information refer to the _progress.scss file to check the definitions.
+@include make-progress($progress-class-name, 20px, 4px, $progress-bg-color, 0.8em, $progress-bar-color, $progress-bar-bg-color);
+@include make-progress-bar-variant($progress-class-name, $progress-bar-style1-name, $progress-bar-style1-color, $progress-bar-style1-bg-color);
+@include make-progress-bar-variant($progress-class-name, $progress-bar-style2-name, $progress-bar-style2-color, $progress-bar-style2-bg-color);

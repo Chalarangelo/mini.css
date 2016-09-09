@@ -371,3 +371,4 @@ $carousel-control-color:					#fafafa;						// Color for the carousel's control e
 // Use carousel mixin to create carousel with given specs. For more 
 // information refer to the _carousel.scss file to check the definitions.
 @include make-carousel($carousel-class-name, 80%, 500px, $carousel-border, 4px, $carousel-content-bg-color, 10px, $carousel-description-color, $carousel-description-bg-color, 340px, 160px, 450px, 1.8em, $carousel-control-color);
+// TODO: Copy the stuff for utility

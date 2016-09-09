@@ -25,11 +25,8 @@ A minimal Sass-y responsive mobile-first style-agnostic CSS framework.
 TODO:
 - Components
   - Utilities
-    -  Breadcrumbs
-    -  Panels, Wells & Alerts (alerts will support closing via checkbox)
-    -  Responsive embed and utils for Media objects
-    -  Hover-able styling (maybe)
     -  Button states and groups (mostly for style if impemented, not much more than that)
+    -  Popovers
 - Later down the line 
   - A *material-design* module and/or flavor could be added
   - An alternative grid system using `flexbox` or `grid`

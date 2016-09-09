@@ -20,10 +20,10 @@ A minimal Sass-y responsive mobile-first style-agnostic CSS framework.
 - **dropdown**: dropdown menu for the navigation bar `GZIPPED SIZE`: 136 bytes
 - **collapse**: collapse and accordion components `GZIPPED SIZE`: 286 bytes
 - **progress**: progress bar styles `GZIPPED SIZE`: 193 bytes
+- **carousel**: slideshow component `GZIPPED SIZE`: 383 bytes
 
 TODO:
 - Components
-  - Carousel (if possible)
   - Utilities
     -  Breadcrumbs
     -  Panels, Wells & Alerts (alerts will support closing via checkbox)
@@ -38,6 +38,7 @@ TODO:
   - Update menu's and stuff
   - Update wiki accordingly, fix incomplete pages with proper documentation
   - Add pictures in README.md and showcase flavors (also in wiki)
+  - Package for NPM and Bowser
 - Flavors
   - NiteOwl Flavor (dark flavor, like the thing that cquanu has for github, colors look cool)
   - Bootstrap Flavor (to ease transition from that framework)

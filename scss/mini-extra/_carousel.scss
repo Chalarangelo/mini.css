@@ -1,0 +1,92 @@
+/*
+	Mixin for the carousel component. 
+	Parameters:
+	- $carousel-name                 :	The class name for the carousel.
+	- $carousel-width                :	The width of the carousel. [1]
+	- $carousel-height               :	The height of the carousel.
+	- $carousel-border               :	The style of the carousel's border.
+	- $carousel-border-radius        :	The border-radius of the carousel.
+	- $carousel-container-bg-color   :	The background color of the carousel.
+	- $carousel-content-padding      :	The padding of the carousel's contents. [2]
+	- $carousel-description-color    :	The text color of the carousel's description.
+	- $carousel-description-bg-color :	The background color of the carousel's description.
+	- $carousel-description-top      :	The distance of the carousel's description from the top of the container. [3]
+	- $carousel-description-height   :	The height of the carousel's description area. [3]
+	- $carousel-control-top          :	The distance of the carousel's controls from the top of the container. [3]
+	- $carousel-control-font-size    :	The font-size of the carousel's controls.
+	- $carousel-control-color        :	The text color of the carousel's controls.
+	Notes:
+	- [1] : The height of the carousel is suggested to be defined as a percentage so that
+		it makes it responsive for smaller screens.
+	- [2] : The value of $carousel-content-padding only applies to images inside the carousel.
+	- [3] : The distances from the top are used for positioning the elements. The height of the
+		desccription should normally be the height of the container minus the top distance of
+		the description. Control distance should be about 90% of the container's height.
+*/
+@mixin make-carousel(	$carousel-name, $carousel-width, $carousel-height, $carousel-border, 
+						$carousel-border-radius, $carousel-container-bg-color, $carousel-content-padding,
+						$carousel-description-color, $carousel-description-bg-color, 
+						$carousel-description-top, $carousel-description-height, $carousel-control-top,
+						$carousel-control-font-size, $carousel-control-color								){
+	.#{$carousel-name}{
+		position: relative;
+		width: $carousel-width;
+		height: $carousel-height;
+		overflow: hidden;
+		text-align: center;
+		margin: auto;
+		border: $carousel-border;
+		border-radius: $carousel-border-radius;
+		& input[type="radio"]{
+			display: none;
+			& + div{
+				display: none;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;		
+				padding: $carousel-content-padding;
+				background-color: $carousel-container-bg-color;
+				& > img{
+					max-width: 100%;
+					max-height: 100%;
+					margin: auto;
+				}
+				& > div{
+					position: absolute;
+					width: 100%;
+					height: $carousel-description-height;
+					overflow: auto;
+					left: 0;
+					top: $carousel-description-top;
+					background-color: $carousel-description-bg-color;
+					color: $carousel-description-color;
+					opacity: 0.1;
+					&:hover, &:active, &:focus{
+						opacity: 0.8;
+					}
+				}
+				& + label{
+					position: relative;
+					z-index: 998;
+					cursor: pointer;
+					top: $carousel-control-top;
+					color: $carousel-control-color;		
+					font-size: $carousel-control-font-size;		
+					&:before{
+						content:'\25cb';
+					}
+				}
+			}		
+			&:checked + div{
+				display: block;
+				& + label{
+					&:before{
+						content:'\25cf';
+					}
+				}
+			}
+		}
+	}
+}

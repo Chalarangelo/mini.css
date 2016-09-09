@@ -355,3 +355,19 @@ $progress-bar-style2-bg-color:				$btn-r-bg-color;					// Background color for t
 @include make-progress($progress-class-name, 20px, 4px, $progress-bg-color, 0.8em, $progress-bar-color, $progress-bar-bg-color);
 @include make-progress-bar-variant($progress-class-name, $progress-bar-style1-name, $progress-bar-style1-color, $progress-bar-style1-bg-color);
 @include make-progress-bar-variant($progress-class-name, $progress-bar-style2-name, $progress-bar-style2-color, $progress-bar-style2-bg-color);
+//====================================================================
+//	Variable definitions for the Carousel module (_carousel.scss)
+//====================================================================
+//	Carousel class names.
+$carousel-class-name:						carousel;						// Name for the carousel class
+// Carousel colors and styles.
+$carousel-border:							1px solid #ccc;					// Border style for the carousel
+$carousel-content-bg-color:					#e7e7e7;						// Background color for the carousel
+$carousel-description-color:				$body-bg-color;					// Color for the text in the carousel's description
+$carousel-description-bg-color:				$body-color;					// Background color for the carousel's description
+$carousel-control-color:					#fafafa;						// Color for the carousel's control elements
+//	Enable carousel (_carousel.scss). (Use individual mixins below to use.)
+@import '../scss/mini-extra/carousel';
+// Use carousel mixin to create carousel with given specs. For more 
+// information refer to the _carousel.scss file to check the definitions.
+@include make-carousel($carousel-class-name, 80%, 500px, $carousel-border, 4px, $carousel-content-bg-color, 10px, $carousel-description-color, $carousel-description-bg-color, 340px, 160px, 450px, 1.8em, $carousel-control-color);

@@ -20,7 +20,8 @@
 		& .#{$nav-link-name}.#{$dropdown-name}{
 			cursor: pointer;
 		}
-		& input[type="checkbox"]{
+		& input[type="checkbox"], & input[type="radio"]{
+			display: none;
 			&.#{$dropdown-name} + div{
 				display: none;
 			}

@@ -1273,12 +1273,14 @@ img.thumb {
 */
 .nav .link.dropdown {
   cursor: pointer; }
-.nav input[type="checkbox"].dropdown + div {
+.nav input[type="checkbox"], .nav input[type="radio"] {
   display: none; }
-.nav input[type="checkbox"]:checked.dropdown + div {
-  display: block;
-  font-size: 0.8em;
-  margin-left: 20px; }
+  .nav input[type="checkbox"].dropdown + div, .nav input[type="radio"].dropdown + div {
+    display: none; }
+  .nav input[type="checkbox"]:checked.dropdown + div, .nav input[type="radio"]:checked.dropdown + div {
+    display: block;
+    font-size: 0.8em;
+    margin-left: 20px; }
 
 /*
 	Mixin for collapse component. 

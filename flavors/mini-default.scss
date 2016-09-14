@@ -384,6 +384,8 @@ $panel-class-name:							panel;							// Name for the panel class
 $panel-header-name:							head;							// Name for the panel's header class
 $button-states-class-name:					stateful;						// Name for the stateful button class
 $button-group-class-name:					btn-grp;						// Name for the button group class
+$popover-above-name:						popover-top;					// Name for the popover above class
+$popover-below-name:						popover-bottom;					// Name for the popover below class
 // 	Utility color variables and styles (you can remove things you 
 //	don't need or define more colors if you need them).
 $well-color:								$body-color;					// Text color for the well
@@ -392,6 +394,8 @@ $panel-color:								$body-color;					// Text color for the panel
 $panel-bg-color:							$body-bg-color;					// Background color for the panel
 $panel-header-color:						$body-color;					// Text color for the panel's header
 $panel-header-bg-color:						#e7e7e7;						// Background color for the panel's header
+$popover-color:								$body-bg-color;					// Text color for the popover
+$popover-bg-color:							$body-color;					// Background color for the popover
 //	Enable utilities (_utility.scss). (Use individual mixins below to use.)
 @import '../scss/mini-extra/utility';
 // Use utilities mixins to create utilities with given specs. For more 
@@ -402,6 +406,8 @@ $panel-header-bg-color:						#e7e7e7;						// Background color for the panel's h
 @include make-alert($alert-style2-class, darken($btn-g-bg-color,20%), lighten($btn-g-bg-color, 10%) , 1px solid darken($btn-g-bg-color, 10%), 4px, 20px, close);
 @include make-alert($alert-style3-class, darken($btn-r-bg-color,20%), lighten($btn-r-bg-color, 10%) , 1px solid darken($btn-r-bg-color, 10%), 4px, 20px, close);
 @include make-panel(panel, $panel-color, $panel-bg-color, 1px solid #ccc, 4px, 10px, $panel-header-name, $panel-header-color, $panel-header-bg-color, 10px);
+@include make-popover($popover-above-name, top, 5px, 45px, $popover-color, $popover-bg-color, 7px 10px);
+@include make-popover($popover-below-name, bottom, 4px, 45px, $popover-color, $popover-bg-color, 7px 10px);
 // Use experimental utilities mixins to create utilities with given
 // specs. Please exercise caution when using these mixins.
 //@include make-button-states($button-states-class-name);	// This mixin is unstable and buggy, we suggest you disable it.
@@ -410,3 +416,5 @@ $panel-header-bg-color:						#e7e7e7;						// Background color for the panel's h
 @include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style1-name, 1px solid darken($btn-b-bg-color, 10%), 4px); 
 @include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style2-name, 1px solid darken($btn-g-bg-color, 10%), 4px); 
 @include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style3-name, 1px solid 1px solid darken($btn-r-bg-color, 10%), 4px); 
+//====================================================================
+//====================================================================

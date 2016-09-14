@@ -133,9 +133,75 @@
 		}
 	}
 }
-
-// TODO: Add popover mixin with directions etc.
-
+/*
+	Mixin for generic popover style.
+	Parameters:
+	- $popover-name          : The name for the popover style
+	- $popover-direction     : The direction of the popover. [1]
+	- $popover-border-radius : The border radius for the popover style.
+	- $popover-distance      : The distance for the popover style's placement. [2]
+	- $popover-color         : The text color of the popover style.
+	- $popover-bg-color      : The background color of the popover style.
+	- $popover-padding       : The padding of the popover.
+	Notes:
+	- [1] : The values that $popover-direction accepts are 'top' and 'bottom'. If an invalid value
+		is provided, it will be treated as 'bottom'.
+	- [2] : The value of $popover-distance should be treated as a general guideline for the popover
+		distance and is supposed to be tweaked with inline styles or helper classes for better use.
+*/
+@mixin make-popover(	$popover-name, $popover-direction, $popover-border-radius, 
+						$popover-distance, $popover-color, $popover-bg-color, $popover-padding	){
+	input[type="checkbox"]{
+		&.#{$popover-name}{
+			display:none;
+			+ label{
+				position: relative;
+			}
+			+ label > .#{$popover-name}{
+				position: absolute;
+				display: none;
+				background-color: $popover-bg-color;
+				color: $popover-color;
+				border-radius: $popover-border-radius;
+				padding: $popover-padding;
+				z-index: 998;
+				width: auto;
+				@if $popover-direction == 'top'
+				{
+					bottom: 49px;
+				}
+				@else{
+					top: 49px;
+				}				
+				&:before{
+					position: absolute;
+					display: block;
+					@if $popover-direction == 'top'
+					{
+						border-top: 7px solid $popover-bg-color;
+						border-right: 7px solid transparent;
+						border-left: 7px solid transparent;
+						bottom: -7px;
+					}
+					@else{
+						border-bottom: 7px solid $popover-bg-color;
+						border-right: 7px solid transparent;
+						border-left: 7px solid transparent;
+						top: -7px;
+					}	
+					content: '';				
+					left: 50%;
+    				margin-left: -7px;			
+				}
+			}
+		}
+		&:checked.#{$popover-name}{
+			+ label > .#{$popover-name}{
+				display: block;
+			}
+		}
+	}
+}
 //====================================================================
 //	THE MIXINS SPECIFIED BELOW ARE EXPERIMENTAL AND MIGHT NOT BEHAVE
 //	AS DOCUMENTED. EXERCISE CAUTION IF YOU USE THEM!

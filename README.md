@@ -10,7 +10,7 @@ A minimal Sass-y responsive mobile-first style-agnostic CSS framework.
 - **grid**:	default 12-column grid `GZIPPED SIZE`: 447 bytes
 - **nav**: navigation bar `GZIPPED SIZE`: 527 bytes
 - **table**: table styles `GZIPPED SIZE`: 243 bytes
-- **helper and utility classes**: classes for quick floats, border styling, contextual text and more `GZIPPED SIZE`: 441 bytes
+- **utility**: classes for quick floats, border styling, contextual text and more `GZIPPED SIZE`: 441 bytes
 
 ## Extra Components
 
@@ -21,12 +21,9 @@ A minimal Sass-y responsive mobile-first style-agnostic CSS framework.
 - **collapse**: collapse and accordion components `GZIPPED SIZE`: 286 bytes
 - **progress**: progress bar styles `GZIPPED SIZE`: 193 bytes
 - **carousel**: slideshow component `GZIPPED SIZE`: 383 bytes
+- **utility**: classes for panels, button groups, popovers and more 'GZIPPED SIZE': 915 bytes
 
 TODO:
-- Components
-  - Utilities
-    -  Button states and groups (mostly for style if impemented, not much more than that)
-    -  Popovers
 - Later down the line 
   - A *material-design* module and/or flavor could be added
   - An alternative grid system using `flexbox` or `grid`

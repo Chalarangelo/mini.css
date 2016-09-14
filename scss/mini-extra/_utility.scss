@@ -68,7 +68,8 @@
 	- [2] : This mixin uses `make-generic-container` to partially generate its
 		CSS.
 */
-@mixin make-alert($alert-name, $alert-color, $alert-bg-color, $alert-border, $alert-border-radius, $alert-padding, $close-name){
+@mixin make-alert(	$alert-name, $alert-color, $alert-bg-color, $alert-border, 
+					$alert-border-radius, $alert-padding, $close-name			){
 	@include make-generic-container($alert-name+' + div', $alert-color, $alert-bg-color, $alert-border, $alert-border-radius, $alert-padding);
 	input[type="checkbox"].#{$alert-name}{
 		display: none;
@@ -115,7 +116,9 @@
 	- [1] : This mixin uses `make-generic-container` to partially generate its
 		CSS.
 */
-@mixin make-panel($panel-name, $panel-color, $panel-bg-color, $panel-border, $panel-border-radius, $panel-padding, $panel-header-name, $panel-header-color, $panel-header-bg-color, $panel-header-padding){
+@mixin make-panel(	$panel-name, $panel-color, $panel-bg-color, $panel-border, 
+					$panel-border-radius, $panel-padding, $panel-header-name, 
+					$panel-header-color, $panel-header-bg-color, $panel-header-padding	){
 	@include make-generic-container($panel-name, $panel-color, $panel-bg-color, $panel-border, $panel-border-radius, 0);
 	.#{$panel-name}{
 		& > *{

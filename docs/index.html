@@ -9,19 +9,39 @@
     <meta name="author" content="Angelos Chalaris (chalarangelo)">
     <link rel="icon" type="image/png" href="favicon.png">
     <!-- For local testing only -->
-    <link rel="stylesheet" href="../flavors/mini-default.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/master/flavors/mini-default.min.css"> -->
+    <!-- <link rel="stylesheet" href="../flavors/mini-default.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/master/flavors/mini-default.min.css">
   </head>
   <body>
     <input type="checkbox" class="hidden" id="nav-toggle">
     <div class="nav fixed">
       <span class="logo">&nbsp;<img src="favicon.png" style="height: 34px; width: auto; display: inline-block; vertical-align: middle;">&nbsp;mini.css&nbsp;</span>
       <ul>
-        <li><a href="#why-mini-css" class="link">Why mini.css?</a></li>
-        <li><a href="#core-modules" class="link">Core modules</a></li>
-        <li><a href="#customization" class="link">Customization</a></li>
-        <li><a href="#extra-modules" class="link">Extra modules</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/#why-mini-css" class="link">Introduction</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/#modules" class="link">Module overview</a></li>
+        <li><label class="link dropdown" for="menu-drop1">Module Demos</label></li>
       </ul>
+      <input type="checkbox" id="menu-drop1" class="dropdown" autocomplete="off"><div>
+        <ul>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#base" class="link">Base</a></li>    
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#grid" class="link">Responsive Grid</a></li> 
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#nav" class="link">Navigation</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#dropdown" class="link">Dropdowns</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#tab" class="link">Tabs</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#table" class="link">Tables</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#form" class="link">Forms</a></li>
+
+
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#button" class="link">Buttons</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#label" class="link">Labels</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#modal" class="link">Modals</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#collapse" class="link">Collapse</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#progress" class="link">Progress Bars</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#carousel" class="link">Carousel</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#utility" class="link">Utilities &amp; Helper Classes</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#utility-extra" class="link">Utilities &amp; Experimental Classes</a></li>
+        </ul>
+      </div>
     </div>
     <label for="nav-toggle"></label>
     <br>      
@@ -31,129 +51,58 @@
         <div class="col xs-12 md-10">
           <h1>mini.css<small> a minimal Sass-y responsive mobile-first style-agnostic CSS framework</small></h1>
           <p>If you want to create your own flavor, get involved or report an issue, head over to <strong>mini.css</strong>'s <a href="https://github.com/Chalarangelo/mini.css">Github page</a>. If you want to give <strong>mini.css</strong> a try using the default flavor, paste the following code inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
-          <pre style="overflow: auto;">&lt;link rel="stylesheet" href="https://github.com/Chalarangelo/mini.css/tree/master/flavors/mini-default.min.css"&gt;</pre>
+          <pre style="overflow: auto;">&lt;link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/master/flavors/mini-default.min.css"&gt;</pre>
           <br>
 
           <h2 id="why-mini-css">Why mini.css?</h2><hr>
-          <p><strong>mini.css</strong> is a very light framework without any Javascript or excessive styling, that allows you to quickly build your own styles exactly the way you want them. Also, it works great on mobile devices. So, the three main reasons to give it a try are</p>
           <ul>
-            <li>Size</li>
-            <li>Responsiveness</li>
-            <li>Customization</li>
+            <li><strong>Size matters!</strong> - The key focus of <strong>mini.css</strong> is to provide developers with a very light framework to build their pages with. To accomplish this, we stripped down most of the commonly-used components to their essentials, utilising the magic of CSS. By building lighter components, using only CSS, we made <strong>mini.css</strong> really tiny, just under 5KB for the default flavor.</li>
+            
+            <li><strong>Easily customize your pages!</strong> - <strong>mini.css</strong> does not rely on a huge monolithic CSS file to do everything. In fact, we split the framework into smaller modules using Sass(SCSS), so you can easily distinguish what pieces you want in your final stylesheet. But that's not all! Every single detail of the provided modules can be changed, from colors and border styles to class names and structure. It's all really simple and you can do it without a lot of CSS or Sass knowledge. These customized stylesheets are called <strong>flavors</strong> and are one of the key differences between <strong>mini.css</strong> and other frameworks.</li>
+            
+            <li><strong>We are mobile-friendly!</strong><sup>*</sup> - That's right! We built <strong>mini.css</strong> from the ground up to support mobile devices as best as possible and be responsive. All of this functionality can be fully customized to suit your end-users.</li>
+            
+            <li><strong>No Javascript!</strong> - As much as we all love Javascript, we tried to keep all of the modules in <strong>mini.css</strong> pure CSS. This means no dependencies on Javascript libraries or excessive code for events you might never use.</li>
+
           </ul>
-          <h3>mini.css is tiny</h3>
-          <p><strong>mini.css</strong> is really small, just below 3KB gzipped, making it ideal if you want to build a page that load really fast. Comparing this to <a href="http://getbootstrap.com">Twitter Bootstrap</a>, one of the most popular frameworks out there which is about 100KB gzipped, you can probably see why you might want to try out mini.css.</p>
-
-          <h3>mini.css is mobile-friendly</h3>
-          <p>Mobile devices are becoming more and more important when designing for web and <strong>mini.css</strong> knows that. In fact, it is built with mobile devices as a priority, not an afterthought. What this means is that your websites will work well on mobile devices without a lot of tweaking.<sup>*</sup> If you are not convinced, open this page in your phone.</p>
           <small>(*): We do not want to claim that any website will ever instantly work 100% the way you want on mobile, but mini.css eliminates a lot of the tedious work of making your websites mobile-friendly, so you can focus on the interesting parts that actually need your attention.</small>
-          
-          <h3>mini.css is style-agnostic</h3>
-          <p><strong>mini.css</strong> does not force you to use some default colors that make all websites look similar. In fact it does not force you to use any styling that is preset by the author of the framework. It comes in <strong>flavors</strong>. That's right, everything is customizable to the point that you can make it look entirely different from almost any other website built with mini.css. How? Well, using the very powerful features that <a href="http://sass-lang.com/">Sass (SCSS)</a> provides and by having a well-documented <a href="https://github.com/Chalarangelo/mini.css/wiki">Wiki</a> to help you customize it as much as you like.</p>
-          <br>
 
-          <h2 id="core-modules">Core modules</h2><hr>
-          <p>Frameworks are all about modules. Some are important, others not so much. This is why <strong>mini.css</strong> allows you to pick which modules you want in your custom flavor. We have already separated them into core modules and extras, so that you can easily choose what you like. What we think is vital to the core experience:</p>
-          
-          <h3>Base</h3>
-          <p>By using a modified version of <a href="https://necolas.github.io/normalize.css/">normalize.css</a> combined with a long list of variables, a customized base is created that makes your pages work well in all browsers and devices. The base is usually about 1.2KB<sup>*</sup> making it so tiny you'll hardly even notice it in page loading. Also, the framework's base contains your customized typography rules and colors.</p>
+          <h2 id="modules">What does it contain?</h2>
+          <p><strong>mini.css</strong> is split up into modules, each with a specific focus or set of components. These modules are categorized under core modules and extra modules. We suggest that you use most of the core modules in your projects, as most projects can make good use of them. As for the extra modules, we suggest you carefully pick the ones you need for your project. Below is a quick overview of all the modules:</p>
 
-          <h3>Responsive grid</h3>
-          <p><strong>mini.css</strong> comes with a reponsive grid that lets you build pages that look great on all devices without having to constantly tweak your page's layout. It can be customized to as many columns as you like, too, and it's only about 450 bytes.<sup>*</sup></p>
+          <ul>
+            
+            <li><h3>Core : Base</h3><p>A modified version of <a href="https://necolas.github.io/normalize.css/">normalize.css</a> combined with a long list of variables produces a customized base for your projects along with typography rules and colors.</p></li>
 
-          <h4><strong>Grid example (12-columns)</strong><sup>**</sup></h4>
-          <div class="grid-container">
-            <div class="row">
-              <div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div>
-              <div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div>
-            </div>
-            <div class="row">
-              <div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div>
-            </div>
-            <div class="row">
-              <div class="col xs-3 bordered">1/4</div><div class="col xs-3 bordered">1/4</div><div class="col xs-3 bordered">1/4</div><div class="col xs-3 bordered">1/4</div>
-            </div>
-            <div class="row">
-              <div class="col xs-4 bordered">1/3</div><div class="col xs-4 bordered">1/3</div><div class="col xs-4 bordered">1/3</div>
-            </div>
-            <div class="row">
-              <div class="col xs-6 bordered">1/2</div><div class="col xs-6 bordered">1/2</div>
-            </div>
-            <div class="row">
-              <div class="col xs-12 bordered">1/1</div>
-            </div>
-          </div>
-          <h4><strong>Code</strong></h4>
-          <pre>&lt;div class="grid-container"&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="col xs-1"&gt;&lt;/div&gt;
-    &lt;div class="col xs-1"&gt;&lt;/div&gt;
-    &lt;div class="col xs-1"&gt;&lt;/div&gt;
-    &lt;div class="col xs-1"&gt;&lt;/div&gt;
-    &lt;div class="col xs-1"&gt;&lt;/div&gt;
-    &lt;div class="col xs-1"&gt;&lt;/div&gt;
-    &lt;div class="col xs-1"&gt;&lt;/div&gt;
-    &lt;div class="col xs-1"&gt;&lt;/div&gt;
-    &lt;div class="col xs-1"&gt;&lt;/div&gt;
-    &lt;div class="col xs-1"&gt;&lt;/div&gt;
-    &lt;div class="col xs-1"&gt;&lt;/div&gt;
-    &lt;div class="col xs-1"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="col xs-2"&gt;&lt;/div&gt;
-    &lt;div class="col xs-2"&gt;&lt;/div&gt;
-    &lt;div class="col xs-2"&gt;&lt;/div&gt;
-    &lt;div class="col xs-2"&gt;&lt;/div&gt;
-    &lt;div class="col xs-2"&gt;&lt;/div&gt;
-    &lt;div class="col xs-2"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="col xs-3"&gt;&lt;/div&gt;
-    &lt;div class="col xs-3"&gt;&lt;/div&gt;
-    &lt;div class="col xs-3"&gt;&lt;/div&gt;
-    &lt;div class="col xs-3"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="col xs-4"&gt;&lt;/div&gt;
-    &lt;div class="col xs-4"&gt;&lt;/div&gt;
-    &lt;div class="col xs-4"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="col xs-6"&gt;&lt;/div&gt;
-    &lt;div class="col xs-6"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="col xs-12"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+            <li><h3>Core : Responsive Grid</h3><p>A customizable reponsive grid that lets you build pages that look great on all devices wih minimal tweaking..</p></li>
 
+            <li><h3>Core : Navigation</h3><p>A customizable responsive navigation bar for your pages.</p></li>
 
-          <h3>Navigation</h3>
-          <p>Navigation is made simple with the navigation bar module, that lets you build customized navigation bars that work great in mobile devices. These navigation elements are probably one of the heavier modules at about 530 bytes.<sup>*</sup></p>
+            <li><h3>Extra : Navigation - Dropdown</h3><p>The navigation system can easily be extended using the dropdown component.</p></li>
 
-          <h3>Tables</h3>
-          <p>Instead of the old-school default tables that you usually see, you can style them the way you like them without overloading your page. The tables module is about 250 bytes<sup>*</sup> and allows you to utilise a variety of styles for your tables.</p>
+            <li><h3>Extra : Navigation - Tabs</h3><p>If you would rather use tabs instead of the usual navigation bar, you can use this module to enable tabbed navigation.</p></li>
 
-          <h3>Forms</h3>
-          <p>Custom styling for forms is also available as a module and it allows you to make pretty forms the way you like them, without a lot of effort. Another reasonably heavy component in comparison to some other, with its size being about 520 bytes.<sup>*</sup></p>
+            <li><h3>Core : Tables</h3><p>Give a fresh style to your tables without overloading your page.</p></li>
 
-          <h3>Buttons</h3>
-          <p>Button styles are tiny and they work great without excessive fluff. You can have as many as you like and they almost do not affect your page's performance, as their size is about 430 bytes.<sup>*</sup></p>
+            <li><h3>Core : Forms</h3><p>Simple, elegant and light forms that will work well and give feedback to the user.</p></li>
 
-          <h3>Utilities and helper classes</h3>
-          <p>Lots of things that you might use quite often are not included in the framework's base module. This is where the utilities module comes in with a variety of classes for quick floats, centering content, making generic borders and simple icons or just hiding elements. This module is entirely customizable, allowing you to pick any pieces you like, but in total its size is about 450 bytes.<sup>*</sup></p>
+            <li><h3>Core : Buttons</h3><p>Tiny button styles that allow you to beautify your buttons, labels and links.</p></li>
 
-          <small>(*): Size metrics are based on gzipped size of each module for the default flavor. Your flavor might be larger or smaller, depending on how you use the variables provided. However, for most cases, the provided metrics are representative of your final size. Combining all modules might make your final gzipped CSS file smaller than the sum of the modules' sizes. </small><br>
-          <small>(**): Provided examples are based on the naming conventions and the styling of the default flavor. If you create your own flavor, results might vary. </small>
-          <br><br>
+            <li><h3>Extra : Labels &amp; Badges</h3><p>Small badges and labels to provide your user's with all the info they need.</p></li>
 
-          <h2 id="customization">Customization</h2><hr>
-          <p><strong>mini.css</strong> does not force you to use a default style, instead it claims to be style-agnostic and wears this title like a badge, allowing you to create unique flavors that you can use any way you like. You can customize virtually anything using the provided Sass mixins and variables, so that you include exactly what you want in your stylesheet without any excessive styles. Or you can build a bunch of flavors and change them on the fly to see what fits better. It's up to you, the developer, to design a great website and we do not want to take that away from you. We just provide the tools and you can use them in any way you see fit. by the way, the <a href="https://github.com/Chalarangelo/mini.css/wiki">wiki</a> is a great place for you to start customizing your flavor!</p>
-          <br>
+            <li><h3>Extra : Modals</h3><p>Modal dialog prompts to notify your users the easy way.</p></li>
 
-          <h2 id="extra-modules">Extra modules</h2><hr>
-          <p>Coming soon! <small>In the meantime, why don't you check out the framework's <a href="https://github.com/Chalarangelo/mini.css">Github page</a>?</small></p>
+            <li><h3>Extra : Collapse</h3><p>Hide and show text using customizable collapse buttons.</p></li>
 
+            <li><h3>Extra : Progress Bars</h3><p>A simple module that allows you to create progess bars for your pages.</p></li>
+
+            <li><h3>Extra : Carousel</h3><p>Really light and customizable imaage slideshow for all your showcase needs.</p></li>
+
+            <li><h3>Core : Utilities &amp; Helper Classes</h3><p>Classes for generic borders, image thumbnails, contextual text coloring, utility buttons and more.</p></li>
+
+            <li><h3>Extra : Utilities &amp; Experimental Classes</h3><p>Breadcrumbs, containers, panels, alerts, popovers, button groups and more.</p></li>
+
+          </ul>
         </div>
       </div>
     </div>

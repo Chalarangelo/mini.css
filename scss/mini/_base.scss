@@ -83,7 +83,7 @@ ul,	ol {
 	Styles for code and preformatted.
 */
 samp,	kbd,	code,	pre{
-	font-family: $code-fonts;
+	font-family: #{$code-fonts};
 	font-size: $base-font-size;
 }
 kbd, code, pre {
@@ -224,7 +224,7 @@ button,	input, hr {
 	Style for buttons and input elements.
 */
 button,	input,	optgroup,	select,	textarea {
-	font-family: $button-fonts;
+	font-family: #{$button-fonts};
 	font-size: $button-font-size; 
 	line-height: $base-line-height * $button-line-height-multiplier; 
 	margin: $button-margin; 

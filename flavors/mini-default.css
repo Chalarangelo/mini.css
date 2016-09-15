@@ -234,7 +234,7 @@ button, input, hr {
 	Style for buttons and input elements.
 */
 button, input, optgroup, select, textarea {
-  font-family: '"Helvetica Neue", Helvetica, sans-serif';
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 100%;
   line-height: 1.2;
   margin: 0; }

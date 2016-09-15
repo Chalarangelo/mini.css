@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <input type="checkbox" class="hidden" id="nav-toggle">
+    <input type="checkbox" id="nav-toggle" autocomplete="off">
     <div class="nav fixed">
       <a href="https://chalarangelo.github.io/mini.css"><span class="logo">&nbsp;<img src="favicon.png" style="height: 34px; width: auto; display: inline-block; vertical-align: middle;">&nbsp;mini.css&nbsp;</span></a>
       <ul>
@@ -166,7 +166,57 @@
     &lt;div class=&quot;col xs-12&quot;&gt;1/1&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-</div>
+</div><br>
+
+      <h2 id="nav">Navigation</h2>
+      <p>The navigation system provided contains custom classes for the navigation bar, logo and links. Navigation bars can be horizontal or vertical, fixed or otherwise. Navigation bars are responsive by default, so fixed navigation bars will properly shrink down to a button on smaller screens and, when the menu is opened, it will be displayed on top of the page's content.</p>
+
+      <h3>Navigation structure</h3>
+      <p>The structure of the navigation system is as follows:</p>
+      <ul>
+        <li>You should wrap your navigation system in a <code>&lt;div&gt;</code> with the <code>.nav</code> class.</li>
+        <li>If you want your navigation bar to be vertical (horizontal is the default), use the <code>.vertical</code> class.</li>
+        <li>If you want your navigation bar to be fixed, use the <code>.fixed</code> class.</li>
+        <li>Use an element with the <code>.logo</code> class for your website's logo.</li>
+        <li>For the navigation links, use an unordered list (<code>&lt;ul&gt;</code>) and <strong>inside</strong> each <code>&lt;li&gt;</code> element, add another element with the <code>.link</code> class to stylize the element as a navigation link.</li>
+        <li>Responsiveness can be added for fixed navigation bars by adding a hidden <code>&lt;input type=&quot;checkbox&quot;&gt;</code> right before the navigation bar and a label linking to that specific checkbox right after the navigation bar.</li>
+      </ul>
+
+      <h3>Horizontal navigation bar</h3>
+      <div class="panel"><h4 class="head">Example</h4><br>
+        <div class="nav" style="margin-left: 10px; margin-right: 10px;">
+          <span class="logo">Logo</span>
+          <ul>
+            <li><a href="#" class="link">Link 1</a></li>
+            <li><a href="#" class="link">Link 2</a></li>
+          </ul>
+        </div><br>
+        <pre class="panelcode">&lt;div class=&quot;nav&quot;&gt;
+  &lt;span class=&quot;logo&quot;&gt;Logo&lt;/span&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+      </div><br>
+
+      <h3>Vertical navigation bar</h3>
+      <div class="panel"><h4 class="head">Example</h4><br>
+        <div class="nav vertical" style="margin-left: 10px; margin-right: 10px;">
+          <span class="logo">Logo</span>
+          <ul>
+            <li><a href="#" class="link">Link 1</a></li>
+            <li><a href="#" class="link">Link 2</a></li>
+          </ul>
+        </div><br>
+        <pre class="panelcode">&lt;div class=&quot;nav vertical&quot;&gt;
+  &lt;span class=&quot;logo&quot;&gt;Logo&lt;/span&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+      </div><br>
           
 
 

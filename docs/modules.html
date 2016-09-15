@@ -11,15 +11,18 @@
     <!-- For local testing only -->
     <!-- <link rel="stylesheet" href="../flavors/mini-default.min.css"> -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/master/flavors/mini-default.min.css">
+    <style>
+      .panelcode{ border-top-left-radius:0; border-top-right-radius:0; margin-bottom:0; }
+    </style>
   </head>
   <body>
     <input type="checkbox" class="hidden" id="nav-toggle">
     <div class="nav fixed">
-      <span class="logo">&nbsp;<img src="favicon.png" style="height: 34px; width: auto; display: inline-block; vertical-align: middle;">&nbsp;mini.css&nbsp;</span>
+      <a href="https://chalarangelo.github.io/mini.css"><span class="logo">&nbsp;<img src="favicon.png" style="height: 34px; width: auto; display: inline-block; vertical-align: middle;">&nbsp;mini.css&nbsp;</span></a>
       <ul>
         <li><a href="https://chalarangelo.github.io/mini.css/#why-mini-css" class="link">Introduction</a></li>
         <li><a href="https://chalarangelo.github.io/mini.css/#modules" class="link">Module overview</a></li>
-        <li><label class="link dropdown" for="menu-drop1">Module Demos</label></li>
+        <li><label class="link dropdown" for="menu-drop1">Module demos</label></li>
       </ul>
       <input type="checkbox" id="menu-drop1" class="dropdown" autocomplete="off"><div>
         <ul>
@@ -47,8 +50,125 @@
       <div class="row">
         <div class="col xs-no md-1"></div>
         <div class="col xs-12 md-10">
+        <h1>mini.css<small> a minimal Sass-y responsive mobile-first style-agnostic CSS framework</small></h1>
+        <p>Below you can see each module in action, along with certain suggestions on how to add functionality to the various components. Bear in mind that this demo is for the <strong>Default</strong> flavor. Naming conventions may vary between flavors, however the structure and functionality of the modules should be the same. Please refer to specific flavors for those differences. The <strong>NiteOwl</strong> flavor uses the same naming conventions for the module components, so you won't have any trouble. If you are migrating from Bootstrap and want to use the <strong>Bootstrap</strong> flavor, most naming conventions are based on the original naming conventions of Bootstrap 3.3.7.</p><br>
 
-        <p>Coming soon!</p>
+        <h2 id="base">Base</h2>
+        <p>The Base module contains customized typography rules, colors and most of the functionality provided in <a href="https://necolas.github.io/normalize.css/">normalize.css</a>. Below we showcase some of the most important typography styles.</p>
+
+        <h3>Fonts, sizes and colors</h3>
+        <p>The default flavor uses the <strong>Helvetica</strong> font family and a font-size of <strong>1em</strong> with a line-height of <strong>1.5</strong>. Colors used are <strong>#f5f5f5</strong> for the background and <strong>#222</strong> for the text. Most of the things in this module are subjective to one's preferences and should be changed according to your liking. Heading, <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code> and <code>&lt;small&gt;</code> elements use multipliers, so changing the base font-size should affect those too. Apart from that, colors and styles for links can easily be changed, as well as a lot of other parameters. Images are responsive by default, so they will shrink to fit smaller viewports without any additional work. Below we highlight some important things, like heading and code styling, but you can see most of the typograhpy rules in action in these pages.</p>
+        
+        <h3>Headings</h3>
+        <div class="panel"><h4 class="head">Example</h4>
+          <h1>Heading 1 <small>small text</small></h1>
+          <h2>Heading 2 <small>small text</small></h2>
+          <h3>Heading 3 <small>small text</small></h3>
+          <h4>Heading 4 <small>small text</small></h4>
+          <h5>Heading 5 <small>small text</small></h5>
+          <h6>Heading 6 <small>small text</small></h6>
+          <pre class="panelcode">&lt;h1&gt;Heading 1 &lt;small&gt;small text&lt;/small&gt;&lt;/h1&gt;
+&lt;h2&gt;Heading 2 &lt;small&gt;small text&lt;/small&gt;&lt;/h2&gt;
+&lt;h3&gt;Heading 3 &lt;small&gt;small text&lt;/small&gt;&lt;/h3&gt;
+&lt;h4&gt;Heading 4 &lt;small&gt;small text&lt;/small&gt;&lt;/h4&gt;
+&lt;h5&gt;Heading 5 &lt;small&gt;small text&lt;/small&gt;&lt;/h5&gt;
+&lt;h6&gt;Heading 6 &lt;small&gt;small text&lt;/small&gt;&lt;/h6&gt;</pre>
+        </div>
+
+        <h3>Code, <code>&lt;pre&gt;</code> and <code>&lt;kbd&gt;</code> elements</h3>
+        <div class="panel"><h4 class="head">Example</h4>
+        <p>Inline code looks like <code>this</code>. User input looks like <kbd>this</kbd>. Finally, code blocks look like...</p>
+        <pre style="margin-left: 10px; margin-right: 10px;">this! This is a code block!</pre>
+        <br><pre class="panelcode">&lt;code&gt;Inline code&lt;/code&gt;
+&lt;kbd&gt;User input&lt;/kbd&gt;
+&lt;pre&gt;Code block&lt;/pre&gt;</pre>
+        </div><br>
+
+        <h2 id="grid">Responsive grid</h2>
+        <p>The grid system provided can be fully customized to use as many columns as you wish and have custom breakpoints for different device sizes. The default grid uses 12 columns (as shown below). Customized classes are also defined to hide certain columns in certain viewport sizes. This can be specifically used to customize column offseting on different devices.</p>
+
+        <h3>Grid structure</h3>
+        <p>The basic grid structure is as follows:</p>
+        <ul>
+          <li>The outer wrapper of the grid system uses the <code>.grid-container</code> class.</li>
+          <li>Inside this wrapper, rows can be defined using the <code>.row</code> class.</li>
+          <li>Inside the rows, columns can be defined using the <code>.col</code> class.</li>
+          <li>Column width can be specified for different devices using the respective class prefixes (<code>.xs-</code>, <code>.sm-</code>, <code>.md-</code>, <code>.lg-</code>) followed by the width (in columns) of the specific column.</li>
+          <li>Columns can be hidden in certain viewports, using the <code>-no</code> suffix for the specific screen size.</li>
+        </ul>
+
+        <h3>12-column grid example</h3>
+        <div class="panel"><h4 class="head">Example</h4>
+          <div class="grid-container">
+            <div class="row">
+              <div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div>
+              <div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div>
+              <div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div>
+              <div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div>
+            </div>
+            <div class="row">
+              <div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div>
+              <div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div>
+            </div>
+            <div class="row">
+              <div class="col xs-3 bordered">1/4</div><div class="col xs-3 bordered">1/4</div><div class="col xs-3 bordered">1/4</div>
+              <div class="col xs-3 bordered">1/4</div>
+            </div>
+            <div class="row">
+              <div class="col xs-4 bordered">1/3</div><div class="col xs-4 bordered">1/3</div><div class="col xs-4 bordered">1/3</div>
+            </div>
+            <div class="row">
+              <div class="col xs-6 bordered">1/2</div><div class="col xs-6 bordered">1/2</div>
+            </div>
+            <div class="row">
+              <div class="col xs-12 bordered">1/1</div>
+            </div>
+          </div>
+            <pre class="panelcode">&lt;div class=&quot;grid-container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
+    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
+    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
+    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
+    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
+    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
+    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
+    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
+    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
+    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
+    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
+    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col xs-2&quot;&gt;1/6&lt;/div&gt;
+    &lt;div class=&quot;col xs-2&quot;&gt;1/6&lt;/div&gt;
+    &lt;div class=&quot;col xs-2&quot;&gt;1/6&lt;/div&gt;
+    &lt;div class=&quot;col xs-2&quot;&gt;1/6&lt;/div&gt;
+    &lt;div class=&quot;col xs-2&quot;&gt;1/6&lt;/div&gt;
+    &lt;div class=&quot;col xs-2&quot;&gt;1/6&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col xs-3&quot;&gt;1/4&lt;/div&gt;
+    &lt;div class=&quot;col xs-3&quot;&gt;1/4&lt;/div&gt;
+    &lt;div class=&quot;col xs-3&quot;&gt;1/4&lt;/div&gt;
+    &lt;div class=&quot;col xs-3&quot;&gt;1/4&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col xs-4&quot;&gt;1/3&lt;/div&gt;
+    &lt;div class=&quot;col xs-4&quot;&gt;1/3&lt;/div&gt;
+    &lt;div class=&quot;col xs-4&quot;&gt;1/3&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col xs-6&quot;&gt;1/2&lt;/div&gt;
+    &lt;div class=&quot;col xs-6&quot;&gt;1/2&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col xs-12&quot;&gt;1/1&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+          
+
 
         </div>
       </div>

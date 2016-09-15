@@ -266,7 +266,7 @@
 
       <h3>Vertical navigation dropdown example</h3>
       <div class="panel"><h4 class="head">Example</h4><br>
-        <div class="nav vertical">
+        <div class="nav vertical" style="margin-left: 10px; margin-right: 10px;">
           <span class="logo">Logo</span>
           <ul>
             <li><a href="#" class="link">Link 1</a></li>
@@ -295,6 +295,161 @@
   &lt;/div&gt;
 &lt;/div&gt;</pre>
       </div><br>
+
+      <h2 id="tab">Tabs</h2>
+      <p>The tabbed navigation module allows you to easily create tabbed navigation systems, that are fully customizable to fit your needs. <strong>Nested tabs are not supported and might cause unexpected behavior.</strong></p>
+
+      <h3>Tabbed navigation structure</h3>
+      <p>The structure of the tabbed navigation system is as follows:</p>
+      <ul>
+        <li>Use the <code>.tabs</code> class to specify the container for the tabbed navigation system.</li>
+        <li>For each tab use an <code>&lt;input type=&quot;radio&quot;&gt;</code>, immediately followed by a <code>&lt;div&gt;</code> element.</li>
+        <li>This last element should contain a <code>&lt;label&gt;</code> linking to the radio button of the tab and another <code>&lt;div&gt;</code> that will contain the tab's contents.</li>
+        <li>Specify the tab that will be open by default using the <code>checked</code> property on one of the radio buttons.</li>
+      </ul>
+
+
+    <h3>Tabbed navigation example <sup>*</sup></h3>
+    <div class="tabs">
+      <input type="radio" name="tabs-radio" id="tab1" checked>
+      <div>
+        <label for="tab1">Tab 1</label>
+        <div>Tab 1 content...</div>
+      </div>
+      <input type="radio" name="tabs-radio" id="tab2">
+      <div>
+        <label for="tab2">Tab 2</label>
+        <div>Tab 2 content...</div>
+      </div>
+      <input type="radio" name="tabs-radio" id="tab3">
+      <div>
+        <label for="tab3">Tab 3</label>
+        <div>Tab 3 content...</div>
+      </div>
+    </div>
+    <pre class="panelcode">&lt;div class=&quot;tabs&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tabs-radio&quot; id=&quot;tab1&quot; checked&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;tab1&quot;&gt;Tab 1&lt;/label&gt;
+    &lt;div&gt;Tab 1 content...&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tabs-radio&quot; id=&quot;tab2&quot;&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;tab2&quot;&gt;Tab 2&lt;/label&gt;
+    &lt;div&gt;Tab 2 content...&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tabs-radio&quot; id=&quot;tab3&quot;&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;tab3&quot;&gt;Tab 3&lt;/label&gt;
+    &lt;div&gt;Tab 3 content...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre><br>
+  <p>(*):Due to a minor incompatibility between panels and tabs, the above example is not shown like most of the others. Our most experienced teams of developers and designers are on this.</p>
+
+      <h2 id="table">Tables</h2>
+      <p>Tables can be easily stylized to look more modern, using stripes and selective borders (vertical only by default). Classes for horizontal only borders(<code>.hor</code>) and full borders(<code>.bor</code>) are also provided. Use the <code>.tbl</code> class in your <code>&lt;table&gt;</code> elements to easily apply your styling.</p>
+
+      <h3>Default table example</h3>
+      <div class="panel"><h4 class="head">Example</h4><br>
+        <table class="tbl" style="margin-left: 10px; margin-right: 10px;">
+          <thead>
+            <th>Column 1</th> <th>Column 2</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Name</td> <td>Value</td>
+            </tr>
+            <tr>
+              <td>Name</td> <td>Value</td>
+            </tr>
+            <tr>
+              <td>Name</td> <td>Value</td>
+            </tr>
+            <tr>
+              <td>Name</td> <td>Value</td>
+            </tr>
+          </tbody>
+        </table><br>
+        <pre class="panelcode">&lt;table class=&quot;tbl&quot;&gt;
+  &lt;thead&gt;
+    &lt;th&gt;Column 1&lt;/th&gt; &lt;th&gt;Column 2&lt;/th&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Name&lt;/td&gt; &lt;td&gt;Value&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Name&lt;/td&gt; &lt;td&gt;Value&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Name&lt;/td&gt; &lt;td&gt;Value&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Name&lt;/td&gt; &lt;td&gt;Value&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+      </div>
+
+      <h2 id="form">Forms</h2>
+      <p>Form customization and styling is easy using the <code>.frm</code> class in any <code>&lt;form&gt;</code> element. Inputs inside the form will be automatically styled and they will use complementary highlights for certain events (<code>:focus</code>, <code>disabled</code>, <code>:invalid</code> etc.). You can use the <code>.aligned</code> and <code>.inline</code> classes to create aligned and inline forms respectively. Aligned forms should be used in combination with the <code>.ctrl-group</code> class to group together labels with their respective inputs.</p>
+
+      <h3>Vertical form</h3>
+      <div class="panel"><h4 class="head">Example</h4>
+        <form class="frm" autocomplete="off">
+          <label for="email1">Email</label>
+          <input type="email" id="email1">
+          <label for="password1">Password</label>
+          <input type="password" id="password1">
+        </form>
+        <pre class="panelcode">&lt;form class=&quot;frm&quot;&gt;
+  &lt;label for=&quot;email1&quot;&gt;Email&lt;/label&gt;
+  &lt;input type=&quot;email&quot; id=&quot;email1&quot;&gt;
+  &lt;label for=&quot;password1&quot;&gt;Password&lt;/label&gt;
+  &lt;input type=&quot;password&quot; id=&quot;password1&quot;&gt;
+&lt;/form&gt;</pre>
+      </div>
+
+      <h3>Inline form</h3>
+      <div class="panel"><h4 class="head">Example</h4>
+        <form class="frm inline" autocomplete="off">
+          <label for="email2">Email</label>
+          <input type="email" id="email2">
+          <label for="password2">Password</label>
+          <input type="password" id="password2">
+        </form>
+        <pre class="panelcode">&lt;form class=&quot;frm inline&quot;&gt;
+  &lt;label for=&quot;email1&quot;&gt;Email&lt;/label&gt;
+  &lt;input type=&quot;email&quot; id=&quot;email1&quot;&gt;
+  &lt;label for=&quot;password1&quot;&gt;Password&lt;/label&gt;
+  &lt;input type=&quot;password&quot; id=&quot;password1&quot;&gt;
+&lt;/form&gt;</pre>
+      </div>
+
+      <h3>Aligned form</h3>
+      <div class="panel"><h4 class="head">Example</h4>
+        <form class="frm aligned" autocomplete="off">
+          <div class="ctrl-group">
+            <label for="email3">Email</label>
+            <input type="email" id="email3">
+          </div>
+          <div class="ctrl-group">
+            <label for="password3">Password</label>
+            <input type="password" id="password3">
+          </div>
+        </form>
+        <pre class="panelcode">&lt;form class=&quot;frm aligned&quot;&gt;
+  &lt;div class=&quot;ctrl-group&quot;&gt;
+    &lt;label for=&quot;email1&quot;&gt;Email&lt;/label&gt;
+    &lt;input type=&quot;email&quot; id=&quot;email1&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ctrl-group&quot;&gt;
+    &lt;label for=&quot;password1&quot;&gt;Password&lt;/label&gt;
+    &lt;input type=&quot;password&quot; id=&quot;password1&quot;&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+      </div><br>
+
 
         </div>
       </div>

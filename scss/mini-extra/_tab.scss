@@ -73,7 +73,6 @@
 			&:checked + div > label{
 				color: $tabs-active-label-color; 
 				background: $tabs-active-label-bg-color; 
-				//	border: 1px solid #ccc;
 				border-top: $tabs-active-label-stripe;
 				border-bottom: 1px solid $tabs-content-bg-color;
 				& + div{

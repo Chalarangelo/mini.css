@@ -180,6 +180,7 @@
         <li>Use an element with the <code>.logo</code> class for your website's logo.</li>
         <li>For the navigation links, use an unordered list (<code>&lt;ul&gt;</code>) and <strong>inside</strong> each <code>&lt;li&gt;</code> element, add another element with the <code>.link</code> class to stylize the element as a navigation link.</li>
         <li>Responsiveness can be added for fixed navigation bars by adding a hidden <code>&lt;input type=&quot;checkbox&quot;&gt;</code> right before the navigation bar and a label linking to that specific checkbox right after the navigation bar.</li>
+        <li>Use <code>autocomplete=&quot;off&quot;</code> to make your menu not open by default in mobile devices.</li>
       </ul>
 
       <h3>Horizontal navigation bar</h3>
@@ -198,7 +199,7 @@
     &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
-      </div><br>
+      </div>
 
       <h3>Vertical navigation bar</h3>
       <div class="panel"><h4 class="head">Example</h4><br>
@@ -218,7 +219,82 @@
 &lt;/div&gt;</pre>
       </div><br>
           
+      <h2 id="dropdown">Dropdowns</h2>
+      <p>The dropdown module is an extra module that allows you to add dropdown components to your navigation bars. These components can be customized and work well on mobile devices. <strong>Using too many dropdowns or nesting dropdowns is yet undocumented and might cause unexpected behavior.</strong></p>
 
+      <h3>Dropdown structure</h3>
+      <p>The basic structure of dropdowns is as follows</p>
+      <ul>
+        <li>To add a dropdown component, add the <code>.dropdown</code> class to one of your link elements inside the navigation bar.</li>
+        <li>Add an <code>&lt;input type=&quot;checkbox&quot;&gt;</code> with the <code>.dropdown</code> class and right after it a <code>&lt;div&gt;</code> element that contains an unordered list with list elements that contains navigation links, exactly like you would make a normal navigation menu.</li>
+        <li>For multiple dropdowns, you should use <code>&lt;input type=&quot;radio&quot;&gt;</code> elements.</li>
+        <li>On mobile devices, there might be issues with the dropdown not closing after a link is clicked (mainly when it links to the same page). This can be easily dealt with using javascript (by making all the links inside the dropdown's <code>&lt;div&gt;</code> element uncheck the navigation bar's checkbox) or using <code>&lt;label&gt;</code> elements creatively inside the links.</li>
+        <li>Use <code>autocomplete=&quot;off&quot;</code> to make your dropdown not open by default in mobile devices.</li>
+      </ul>
+
+      <h3>Horizontal navigation dropdown example</h3>
+      <div class="panel"><h4 class="head">Example</h4><br>
+        <div class="nav">
+            <span class="logo">Logo</span>
+            <ul>
+              <li><a href="#" class="link">Link 1</a></li>
+              <li><label class="link dropdown" for="dropdown1">Dropdown</label></li>
+            </ul>
+            <input type="checkbox" id="dropdown1" class="dropdown" autocomplete="off">
+            <div>
+              <ul>
+                <li><a href="#" class="link">Link 2</a></li>
+                <li><a href="#" class="link">Link 3</a></li>
+              </ul>
+            </div>
+          </div><br>
+        <pre class="panelcode">&lt;div class=&quot;nav&quot;&gt;
+  &lt;span class=&quot;logo&quot;&gt;Logo&lt;/span&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;label class=&quot;link dropdown&quot; for=&quot;dropdown1&quot;&gt;Dropdown&lt;/label&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;dropdown1&quot; class=&quot;dropdown&quot; autocomplete=&quot;off&quot;&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      </div>
+
+      <h3>Vertical navigation dropdown example</h3>
+      <div class="panel"><h4 class="head">Example</h4><br>
+        <div class="nav vertical">
+          <span class="logo">Logo</span>
+          <ul>
+            <li><a href="#" class="link">Link 1</a></li>
+            <li><label class="link dropdown" for="dropdown2">Dropdown</label></li>
+          </ul>
+          <input type="checkbox" id="dropdown2" class="dropdown" autocomplete="off">
+          <div>
+            <ul>
+              <li><a href="#" class="link">Link 2</a></li>
+              <li><a href="#" class="link">Link 3</a></li>
+            </ul>
+          </div>
+        </div><br>
+        <pre class="panelcode">&lt;div class=&quot;nav vertical&quot;&gt;
+  &lt;span class=&quot;logo&quot;&gt;Logo&lt;/span&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;label class=&quot;link dropdown&quot; for=&quot;dropdown1&quot;&gt;Dropdown&lt;/label&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;dropdown1&quot; class=&quot;dropdown&quot; autocomplete=&quot;off&quot;&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      </div><br>
 
         </div>
       </div>

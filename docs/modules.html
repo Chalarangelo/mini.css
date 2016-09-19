@@ -20,6 +20,7 @@
     </style>
   </head>
   <body>
+    <input type="checkbox" class="modal" id="modal1"><div><label for="modal1" autocomplete="off"></label><div><label for="modal1"><span class="close"></span></label><h3>Modal dialog</h3><hr><p>This is a modal dialog.</p></div></div>  
     <input type="checkbox" id="nav-toggle" autocomplete="off">
     <div class="nav fixed">
       <a href="https://chalarangelo.github.io/mini.css"><span class="logo">&nbsp;<img src="favicon.png" style="height: 34px; width: auto; display: inline-block; vertical-align: middle;">&nbsp;mini.css&nbsp;</span></a>
@@ -496,6 +497,39 @@
 &lt;span class=&quot;bdg green&quot;&gt;45&lt;/span&gt;
 &lt;span class=&quot;bdg blue&quot;&gt;6&lt;/span&gt;</pre>
       </div><br>
+
+      <h2 id="modal">Modals</h2>
+      <p>Modal dialogs can be easily added and customized to the user's liking and offer support for the close button utility. <strong>Showing more than one modal dialog at once might have unexpected results and is not encouraged.</strong></p>
+
+      <h3>Modal dialog structure</h3>
+      <p>The basic structure of a modal dialog is as follows:</p>
+      <ul>
+      <li>Use the <code>.modal</code> class on a <code>&lt;input type=&quot;checkbox&quot;&gt;</code>. <strong>Place this checkbox along with any other elements specified below at the very start of your <code>&lt;body&gt;</code>.</strong></li>
+      <li>Add a <code>&lt;div&gt;</code> right after the checkbox. Inside it add a second <code>&lt;div&gt;</code> with your modal dialog's contents, as well as a <code>&lt;label&gt;</code> for the checkbox <strong>without any content inside it.</strong> This label will act as the overlay behind the modal. If you do not want clicking the background to close the modal dialog, add the label without linking it to the checkbox.</li>
+      <li>If you have enabled close button support, you can add a <code>&lt;span class=&quot;close&quot;&gt;</code> inside a label for the checkbox in the innermost <code>&lt;div&gt;</code> to add a close button to the top right corner of your modal dialog.</li>
+      <li>Finally, add a label lining to the modal dialog's checkbox anywhere in your page. You can also toggle the modal using Javascript, by setting the checkbox's state to <code>checked</code>.</li>
+      </ul>
+
+      <h3>Modal dialog example</h3>
+      <div class="panel" ><h4 class="head">Example</h4><br>
+        &nbsp;&nbsp;<label for="modal1" class="btn red">Open modal</label><br><br>
+        <pre class="panelcode">&lt;input type=&quot;checkbox&quot; class=&quot;modal&quot; id=&quot;modal1&quot;&gt;
+&lt;div&gt;
+  &lt;label for=&quot;modal1&quot; autocomplete=&quot;off&quot;&gt;&lt;/label&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;modal1&quot;&gt;
+      &lt;span class=&quot;close&quot;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;h3&gt;Modal dialog&lt;/h3&gt;
+    &lt;hr&gt;
+    &lt;p&gt;This is a modal dialog.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+...
+&lt;label for=&quot;modal1&quot; class=&quot;btn red&quot;&gt;Open modal&lt;/label&gt;</pre>
+      </div><br>
+      
+      
 
         </div>
       </div>

@@ -598,6 +598,84 @@
 &lt;/div&gt;</pre>
       </div><br>
 
+      <h2 id="carousel">Carousel</h2>
+      <p>The carousel module allows you to create manually-controlled image slideshows for your pages. <strong>Nested carousels might cause unexpected behavior, please refrain from using them.</strong></p>
+
+      <h3>Carousel structure</h3>
+      <p>The base structure for the carousel component is as follows:</p>
+      <ul>
+      <li>Specify a carousel wrapper, using the <code>.carousel</code> class on a <code>&lt;div&gt;</code> element.</li>
+      <li>Inside the wrapper, add the an <code>&lt;input type=&quot;radio&quot;&gt;</code>, followed immediately by a <code>&lt;div&gt;</code> element. Inside the latter, add an <code>&lt;img&gt;</code> element, followed by a <code>&lt;div&gt;</code> element which will act as the image's description. Finally, right after closing the first <code>&lt;div&gt;</code> element, add a <code>&lt;label&gt;</code> linked to the radio button for the image.</li>
+      <li>Repeat the process as many times as you want to add more images. <strong>Remember that you cannot skip the description <code>&lt;div&gt;</code> element, even if it is empty, as it is required for the component to work properly.</strong></li>
+      <li>Add the <code>checked</code> attribute to the first radio button of your carousel (or the one corresponding to the image you want to be displayed by default) to make the carousel work properly.</li>
+      </ul>
+      <p><strong>Auto-scrolling is not enabled by default in this carousel component.</strong> If you want the carousel to scroll automatically, you can check each of the radio buttons automatically using Javascript on set intervals. Using a similar technique you can pause the automatic scrolling when the user's cursor is inside the carousel.</p>
+
+      <h3>Carousel example</h3>
+      <div class="panel" ><h4 class="head">Example</h4><br>
+      <div class="carousel">
+        <input type="radio" name="carousel-control" id="crs1" checked>
+        <div>
+          <img src="favicon.png">
+          <div>
+            <h3>First image</h3>
+            <p>This is a sample image description.</p>
+          </div>
+        </div>
+        <label for="crs1"></label>
+        <input type="radio" name="carousel-control" id="crs2">
+        <div>
+          <img src="favicon.png" style="transform: scale(1,-1);">
+          <div>
+            <h3>Second image</h3>
+            <p>This is another sample image description.</p>
+          </div>
+        </div>
+        <label for="crs2"></label>
+        <input type="radio" name="carousel-control" id="crs3">
+        <div>
+          <img src="favicon.png" style="transform: scale(-1,-1);">
+          <div>
+            <h3>Third image</h3>
+            <p>This is yet another image description.</p>
+          </div>
+        </div>
+        <label for="crs3"></label>
+      </div>
+      <br>
+        <pre class="panelcode">&lt;div class=&quot;carousel&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;crs1&quot; checked&gt;
+  &lt;div&gt;
+    &lt;img src=&quot;favicon.png&quot;&gt;
+    &lt;div&gt;
+      &lt;h3&gt;First image&lt;/h3&gt;
+      &lt;p&gt;This is a sample image description.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;label for=&quot;crs1&quot;&gt;&lt;/label&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;crs2&quot;&gt;
+  &lt;div&gt;
+    &lt;img src=&quot;favicon.png&quot; style=&quot;transform: scale(1,-1);&quot;&gt;
+    &lt;div&gt;
+      &lt;h3&gt;Second image&lt;/h3&gt;
+      &lt;p&gt;This is another sample image description.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;label for=&quot;crs2&quot;&gt;&lt;/label&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;crs3&quot;&gt;
+  &lt;div&gt;
+    &lt;img src=&quot;favicon.png&quot; style=&quot;transform: scale(-1,-1);&quot;&gt;
+    &lt;div&gt;
+      &lt;h3&gt;Third image&lt;/h3&gt;
+      &lt;p&gt;This is yet another image description.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;label for=&quot;crs3&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;</pre>
+      </div><br>
+
+
+
         </div>
       </div>
     </div>

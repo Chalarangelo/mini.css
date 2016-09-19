@@ -504,7 +504,7 @@
       <h3>Modal dialog structure</h3>
       <p>The basic structure of a modal dialog is as follows:</p>
       <ul>
-      <li>Use the <code>.modal</code> class on a <code>&lt;input type=&quot;checkbox&quot;&gt;</code>. <strong>Place this checkbox along with any other elements specified below at the very start of your <code>&lt;body&gt;</code>.</strong></li>
+      <li>Use the <code>.modal</code> class on an <code>&lt;input type=&quot;checkbox&quot;&gt;</code>. <strong>Place this checkbox along with any other elements specified below at the very start of your <code>&lt;body&gt;</code>.</strong></li>
       <li>Add a <code>&lt;div&gt;</code> right after the checkbox. Inside it add a second <code>&lt;div&gt;</code> with your modal dialog's contents, as well as a <code>&lt;label&gt;</code> for the checkbox <strong>without any content inside it.</strong> This label will act as the overlay behind the modal. If you do not want clicking the background to close the modal dialog, add the label without linking it to the checkbox.</li>
       <li>If you have enabled close button support, you can add a <code>&lt;span class=&quot;close&quot;&gt;</code> inside a label for the checkbox in the innermost <code>&lt;div&gt;</code> to add a close button to the top right corner of your modal dialog.</li>
       <li>Finally, add a label lining to the modal dialog's checkbox anywhere in your page. You can also toggle the modal using Javascript, by setting the checkbox's state to <code>checked</code>.</li>
@@ -528,7 +528,44 @@
 ...
 &lt;label for=&quot;modal1&quot; class=&quot;btn red&quot;&gt;Open modal&lt;/label&gt;</pre>
       </div><br>
-      
+
+      <h2 id="collapse">Collapse</h2>
+      <p>The collapse module adds two components with similar functionality. </p>
+      <ul>
+      <li>Single collapse components can be created by adding the <code>.clps</code> class on an <code>&lt;input type=&quot;checkbox&quot;&gt;</code> element, followed by a <code>&lt;div&gt;</code> with the content to be hidden/shown based on the collapse's state.</li> 
+      <li>Similarly, accordion collapse components can be created by adding the <code>.acrd</code> class to as many <code>&lt;input type=&quot;radio&quot;&gt;</code> elements as you want. You should add a <code>&lt;label&gt;</code> linking to each radio immediately after it, followed by a <code>&lt;div&gt;</code> with the content to be hidden/shown based on the accordion's state. </li>
+      <li>You can the single collapse component's styling for a set of radio buttons or the accordion's styling for a single checkbox if you would like to use a different styling for your collapse components without adding new CSS definitions.</li>
+      </ul>
+
+      <h3>Single collapse style</h3>
+      <div class="panel" ><h4 class="head">Example</h4><br>
+        &nbsp;&nbsp;<label for="collapse1" class="btn blue">Toggle collapse</label><br>
+        <input type="checkbox" class="clps" id="collapse1" autocomplete="off"><div class="well" style="margin-left: 10px; margin-right: 10px;">This text will be shown or hidden based on the above button.</div><br>
+        <pre class="panelcode">&lt;label for=&quot;collapse1&quot; class=&quot;btn blue&quot;&gt;Toggle collapse&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;clps&quot; id=&quot;collapse1&quot;&gt;
+&lt;div&gt;This text will be shown or hidden based on the above button.&lt;/div&gt;</pre>
+      </div>
+
+      <h3>Accordion style</h3>
+      <div class="panel" ><h4 class="head">Example</h4>
+      <div  style="margin-left: 10px; margin-right: 10px;">
+        <input type="radio" class="acrd" id="acrd1" autocomplete="off" name="accordion"><label for="acrd1">First option</label>
+        <div>This is the first collapse of the accordion.</div>
+        <input type="radio" class="acrd" id="acrd2" autocomplete="off" name="accordion"><label for="acrd2">Second option</label>
+        <div>This is the second collapse of the accordion.</div>
+        <input type="radio" class="acrd" id="acrd3" autocomplete="off" name="accordion"><label for="acrd3">Third option</label>
+        <div>This is the final collapse of the accordion.</div>
+      </div>
+      <pre class="panelcode">&lt;input type=&quot;radio&quot; class=&quot;acrd&quot; id=&quot;acrd1&quot; autocomplete=&quot;off&quot; name=&quot;accordion&quot;&gt;
+&lt;label for=&quot;acrd1&quot;&gt;First option&lt;/label&gt;
+&lt;div&gt;This is the first collapse of the accordion.&lt;/div&gt;
+&lt;input type=&quot;radio&quot; class=&quot;acrd&quot; id=&quot;acrd2&quot; autocomplete=&quot;off&quot; name=&quot;accordion&quot;&gt;
+&lt;label for=&quot;acrd2&quot;&gt;Second option&lt;/label&gt;
+&lt;div&gt;This is the second collapse of the accordion.&lt;/div&gt;
+&lt;input type=&quot;radio&quot; class=&quot;acrd&quot; id=&quot;acrd3&quot; autocomplete=&quot;off&quot; name=&quot;accordion&quot;&gt;
+&lt;label for=&quot;acrd3&quot;&gt;Third option&lt;/label&gt;
+&lt;div&gt;This is the final collapse of the accordion.&lt;/div&gt;</pre>
+      </div><br>
       
 
         </div>

@@ -13,10 +13,19 @@
     <!-- Old link -->
     <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/master/flavors/mini-default.min.css"> -->
     <!-- Correct link -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/6b3db97a893cf4e7ec1b9f5aa40fc5957b1b94fc/flavors/mini-default.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/master/flavors/mini-default.min.css">
     <style>
       .panelcode{ border-top-left-radius:0; border-top-right-radius:0; margin-bottom:0; }
       pre{ overflow: auto; }
+      input[type="checkbox"].stateful{display: none;}
+      input[type="checkbox"].stateful+label{display:block;}
+      input[type="checkbox"].stateful+label+label{display:none;}
+      input[type="checkbox"]:checked.stateful+label{display:none;}
+      input[type="checkbox"]:checked.stateful+label+label{display:block;}
+      .btn-grp .btn{margin-left:-5px;}
+      .footer{background-color:#272727; color:#ddd;}
+      .footer a, .footer a:hover, .footer a:visited, .footer a:visited:hover, .footer a:active, .footer a:visited:active{color: #fff;}
+      .footer a:hover{text-decoration: underline;}
     </style>
   </head>
   <body>
@@ -674,8 +683,8 @@
 &lt;/div&gt;</pre>
       </div><br>
 
-      <h2 class="utility">Utilities &amp; Helper classes</h2>
-      <p>The core utiltiy module contains a set of useful utilities and helper classes to make common tasks easier when developing new pages.</p>
+      <h2 id="utility">Utilities &amp; Helper classes</h2>
+      <p>The core utilities module contains a set of useful utilities and helper classes to make common tasks easier when developing new pages.</p>
 
       <h3>Generic borders</h3>
       <p>By using the <code>opacity</code> CSS property in a creative way, along with <code>border-radius</code>es, we have created utility classes that will create generic borders for virtually any element you want. Simply add the <code>.bordered</code> class to create a generic border around an element. You can also use the <code>.rounded</code> and <code>.circle</code> classes (with or without the border style) to create reounded or circular corners for different elements accordingly.</p>
@@ -728,8 +737,106 @@
       <li>Use the <code>.hidden</code> class to hide any content you wish.</li>
       </ul>
 
+      <h2 id="utility-extra">Utilities &amp; Experimental classes</h2>
+      <p>The extra utilities module contains some more useful utilities, as well as some more experimental and unstable utility classes, that some people might find of use. <strong>Any components marked as experimental might be unstable and behave unexpectedly, use at your own risk!</strong></p>
+
+      <h3>Breadcrumbs</h3>
+      <p>Create breadcrumbs to indicate the navigational hierarchy of a page's location, using the <code>.brdcrmb</code> class on a list element.</p>
+      <div class="panel" ><h4 class="head">Example</h4>
+      <ol class="brdcrmb">
+        <li><a href="#">Core</a></li>
+        <li><a href="#">Modules</a></li>
+        <li>Utility</li>
+      </ol>
+        <pre class="panelcode">&lt;ol class=&quot;brdcrmb&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Core&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Modules&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Utility&lt;/li&gt;
+&lt;/ol&gt;</pre>
+      </div>
+
+      <h3>Containers</h3>
+      <p>There are multiple types of generic containers provided:</p>
+      <ul>
+      <li>Wells can be created using the <code>.well</code> class and are the simplest type of generic container.</li>
+      <li>Alerts are similar to wells, but are contextualized can be toggled on or off (manually or using scripts). Use the <code>.alert-</code> prefix on an <code>&lt;input type=&quot;checkbox&quot;&gt;</code> along with a color suffix (<code>red</code>, <code>green</code> or <code>blue</code>) and a <code>&lt;div&gt;</code> element to create an alert. Adding a <code>&lt;span class=&quot;close&quot;&gt;</li> element inside a label pointing to the alert's checkbox will allow user to dismiss the alert.</code>
+      <li>Panels are similar to wells, but looks like application windows. You can create a panel using the <code>.panel</code> class and you can specify a title element for your panel using the <code>.head</code> class on the very first element of your panel.</li> 
+      </ul>
+      <div class="panel" ><h4 class="head">Example</h4><br>
+      <strong>Well:</strong><br><br>
+      <div class="well" style="margin-left: 10px; margin-right: 10px;">This is a well.</div><br>
+      <strong>Alerts:</strong><br><br>
+      <input type="checkbox" id="alert1" class="alert-red" checked><div style="margin-left: 10px; margin-right: 10px;">This is a red alert without a close button.</div><br>
+      <input type="checkbox" id="alert2" class="alert-green" checked><div style="margin-left: 10px; margin-right: 10px;">This is a green alert with a <a href="#">link</a> but no close button either.</div><br>
+      <input type="checkbox" id="alert3" class="alert-blue" checked autocomplete="off"><div style="margin-left: 10px; margin-right: 10px;">This is a blue alert with a close button. <label for="alert3"><span class="close"></span></label></div><br>
+      <strong>Panel:</strong><br><br>
+      <div class="panel" style="margin-left: 10px; margin-right: 10px; padding:0"><h3 class="head">Panel head</h3>
+        <p>This is a panel.</p>
+      </div><br>
+        <pre class="panelcode">&lt;div class=&quot;well&quot;&gt;This is a well.&lt;/div&gt;
+
+&lt;input type=&quot;checkbox&quot; id=&quot;alert1&quot; class=&quot;alert-red&quot; checked&gt;
+&lt;div&gt;This is a red alert without a close button.&lt;/div&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;alert2&quot; class=&quot;alert-green&quot; checked&gt;
+&lt;div&gt;This is a green alert with a &lt;a href=&quot;#&quot;&gt;link&lt;/a&gt; but no close button either.&lt;/div&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;alert3&quot; class=&quot;alert-blue&quot; checked&gt;
+&lt;div&gt;This is a blue alert with a close button. &lt;label for=&quot;alert3&quot;&gt;&lt;span class=&quot;close&quot;&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3 class=&quot;head&quot;&gt;Panel head&lt;/h3&gt;
+    &lt;p&gt;This is a panel.&lt;/p&gt;
+&lt;/div&gt;</pre>
+      </div>
+
+      <h3>Popovers</h3>
+      <p>You can show a small overlay of content when the user clicks on specific elements using the <code>.popover-</code> prefix on an <code>&lt;input type=&quot;checkbox&quot;&gt;</code> along with the <code>top</code> or <code>bottom</code> suffix. Add a <code>&lt;label&gt;</code> right after the checkbox linked to it and inside it add another element with the popover's class you are using. When you click the label, the popover will appear above or below the label. Click on the label again or the popover text itself to hide it.</p>
+      <div class="panel" style="margin-left: 10px; margin-right: 10px; padding:0"><h4 class="head">Example</h4><br>
+        &nbsp;&nbsp;<input type="checkbox" id="popover1" class="popover-top" autocomplete="off"><label for="popover1" class="btn green">Open top popover<span class="popover-top">This is the popover text.</span></label>
+        &nbsp;&nbsp;
+        <input type="checkbox" id="popover2" class="popover-bottom" autocomplete="off"><label for="popover2" class="btn red">Open bottom popover<span class="popover-bottom">This is the popover text.</span></label><br><br>
+        <pre class="panelcode">&lt;input type=&quot;checkbox&quot; id=&quot;popover1&quot; class=&quot;popover-top&quot; autocomplete=&quot;off&quot;&gt;
+&lt;label for=&quot;popover1&quot; class=&quot;btn green&quot;&gt;Open top popover
+  &lt;span class=&quot;popover-top&quot;&gt;This is the popover text.&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;input type=&quot;checkbox&quot; id=&quot;popover2&quot; class=&quot;popover-bottom&quot; autocomplete=&quot;off&quot;&gt;
+&lt;label for=&quot;popover2&quot; class=&quot;btn red&quot;&gt;Open bottom popover
+  &lt;span class=&quot;popover-bottom&quot;&gt;This is the popover text.&lt;/span&gt;
+&lt;/label&gt;</pre>
+      </div>
+
+      <h3>Experimental components</h3>
+      <p>There are two experimental components provided, stateful buttons and button groups:
+      <ul><li>To create a stateful button apply the <code>.stateful</code> class to an <code>&lt;input type=&quot;checkbox&quot;&gt;</code>, followed by two labels (the first is for the inactive state and the second one for the active state).<strong>This component is not enabled by default as it is unstable, you can enable it manually.</strong></li>
+      <li>To create a button group, use the <code>.btn-grp</code> class to wrap a set of <code>.btn</code> elements.<strong>This component is considered stable enough, so it is enabled by default, you can disable it manually.</strong></li></ul>
+      <div class="panel"><h4 class="head">Example</h4>
+        &nbsp;&nbsp;<input type="checkbox" id="stateful1" class="stateful" autocomplete="off"><label for="stateful1" class="btn blue" style="margin-left: 10px; margin-right: 10px;width:200px;">Click to load</label><label class="btn blue" style="margin-left: 10px; margin-right: 10px;width:200px;">Loading...</label>
+        <div class="btn-grp">&nbsp;&nbsp;
+          <button class="btn">1</button>
+          <button class="btn">2</button>
+          <button class="btn">3</button>
+          <button class="btn">4</button>
+        </div>
+        <pre class="panelcode">&lt;input type=&quot;checkbox&quot; id=&quot;stateful1&quot; class=&quot;stateful&quot; autocomplete=&quot;off&quot;&gt;
+&lt;label for=&quot;stateful1&quot; class=&quot;btn blue&quot;&gt;Click to load&lt;/label&gt;
+&lt;label class=&quot;btn blue&quot;&gt;Loading...&lt;/label&gt;
+
+&lt;div class=&quot;btn-grp&quot;&gt;
+  &lt;button class=&quot;btn&quot;&gt;1&lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;2&lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;3&lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;4&lt;/button&gt;
+&lt;/div&gt;</pre>
+      </div><br>
+
         </div>
       </div>
+      <div class="row footer">
+      <div class="col xs-no md-1"></div>
+        <div class="col xs-12 md-10 footer">   
+          <p style="padding-top: 10px;"><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</p>
+        </div>
+      </div>     
     </div>
   </body>
 </html>

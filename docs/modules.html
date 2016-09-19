@@ -548,7 +548,7 @@
 
       <h3>Accordion style</h3>
       <div class="panel" ><h4 class="head">Example</h4>
-      <div  style="margin-left: 10px; margin-right: 10px;">
+      <div style="margin-left: 10px; margin-right: 10px;">
         <input type="radio" class="acrd" id="acrd1" autocomplete="off" name="accordion"><label for="acrd1">First option</label>
         <div>This is the first collapse of the accordion.</div>
         <input type="radio" class="acrd" id="acrd2" autocomplete="off" name="accordion"><label for="acrd2">Second option</label>
@@ -566,7 +566,37 @@
 &lt;label for=&quot;acrd3&quot;&gt;Third option&lt;/label&gt;
 &lt;div&gt;This is the final collapse of the accordion.&lt;/div&gt;</pre>
       </div><br>
-      
+
+      <h2 id="progress">Progress bars</h2>
+      <p>The progress bar module is very easy to use and extend. Simply create a <code>&lt;div&gt;</code> with the <code>.prg</code> class and inside it add a <code>&lt;span&gt;</code> element with the desired <code>style=&quot;width:XX%&quot;</code> and you have a progress bar. Add text inside the <code>&lt;span&gt;</code> element if you want. You can use the <code>.green</code> or <code>.red</code> variants for the <code>&lt;span&gt;</code> element if you want to use different colors. Finally, you can always stack multiple progress bars, by simply adding more <code>&lt;span&gt;</code> elements, just make sure their widths add up to 100% or less.</p>
+
+      <h3>Default progress bar style</h3>
+      <div class="panel" ><h4 class="head">Example</h4><br>
+        <div class="prg" style="margin-left: 10px; margin-right: 10px; padding:0;"><span style="width:60%;">60%</span></div><br>
+        <pre class="panelcode">&lt;div class=&quot;prg&quot;&gt;&lt;span style=&quot;width:60%;&quot;&gt;60%&lt;/span&gt;&lt;/div&gt;</pre>
+      </div>
+
+      <h3>Progress bar variant styles</h3>
+      <div class="panel" ><h4 class="head">Example</h4><br>
+        <div class="prg" style="margin-left: 10px; margin-right: 10px; padding:0;"><span class="green" style="width:40%;"></span></div><br>
+        <div class="prg" style="margin-left: 10px; margin-right: 10px; padding:0;"><span class="red" style="width:70%;"></span></div><br>
+        <pre class="panelcode">&lt;div class=&quot;prg&quot;&gt;&lt;span class=&quot;green&quot; style=&quot;width:40%;&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;prg&quot;&gt;&lt;span class=&quot;red&quot; style=&quot;width:70%;&quot;&gt;&lt;/span&gt;&lt;/div&gt;</pre>
+      </div>
+
+      <h3>Stacked progress bars</h3>
+      <div class="panel" ><h4 class="head">Example</h4><br>
+      <div class="prg" style="margin-left: 10px; margin-right: 10px; padding:0;">
+        <span class="red" style="width:30%;"></span>
+        <span class="green" style="width:20%;"></span>
+        <span style="width:40%;"></span>
+      </div><br>
+        <pre class="panelcode">&lt;div class=&quot;prg&quot;&gt;
+  &lt;span class=&quot;red&quot; style=&quot;width:30%;&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;green&quot; style=&quot;width:20%;&quot;&gt;&lt;/span&gt;
+  &lt;span style=&quot;width:40%;&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</pre>
+      </div><br>
 
         </div>
       </div>

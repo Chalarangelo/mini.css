@@ -674,7 +674,59 @@
 &lt;/div&gt;</pre>
       </div><br>
 
+      <h2 class="utility">Utilities &amp; Helper classes</h2>
+      <p>The core utiltiy module contains a set of useful utilities and helper classes to make common tasks easier when developing new pages.</p>
 
+      <h3>Generic borders</h3>
+      <p>By using the <code>opacity</code> CSS property in a creative way, along with <code>border-radius</code>es, we have created utility classes that will create generic borders for virtually any element you want. Simply add the <code>.bordered</code> class to create a generic border around an element. You can also use the <code>.rounded</code> and <code>.circle</code> classes (with or without the border style) to create reounded or circular corners for different elements accordingly.</p>
+      <div class="panel" ><h4 class="head">Example</h4><br>
+      <span>Button with generic border:</span>&nbsp;&nbsp;<button class="btn blue bordered">Button</button><br>
+      <span>Image with generic border and rounded corners:</span>&nbsp;&nbsp;<img class="bordered rounded" src="favicon.png" style="height: 100px; width: auto; display:inline-block;vertical-align: middle;"><br>
+      <span>Image with circular corners:</span>&nbsp;&nbsp;<img class="circle" src="favicon.png" style="height: 100px; width: auto; display:inline-block;vertical-align: middle;"><br>
+        <pre class="panelcode">&lt;button class=&quot;btn blue bordered&quot;&gt;Button&lt;/button&gt;
+&lt;img class=&quot;bordered rounded&quot; src=&quot;favicon.png&quot;&gt;
+&lt;img class=&quot;circle&quot; src=&quot;favicon.png&quot;&gt;</pre>
+      </div>
+
+
+      <h3>Contextual colors and backgrounds</h3>
+      <p>You can easily add contextual text or background color to certain textual elements by simply using one of the contextual prefixes (<code>.txt-</code> and <code>.bg-</code> respectively) and a color suffix (<code>red</code>, <code>green</code> or <code>blue</code>).</p>
+      <div class="panel" ><h4 class="head">Example</h4>
+      <p>Here is some text with contextual colors: <span class="txt-red">red</span>, <span class="txt-green">green</span> &amp; <span class="txt-blue">blue</span>.<br>
+      And here is some text with contextual backgrounds: <span class="bg-red">red</span>, <span class="bg-green">green</span> &amp; <span class="bg-blue">blue</span>.</p>
+        <pre class="panelcode">&lt;span class=&quot;txt-red&quot;&gt;red text&lt;/span&gt;
+&lt;span class=&quot;txt-green&quot;&gt;green text&lt;/span&gt; 
+&lt;span class=&quot;txt-blue&quot;&gt;blue text&lt;/span&gt;
+
+&lt;span class=&quot;bg-red&quot;&gt;red background&lt;/span&gt;
+&lt;span class=&quot;bg-green&quot;&gt;green background&lt;/span&gt;
+&lt;span class=&quot;bg-blue&quot;&gt;blue background&lt;/span&gt;</pre>
+      </div>
+
+      <h3>Image thumbnails</h3>
+      <p>Image thumbnails can be used to stylize images by adding a custom border around them by simply using the <code>.thumb</code> class.</p>
+      <div class="panel" ><h4 class="head">Example</h4><br>
+      &nbsp;&nbsp;<img class="thumb" src="favicon.png" style="height: 100px; width: auto; display:inline-block;"><br><br>
+        <pre class="panelcode">&lt;img class=&quot;thumb&quot; src=&quot;favicon.png&quot;&gt;</pre>
+      </div>
+
+      <h3>Utility symbols</h3>
+      <p>You can easily add carets and close symbols by using the <code>.caret</code> and <code>.close</code> classes respectively.</p>
+      <div class="panel" ><h4 class="head">Example</h4>
+      &nbsp;&nbsp;<span class="caret" style="padding:0;"></span>
+      <span class="close"></span><br>
+        <pre class="panelcode">&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;close&quot;&gt;&lt;/span&gt;</pre>
+      </div>
+
+      <h3>Helper classes</h3>
+      <p>Apart from the above utilities, there are some extra classes provided to help streamline the development process. Some of these classes use the <code class="txt-red">!important</code> property to override other styles, so be careful when using them. The provided helper classes are as follows:</p>
+      <ul>  
+      <li>Quick floats can be created using the <code>.drg-left</code> and <code>.drg-right</code> classes.</li>
+      <li>Center content blocks can be created using the <code>.ct-block</code> class.</li>
+      <li>Utilize the popular <a href="http://nicolasgallagher.com/micro-clearfix-hack/">micro clearfix hack</a> using the <code>.cf</code> class.</li>
+      <li>Use the <code>.hidden</code> class to hide any content you wish.</li>
+      </ul>
 
         </div>
       </div>

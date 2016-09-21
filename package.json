@@ -1,0 +1,34 @@
+{
+  "name": "mini.css",
+  "version": "1.0.0",
+  "description": "A minimal Sass-y responsive mobile-first style-agnostic CSS framework.",
+  "main": "flavors/mini-default.min.css",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chalarangelo/mini.css.git"
+  },
+  "keywords": [
+    "mini.css",
+    "mini",
+    "CSS",
+    "responsive",
+    "framework",
+    "mobile",
+    "first",
+    "style",
+    "agnostic",
+    "Sass"
+  ],
+  "author": "Angelos Chalaris (Chalarangelo)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chalarangelo/mini.css/issues"
+  },
+  "homepage": "https://github.com/Chalarangelo/mini.css#readme"
+}

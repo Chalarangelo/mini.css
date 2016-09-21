@@ -7,6 +7,13 @@ You can learn all about using it, its modules and components, as well as see a l
 
 ## Setup
 
+**mini.css** is available in both Bowser and NPM:
+
+    bowser install mini.css
+
+    npm install mini.css
+
+
 To give **mini.css** a try using the default flavor, paste the following code inside your HTML page's `<head>` tag:
 
 	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/1.0.0/flavors/mini-default.min.css">

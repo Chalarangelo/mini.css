@@ -13,7 +13,7 @@
 */
 @mixin make-lbl($lbl-name, $lbl-bg-color, $lbl-color, $lbl-border-radius, $lbl-padding, $lbl-hide-on-empty){
 	.#{$lbl-name}{
-		display: inline;
+		display: inline-block;
 		padding: $lbl-padding;
 		color: $lbl-color;
 		background-color: $lbl-bg-color;

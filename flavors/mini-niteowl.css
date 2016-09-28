@@ -1078,7 +1078,7 @@ img.thumb {
 		the specified style will not work correctly.
 */
 .lbl {
-  display: inline;
+  display: inline-block;
   padding: 6px 10px;
   color: #f5f5f5;
   background-color: #525252;
@@ -1099,7 +1099,7 @@ img.thumb {
   background: #e72a2a; }
 
 .bdg {
-  display: inline;
+  display: inline-block;
   padding: 3px 8px;
   color: #f5f5f5;
   background-color: #525252;

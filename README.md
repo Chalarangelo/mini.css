@@ -16,7 +16,7 @@ You can learn all about using it, its modules and components, as well as see a l
 
 To give **mini.css** a try using the default flavor, paste the following code inside your HTML page's `<head>` tag:
 
-	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/1.0.1/flavors/mini-default.min.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v1.0.2/flavors/mini-default.min.css">
 
 Alternatively, you can use one of the other [flavors](https://github.com/Chalarangelo/mini.css/tree/master/flavors). Simply replace the final part of the URL with the flavor's CSS file (minified or not) and you're good to go!
 

@@ -25,7 +25,7 @@
 		& + div{
 			z-index: 997;
 			position: fixed;
-			width: 100%;
+			width: 0;
     		height: 0;
     		opacity: 0;
     		@if $modal-transition-enabled == 'enabled'{
@@ -34,7 +34,7 @@
 			& > div{
 				z-index: 998;
 				position: relative;
-				width: $modal-width;
+				width:  $modal-width;
 				color: $modal-color;
 				background-color: $modal-bg-color;		
 				margin: $modal-top-margin auto 0;			
@@ -47,6 +47,7 @@
 			}
 		}
 		&:checked + div{
+			width: 100%;
 			height: 100%;
 			opacity: 1;		
 			& > label{

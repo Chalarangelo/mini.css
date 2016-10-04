@@ -7,7 +7,7 @@ You can learn all about using it, its modules and components, as well as see a l
 
 ## Setup
 
-**mini.css** is available in both Bowser and NPM:
+**mini.css** is available in both Bower and NPM:
 
     bowser install mini.css
 

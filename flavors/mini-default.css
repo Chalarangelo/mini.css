@@ -1,7 +1,7 @@
 /*
 	Flavor name: Default (mini-default)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v1.0 (September, 2016)
+	mini.css version: v1.1 (October, 2016)
 */
 /*
 	Set font-family, line-height, prevent adjustments of font size after orientation changes in IE and iOS.
@@ -1415,6 +1415,61 @@ input[type="radio"]:checked.acrd + label {
   background-color: #ea4848;
   color: #eeeeee; }
 
+/*
+	Mixin for dotted spinner component. 
+	Parameters:
+	- $spinner-dots-name           :	The class name of the dotted spinner component.
+	- $spinner-dots-height         :	The height of the dotted spinner component. [1][2]
+	- $spinner-dots-animation-time :	The animation time of the dotted spinner component.
+	Notes:
+	- [1] : The value of $spinner-dots-height can be specified in `em`, `px` etc. but it is
+		suggested that you specify it in the same measurement as the text base.
+	- [2] : The value of $spinner-dots-height will be used for both the size of the component
+		and the animation. Some tweaking might be required.
+*/
+/*
+	Mixin for dotted spinner component. 
+	Parameters:
+	- $spinner-round-name           :	The class name of the round spinner component.
+	- $spinner-round-size           :	The size of the round spinner component. [1]
+	- $spinner-round-doughnut-style :	The doughnut style of the round spinner component. [2]
+	- $spinner-round-spin-style     :	The spinning part style of the round spinner component. [2]
+	- $spinner-round-animation-time :	The animation time of the round spinner component.
+	Notes:
+	- [1] : The value of $spinner-round-size affects both height and width of the component.
+	- [2] : The values of $spinner-round-doughnut-style and $spinner-round-spin-style are styles
+		specified in border style format.
+*/
+.spinner-dots {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.5em;
+  vertical-align: bottom; }
+  .spinner-dots:after {
+    display: inline-table;
+    white-space: pre;
+    content: "\A.\A..\A...";
+    animation: spin-dots 1.5s steps(4) infinite; }
+
+@keyframes spin-dots {
+  to {
+    transform: translateY(-6em); } }
+.spinner-round {
+  display: inline-block;
+  border: 0.4em solid rgba(34, 34, 34, 0.2);
+  border-left: 0.4em solid #222;
+  transform: translateZ(0);
+  animation: spin-round 1.5s infinite linear; }
+  .spinner-round, .spinner-round:after {
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em; }
+
+@keyframes spin-round {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 /*
 	Mixin for the carousel component. 
 	Parameters:

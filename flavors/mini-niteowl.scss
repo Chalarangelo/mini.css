@@ -12,7 +12,7 @@
 /*
 	Flavor name: NiteOwl (mini-niteowl)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v1.0 (September, 2016)
+	mini.css version: v1.1 (October, 2016)
 */
 //====================================================================
 //
@@ -339,7 +339,7 @@ $accordion-label-bg-color:					$collapse-bg-color;					// Background color for t
 $progress-class-name:						prg;								// Name for the progress class
 $progress-bar-style1-name:					'green';							// Name for the progress bar style 1 class
 $progress-bar-style2-name:					'red';								// Name for the progress bar style 2 class
-// Progress and p progress variants colors (you can remove things you 
+// Progress and progress variants colors (you can remove things you 
 //	don't need or define more colors if you need them).
 $progress-bg-color:							#d7d7d7;							// Background color for the progress bar container
 $progress-bar-color:						$btn-alt-color;						// Color for the text of the progress bar
@@ -355,6 +355,21 @@ $progress-bar-style2-bg-color:				$btn-r-bg-color;					// Background color for t
 @include make-progress($progress-class-name, 20px, 4px, $progress-bg-color, 0.8em, $progress-bar-color, $progress-bar-bg-color);
 @include make-progress-bar-variant($progress-class-name, $progress-bar-style1-name, $progress-bar-style1-color, $progress-bar-style1-bg-color);
 @include make-progress-bar-variant($progress-class-name, $progress-bar-style2-name, $progress-bar-style2-color, $progress-bar-style2-bg-color);
+//====================================================================
+//	Variable definitions for the Spinner module (spinner.scss)
+//====================================================================
+//	Spinner class names.
+$spinner-dotted-name:						spinner-dots;						// Name for the dotted spinner class
+$spinner-round-name:						spinner-round;						// Name for the round spinner class
+// Spinner colors.
+$spinner-round-doughnout:					0.4em solid rgba(245,245,245, 0.2);	// Style for the round spinner doughnut
+$spinner-round-spin:						0.4em solid #f5f5f5;				// Style for the round spinner spinning part
+//	Enable progress (spinner.scss). (Use individual mixins below to use.)
+@import '../scss/mini-extra/spinner';
+// Use spinner mixins to create spinners with given specs. For more 
+// information refer to the spinner.scss file to check the definitions.
+@include make-spinner-dots($spinner-dotted-name, 1.5em, 1.5s);
+@include make-spinner-round($spinner-round-name, 1.5em, $spinner-round-doughnout, $spinner-round-spin, 1.5s);
 //====================================================================
 //	Variable definitions for the Carousel module (_carousel.scss)
 //====================================================================

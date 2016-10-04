@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.1.0
+
+- Fixed a problem with disabled buttons not behaving properly (issue #7).
+- Added support for `:disabled` pseudo-class for elements with disabled styles (issue #8).
+- Added support for `:active` and `:focus` for the close utility class (issue #9).
+- New module: Spinners (component comes in two styles) - part of the extra modules.
+
 ## v1.0.2
 
 - Refactoring patch (all version will now use vMajor.Minor.Patch instead of just Major.Minor.Patch). Changes will be reflected in the updated links.

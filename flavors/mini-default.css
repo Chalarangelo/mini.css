@@ -390,7 +390,7 @@ textarea {
   cursor: pointer; }
   .btn:hover, .btn:active, .btn:focus, a.btn:hover, a.btn:active, a.btn:focus, a.btn:visited:hover, a.btn:visited:active, a.btn:visited:focus {
     background: #fdfdfd; }
-  .btn.disabled, .btn[disabled], .btnfieldset[disabled], a.btn.disabled, a.btn[disabled], a.btnfieldset[disabled], a.btn:visited.disabled, a.btn:visited[disabled], a.btn:visitedfieldset[disabled] {
+  .btn.disabled, .btn[disabled], .btn:disabled, a.btn.disabled, a.btn[disabled], a.btn:disabled, a.btn:visited.disabled, a.btn:visited[disabled], a.btn:visited:disabled {
     cursor: not-allowed;
     opacity: 0.65; }
 
@@ -819,7 +819,7 @@ textarea {
       .nav ul li .link:hover, .nav ul li .link:active, .nav ul li .link:focus {
         color: #ddd;
         background: #141414; }
-      .nav ul li .link.disabled, .nav ul li .link[disabled] {
+      .nav ul li .link.disabled, .nav ul li .link[disabled], .nav ul li .link:disabled {
         cursor: not-allowed;
         opacity: 0.65; }
   .nav.vertical ul {
@@ -1031,7 +1031,7 @@ img.thumb {
   cursor: pointer; }
   .close:before {
     content: '\00d7'; }
-  .close:hover {
+  .close:hover, .close:active, .close:focus {
     color: #777; }
 
 .drg-left {

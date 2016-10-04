@@ -81,7 +81,7 @@
 							background: darken($nav-bg-color, $nav-hover-style-percentage);
 						}
 					}
-					&.disabled, &[disabled]{
+					&.disabled, &[disabled], &:disabled{
 						cursor: $nav-disabled-cursor;
 						opacity: $nav-disabled-opacity;
 					}

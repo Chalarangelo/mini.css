@@ -55,7 +55,7 @@
 		padding: $btn-padding;
 		@include btn-variant($btn-color, $btn-bg-color, $btn-hover-style, $btn-hover-style-percentage);
 		cursor: $btn-cursor;
-		&.disabled, &[disabled], &fieldset[disabled]{
+		&.disabled, &[disabled], &:disabled{
 			cursor: $btn-disabled-cursor;
 			opacity: $btn-disabled-opacity;
 		}

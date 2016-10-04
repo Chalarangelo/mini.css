@@ -119,7 +119,7 @@
 	    &:before {
 	    	content: '\00d7';
 		}
-		&:hover{
+		&:hover, &:active, &:focus{
 			color: $close-hover-color;
 		}
 	}

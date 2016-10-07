@@ -125,9 +125,7 @@
 			padding: $panel-padding;
 		}
 		& .#{$panel-header-name}{
-			border-top: 0;
-			border-left: 0;
-			border-right: 0;
+			border: 0;
 			border-bottom: $panel-border;
 			color: $panel-header-color;
 			background-color: $panel-header-bg-color;

@@ -1021,8 +1021,7 @@ img.thumb {
   line-height: 1;
   width: 0;
   height: 0;
-  border-left: 0.35em solid transparent;
-  border-right: 0.35em solid transparent;
+  border: 0.35em solid transparent;
   border-top: 0.35em solid #222; }
 
 .close {
@@ -1092,15 +1091,15 @@ img.thumb {
 
 .lbl.blue {
   color: #eeeeee;
-  background: #3f84b3; }
+  background-color: #3f84b3; }
 
 .lbl.green {
   color: #eeeeee;
-  background: #2db747; }
+  background-color: #2db747; }
 
 .lbl.red {
   color: #eeeeee;
-  background: #ea4848; }
+  background-color: #ea4848; }
 
 .bdg {
   display: inline-block;
@@ -1113,15 +1112,15 @@ img.thumb {
 
 .bdg.blue {
   color: #eeeeee;
-  background: #3f84b3; }
+  background-color: #3f84b3; }
 
 .bdg.green {
   color: #eeeeee;
-  background: #2db747; }
+  background-color: #2db747; }
 
 .bdg.red {
   color: #eeeeee;
-  background: #ea4848; }
+  background-color: #ea4848; }
 
 /*
 	Mixin for tab system.
@@ -1352,7 +1351,7 @@ input[type="radio"].acrd {
     border-radius: 4px;
     cursor: pointer; }
     input[type="radio"].acrd + label:hover, input[type="radio"].acrd + label:active, input[type="radio"].acrd + label:focus {
-      background: #dbdbdb; }
+      background-color: #dbdbdb; }
     input[type="radio"].acrd + label + div {
       display: none;
       color: #222;
@@ -1406,18 +1405,18 @@ input[type="radio"]:checked.acrd + label {
     float: left;
     width: 0;
     height: 100%;
+    color: #eeeeee;
     background-color: #3f84b3;
     text-align: center;
-    font-size: 0.8em;
-    color: #eeeeee; }
+    font-size: 0.8em; }
 
 .prg > span.green {
-  background-color: #2db747;
-  color: #eeeeee; }
+  color: #eeeeee;
+  background-color: #2db747; }
 
 .prg > span.red {
-  background-color: #ea4848;
-  color: #eeeeee; }
+  color: #eeeeee;
+  background-color: #ea4848; }
 
 /*
 	Mixin for dotted spinner component. 
@@ -1758,9 +1757,7 @@ input[type="checkbox"]:checked.alert-red + div {
 .panel > * {
   padding: 10px; }
 .panel .head {
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
+  border: 0;
   border-bottom: 1px solid #ccc;
   color: #222;
   background-color: #e7e7e7;

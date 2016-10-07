@@ -25,10 +25,10 @@
 			float: left;
 			width: 0;
 			height: 100%;
+			color: $progress-bar-color;
 			background-color: $progress-bar-bg-color;
 			text-align: center;
 			font-size: $progress-font-size;
-			color: $progress-bar-color;
 		}
 	}
 }
@@ -47,7 +47,7 @@
 */
 @mixin make-progress-bar-variant($progress-name, $progress-bar-variant-name, $progress-bar-variant-color, $progress-bar-variant-bg-color){
 	.#{$progress-name} > span.#{$progress-bar-variant-name}{
-		background-color: $progress-bar-variant-bg-color;
 		color: $progress-bar-variant-color;
+		background-color: $progress-bar-variant-bg-color;
 	}
 }

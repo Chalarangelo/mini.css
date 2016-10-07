@@ -39,6 +39,6 @@
 @mixin make-lbl-style($lbl-name, $lbl-style-name, $lbl-style-color, $lbl-style-bg-color){
 	.#{$lbl-name}.#{$lbl-style-name}{
 		color: $lbl-style-color;
-		background: $lbl-style-bg-color;
+		background-color: $lbl-style-bg-color;
 	}
 }

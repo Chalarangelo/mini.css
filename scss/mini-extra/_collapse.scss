@@ -77,10 +77,10 @@
 				cursor: pointer;
 				&:hover, &:active, &:focus{
 					@if $accordion-hover-style == 'lighten'{
-    					background: lighten($accordion-label-bg-color, $accordion-hover-style-percentage);
+    					background-color: lighten($accordion-label-bg-color, $accordion-hover-style-percentage);
     				}
     				@else{
-    					background: darken($accordion-label-bg-color, $accordion-hover-style-percentage);
+    					background-color: darken($accordion-label-bg-color, $accordion-hover-style-percentage);
     				}
   				}
 				& + div{

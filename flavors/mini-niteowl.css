@@ -1021,8 +1021,7 @@ img.thumb {
   line-height: 1;
   width: 0;
   height: 0;
-  border-left: 0.35em solid transparent;
-  border-right: 0.35em solid transparent;
+  border: 0.35em solid transparent;
   border-top: 0.35em solid #aaa; }
 
 .close {
@@ -1092,15 +1091,15 @@ img.thumb {
 
 .lbl.blue {
   color: #f5f5f5;
-  background: #364952; }
+  background-color: #364952; }
 
 .lbl.green {
   color: #f5f5f5;
-  background: #409f45; }
+  background-color: #409f45; }
 
 .lbl.red {
   color: #f5f5f5;
-  background: #e72a2a; }
+  background-color: #e72a2a; }
 
 .bdg {
   display: inline-block;
@@ -1113,15 +1112,15 @@ img.thumb {
 
 .bdg.blue {
   color: #f5f5f5;
-  background: #364952; }
+  background-color: #364952; }
 
 .bdg.green {
   color: #f5f5f5;
-  background: #409f45; }
+  background-color: #409f45; }
 
 .bdg.red {
   color: #f5f5f5;
-  background: #e72a2a; }
+  background-color: #e72a2a; }
 
 /*
 	Mixin for tab system.
@@ -1352,7 +1351,7 @@ input[type="radio"].acrd {
     border-radius: 4px;
     cursor: pointer; }
     input[type="radio"].acrd + label:hover, input[type="radio"].acrd + label:active, input[type="radio"].acrd + label:focus {
-      background: #192531; }
+      background-color: #192531; }
     input[type="radio"].acrd + label + div {
       display: none;
       color: #f5f5f5;
@@ -1406,18 +1405,18 @@ input[type="radio"]:checked.acrd + label {
     float: left;
     width: 0;
     height: 100%;
+    color: #f5f5f5;
     background-color: #364952;
     text-align: center;
-    font-size: 0.8em;
-    color: #f5f5f5; }
+    font-size: 0.8em; }
 
 .prg > span.green {
-  background-color: #409f45;
-  color: #f5f5f5; }
+  color: #f5f5f5;
+  background-color: #409f45; }
 
 .prg > span.red {
-  background-color: #e72a2a;
-  color: #f5f5f5; }
+  color: #f5f5f5;
+  background-color: #e72a2a; }
 
 /*
 	Mixin for dotted spinner component. 
@@ -1758,9 +1757,7 @@ input[type="checkbox"]:checked.alert-red + div {
 .panel > * {
   padding: 10px; }
 .panel .head {
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
+  border: 0;
   border-bottom: 1px solid #304251;
   color: #f5f5f5;
   background-color: #26384b;

@@ -8,6 +8,11 @@
 - New module: Spinners (component comes in two styles) - part of the extra modules.
 - Removed the `flavor.scss` file from the `/scss` directory. Default flavor base will be `/flavors/mini-default.scss`.
 - Added hover styling and pointer cursor to the thumbnail styling (issue #10).
+- Minor change to caret styling (should be virtually identical).
+- Updated accordion definitions for consistency.
+- Updated label style definitions for consistency.
+- Minor changes to progress component styling (should be virtually identical).
+- Minor changes to panel component styling (should be virtually identical).
 
 ## v1.0.2
 

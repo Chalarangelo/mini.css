@@ -5,15 +5,20 @@
 	- $thumb-padding       :	The padding between the image and the border.
 	- $thumb-border	       :	The style of the thumbnail's border.
 	- $thumb-border-radius :	The border radius of the thumbnail.
+	- $thumb-hover-color   :	The color of the thumbnail's border when hovering over it.
 	Notes:
 	- [1] : This style only applies to `img` elements with the class specified in
 		`$thumb-name`.
 */
-@mixin make-thumb($thumb-name, $thumb-padding, $thumb-border, $thumb-border-radius){
+@mixin make-thumb($thumb-name, $thumb-padding, $thumb-border, $thumb-border-radius, $thumb-hover-color){
 	img.#{$thumb-name}{
 		padding: $thumb-padding;
 		border: $thumb-border;
 		border-radius: $thumb-border-radius;
+		cursor: pointer;
+		&:hover, &:focus, &active{
+			border-color: $thumb-hover-color;
+		}
 	}
 }
 /*

@@ -889,6 +889,7 @@ textarea {
 	- $thumb-padding       :	The padding between the image and the border.
 	- $thumb-border	       :	The style of the thumbnail's border.
 	- $thumb-border-radius :	The border radius of the thumbnail.
+	- $thumb-hover-color   :	The color of the thumbnail's border when hovering over it.
 	Notes:
 	- [1] : This style only applies to `img` elements with the class specified in
 		`$thumb-name`.
@@ -982,7 +983,10 @@ textarea {
 img.thumb {
   padding: 0.25em;
   border: 1px solid #304251;
-  border-radius: 4px; }
+  border-radius: 4px;
+  cursor: pointer; }
+  img.thumb:hover, img.thumb:focus, img.thumbactive {
+    border-color: #6493cd; }
 
 .bordered {
   border: 1px solid rgba(0, 0, 0, 0.25) !important; }

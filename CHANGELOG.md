@@ -6,6 +6,8 @@
 - Added support for `:disabled` pseudo-class for elements with disabled styles (issue #8).
 - Added support for `:active` and `:focus` for the close utility class (issue #9).
 - New module: Spinners (component comes in two styles) - part of the extra modules.
+- Removed the `flavor.scss` file from the `/scss` directory. Default flavor base will be `/flavors/mini-default.scss`.
+- Added hover styling and pointer cursor to the thumbnail styling (issue #10).
 
 ## v1.0.2
 

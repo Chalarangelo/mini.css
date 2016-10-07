@@ -202,6 +202,7 @@ $clearfix-class-name:						cf;									// Name for the clearfix class
 $hidden-class-name:							hidden;								// Name for the hidden class
 //	Colors for the utility and helper classes (you can remove things you
 //	don't need or define more colors if you need them).
+$thumbnail-hover-color:						$a-color;							// Border color of the thumbnail when hovering over it
 $bordered-radial-radius:					4px;								// Border radius of rounded borders
 $bordered-radial2-radius:					50%;								// Border radius of the alternative rounded borders
 $colored-text1-color:						$btn-b-bg-color;					// Text color for the colored text style 1 class
@@ -214,7 +215,7 @@ $colored-bg-text3-bg-color:					$btn-r-bg-color;					// Background color for the
 @import '../scss/mini/utility';
 // Use utility mixins to create utility classes with given specs. For more information
 // refer to the _utility.scss file to check the definitions.
-@include make-thumb($thumbnail-class-name, 0.25em, 1px solid #304251, 4px);
+@include make-thumb($thumbnail-class-name, 0.25em, 1px solid #304251, 4px, $thumbnail-hover-color);
 @include make-border-generic($bordered-class-name);
 @include make-border-radial-style($bordered-radial-name, $bordered-radial-radius);
 @include make-border-radial-style($bordered-radial2-name, $bordered-radial2-radius);

@@ -846,31 +846,31 @@ textarea {
 	- [1] : This style will apply to the table and cells. All styles applied to 
 		the table (horizontal, bordered) will use the same style of border.
 */
-.tbl {
+.table {
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
-  border: 1px solid #bdbdbd; }
-  .tbl td, .tbl th {
+  border: 1px solid #ddd; }
+  .table td, .table th {
     overflow: visible;
-    border-left: 1px solid #bdbdbd;
+    border-left: 1px solid #ddd;
     border-bottom: none;
     margin: 0;
-    padding: 0.5em; }
-  .tbl thead {
-    background-color: #d9d9d9;
-    color: #111;
+    padding: 8px; }
+  .table thead {
+    background-color: #fff;
+    color: #333;
     text-align: left; }
-  .tbl tbody {
-    background-color: #f5f5f5;
-    color: #111; }
-    .tbl tbody tr:nth-child(2n-1) {
-      background-color: #ececec; }
-  .tbl.hor td, .tbl.hor th {
+  .table tbody {
+    background-color: #fff;
+    color: #333; }
+    .table tbody tr:nth-child(2n-1) {
+      background-color: #f9f9f9; }
+  .table.table-horizontal td, .table.table-horizontal th {
     border-left: none;
-    border-bottom: 1px solid #bdbdbd; }
-  .tbl.bor td, .tbl.bor th {
-    border-bottom: 1px solid #bdbdbd; }
+    border-bottom: 1px solid #ddd; }
+  .table.table-bordered td, .table.table-bordered th {
+    border-bottom: 1px solid #ddd; }
 
 /*
 	Mixin for navigation bar and complementary styles.

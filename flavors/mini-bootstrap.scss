@@ -197,6 +197,7 @@ $grid-large-breakpoint:						1200px;								// Breakpoint for medium to large de
 //	20%.
 //	Some other functionalities are not supported as they are considered
 //	unimportant for the time being.
+//	No form element size variants are supported yet.
 //	-------------------
 $form-class-name:							form;								// Name for the form class
 $form-control-group-name:					form-group;							// Name for the form's control group class
@@ -212,20 +213,31 @@ $form-invalid-color:						#a94442;							// Color for invalid form element outli
 //	Variable definitions for the Table module (_table.scss)
 //====================================================================
 //	Class names for the tables
-$table-class-name:							tbl;								// Name for the table class
-$table-horizontal-name:						hor;								// Name for the horizontal style tables
-$table-bordered-name:						bor;								// Name for the bordered style tables
+//	--- 	NOTES: 	---
+//	The .table class applies the default styling of mini.css (vertical
+//	borders). To get the default styling of Bootstrap, use .table-horizontal
+//	along with .table. 
+//	All customized tables are striped by default.
+//	Hover rows styling is not supported.
+//	Condensed tables are not supported.
+//	Contextual classes on tables are not supported (untested).
+//	Responsive tables are not supported. (Will be added as default in 
+//	later versions)
+//	-------------------
+$table-class-name:							table;								// Name for the table class
+$table-horizontal-name:						table-horizontal;					// Name for the horizontal style tables
+$table-bordered-name:						table-bordered;						// Name for the bordered style tables
 //	Colors for the tables
-$table-head-bg-color:						#d9d9d9;							// Table header background color
-$table-head-color:							#111;								// Table header text color
-$table-body-bg-color:						#f5f5f5;							// Table body bakground color
-$table-body-alt-bg-color:					#ececec;							// Table body alternative background color
-$table-body-color:							#111;								// Table body text color
+$table-head-bg-color:						$body-bg-color;						// Table header background color
+$table-head-color:							$body-color;						// Table header text color
+$table-body-bg-color:						$body-bg-color;						// Table body bakground color
+$table-body-alt-bg-color:					#f9f9f9;							// Table body alternative background color
+$table-body-color:							$body-color;						// Table body text color
 //	Enable tables (_table.scss). (Use individual mixins below to use.)
 @import '../scss/mini/table';
 // Use table mixin to create table with given specs. For more information
 // refer to the _table.scss file to check the definitions.
-@include make-tbl($table-class-name, 1px solid #bdbdbd, 0, 0.5em, $table-head-bg-color, $table-head-color, $table-body-bg-color,$table-body-alt-bg-color, $table-body-color, $table-horizontal-name, $table-bordered-name);
+@include make-tbl($table-class-name, 1px solid #ddd, 0, 8px, $table-head-bg-color, $table-head-color, $table-body-bg-color,$table-body-alt-bg-color, $table-body-color, $table-horizontal-name, $table-bordered-name);
 //====================================================================
 //	Variable definitions for the Navigation module (_nav.scss)
 //====================================================================

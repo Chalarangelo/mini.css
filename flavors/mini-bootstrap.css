@@ -916,92 +916,98 @@ textarea {
 		and `bottom-right`. Due to the way the conditional checking is implemented, `bottom-right` will be
 		used as a default if no valid value is specified.
 */
-.nav {
+.navbar {
   box-sizing: border-box;
-  background-color: #272727; }
-  .nav .logo {
-    font-size: 135%;
-    color: #ddd; }
-  .nav ul {
+  background-color: #f8f8f8; }
+  .navbar .navbar-brand {
+    font-size: 128.6%;
+    color: #333; }
+  .navbar ul {
     display: inline-block;
     list-style: none;
     margin: 0;
     padding: 0; }
-    .nav ul li {
+    .navbar ul li {
       display: inline-block;
       margin: 0;
       white-space: nowrap; }
-      .nav ul li > * {
+      .navbar ul li > * {
         display: inline-block;
-        padding: 8px;
-        color: #ddd;
+        padding: 15px;
+        color: #333;
         margin: 0; }
-      .nav ul li .link:hover, .nav ul li .link:active, .nav ul li .link:focus {
-        color: #ddd;
-        background: #141414; }
-      .nav ul li .link.disabled, .nav ul li .link[disabled], .nav ul li .link:disabled {
+      .navbar ul li .navbar-nav:hover, .navbar ul li .navbar-nav:active, .navbar ul li .navbar-nav:focus {
+        color: #333;
+        background: #e5e5e5; }
+      .navbar ul li .navbar-nav.disabled, .navbar ul li .navbar-nav[disabled], .navbar ul li .navbar-nav:disabled {
         cursor: not-allowed;
         opacity: 0.65; }
-  .nav.vertical ul {
+  .navbar.navbar-vertical ul {
     display: block; }
-    .nav.vertical ul li {
+    .navbar.navbar-vertical ul li {
       display: block; }
-      .nav.vertical ul li > * {
+      .navbar.navbar-vertical ul li > * {
         width: 100%;
-        padding: 8px 0; }
-  .nav.fixed {
+        padding: 15px 0; }
+  .navbar.navbar-fixed {
     position: fixed;
     left: 0;
     top: 0;
     z-index: 999;
     width: 100%; }
-    .nav.fixed.vertical {
+    .navbar.navbar-fixed.navbar-vertical {
       height: 100%;
       width: 16.66667%; }
-      .nav.fixed.vertical ul {
+      .navbar.navbar-fixed.navbar-vertical ul {
         width: 100%; }
-        .nav.fixed.vertical ul li {
+        .navbar.navbar-fixed.navbar-vertical ul li {
           display: block; }
-  .nav + label {
+  .navbar + label {
     display: none;
     font-weight: 700;
     margin: 10px;
     font-size: 1.75em;
-    padding: 8px;
-    color: #ddd;
-    background-color: #272727;
+    padding: 15px;
+    color: #333;
+    background-color: #f8f8f8;
     width: auto;
     position: fixed;
     z-index: 1000;
     top: 0;
     right: 0; }
-    .nav + label:before {
+    .navbar + label:before {
       position: relative;
       content: '\2630'; }
-    .nav + label:hover, .nav + label:active, .nav + label:focus {
-      background: #141414; }
+    .navbar + label:hover, .navbar + label:active, .navbar + label:focus {
+      background: #e5e5e5; }
 
 @media (max-width: 768px) {
-  .nav {
+  .navbar {
     overflow: auto; }
-    .nav.fixed {
+    .navbar.navbar-fixed {
       display: none; }
-      .nav.fixed + label {
+      .navbar.navbar-fixed + label {
         display: block; }
 
-  input[type="checkbox"]:checked + .nav.fixed {
+  input[type="checkbox"]:checked + .navbar.navbar-fixed {
     display: block;
     width: 100%;
     height: 100%; }
-    input[type="checkbox"]:checked + .nav.fixed ul {
+    input[type="checkbox"]:checked + .navbar.navbar-fixed ul {
       display: block; }
-      input[type="checkbox"]:checked + .nav.fixed ul li {
+      input[type="checkbox"]:checked + .navbar.navbar-fixed ul li {
         display: block; }
-        input[type="checkbox"]:checked + .nav.fixed ul li * {
+        input[type="checkbox"]:checked + .navbar.navbar-fixed ul li * {
           width: 100%;
-          padding: 8px 0; }
-    input[type="checkbox"]:checked + .nav.fixed + label:before {
+          padding: 15px 0; }
+    input[type="checkbox"]:checked + .navbar.navbar-fixed + label:before {
       content: '\00d7'; } }
+.navbar {
+  border: 1px solid rgba(0, 0, 0, 0.25) !important; }
+
+.navbar {
+  border-radius: 4px !important; }
+
 img.thumb {
   padding: 0.25em;
   border: 1px solid #ccc;
@@ -1298,13 +1304,13 @@ img.thumb {
 		menus on mobile screens. It is suggested that you set this value to something different than
 		0 to visually represent the menu hierarchy in devices with smaller screens.
 */
-.nav .link.dropdown {
+.navbar .navbar-nav.dropdown {
   cursor: pointer; }
-.nav input[type="checkbox"], .nav input[type="radio"] {
+.navbar input[type="checkbox"], .navbar input[type="radio"] {
   display: none; }
-  .nav input[type="checkbox"].dropdown + div, .nav input[type="radio"].dropdown + div {
+  .navbar input[type="checkbox"].dropdown + div, .navbar input[type="radio"].dropdown + div {
     display: none; }
-  .nav input[type="checkbox"]:checked.dropdown + div, .nav input[type="radio"]:checked.dropdown + div {
+  .navbar input[type="checkbox"]:checked.dropdown + div, .navbar input[type="radio"]:checked.dropdown + div {
     display: block;
     font-size: 0.8em;
     margin-left: 20px; }

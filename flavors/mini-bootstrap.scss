@@ -242,20 +242,29 @@ $table-body-color:							$body-color;						// Table body text color
 //	Variable definitions for the Navigation module (_nav.scss)
 //====================================================================
 //	Class names for the navigation elements
-$navigation-class-name:						nav;								// Name for the navigation bar class
-$navigation-vertical-name:					vertical;							// Name for the vertical navigation class
-$navigation-fixed-name:						fixed;								// Name for the fixed navigation class
-$navigation-logo-name:						logo;								// Name for the navigation logo class
-$navigation-link-name:						link;								// Name for the navigation link class
+//	--- 	NOTES: 	---
+//	The structure of the navigation bar is based on mini.css structure
+//	conventions. However naming is applied based on the naming conventions
+//	of Bootstrap.
+//	Some colors are based on approximation.
+//	Border color and border radius are built using generic utility mixins.
+//	-------------------
+$navigation-class-name:						navbar;								// Name for the navigation bar class
+$navigation-vertical-name:					navbar-vertical;					// Name for the vertical navigation class
+$navigation-fixed-name:						navbar-fixed;						// Name for the fixed navigation class
+$navigation-logo-name:						navbar-brand;						// Name for the navigation logo class
+$navigation-link-name:						navbar-nav;							// Name for the navigation link class
 // 	Colors and breakpoint for the navigation
-$navigation-bg-color:						#272727;							// Background color for the navigation bar
-$navigation-color:							#ddd;								// Color for the navigation text
+$navigation-bg-color:						#f8f8f8;							// Background color for the navigation bar
+$navigation-color:							$body-color;						// Color for the navigation text
 $navigation-fixed-collapse-breakpoint:		768px;								// Breakpoint for fixed naviation collapse
 //	Enable navigation (_nav.scss). (Use individual mixins below to use.)
 @import '../scss/mini/nav';
 // Use nav mixin to create nav with default specs. For more information
 // refer to the _nav.scss file to check the definitions.
-@include make-nav($navigation-class-name, $navigation-vertical-name, $navigation-fixed-name, $navigation-logo-name, 135%, $navigation-link-name, 8px, $navigation-color, $navigation-bg-color, darken, 7.5%, not-allowed, .65, left, 12, 2, $navigation-fixed-collapse-breakpoint, top-right, 10px, 1.75em);
+@include make-nav($navigation-class-name, $navigation-vertical-name, $navigation-fixed-name, $navigation-logo-name, 128.6%, $navigation-link-name, 15px, $navigation-color, $navigation-bg-color, darken, 7.5%, not-allowed, .65, left, 12, 2, $navigation-fixed-collapse-breakpoint, top-right, 10px, 1.75em);
+@include make-border-generic($navigation-class-name);
+@include make-border-radial-style($navigation-class-name, 4px);
 //====================================================================
 //	Variable definitions for the Utilities and Helper Classes module (_utility.scss)
 //====================================================================

@@ -562,13 +562,13 @@ textarea {
 	- [2] :	Columns with the $hide-suffix will be only hidden in the screen size specified.
 	- [3] :	Refer to https://github.com/Chalarangelo/mini.css/wiki/Grid for additional information.
 */
-.grid-container {
-  padding-right: 0;
-  padding-left: 0;
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
   width: 100%; }
-  .grid-container * {
+  .container-fluid * {
     box-sizing: border-box; }
 
 .row:before, .row:after {
@@ -578,7 +578,7 @@ textarea {
 
 .col {
   float: left;
-  padding: 12px; }
+  padding: 15px; }
 
 .xs-1 {
   width: 8.33333%; }
@@ -616,12 +616,12 @@ textarea {
 .xs-12 {
   width: 100%; }
 
-.sm-no,
-.md-no,
-.lg-no {
+.sm-hidden,
+.md-hidden,
+.lg-hidden {
   display: block; }
 
-.xs-no {
+.xs-hidden {
   display: none; }
 
 @media (min-width: 768px) {
@@ -661,14 +661,14 @@ textarea {
   .sm-12 {
     width: 100%; }
 
-  .xs-no,
-  .md-no,
-  .lg-no {
+  .xs-hidden,
+  .md-hidden,
+  .lg-hidden {
     display: block; }
 
-  .sm-no {
+  .sm-hidden {
     display: none; } }
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .md-1 {
     width: 8.33333%; }
 
@@ -705,14 +705,14 @@ textarea {
   .md-12 {
     width: 100%; }
 
-  .xs-no,
-  .sm-no,
-  .lg-no {
+  .xs-hidden,
+  .sm-hidden,
+  .lg-hidden {
     display: block; }
 
-  .md-no {
+  .md-hidden {
     display: none; } }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg-1 {
     width: 8.33333%; }
 
@@ -749,12 +749,12 @@ textarea {
   .lg-12 {
     width: 100%; }
 
-  .xs-no,
-  .sm-no,
-  .md-no {
+  .xs-hidden,
+  .sm-hidden,
+  .md-hidden {
     display: block; }
 
-  .lg-no {
+  .lg-hidden {
     display: none; } }
 /*
 	Mixin for the forms.

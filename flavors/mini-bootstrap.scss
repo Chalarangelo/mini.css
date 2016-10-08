@@ -155,23 +155,31 @@ $btn-size3-name:							btn-xs;								// Name for the button size 3 class
 //	Variable definitions for the Grid module (_grid.scss)
 //====================================================================
 //	Class names for the grid system
-$grid-container-name:						grid-container;						// Name for the grid container class
+//	--- 	NOTES: 	---
+//	Only .container-fluid is supported currently.
+//	Column naming follows standard mini.css naming conventions
+//	instead of Bootstrap conventions.
+//	(example: `col md-1` instead of `col-md-1`)
+//	Offsets are still built using the hidden column class, which is
+//	suffixed with `-hidden` for convenience's sake.
+//	-------------------
+$grid-container-name:						container-fluid;					// Name for the grid container class
 $grid-row-name:								row;								// Name for the grid's row class
 $grid-column-name:							col;								// Name for the grid's column class
 $grid-extra-small-device-name:				xs;									// Name for extra small devices
 $grid-small-device-name:					sm;									// Name for small devices
 $grid-medium-device-name:					md;									// Name for medium devices
 $grid-large-device-name:					lg;									// Name for large devices
-$grid-no-show-name:							no;									// Name for hidden grid elements class
+$grid-no-show-name:							hidden;								// Name for hidden grid elements class
 //	Grid breakpoints for different screens
 $grid-small-breakpoint:						768px;								// Breakpoint for extra small to small devices
-$grid-medium-breakpoint:					1024px;								// Breakpoint for small to medium devices
-$grid-large-breakpoint:						1280px;								// Breakpoint for medium to large devices
+$grid-medium-breakpoint:					992px;								// Breakpoint for small to medium devices
+$grid-large-breakpoint:						1200px;								// Breakpoint for medium to large devices
 //	Enable grid(s) (_grid.scss). (Use individual mixins below to use.)
 @import '../scss/mini/grid';
 // Use grid mixin to create grid with given specs. For more information
 // refer to the grid.scss file to check the definitions.
-@include make-grid($grid-container-name, 0, $grid-row-name, $grid-column-name, 12, 12px, $grid-extra-small-device-name, $grid-small-device-name, $grid-medium-device-name, $grid-large-device-name, $grid-no-show-name, $grid-small-breakpoint, $grid-medium-breakpoint, $grid-large-breakpoint);
+@include make-grid($grid-container-name, 15px, $grid-row-name, $grid-column-name, 12, 15px, $grid-extra-small-device-name, $grid-small-device-name, $grid-medium-device-name, $grid-large-device-name, $grid-no-show-name, $grid-small-breakpoint, $grid-medium-breakpoint, $grid-large-breakpoint);
 //====================================================================
 //	Variable definitions for the Form module (_form.scss)
 //====================================================================

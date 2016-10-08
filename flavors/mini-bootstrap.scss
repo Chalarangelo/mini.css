@@ -117,6 +117,7 @@ $fieldset-padding:				0;												// Padding for fieldset
 //	Button border is built using utility module's generic mixin.
 //	Buttons differ from Bootstrap's in terms of line height.
 //	Button size variant font sizes are approximate.
+//	`btn-link` is not supported.
 //	-------------------
 $btn-default-color:							$body-color;						// Default text color for buttons
 $btn-alt-color:								$body-bg-color;						// Alternative text color for buttons
@@ -184,16 +185,29 @@ $grid-large-breakpoint:						1200px;								// Breakpoint for medium to large de
 //	Variable definitions for the Form module (_form.scss)
 //====================================================================
 //	Class names for the forms and components
-$form-class-name:							frm;								// Name for the form class
-$form-control-group-name:					ctrl-group;							// Name for the form's control group class
+//	--- 	NOTES: 	---
+//	Basic styling is applied to forms using the .form class. The usual
+//	mini.css syntax should be used instead of the Bootstrap syntax.
+//	.form-group is not supported inside .form-inline.
+//	.form-control-static, .has-error, .has-warning, .has-success are not
+//	supported.
+//	No class is provided for .control-label and subsequently no styling.
+//	Focus and invalid borders are styled approximately.
+//	The width of the left column (label) of horizontal forms is preset to
+//	20%.
+//	Some other functionalities are not supported as they are considered
+//	unimportant for the time being.
+//	-------------------
+$form-class-name:							form;								// Name for the form class
+$form-control-group-name:					form-group;							// Name for the form's control group class
 //	Colors for form components
-$form-focus-color:							#2678b3;							// Color for focused form element outline
-$form-invalid-color:						#e9322d;							// Color for invalid form element outline
+$form-focus-color:							#66afe9;							// Color for focused form element outline
+$form-invalid-color:						#a94442;							// Color for invalid form element outline
 //	Enable forms (_form.scss). (Use individual mixins below to use.)
 @import '../scss/mini/form';
 // Use form mixin to create form with given specs. For more information
 // refer to the _form.scss file to check the definitions.
-@include make-frm($form-class-name, 1px solid #ccc, 4px, 0.2em, 0.3em, $form-focus-color, $form-invalid-color, not-allowed, .65, darken($body-bg-color,10%), darken($body-bg-color,25%), 1.9em, 0.5em 0 0 0.2em, $form-control-group-name,  0 0 0.3em 0, inline, aligned,15em);
+@include make-frm($form-class-name, 1px solid #ccc, 4px, 0, 6px 12px, $form-focus-color, $form-invalid-color, not-allowed, .65, darken($body-bg-color,10%), darken($body-bg-color,25%), 34px, 0 0 5px 0, $form-control-group-name,  0 0 15px 0, form-inline, form-horizontal, 20%);
 //====================================================================
 //	Variable definitions for the Table module (_table.scss)
 //====================================================================

@@ -781,52 +781,52 @@ textarea {
 	- [1] : Input elements with button-like style (i.e. submit, reset, button etc.) are not affected by form styling.
 		Please use the button styles and mixins provided to properly style them to your liking.
 */
-.frm input[type="color"], .frm input[type^="date"], .frm input[type$="time"], .frm input[type="email"],
-.frm input[type="month"], .frm input[type="week"], .frm input[type="text"], .frm input[type="password"],
-.frm input[type="url"], .frm input[type="number"], .frm input[type="search"], .frm input[type="tel"],
-.frm select, .frm textarea {
+.form input[type="color"], .form input[type^="date"], .form input[type$="time"], .form input[type="email"],
+.form input[type="month"], .form input[type="week"], .form input[type="text"], .form input[type="password"],
+.form input[type="url"], .form input[type="number"], .form input[type="search"], .form input[type="tel"],
+.form select, .form textarea {
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: none; }
-.frm input:not([type]) {
+.form input:not([type]) {
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: none; }
-.frm input, .frm select, .frm textarea {
+.form input, .form select, .form textarea {
   display: block;
-  margin: 0.2em;
-  padding: 0.3em; }
-  .frm input:focus, .frm select:focus, .frm textarea:focus {
-    border-color: #2678b3; }
-  .frm input[disabled], .frm select[disabled], .frm textarea[disabled] {
+  margin: 0;
+  padding: 6px 12px; }
+  .form input:focus, .form select:focus, .form textarea:focus {
+    border-color: #66afe9; }
+  .form input[disabled], .form select[disabled], .form textarea[disabled] {
     cursor: not-allowed;
     opacity: 0.65; }
-  .frm input:invalid, .frm input:focus:invalid, .frm input:focus:invalid:focus, .frm select:invalid, .frm select:focus:invalid, .frm select:focus:invalid:focus, .frm textarea:invalid, .frm textarea:focus:invalid, .frm textarea:focus:invalid:focus {
-    border-color: #e9322d; }
-  .frm input[readonly], .frm select[readonly], .frm textarea[readonly] {
+  .form input:invalid, .form input:focus:invalid, .form input:focus:invalid:focus, .form select:invalid, .form select:focus:invalid, .form select:focus:invalid:focus, .form textarea:invalid, .form textarea:focus:invalid, .form textarea:focus:invalid:focus {
+    border-color: #a94442; }
+  .form input[readonly], .form select[readonly], .form textarea[readonly] {
     background-color: #e6e6e6;
     border-color: #bfbfbf; }
-.frm input[type="checkbox"], .frm input[type="radio"] {
+.form input[type="checkbox"], .form input[type="radio"] {
   display: inline-block; }
-.frm select {
-  height: 1.9em; }
-  .frm select[multiple] {
+.form select {
+  height: 34px; }
+  .form select[multiple] {
     height: auto; }
-.frm label {
-  margin: 0.5em 0 0 0.2em; }
-.frm.inline input, .frm.inline select, .frm.inline textarea, .frm.inline label, .frm.aligned input, .frm.aligned select, .frm.aligned textarea, .frm.aligned label {
+.form label {
+  margin: 0 0 5px 0; }
+.form.form-inline input, .form.form-inline select, .form.form-inline textarea, .form.form-inline label, .form.form-horizontal input, .form.form-horizontal select, .form.form-horizontal textarea, .form.form-horizontal label {
   display: inline-block; }
-.frm.inline .ctrl-group {
+.form.form-inline .ctrl-group {
   display: inline-block; }
-.frm.aligned .ctrl-group label {
+.form.form-horizontal .form-group label {
   text-align: right;
   vertical-align: middle;
-  width: 15em;
+  width: 20%;
   margin-top: 0; }
-.frm .ctrl-group {
-  margin: 0 0 0.3em 0; }
+.form .form-group {
+  margin: 0 0 15px 0; }
 
 /*
 	Mixin for the tables.

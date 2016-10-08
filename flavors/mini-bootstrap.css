@@ -1008,12 +1008,12 @@ textarea {
 .navbar {
   border-radius: 4px !important; }
 
-img.thumb {
-  padding: 0.25em;
-  border: 1px solid #ccc;
+img.thumbnail {
+  padding: 4px;
+  border: 1px solid #ddd;
   border-radius: 4px;
   cursor: pointer; }
-  img.thumb:hover, img.thumb:focus, img.thumbactive {
+  img.thumbnail:hover, img.thumbnail:focus, img.thumbnailactive {
     border-color: #337ab7; }
 
 .bordered {
@@ -1025,23 +1025,38 @@ img.thumb {
 .circle {
   border-radius: 50% !important; }
 
-.txt-blue {
+.text-primary {
   color: #337ab7 !important; }
 
-.txt-green {
+.text-success {
   color: #5cb85c !important; }
 
-.txt-red {
+.text-info {
   color: #5bc0de !important; }
 
-.bg-blue {
+.text-warning {
+  color: #f0ad4e !important; }
+
+.text-danger {
+  color: #d9534f !important; }
+
+.text-muted {
+  color: #777 !important; }
+
+.bg-primary {
   background-color: #337ab7 !important; }
 
-.bg-green {
+.bg-success {
   background-color: #5cb85c !important; }
 
-.bg-red {
+.bg-info {
   background-color: #5bc0de !important; }
+
+.bg-warning {
+  background-color: #f0ad4e !important; }
+
+.bg-danger {
+  background-color: #d9534f !important; }
 
 .caret {
   display: inline-block;
@@ -1049,15 +1064,15 @@ img.thumb {
   line-height: 1;
   width: 0;
   height: 0;
-  border: 0.35em solid transparent;
-  border-top: 0.35em solid #222; }
+  border: 4px solid transparent;
+  border-top: 4px solid #333; }
 
 .close {
   display: inline-block;
   vertical-align: middle;
   line-height: 1;
   color: #aaa;
-  font-size: 1.3em;
+  font-size: 21px;
   font-weight: 700;
   cursor: pointer; }
   .close:before {
@@ -1065,18 +1080,18 @@ img.thumb {
   .close:hover, .close:active, .close:focus {
     color: #777; }
 
-.drg-left {
+.pull-left {
   float: left !important; }
 
-.drg-right {
+.pull-right {
   float: right !important; }
 
-.ct-block {
+.center-block {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-.cf:before, .cf:after {
+.clearfix:before, .clearfix:after {
   content: "";
   display: table;
   clear: both; }

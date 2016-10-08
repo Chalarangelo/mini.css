@@ -270,22 +270,34 @@ $navigation-fixed-collapse-breakpoint:		768px;								// Breakpoint for fixed na
 //====================================================================
 //	Class names for the utility and helper classes (you can remove things you 
 //	don't need or define more if you need them).
-$thumbnail-class-name:						thumb;								// Name for the thumbnail class
+//	--- 	NOTES: 	---
+//	Utilities are enabled at the start of the file.
+//	Close icon colors are approximate.
+//	Generic borders are included (although not part of Bootstrap originally).
+//	No .show class is provided.
+//	Contextual background styles do not have extra padding.
+//	-------------------
+$thumbnail-class-name:						thumbnail;							// Name for the thumbnail class
 $bordered-class-name:						bordered;							// Name for the bordered class
 $bordered-radial-name:						rounded;							// Name for the rounded border class	
 $bordered-radial2-name:						circle;								// Name for the alternative rounded border class
-$colored-text1-name:						txt-blue;							// Name for the colored text style 1 class
-$colored-text2-name:						txt-green;							// Name for the colored text style 2 class
-$colored-text3-name:						txt-red;							// Name for the colored text style 3 class
-$colored-bg-text1-name:						bg-blue;							// Name for the colored background text style 1 class
-$colored-bg-text2-name:						bg-green;							// Name for the colored background text style 2 class
-$colored-bg-text3-name:						bg-red;								// Name for the colored background text style 3 class
-$drag-left-name:							drg-left;							// Name for the drag-left class
-$drag-right-name:							drg-right;							// Name for the drag-right class
-$center-block-name:							ct-block;							// Name for the center block class
+$colored-text1-name:						text-primary;						// Name for the colored text style 1 class
+$colored-text2-name:						text-success;						// Name for the colored text style 2 class
+$colored-text3-name:						text-info;							// Name for the colored text style 3 class
+$colored-text4-name:						text-warning;						// Name for the colored text style 4 class
+$colored-text5-name:						text-danger;						// Name for the colored text style 5 class
+$colored-text6-name:						text-muted;							// Name for the colored text style 6 class
+$colored-bg-text1-name:						bg-primary;							// Name for the colored background text style 1 class
+$colored-bg-text2-name:						bg-success;							// Name for the colored background text style 2 class
+$colored-bg-text3-name:						bg-info;							// Name for the colored background text style 3 class
+$colored-bg-text4-name:						bg-warning;							// Name for the colored background text style 4 class
+$colored-bg-text5-name:						bg-danger;							// Name for the colored background text style 5 class
+$drag-left-name:							pull-left;							// Name for the drag-left class
+$drag-right-name:							pull-right;							// Name for the drag-right class
+$center-block-name:							center-block;						// Name for the center block class
 $caret-class-name:							caret;								// Name for the caret class
 $close-class-name:							close;								// Name for the close class
-$clearfix-class-name:						cf;									// Name for the clearfix class
+$clearfix-class-name:						clearfix;							// Name for the clearfix class
 $hidden-class-name:							hidden;								// Name for the hidden class
 //	Colors for the utility and helper classes (you can remove things you
 //	don't need or define more colors if you need them).
@@ -295,25 +307,33 @@ $bordered-radial2-radius:					50%;								// Border radius of the alternative ro
 $colored-text1-color:						$btn-p-bg-color;					// Text color for the colored text style 1 class
 $colored-text2-color:						$btn-s-bg-color;					// Text color for the colored text style 2 class
 $colored-text3-color:						$btn-i-bg-color;					// Text color for the colored text style 3 class
+$colored-text4-color:						$btn-w-bg-color;					// Text color for the colored text style 4 class
+$colored-text5-color:						$btn-d-bg-color;					// Text color for the colored text style 5 class
+$colored-text6-color:						#777;								// Text color for the colored text style 6 class
 $colored-bg-text1-bg-color:					$btn-p-bg-color;					// Background color for the colored text style 1 class
 $colored-bg-text2-bg-color:					$btn-s-bg-color;					// Background color for the colored text style 2 class
 $colored-bg-text3-bg-color:					$btn-i-bg-color;					// Background color for the colored text style 3 class
-//	Enable utilities (_utility.scss). (Use individual mixins below to use.)
-// @import '../scss/mini/utility';
+$colored-bg-text4-bg-color:					$btn-w-bg-color;					// Background color for the colored text style 4 class
+$colored-bg-text5-bg-color:					$btn-d-bg-color;					// Background color for the colored text style 5 class
 // Use utility mixins to create utility classes with given specs. For more information
 // refer to the _utility.scss file to check the definitions.
-@include make-thumb($thumbnail-class-name, 0.25em, 1px solid #ccc, 4px, $thumbnail-hover-color);
+@include make-thumb($thumbnail-class-name, 4px, 1px solid #ddd, 4px, $thumbnail-hover-color);
 @include make-border-generic($bordered-class-name);
 @include make-border-radial-style($bordered-radial-name, $bordered-radial-radius);
 @include make-border-radial-style($bordered-radial2-name, $bordered-radial2-radius);
 @include make-colored-text($colored-text1-name, $colored-text1-color);
 @include make-colored-text($colored-text2-name, $colored-text2-color);
 @include make-colored-text($colored-text3-name, $colored-text3-color);
+@include make-colored-text($colored-text4-name, $colored-text4-color);
+@include make-colored-text($colored-text5-name, $colored-text5-color);
+@include make-colored-text($colored-text6-name, $colored-text6-color);
 @include make-colored-bg-text($colored-bg-text1-name, $colored-bg-text1-bg-color);
 @include make-colored-bg-text($colored-bg-text2-name, $colored-bg-text2-bg-color);
 @include make-colored-bg-text($colored-bg-text3-name, $colored-bg-text3-bg-color);
-@include make-caret-down($caret-class-name, 0.35em, #222);
-@include make-close($close-class-name, #aaa, pointer, 1.3em, 700, #777);
+@include make-colored-bg-text($colored-bg-text4-name, $colored-bg-text4-bg-color);
+@include make-colored-bg-text($colored-bg-text5-name, $colored-bg-text5-bg-color);
+@include make-caret-down($caret-class-name, 4px, $body-color);
+@include make-close($close-class-name, #aaa, pointer, 21px, 700, #777);
 @include make-drags($drag-left-name, $drag-right-name);
 @include make-center-block($center-block-name);
 @include make-clearfix($clearfix-class-name);

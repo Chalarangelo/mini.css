@@ -1123,47 +1123,63 @@ img.thumbnail {
 	- [1] : The value of $lbl-name must be the same as the value specified when using `make-lbl`, otherwise
 		the specified style will not work correctly.
 */
-.lbl {
+.label {
   display: inline-block;
-  padding: 6px 10px;
+  padding: 0.2em 0.6em 0.3em;
   color: #fff;
   background-color: #777;
-  border-radius: 4px; }
-  .lbl:empty {
+  border-radius: 0.25em; }
+  .label:empty {
     display: none; }
 
-.lbl.blue {
+.label.label-primary {
   color: #fff;
   background-color: #337ab7; }
 
-.lbl.green {
+.label.label-success {
   color: #fff;
   background-color: #5cb85c; }
 
-.lbl.red {
+.label.label-info {
   color: #fff;
   background-color: #5bc0de; }
 
-.bdg {
+.label.label-warning {
+  color: #fff;
+  background-color: #f0ad4e; }
+
+.label.label-danger {
+  color: #fff;
+  background-color: #d9534f; }
+
+.badge {
   display: inline-block;
-  padding: 3px 8px;
+  padding: 3px 7px;
   color: #fff;
   background-color: #777;
-  border-radius: 8px; }
-  .bdg:empty {
+  border-radius: 10px; }
+  .badge:empty {
     display: none; }
 
-.bdg.blue {
+.badge.badge-primary {
   color: #fff;
   background-color: #337ab7; }
 
-.bdg.green {
+.badge.badge-success {
   color: #fff;
   background-color: #5cb85c; }
 
-.bdg.red {
+.badge.badge-info {
   color: #fff;
   background-color: #5bc0de; }
+
+.badge.badge-warning {
+  color: #fff;
+  background-color: #f0ad4e; }
+
+.badge.badge-danger {
+  color: #fff;
+  background-color: #d9534f; }
 
 /*
 	Mixin for tab system.

@@ -112,30 +112,45 @@ $fieldset-padding:				0;												// Padding for fieldset
 //====================================================================
 // 	Colors and styles (you can remove things you don't need or define more
 //	colors if you need them).
-$btn-default-color:							#2a2a2a;							// Default text color for buttons
-$btn-alt-color:								#eeeeee;							// Alternative text color for buttons
-$btn-default-bg-color:						#eaeaea;							// Default background color for buttons
-$btn-b-bg-color:							#3f84b3;							// Color for button style 1
-$btn-g-bg-color:							#2db747;							// Color for button style 2
-$btn-r-bg-color:							#ea4848;							// Color for button style 3
+//	--- 	NOTES: 	---
+//	Button styles use approximations for some colors (mainly hover colors).
+//	Button border is built using utility module's generic mixin.
+//	Buttons differ from Bootstrap's in terms of line height.
+//	Button size variant font sizes are approximate.
+//	-------------------
+$btn-default-color:							$body-color;						// Default text color for buttons
+$btn-alt-color:								$body-bg-color;						// Alternative text color for buttons
+$btn-default-bg-color:						$body-bg-color;						// Default background color for buttons
+$btn-p-bg-color:							#337ab7;							// Color for button style 1
+$btn-s-bg-color:							#5cb85c;							// Color for button style 2
+$btn-i-bg-color:							#5bc0de;							// Color for button style 3
+$btn-w-bg-color:							#f0ad4e;							// Color for button style 4
+$btn-d-bg-color:							#d9534f;							// Color for button style 5
 //	Button class names (you can remove things you don't need or define more
 //	classes if you need them).
 $btn-class-name:							btn;								// Name for the base button class
-$btn-style1-name:							'blue';								// Name for button style 1 class
-$btn-style2-name:							'green';							// Name for button style 2 class
-$btn-style3-name:							'red';								// Name for button style 3 class
-$btn-size1-name:							lg;									// Name for the button size 1 class
-$btn-size2-name:							sm;									// Name for the button size 2 class
+$btn-style1-name:							btn-primary;						// Name for button style 1 class
+$btn-style2-name:							btn-success;						// Name for button style 2 class
+$btn-style3-name:							btn-info;							// Name for button style 3 class
+$btn-style4-name:							btn-warning;						// Name for button style 4 class
+$btn-style5-name:							btn-danger;							// Name for button style 5 class
+$btn-size1-name:							btn-lg;								// Name for the button size 1 class
+$btn-size2-name:							btn-sm;								// Name for the button size 2 class
+$btn-size3-name:							btn-xs;								// Name for the button size 3 class
 //	Enable buttons (_button.scss). (Use individual mixins below to use.)
 @import '../scss/mini/button';
 // Use button mixins to create buttons with given specs. For more information
 // refer to the _button.scss file to check the definitions.
-@include make-btn($btn-class-name, 0, 4px, 2px 0, 6px 12px, $btn-default-color, $btn-default-bg-color, lighten, 7.5%, pointer, not-allowed, .65);
-@include make-btn-style($btn-class-name, $btn-style1-name, $btn-alt-color, $btn-b-bg-color);
-@include make-btn-style($btn-class-name, $btn-style2-name, $btn-alt-color, $btn-g-bg-color);
-@include make-btn-style($btn-class-name, $btn-style3-name, $btn-alt-color, $btn-r-bg-color);
-@include make-btn-size($btn-class-name, $btn-size1-name, 9px 15px, 135%);
-@include make-btn-size($btn-class-name, $btn-size2-name, 4px 8px, 80%);
+@include make-btn($btn-class-name, 0, 4px, 5px 0, 6px 12px, $btn-default-color, $btn-default-bg-color, darken, 7.5%, pointer, not-allowed, .65);
+@include make-btn-style($btn-class-name, $btn-style1-name, $btn-alt-color, $btn-p-bg-color, darken);
+@include make-btn-style($btn-class-name, $btn-style2-name, $btn-alt-color, $btn-s-bg-color, darken);
+@include make-btn-style($btn-class-name, $btn-style3-name, $btn-alt-color, $btn-i-bg-color, darken);
+@include make-btn-style($btn-class-name, $btn-style4-name, $btn-alt-color, $btn-w-bg-color, darken);
+@include make-btn-style($btn-class-name, $btn-style5-name, $btn-alt-color, $btn-d-bg-color, darken);
+@include make-btn-size($btn-class-name, $btn-size1-name, 10px 16px, 128.6%);
+@include make-btn-size($btn-class-name, $btn-size2-name, 5px 10px, 85.7%);
+@include make-btn-size($btn-class-name, $btn-size3-name, 1px 5px, 85.7%);
+@include make-border-generic($btn-class-name);
 //====================================================================
 //	Variable definitions for the Grid module (_grid.scss)
 //====================================================================
@@ -234,12 +249,12 @@ $hidden-class-name:							hidden;								// Name for the hidden class
 $thumbnail-hover-color:						$a-color;							// Border color of the thumbnail when hovering over it
 $bordered-radial-radius:					4px;								// Border radius of rounded borders
 $bordered-radial2-radius:					50%;								// Border radius of the alternative rounded borders
-$colored-text1-color:						$btn-b-bg-color;					// Text color for the colored text style 1 class
-$colored-text2-color:						$btn-g-bg-color;					// Text color for the colored text style 2 class
-$colored-text3-color:						$btn-r-bg-color;					// Text color for the colored text style 3 class
-$colored-bg-text1-bg-color:					$btn-b-bg-color;					// Background color for the colored text style 1 class
-$colored-bg-text2-bg-color:					$btn-g-bg-color;					// Background color for the colored text style 2 class
-$colored-bg-text3-bg-color:					$btn-r-bg-color;					// Background color for the colored text style 3 class
+$colored-text1-color:						$btn-p-bg-color;					// Text color for the colored text style 1 class
+$colored-text2-color:						$btn-s-bg-color;					// Text color for the colored text style 2 class
+$colored-text3-color:						$btn-i-bg-color;					// Text color for the colored text style 3 class
+$colored-bg-text1-bg-color:					$btn-p-bg-color;					// Background color for the colored text style 1 class
+$colored-bg-text2-bg-color:					$btn-s-bg-color;					// Background color for the colored text style 2 class
+$colored-bg-text3-bg-color:					$btn-i-bg-color;					// Background color for the colored text style 3 class
 //	Enable utilities (_utility.scss). (Use individual mixins below to use.)
 // @import '../scss/mini/utility';
 // Use utility mixins to create utility classes with given specs. For more information
@@ -271,9 +286,9 @@ $colored-bg-text3-bg-color:					$btn-r-bg-color;					// Background color for the
 //	colors if you need them).
 $lbl-default-color:							$btn-alt-color;						// Default text color for labels/badges
 $lbl-default-bg-color:						#777;								// Default background color for labels/badges
-$lbl-b-bg-color:							$btn-b-bg-color;					// Color for labels/badges style 1
-$lbl-g-bg-color:							$btn-g-bg-color;					// Color for labels/badges style 2
-$lbl-r-bg-color:							$btn-r-bg-color;					// Color for labels/badges style 3
+$lbl-b-bg-color:							$btn-p-bg-color;					// Color for labels/badges style 1
+$lbl-g-bg-color:							$btn-s-bg-color;					// Color for labels/badges style 2
+$lbl-r-bg-color:							$btn-i-bg-color;					// Color for labels/badges style 3
 //	Label class names (you can remove things you don't need or define more
 //	classes if you need them).
 $lbl-class-name:							lbl;								// Name for the base labels class
@@ -375,9 +390,9 @@ $progress-bg-color:							#d7d7d7;							// Background color for the progress ba
 $progress-bar-color:						$btn-alt-color;						// Color for the text of the progress bar
 $progress-bar-style1-color:					$btn-alt-color;						// Color for the text of the style 1 progress bar
 $progress-bar-style2-color:					$btn-alt-color;						// Color for the text of the style 2 progress bar
-$progress-bar-bg-color:						$btn-b-bg-color;					// Background color for the progress bar
-$progress-bar-style1-bg-color:				$btn-g-bg-color;					// Background color for the style 1 progress bar
-$progress-bar-style2-bg-color:				$btn-r-bg-color;					// Background color for the style 2 progress bar
+$progress-bar-bg-color:						$btn-p-bg-color;					// Background color for the progress bar
+$progress-bar-style1-bg-color:				$btn-s-bg-color;					// Background color for the style 1 progress bar
+$progress-bar-style2-bg-color:				$btn-i-bg-color;					// Background color for the style 2 progress bar
 //	Enable progress (_progress.scss). (Use individual mixins below to use.)
 @import '../scss/mini-extra/progress';
 // Use progress mixins to create progress bars with given specs. For more 
@@ -447,9 +462,9 @@ $popover-bg-color:							$body-color;					// Background color for the popover
 // information refer to the _utility.scss file to check the definitions.
 @include make-breadcrumbs($breadcrumbs-class-name);
 @include make-generic-container($well-class-name, $well-color, $well-bg-color, 1px solid #ccc, 4px, 20px);
-@include make-alert($alert-style1-class, darken($btn-b-bg-color,20%), lighten($btn-b-bg-color, 10%) , 1px solid darken($btn-b-bg-color, 10%), 4px, 20px, close);
-@include make-alert($alert-style2-class, darken($btn-g-bg-color,20%), lighten($btn-g-bg-color, 10%) , 1px solid darken($btn-g-bg-color, 10%), 4px, 20px, close);
-@include make-alert($alert-style3-class, darken($btn-r-bg-color,20%), lighten($btn-r-bg-color, 10%) , 1px solid darken($btn-r-bg-color, 10%), 4px, 20px, close);
+@include make-alert($alert-style1-class, darken($btn-p-bg-color,20%), lighten($btn-p-bg-color, 10%) , 1px solid darken($btn-p-bg-color, 10%), 4px, 20px, close);
+@include make-alert($alert-style2-class, darken($btn-s-bg-color,20%), lighten($btn-s-bg-color, 10%) , 1px solid darken($btn-s-bg-color, 10%), 4px, 20px, close);
+@include make-alert($alert-style3-class, darken($btn-i-bg-color,20%), lighten($btn-i-bg-color, 10%) , 1px solid darken($btn-i-bg-color, 10%), 4px, 20px, close);
 @include make-panel(panel, $panel-color, $panel-bg-color, 1px solid #ccc, 4px, 10px, $panel-header-name, $panel-header-color, $panel-header-bg-color, 10px);
 @include make-popover($popover-above-name, top, 5px, 45px, $popover-color, $popover-bg-color, 7px 10px);
 @include make-popover($popover-below-name, bottom, 4px, 45px, $popover-color, $popover-bg-color, 7px 10px);
@@ -458,8 +473,8 @@ $popover-bg-color:							$body-color;					// Background color for the popover
 //@include make-button-states($button-states-class-name);	// This mixin is unstable and buggy, we suggest you disable it.
 // The folowing mixin is considered stable, you can disable it if you need to.
 @include make-btn-group($button-group-class-name, $btn-class-name, 1px solid #ccc, 4px); 
-@include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style1-name, 1px solid darken($btn-b-bg-color, 10%), 4px); 
-@include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style2-name, 1px solid darken($btn-g-bg-color, 10%), 4px); 
-@include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style3-name, 1px solid 1px solid darken($btn-r-bg-color, 10%), 4px); 
+@include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style1-name, 1px solid darken($btn-p-bg-color, 10%), 4px); 
+@include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style2-name, 1px solid darken($btn-s-bg-color, 10%), 4px); 
+@include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style3-name, 1px solid 1px solid darken($btn-i-bg-color, 10%), 4px); 
 //====================================================================
 //====================================================================

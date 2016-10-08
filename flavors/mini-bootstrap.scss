@@ -21,61 +21,90 @@
 //====================================================================
 //	Variable definitions for the Base module (_base.scss)
 //====================================================================
+//	Pre-enable utilities (_utility.scss).
+//	--- 	NOTES: 	---
+//	The utility module is pre enabled in order for certain elements to
+// 	use certain utility mixins.
+//	-------------------
+@import '../scss/mini/utility';
 //	Basic rules for body
 $body-margin:					0;												// Margin for body
-$body-bg-color:					#f5f5f5;										// Body background color
-$body-color:					#222;											// Body text color
+$body-bg-color:					#fff;											// Body background color
+$body-color:					#333;											// Body text color
 //	Basic typography rules
-$base-fonts:					"\"Helvetica Neue\", Helvetica, sans-serif";	// Font-family
-$base-font-size:				1em;											// Font-size
-$base-line-height:				1.5;											// Line-height
+$base-fonts:					"\"Helvetica Neue\", Helvetica, Arial, sans-serif";	// Font-family
+$base-font-size:				14px;											// Font-size
+$base-line-height:				1.42857143;										// Line-height
 //	Rules for headers (multipliers apply on top of the basic typography rules)
-$h1-multiplier:					2;												// Header 1 font-sze multiplier
-$h2-multiplier:					1.5;											// Header 2 font-sze multiplier
-$h3-multiplier:					1.15;											// Header 3 font-sze multiplier
-$h4-multiplier:					1;												// Header 4 font-sze multiplier
-$h5-multiplier:					0.8;											// Header 5 font-sze multiplier
-$h6-multiplier:					0.7;											// Header 6 font-sze multiplier
-$header-line-height-multiplier:	0.8;											// Multiplier for line height of headers					 
-$header-margin:					0.7em 0;										// Margin for headers
+//	--- 	NOTES: 	---
+//	Headers are not followed by a bottom border.
+//	<small> elements inside headers use the default small sizing.
+//	-------------------
+$h1-multiplier:					2.571428571428571;								// Header 1 font-sze multiplier
+$h2-multiplier:					2.142857142857143;								// Header 2 font-sze multiplier
+$h3-multiplier:					1.714285714285714;								// Header 3 font-sze multiplier
+$h4-multiplier:					1.285714285714286;								// Header 4 font-sze multiplier
+$h5-multiplier:					1;												// Header 5 font-sze multiplier
+$h6-multiplier:					0.8571428571428571;								// Header 6 font-sze multiplier
+$header-line-height-multiplier:	0.76999999923;									// Multiplier for line height of headers					 
+$header-margin:					0;												// Margin for headers
 $header-font-weight:			500;											// Font weight for headers
 //	Rules for small elements inside headers
-$header-small-color:			lighten($body-color, 20%);						// Header small text color
-$header-small-font-weight:		200;											// Header small font weight
+$header-small-color:			#777;											// Header small text color
+$header-small-font-weight:		400;											// Header small font weight
 //	Rules for horizontal rules
 $hr-line-height-multiplier:		0.8;											// Multiplier for line height of horizontal rule
 $hr-margin:						0.7em 0;										// Margin for horizontal rule
 $hr-border-style:				1px solid darken($body-bg-color, 15%);			// Color and style of horizontal rule
 //	Common content typography rules (paragraphs, lists etc.)
-$p-margin:						0 0 0.6em;										// Margin for paragraph and pre elements
-$small-font-size:				75%;											// Font size for small, sub and sup elements
+//	--- 	NOTES: 	---
+//	To counteract the styling of <small> elements inside headers,
+//	$small-font-size is 80% instead of 85% (75% for headers).
+//	-------------------
+$p-margin:						0 0 10px;										// Margin for paragraph and pre elements
+$small-font-size:				80%;											// Font size for small, sub and sup elements
 $sub-bottom:					-0.25em;										// Sub bottom
 $sup-top:						-0.5em;											// Sup top
 $list-margin-top:				0;												// Top margin for lists
-$list-margin-bottom:			0.6em;											// Bottom margin for lists
-$mark-bg-color:					#ffff33;										// Mark background color
+$list-margin-bottom:			10px;											// Bottom margin for lists
+$mark-bg-color:					#fcf8e3;										// Mark background color
 $mark-color:					$body-color;									// Mark text color
 //	Code, preformatted and keyboard rules
-$code-fonts:					monospace, monospace;							// Font-family for code, pre, kbd, samp elements
+//	--- 	NOTES: 	---
+//	<pre> elements use the same style as <code> elements and do not
+//  have their own unique padding specified.
+// 	<pre> elements use generic border styling to style their border
+//	instead of a specific border color. (*)
+//	Code elements use the default color used in the document's body,
+//	instead of #c7254e.
+// 	(*): The generic border mixin from utilites could not be used,
+//	because it is built to apply to a class of elements, not a type.
+//	-------------------
+$code-fonts:					"Menlo, Monaco, Consolas, \"Courier New\", monospace";	// Font-family for code, pre, kbd, samp elements
 $code-padding:					2px 4px;										// Padding for code and pre elements
-$code-bg-color:					darken($body-bg-color, 10%);					// Code and pre background color	
+$code-bg-color:					#f9f2f4;										// Code and pre background color	
 $code-border-radius:			4px;											// Border radius for code, pre and kbd elements
 $kbd-bg-color:					$body-color; 									// Kbd background color
-$kbd-color:						lighten($body-bg-color, 3.5%);					// Kbd text color
+$kbd-color:						$body-bg-color;									// Kbd text color
+pre 							{ border: 1px solid rgba(0,0,0, 0.25); }		// Use generic styling to style border for pre elements						
 //	Hyperlink rules
-$a-color:						#2678b3;										// Hyperlink text color
-$a-hover-color:					lighten($a-color, 10%);							// Hyperlink hover text color
-$a-visited-color:				darken($a-color, 10%);							// Hyperlink visited text color
-$a-visited-hover-color:			$a-color;										// Hyperlink visited hover text color
+//	--- 	NOTES: 	---
+//	<a> elements have no underline style applied to them when hovered
+//	over or otherwise selected or focused.
+//	-------------------
+$a-color:						#337ab7;										// Hyperlink text color
+$a-hover-color:					#23527c;										// Hyperlink hover text color
+$a-visited-color:				#337ab7;										// Hyperlink visited text color
+$a-visited-hover-color:			#23527c;										// Hyperlink visited hover text color
 //	Button, input and form rules
 $button-fonts:					$base-fonts;									// Font-family for buttons and inputs
 $button-font-size:				100%;											// Font size for buttons and inputs
 $button-line-height-multiplier:	0.8;											// Multiplier for line height of buttons and inputs
 $button-margin:					0;												// Margin for buttons and inputs
-$fieldset-border:				1px solid darken($body-bg-color, 15%);			// Border style for fieldset
-$fieldset-border-radius:		4px;											// Border radius for fieldset
-$fieldset-margin:				0 2px;											// Margin for fieldset
-$fieldset-padding:				0.35em 0.65em 0.75em;							// Padding for fieldset
+$fieldset-border:				0;												// Border style for fieldset
+$fieldset-border-radius:		0;												// Border radius for fieldset
+$fieldset-margin:				0;												// Margin for fieldset
+$fieldset-padding:				0;												// Padding for fieldset
 //	Enable base (_base.scss) and use the variables defined above.
 @import '../scss/mini/base';
 //====================================================================
@@ -212,7 +241,7 @@ $colored-bg-text1-bg-color:					$btn-b-bg-color;					// Background color for the
 $colored-bg-text2-bg-color:					$btn-g-bg-color;					// Background color for the colored text style 2 class
 $colored-bg-text3-bg-color:					$btn-r-bg-color;					// Background color for the colored text style 3 class
 //	Enable utilities (_utility.scss). (Use individual mixins below to use.)
-@import '../scss/mini/utility';
+// @import '../scss/mini/utility';
 // Use utility mixins to create utility classes with given specs. For more information
 // refer to the _utility.scss file to check the definitions.
 @include make-thumb($thumbnail-class-name, 0.25em, 1px solid #ccc, 4px, $thumbnail-hover-color);

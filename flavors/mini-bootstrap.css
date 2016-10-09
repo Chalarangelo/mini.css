@@ -1206,46 +1206,56 @@ img.thumbnail {
 	- [3] : The values that $tabs-hover-style can take are `lighten` and `darken`. The inside condition only 
 		checks if the value is `lighten` and acts accordingly. Invalid values are treated as `darken`.
 */
-.tabs {
+.nav-tabs {
   position: relative;
   min-height: 250px;
   width: 100%; }
-  .tabs input[type="radio"] {
+  .nav-tabs input[type="radio"] {
     display: none; }
-    .tabs input[type="radio"] + div {
+    .nav-tabs input[type="radio"] + div {
       display: inline; }
-      .tabs input[type="radio"] + div > label {
+      .nav-tabs input[type="radio"] + div > label {
         position: reative;
         float: left;
         margin-right: 3px;
         left: 1px;
-        height: 40px;
-        padding: 8px 14px;
+        height: 20px;
+        padding: 10px 18px;
         color: #337ab7;
         background-color: #fff;
-        border: 1px solid #ccc;
+        border: 1px solid #ddd;
         border-radius: 4px 4px 0 0;
         cursor: pointer; }
-        .tabs input[type="radio"] + div > label:hover, .tabs input[type="radio"] + div > label:active, .tabs input[type="radio"] + div > label:focus {
+        .nav-tabs input[type="radio"] + div > label:hover, .nav-tabs input[type="radio"] + div > label:active, .nav-tabs input[type="radio"] + div > label:focus {
           background: #e6e6e6; }
-        .tabs input[type="radio"] + div > label + div {
+        .nav-tabs input[type="radio"] + div > label + div {
           position: absolute;
           z-index: -2;
           left: 0;
-          top: 39px;
+          top: 19px;
           bottom: 0;
           right: 0;
           padding: 20px;
           background: #fff;
-          border: 1px solid #ccc; }
-    .tabs input[type="radio"]:checked + div > label {
+          border: 1px solid #ddd; }
+    .nav-tabs input[type="radio"]:checked + div > label {
       color: #333;
       background: #fff;
-      border-top: 3px solid #337ab7;
+      border-top: 1px solid #ddd;
       border-bottom: 1px solid #fff; }
-      .tabs input[type="radio"]:checked + div > label + div {
+      .nav-tabs input[type="radio"]:checked + div > label + div {
         position: absolute;
         z-index: -1; }
+
+.nav-tabs input[type="radio"] + div > label + div {
+  top: 40px; }
+
+.nav-tabs input[type="radio"] + div > label {
+  border: 0; }
+
+.nav-tabs input[type="radio"]:checked + div > label {
+  border: 1px solid #ddd;
+  border-bottom: 0; }
 
 /*
 	Mixin for modal dialogs.
@@ -1294,13 +1304,13 @@ img.thumbnail {
     .modal + div > div {
       z-index: 998;
       position: relative;
-      width: 45%;
+      width: 600px;
       color: #333;
       background-color: #fff;
-      margin: 8.5% auto 0;
+      margin: 30px auto 0;
       padding: 18px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      border: 1px solid #999;
+      border-radius: 6px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
   .modal:checked + div {
     height: 100%;
@@ -1343,7 +1353,7 @@ img.thumbnail {
     display: none; }
   .navbar input[type="checkbox"]:checked.dropdown + div, .navbar input[type="radio"]:checked.dropdown + div {
     display: block;
-    font-size: 0.8em;
+    font-size: 80%;
     margin-left: 20px; }
 
 /*

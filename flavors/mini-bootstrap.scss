@@ -395,47 +395,67 @@ $badge-style5-name:							badge-danger;						// Name for badges style 5 class
 //	Variable definitions for the Tab module (_tab.scss)
 //====================================================================
 //	Tab class names.
-$tabs-class-name:							tabs;								// Name for the tab system container class
+//	--- 	NOTES: 	---
+//	Bootstrap naming conventions are used, but the structure follows the
+//	component structure of mini.css.
+//	Some extra styles are applied at the end of the module definition. This
+//	is due to the way that Bootstrap's tabs are styled.
+//	No events and methods are supported as of yet.
+//	-------------------
+$tabs-class-name:							nav-tabs;							// Name for the tab system container class
 // 	Colors and styles (you can remove things you don't need or define more
 //	colors if you need them).
-$tabs-border-color:							#ccc;								// Border color for the tabs system
+$tabs-border-color:							#ddd;								// Border color for the tabs system
 $tabs-content-bg-color:						#fff;								// Background for the active tab's content
 $tabs-color:								$a-color;							// Color for the text in the tab labels
 $tabs-bg-color:								$body-bg-color;						// Background color for the tab labels
 $tabs-active-color:							$body-color;						// Color for the text in the active tab's label
 $tabs-active-bg-color:						$tabs-content-bg-color;				// Background color for the active tab's label
-$tabs-active-stripe-style:					3px solid $a-color;					// Style for the active tab label's stripe
+$tabs-active-stripe-style:					1px solid #ddd;						// Style for the active tab label's stripe
 //	Enable tabs (_tab.scss). (Use individual mixins below to use.)
 @import '../scss/mini-extra/tab';
 // Use tabs mixin to create tab system with given specs. For more information
 // refer to the _tab.scss file to check the definitions.
-@include make-tabs($tabs-class-name, 250px, 3px, 40px, 8px 14px, $tabs-color, $tabs-bg-color, $tabs-active-color, $tabs-active-bg-color, $tabs-border-color, 4px 4px 0 0, $tabs-active-stripe-style, 'darken', 10%, $tabs-content-bg-color, 20px);
+@include make-tabs($tabs-class-name, 250px, 3px, 20px, 10px 18px, $tabs-color, $tabs-bg-color, $tabs-active-color, $tabs-active-bg-color, $tabs-border-color, 4px 4px 0 0, $tabs-active-stripe-style, 'darken', 10%, $tabs-content-bg-color, 20px);
+.#{$tabs-class-name} input[type="radio"] + div > label + div { top: 40px; }
+.#{$tabs-class-name} input[type="radio"] + div > label { border:0; }
+.#{$tabs-class-name} input[type="radio"]:checked + div > label { border: $tabs-active-stripe-style; border-bottom: 0; }
 //====================================================================
 //	Variable definitions for the Modal module (_modal.scss)
 //====================================================================
 //	Modal class names.
+//	--- 	NOTES: 	---
+//	The modal dialog is all contained in the .modal class.
+//	Background color of the overlay is not the exact same as Bootstrap.
+//	Some colors and styles are approximations.
+//	No alternative sizes, methods or events are supported as of yet.
+//	-------------------
 $modal-class-name:							modal;								// Name for the modal class
 // 	Colors and styles (you can remove things you don't need or define more
 //	colors if you need them).
 $modal-bg-color:							$body-bg-color;						// Background color for the modal
 $modal-color:								$body-color;						// Color for the text in the modal
-$modal-border:								1px solid #ccc;						// Border style for the modal
+$modal-border:								1px solid #999;						// Border style for the modal
 //	Enable modal (_modal.scss). (Use individual mixins below to use.)
 @import '../scss/mini-extra/modal';
 // Use modal mixin to create modal with given specs. For more information
 // refer to the _modal.scss file to check the definitions.
-@include make-modal($modal-class-name, $modal-color, $modal-bg-color, 'enabled', 'enabled', $modal-border, 4px, 18px, 8.5%, 45%);
+@include make-modal($modal-class-name, $modal-color, $modal-bg-color, 'enabled', 'enabled', $modal-border, 6px, 18px, 30px, 600px);
 @include make-modal-close-support($modal-class-name, $close-class-name, 20px);
 //====================================================================
 //	Variable definitions for the Dropdown module (_dropdown.scss)
 //====================================================================
 //	Dropdown class names.
-$dropdown-class-name:						dropdown;							// Name for the modal class
+//	--- 	NOTES: 	---
+//	Dropdown styling uses the default styling of mini.css as the equivalent
+//	Bootstrap component is very different.
+//	-------------------
+$dropdown-class-name:						dropdown;							// Name for the dropdown class
 //	Enable dropdown (_dropdown.scss). (Use individual mixins below to use.)
 @import '../scss/mini-extra/dropdown';
 // Use dropdown mixin to create dropdown with given specs. For more information
 // refer to the _dropdown.scss file to check the definitions.
-@include make-dropdown($navigation-class-name, $navigation-link-name,$dropdown-class-name, 20px, 0.8em);
+@include make-dropdown($navigation-class-name, $navigation-link-name,$dropdown-class-name, 20px, 80%);
 //====================================================================
 //	Variable definitions for the Collapse module (_collapse.scss)
 //====================================================================

@@ -1,6 +1,6 @@
 {
   "name": "mini.css",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A minimal Sass-y responsive mobile-first style-agnostic CSS framework.",
   "main": "flavors/mini-default.min.css",
   "directories": {

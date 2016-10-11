@@ -13,6 +13,7 @@
 - Updated label style definitions for consistency.
 - Minor changes to progress component styling (should be virtually identical).
 - Minor changes to panel component styling (should be virtually identical).
+- Bootstrap flavor added.
 
 ## v1.0.2
 

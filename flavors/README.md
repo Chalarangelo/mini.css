@@ -16,3 +16,8 @@ Below is a list of all the currently available flavors:
 - High contrast 
 - Simple and clean styling
 - Full flavor
+
+## Bootstrap
+
+- Similar to the Bootstrap framework's style.
+- Full flavor

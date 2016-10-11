@@ -1,4 +1,4 @@
-# mini.css
+# mini.css v1.1.0
 ## A minimal Sass-y responsive mobile-first style-agnostic CSS framework
 
 ![Demo page](/docs/demo.png)

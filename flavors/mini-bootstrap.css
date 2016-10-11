@@ -1394,46 +1394,46 @@ img.thumbnail {
 	- [3] : The values that $accordion-hover-style can take are `lighten` and `darken`. The inside condition only 
 		checks if the value is `lighten` and acts accordingly. Invalid values are treated as `darken`.
 */
-input[type="checkbox"].clps {
+input[type="checkbox"].collapse {
   display: none; }
-  input[type="checkbox"].clps + div {
+  input[type="checkbox"].collapse + div {
     display: none;
     color: #333;
-    background-color: #eeeeee;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    padding: 19px;
+    margin-top: 6px;
+    border: 1px solid #e3e3e3;
     border-radius: 4px; }
-input[type="checkbox"]:checked.clps + div {
+input[type="checkbox"]:checked.collapse + div {
   display: block; }
 
-input[type="radio"].acrd {
+input[type="radio"].accordion {
   display: none; }
-  input[type="radio"].acrd + label {
+  input[type="radio"].accordion + label {
     width: 100%;
     display: block;
     color: #333;
-    background-color: #eeeeee;
+    background-color: #f5f5f5;
     padding: 8px;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
+    margin-bottom: 6px;
+    border: 1px solid #e3e3e3;
     border-radius: 4px;
     cursor: pointer; }
-    input[type="radio"].acrd + label:hover, input[type="radio"].acrd + label:active, input[type="radio"].acrd + label:focus {
-      background-color: #dbdbdb; }
-    input[type="radio"].acrd + label + div {
+    input[type="radio"].accordion + label:hover, input[type="radio"].accordion + label:active, input[type="radio"].accordion + label:focus {
+      background-color: #e2e2e2; }
+    input[type="radio"].accordion + label + div {
       display: none;
       color: #333;
       background-color: #fff;
-      padding: 10px;
+      padding: 19px;
       margin-top: -1px;
-      margin-bottom: 5px;
-      border: 1px solid #ccc;
+      margin-bottom: 6px;
+      border: 1px solid #e3e3e3;
       border-radius: 0 0 4px 4px; }
-input[type="radio"]:checked.acrd + label {
+input[type="radio"]:checked.accordion + label {
   border-radius: 4px 4px 0 0;
   margin-bottom: 0; }
-  input[type="radio"]:checked.acrd + label + div {
+  input[type="radio"]:checked.accordion + label + div {
     display: block; }
 
 /*
@@ -1464,28 +1464,36 @@ input[type="radio"]:checked.acrd + label {
 	- [2] : This mixin should be used in combination with `make-progress` and is suggested that you 
 		use it after `make-progress`.
 */
-.prg {
+.progress-bar {
   position: relative;
   overflow: hidden;
   height: 20px;
   background-color: #d7d7d7;
   border-radius: 4px; }
-  .prg > span {
+  .progress-bar > span {
     float: left;
     width: 0;
     height: 100%;
     color: #fff;
     background-color: #337ab7;
     text-align: center;
-    font-size: 0.8em; }
+    font-size: 12px; }
 
-.prg > span.green {
+.progress-bar > span.progress-bar-success {
   color: #fff;
   background-color: #5cb85c; }
 
-.prg > span.red {
+.progress-bar > span.progress-bar-info {
   color: #fff;
   background-color: #5bc0de; }
+
+.progress-bar > span.progress-bar-warning {
+  color: #fff;
+  background-color: #f0ad4e; }
+
+.progress-bar > span.progress-bar-danger {
+  color: #fff;
+  background-color: #d9534f; }
 
 /*
 	Mixin for dotted spinner component. 
@@ -1515,7 +1523,7 @@ input[type="radio"]:checked.acrd + label {
 .spinner-dots {
   display: inline-block;
   overflow: hidden;
-  height: 1.5em;
+  height: 20px;
   vertical-align: bottom; }
   .spinner-dots:after {
     display: inline-table;
@@ -1525,17 +1533,17 @@ input[type="radio"]:checked.acrd + label {
 
 @keyframes spin-dots {
   to {
-    transform: translateY(-6em); } }
+    transform: translateY(-80px); } }
 .spinner-round {
   display: inline-block;
-  border: 0.4em solid rgba(34, 34, 34, 0.2);
-  border-left: 0.4em solid #222;
+  border: 6px solid rgba(51, 51, 51, 0.25);
+  border-left: 6px solid #337ab7;
   transform: translateZ(0);
   animation: spin-round 1.5s infinite linear; }
   .spinner-round, .spinner-round:after {
     border-radius: 50%;
-    width: 1.5em;
-    height: 1.5em; }
+    width: 20px;
+    height: 20px; }
 
 @keyframes spin-round {
   0% {
@@ -1574,7 +1582,7 @@ input[type="radio"]:checked.acrd + label {
   overflow: hidden;
   text-align: center;
   margin: auto;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 4px; }
   .carousel input[type="radio"] {
     display: none; }
@@ -1597,7 +1605,7 @@ input[type="radio"]:checked.acrd + label {
         height: 160px;
         overflow: auto;
         left: 0;
-        top: 340px;
+        top: 360px;
         background-color: #333;
         color: #fff;
         opacity: 0.1; }
@@ -1608,7 +1616,7 @@ input[type="radio"]:checked.acrd + label {
         z-index: 998;
         cursor: pointer;
         top: 450px;
-        color: #fafafa;
+        color: #fff;
         font-size: 1.8em; }
         .carousel input[type="radio"] + div + label:before {
           content: '\25cb'; }
@@ -1715,122 +1723,151 @@ input[type="radio"]:checked.acrd + label {
 	- [4] : The results of this mixin are purely stylistic and do not provide any grouping
 		functionality.
 */
-.brdcrmb {
+.breadcrumb {
   list-style: none; }
-  .brdcrmb > li {
+  .breadcrumb > li {
     display: inline-block; }
-    .brdcrmb > li + li:before {
-      content: '\27e9\00a0'; }
+    .breadcrumb > li + li:before {
+      content: '\002f\00a0'; }
 
 .well {
-  border: 1px solid #ccc;
+  border: 1px solid #e3e3e3;
   border-radius: 4px;
-  background-color: #e7e7e7;
+  background-color: #f5f5f5;
   color: #333;
-  padding: 20px; }
+  padding: 19px; }
 
-.alert-blue + div {
-  border: 1px solid #285f8f;
-  border-radius: 4px;
-  background-color: #4f93ce;
-  color: #1d4567;
-  padding: 20px; }
-
-input[type="checkbox"].alert-blue {
-  display: none; }
-  input[type="checkbox"].alert-blue + div {
-    display: none;
-    position: relative; }
-    input[type="checkbox"].alert-blue + div a {
-      font-weight: 700;
-      text-decoration: none;
-      color: #122a3f; }
-      input[type="checkbox"].alert-blue + div a:hover, input[type="checkbox"].alert-blue + div a:active, input[type="checkbox"].alert-blue + div a:focus {
-        text-decoration: underline; }
-    input[type="checkbox"].alert-blue + div .close {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      color: #1d4567; }
-      input[type="checkbox"].alert-blue + div .close:hover, input[type="checkbox"].alert-blue + div .close:active, input[type="checkbox"].alert-blue + div .close:focus {
-        color: #122a3f; }
-
-input[type="checkbox"]:checked.alert-blue + div {
-  display: block; }
-
-.alert-green + div {
+.alert-success + div {
   border: 1px solid #449d44;
   border-radius: 4px;
   background-color: #80c780;
   color: #357935;
-  padding: 20px; }
+  padding: 15px; }
 
-input[type="checkbox"].alert-green {
+input[type="checkbox"].alert-success {
   display: none; }
-  input[type="checkbox"].alert-green + div {
+  input[type="checkbox"].alert-success + div {
     display: none;
     position: relative; }
-    input[type="checkbox"].alert-green + div a {
+    input[type="checkbox"].alert-success + div a {
       font-weight: 700;
       text-decoration: none;
       color: #255625; }
-      input[type="checkbox"].alert-green + div a:hover, input[type="checkbox"].alert-green + div a:active, input[type="checkbox"].alert-green + div a:focus {
+      input[type="checkbox"].alert-success + div a:hover, input[type="checkbox"].alert-success + div a:active, input[type="checkbox"].alert-success + div a:focus {
         text-decoration: underline; }
-    input[type="checkbox"].alert-green + div .close {
+    input[type="checkbox"].alert-success + div .close {
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 15px;
+      right: 15px;
       color: #357935; }
-      input[type="checkbox"].alert-green + div .close:hover, input[type="checkbox"].alert-green + div .close:active, input[type="checkbox"].alert-green + div .close:focus {
+      input[type="checkbox"].alert-success + div .close:hover, input[type="checkbox"].alert-success + div .close:active, input[type="checkbox"].alert-success + div .close:focus {
         color: #255625; }
 
-input[type="checkbox"]:checked.alert-green + div {
+input[type="checkbox"]:checked.alert-success + div {
   display: block; }
 
-.alert-red + div {
+.alert-info + div {
   border: 1px solid #31b0d5;
   border-radius: 4px;
-  background-color: #85d0e7;
+  background-color: #80c780;
   color: #2390b0;
-  padding: 20px; }
+  padding: 15px; }
 
-input[type="checkbox"].alert-red {
+input[type="checkbox"].alert-info {
   display: none; }
-  input[type="checkbox"].alert-red + div {
+  input[type="checkbox"].alert-info + div {
     display: none;
     position: relative; }
-    input[type="checkbox"].alert-red + div a {
+    input[type="checkbox"].alert-info + div a {
       font-weight: 700;
       text-decoration: none;
       color: #1b6d85; }
-      input[type="checkbox"].alert-red + div a:hover, input[type="checkbox"].alert-red + div a:active, input[type="checkbox"].alert-red + div a:focus {
+      input[type="checkbox"].alert-info + div a:hover, input[type="checkbox"].alert-info + div a:active, input[type="checkbox"].alert-info + div a:focus {
         text-decoration: underline; }
-    input[type="checkbox"].alert-red + div .close {
+    input[type="checkbox"].alert-info + div .close {
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 15px;
+      right: 15px;
       color: #2390b0; }
-      input[type="checkbox"].alert-red + div .close:hover, input[type="checkbox"].alert-red + div .close:active, input[type="checkbox"].alert-red + div .close:focus {
+      input[type="checkbox"].alert-info + div .close:hover, input[type="checkbox"].alert-info + div .close:active, input[type="checkbox"].alert-info + div .close:focus {
         color: #1b6d85; }
 
-input[type="checkbox"]:checked.alert-red + div {
+input[type="checkbox"]:checked.alert-info + div {
+  display: block; }
+
+.alert-warning + div {
+  border: 1px solid #ec971f;
+  border-radius: 4px;
+  background-color: #f4c37d;
+  color: #c77c11;
+  padding: 15px; }
+
+input[type="checkbox"].alert-warning {
+  display: none; }
+  input[type="checkbox"].alert-warning + div {
+    display: none;
+    position: relative; }
+    input[type="checkbox"].alert-warning + div a {
+      font-weight: 700;
+      text-decoration: none;
+      color: #985f0d; }
+      input[type="checkbox"].alert-warning + div a:hover, input[type="checkbox"].alert-warning + div a:active, input[type="checkbox"].alert-warning + div a:focus {
+        text-decoration: underline; }
+    input[type="checkbox"].alert-warning + div .close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: #c77c11; }
+      input[type="checkbox"].alert-warning + div .close:hover, input[type="checkbox"].alert-warning + div .close:active, input[type="checkbox"].alert-warning + div .close:focus {
+        color: #985f0d; }
+
+input[type="checkbox"]:checked.alert-warning + div {
+  display: block; }
+
+.alert-danger + div {
+  border: 1px solid #c9302c;
+  border-radius: 4px;
+  background-color: #e27c79;
+  color: #a02622;
+  padding: 15px; }
+
+input[type="checkbox"].alert-danger {
+  display: none; }
+  input[type="checkbox"].alert-danger + div {
+    display: none;
+    position: relative; }
+    input[type="checkbox"].alert-danger + div a {
+      font-weight: 700;
+      text-decoration: none;
+      color: #761c19; }
+      input[type="checkbox"].alert-danger + div a:hover, input[type="checkbox"].alert-danger + div a:active, input[type="checkbox"].alert-danger + div a:focus {
+        text-decoration: underline; }
+    input[type="checkbox"].alert-danger + div .close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: #a02622; }
+      input[type="checkbox"].alert-danger + div .close:hover, input[type="checkbox"].alert-danger + div .close:active, input[type="checkbox"].alert-danger + div .close:focus {
+        color: #761c19; }
+
+input[type="checkbox"]:checked.alert-danger + div {
   display: block; }
 
 .panel {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #fff;
   color: #333;
   padding: 0; }
 
 .panel > * {
-  padding: 10px; }
+  padding: 15px; }
 .panel .head {
   border: 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ddd;
   color: #333;
   background-color: #e7e7e7;
-  padding: 10px;
+  padding: 15px;
   margin: 0; }
 
 input[type="checkbox"].popover-top {
@@ -1886,51 +1923,3 @@ input[type="checkbox"].popover-bottom {
       margin-left: -7px; }
 input[type="checkbox"]:checked.popover-bottom + label > .popover-bottom {
   display: block; }
-
-.btn-grp .btn {
-  border: 1px solid #ccc;
-  margin: 0; }
-  .btn-grp .btn:not(:first-child):not(:last-child) {
-    border-radius: 0;
-    border-right: 0; }
-  .btn-grp .btn:first-child {
-    border-radius: 4px 0 0 4px;
-    border-right: 0; }
-  .btn-grp .btn:last-child {
-    border-radius: 0 4px 4px 0; }
-
-.btn-grp .btn.btn-primary {
-  border: 1px solid #285f8f;
-  margin: 0; }
-  .btn-grp .btn.btn-primary:not(:first-child):not(:last-child) {
-    border-radius: 0;
-    border-right: 0; }
-  .btn-grp .btn.btn-primary:first-child {
-    border-radius: 4px 0 0 4px;
-    border-right: 0; }
-  .btn-grp .btn.btn-primary:last-child {
-    border-radius: 0 4px 4px 0; }
-
-.btn-grp .btn.btn-success {
-  border: 1px solid #449d44;
-  margin: 0; }
-  .btn-grp .btn.btn-success:not(:first-child):not(:last-child) {
-    border-radius: 0;
-    border-right: 0; }
-  .btn-grp .btn.btn-success:first-child {
-    border-radius: 4px 0 0 4px;
-    border-right: 0; }
-  .btn-grp .btn.btn-success:last-child {
-    border-radius: 0 4px 4px 0; }
-
-.btn-grp .btn.btn-info {
-  border: 1px solid 1px solid #31b0d5;
-  margin: 0; }
-  .btn-grp .btn.btn-info:not(:first-child):not(:last-child) {
-    border-radius: 0;
-    border-right: 0; }
-  .btn-grp .btn.btn-info:first-child {
-    border-radius: 4px 0 0 4px;
-    border-right: 0; }
-  .btn-grp .btn.btn-info:last-child {
-    border-radius: 0 4px 4px 0; }

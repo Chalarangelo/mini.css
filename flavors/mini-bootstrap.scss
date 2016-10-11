@@ -460,13 +460,19 @@ $dropdown-class-name:						dropdown;							// Name for the dropdown class
 //	Variable definitions for the Collapse module (_collapse.scss)
 //====================================================================
 //	Collapse and accordion class names.
-$collapse-class-name:						clps;								// Name for the collapse class
-$accordion-class-name:						acrd;								// Name for the accordion class
+//	--- 	NOTES: 	---
+//	Sizes and colors are approximate. The colors and style of the collapsed 
+//	(hidden) content are based on the Bootstrap example that uses the well.
+//	Classes for collapse and accordion components are .collapse and
+//	.accordion respectively.
+//	-------------------
+$collapse-class-name:						collapse;							// Name for the collapse class
+$accordion-class-name:						accordion;							// Name for the accordion class
 // 	Collapse colors and styles (you can remove things you don't need or 
 //	define more colors if you need them).
-$collapse-border:							1px solid #ccc;						// Border style for the collapse
+$collapse-border:							1px solid #e3e3e3;					// Border style for the collapse
 $collapse-color:							$body-color;						// Color for the text in the collapse
-$collapse-bg-color:							#eeeeee;							// Background color for the collapse
+$collapse-bg-color:							#f5f5f5;							// Background color for the collapse
 // 	Accordion colors and styles (you can remove things you don't need or 
 //	define more colors if you need them).
 $accordion-border:							$collapse-border;					// Border style for the accordion
@@ -478,71 +484,104 @@ $accordion-label-bg-color:					$collapse-bg-color;					// Background color for t
 @import '../scss/mini-extra/collapse';
 // Use collapse and accordion mixins to create components wit the given specs.
 // For more information refer to the _collapse.scss file to check the definitions.
-@include make-collapse($collapse-class-name, $collapse-border, 4px, 10px, 5px, $collapse-color, $collapse-bg-color);
-@include make-accordion($accordion-class-name, $accordion-border, 4px, 10px, 5px, $accordion-color, $accordion-bg-color, $accordion-label-color, $accordion-label-bg-color, 8px, 'darken', 7.5%);
+@include make-collapse($collapse-class-name, $collapse-border, 4px, 19px, 6px, $collapse-color, $collapse-bg-color);
+@include make-accordion($accordion-class-name, $accordion-border, 4px, 19px, 6px, $accordion-color, $accordion-bg-color, $accordion-label-color, $accordion-label-bg-color, 8px, 'darken', 7.5%);
 //====================================================================
 //	Variable definitions for the Progress module (_progress.scss)
 //====================================================================
 //	Progress and progress variants class names.
-$progress-class-name:						prg;								// Name for the progress class
-$progress-bar-style1-name:					'green';							// Name for the progress bar style 1 class
-$progress-bar-style2-name:					'red';								// Name for the progress bar style 2 class
+//	--- 	NOTES: 	---
+//	Naming conventions are based on the Bootstrap names, syntax is based
+//	on the default mini.css syntax.
+//	Colors and borders might look different due to some approximations.
+//	-------------------
+$progress-class-name:						progress-bar;						// Name for the progress class
+$progress-bar-style1-name:					progress-bar-success;				// Name for the progress bar style 1 class
+$progress-bar-style2-name:					progress-bar-info;					// Name for the progress bar style 2 class
+$progress-bar-style3-name:					progress-bar-warning;				// Name for the progress bar style 3 class
+$progress-bar-style4-name:					progress-bar-danger;				// Name for the progress bar style 4 class
 // Progress and progress variants colors (you can remove things you 
 //	don't need or define more colors if you need them).
 $progress-bg-color:							#d7d7d7;							// Background color for the progress bar container
 $progress-bar-color:						$btn-alt-color;						// Color for the text of the progress bar
 $progress-bar-style1-color:					$btn-alt-color;						// Color for the text of the style 1 progress bar
 $progress-bar-style2-color:					$btn-alt-color;						// Color for the text of the style 2 progress bar
+$progress-bar-style3-color:					$btn-alt-color;						// Color for the text of the style 3 progress bar
+$progress-bar-style4-color:					$btn-alt-color;						// Color for the text of the style 4 progress bar
 $progress-bar-bg-color:						$btn-p-bg-color;					// Background color for the progress bar
 $progress-bar-style1-bg-color:				$btn-s-bg-color;					// Background color for the style 1 progress bar
 $progress-bar-style2-bg-color:				$btn-i-bg-color;					// Background color for the style 2 progress bar
+$progress-bar-style3-bg-color:				$btn-w-bg-color;					// Background color for the style 3 progress bar
+$progress-bar-style4-bg-color:				$btn-d-bg-color;					// Background color for the style 4 progress bar
 //	Enable progress (_progress.scss). (Use individual mixins below to use.)
 @import '../scss/mini-extra/progress';
 // Use progress mixins to create progress bars with given specs. For more 
 // information refer to the _progress.scss file to check the definitions.
-@include make-progress($progress-class-name, 20px, 4px, $progress-bg-color, 0.8em, $progress-bar-color, $progress-bar-bg-color);
+@include make-progress($progress-class-name, 20px, 4px, $progress-bg-color, 12px, $progress-bar-color, $progress-bar-bg-color);
 @include make-progress-bar-variant($progress-class-name, $progress-bar-style1-name, $progress-bar-style1-color, $progress-bar-style1-bg-color);
 @include make-progress-bar-variant($progress-class-name, $progress-bar-style2-name, $progress-bar-style2-color, $progress-bar-style2-bg-color);
+@include make-progress-bar-variant($progress-class-name, $progress-bar-style3-name, $progress-bar-style3-color, $progress-bar-style3-bg-color);
+@include make-progress-bar-variant($progress-class-name, $progress-bar-style4-name, $progress-bar-style4-color, $progress-bar-style4-bg-color);
 //====================================================================
 //	Variable definitions for the Spinner module (spinner.scss)
 //====================================================================
 //	Spinner class names.
+//	--- 	NOTES: 	---
+//	Spinner styles are in line with Bootstrap's style as Bootstrap does
+//	not feature a similar component.
+//	-------------------
 $spinner-dotted-name:						spinner-dots;						// Name for the dotted spinner class
 $spinner-round-name:						spinner-round;						// Name for the round spinner class
 // Spinner colors.
-$spinner-round-doughnout:					0.4em solid rgba(34,34,34, 0.2);	// Style for the round spinner doughnut
-$spinner-round-spin:						0.4em solid #222;					// Style for the round spinner spinning part
+$spinner-round-doughnout:					6px solid rgba(51,51,51, 0.25);		// Style for the round spinner doughnut
+$spinner-round-spin:						6px solid $btn-p-bg-color;			// Style for the round spinner spinning part
 //	Enable progress (spinner.scss). (Use individual mixins below to use.)
 @import '../scss/mini-extra/spinner';
 // Use spinner mixins to create spinners with given specs. For more 
 // information refer to the spinner.scss file to check the definitions.
-@include make-spinner-dots($spinner-dotted-name, 1.5em, 1.5s);
-@include make-spinner-round($spinner-round-name, 1.5em, $spinner-round-doughnout, $spinner-round-spin, 1.5s);
+@include make-spinner-dots($spinner-dotted-name, 20px, 1.5s);
+@include make-spinner-round($spinner-round-name, 20px, $spinner-round-doughnout, $spinner-round-spin, 1.5s);
 //====================================================================
 //	Variable definitions for the Carousel module (_carousel.scss)
 //====================================================================
 //	Carousel class names.
+//	--- 	NOTES: 	---
+//	Carousel styling is very similar to the mini.css default carousel,
+//	although control styles are based on the Bootstrap styling.
+//	Naming and structure conventions are based on mini.css.
+//	-------------------
 $carousel-class-name:						carousel;						// Name for the carousel class
 // Carousel colors and styles.
-$carousel-border:							1px solid #ccc;					// Border style for the carousel
+$carousel-border:							1px solid #ddd;					// Border style for the carousel
 $carousel-content-bg-color:					#e7e7e7;						// Background color for the carousel
 $carousel-description-color:				$body-bg-color;					// Color for the text in the carousel's description
 $carousel-description-bg-color:				$body-color;					// Background color for the carousel's description
-$carousel-control-color:					#fafafa;						// Color for the carousel's control elements
+$carousel-control-color:					#fff;							// Color for the carousel's control elements
 //	Enable carousel (_carousel.scss). (Use individual mixins below to use.)
 @import '../scss/mini-extra/carousel';
 // Use carousel mixin to create carousel with given specs. For more 
 // information refer to the _carousel.scss file to check the definitions.
-@include make-carousel($carousel-class-name, 80%, 500px, $carousel-border, 4px, $carousel-content-bg-color, 10px, $carousel-description-color, $carousel-description-bg-color, 340px, 160px, 450px, 1.8em, $carousel-control-color);
+@include make-carousel($carousel-class-name, 80%, 500px, $carousel-border, 4px, $carousel-content-bg-color, 10px, $carousel-description-color, $carousel-description-bg-color, 360px, 160px, 450px, 1.8em, $carousel-control-color);
 //====================================================================
 //	Variable definitions for the Utility module (_utility.scss)
 //====================================================================
 //	Utility class names.
-$breadcrumbs-class-name:					brdcrmb;						// Name for the breadcrumbs class
+//	--- 	NOTES: 	---
+//	Some component styles (like wells) are based on approximation.
+//	Alert styles omit the .alert class and just use their style class.
+//	Panel styling is based on approximation.
+//	Panels are based on the mini.css default structure.
+//	Popovers use the default mini.css styling.
+//	Tooltips, jumbotron and some other components from Bootstrap are not
+//	supported. 
+//	Experimental and unstable components are not included.
+//	-------------------
+$breadcrumbs-class-name:					breadcrumb;						// Name for the breadcrumbs class
 $well-class-name:							well;							// Name for the well class
-$alert-style1-class:						alert-blue;						// Name for the style 1 alert
-$alert-style2-class:						alert-green;					// Name for the style 2 alert
-$alert-style3-class:						alert-red;						// Name for the style 3 alert
+$alert-style1-class:						alert-success;					// Name for the style 1 alert
+$alert-style2-class:						alert-info;						// Name for the style 2 alert
+$alert-style3-class:						alert-warning;					// Name for the style 3 alert
+$alert-style4-class:						alert-danger;					// Name for the style 4 alert
 $panel-class-name:							panel;							// Name for the panel class
 $panel-header-name:							head;							// Name for the panel's header class
 $button-states-class-name:					stateful;						// Name for the stateful button class
@@ -552,7 +591,7 @@ $popover-below-name:						popover-bottom;					// Name for the popover below clas
 // 	Utility color variables and styles (you can remove things you 
 //	don't need or define more colors if you need them).
 $well-color:								$body-color;					// Text color for the well
-$well-bg-color:								#e7e7e7;						// Background color for the well
+$well-bg-color:								#f5f5f5;						// Background color for the well
 $panel-color:								$body-color;					// Text color for the panel
 $panel-bg-color:							$body-bg-color;					// Background color for the panel
 $panel-header-color:						$body-color;					// Text color for the panel's header
@@ -563,21 +602,22 @@ $popover-bg-color:							$body-color;					// Background color for the popover
 @import '../scss/mini-extra/utility';
 // Use utilities mixins to create utilities with given specs. For more 
 // information refer to the _utility.scss file to check the definitions.
-@include make-breadcrumbs($breadcrumbs-class-name);
-@include make-generic-container($well-class-name, $well-color, $well-bg-color, 1px solid #ccc, 4px, 20px);
-@include make-alert($alert-style1-class, darken($btn-p-bg-color,20%), lighten($btn-p-bg-color, 10%) , 1px solid darken($btn-p-bg-color, 10%), 4px, 20px, close);
-@include make-alert($alert-style2-class, darken($btn-s-bg-color,20%), lighten($btn-s-bg-color, 10%) , 1px solid darken($btn-s-bg-color, 10%), 4px, 20px, close);
-@include make-alert($alert-style3-class, darken($btn-i-bg-color,20%), lighten($btn-i-bg-color, 10%) , 1px solid darken($btn-i-bg-color, 10%), 4px, 20px, close);
-@include make-panel(panel, $panel-color, $panel-bg-color, 1px solid #ccc, 4px, 10px, $panel-header-name, $panel-header-color, $panel-header-bg-color, 10px);
+@include make-breadcrumbs($breadcrumbs-class-name, 1);
+@include make-generic-container($well-class-name, $well-color, $well-bg-color, 1px solid #e3e3e3, 4px, 19px);
+@include make-alert($alert-style1-class, darken($btn-s-bg-color,20%), lighten($btn-s-bg-color, 10%) , 1px solid darken($btn-s-bg-color, 10%), 4px, 15px, close);
+@include make-alert($alert-style2-class, darken($btn-i-bg-color,20%), lighten($btn-s-bg-color, 10%) , 1px solid darken($btn-i-bg-color, 10%), 4px, 15px, close);
+@include make-alert($alert-style3-class, darken($btn-w-bg-color,20%), lighten($btn-w-bg-color, 10%) , 1px solid darken($btn-w-bg-color, 10%), 4px, 15px, close);
+@include make-alert($alert-style4-class, darken($btn-d-bg-color,20%), lighten($btn-d-bg-color, 10%) , 1px solid darken($btn-d-bg-color, 10%), 4px, 15px, close);
+@include make-panel(panel, $panel-color, $panel-bg-color, 1px solid #ddd, 4px, 15px, $panel-header-name, $panel-header-color, $panel-header-bg-color, 15px);
 @include make-popover($popover-above-name, top, 5px, 45px, $popover-color, $popover-bg-color, 7px 10px);
 @include make-popover($popover-below-name, bottom, 4px, 45px, $popover-color, $popover-bg-color, 7px 10px);
 // Use experimental utilities mixins to create utilities with given
 // specs. Please exercise caution when using these mixins.
-//@include make-button-states($button-states-class-name);	// This mixin is unstable and buggy, we suggest you disable it.
+// @include make-button-states($button-states-class-name);	// This mixin is unstable and buggy, we suggest you disable it.
 // The folowing mixin is considered stable, you can disable it if you need to.
-@include make-btn-group($button-group-class-name, $btn-class-name, 1px solid #ccc, 4px); 
-@include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style1-name, 1px solid darken($btn-p-bg-color, 10%), 4px); 
-@include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style2-name, 1px solid darken($btn-s-bg-color, 10%), 4px); 
-@include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style3-name, 1px solid 1px solid darken($btn-i-bg-color, 10%), 4px); 
+// @include make-btn-group($button-group-class-name, $btn-class-name, 1px solid #ccc, 4px); 
+// @include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style1-name, 1px solid darken($btn-p-bg-color, 10%), 4px); 
+// @include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style2-name, 1px solid darken($btn-s-bg-color, 10%), 4px); 
+// @include make-btn-group(btn-grp, $btn-class-name+'.'+$btn-style3-name, 1px solid 1px solid darken($btn-i-bg-color, 10%), 4px); 
 //====================================================================
 //====================================================================

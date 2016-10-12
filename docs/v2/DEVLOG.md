@@ -8,3 +8,23 @@
 - Initialized `/flavors/v2` directory.
 - Initialized `mini-default` flavor.
 - Initialized `DEVLOG.md`.
+- **Started developing base from [Normalize.css](https://github.com/necolas/normalize.css) v5.0.0**
+  - Removed support for displaying `[hidden]` in IE 10-.
+  - Removed support for the display of `template` in IE. `template` is not supported yet in IE, thus this will not make any difference, as long as the element itself is not yet supported.
+  - Removed support for the display of `canvas` in IE 9-.
+  - Removed styling fixes for checkboxes and radio buttons in IE 10-.
+  - Kept the styling fix for `textarea` that only affects IE. It seems like it could be useful elsewhere as well. **Needs further work!**
+  - Removed the `progress` styling fix for IE 9- as the element is not supported in IE 9-.
+  - Kept the styling for `svg:not(:root)` although it only affects IE 9-. This is due to the fact that SVG rendering is very important.
+  - Removed the `img` style fix for IE 10-.
+  - Removed the fix for `audio:not([controls])` which only applies to iOS 4-7.
+  - Kept the styling fix of `audio` and `video` for IE 9-, as IE 9 supports both elements.
+  - *TODO* Change `mark` color to customized from flavor, override normalized default and fix.
+  - Kept styling fix of `dfn` for Android 4.3-, as element is properly supported.
+  - *TODO*,*UNCERTAIN* Change the `font-weight` of `b` and `strong` elements to a set number (e.g. 700) to avoid the normalize hack.
+  - Kept styling fix for `abbr` in Firefox 39-, as the element is well supported.
+  - Kept styling fixes for links (`a`), as they are a core element in all browsers and they should be supported well even in older browsers.
+  - Removed the styling fix for `figure` for IE 8. `figure` styling will probably be built from the ground up in the core anyways, so this should not be a problem.
+  - Kept styling fixes for `figure` and `figcaption` for IE 9-. These elements are supported by IE 9, but not the older versions of IE.
+  - Kept the styling fixes for `article`, `aside`, `footer`, `header`, `nav` and `section` for IE 9-. Elements are only supported in IE 9.
+  

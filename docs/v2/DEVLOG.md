@@ -30,3 +30,4 @@
 - **Organized and cleaned the base**
   - Merged styling fixes for `article`, `aside`, `footer`, `header`, `nav` and `section` with fixes for `figure`, `figcaption` and `main`.
   - Merged styling for `kbd`, `code`, `pre` and `samp`.
+- Started documenting default flavor.

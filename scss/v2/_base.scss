@@ -7,9 +7,6 @@
  *    IE on Windows Phone and in iOS.
  */
 
-/* Document
-   ========================================================================== */
-
 html {
   font-family: sans-serif; /* 1 */
   line-height: 1.15; /* 2 */
@@ -17,28 +14,12 @@ html {
   -webkit-text-size-adjust: 100%; /* 3 */
 }
 
-/* Sections
-   ========================================================================== */
-
 /**
  * Remove the margin in all browsers (opinionated).
  */
 
 body {
   margin: 0;
-}
-
-/**
- * Add the correct display in IE 9-.
- */
-
-article,
-aside,
-footer,
-header,
-nav,
-section {
-  display: block;
 }
 
 /**
@@ -51,14 +32,17 @@ h1 {
   margin: 0.67em 0;
 }
 
-/* Grouping content
-   ========================================================================== */
-
 /**
  * Add the correct display in IE 9-.
  * 1. Add the correct display in IE.
  */
 
+article,
+aside,
+footer,
+header,
+nav,
+section,
 figcaption,
 figure,
 main { /* 1 */
@@ -81,13 +65,13 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
-pre {
+code,
+kbd,
+pre,
+samp {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
-
-/* Text-level semantics
-   ========================================================================== */
 
 /**
  * 1. Remove the gray background on active links in IE 10.
@@ -139,18 +123,6 @@ strong {
 }
 
 /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/**
  * Add the correct font style in Android 4.3-.
  */
 
@@ -196,9 +168,6 @@ sup {
   top: -0.5em;
 }
 
-/* Embedded content
-   ========================================================================== */
-
 /**
  * Add the correct display in IE 9-.
  */
@@ -215,9 +184,6 @@ video {
 svg:not(:root) {
   overflow: hidden;
 }
-
-/* Forms
-   ========================================================================== */
 
 /**
  * 1. Change the font styles in all browsers (opinionated).
@@ -370,9 +336,6 @@ textarea {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
-
-/* Interactive
-   ========================================================================== */
 
 /*
  * Add the correct display in IE 9-.

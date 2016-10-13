@@ -61,6 +61,10 @@ p {
   margin: $paragraph-margin;
 }
 
+b, strong{
+  font-weight: $bold-font-weight;
+}
+
 hr {
   // Fixes and defaults for styling
   box-sizing: content-box;
@@ -283,24 +287,6 @@ abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
-}
-
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
-
-b,
-strong {
-  font-weight: inherit;
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-  font-weight: bolder;
 }
 
 /**

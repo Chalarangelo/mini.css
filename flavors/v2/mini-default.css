@@ -45,6 +45,9 @@ h6 {
 p {
   margin: 1px 10px; }
 
+b, strong {
+  font-weight: 700; }
+
 hr {
   box-sizing: content-box;
   border: 0;
@@ -117,20 +120,6 @@ abbr[title] {
   /* 2 */
   text-decoration: underline dotted;
   /* 2 */ }
-
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
-b,
-strong {
-  font-weight: inherit; }
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-  font-weight: bolder; }
 
 /**
  * Add the correct font style in Android 4.3-.

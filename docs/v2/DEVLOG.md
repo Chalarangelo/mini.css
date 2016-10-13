@@ -53,3 +53,5 @@
 - Changed all header `margin`s to be `8px` left and right.
 - Added `margin` for paragraphs (`1px` top and bottom and `10px` left and right).
 - Specified fancy styling flag (`$horizontal-rule-fancy-style`) for `hr` elements and variable (`$horizontal-rule-fancy-gradient`) to specify linear gradient styling to be used instead of the default `border` styling. This styling supports most browsers, but does not work with IE 9- and Opera Mini. Prefix `-webkit` is added to support some browsers.
+- Added variable for bold elements to set `font-weight` manually, so that no problems occur and users can fine-tweak this to their liking.
+- Removed fix for `b` and `strong` as the above change addresses the issue.

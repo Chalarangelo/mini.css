@@ -52,3 +52,4 @@
 - Changed `font-size` of `small`, `sub` and `sup` elements to `75%`.
 - Changed all header `margin`s to be `8px` left and right.
 - Added `margin` for paragraphs (`1px` top and bottom and `10px` left and right).
+- Specified fancy styling flag (`$horizontal-rule-fancy-style`) for `hr` elements and variable (`$horizontal-rule-fancy-gradient`) to specify linear gradient styling to be used instead of the default `border` styling. This styling supports most browsers, but does not work with IE 9- and Opera Mini. Prefix `-webkit` is added to support some browsers.

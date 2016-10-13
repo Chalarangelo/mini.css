@@ -32,8 +32,11 @@ $horizontal-rule-line-height:	1.2em;											// <hr> line height
 $horizontal-rule-margin:		0.5em 4px;										// <hr> margin
 $horizontal-rule-border-style:	1px solid #888;									// Border style for horizontal rules (used 
 																				// in the <hr> element's border-top)
+$horizontal-rule-fancy-style:	true;											// Should a fancy styling be applied for the
+																				// <hr> element (`true`/`false`) [2]
+$horizontal-rule-fancy-gradient:"to right, #ccc, #666, #ccc";					// Gradient style for fancy horizontal rule
 $use-default-code-fonts:		true;											// Should default font choice (monospace) be
-																				// used for code elements? (`true`/`false`) [2]
+																				// used for code elements? (`true`/`false`) [3]
 //$code-font-family:			monospace, monospace;							// Fonts for code elements if not default
 $code-element-padding:			2px 4px;										// Padding for <code>
 $code-element-fore-color:		$fore-color;									// Text color for <code>
@@ -51,7 +54,7 @@ $kbd-element-back-color:		$fore-color;									// Background color for <kbd>
 $kbd-element-border-style:		0;												// Border style for <kbd>
 $kbd-element-border-radius:		2px;											// Border radius for <kbd>
 $style-samp-element:			false;											// Should styles for <samp> be included? 
-																				// (`true`/`false`) [3]
+																				// (`true`/`false`) [4]
 //$samp-element-padding:		2px 4px;										// Padding for <samp>
 //$samp-element-fore-color:		$fore-color;									// Text color for <samp>
 //$samp-element-back-color:		#2678b3;										// Background color for <samp>
@@ -67,7 +70,9 @@ $sub-bottom:					-0.25em;										// <sub> bottom
 //	Notes:
 // [1] - It is recommended to set the value of $apply-defaults-to-all to `true`, unless you want to apply extra styling 
 //	to elements manually.
-// [2] - If the value of $use-default-code-fonts is set to `false` the value of $code-font-family will be used. `true`
+// [2] - If $horizontal-rule-fancy-style is set to `true` the value of $horizontal-rule-border-style will not be used and
+//	a gradient with the style specified in $horizontal-rule-fancy-gradient will be applied instead.
+// [3] - If the value of $use-default-code-fonts is set to `false` the value of $code-font-family will be used. `true`
 //	will apply the proper fix to use monospace font without any problems on all browsers.
-// [3] - If the value of $style-samp-element is set to `false`, no styling will be included in the final CSS file for
+// [4] - If the value of $style-samp-element is set to `false`, no styling will be included in the final CSS file for
 //	`samp` elements. Otherwise, the styling defined in the $samp-... variables will be applied.

@@ -48,11 +48,12 @@ p {
 hr {
   box-sizing: content-box;
   border: 0;
-  height: 0;
   overflow: visible;
   line-height: 1.2em;
   margin: 0.5em 4px;
-  border-top: 1px solid #888; }
+  height: 1px;
+  background-image: linear-gradient(to right, #ccc, #666, #ccc);
+  background-image: -webkit-linear-gradient(to right, #ccc, #666, #ccc); }
 
 code, kbd, pre, samp {
   font-family: monospace, monospace; }

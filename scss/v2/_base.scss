@@ -65,12 +65,20 @@ hr {
   // Fixes and defaults for styling
   box-sizing: content-box;
   border: 0;
-  height: 0;
   overflow: visible;
   // Actual styling using variables
   line-height: $horizontal-rule-line-height;
   margin: $horizontal-rule-margin;
-  border-top: $horizontal-rule-border-style;
+$horizontal-rule-fancy-style: false !default;
+@if $horizontal-rule-fancy-style {
+  height: 1px;
+  background-image: linear-gradient(#{$horizontal-rule-fancy-gradient});
+  background-image: -webkit-linear-gradient(#{$horizontal-rule-fancy-gradient});
+}
+@else {   
+  height: 0;
+  border-top: $horizontal-rule-border-style;   
+}
 }
 
 $use-default-code-fonts: true !default;

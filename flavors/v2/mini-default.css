@@ -19,7 +19,7 @@ article, aside, footer, header, nav, section, figcaption, figure, main {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
-  margin: 0.7em 0;
+  margin: 0.7em 8px;
   font-weight: 500; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     color: #444; }
@@ -41,6 +41,9 @@ h5 {
 
 h6 {
   font-size: 0.75em; }
+
+p {
+  margin: 1px 10px; }
 
 hr {
   box-sizing: content-box;

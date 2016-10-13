@@ -57,6 +57,10 @@ h6 {
   font-size: $h6-font-size;
 }
 
+p {
+  margin: $paragraph-margin;
+}
+
 hr {
   // Fixes and defaults for styling
   box-sizing: content-box;
@@ -155,7 +159,6 @@ samp{
 }
 }
 }
-
 
 @if $small-font-size == $sub-font-size and $small-font-size == $sup-font-size {
 small, sup, sub {

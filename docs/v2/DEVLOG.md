@@ -50,3 +50,5 @@
 - Changed padding of `pre` elements to `6px` and later to `8px`. Changed color for `hr` to `#666` and later to `#888`.
 - Styling and optimization for `small`, `sub` and `sup` elements.
 - Changed `font-size` of `small`, `sub` and `sup` elements to `75%`.
+- Changed all header `margin`s to be `8px` left and right.
+- Added `margin` for paragraphs (`1px` top and bottom and `10px` left and right).

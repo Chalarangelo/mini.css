@@ -116,6 +116,7 @@ code {
 }
 
 pre {
+  overflow: auto; // Responsiveness
 @if $pre-element-border-style != 0 {
   border: $pre-element-border-style;
 }

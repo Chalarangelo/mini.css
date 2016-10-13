@@ -55,3 +55,5 @@
 - Specified fancy styling flag (`$horizontal-rule-fancy-style`) for `hr` elements and variable (`$horizontal-rule-fancy-gradient`) to specify linear gradient styling to be used instead of the default `border` styling. This styling supports most browsers, but does not work with IE 9- and Opera Mini. Prefix `-webkit` is added to support some browsers.
 - Added variable for bold elements to set `font-weight` manually, so that no problems occur and users can fine-tweak this to their liking.
 - Removed fix for `b` and `strong` as the above change addresses the issue.
+- `pre` `padding` set to `12px` instead of `8px`.
+- Added `overflow: auto;` to `pre` elements so that they are responsive and display properly on all devices.

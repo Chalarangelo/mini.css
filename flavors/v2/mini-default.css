@@ -67,9 +67,10 @@ code {
   padding: 2px 4px; }
 
 pre {
+  overflow: auto;
   border-radius: 2px;
   background-color: #ddd;
-  padding: 8px; }
+  padding: 12px; }
 
 kbd {
   border-radius: 2px;

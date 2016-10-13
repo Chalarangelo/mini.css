@@ -50,12 +50,17 @@ $kbd-element-back-color:		$fore-color;									// Background color for <kbd>
 $kbd-element-border-style:		0;												// Border style for <kbd>
 $kbd-element-border-radius:		2px;											// Border radius for <kbd>
 $style-samp-element:			false;											// Should styles for <samp> be included? 
-																				// (`true`/`false`)
+																				// (`true`/`false`) [3]
 //$samp-element-padding:		2px 4px;										// Padding for <samp>
 //$samp-element-fore-color:		$fore-color;									// Text color for <samp>
 //$samp-element-back-color:		#2678b3;										// Background color for <samp>
 //$samp-element-border-style:	0;												// Border style for <samp>
 //$samp-element-border-radius:	2px;											// Border radius for <samp>
+$small-font-size:				75%;											// Font size for <small> elements
+$sup-font-size:					75%;											// Font size for <sup> elements
+$sub-font-size:					75%;											// Font size for <sub> elements
+$sup-top:						-0.5em;											// <sup> top
+$sub-bottom:					-0.25em;										// <sub> bottom
 //	Enable base
 @import '../../scss/v2/base';
 //	Notes:
@@ -63,3 +68,5 @@ $style-samp-element:			false;											// Should styles for <samp> be included?
 //	to elements manually.
 // [2] - If the value of $use-default-code-fonts is set to `false` the value of $code-font-family will be used. `true`
 //	will apply the proper fix to use monospace font without any problems on all browsers.
+// [3] - If the value of $style-samp-element is set to `false`, no styling will be included in the final CSS file for
+//	`samp` elements. Otherwise, the styling defined in the $samp-... variables will be applied.

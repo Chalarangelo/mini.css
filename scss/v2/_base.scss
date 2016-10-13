@@ -85,52 +85,52 @@ code {
 @if $code-element-border-style != 0{
   border: $code-element-border-style;
 }
-@if $code-element-border-radius != 0{
+@if $code-element-border-radius != 0 {
   border-radius: $code-element-border-radius;
 }
-@if $code-element-back-color != $back-color{
+@if $code-element-back-color != $back-color {
  background-color: $code-element-back-color;
 }
-@if $code-element-fore-color != $fore-color{
+@if $code-element-fore-color != $fore-color {
   color: $code-element-fore-color;
 }
-@if $code-element-padding != 0{
+@if $code-element-padding != 0 {
   padding: $code-element-padding;
 }
 }
 
 pre {
-@if $pre-element-border-style != 0{
+@if $pre-element-border-style != 0 {
   border: $pre-element-border-style;
 }
-@if $pre-element-border-radius != 0{
+@if $pre-element-border-radius != 0 {
   border-radius: $pre-element-border-radius;
 }
-@if $pre-element-back-color != $back-color{
+@if $pre-element-back-color != $back-color {
  background-color: $pre-element-back-color;
 }
-@if $pre-element-fore-color != $fore-color{
+@if $pre-element-fore-color != $fore-color {
   color: $pre-element-fore-color;
 }
-@if $pre-element-padding != 0{
+@if $pre-element-padding != 0 {
   padding: $pre-element-padding;
 }
 }
 
 kbd {
-@if $kbd-element-border-style != 0{
+@if $kbd-element-border-style != 0 {
   border: $kbd-element-border-style;
 }
-@if $kbd-element-border-radius != 0{
+@if $kbd-element-border-radius != 0 {
   border-radius: $kbd-element-border-radius;
 }
-@if $kbd-element-back-color != $back-color{
+@if $kbd-element-back-color != $back-color {
  background-color: $kbd-element-back-color;
 }
-@if $kbd-element-fore-color != $fore-color{
+@if $kbd-element-fore-color != $fore-color {
   color: $kbd-element-fore-color;
 }
-@if $kbd-element-padding != 0{
+@if $kbd-element-padding != 0 {
   padding: $kbd-element-padding;
 }
 }
@@ -138,21 +138,108 @@ kbd {
 $style-samp-element: false !default;
 @if $style-samp-element {
 samp{
-@if $samp-element-border-style != 0{
+@if $samp-element-border-style != 0 {
   border: $samp-element-border-style;
 }
-@if $samp-element-border-radius != 0{
+@if $samp-element-border-radius != 0 {
   border-radius: $samp-element-border-radius;
 }
-@if $samp-element-back-color != $back-color{
+@if $samp-element-back-color != $back-color {
  background-color: $samp-element-back-color;
 }
-@if $samp-element-fore-color != $fore-color{
+@if $samp-element-fore-color != $fore-color {
   color: $samp-element-fore-color;
 }
-@if $samp-element-padding != 0{
+@if $samp-element-padding != 0 {
   padding: $samp-element-padding;
 }
+}
+}
+
+
+@if $small-font-size == $sub-font-size and $small-font-size == $sup-font-size {
+small, sup, sub {
+  font-size: $small-font-size;
+}
+sup {
+  top: $sup-top;
+}
+sub{
+  bottom: $sub-bottom;
+}
+sup, sub {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+}
+@else if $small-font-size == $sub-font-size {
+small, sub {
+  font-size: $small-font-size;
+}
+sup {
+  font-size: $sup-font-size;
+  top: $sup-top;
+}
+sub {
+  bottom: $sub-bottom;
+}
+sup, sub {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+}
+@else if $small-font-size == $sup-font-size {
+small, sup {
+  font-size: $small-font-size;
+}
+sup {
+  top: $sup-top;
+}
+sub {
+  font-size: $sub-font-size;
+  bottom: $sub-bottom;
+}
+sup, sub {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+}
+@else if $sup-font-size == $sub-font-size {
+small {
+  font-size: $small-font-size;
+}
+sup, sub {
+  font-size: $sup-font-size;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: $sup-top;
+}
+sub{
+  bottom: $sub-bottom;
+}
+}
+@else {
+small {
+  font-size: $small-font-size;
+}
+sup {
+  font-size: $sup-font-size;
+  top: $sup-top;
+}
+sub{
+  font-size: $sub-font-size;
+  bottom: $sub-bottom;
+}
+sup, sub {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 }
 
@@ -220,35 +307,6 @@ dfn {
 mark {
   background-color: #ff0;
   color: #000;
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
 }
 
 /**

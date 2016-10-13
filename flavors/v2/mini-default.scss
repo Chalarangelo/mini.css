@@ -29,7 +29,7 @@ $header-font-weight:			500;											// Font weight for all headers
 $header-smalltext-fore-color:	#444;											// <small> color in headers	
 $horizontal-rule-line-height:	1.2em;											// <hr> line height
 $horizontal-rule-margin:		0.5em 4px;										// <hr> margin
-$horizontal-rule-border-style:	1px solid #666;									// Border style for horizontal rules (used 
+$horizontal-rule-border-style:	1px solid #888;									// Border style for horizontal rules (used 
 																				// in the <hr> element's border-top)
 $use-default-code-fonts:		true;											// Should default font choice (monospace) be
 																				// used for code elements? (`true`/`false`) [2]
@@ -39,7 +39,7 @@ $code-element-fore-color:		$fore-color;									// Text color for <code>
 $code-element-back-color:		#ddd;											// Background color for <code>
 $code-element-border-style:		0;												// Border style for <code>
 $code-element-border-radius:	2px;											// Border radius for <code>
-$pre-element-padding:			6px;											// Padding for <pre>
+$pre-element-padding:			8px;											// Padding for <pre>
 $pre-element-fore-color:		$code-element-fore-color;						// Text color for <pre>
 $pre-element-back-color:		$code-element-back-color;						// Background color for <pre>
 $pre-element-border-style:		0;												// Border style for <pre>

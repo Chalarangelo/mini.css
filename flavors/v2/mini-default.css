@@ -17,13 +17,30 @@ body {
 article, aside, footer, header, nav, section, figcaption, figure, main {
   display: block; }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+  margin: 0.7em 0;
+  font-weight: 500; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    color: #444; }
+
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.15em; }
+
+h4 {
+  font-size: 1em; }
+
+h5 {
+  font-size: 0.85em; }
+
+h6 {
+  font-size: 0.75em; }
 
 /**
  * 1. Add the correct box sizing in Firefox.

@@ -17,5 +17,15 @@ $base-line-height:				1.5;											// Default line height for all elements.
 $body-margin:					0;												// Margin for the body
 $apply-defaults-to-all:			true;											// Should default values be applied to all 
 																				// elements? (`true` or `false`)
+$h1-font-size:					2em;											// Font size of h1
+$h2-font-size:					1.5em;											// Font size for h2
+$h3-font-size:					1.15em;											// Font size for h3
+$h4-font-size:					1em;											// Font size for h4
+$h5-font-size:					0.85em;											// Font size for h5
+$h6-font-size:					0.75em;											// Font size for h6
+$header-line-height:			1.2em;											// Line height for all headers
+$header-margin:					0.7em 0;										// Margin for all headers
+$header-font-weight:			500;											// Font weight for all headers
+$header-smalltext-fore-color:	#444;											// <small> color in headers		
 //	Enable base
 @import '../../scss/v2/base';

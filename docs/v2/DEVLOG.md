@@ -39,3 +39,5 @@
 - Defaults for `font-family`, `font-size`, `line-height` remain the same.
 - Dropped support for `ms-text-size-adjust` in the `html` element, as mobile IE is not well supported by the framework in general.
 - Added `apply-defaults-to-all` flag to apply fonts and styles to all elements except `html`, setting fonts and sizes for the whole document properly.
+- Set basic styles for headers.
+- Change to the color of `small` elements in headers from `#555` to `#444`.

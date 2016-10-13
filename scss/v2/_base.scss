@@ -29,14 +29,32 @@ article, aside, footer, header, nav, section, figcaption, figure, main {
   display: block;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
+h1, h2, h3, h4, h5, h6 {
+  line-height: $header-line-height;
+  margin: $header-margin;
+  font-weight: $header-font-weight;
+  small {
+    color: $header-smalltext-fore-color;
+  }
+}
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  font-size: $h1-font-size;
+}
+h2 {
+  font-size: $h2-font-size;
+}
+h3 {
+  font-size: $h3-font-size;
+}
+h4 {
+  font-size: $h4-font-size;
+}
+h5{
+  font-size: $h5-font-size;
+}
+h6{
+  font-size: $h6-font-size;
 }
 
 

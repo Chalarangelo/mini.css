@@ -51,18 +51,24 @@ hr {
   margin: 0.5em 4px;
   border-top: 1px solid #666; }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
+code, kbd, pre, samp {
+  font-family: monospace, monospace; }
+
+code {
+  border-radius: 2px;
+  background-color: #ddd;
+  padding: 2px 4px; }
+
+pre {
+  border-radius: 2px;
+  background-color: #ddd;
+  padding: 6px; }
+
+kbd {
+  border-radius: 2px;
+  background-color: #222;
+  color: #f9f9f9;
+  padding: 2px 4px; }
 
 /**
  * 1. Remove the gray background on active links in IE 10.

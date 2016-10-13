@@ -16,7 +16,7 @@ $base-font-size:				1em;											// Default font sizing for all elements
 $base-line-height:				1.5;											// Default line height for all elements.
 $body-margin:					0;												// Margin for the body
 $apply-defaults-to-all:			true;											// Should default values be applied to all 
-																				// elements? (`true` or `false`)
+																				// elements? (`true` or `false`) [1]
 $h1-font-size:					2em;											// Font size of h1
 $h2-font-size:					1.5em;											// Font size for h2
 $h3-font-size:					1.15em;											// Font size for h3
@@ -30,6 +30,36 @@ $header-smalltext-fore-color:	#444;											// <small> color in headers
 $horizontal-rule-line-height:	1.2em;											// <hr> line height
 $horizontal-rule-margin:		0.5em 4px;										// <hr> margin
 $horizontal-rule-border-style:	1px solid #666;									// Border style for horizontal rules (used 
-																				// in the <hr> element's border-top)	
+																				// in the <hr> element's border-top)
+$use-default-code-fonts:		true;											// Should default font choice (monospace) be
+																				// used for code elements? (`true`/`false`) [2]
+//$code-font-family:			monospace, monospace;							// Fonts for code elements if not default
+$code-element-padding:			2px 4px;										// Padding for <code>
+$code-element-fore-color:		$fore-color;									// Text color for <code>
+$code-element-back-color:		#ddd;											// Background color for <code>
+$code-element-border-style:		0;												// Border style for <code>
+$code-element-border-radius:	2px;											// Border radius for <code>
+$pre-element-padding:			6px;											// Padding for <pre>
+$pre-element-fore-color:		$code-element-fore-color;						// Text color for <pre>
+$pre-element-back-color:		$code-element-back-color;						// Background color for <pre>
+$pre-element-border-style:		0;												// Border style for <pre>
+$pre-element-border-radius:		2px;											// Border radius for <pre>
+$kbd-element-padding:			2px 4px;										// Padding for <kbd>
+$kbd-element-fore-color:		$back-color;									// Text color for <kbd>
+$kbd-element-back-color:		$fore-color;									// Background color for <kbd>
+$kbd-element-border-style:		0;												// Border style for <kbd>
+$kbd-element-border-radius:		2px;											// Border radius for <kbd>
+$style-samp-element:			false;											// Should styles for <samp> be included? 
+																				// (`true`/`false`)
+//$samp-element-padding:		2px 4px;										// Padding for <samp>
+//$samp-element-fore-color:		$fore-color;									// Text color for <samp>
+//$samp-element-back-color:		#2678b3;										// Background color for <samp>
+//$samp-element-border-style:	0;												// Border style for <samp>
+//$samp-element-border-radius:	2px;											// Border radius for <samp>
 //	Enable base
 @import '../../scss/v2/base';
+//	Notes:
+// [1] - It is recommended to set the value of $apply-defaults-to-all to `true`, unless you want to apply extra styling 
+//	to elements manually.
+// [2] - If the value of $use-default-code-fonts is set to `false` the value of $code-font-family will be used. `true`
+//	will apply the proper fix to use monospace font without any problems on all browsers.

@@ -44,3 +44,6 @@
 - Built styling for horizontal rules, fixes apply as before.
 - `hr` elements get a margin for left and right (`4px`). This is a design decision for the flavor.
 - `hr` top and bottom margins changed to `0.5em` from `0.7em`.
+- Removed the `font-size: 1em` for the code elements (`code`, `pre`, `kbd`, `samp`) as they should normally be styled using the first style that applies to `html` and all elements. **Highly suggested to use `$apply-defaults-to-all:	true;` always.**
+- Added variables for `code`, `pre`, `kbd`, `samp` and a flag for `samp` (`$style-samp-element`) to make sure that no unnecessary styles are added if the `samp` element is not to be used by the developer.
+- Added conditions to make sure the least amount of code is used and no defaults are redefined when styling `code`. `kbd`, `samp` and `pre`.

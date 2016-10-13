@@ -1,4 +1,4 @@
-$apply-defaults-to-all:   true !default;
+$apply-defaults-to-all: true !default;
 @if $apply-defaults-to-all {
 html, * {
   font-family: #{$base-font-family};
@@ -69,17 +69,91 @@ hr {
   border-top: $horizontal-rule-border-style;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
+$use-default-code-fonts: true !default;
+@if $use-default-code-fonts {
+code, kbd, pre, samp{
+  font-family: monospace, monospace;  // Applies display fix for all code elements
+}
+}
+@else {
+code, kbd, pre, samp{
+  font-family: $code-font-family;     // Display fix should be applied manually!
+}
+}
 
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+code {
+@if $code-element-border-style != 0{
+  border: $code-element-border-style;
+}
+@if $code-element-border-radius != 0{
+  border-radius: $code-element-border-radius;
+}
+@if $code-element-back-color != $back-color{
+ background-color: $code-element-back-color;
+}
+@if $code-element-fore-color != $fore-color{
+  color: $code-element-fore-color;
+}
+@if $code-element-padding != 0{
+  padding: $code-element-padding;
+}
+}
+
+pre {
+@if $pre-element-border-style != 0{
+  border: $pre-element-border-style;
+}
+@if $pre-element-border-radius != 0{
+  border-radius: $pre-element-border-radius;
+}
+@if $pre-element-back-color != $back-color{
+ background-color: $pre-element-back-color;
+}
+@if $pre-element-fore-color != $fore-color{
+  color: $pre-element-fore-color;
+}
+@if $pre-element-padding != 0{
+  padding: $pre-element-padding;
+}
+}
+
+kbd {
+@if $kbd-element-border-style != 0{
+  border: $kbd-element-border-style;
+}
+@if $kbd-element-border-radius != 0{
+  border-radius: $kbd-element-border-radius;
+}
+@if $kbd-element-back-color != $back-color{
+ background-color: $kbd-element-back-color;
+}
+@if $kbd-element-fore-color != $fore-color{
+  color: $kbd-element-fore-color;
+}
+@if $kbd-element-padding != 0{
+  padding: $kbd-element-padding;
+}
+}
+
+$style-samp-element: false !default;
+@if $style-samp-element {
+samp{
+@if $samp-element-border-style != 0{
+  border: $samp-element-border-style;
+}
+@if $samp-element-border-radius != 0{
+  border-radius: $samp-element-border-radius;
+}
+@if $samp-element-back-color != $back-color{
+ background-color: $samp-element-back-color;
+}
+@if $samp-element-fore-color != $fore-color{
+  color: $samp-element-fore-color;
+}
+@if $samp-element-padding != 0{
+  padding: $samp-element-padding;
+}
+}
 }
 
 /**

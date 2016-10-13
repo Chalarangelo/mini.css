@@ -1,25 +1,32 @@
-/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
-
-/**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
-
+$apply-defaults-to-all:   true !default;
+@if $apply-defaults-to-all {
+html, * {
+  font-family: #{$base-font-family};
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  // Prevent adjustments of font size after orientation changes in mobile.
+  -webkit-text-size-adjust: 100%; 
+}
+}
+@else {
 html {
-  font-family: sans-serif; /* 1 */
-  line-height: 1.15; /* 2 */
-  -ms-text-size-adjust: 100%; /* 3 */
-  -webkit-text-size-adjust: 100%; /* 3 */
+  font-family: #{$base-font-family};
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  // Prevent adjustments of font size after orientation changes in mobile.
+  -webkit-text-size-adjust: 100%; 
+}
 }
 
-/**
- * Remove the margin in all browsers (opinionated).
- */
-
 body {
-  margin: 0;
+  margin: $body-margin;
+  color: $fore-color;
+  background-color: $back-color;
+}
+
+// Correct display for older versions of IE.
+article, aside, footer, header, nav, section, figcaption, figure, main {
+  display: block;
 }
 
 /**
@@ -32,22 +39,6 @@ h1 {
   margin: 0.67em 0;
 }
 
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
- */
-
-article,
-aside,
-footer,
-header,
-nav,
-section,
-figcaption,
-figure,
-main { /* 1 */
-  display: block;
-}
 
 /**
  * 1. Add the correct box sizing in Firefox.

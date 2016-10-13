@@ -8,3 +8,14 @@
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
 	mini.css version: v2.0 (in-production)
 */
+//	Basic rules for body and typography
+$fore-color:					#222;											// Text and general foreground color
+$back-color:					#f9f9f9;										// Body background color
+$base-font-family:				"\"Helvetica Neue\", Helvetica, sans-serif";	// Default fonts for all elements
+$base-font-size:				1em;											// Default font sizing for all elements
+$base-line-height:				1.5;											// Default line height for all elements.
+$body-margin:					0;												// Margin for the body
+$apply-defaults-to-all:			true;											// Should default values be applied to all 
+																				// elements? (`true` or `false`)
+//	Enable base
+@import '../../scss/v2/base';

@@ -31,3 +31,11 @@
   - Merged styling fixes for `article`, `aside`, `footer`, `header`, `nav` and `section` with fixes for `figure`, `figcaption` and `main`.
   - Merged styling for `kbd`, `code`, `pre` and `samp`.
 - Started documenting default flavor.
+
+## 20161013
+
+- Started coding variables for base of the framework.
+- `background-color` and `color` of `body` are going to be `#f9f9f9` and `#222` respectively (default flavor).
+- Defaults for `font-family`, `font-size`, `line-height` remain the same.
+- Dropped support for `ms-text-size-adjust` in the `html` element, as mobile IE is not well supported by the framework in general.
+- Added `apply-defaults-to-all` flag to apply fonts and styles to all elements except `html`, setting fonts and sizes for the whole document properly.

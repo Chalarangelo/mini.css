@@ -26,6 +26,10 @@ $h6-font-size:					0.75em;											// Font size for h6
 $header-line-height:			1.2em;											// Line height for all headers
 $header-margin:					0.7em 0;										// Margin for all headers
 $header-font-weight:			500;											// Font weight for all headers
-$header-smalltext-fore-color:	#444;											// <small> color in headers		
+$header-smalltext-fore-color:	#444;											// <small> color in headers	
+$horizontal-rule-line-height:	1.2em;											// <hr> line height
+$horizontal-rule-margin:		0.5em 4px;										// <hr> margin
+$horizontal-rule-border-style:	1px solid #666;									// Border style for horizontal rules (used 
+																				// in the <hr> element's border-top)	
 //	Enable base
 @import '../../scss/v2/base';

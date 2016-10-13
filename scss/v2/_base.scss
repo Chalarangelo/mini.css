@@ -50,23 +50,23 @@ h3 {
 h4 {
   font-size: $h4-font-size;
 }
-h5{
+h5 {
   font-size: $h5-font-size;
 }
-h6{
+h6 {
   font-size: $h6-font-size;
 }
 
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  // Fixes and defaults for styling
+  box-sizing: content-box;
+  border: 0;
+  height: 0;
+  overflow: visible;
+  // Actual styling using variables
+  line-height: $horizontal-rule-line-height;
+  margin: $horizontal-rule-margin;
+  border-top: $horizontal-rule-border-style;
 }
 
 /**

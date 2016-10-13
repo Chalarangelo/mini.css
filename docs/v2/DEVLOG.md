@@ -41,3 +41,6 @@
 - Added `apply-defaults-to-all` flag to apply fonts and styles to all elements except `html`, setting fonts and sizes for the whole document properly.
 - Set basic styles for headers.
 - Change to the color of `small` elements in headers from `#555` to `#444`.
+- Built styling for horizontal rules, fixes apply as before.
+- `hr` elements get a margin for left and right (`4px`). This is a design decision for the flavor.
+- `hr` top and bottom margins changed to `0.5em` from `0.7em`.

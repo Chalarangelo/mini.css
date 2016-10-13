@@ -42,17 +42,14 @@ h5 {
 h6 {
   font-size: 0.75em; }
 
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
 hr {
   box-sizing: content-box;
-  /* 1 */
+  border: 0;
   height: 0;
-  /* 1 */
   overflow: visible;
-  /* 2 */ }
+  line-height: 1.2em;
+  margin: 0.5em 4px;
+  border-top: 1px solid #666; }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.

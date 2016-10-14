@@ -27,6 +27,10 @@ $header-line-height:			1.2em;											// Line height for all headers
 $header-margin:					0.7em 8px;										// Margin for all headers
 $header-font-weight:			500;											// Font weight for all headers
 $header-smalltext-fore-color:	#444;											// <small> color in headers	
+$make-header-smalltext-block:	true;											// Should <small> elements in headers
+																				// be displayed as blocks (`true`/`false`) [2]
+$header-smalltext-b-font-size:	45%;											// Font size of block <small> elements in headers
+$header-smalltext-b-top-margin:	-0.35em;										// Top margin of block <small> elements in headers
 $paragraph-margin:				1px 10px;										// Paragraph element margin
 $bold-font-weight:				700;											// Font weight for <b> and <strong>
 $horizontal-rule-line-height:	1.2em;											// <hr> line height
@@ -34,10 +38,10 @@ $horizontal-rule-margin:		0.5em 4px;										// <hr> margin
 $horizontal-rule-border-style:	1px solid #888;									// Border style for horizontal rules (used 
 																				// in the <hr> element's border-top)
 $horizontal-rule-fancy-style:	true;											// Should a fancy styling be applied for the
-																				// <hr> element (`true`/`false`) [2]
+																				// <hr> element (`true`/`false`) [3]
 $horizontal-rule-fancy-gradient:"to right, #ccc, #666, #ccc";					// Gradient style for fancy horizontal rule
 $use-default-code-fonts:		true;											// Should default font choice (monospace) be
-																				// used for code elements? (`true`/`false`) [3]
+																				// used for code elements? (`true`/`false`) [4]
 //$code-font-family:			monospace, monospace;							// Fonts for code elements if not default
 $code-element-padding:			2px 4px;										// Padding for <code>
 $code-element-fore-color:		$fore-color;									// Text color for <code>
@@ -55,7 +59,7 @@ $kbd-element-back-color:		$fore-color;									// Background color for <kbd>
 $kbd-element-border-style:		0;												// Border style for <kbd>
 $kbd-element-border-radius:		2px;											// Border radius for <kbd>
 $style-samp-element:			false;											// Should styles for <samp> be included? 
-																				// (`true`/`false`) [4]
+																				// (`true`/`false`) [5]
 //$samp-element-padding:		2px 4px;										// Padding for <samp>
 //$samp-element-fore-color:		$fore-color;									// Text color for <samp>
 //$samp-element-back-color:		#2678b3;										// Background color for <samp>
@@ -71,9 +75,11 @@ $sub-bottom:					-0.25em;										// <sub> bottom
 //	Notes:
 // [1] - It is recommended to set the value of $apply-defaults-to-all to `true`, unless you want to apply extra styling 
 //	to elements manually.
-// [2] - If $horizontal-rule-fancy-style is set to `true` the value of $horizontal-rule-border-style will not be used and
+// [2] - If the value of $make-header-smalltext-block is `true` the <small> elements in headers will be displayed below
+//	the main header and the 2 values specified below will apply.
+// [3] - If $horizontal-rule-fancy-style is set to `true` the value of $horizontal-rule-border-style will not be used and
 //	a gradient with the style specified in $horizontal-rule-fancy-gradient will be applied instead.
-// [3] - If the value of $use-default-code-fonts is set to `false` the value of $code-font-family will be used. `true`
+// [4] - If the value of $use-default-code-fonts is set to `false` the value of $code-font-family will be used. `true`
 //	will apply the proper fix to use monospace font without any problems on all browsers.
-// [4] - If the value of $style-samp-element is set to `false`, no styling will be included in the final CSS file for
+// [5] - If the value of $style-samp-element is set to `false`, no styling will be included in the final CSS file for
 //	`samp` elements. Otherwise, the styling defined in the $samp-... variables will be applied.

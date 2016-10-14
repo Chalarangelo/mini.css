@@ -35,6 +35,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $header-font-weight;
   small {
     color: $header-smalltext-fore-color;
+$make-header-smalltext-block: false !default;
+@if $make-header-smalltext-block {
+    display: block;
+    margin-top: $header-smalltext-b-top-margin;
+    font-size: $header-smalltext-b-font-size;
+}
   }
 }
 

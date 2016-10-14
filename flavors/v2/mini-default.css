@@ -22,7 +22,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.7em 8px;
   font-weight: 500; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-    color: #444; }
+    color: #444;
+    display: block;
+    margin-top: -0.35em;
+    font-size: 45%; }
 
 h1 {
   font-size: 2em; }

@@ -57,3 +57,9 @@
 - Removed fix for `b` and `strong` as the above change addresses the issue.
 - `pre` `padding` set to `12px` instead of `8px`.
 - Added `overflow: auto;` to `pre` elements so that they are responsive and display properly on all devices.
+
+## 20161014
+
+- Added extra styling option for `small` elements in headers using a flag (`$make-header-smalltext-block`) and two variables (`$header-smalltext-b-font-size` and `$header-smalltext-b-top-margin`) to customize the styling of such elements.
+- Minor changes to the way the index page looks for the version 2. Changed tagline and added version codename.
+- Added github buttons under title in the index page.

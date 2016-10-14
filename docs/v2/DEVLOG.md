@@ -63,3 +63,8 @@
 - Added extra styling option for `small` elements in headers using a flag (`$make-header-smalltext-block`) and two variables (`$header-smalltext-b-font-size` and `$header-smalltext-b-top-margin`) to customize the styling of such elements.
 - Minor changes to the way the index page looks for the version 2. Changed tagline and added version codename.
 - Added github buttons under title in the index page.
+- Optimized the way `small` element styling is applied in headers when it is displayed as a block.
+- Added fancy styling for `pre` elements with a flag (`$add-pre-element-sidebar`) and a corresponding variable (`$pre-element-sidebar-style`).
+- Added margin for `pre` elements to be in line with paragraphs.
+- Changed borders for `pre` elements: left-side borders' `border-radius` is now `0`.
+- Changed index, centered title etc.

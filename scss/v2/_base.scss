@@ -38,8 +38,12 @@ h1, h2, h3, h4, h5, h6 {
 $make-header-smalltext-block: false !default;
 @if $make-header-smalltext-block {
     display: block;
+@if $header-smalltext-b-top-margin != 0 {
     margin-top: $header-smalltext-b-top-margin;
+}
+@if $header-smalltext-b-font-size != $small-font-size {
     font-size: $header-smalltext-b-font-size;
+}
 }
   }
 }
@@ -137,6 +141,13 @@ pre {
 }
 @if $pre-element-padding != 0 {
   padding: $pre-element-padding;
+}
+@if pre-element-margin != 0 {
+  margin: $pre-element-margin;
+}
+$add-pre-element-sidebar: false !default;
+@if $add-pre-element-sidebar {
+  border-left: $pre-element-sidebar-style;
 }
 }
 

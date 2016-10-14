@@ -71,9 +71,11 @@ code {
 
 pre {
   overflow: auto;
-  border-radius: 2px;
+  border-radius: 0 2px 2px 0;
   background-color: #ddd;
-  padding: 12px; }
+  padding: 12px;
+  margin: 1px 10px;
+  border-left: 3px solid #0039e6; }
 
 kbd {
   border-radius: 2px;

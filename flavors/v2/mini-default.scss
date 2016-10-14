@@ -52,14 +52,18 @@ $pre-element-padding:			12px;											// Padding for <pre>
 $pre-element-fore-color:		$code-element-fore-color;						// Text color for <pre>
 $pre-element-back-color:		$code-element-back-color;						// Background color for <pre>
 $pre-element-border-style:		0;												// Border style for <pre>
-$pre-element-border-radius:		2px;											// Border radius for <pre>
+$pre-element-border-radius:		0 2px 2px 0;									// Border radius for <pre>
+$pre-element-margin:			1px 10px;										// Margin for <pre>
+$add-pre-element-sidebar:		true;											// Should a fancy sidebar be added to the
+																				// left side of <pre> (`true`/`false`)
+$pre-element-sidebar-style:		3px solid #0039e6;								// Style of the sidebar of <pre>
 $kbd-element-padding:			2px 4px;										// Padding for <kbd>
 $kbd-element-fore-color:		$back-color;									// Text color for <kbd>
 $kbd-element-back-color:		$fore-color;									// Background color for <kbd>
 $kbd-element-border-style:		0;												// Border style for <kbd>
 $kbd-element-border-radius:		2px;											// Border radius for <kbd>
 $style-samp-element:			false;											// Should styles for <samp> be included? 
-																				// (`true`/`false`) [5]
+																				// (`true`/`false`) [6]
 //$samp-element-padding:		2px 4px;										// Padding for <samp>
 //$samp-element-fore-color:		$fore-color;									// Text color for <samp>
 //$samp-element-back-color:		#2678b3;										// Background color for <samp>
@@ -81,5 +85,7 @@ $sub-bottom:					-0.25em;										// <sub> bottom
 //	a gradient with the style specified in $horizontal-rule-fancy-gradient will be applied instead.
 // [4] - If the value of $use-default-code-fonts is set to `false` the value of $code-font-family will be used. `true`
 //	will apply the proper fix to use monospace font without any problems on all browsers.
-// [5] - If the value of $style-samp-element is set to `false`, no styling will be included in the final CSS file for
+// [5] - if the value of $add-pre-element-sidebar is set to true, the style specified in $pre-element-sidebar-style will
+//	be applied as a left border for the <pre> elements. 
+// [6] - If the value of $style-samp-element is set to `false`, no styling will be included in the final CSS file for
 //	`samp` elements. Otherwise, the styling defined in the $samp-... variables will be applied.

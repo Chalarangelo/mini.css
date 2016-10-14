@@ -68,3 +68,4 @@
 - Added margin for `pre` elements to be in line with paragraphs.
 - Changed borders for `pre` elements: left-side borders' `border-radius` is now `0`.
 - Changed index, centered title etc.
+- Deployed first live demo version of the framework's demo index.

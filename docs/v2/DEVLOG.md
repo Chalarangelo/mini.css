@@ -81,3 +81,5 @@
 - Optimized `mark` color variant mixin.
 - Tweaked values of `mark` color variants to be less strict but still pass the WCAG AA test and most other tests (sometimes they won't pass the WCAG AAA test but that's ok).
 - Added mixin for `mark` elements (`make-mark-alt-style`) to make style variants (`tag` and `bubble`). Optimized.
+- Added some more text to demo index.
+- Deployed live demo index.

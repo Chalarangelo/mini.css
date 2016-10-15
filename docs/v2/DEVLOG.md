@@ -83,3 +83,7 @@
 - Added mixin for `mark` elements (`make-mark-alt-style`) to make style variants (`tag` and `bubble`). Optimized.
 - Added some more text to demo index.
 - Deployed live demo index.
+- Created svg logo.
+- Added logo to demo page.
+- Created favicon from logo.
+- Added favicon to demo page.

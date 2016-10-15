@@ -21,7 +21,7 @@ html {
 body {
   margin: $body-margin;
   color: $fore-color;
-  background-color: $back-color;
+  background: $back-color;
 }
 
 // Correct display for older versions of IE.
@@ -86,8 +86,8 @@ hr {
 $horizontal-rule-fancy-style: false !default;
 @if $horizontal-rule-fancy-style {
   height: 1px;
-  background-image: linear-gradient(#{$horizontal-rule-fancy-gradient});
-  background-image: -webkit-linear-gradient(#{$horizontal-rule-fancy-gradient});
+  background: linear-gradient(#{$horizontal-rule-fancy-gradient});
+  background: -webkit-linear-gradient(#{$horizontal-rule-fancy-gradient});
 }
 @else {   
   height: 0;
@@ -115,7 +115,7 @@ code {
   border-radius: $code-element-border-radius;
 }
 @if $code-element-back-color != $back-color {
- background-color: $code-element-back-color;
+ background: $code-element-back-color;
 }
 @if $code-element-fore-color != $fore-color {
   color: $code-element-fore-color;
@@ -134,7 +134,7 @@ pre {
   border-radius: $pre-element-border-radius;
 }
 @if $pre-element-back-color != $back-color {
- background-color: $pre-element-back-color;
+ background: $pre-element-back-color;
 }
 @if $pre-element-fore-color != $fore-color {
   color: $pre-element-fore-color;
@@ -159,7 +159,7 @@ kbd {
   border-radius: $kbd-element-border-radius;
 }
 @if $kbd-element-back-color != $back-color {
- background-color: $kbd-element-back-color;
+ background: $kbd-element-back-color;
 }
 @if $kbd-element-fore-color != $fore-color {
   color: $kbd-element-fore-color;
@@ -179,7 +179,7 @@ samp{
   border-radius: $samp-element-border-radius;
 }
 @if $samp-element-back-color != $back-color {
- background-color: $samp-element-back-color;
+ background: $samp-element-back-color;
 }
 @if $samp-element-fore-color != $fore-color {
   color: $samp-element-fore-color;
@@ -320,7 +320,7 @@ dfn {
  */
 
 mark {
-  background-color: #ff0;
+  background: #ff0;
   color: #000;
 }
 

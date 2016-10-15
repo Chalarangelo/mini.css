@@ -69,3 +69,7 @@
 - Changed borders for `pre` elements: left-side borders' `border-radius` is now `0`.
 - Changed index, centered title etc.
 - Deployed first live demo version of the framework's demo index.
+
+## 20161015
+
+- Updated references to `background-color` and `background-image` to use the `background` shorthand instead.

@@ -12,7 +12,7 @@ html, * {
 body {
   margin: 0;
   color: #222;
-  background-color: #f9f9f9; }
+  background: #f9f9f9; }
 
 article, aside, footer, header, nav, section, figcaption, figure, main {
   display: block; }
@@ -58,28 +58,28 @@ hr {
   line-height: 1.2em;
   margin: 0.5em 4px;
   height: 1px;
-  background-image: linear-gradient(to right, #ccc, #666, #ccc);
-  background-image: -webkit-linear-gradient(to right, #ccc, #666, #ccc); }
+  background: linear-gradient(to right, #ccc, #666, #ccc);
+  background: -webkit-linear-gradient(to right, #ccc, #666, #ccc); }
 
 code, kbd, pre, samp {
   font-family: monospace, monospace; }
 
 code {
   border-radius: 2px;
-  background-color: #ddd;
+  background: #ddd;
   padding: 2px 4px; }
 
 pre {
   overflow: auto;
   border-radius: 0 2px 2px 0;
-  background-color: #ddd;
+  background: #ddd;
   padding: 12px;
   margin: 1px 10px;
   border-left: 3px solid #0039e6; }
 
 kbd {
   border-radius: 2px;
-  background-color: #222;
+  background: #222;
   color: #f9f9f9;
   padding: 2px 4px; }
 
@@ -137,7 +137,7 @@ dfn {
  * Add the correct background and color in IE 9-.
  */
 mark {
-  background-color: #ff0;
+  background: #ff0;
   color: #000; }
 
 /**

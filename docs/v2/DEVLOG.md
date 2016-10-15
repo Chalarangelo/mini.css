@@ -87,3 +87,4 @@
 - Added logo to demo page.
 - Created favicon from logo.
 - Added favicon to demo page.
+- Changed color palette to use material colors for primary, secondary and tertiary, passes most tests (usually is ok in almost 100% of cases).

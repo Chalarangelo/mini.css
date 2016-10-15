@@ -98,7 +98,7 @@ sup, sub {
   vertical-align: baseline; }
 
 mark {
-  background: #0047b3;
+  background: #3d5afe;
   color: #fcfcfc;
   font-size: 95%;
   line-height: 1;
@@ -309,10 +309,10 @@ summary {
   display: list-item; }
 
 mark.secondary {
-  background: #cc2900; }
+  background: #d32f2f; }
 
 mark.tertiary {
-  background: #00802b; }
+  background: #2e7d32; }
 
 mark.tag {
   border-radius: 2px;

@@ -10,7 +10,7 @@
 */
 //	Basic rules for body and typography
 $fore-color:					#222;											// Text and general foreground color
-$back-color:					#f9f9f9;										// Body background color
+$back-color:					#fcfcfc;										// Body background color
 $base-font-family:				"\"Helvetica Neue\", Helvetica, sans-serif";	// Default fonts for all elements
 $base-font-size:				1em;											// Default font sizing for all elements
 $base-line-height:				1.5;											// Default line height for all elements.
@@ -74,8 +74,29 @@ $sup-font-size:					75%;											// Font size for <sup> elements
 $sub-font-size:					75%;											// Font size for <sub> elements
 $sup-top:						-0.5em;											// <sup> top
 $sub-bottom:					-0.25em;										// <sub> bottom
+$mark-back-color:				#0047b3;										// Background color for <mark>
+$mark-fore-color:				$back-color;									// Text color for <mark>
+$mark-font-size:				95%;											// Font size for <mark>
+$mark-line-height:				1;												// Line height for <mark>
+$mark-padding:					1px;											// Padding for <mark>
+$mark-margin:					0;												// Margin for <mark>	
+$mark-variant1-name:			'secondary';									// Class name for <mark> variant 1
+$mark-variant1-back-color:		#cc2900;										// Background color for <mark> variant 1
+$mark-variant2-name:			'tertiary';										// Class name for <mark> variant 2
+$mark-variant2-back-color:		#00802b;										// Background color for <mark> variant 2
+$mark-style1-name:				'tag';											// Class name for <mark> style 1
+$mark-style1-border-radius:		2px;											// Border radius for <mark> style 1
+$mark-style1-padding:			2px;											// Padding for <mark> style 1	
+$mark-style2-name:				'bubble';										// Class name for <mark> style 2
+$mark-style2-border-radius:		200px;											// Border radius for <mark> style 2
+$mark-style2-padding:			3px 5px;										// Padding for <mark> style 2	
 //	Enable base
 @import '../../scss/v2/base';
+// Use mixins frm base
+@include make-mark-alt-color($mark-variant1-name, $mark-variant1-back-color);
+@include make-mark-alt-color($mark-variant2-name, $mark-variant2-back-color);
+@include make-mark-alt-style($mark-style1-name, $mark-style1-border-radius, $mark-style1-padding);
+@include make-mark-alt-style($mark-style2-name, $mark-style2-border-radius, $mark-style2-padding);
 //	Notes:
 // [1] - It is recommended to set the value of $apply-defaults-to-all to `true`, unless you want to apply extra styling 
 //	to elements manually.

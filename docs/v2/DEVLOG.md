@@ -73,3 +73,11 @@
 ## 20161015
 
 - Updated references to `background-color` and `background-image` to use the `background` shorthand instead.
+- Changed palette white from `#f9f9f9` to `#fcfcf` to pass all WCAG tests.
+- Added styling for `mark` elements to serve as primary contextual elements.
+- Added mixin for `mark` elements (`make-mark-alt-color`) to make variants of the `mark` element (`secondary` and `tertiary`).
+- Made color palette for marks, passes all WCAG tests.
+- `mark` element styling (`padding`, `margin`, `font-size`, `line-height`) implemented and optimized.
+- Optimized `mark` color variant mixin.
+- Tweaked values of `mark` color variants to be less strict but still pass the WCAG AA test and most other tests (sometimes they won't pass the WCAG AAA test but that's ok).
+- Added mixin for `mark` elements (`make-mark-alt-style`) to make style variants (`tag` and `bubble`). Optimized.

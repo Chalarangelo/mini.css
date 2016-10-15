@@ -12,7 +12,7 @@ html, * {
 body {
   margin: 0;
   color: #222;
-  background: #f9f9f9; }
+  background: #fcfcfc; }
 
 article, aside, footer, header, nav, section, figcaption, figure, main {
   display: block; }
@@ -80,7 +80,7 @@ pre {
 kbd {
   border-radius: 2px;
   background: #222;
-  color: #f9f9f9;
+  color: #fcfcfc;
   padding: 2px 4px; }
 
 small, sup, sub {
@@ -96,6 +96,13 @@ sup, sub {
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
+
+mark {
+  background: #0047b3;
+  color: #fcfcfc;
+  font-size: 95%;
+  line-height: 1;
+  padding: 1px; }
 
 /**
  * 1. Remove the gray background on active links in IE 10.
@@ -132,13 +139,6 @@ abbr[title] {
  */
 dfn {
   font-style: italic; }
-
-/**
- * Add the correct background and color in IE 9-.
- */
-mark {
-  background: #ff0;
-  color: #000; }
 
 /**
  * Add the correct display in IE 9-.
@@ -307,3 +307,17 @@ menu {
  */
 summary {
   display: list-item; }
+
+mark.secondary {
+  background: #cc2900; }
+
+mark.tertiary {
+  background: #00802b; }
+
+mark.tag {
+  border-radius: 2px;
+  padding: 2px; }
+
+mark.bubble {
+  border-radius: 200px;
+  padding: 3px 5px; }

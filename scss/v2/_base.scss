@@ -1,3 +1,5 @@
+// SECTION: Browsers resets and base typography
+//===================================================
 $apply-defaults-to-all: true !default;
 @if $apply-defaults-to-all {
 html, * {
@@ -24,7 +26,8 @@ body {
   background: $back-color;
 }
 
-// Correct display for older versions of IE.
+// Correct display for older versions of IE.\
+// TODO: Move styling of `nav` to the proper file.
 article, aside, footer, header, nav, section, figcaption, figure, main {
   display: block;
 }
@@ -71,7 +74,7 @@ p {
   margin: $paragraph-margin;
 }
 
-b, strong{
+b, strong {
   font-weight: $bold-font-weight;
 }
 
@@ -276,6 +279,41 @@ sup, sub {
 }
 }
 
+$apply-link-underline: true !default;
+$apply-link-hover-fade: true !default;
+a{
+  color: $link-fore-color;
+@if $apply-link-underline {
+  text-decoration: underline;
+}
+@else {
+  text-decoration: none;
+}
+@if $link-font-weight != 500 {
+  font-weight: $link-font-weight;
+}
+@if $apply-link-hover-fade {
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+&:visited {
+  color: $link-visited-fore-color;
+}
+@if $apply-link-hover-fade {
+&:hover, &:focus, &:active {
+    opacity: 0.75;
+}
+}
+@else {
+&:hover, &:focus, &:active {
+  color: $link-hover-fore-color;
+}
+}
+}
+
+//===================================================
+// SECTION: External files.
+//===================================================
 // Default styling for mark. Use mixins for alternate styles.
 mark {
   background: $mark-back-color;
@@ -325,37 +363,7 @@ mark.#{$mark-alt-name} {
 }
 }
 
-$apply-link-underline: true !default;
-$apply-link-hover-fade: true !default;
-a{
-  color: $link-fore-color;
-@if $apply-link-underline {
-  text-decoration: underline;
-}
-@else {
-  text-decoration: none;
-}
-@if $link-font-weight != 500 {
-  font-weight: $link-font-weight;
-}
-@if $apply-link-hover-fade {
-  opacity: 1;
-  transition: all 0.3s ease 0s;
-}
-&:visited {
-  color: $link-visited-fore-color;
-}
-@if $apply-link-hover-fade {
-&:hover, &:focus, &:active {
-    opacity: 0.75;
-}
-}
-@else {
-&:hover, &:focus, &:active {
-  color: $link-hover-fore-color;
-}
-}
-}
+
 
 /**
  * 1. Remove the bottom border in Firefox 39-.
@@ -562,3 +570,4 @@ menu {
 summary {
   display: list-item;
 }
+//===================================================

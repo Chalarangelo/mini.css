@@ -97,13 +97,6 @@ sup, sub {
   position: relative;
   vertical-align: baseline; }
 
-mark {
-  background: #0277bd;
-  color: #fafafa;
-  font-size: 95%;
-  line-height: 1;
-  padding: 1px; }
-
 a {
   color: #0277bd;
   text-decoration: underline;
@@ -113,6 +106,13 @@ a {
     color: #01579b; }
   a:hover, a:focus, a:active {
     opacity: 0.75; }
+
+mark {
+  background: #0277bd;
+  color: #fafafa;
+  font-size: 95%;
+  line-height: 1;
+  padding: 1px; }
 
 /**
  * 1. Remove the bottom border in Firefox 39-.

@@ -95,3 +95,4 @@
 ## 20161019
 
 - More fiddling with palettes. Tried to update colors to material design: `body` `color` is now `#212121`. `body` `background` is now `#fafafa`. `small` inside header `color` is now `#424242`. Codeblock `background` is now `#e0e0e0` and `pre` sidebar `border-color` is `#1565c0`. `mark` `background`s changed to `#0277bd`, `#f44336` and `#558b2f` respectively.
+- Added `display: inline-block` to `mark` alternate styles, to avoid splitting of the element into smaller parts (e.g. broken pills).

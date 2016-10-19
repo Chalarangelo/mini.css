@@ -315,9 +315,11 @@ mark.tertiary {
   background: #558b2f; }
 
 mark.tag {
+  display: inline-block;
   border-radius: 2px;
   padding: 2px; }
 
 mark.bubble {
+  display: inline-block;
   border-radius: 200px;
   padding: 3px 5px; }

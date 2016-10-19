@@ -90,3 +90,8 @@
 - Changed color palette to use material colors for primary, secondary and tertiary, passes most tests (usually is ok in almost 100% of cases).
 - Updated page to test `mark` in headers.
 - Deployed live version with updated tags.
+
+
+## 20161019
+
+- More fiddling with palettes. Tried to update colors to material design: `body` `color` is now `#212121`. `body` `background` is now `#fafafa`. `small` inside header `color` is now `#424242`. Codeblock `background` is now `#e0e0e0` and `pre` sidebar `border-color` is `#1565c0`. `mark` `background`s changed to `#0277bd`, `#f44336` and `#558b2f` respectively.

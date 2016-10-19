@@ -9,8 +9,8 @@
 	mini.css version: v2.0 (in-production)
 */
 //	Basic rules for body and typography
-$fore-color:					#222;											// Text and general foreground color
-$back-color:					#fcfcfc;										// Body background color
+$fore-color:					#212121;										// Text and general foreground color
+$back-color:					#fafafa;										// Body background color
 $base-font-family:				"\"Helvetica Neue\", Helvetica, sans-serif";	// Default fonts for all elements
 $base-font-size:				1em;											// Default font sizing for all elements
 $base-line-height:				1.5;											// Default line height for all elements.
@@ -26,7 +26,7 @@ $h6-font-size:					0.75em;											// Font size for h6
 $header-line-height:			1.2em;											// Line height for all headers
 $header-margin:					0.7em 8px;										// Margin for all headers
 $header-font-weight:			500;											// Font weight for all headers
-$header-smalltext-fore-color:	#444;											// <small> color in headers	
+$header-smalltext-fore-color:	#424242;										// <small> color in headers	
 $make-header-smalltext-block:	true;											// Should <small> elements in headers
 																				// be displayed as blocks (`true`/`false`) [2]
 $header-smalltext-b-font-size:	45%;											// Font size of block <small> elements in headers
@@ -35,17 +35,17 @@ $paragraph-margin:				1px 10px;										// Paragraph element margin
 $bold-font-weight:				700;											// Font weight for <b> and <strong>
 $horizontal-rule-line-height:	1.2em;											// <hr> line height
 $horizontal-rule-margin:		0.5em 4px;										// <hr> margin
-$horizontal-rule-border-style:	1px solid #888;									// Border style for horizontal rules (used 
+$horizontal-rule-border-style:	1px solid #757575;								// Border style for horizontal rules (used 
 																				// in the <hr> element's border-top)
 $horizontal-rule-fancy-style:	true;											// Should a fancy styling be applied for the
 																				// <hr> element (`true`/`false`) [3]
-$horizontal-rule-fancy-gradient:"to right, #ccc, #666, #ccc";					// Gradient style for fancy horizontal rule
+$horizontal-rule-fancy-gradient:"to right, #bdbdbd, #616161, #bdbdbd";			// Gradient style for fancy horizontal rule
 $use-default-code-fonts:		true;											// Should default font choice (monospace) be
 																				// used for code elements? (`true`/`false`) [4]
 //$code-font-family:			monospace, monospace;							// Fonts for code elements if not default
 $code-element-padding:			2px 4px;										// Padding for <code>
 $code-element-fore-color:		$fore-color;									// Text color for <code>
-$code-element-back-color:		#ddd;											// Background color for <code>
+$code-element-back-color:		#e0e0e0;										// Background color for <code>
 $code-element-border-style:		0;												// Border style for <code>
 $code-element-border-radius:	2px;											// Border radius for <code>
 $pre-element-padding:			12px;											// Padding for <pre>
@@ -56,7 +56,7 @@ $pre-element-border-radius:		0 2px 2px 0;									// Border radius for <pre>
 $pre-element-margin:			1px 10px;										// Margin for <pre>
 $add-pre-element-sidebar:		true;											// Should a fancy sidebar be added to the
 																				// left side of <pre> (`true`/`false`)
-$pre-element-sidebar-style:		3px solid #0039e6;								// Style of the sidebar of <pre>
+$pre-element-sidebar-style:		3px solid #1565c0;								// Style of the sidebar of <pre>
 $kbd-element-padding:			2px 4px;										// Padding for <kbd>
 $kbd-element-fore-color:		$back-color;									// Text color for <kbd>
 $kbd-element-back-color:		$fore-color;									// Background color for <kbd>
@@ -66,7 +66,7 @@ $style-samp-element:			false;											// Should styles for <samp> be included?
 																				// (`true`/`false`) [6]
 //$samp-element-padding:		2px 4px;										// Padding for <samp>
 //$samp-element-fore-color:		$fore-color;									// Text color for <samp>
-//$samp-element-back-color:		#2678b3;										// Background color for <samp>
+//$samp-element-back-color:		#2196f3;										// Background color for <samp>
 //$samp-element-border-style:	0;												// Border style for <samp>
 //$samp-element-border-radius:	2px;											// Border radius for <samp>
 $small-font-size:				75%;											// Font size for <small> elements
@@ -74,16 +74,16 @@ $sup-font-size:					75%;											// Font size for <sup> elements
 $sub-font-size:					75%;											// Font size for <sub> elements
 $sup-top:						-0.5em;											// <sup> top
 $sub-bottom:					-0.25em;										// <sub> bottom
-$mark-back-color:				#3d5afe;										// Background color for <mark>
+$mark-back-color:				#0277bd;										// Background color for <mark>
 $mark-fore-color:				$back-color;									// Text color for <mark>
 $mark-font-size:				95%;											// Font size for <mark>
 $mark-line-height:				1;												// Line height for <mark>
 $mark-padding:					1px;											// Padding for <mark>
 $mark-margin:					0;												// Margin for <mark>	
 $mark-variant1-name:			'secondary';									// Class name for <mark> variant 1
-$mark-variant1-back-color:		#d32f2f;										// Background color for <mark> variant 1
+$mark-variant1-back-color:		#f44336;										// Background color for <mark> variant 1
 $mark-variant2-name:			'tertiary';										// Class name for <mark> variant 2
-$mark-variant2-back-color:		#2e7d32;										// Background color for <mark> variant 2
+$mark-variant2-back-color:		#558b2f;										// Background color for <mark> variant 2
 $mark-style1-name:				'tag';											// Class name for <mark> style 1
 $mark-style1-border-radius:		2px;											// Border radius for <mark> style 1
 $mark-style1-padding:			2px;											// Padding for <mark> style 1	

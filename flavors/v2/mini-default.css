@@ -11,8 +11,8 @@ html, * {
 
 body {
   margin: 0;
-  color: #222;
-  background: #fcfcfc; }
+  color: #212121;
+  background: #fafafa; }
 
 article, aside, footer, header, nav, section, figcaption, figure, main {
   display: block; }
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.7em 8px;
   font-weight: 500; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-    color: #444;
+    color: #424242;
     display: block;
     margin-top: -0.35em;
     font-size: 45%; }
@@ -58,29 +58,29 @@ hr {
   line-height: 1.2em;
   margin: 0.5em 4px;
   height: 1px;
-  background: linear-gradient(to right, #ccc, #666, #ccc);
-  background: -webkit-linear-gradient(to right, #ccc, #666, #ccc); }
+  background: linear-gradient(to right, #bdbdbd, #616161, #bdbdbd);
+  background: -webkit-linear-gradient(to right, #bdbdbd, #616161, #bdbdbd); }
 
 code, kbd, pre, samp {
   font-family: monospace, monospace; }
 
 code {
   border-radius: 2px;
-  background: #ddd;
+  background: #e0e0e0;
   padding: 2px 4px; }
 
 pre {
   overflow: auto;
   border-radius: 0 2px 2px 0;
-  background: #ddd;
+  background: #e0e0e0;
   padding: 12px;
   margin: 1px 10px;
-  border-left: 3px solid #0039e6; }
+  border-left: 3px solid #1565c0; }
 
 kbd {
   border-radius: 2px;
-  background: #222;
-  color: #fcfcfc;
+  background: #212121;
+  color: #fafafa;
   padding: 2px 4px; }
 
 small, sup, sub {
@@ -98,8 +98,8 @@ sup, sub {
   vertical-align: baseline; }
 
 mark {
-  background: #3d5afe;
-  color: #fcfcfc;
+  background: #0277bd;
+  color: #fafafa;
   font-size: 95%;
   line-height: 1;
   padding: 1px; }
@@ -309,10 +309,10 @@ summary {
   display: list-item; }
 
 mark.secondary {
-  background: #d32f2f; }
+  background: #f44336; }
 
 mark.tertiary {
-  background: #2e7d32; }
+  background: #558b2f; }
 
 mark.tag {
   border-radius: 2px;

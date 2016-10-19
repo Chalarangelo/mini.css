@@ -101,3 +101,9 @@
 - Added flag for `a` `text-decoration:underline` (`$apply-link-underline`) and checks/optimizations for `font-weight`.
 - Removed fixes from Normalize about `a` elements, as they were opinionated and unnecessary.
 - Added flag for `a` using fancy `:hover` and other focused effects instead of `color` (`$apply-link-hover-fade`).
+- Opened issue for module restructure (#14).
+- Module restructure based on issue #14 (partial for whatever work was already done):
+  - Renamed `_base.scss` to `_core.scss` and created folder for submodules (`mini-core`).
+  - Created `_contextual.scss` for `mark` styling.
+  - Comments and sections for core.
+- Changed import in flavor, imported contextual in core.

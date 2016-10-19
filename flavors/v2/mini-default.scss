@@ -100,7 +100,7 @@ $apply-link-hover-fade:			true;											// Should the :hover and :focus state 
 																				// color (`true`/`false`) [8]
 //$link-hover-fore-color:		#0288d1;										// Text color for <a> when hovered or focused
 //	Enable base
-@import '../../scss/v2/base';
+@import '../../scss/v2/core';
 // Use mixins frm base
 @include make-mark-alt-color($mark-variant1-name, $mark-variant1-back-color);
 @include make-mark-alt-color($mark-variant2-name, $mark-variant2-back-color);

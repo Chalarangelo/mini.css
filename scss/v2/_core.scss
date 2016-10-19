@@ -26,10 +26,17 @@ body {
   background: $back-color;
 }
 
-// Correct display for older versions of IE.\
+// Correct display for older versions of IE.
 // TODO: Move styling of `nav` to the proper file.
 article, aside, footer, header, nav, section, figcaption, figure, main {
   display: block;
+}
+
+abbr[title] {
+  border-bottom: none; // Remove bottom border in Firefox 39-.
+  text-decoration: underline; // Opinionated style-fix for all browsers.
+// This is an artifact, please move along.
+// &:hover:after { content: " ("attr(title) ")"; }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -310,25 +317,11 @@ a{
 }
 }
 }
-
 //===================================================
 // SECTION: External files.
 //===================================================
 // Contextual background elements.
 @import 'mini-core/contextual';
-
-
-
-/**
- * 1. Remove the bottom border in Firefox 39-.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-
-abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
 
 /**
  * Add the correct font style in Android 4.3-.

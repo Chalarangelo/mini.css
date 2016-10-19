@@ -107,3 +107,4 @@
   - Created `_contextual.scss` for `mark` styling.
   - Comments and sections for core.
 - Changed import in flavor, imported contextual in core.
+- Corrected and finalized display of `abbr` elements with a `title` attribute: Border fix for older Firefox version was kept, dropped some styling for the underline, underline will now always be normal `text-decoration: underline` on all browsers (opinionated).

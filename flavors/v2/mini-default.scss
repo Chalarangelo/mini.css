@@ -69,6 +69,8 @@ $style-samp-element:			false;											// Should styles for <samp> be included?
 //$samp-element-back-color:		#2196f3;										// Background color for <samp>
 //$samp-element-border-style:	0;												// Border style for <samp>
 //$samp-element-border-radius:	2px;											// Border radius for <samp>
+$include-dfn-fix:				false;											// Should the fix for Android 4.3 concerning <dfn>
+																				// be included (`true`/`false`) [7]
 $small-font-size:				75%;											// Font size for <small> elements
 $sup-font-size:					75%;											// Font size for <sup> elements
 $sub-font-size:					75%;											// Font size for <sub> elements
@@ -94,10 +96,10 @@ $link-fore-color:				#0277bd;										// Text color for <a>
 $link-visited-fore-color:		#01579b;										// Text color for visited <a>
 $link-font-weight:				500;											// Font weight for <a>
 $apply-link-underline:			true;											// Should an underline be applied to all <a>
-																				// elements? (`true`/`false`) [7]
+																				// elements? (`true`/`false`) [8]
 $apply-link-hover-fade:			true;											// Should the :hover and :focus state of <a>
 																				// elements use fade-out instead of a different
-																				// color (`true`/`false`) [8]
+																				// color (`true`/`false`) [9]
 //$link-hover-fore-color:		#0288d1;										// Text color for <a> when hovered or focused
 //	Enable base
 @import '../../scss/v2/core';
@@ -119,7 +121,9 @@ $apply-link-hover-fade:			true;											// Should the :hover and :focus state 
 //	be applied as a left border for the <pre> elements. 
 // [6] - If the value of $style-samp-element is set to `false`, no styling will be included in the final CSS file for
 //	`samp` elements. Otherwise, the styling defined in the $samp-... variables will be applied.
-// [7] - If the value of $apply-link-underline is set to `true`, an underline will be applied to the link in its normal
+// [7] - If the value of $include-dfn-fix is set to `true` a styling fix will be applied, so that the <dfn> elements are
+//	displayed properly on older versions of Android (4.3-) in italics. Otherwise, said fix will not be included.
+// [8] - If the value of $apply-link-underline is set to `true`, an underline will be applied to the link in its normal
 //	color, as defined in $link-fore-color.
-// [8] - If `apply-link-hover-fade` is set to `true`, a fading transition will be used for the link when hovered over or
+// [9] - If `apply-link-hover-fade` is set to `true`, a fading transition will be used for the link when hovered over or
 //	focused. Otherwise, the color specified in $link-hover-fore-color will be used.

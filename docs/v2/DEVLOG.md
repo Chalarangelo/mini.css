@@ -108,3 +108,9 @@
   - Comments and sections for core.
 - Changed import in flavor, imported contextual in core.
 - Corrected and finalized display of `abbr` elements with a `title` attribute: Border fix for older Firefox version was kept, dropped some styling for the underline, underline will now always be normal `text-decoration: underline` on all browsers (opinionated).
+- Kept display fix for `audio` and `video` for IE 9, as the elements are supported, moved to top of head.
+- Added flag (`$include-dfn-fix`) to enable/disable the fix of `dfn` element on older Android versions based on user preference.
+- Disabled said flag, due to hope that when this framework releases, there will be too few people using said older Android versions, so this will not be an issue. Also, `dfn` is not a very commonly used element in a lot of pages, might go unnoticed.
+- Moved fix for `svg` in IE at the top.
+- Added `TODO`s for other fixes.
+- Updated index page, probably broke the live version for a while.

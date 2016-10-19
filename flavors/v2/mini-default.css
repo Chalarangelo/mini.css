@@ -21,6 +21,12 @@ abbr[title] {
   border-bottom: none;
   text-decoration: underline; }
 
+audio, video {
+  display: inline-block; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
   margin: 0.7em 8px;
@@ -117,25 +123,6 @@ mark {
   font-size: 95%;
   line-height: 1;
   padding: 1px; }
-
-/**
- * Add the correct font style in Android 4.3-.
- */
-dfn {
-  font-style: italic; }
-
-/**
- * Add the correct display in IE 9-.
- */
-audio,
-video {
-  display: inline-block; }
-
-/**
- * Hide the overflow in IE.
- */
-svg:not(:root) {
-  overflow: hidden; }
 
 /**
  * 1. Change the font styles in all browsers (opinionated).

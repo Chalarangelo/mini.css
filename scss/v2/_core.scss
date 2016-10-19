@@ -39,6 +39,24 @@ abbr[title] {
 // &:hover:after { content: " ("attr(title) ")"; }
 }
 
+// Correct display for older versions of IE.
+audio, video {
+  display: inline-block;
+}
+
+// Hide overflow in IE
+svg:not(:root) {
+  overflow: hidden;
+}
+
+// Fix display in older versions of Android.
+$include-dfn-fix: true !default;
+@if $include-dfn-fix {
+dfn {
+  font-style: italic;
+}
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: $header-line-height;
   margin: $header-margin;
@@ -323,30 +341,7 @@ a{
 // Contextual background elements.
 @import 'mini-core/contextual';
 
-/**
- * Add the correct font style in Android 4.3-.
- */
-
-dfn {
-  font-style: italic;
-}
-
-/**
- * Add the correct display in IE 9-.
- */
-
-audio,
-video {
-  display: inline-block;
-}
-
-/**
- * Hide the overflow in IE.
- */
-
-svg:not(:root) {
-  overflow: hidden;
-}
+// TODO: Move to forms and buttons respectively
 
 /**
  * 1. Change the font styles in all browsers (opinionated).
@@ -446,6 +441,8 @@ legend {
   white-space: normal; /* 1 */
 }
 
+// TODO: Move to progress module
+
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
@@ -457,6 +454,8 @@ progress {
 /**
  * Remove the default vertical scrollbar in IE.
  */
+
+// TODO: Move to forms
 
 textarea {
   overflow: auto;

@@ -90,6 +90,15 @@ $mark-style1-padding:			2px;											// Padding for <mark> style 1
 $mark-style2-name:				'bubble';										// Class name for <mark> style 2
 $mark-style2-border-radius:		200px;											// Border radius for <mark> style 2
 $mark-style2-padding:			3px 5px;										// Padding for <mark> style 2	
+$link-fore-color:				#0277bd;										// Text color for <a>
+$link-visited-fore-color:		#01579b;										// Text color for visited <a>
+$link-font-weight:				500;											// Font weight for <a>
+$apply-link-underline:			true;											// Should an underline be applied to all <a>
+																				// elements? (`true`/`false`) [7]
+$apply-link-hover-fade:			true;											// Should the :hover and :focus state of <a>
+																				// elements use fade-out instead of a different
+																				// color (`true`/`false`) [8]
+//$link-hover-fore-color:		#0288d1;										// Text color for <a> when hovered or focused
 //	Enable base
 @import '../../scss/v2/base';
 // Use mixins frm base
@@ -110,3 +119,7 @@ $mark-style2-padding:			3px 5px;										// Padding for <mark> style 2
 //	be applied as a left border for the <pre> elements. 
 // [6] - If the value of $style-samp-element is set to `false`, no styling will be included in the final CSS file for
 //	`samp` elements. Otherwise, the styling defined in the $samp-... variables will be applied.
+// [7] - If the value of $apply-link-underline is set to `true`, an underline will be applied to the link in its normal
+//	color, as defined in $link-fore-color.
+// [8] - If `apply-link-hover-fade` is set to `true`, a fading transition will be used for the link when hovered over or
+//	focused. Otherwise, the color specified in $link-hover-fore-color will be used.

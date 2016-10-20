@@ -130,3 +130,9 @@
 - Opinionated `vertical-aling: middle` for said mixin and `display: inline-block` to make sure everything works according to what it should.
 - `width` of said mixin's result is specified in `em` (`20em` specifically) to make sure it will work well on all screen and is dependent on text.
 - Optimized inline `progress` mixin.
+- Added condition for `progress` margin to optimize for `0`.
+- Created mixin for color variants of `progress` (`make-progress-alt-color`) and added style imports for `secondary` and `tertiary` elements. Optimized.
+- Used slightly different colors from `mark` variatns for `progress` color variants (all material).
+- Created mixin `make-progress-alt-style` for style variants of `progress`.
+- Created `nano` variant for `progress` (nanobar progress) using above mixin.
+- Documented mixins for `progress`, optimized etc.

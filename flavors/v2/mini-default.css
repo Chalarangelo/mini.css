@@ -321,3 +321,32 @@ progress.inline {
   display: inline-block;
   vertical-align: middle;
   width: 20em; }
+
+progress.secondary {
+  color: #e53935; }
+  progress.secondary::-webkit-progress-value {
+    background: #e53935; }
+  progress.secondary::-moz-progress-bar {
+    background: #e53935; }
+
+progress.tertiary {
+  color: #689f38; }
+  progress.tertiary::-webkit-progress-value {
+    background: #689f38; }
+  progress.tertiary::-moz-progress-bar {
+    background: #689f38; }
+
+progress.nano {
+  height: 2px;
+  margin: 0 auto 1px;
+  border-radius: 0; }
+  progress.nano::-webkit-progress-value {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+  progress.nano::-moz-progress-bar {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+  progress.nano[value="100"]::-webkit-progress-value {
+    border-radius: 0; }
+  progress.nano[value="100"]::-moz-progress-bar {
+    border-radius: 0; }

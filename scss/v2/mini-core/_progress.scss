@@ -13,7 +13,9 @@ progress {
 @if $progress-border-radius != 0 {
 	border-radius: $progress-border-radius;
 }	
+@if $progress-margin != 0 {
 	margin: $progress-margin;	
+}
 	background: $progress-back-color;	// Background color of the element (IE 10+ and Firefox).
 	color: $progress-fore-color;		// Foreground of the element (IE 10+).
 &::-webkit-progress-value {				// Foreground of the element (webkit browsers).
@@ -50,12 +52,77 @@ progress {
 // Variables:
 // - $progress-inline-name : The name of the class used for the inline progress.
 // - $progress-inline-width : The width of the inline progress.
-@mixin make-progress-inline($progress-inline-name, $progress-inline-width){
+@mixin make-progress-inline ($progress-inline-name, $progress-inline-width) {
 progress.#{$progress-inline-name} {
 	display: inline-block;
 	vertical-align: middle; 	// Align progress bar vertically to look better with text next to it.
 @if $progress-inline-width != 100% {
 	width: $progress-inline-width;
+}
+}
+}
+// Mixin for alternate progress (progress color variants).
+// Variables:
+// - $progress-alt-name : The name of the class used for the alternate progress.
+// - $progress-alt-fore-color : The progress bar color of the alternate progress.
+// - $progress-alt-back-color : (Optional) The background color of the alternate progress. Defaults to the background color of the progress.
+@mixin make-progress-alt-color ($progress-alt-name, $progress-alt-fore-color, $progress-alt-back-color: $progress-back-color) {
+progress.#{$progress-alt-name} {
+@if $progress-alt-back-color != $progress-back-color {
+  	background: $progress-alt-back-color; 	// Background color of the element (IE 10+ and Firefox).
+&::-webkit-progress-bar {					// Background of the element (webkit browsers).
+	background: $progress-alt-back-color;
+}
+}
+@if $progress-alt-fore-color != $progress-fore-color {
+  color: $progress-alt-fore-color;			// Foreground of the element (IE 10+).
+&::-webkit-progress-value {					// Foreground of the element (webkit browsers).
+	background: $progress-alt-fore-color;
+}
+&::-moz-progress-bar { 						// Foreground of the element (Firefox).
+	background: $progress-alt-fore-color;
+}
+}
+}
+}
+// Mixin for alternate progress styles.
+// Variables:
+// - $progress-alt-name : The name of the class used for the alternate progress style.
+// - $progress-alt-height : The height of the alternate progress style.
+// - $progress-alt-margin : (Optional) The margin of the alternate progress style. Defaults to the margin of the progress.
+// - $progress-alt-border-style : (Optional) The border style of the alternate progress style. Defaults to the border style of the progress.
+// - $progress-alt-border-radius : (Optional) The border radius of the alternate progress style. Defaults to the border radius of the progress.
+@mixin make-progress-alt-style ($progress-alt-name, $progress-alt-height, 
+	$progress-alt-margin: $progress-margin, $progress-alt-border-style: $progress-border-style, 
+	$progress-alt-border-radius: $progress-border-radius) {
+progress.#{$progress-alt-name} {
+@if $progress-alt-height != $progress-height {
+	height: $progress-alt-height;
+}
+@if $progress-alt-margin != $progress-margin {
+	margin: $progress-alt-margin;
+}
+@if $progress-alt-border-style != $progress-border-style {
+	border: $progress-alt-border-style;
+}
+@if progress-alt-border-radius != $progress-border-radius {
+	border-radius: $progress-alt-border-radius;
+&::-webkit-progress-value {
+	border-top-left-radius: $progress-alt-border-radius;
+	border-bottom-left-radius: $progress-alt-border-radius;
+}
+&::-moz-progress-bar {
+	border-top-left-radius: $progress-alt-border-radius;
+	border-bottom-left-radius: $progress-alt-border-radius;
+}
+&[value="100"] {
+&::-webkit-progress-value {
+	border-radius: $progress-alt-border-radius;
+}
+&::-moz-progress-bar {
+	border-radius: $progress-alt-border-radius;
+}
+}
 }
 }
 }

@@ -46,10 +46,12 @@
   <h3>I am a header with <mark class="bubble secondary">bubbles</mark> and <mark class="tag">tags</mark></h3>
   <p>I am a paragraph and I have a <a href="https://github.com/Chalarangelo/mini.css">link to the Github repo</a>.</p>
   <p>I have an <abbr title="Abra Kadabra Abbreviation Shazam!">Abra</abbr> to check the styling.</p>
-  <progress id="test-prog" value="25" max="100"></progress>
-  <progress></progress>
-  <br>
   <button onclick="document.getElementById('test-prog').setAttribute('value',parseInt(document.getElementById('test-prog').getAttribute('value'))+5);">Click me to advance progress bar</button> 
-  <p>I am a line of text with inline progress: <progress class="inline" value="15" max="100"></progress> Do you like me?</p>
+  <p>I am a line of text with inline progress: <progress class="inline" value="75" max="100"></progress> Do you like me?</p>
+  <progress id="test-prog" value="40" max="100"></progress>
+  <progress class="secondary" value="25" max="100"></progress>
+  <progress class="tertiary" value="60" max="100"></progress>
+  <br>
+  <progress class="nano" value="35" max="100" style="position: fixed; top:0; left:0;"></progress>
   </body>
 </html>

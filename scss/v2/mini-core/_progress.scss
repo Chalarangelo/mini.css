@@ -46,3 +46,16 @@ progress {
 }
 }
 }
+// Mixin for inline progress.
+// Variables:
+// - $progress-inline-name : The name of the class used for the inline progress.
+// - $progress-inline-width : The width of the inline progress.
+@mixin make-progress-inline($progress-inline-name, $progress-inline-width){
+progress.#{$progress-inline-name} {
+	display: inline-block;
+	vertical-align: middle; 	// Align progress bar vertically to look better with text next to it.
+@if $progress-inline-width != 100% {
+	width: $progress-inline-width;
+}
+}
+}

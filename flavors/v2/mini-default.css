@@ -316,3 +316,8 @@ mark.bubble {
   display: inline-block;
   border-radius: 200px;
   padding: 3px 5px; }
+
+progress.inline {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20em; }

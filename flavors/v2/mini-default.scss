@@ -105,15 +105,19 @@ $progress-back-color:			#f5f5f5;										// Background color for <progress>
 $progress-fore-color:			#01579b;										// Progress bar color for <progress>
 $progress-height:				10px;											// Height of <progress>
 $progress-border-style:			0;												// Border style for <progress>
-$progress-border-radius:		1px;												// Border radius for the <progress> container
+$progress-border-radius:		1px;											// Border radius for the <progress> container
 $progress-margin:				1px auto;										// Margin for <progress>
+$progress-inline-name:			'inline';										// Class name for inline <progress>
+$progress-inline-width:			20em;											// Width for inline <progress>
 //	Enable base
 @import '../../scss/v2/core';
-// Use mixins frm base
+// Use mixins for contextuals
 @include make-mark-alt-color($mark-variant1-name, $mark-variant1-back-color);
 @include make-mark-alt-color($mark-variant2-name, $mark-variant2-back-color);
 @include make-mark-alt-style($mark-style1-name, $mark-style1-border-radius, $mark-style1-padding);
 @include make-mark-alt-style($mark-style2-name, $mark-style2-border-radius, $mark-style2-padding);
+// Use mixins for progress
+@include make-progress-inline($progress-inline-name, $progress-inline-width);
 //	Notes:
 // [1] - It is recommended to set the value of $apply-defaults-to-all to `true`, unless you want to apply extra styling 
 //	to elements manually.

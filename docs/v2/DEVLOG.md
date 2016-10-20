@@ -126,3 +126,7 @@
 - `progress` element tweak added to work in IE 10+. Older browsers will probably default to their original display for the element. This is on intentional (Opera Mini is also not supported).
 - Changed conditions for `progress` styling, as the `[value]` attribute did not make a huge difference. Progress elements that do not have a `[value]` attribute will almost always cause trouble on some browsers, no matter what. Thus, it is suggested to set a `value="0"` if possible. Otherwise, Javascript shall be used.
 - Opened [question on StackOverflow](http://stackoverflow.com/questions/40149311/transition-for-progress-element-on-value-change) about transitions for progress bars.
+- Added mixin for `progress` bars that are inline `make-progress-inline` and used it to create `inline` class for `progress` elements.
+- Opinionated `vertical-aling: middle` for said mixin and `display: inline-block` to make sure everything works according to what it should.
+- `width` of said mixin's result is specified in `em` (`20em` specifically) to make sure it will work well on all screen and is dependent on text.
+- Optimized inline `progress` mixin.

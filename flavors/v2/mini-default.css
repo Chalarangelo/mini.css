@@ -68,8 +68,8 @@ hr {
   line-height: 1.2em;
   margin: 0.5em 4px;
   height: 1px;
-  background: linear-gradient(to right, #bdbdbd, #616161, #bdbdbd);
-  background: -webkit-linear-gradient(to right, #bdbdbd, #616161, #bdbdbd); }
+  background: -webkit-linear-gradient(to right, #bdbdbd, #616161, #bdbdbd);
+  background: linear-gradient(to right, #bdbdbd, #616161, #bdbdbd); }
 
 code, kbd, pre, samp {
   font-family: monospace, monospace; }
@@ -123,6 +123,24 @@ mark {
   font-size: 95%;
   line-height: 1;
   padding: 1px; }
+
+progress {
+  display: block;
+  vertical-align: baseline;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  width: 100%;
+  margin: 1px auto;
+  height: 10px;
+  background: yellow; }
+  progress[value]::-webkit-progress-value {
+    background: red; }
+  progress[value]::-webkit-progress-bar {
+    background: yellow; }
+  progress[value]::-moz-progress-bar {
+    background: red; }
 
 /**
  * 1. Change the font styles in all browsers (opinionated).
@@ -218,12 +236,6 @@ legend {
   /* 3 */
   white-space: normal;
   /* 1 */ }
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-  vertical-align: baseline; }
 
 /**
  * Remove the default vertical scrollbar in IE.

@@ -114,3 +114,9 @@
 - Moved fix for `svg` in IE at the top.
 - Added `TODO`s for other fixes.
 - Updated index page, probably broke the live version for a while.
+
+## 20161020
+
+- Added some more comments for enabling and disabling modules from core.
+- Browser-specific prefixed properties will now precede unprefixed ones. Changes have been applied.
+- Started styling `progress` bars in `mini-core/progess`.

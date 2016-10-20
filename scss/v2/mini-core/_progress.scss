@@ -1,0 +1,24 @@
+// Definitions for progress elements.
+// Progress elements use the progress element as their base.
+// Default styling for progress. Use mixins for alternate styles.
+progress {
+	display: block;
+	vertical-align: baseline;	// Correct vertical alignment in certain browsers.	
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	border: 0;
+	width: 100%;
+	margin: 1px auto;
+	height: 10px;
+	background: yellow;
+&[value]::-webkit-progress-value {
+	background: red;
+}
+&[value]::-webkit-progress-bar {
+	background: yellow;
+}
+&[value]::-moz-progress-bar {
+	background: red;
+}
+}

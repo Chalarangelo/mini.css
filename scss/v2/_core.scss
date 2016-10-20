@@ -1,4 +1,4 @@
-// SECTION: Browsers resets and base typography
+// SECTION: Browsers resets and base typography.
 //===================================================
 $apply-defaults-to-all: true !default;
 @if $apply-defaults-to-all {
@@ -114,8 +114,8 @@ hr {
 $horizontal-rule-fancy-style: false !default;
 @if $horizontal-rule-fancy-style {
   height: 1px;
-  background: linear-gradient(#{$horizontal-rule-fancy-gradient});
   background: -webkit-linear-gradient(#{$horizontal-rule-fancy-gradient});
+  background:         linear-gradient(#{$horizontal-rule-fancy-gradient});  
 }
 @else {   
   height: 0;
@@ -338,8 +338,9 @@ a{
 //===================================================
 // SECTION: External files.
 //===================================================
-// Contextual background elements.
+// You can comment out modules you do not want to use.
 @import 'mini-core/contextual';
+@import 'mini-core/progress';
 
 // TODO: Move to forms and buttons respectively
 
@@ -439,16 +440,6 @@ legend {
   max-width: 100%; /* 1 */
   padding: 0; /* 3 */
   white-space: normal; /* 1 */
-}
-
-// TODO: Move to progress module
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-  vertical-align: baseline;
 }
 
 /**

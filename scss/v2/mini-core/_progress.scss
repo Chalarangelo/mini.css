@@ -7,18 +7,42 @@ progress {
 	-webkit-appearance: none;
 	   -moz-appearance: none;
 	        appearance: none;
-	border: 0;
 	width: 100%;
-	margin: 1px auto;
-	height: 10px;
-	background: yellow;
-&[value]::-webkit-progress-value {
-	background: red;
+	height: $progress-height;
+	border: $progress-border-style;
+@if $progress-border-radius != 0 {
+	border-radius: $progress-border-radius;
+}	
+	margin: $progress-margin;	
+	background: $progress-back-color;	// Background color of the element (IE 10+ and Firefox).
+	color: $progress-fore-color;		// Foreground of the element (IE 10+).
+&::-webkit-progress-value {				// Foreground of the element (webkit browsers).
+	background: $progress-fore-color;
+@if $progress-border-radius != 0 {
+	border-top-left-radius: $progress-border-radius;
+	border-bottom-left-radius: $progress-border-radius;
 }
-&[value]::-webkit-progress-bar {
-	background: yellow;
 }
-&[value]::-moz-progress-bar {
-	background: red;
+&::-webkit-progress-bar {				// Background of the element (webkit browsers).
+	background: $progress-back-color;
+}
+&::-moz-progress-bar { 					// Foreground of the element (Firefox).
+	background: $progress-fore-color;
+@if $progress-border-radius != 0 {
+	border-top-left-radius: $progress-border-radius;
+	border-bottom-left-radius: $progress-border-radius;
+}
+}
+&[value="100"] {
+&::-webkit-progress-value {
+@if $progress-border-radius != 0 {
+	border-radius: $progress-border-radius;
+}
+}
+&::-moz-progress-bar {
+@if $progress-border-radius != 0 {
+	border-radius: $progress-border-radius;
+}
+}
 }
 }

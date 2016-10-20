@@ -76,6 +76,15 @@ $sup-font-size:					75%;											// Font size for <sup> elements
 $sub-font-size:					75%;											// Font size for <sub> elements
 $sup-top:						-0.5em;											// <sup> top
 $sub-bottom:					-0.25em;										// <sub> bottom
+$link-fore-color:				#0277bd;										// Text color for <a>
+$link-visited-fore-color:		#01579b;										// Text color for visited <a>
+$link-font-weight:				500;											// Font weight for <a>
+$apply-link-underline:			true;											// Should an underline be applied to all <a>
+																				// elements? (`true`/`false`) [8]
+$apply-link-hover-fade:			true;											// Should the :hover and :focus state of <a>
+																				// elements use fade-out instead of a different
+																				// color (`true`/`false`) [9]
+//$link-hover-fore-color:		#0288d1;										// Text color for <a> when hovered or focused
 $mark-back-color:				#0277bd;										// Background color for <mark>
 $mark-fore-color:				$back-color;									// Text color for <mark>
 $mark-font-size:				95%;											// Font size for <mark>
@@ -92,15 +101,12 @@ $mark-style1-padding:			2px;											// Padding for <mark> style 1
 $mark-style2-name:				'bubble';										// Class name for <mark> style 2
 $mark-style2-border-radius:		200px;											// Border radius for <mark> style 2
 $mark-style2-padding:			3px 5px;										// Padding for <mark> style 2	
-$link-fore-color:				#0277bd;										// Text color for <a>
-$link-visited-fore-color:		#01579b;										// Text color for visited <a>
-$link-font-weight:				500;											// Font weight for <a>
-$apply-link-underline:			true;											// Should an underline be applied to all <a>
-																				// elements? (`true`/`false`) [8]
-$apply-link-hover-fade:			true;											// Should the :hover and :focus state of <a>
-																				// elements use fade-out instead of a different
-																				// color (`true`/`false`) [9]
-//$link-hover-fore-color:		#0288d1;										// Text color for <a> when hovered or focused
+$progress-back-color:			#f5f5f5;										// Background color for <progress>
+$progress-fore-color:			#01579b;										// Progress bar color for <progress>
+$progress-height:				10px;											// Height of <progress>
+$progress-border-style:			0;												// Border style for <progress>
+$progress-border-radius:		1px;												// Border radius for the <progress> container
+$progress-margin:				1px auto;										// Margin for <progress>
 //	Enable base
 @import '../../scss/v2/core';
 // Use mixins frm base

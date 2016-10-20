@@ -120,3 +120,9 @@
 - Added some more comments for enabling and disabling modules from core.
 - Browser-specific prefixed properties will now precede unprefixed ones. Changes have been applied.
 - Started styling `progress` bars in `mini-core/progess`.
+- Since CSS3 transitions are supported unprefixed a lot and mostly older browsers use prefixes, no prefixed versions will be added. Apart from that, if the transitions do not play on older browsers, there will be no significant changes, meaning the experience will be less rich but functionally the same.
+- `progress` background set to `#f5f5f5` to achieve a very pale shadow effect. Some users might not see that color difference but that's ok.
+- `progress` foreground set to `#01579b` (dark blue from material palette).
+- `progress` element tweak added to work in IE 10+. Older browsers will probably default to their original display for the element. This is on intentional (Opera Mini is also not supported).
+- Changed conditions for `progress` styling, as the `[value]` attribute did not make a huge difference. Progress elements that do not have a `[value]` attribute will almost always cause trouble on some browsers, no matter what. Thus, it is suggested to set a `value="0"` if possible. Otherwise, Javascript shall be used.
+- Opened [question on StackOverflow](http://stackoverflow.com/questions/40149311/transition-for-progress-element-on-value-change) about transitions for progress bars.

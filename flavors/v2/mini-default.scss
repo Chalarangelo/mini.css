@@ -104,6 +104,38 @@ $apply-link-hover-fade:			true;											// Should the :hover and :focus state 
 //	color, as defined in $link-fore-color.
 // [9] - If `apply-link-hover-fade` is set to `true`, a fading transition will be used for the link when hovered over or
 //	focused. Otherwise, the color specified in $link-hover-fore-color will be used.
+//	Variables for grid elements
+$grid-container-name:			'container';									// Class name for the grid container
+$grid-container-side-padding:	10px;											// Padding for the grid container (left and right only)
+$grid-row-name:					'row';											// Class name for the grid's rows
+$grid-column-prefix:			'col';											// Class name prefix for the grid's columns
+$grid-column-offset-suffix:		'offset';										// Class name suffix for the grid's offsets
+$grid-column-count:				12;												// Number of columns in the grid (integer value only)
+$grid-column-padding:			0 4px;											// Padding for the columns of the grid
+$grid-extra-small-prefix:		'xs';											// Extra small screen class prefix for grid
+$grid-small-breakpoint:			768px;											// Small screen breakpoint for grid
+$grid-small-prefix:				'sm';											// Small screen class prefix for grid
+$grid-medium-breakpoint:		1024px;											// Medium screen breakpoint for grid
+$grid-medium-prefix:			'md';											// Medium screen class prefix for grid
+$grid-large-breakpoint:			1200px;											// Large screen breakpoint for grid
+$grid-large-prefix:				'lg';											// Large screen class prefix for grid
+//	Variables for responsive tables
+$table-border-style:			1px solid #bdbdbd;								// Border style for <table> and children
+$table-border-radius:			2px;											// Border radius for <table> and children
+$table-margin:					0 auto;											// Margin for <table>
+$table-caption-font-size:		1.5em;											// Font size for <caption>
+$table-caption-margin:			6px 0 12px;										// Margin for <caption>
+$table-row-padding:				6px;											// Padding for <tr> - both views
+$table-column-padding:			10px;											// Padding for <td> and <th> - desktop view
+$table-head-back-color:			#eceff1;										// Background color for <th>
+$table-mobile-breakpoint:		768px;											// Breakpoint for <table> mobile view
+$table-mobile-card-spacing:		10px;											// Space between <tr> cards - mobile view
+$table-mobile-card-label:		'data-label';									// Attribute used to replace column headers
+																				// in mobile view [1]
+$table-mobile-label-font-weight:$bold-font-weight;								// Font weight for mobile headers
+//	Notes:
+// [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
+//	in order for their mobile headers to display properly. 
 //	Variables for contextual background elements
 $mark-back-color:				#0277bd;										// Background color for <mark>
 $mark-fore-color:				$back-color;									// Text color for <mark>
@@ -139,21 +171,6 @@ $progress-style1-height:		2px;											// Height for <progress> style 1
 $progress-style1-margin:		0 auto 1px;										// Margin for <progress> style 1
 $progress-style1-border-style:	0;												// Border style for <progress> style 1
 $progress-style1-border-radius:	0;												// Border radius for <progress> style 1
-//	Variables for grid elements
-$grid-container-name:			'container';									// Class name for the grid container
-$grid-container-side-padding:	10px;											// Padding for the grid container (left and right only)
-$grid-row-name:					'row';											// Class name for the grid's rows
-$grid-column-prefix:			'col';											// Class name prefix for the grid's columns
-$grid-column-offset-suffix:		'offset';										// Class name suffix for the grid's offsets
-$grid-column-count:				12;												// Number of columns in the grid (integer value only)
-$grid-column-padding:			0 4px;											// Padding for the columns of the grid
-$grid-extra-small-prefix:		'xs';											// Extra small screen class prefix for grid
-$grid-small-breakpoint:			768px;											// Small screen breakpoint for grid
-$grid-small-prefix:				'sm';											// Small screen class prefix for grid
-$grid-medium-breakpoint:		1024px;											// Medium screen breakpoint for grid
-$grid-medium-prefix:			'md';											// Medium screen class prefix for grid
-$grid-large-breakpoint:			1200px;											// Large screen breakpoint for grid
-$grid-large-prefix:				'lg';											// Large screen class prefix for grid
 //	Enable base
 @import '../../scss/v2/core';
 //	Use mixins for contextual background elements

@@ -202,7 +202,7 @@
       <div class="row">
         <div class="col-xs">
           <div>
-            <p><strong>mini.css</strong> adds modern styles for many of the HTML elements.</p>
+            <p><strong>mini.css</strong> adds modern styles for many of the HTML elements.</p><br>
             <h3>Progress bars</h3>
             <p>The <code>&lt;progress&gt;</code> element is used for progress bars. There are three color variants (default, <code>secondary</code> and <code>tertiary</code>), as well as an <code>inline</code> class that displays the progress bar as an inline block, along with a <code>nano</code> variant for tiny progress bars. Below are some examples:</p>
             <br>
@@ -212,6 +212,46 @@
             <p>Inline progress: <progress value="85" max="100" class="inline"></progress></p>
             <p>Nano progress:</p>
             <progress class="nano" value="35" max="100"></progress>
+            <br>
+            <h3>Tables</h3>
+            <p>Tables are responsive and use the <code>data-label</code> attribute to specify the header name for each cell, so that they can be displayed as cards on mobile devices. Here's an example (resize to see mobile display if you are on desktop):</p>
+            <table>
+              <caption>Hacker List</caption>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Email</th>
+                  <th>Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+              </tbody>
+            </table>
             <br>
           </div>
         </div>

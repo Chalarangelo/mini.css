@@ -1,0 +1,71 @@
+// Definitions for the responsive table component.
+// The tables use the common table elements and syntax.
+// Desktop view.
+table {	
+	border-collapse: separate;
+	border-spacing: 0;
+	border: $table-border-style;
+	border-radius: $table-border-radius;
+	margin: $table-margin;
+	table-layout: fixed;
+}
+caption {
+	font-size: $table-caption-font-size;
+	margin: $table-caption-margin;
+}
+tr {
+	padding: $table-row-padding;
+}
+th, td {
+	padding: $table-column-padding;
+	border-left: $table-border-style;
+    border-top: $table-border-style;
+}
+th {
+	border-top: 0;
+	background: $table-head-back-color;
+}
+th:first-child, td:first-child{
+	border-left: 0;
+}
+// Mobile view.
+@media only screen and (max-width: #{$table-mobile-breakpoint}) {
+	table {
+		border-collapse: collapse;
+		border: 0;	
+		width: 100%;
+	}
+	thead {
+		border: 0;
+		height: 1px;
+		width: 1px;
+    	margin: -1px;
+    	overflow: hidden;
+    	padding: 0;
+    	position: absolute;	
+		// Accessibility (element is not visible, but screen readers read it normally)
+    	clip: rect(0 0 0 0);
+    	-webkit-clip-path: inset(100%);
+    	        clip-path: inset(100%);	
+	}
+	tr {
+		border: $table-border-style;
+		border-radius: $table-border-radius;
+    	display: block;
+    	margin-bottom: $table-mobile-card-spacing;
+	}
+	td {
+		border: 0;
+		border-bottom: $table-border-style;
+    	display: block;
+    	text-align: right;
+	}
+	td:before {
+		content: attr(#{$table-mobile-card-label});
+    	float: left;
+    	font-weight: $table-mobile-label-font-weight;
+	}
+	td:last-child {
+		border-bottom: 0;
+	}
+}

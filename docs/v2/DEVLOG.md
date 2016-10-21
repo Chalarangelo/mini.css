@@ -158,3 +158,7 @@
 - Added grid demo on live page.
 - Deployed live demo.
 - Added demo docs for progress bars.
+- Created `mini-core/table` to build the responsive table module.
+- Reorganized variables and imports in order of importance for core and default flavor.
+- Added table styling and responsiveness, made customizable etc.
+- Added demo table to page, tested.

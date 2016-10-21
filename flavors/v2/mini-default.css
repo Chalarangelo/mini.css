@@ -117,41 +117,6 @@ a {
   a:hover, a:focus, a:active {
     opacity: 0.75; }
 
-mark {
-  background: #0277bd;
-  color: #fafafa;
-  font-size: 95%;
-  line-height: 1;
-  padding: 1px; }
-
-progress {
-  display: block;
-  vertical-align: baseline;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 10px;
-  border: 0;
-  border-radius: 1px;
-  margin: 1px auto;
-  background: #f5f5f5;
-  color: #01579b; }
-  progress::-webkit-progress-value {
-    background: #01579b;
-    border-top-left-radius: 1px;
-    border-bottom-left-radius: 1px; }
-  progress::-webkit-progress-bar {
-    background: #f5f5f5; }
-  progress::-moz-progress-bar {
-    background: #01579b;
-    border-top-left-radius: 1px;
-    border-bottom-left-radius: 1px; }
-  progress[value="100"]::-webkit-progress-value {
-    border-radius: 1px; }
-  progress[value="100"]::-moz-progress-bar {
-    border-radius: 1px; }
-
 .container {
   margin: 0 auto;
   padding: 0 10px; }
@@ -621,6 +586,105 @@ progress {
 
   .col-lg-offset-11 {
     margin-left: 91.66667%; } }
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #bdbdbd;
+  border-radius: 2px;
+  margin: 0 auto;
+  table-layout: fixed; }
+
+caption {
+  font-size: 1.5em;
+  margin: 6px 0 12px; }
+
+tr {
+  padding: 6px; }
+
+th, td {
+  padding: 10px;
+  border-left: 1px solid #bdbdbd;
+  border-top: 1px solid #bdbdbd; }
+
+th {
+  border-top: 0;
+  background: #eceff1; }
+
+th:first-child, td:first-child {
+  border-left: 0; }
+
+@media only screen and (max-width: 768px) {
+  table {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%; }
+
+  thead {
+    border: 0;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%); }
+
+  tr {
+    border: 1px solid #bdbdbd;
+    border-radius: 2px;
+    display: block;
+    margin-bottom: 10px; }
+
+  td {
+    border: 0;
+    border-bottom: 1px solid #bdbdbd;
+    display: block;
+    text-align: right; }
+
+  td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 700; }
+
+  td:last-child {
+    border-bottom: 0; } }
+mark {
+  background: #0277bd;
+  color: #fafafa;
+  font-size: 95%;
+  line-height: 1;
+  padding: 1px; }
+
+progress {
+  display: block;
+  vertical-align: baseline;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border: 0;
+  border-radius: 1px;
+  margin: 1px auto;
+  background: #f5f5f5;
+  color: #01579b; }
+  progress::-webkit-progress-value {
+    background: #01579b;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px; }
+  progress::-webkit-progress-bar {
+    background: #f5f5f5; }
+  progress::-moz-progress-bar {
+    background: #01579b;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px; }
+  progress[value="100"]::-webkit-progress-value {
+    border-radius: 1px; }
+  progress[value="100"]::-moz-progress-bar {
+    border-radius: 1px; }
+
 /**
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.

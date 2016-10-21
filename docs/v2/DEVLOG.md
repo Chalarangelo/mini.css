@@ -153,3 +153,4 @@
 - Added definitions for small screen sizes, optimized, test on local demo.
 - Added definitions for medium and large screen sizes, optimized and tested locally.
 - Updated grid definitions to add `$grid-column-padding` so that users can customize the padding for columns.
+- Rebuilt demo page from scratch for version 2, added a lot of nice styles etc.

@@ -282,6 +282,119 @@ progress {
 .col-xs-offset-11 {
   margin-left: 91.66667%; }
 
+@media only screen and (min-width: 768px) {
+  .col-sm,
+  [class^='col-sm-'],
+  [class^='col-sm-offset-'] {
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 0 4px; }
+
+  .col-sm {
+    -webkit-box-flex: 1;
+    max-width: 100%;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 0;
+    flex-basis: 0; }
+
+  .col-sm-1 {
+    max-width: 8.33333%;
+    -webkit-flex-basis: 8.33333%;
+    flex-basis: 8.33333%; }
+
+  .col-sm-2 {
+    max-width: 16.66667%;
+    -webkit-flex-basis: 16.66667%;
+    flex-basis: 16.66667%; }
+
+  .col-sm-3 {
+    max-width: 25%;
+    -webkit-flex-basis: 25%;
+    flex-basis: 25%; }
+
+  .col-sm-4 {
+    max-width: 33.33333%;
+    -webkit-flex-basis: 33.33333%;
+    flex-basis: 33.33333%; }
+
+  .col-sm-5 {
+    max-width: 41.66667%;
+    -webkit-flex-basis: 41.66667%;
+    flex-basis: 41.66667%; }
+
+  .col-sm-6 {
+    max-width: 50%;
+    -webkit-flex-basis: 50%;
+    flex-basis: 50%; }
+
+  .col-sm-7 {
+    max-width: 58.33333%;
+    -webkit-flex-basis: 58.33333%;
+    flex-basis: 58.33333%; }
+
+  .col-sm-8 {
+    max-width: 66.66667%;
+    -webkit-flex-basis: 66.66667%;
+    flex-basis: 66.66667%; }
+
+  .col-sm-9 {
+    max-width: 75%;
+    -webkit-flex-basis: 75%;
+    flex-basis: 75%; }
+
+  .col-sm-10 {
+    max-width: 83.33333%;
+    -webkit-flex-basis: 83.33333%;
+    flex-basis: 83.33333%; }
+
+  .col-sm-11 {
+    max-width: 91.66667%;
+    -webkit-flex-basis: 91.66667%;
+    flex-basis: 91.66667%; }
+
+  .col-sm-12 {
+    max-width: 100%;
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%; }
+
+  .col-sm-offset-0 {
+    margin-left: 0; }
+
+  .col-sm-offset-1 {
+    margin-left: 8.33333%; }
+
+  .col-sm-offset-2 {
+    margin-left: 16.66667%; }
+
+  .col-sm-offset-3 {
+    margin-left: 25%; }
+
+  .col-sm-offset-4 {
+    margin-left: 33.33333%; }
+
+  .col-sm-offset-5 {
+    margin-left: 41.66667%; }
+
+  .col-sm-offset-6 {
+    margin-left: 50%; }
+
+  .col-sm-offset-7 {
+    margin-left: 58.33333%; }
+
+  .col-sm-offset-8 {
+    margin-left: 66.66667%; }
+
+  .col-sm-offset-9 {
+    margin-left: 75%; }
+
+  .col-sm-offset-10 {
+    margin-left: 83.33333%; }
+
+  .col-sm-offset-11 {
+    margin-left: 91.66667%; } }
 /**
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.

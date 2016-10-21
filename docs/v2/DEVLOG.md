@@ -144,4 +144,7 @@
 - Opened relevant breaking changes issue (#16).
 - Opened issue for `progress` element's transitions on value change.
 - Started project for feature backlog on Github.
-- Created basis for gird system container (fluid only).
+- Created basis for grid system container (fluid only) - `grid`.
+- Read a lot of the spec, decided on browser support, coded the `row` basis for the grid system.
+- Updated breaking changes issue with more information.
+- Added some comments and moved the notes in the flavor file.

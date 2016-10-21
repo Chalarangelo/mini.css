@@ -142,6 +142,7 @@ $progress-style1-border-radius:	0;												// Border radius for <progress> st
 //	Variables for grid elements
 $grid-container-name:			'container';									// Class name for the grid container
 $grid-container-side-padding:	20px;											// Padding for the grid container (left and right only)
+$grid-row-name:					'row';											// Class name for the grid's rows
 //	Enable base
 @import '../../scss/v2/core';
 //	Use mixins for contextual background elements

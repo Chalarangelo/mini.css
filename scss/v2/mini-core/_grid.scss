@@ -7,3 +7,19 @@ $grid-side-padding:
 	margin: 0 auto;
 	padding: 0 $grid-side-padding;
 }
+$grid-row-name:					'row' !default;									// Class name for the grid system rows
+.#{$grid-row-name} {
+  box-sizing: border-box;
+// Old syntax
+  display: -webkit-box;
+  -webkit-box-flex: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+// New syntax
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-flex-flow: row wrap;
+          flex-flow: row wrap;
+}

@@ -1,0 +1,9 @@
+// Definitions for the grid system.
+// The grid system uses the flexbox module, meaning it might be incompatible with certain browsers.
+$grid-container-name:			'container' !default;							// Class name for the grid system container
+$grid-side-padding:				
+// Fluid grid system container definition.
+.#{$grid-container-name} {
+	margin: 0 auto;
+	padding: 0 $grid-side-padding;
+}

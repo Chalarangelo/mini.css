@@ -136,3 +136,12 @@
 - Created mixin `make-progress-alt-style` for style variants of `progress`.
 - Created `nano` variant for `progress` (nanobar progress) using above mixin.
 - Documented mixins for `progress`, optimized etc.
+
+
+## 20161021
+
+- Created `mini-core/grid` for flexbox grid system.
+- Opened relevant breaking changes issue (#16).
+- Opened issue for `progress` element's transitions on value change.
+- Started project for feature backlog on Github.
+- Created basis for gird system container (fluid only).

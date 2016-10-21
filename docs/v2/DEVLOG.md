@@ -157,3 +157,4 @@
 - Updated the edges of the favicon.
 - Added grid demo on live page.
 - Deployed live demo.
+- Added demo docs for progress bars.

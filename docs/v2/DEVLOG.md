@@ -148,3 +148,5 @@
 - Read a lot of the spec, decided on browser support, coded the `row` basis for the grid system.
 - Updated breaking changes issue with more information.
 - Added some comments and moved the notes in the flavor file.
+- Added set of variables for class names, prefixes, columns, breakpoints etc for grid system.
+- Added definitions for extra small screen sizes, using loops etc. Optimized accordingly, tested on local demo.

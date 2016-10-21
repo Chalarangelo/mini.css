@@ -1,25 +1,80 @@
 // Definitions for the grid system.
 // The grid system uses the flexbox module, meaning it might be incompatible with certain browsers.
 $grid-container-name:			'container' !default;							// Class name for the grid system container
-$grid-side-padding:				
+$grid-container-side-padding:	20px !default;									// Padding for the grid container (left and right only)
 // Fluid grid system container definition.
 .#{$grid-container-name} {
 	margin: 0 auto;
-	padding: 0 $grid-side-padding;
+	padding: 0 $grid-container-side-padding;
 }
+// Grid row definition.
 $grid-row-name:					'row' !default;									// Class name for the grid system rows
 .#{$grid-row-name} {
-  box-sizing: border-box;
+	box-sizing: border-box;
 // Old syntax
-  display: -webkit-box;
-  -webkit-box-flex: 0;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
+	display: -webkit-box;
+	-webkit-box-flex: 0;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
 // New syntax
-  display: -webkit-flex;
-  display:         flex;
-  -webkit-flex: 0 1 auto;
-          flex: 0 1 auto;
-  -webkit-flex-flow: row wrap;
-          flex-flow: row wrap;
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-flex: 0 1 auto;
+	        flex: 0 1 auto;
+	-webkit-flex-flow: row wrap;
+            flex-flow: row wrap;
 }
+$grid-column-prefix:			'col' !default;									// Class name prefix for the grid's columns
+$grid-column-offset-suffix:		'offset' !default;								// Class name suffix for the grid's offsets
+$grid-column-count:				12 !default;									// Number of columns in the grid (integer value only)
+$grid-extra-small-prefix:		'xs' !default;									// Extra small screen class prefix for grid
+$grid-small-breakpoint:			768px !default;									// Small screen breakpoint for grid
+$grid-small-prefix:				'sm' !default;									// Small screen class prefix for grid
+$grid-medium-breakpoint:		1024px !default;								// Medium screen breakpoint for grid
+$grid-medium-prefix:			'md' !default;									// Medium screen class prefix for grid
+$grid-large-breakpoint:			1200px !default;								// Large screen breakpoint for grid
+$grid-large-prefix:				'lg' !default;									// Large screen class prefix for grid
+// Grid column generic definitions for extra small screens.
+.#{$grid-column-prefix}-#{$grid-extra-small-prefix}, 
+[class^='#{$grid-column-prefix}-#{$grid-extra-small-prefix}-'], 
+[class^='#{$grid-column-prefix}-#{$grid-extra-small-prefix}-#{$grid-column-offset-suffix}-'] {
+	box-sizing: border-box;
+// Old syntax
+	-webkit-box-flex: 0;
+// New syntax	
+	-webkit-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	padding: 0 4px;
+}
+// Grid column specific definition for flexible column.
+.#{$grid-column-prefix}-#{$grid-extra-small-prefix} {
+// Old syntax
+	-webkit-box-flex: 1;
+	max-width: 100%;
+// New syntax
+	-webkit-flex-grow: 1;
+	        flex-grow: 1;
+	-webkit-flex-basis: 0;
+	        flex-basis: 0;
+}
+// Grid column specific definitions for predefined columns.
+@for $i from 1 through $grid-column-count {
+.#{$grid-column-prefix}-#{$grid-extra-small-prefix}-#{$i} {
+// Old syntax
+	max-width: #{($i * 100% / $grid-column-count)};
+// New syntax
+	-webkit-flex-basis: #{($i * 100% / $grid-column-count)};
+	        flex-basis: #{($i * 100% / $grid-column-count)};
+}
+}
+// Grid column specific definitions for offset columns.
+@for $i from 0 through ($grid-column-count - 1) {
+.#{$grid-column-prefix}-#{$grid-extra-small-prefix}-#{$grid-column-offset-suffix}-#{$i} {
+@if $i == 0 {
+	margin-left: 0;
+}
+@else {
+	margin-left: #{($i * 100% / $grid-column-count)};
+}
+}
+}	

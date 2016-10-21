@@ -27,13 +27,8 @@ $grid-row-name:					'row' !default;									// Class name for the grid system ro
 $grid-column-prefix:			'col' !default;									// Class name prefix for the grid's columns
 $grid-column-offset-suffix:		'offset' !default;								// Class name suffix for the grid's offsets
 $grid-column-count:				12 !default;									// Number of columns in the grid (integer value only)
+$grid-column-padding:			0 4px !default;									// Padding for the columns of the grid
 $grid-extra-small-prefix:		'xs' !default;									// Extra small screen class prefix for grid
-$grid-small-breakpoint:			768px !default;									// Small screen breakpoint for grid
-$grid-small-prefix:				'sm' !default;									// Small screen class prefix for grid
-$grid-medium-breakpoint:		1024px !default;								// Medium screen breakpoint for grid
-$grid-medium-prefix:			'md' !default;									// Medium screen class prefix for grid
-$grid-large-breakpoint:			1200px !default;								// Large screen breakpoint for grid
-$grid-large-prefix:				'lg' !default;									// Large screen class prefix for grid
 // Grid column generic definitions for extra small screens.
 .#{$grid-column-prefix}-#{$grid-extra-small-prefix}, 
 [class^='#{$grid-column-prefix}-#{$grid-extra-small-prefix}-'], 
@@ -44,7 +39,7 @@ $grid-large-prefix:				'lg' !default;									// Large screen class prefix for g
 // New syntax	
 	-webkit-flex: 0 0 auto;
 	        flex: 0 0 auto;
-	padding: 0 4px;
+	padding: $grid-column-padding;
 }
 // Grid column specific definition for flexible column.
 .#{$grid-column-prefix}-#{$grid-extra-small-prefix} {
@@ -78,7 +73,8 @@ $grid-large-prefix:				'lg' !default;									// Large screen class prefix for g
 }
 }
 }	
-
+$grid-small-breakpoint:			768px !default;									// Small screen breakpoint for grid
+$grid-small-prefix:				'sm' !default;									// Small screen class prefix for grid
 // Small screen breakpoint.
 @media only screen and (min-width: #{$grid-small-breakpoint}){
 // Grid column generic definitions for small screens.
@@ -91,7 +87,7 @@ $grid-large-prefix:				'lg' !default;									// Large screen class prefix for g
 // New syntax	
 	-webkit-flex: 0 0 auto;
 	        flex: 0 0 auto;
-	padding: 0 4px;
+	padding: $grid-column-padding;
 }
 // Grid column specific definition for flexible column.
 .#{$grid-column-prefix}-#{$grid-small-prefix} {
@@ -126,7 +122,8 @@ $grid-large-prefix:				'lg' !default;									// Large screen class prefix for g
 }
 }
 }
-
+$grid-medium-breakpoint:		1024px !default;								// Medium screen breakpoint for grid
+$grid-medium-prefix:			'md' !default;									// Medium screen class prefix for grid
 // Medium screen breakpoint.
 @media only screen and (min-width: #{$grid-medium-breakpoint}){
 // Grid column generic definitions for medium screens.
@@ -139,7 +136,7 @@ $grid-large-prefix:				'lg' !default;									// Large screen class prefix for g
 // New syntax	
 	-webkit-flex: 0 0 auto;
 	        flex: 0 0 auto;
-	padding: 0 4px;
+	padding: $grid-column-padding;
 }
 // Grid column specific definition for flexible column.
 .#{$grid-column-prefix}-#{$grid-medium-prefix} {
@@ -174,7 +171,8 @@ $grid-large-prefix:				'lg' !default;									// Large screen class prefix for g
 }
 }
 }
-
+$grid-large-breakpoint:			1200px !default;								// Large screen breakpoint for grid
+$grid-large-prefix:				'lg' !default;									// Large screen class prefix for grid
 // Large screen breakpoint.
 @media only screen and (min-width: #{$grid-large-breakpoint}){
 // Grid column generic definitions for large screens.
@@ -187,7 +185,7 @@ $grid-large-prefix:				'lg' !default;									// Large screen class prefix for g
 // New syntax	
 	-webkit-flex: 0 0 auto;
 	        flex: 0 0 auto;
-	padding: 0 4px;
+	padding: $grid-column-padding;
 }
 // Grid column specific definition for flexible column.
 .#{$grid-column-prefix}-#{$grid-large-prefix} {

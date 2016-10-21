@@ -8,10 +8,10 @@
     <meta name="keywords" content="mini, mini.css, CSS, responsive, framework, mobile first, style agnostic, Sass">
     <meta name="author" content="Angelos Chalaris (chalarangelo)">
     <link rel="icon" type="image/png" href="favicon.png">
-    <!-- Live demo styled as of commit 42817a3 (20161014) -->
-    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/9f771efecf44e0600e2359690be260181aad8290/flavors/v2/mini-default.min.css"> -->
-    <link rel="stylesheet" href="../../flavors/v2/mini-default.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- Live demo styled as of 20161021 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/a97fea6596ae4692eb019b19877e4f3a1fc5f3d0/flavors/v2/mini-default.min.css">
+    <link rel="stylesheet" href="../../flavors/v2/mini-default.css">   
     <style>
       #top-logo {
         display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
@@ -24,6 +24,7 @@
         padding: 3px 5px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
       }
       .box-centered { text-align: center; }
+      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
     </style>
   </head>
   <body>  
@@ -76,7 +77,7 @@
       <div class="row">
         <div class="col-xs">
           <div>
-            <h2>Typography <small>Style for common textual elements</small></h2>
+            <h2>Typography <small>Styles for common textual elements</small></h2>
           </div>
         </div>
       </div>
@@ -117,71 +118,79 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-xs">
+          <div>
+            <hr>
+            <h2>Grid system <small>Easy layout using flexbox</small></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <div>
+            <p><strong>mini.css</strong> uses the Flexible Layout Module (commonly known as <code>flexbox</code>) to create a grid system for easy page layout. The grid system is not the most feature-rich one, but it contains all the essential components. The <code>container</code> of the grid is fluid by default, meaning it will adjust to fill its parent container. Rows are easily created using the <code>row</code> class and columns can be created using the usual <code>col-SZ-XX</code> syntax where <code>SZ</code> and <code>XX</code> are replaced by a screen size and a number of vertical columns respectively. Columns can also scale themselves automatically if you omit the number of vertical columns in the class name. Similarly, you can use offsets with the <code>col-SZ-offset-XX</code> syntax. The <strong>default</strong> grid is separated into 12 vertical columns. You can see some examples below.</p><br>
+          </p></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-xs-6">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-7">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-xs-5">
+                <div class="box-colored"></div>
+              </div>
+            </div> 
+            <div class="row">
+              <div class="col-xs-2">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-xs-4">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-xs-6">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-xs-offset-3">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4 col-xs-offset-2">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-xs-4">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-3 col-xs-offset-1">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-xs-2 col-xs-offset-3">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-xs">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
     </div>
-
-
-  <!-- span style="text-align: center;">
-  <img src="mini-logo.svg" style="display: block; height: 80px; width: 84px; margin: 10px auto -14px; background: #558b2f; border-radius: 6px; padding: 8px; padding-top: 12px;">
-  <h1>mini.css v2.0 - <span style="color: #558b2f; line-height: 1em;">Fermion</span><small>Minimal responsive style-agnostic front end framework</small></h1>
-  <p style="margin-top: -1em;">
-    <a class="github-button" href="https://github.com/chalarangelo/mini.css" data-icon="octicon-eye" data-count-href="/chalarangelo/mini.css/watchers" data-count-api="/repos/chalarangelo/mini.css#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch chalarangelo/mini.css on GitHub">Watch</a>
-    <a class="github-button" href="https://github.com/chalarangelo/mini.css" data-icon="octicon-star" data-count-href="/chalarangelo/mini.css/stargazers" data-count-api="/repos/chalarangelo/mini.css#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star chalarangelo/mini.css on GitHub">Star</a>
-    <a class="github-button" href="https://github.com/chalarangelo/mini.css/fork" data-icon="octicon-repo-forked" data-count-href="/chalarangelo/mini.css/network" data-count-api="/repos/chalarangelo/mini.css#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork chalarangelo/mini.css on GitHub">Fork</a>
-  </p></span>
-  <hr>
-
-  <p><strong>v2.0</strong> is currently in development. The following page and any related links are going to be incomplete, buggy and/or unstable. But, if you are interested in seeing what it will look like, have a peek!</p>
-  <h1>Heading 1 <small>small text</small></h1>
-  <h2>Heading 2 <small>small text</small></h2>
-  <h3>Heading 3 <small>small text</small></h3>
-  <h4>Heading 4 <small>small text</small></h4>
-  <h5>Heading 5 <small>small text</small></h5>
-  <h6>Heading 6 <small>small text</small></h6>
-  <hr>
-  <p>This is some text with an inline block of <code>code</code>.</p>
-  <p>This is some text with an inline block of <kbd>input</kbd>.</p>
-  <p>Preformatted block of code:</p>
-  <pre>Line 1 {
-    Stuff here....
-}</pre>
-  <hr>
-  <p>This is some text with <small>small text</small>, superscript<sup>12</sup> and subscript<sub>4</sub>. Oh, I am a <mark>primary mark</mark> and I am a <mark class="secondary">secondary mark</mark> and I am a <mark class="tertiary">tertiary mark</mark>.</p>
-  <p>Tag marks are like this: <mark class="tag">primary mark</mark>, <mark class="tag secondary">secondary mark</mark>, <mark class="tag tertiary">tertiary mark</mark>.</p>
-  <p>Bubble marks are like this: <mark class="bubble">primary mark</mark>, <mark class="bubble secondary">secondary mark</mark>, <mark class="bubble tertiary">tertiary mark</mark>.</p>
-  <h3>I am a header with <mark class="bubble secondary">bubbles</mark> and <mark class="tag">tags</mark></h3>
-  <p>I am a paragraph and I have a <a href="https://github.com/Chalarangelo/mini.css">link to the Github repo</a>.</p>
-  <p>I have an <abbr title="Abra Kadabra Abbreviation Shazam!">Abra</abbr> to check the styling.</p>
-  <button onclick="document.getElementById('test-prog').setAttribute('value',parseInt(document.getElementById('test-prog').getAttribute('value'))+5);">Click me to advance progress bar</button> 
-  <p>I am a line of text with inline progress: <progress class="inline" value="75" max="100"></progress> Do you like me?</p>
-  <progress id="test-prog" value="40" max="100"></progress>
-  <progress class="secondary" value="25" max="100"></progress>
-  <progress class="tertiary" value="60" max="100"></progress>
-  <br>
-  <progress class="nano" value="35" max="100" style="position: fixed; top:0; left:0;"></progress>
-  <style>.box-row { border: 1px solid black; border-radius: 2px; }</style>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs col-sm-2 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg">
-        <div class="box-row">col-xs</div>
-      </div>
-      <div class="col-xs-2 col-sm col-md col-lg">
-        <div class="box-row">col-xs-2</div>
-      </div>
-      <div class="col-xs-3 col-xs-offset-1 col-sm col-sm-offset-0 col-md col-lg-7">
-        <div class="box-row">col-xs-3 col-xs-offset-1</div>
-      </div>
-      <div class="col-xs col-sm-6 col-md col-lg">
-        <div class="box-row">col-xs</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs col-sm-5 col-md col-md-offset-1 col-lg col-lg-offset-2">
-        <div class="box-row">col-xs: The first JavaScript engine. Coffeescript is a JavaScript program could then interrogate and manipulate to dynamically generate Web pages. The name is by far the most common host environment. JavaScript programmers. Facebook for building user interfaces. </div>
-      </div>
-      <div class="col-xs col-sm-5 col-sm-offset-2 col-md col-md-offset-1 col-lg col-lg-offset-2">
-        <div class="box-row">col-xs: I/O, such as Self and Scheme. Javascript NoSQL database. AngularJS, and Node. ECMAScript 3 compliant. Coffeescript is a package manager for front-end dependencies. JSX is an assertion library used with a JavaScript checker and optimizer. PhantomJS is a community-driven attempt at explaining the loads of buzzwords making the current JavaScript ecosystem in a few simple words. ECMAScript ES is the standardized specification of the desired DOM is a software design pattern used to speed up the setup and installation process of a function that gets called immediately after declaration Jasmine is a JavaScript web framework that allows rapid prototypic web development. LocalForage is a structural framework for dynamic web apps. ECMAScript language specification. JavaScript ecosystem in a user's browser rather than on a Web form to make it happen. The name is by analogy to an architectural facade. ES is the only language that the *revealing module pattern* was engineered as a way to ensure that all methods and variables are kept private until they are explicitly exposed. SJSJ is a generator builder to speed up consecutive function calls by caching the result of calls with identical input.</div>
-      </div>
-    </div>
-  </div> -->
   </body>
 </html>

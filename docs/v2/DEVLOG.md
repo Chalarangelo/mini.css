@@ -154,3 +154,6 @@
 - Added definitions for medium and large screen sizes, optimized and tested locally.
 - Updated grid definitions to add `$grid-column-padding` so that users can customize the padding for columns.
 - Rebuilt demo page from scratch for version 2, added a lot of nice styles etc.
+- Updated the edges of the favicon.
+- Added grid demo on live page.
+- Deployed live demo.

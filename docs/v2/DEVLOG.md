@@ -151,3 +151,4 @@
 - Added set of variables for class names, prefixes, columns, breakpoints etc for grid system.
 - Added definitions for extra small screen sizes, using loops etc. Optimized accordingly, tested on local demo.
 - Added definitions for small screen sizes, optimized, test on local demo.
+- Added definitions for medium and large screen sizes, optimized and tested locally.

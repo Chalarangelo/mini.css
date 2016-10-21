@@ -632,15 +632,15 @@ th:first-child, td:first-child {
     clip-path: inset(100%); }
 
   tr {
+    display: block;
     border: 1px solid #bdbdbd;
     border-radius: 2px;
-    display: block;
     margin-bottom: 10px; }
 
   td {
+    display: block;
     border: 0;
     border-bottom: 1px solid #bdbdbd;
-    display: block;
     text-align: right; }
 
   td:before {

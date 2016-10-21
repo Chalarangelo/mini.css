@@ -138,7 +138,7 @@
 - Documented mixins for `progress`, optimized etc.
 
 
-## 20161021
+## 20161021 (last change a bit past midnight but still counts)
 
 - Created `mini-core/grid` for flexbox grid system.
 - Opened relevant breaking changes issue (#16).
@@ -162,3 +162,5 @@
 - Reorganized variables and imports in order of importance for core and default flavor.
 - Added table styling and responsiveness, made customizable etc.
 - Added demo table to page, tested.
+- Minor consistency reorganization in table module.
+- Updated demo page, deployed live.

@@ -49,15 +49,15 @@ th:first-child, td:first-child{
     	        clip-path: inset(100%);	
 	}
 	tr {
+		display: block;
 		border: $table-border-style;
-		border-radius: $table-border-radius;
-    	display: block;
+		border-radius: $table-border-radius;  	
     	margin-bottom: $table-mobile-card-spacing;
 	}
 	td {
+		display: block;
 		border: 0;
-		border-bottom: $table-border-style;
-    	display: block;
+		border-bottom: $table-border-style;	
     	text-align: right;
 	}
 	td:before {

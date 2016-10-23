@@ -1,0 +1,25 @@
+// Definitions for the button and button-like elements.
+// Different elements are styled based on the same set of rules.
+// Reset for Firefox focusing on button elements.
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+// Fixes for Android 4, iOS and Safari.
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+// Other fixes
+button {
+	overflow: visible;	// Show the overflow in IE.
+	text-transform: none;	// Remove inheritance of text-transform in Edge, Firefox, and IE.
+}
+// TODO: Test and see if these are needed etc.
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; // 1
+  font: inherit; // 2
+}

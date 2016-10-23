@@ -164,3 +164,14 @@
 - Added demo table to page, tested.
 - Minor consistency reorganization in table module.
 - Updated demo page, deployed live.
+
+## 20161023
+
+- Removed `table-layout: fixed;` from tables.
+- Added `mini-core/button` and started testing button styling.
+- Removed the reset for `:-moz-focusring` (`outline: 1px dotted ButtonText`) for buttons as it was unnecessary and didn't look great.
+- Moved fix for `::-moz-focus-inner` to the `button` module.
+- Moved generic fix for Android, iOS and Safari to `button` module.
+- Removed generic styling reset for `button`, `input`, `optgroup`, `select` and `textarea` based on the fact that the styles are already applied in the first rule `html, *`.
+- Split some fixes into generic and button-specific.
+- Moved `::-webkit-file-upload-button` fixes to the `button` module.

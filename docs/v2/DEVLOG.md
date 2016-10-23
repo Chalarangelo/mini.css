@@ -177,3 +177,4 @@
 - Moved `::-webkit-file-upload-button` fixes to the `button` module.
 - Proof-of-concept for `button` module defaults and core, file input is not styled yet (will be done via label hack).
 - *TODO* Softcode the `button` module's defaults, add extra styles, classes etc.
+- Deployed live demo with hardcoded buttons to test.

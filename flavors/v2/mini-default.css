@@ -722,11 +722,6 @@ button, [type="button"], [type="submit"], [type="reset"] {
     cursor: not-allowed;
     opacity: 0.65; }
 
-[type="file"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
-
 /**
  * Remove the inheritance of text transform in Firefox.
  */

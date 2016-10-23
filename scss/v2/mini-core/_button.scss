@@ -45,8 +45,3 @@ button, [type="button"], [type="submit"], [type="reset"]{
 }
 // TODO: Build "file" input. (many browsers use `::-webkit-file-upload-button` making it easier to style possibly).
 //	Firefox and IE will default to `[type="file"]` so there needs to be a solution for that (labels?).
-[type="file"] {
-	-webkit-appearance: none;
-	   -moz-appearance: none;
-	        appearance: none;
-}

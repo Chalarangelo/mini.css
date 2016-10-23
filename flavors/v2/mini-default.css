@@ -706,6 +706,27 @@ button {
   -webkit-appearance: button;
   font: inherit; }
 
+button, [type="button"], [type="submit"], [type="reset"] {
+  display: inline-block;
+  background: rgba(207, 216, 220, 0.75);
+  color: #212121;
+  border: 0;
+  padding: 4px 6px;
+  margin: 4px;
+  border-radius: 2px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer; }
+  button:hover, button:active, button:focus, [type="button"]:hover, [type="button"]:active, [type="button"]:focus, [type="submit"]:hover, [type="submit"]:active, [type="submit"]:focus, [type="reset"]:hover, [type="reset"]:active, [type="reset"]:focus {
+    background: #cfd8dc; }
+  button:disabled, button[disabled], [type="button"]:disabled, [type="button"][disabled], [type="submit"]:disabled, [type="submit"][disabled], [type="reset"]:disabled, [type="reset"][disabled] {
+    cursor: not-allowed;
+    opacity: 0.65; }
+
+[type="file"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
 /**
  * Remove the inheritance of text transform in Firefox.
  */

@@ -175,3 +175,5 @@
 - Removed generic styling reset for `button`, `input`, `optgroup`, `select` and `textarea` based on the fact that the styles are already applied in the first rule `html, *`.
 - Split some fixes into generic and button-specific.
 - Moved `::-webkit-file-upload-button` fixes to the `button` module.
+- Proof-of-concept for `button` module defaults and core, file input is not styled yet (will be done via label hack).
+- *TODO* Softcode the `button` module's defaults, add extra styles, classes etc.

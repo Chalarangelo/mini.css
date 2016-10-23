@@ -9,7 +9,7 @@ button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-mo
 button, html [type="button"], [type="reset"], [type="submit"] {
   -webkit-appearance: button;
 }
-// Other fixes
+// Other fixes.
 button {
 	overflow: visible;	// Show the overflow in IE.
 	text-transform: none;	// Remove inheritance of text-transform in Edge, Firefox, and IE.
@@ -22,4 +22,31 @@ button {
 ::-webkit-file-upload-button {
   -webkit-appearance: button; // 1
   font: inherit; // 2
+}
+// Default styling
+// TODO: Add '.button' class for other elements and 'a.button' rule on its own to make some custom link styles.
+button, [type="button"], [type="submit"], [type="reset"]{
+	display: inline-block;
+	background: rgba(#cfd8dc, 0.75);
+	color: #212121;
+	border: 0;
+	padding: 4px 6px;
+	margin: 4px;
+	border-radius: 2px;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	&:hover, &:active, &:focus{
+		background: rgba(#cfd8dc, 1);
+	}
+	&:disabled, &[disabled] {
+		cursor: not-allowed;
+		opacity: 0.65;
+	}
+}
+// TODO: Build "file" input. (many browsers use `::-webkit-file-upload-button` making it easier to style possibly).
+//	Firefox and IE will default to `[type="file"]` so there needs to be a solution for that (labels?).
+[type="file"] {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
 }

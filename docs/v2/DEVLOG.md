@@ -183,3 +183,4 @@
 
 - Rebuilt grid system to work with 3 screen sizes instead of 4. Legacy system is now used only if a flag (`$use-four-step-grid`) is enabled.
 - Three-step grid breakpoints tweaked to `800px` and `1080px` accordingly.
+- Deployed live demo with new grid.

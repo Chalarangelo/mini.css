@@ -178,3 +178,8 @@
 - Proof-of-concept for `button` module defaults and core, file input is not styled yet (will be done via label hack).
 - *TODO* Softcode the `button` module's defaults, add extra styles, classes etc.
 - Deployed live demo with hardcoded buttons to test.
+
+## 20161024
+
+- Rebuilt grid system to work with 3 screen sizes instead of 4. Legacy system is now used only if a flag (`$use-four-step-grid`) is enabled.
+- Three-step grid breakpoints tweaked to `800px` and `1080px` accordingly.

@@ -191,3 +191,4 @@
 - Due to implicit labeling (e.g. `<label>Name:<input></label>`) not being correctly handled by some assistive technologies, explicit labels will be used for the `file` `<input>` elements. 
 - Added `$hide-file-inputs` flag to decide the styling of `file` `<input>` elements.
 - Softcoded changes and optimized some things in the `button` module.
+- Updated demo page.

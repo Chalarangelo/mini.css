@@ -145,7 +145,7 @@ $table-mobile-label-font-weight:$bold-font-weight;								// Font weight for mob
 $button-back-color:				#cfd8dc;										// Back color for button elements
 $button-back-opacity:			0.75;											// Background opacity for button elements
 $button-hover-back-opacity:		1;												// Background opacity for button elements
-																				// while hovering over them
+																				// on hover or focus
 $button-fore-color:				#212121;										// Text color for button elements
 $button-border-style:			0;												// Border style for button elements
 $button-border-radius:			2px;											// Border radius for button elements
@@ -156,7 +156,12 @@ $button-class-name:				'button';										// Class for custom button elements
 $hide-file-inputs:				true;											// Should a style be added that makes all
 																				// <input>s of type `file` hidden?
 																				// (`true`/`false`) [1]
-
+$button-variant1-name:			'primary';										// Class name for button variant 1
+$button-variant1-back-color:	#1565c0;										// Background color for button variant 1
+$button-variant1-back-opacity:	1;												// Background opacity for button variant 1
+$button-variant1-hover-back-opacity:											// Background opacity for button variant 1
+								0.85;											// on hover or focus
+$button-variant1-fore-color:	$back-color;									// Text color for button variant 1
 // 	Notes:
 // [1] - If the value of $hide-file-inputs is `true`, all <input type="file"> elements will be hidden and the only way
 // 	to access them is via the use of <label> elements that are linked to them. This option is enabled by default to
@@ -201,6 +206,9 @@ $progress-style1-border-style:	0;												// Border style for <progress> styl
 $progress-style1-border-radius:	0;												// Border radius for <progress> style 1
 //	Enable base
 @import '../../scss/v2/core';
+//	Use mixins for button elements
+@include make-button-alt-color ($button-variant1-name, $button-variant1-back-color, 
+	$button-variant1-back-opacity, $button-variant1-hover-back-opacity, $button-variant1-fore-color);
 //	Use mixins for contextual background elements
 @include make-mark-alt-color($mark-variant1-name, $mark-variant1-back-color);
 @include make-mark-alt-color($mark-variant2-name, $mark-variant2-back-color);

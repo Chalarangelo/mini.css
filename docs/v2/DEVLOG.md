@@ -192,3 +192,4 @@
 - Added `$hide-file-inputs` flag to decide the styling of `file` `<input>` elements.
 - Softcoded changes and optimized some things in the `button` module.
 - Updated demo page.
+- Added and optimized `make-button-alt-color` mixin, created primary color variant.

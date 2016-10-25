@@ -262,7 +262,14 @@
             <input type="reset" value="Reset button">
             <button disabled>Disabled button</button><br>
             <p>File inputs are a sore spot in most frameworks, as they cannot be easily stylized using CSS. <strong>mini.css</strong> deals with the problem, using a workaround involving labels that use the <code>button</code> class, which applies the exact same style to those labels. Just link it to the <code>&lt;input type=&quot;file&quot;&gt;</code> element of your choice and you're good to go. For example:</p>
-            <span style="margin:3px;"></span><input type="file" id="file-input-demo"><label for="file-input-demo" class="button">Upload file</label>
+            <span style="margin:3px;"></span><input type="file" id="file-input-demo"><label for="file-input-demo" class="button">Upload file</label><br>
+            <p>There are also different kinds of buttons, specifically <code>primary</code>, <code>secondary</code> and <code>tertiary</code>, as well as <code>small</code> and <code>large</code> buttons. All of these types can be specified as classes. For example:</p>
+            <span style="margin:3px;"></span>
+            <button class="primary">Primary normal button</button>
+            <input type="button" value="Secondary input button" class="secondary">
+            <input type="reset" value="Tertiary reset button" class="tertiary">
+            <input type="submit" value="Large submit button" class="large">
+            <button disabled class="small primary">Small primary disabled button</button><br>
           </div>
         </div>
       </div>

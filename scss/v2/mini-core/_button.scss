@@ -15,7 +15,6 @@ button {
 	text-transform: none;	// Remove inheritance of text-transform in Edge, Firefox, and IE.
 }
 // Default styling
-// TODO: Add '.button' class for other elements and 'a.button' rule on its own to make some custom link styles.
 button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name}{
 	display: inline-block;
 	background: rgba($button-back-color, $button-back-opacity);
@@ -50,5 +49,29 @@ input[type="file"] {
 ::-webkit-file-upload-button {
   -webkit-appearance: button; 	// Correct inability to style in iOS and Safari.
   font: inherit; 				// Change font propery to `inherit` in Safari.
+}
+}
+// Mixin for alternate buttons (button color variants).
+// Variables:
+// - $button-alt-name : The name of the class used for the alternate button.
+// - $button-alt-back-color : The background color of the alternate button.
+// - $button-alt-back-opacity : Opacity of the background color of the alternate button.
+// - $button-alt-hover-back-opacity : Opacity of the background color of the alternate button on hover.
+// - $button-alt-fore-color : (Optional) The text color of the alternate button. Defaults to the text color of the button.
+// Notes:
+// Due to something like `.button.secondary` being a higher specificity than `a.button` or `a`, no extra rules are
+// required for such elements. However rules for the normal button elements are applied in order to not require the
+// base class for the button styles.
+@mixin make-button-alt-color ($button-alt-name, $button-alt-back-color, $button-alt-back-opacity,
+	$button-alt-hover-back-opacity, $button-alt-fore-color: $button-fore-color) {
+button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name}, 
+[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name} {
+	background: rgba($button-alt-back-color, $button-alt-back-opacity);
+@if $button-alt-fore-color != $button-fore-color {
+	color: $button-alt-fore-color;
+}
+	&:hover, &:active, &:focus{
+		background: rgba($button-alt-back-color, $button-alt-hover-back-opacity);
+	}
 }
 }

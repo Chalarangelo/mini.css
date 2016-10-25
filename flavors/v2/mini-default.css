@@ -682,6 +682,16 @@ menu {
 summary {
   display: list-item; }
 
+button.primary, [type="button"].primary, [type="submit"].primary,
+[type="reset"].primary, .button.primary {
+  background: #1565c0;
+  color: #fafafa; }
+  button.primary:hover, button.primary:active, button.primary:focus, [type="button"].primary:hover, [type="button"].primary:active, [type="button"].primary:focus, [type="submit"].primary:hover, [type="submit"].primary:active, [type="submit"].primary:focus,
+  [type="reset"].primary:hover,
+  [type="reset"].primary:active,
+  [type="reset"].primary:focus, .button.primary:hover, .button.primary:active, .button.primary:focus {
+    background: rgba(21, 101, 192, 0.85); }
+
 mark.secondary {
   background: #f44336; }
 

@@ -197,3 +197,6 @@
 - Added button overrides for links styled as buttons for `text-decoration: underline` and `&:hover { opacity: 0.75}`. Should now not give away the fact that it's a link.
 - Added `make-button-alt-style` mixin, created `small` and `large` style variants.
 - Added and tested an entirely custom button style that does something very different compared to the original variants. Variables and mixins included in the flavor file, but are commented out, as they are only used as a demonstration. *TODO* Add a blog post later down the line where I design a full flavor using the files etc., showcasing things like these.
+- Forms module started at `mini-core/form`.
+- `input` element selection is based on `not:()` selectors instead of straightforward selection as this is more compact in terms of code and allows for non-standard `input`s like `date` types to by easily styled.
+- Added a list of `TODO`s in the `form` module, tried some base styling just to make sure everything works.

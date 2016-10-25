@@ -1,0 +1,20 @@
+// Definitions for forms and input elements.
+// Different elements are styled based on the same set of rules.
+
+input:not([type="button"]):not([type="reset"]):not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="file"]):not([type="image"]) {
+	background-color: #f5f5f5;
+	color: #212121;
+	border: 1px solid #e0e0e0;
+	border-radius: 2px;
+	vertical-align: middle;
+}
+
+// TODO: Checkboxes and radios will be in a different module
+// TODO: https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ - For range sliders
+// TODO: Maybe add rule for `hidden` just in case
+// TODO: Add `textarea`s to the styling set, as well as `select`
+// TODO: Make form styles proper
+// TODO: Add fixes from core
+// TODO: Add styles for stuff like `legend`, `fieldset` etc.
+// TODO: Add styling for forms
+// TODO: Find a way to make inline and vertical and aligned forms etc. (can also not be a style, but rather built in html)

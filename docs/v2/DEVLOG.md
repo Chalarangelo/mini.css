@@ -184,3 +184,10 @@
 - Rebuilt grid system to work with 3 screen sizes instead of 4. Legacy system is now used only if a flag (`$use-four-step-grid`) is enabled.
 - Three-step grid breakpoints tweaked to `800px` and `1080px` accordingly.
 - Deployed live demo with new grid.
+
+## 20161025
+
+- Issue maintenance and minor changes to issue structure on Github.
+- Due to implicit labeling (e.g. `<label>Name:<input></label>`) not being correctly handled by some assistive technologies, explicit labels will be used for the `file` `<input>` elements. 
+- Added `$hide-file-inputs` flag to decide the styling of `file` `<input>` elements.
+- Softcoded changes and optimized some things in the `button` module.

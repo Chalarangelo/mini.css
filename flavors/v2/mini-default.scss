@@ -141,6 +141,29 @@ $table-mobile-label-font-weight:$bold-font-weight;								// Font weight for mob
 //	Notes:
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly. 
+//	Variables for button elements
+$button-back-color:				#cfd8dc;										// Back color for button elements
+$button-back-opacity:			0.75;											// Background opacity for button elements
+$button-hover-back-opacity:		1;												// Background opacity for button elements
+																				// while hovering over them
+$button-fore-color:				#212121;										// Text color for button elements
+$button-border-style:			0;												// Border style for button elements
+$button-border-radius:			2px;											// Border radius for button elements
+$button-padding:				4px 6px;										// Padding for button elements
+$button-margin:					4px;											// Margin for button elements
+$button-disabled-opacity:		0.65;											// Disabled button elements opacity
+$button-class-name:				'button';										// Class for custom button elements
+$hide-file-inputs:				true;											// Should a style be added that makes all
+																				// <input>s of type `file` hidden?
+																				// (`true`/`false`) [1]
+
+// 	Notes:
+// [1] - If the value of $hide-file-inputs is `true`, all <input type="file"> elements will be hidden and the only way
+// 	to access them is via the use of <label> elements that are linked to them. This option is enabled by default to
+//	allow for universal button styles, even for file input buttons, but can be disabled if the base style is desired.
+//	If the value is `false`, some fixes will be applied to the <input type="file"> element.
+
+
 //	Variables for contextual background elements
 $mark-back-color:				#0277bd;										// Background color for <mark>
 $mark-fore-color:				$back-color;									// Text color for <mark>

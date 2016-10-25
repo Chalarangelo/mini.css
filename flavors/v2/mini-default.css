@@ -585,29 +585,24 @@ button {
   overflow: visible;
   text-transform: none; }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit; }
-
-button, [type="button"], [type="submit"], [type="reset"] {
+button, [type="button"], [type="submit"], [type="reset"], a.button, label.button, .button {
   display: inline-block;
   background: rgba(207, 216, 220, 0.75);
   color: #212121;
   border: 0;
+  border-radius: 2px;
   padding: 4px 6px;
   margin: 4px;
-  border-radius: 2px;
   transition: all 0.3s ease 0s;
   cursor: pointer; }
-  button:hover, button:active, button:focus, [type="button"]:hover, [type="button"]:active, [type="button"]:focus, [type="submit"]:hover, [type="submit"]:active, [type="submit"]:focus, [type="reset"]:hover, [type="reset"]:active, [type="reset"]:focus {
+  button:hover, button:active, button:focus, [type="button"]:hover, [type="button"]:active, [type="button"]:focus, [type="submit"]:hover, [type="submit"]:active, [type="submit"]:focus, [type="reset"]:hover, [type="reset"]:active, [type="reset"]:focus, a.button:hover, a.button:active, a.button:focus, label.button:hover, label.button:active, label.button:focus, .button:hover, .button:active, .button:focus {
     background: #cfd8dc; }
-  button:disabled, button[disabled], [type="button"]:disabled, [type="button"][disabled], [type="submit"]:disabled, [type="submit"][disabled], [type="reset"]:disabled, [type="reset"][disabled] {
+  button:disabled, button[disabled], [type="button"]:disabled, [type="button"][disabled], [type="submit"]:disabled, [type="submit"][disabled], [type="reset"]:disabled, [type="reset"][disabled], a.button:disabled, a.button[disabled], label.button:disabled, label.button[disabled], .button:disabled, .button[disabled] {
     cursor: not-allowed;
     opacity: 0.65; }
+
+input[type="file"] {
+  display: none; }
 
 /**
  * Remove the inheritance of text transform in Firefox.

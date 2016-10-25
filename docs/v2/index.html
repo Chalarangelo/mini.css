@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <!-- Live demo styled as of 20161024 -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/08062eff88dbab3d3b03f8bde56cce5f9d6882e2/flavors/v2/mini-default.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/08062eff88dbab3d3b03f8bde56cce5f9d6882e2/flavors/v2/mini-default.min.css"> -->
     <link rel="stylesheet" href="../../flavors/v2/mini-default.css">   
     <style>
       #top-logo {
@@ -261,8 +261,8 @@
             <input type="submit" value="Submit button">
             <input type="reset" value="Reset button">
             <button disabled>Disabled button</button><br>
-            <input type="file" value="File button"><br>
-
+            <p>File inputs are a sore spot in most frameworks, as they cannot be easily stylized using CSS. <strong>mini.css</strong> deals with the problem, using a workaround involving labels that use the <code>button</code> class, which applies the exact same style to those labels. Just link it to the <code>&lt;input type=&quot;file&quot;&gt;</code> element of your choice and you're good to go. For example:</p>
+            <span style="margin:3px;"></span><input type="file" id="file-input-demo"><label for="file-input-demo" class="button">Upload file</label>
           </div>
         </div>
       </div>

@@ -593,10 +593,12 @@ button, [type="button"], [type="submit"], [type="reset"], a.button, label.button
   border-radius: 2px;
   padding: 4px 6px;
   margin: 4px;
+  text-decoration: none;
   transition: all 0.3s ease 0s;
   cursor: pointer; }
   button:hover, button:active, button:focus, [type="button"]:hover, [type="button"]:active, [type="button"]:focus, [type="submit"]:hover, [type="submit"]:active, [type="submit"]:focus, [type="reset"]:hover, [type="reset"]:active, [type="reset"]:focus, a.button:hover, a.button:active, a.button:focus, label.button:hover, label.button:active, label.button:focus, .button:hover, .button:active, .button:focus {
-    background: #cfd8dc; }
+    background: #cfd8dc;
+    opacity: 1; }
   button:disabled, button[disabled], [type="button"]:disabled, [type="button"][disabled], [type="submit"]:disabled, [type="submit"][disabled], [type="reset"]:disabled, [type="reset"][disabled], a.button:disabled, a.button[disabled], label.button:disabled, label.button[disabled], .button:disabled, .button[disabled] {
     cursor: not-allowed;
     opacity: 0.65; }
@@ -691,6 +693,37 @@ button.primary, [type="button"].primary, [type="submit"].primary,
   [type="reset"].primary:active,
   [type="reset"].primary:focus, .button.primary:hover, .button.primary:active, .button.primary:focus {
     background: rgba(21, 101, 192, 0.85); }
+
+button.secondary, [type="button"].secondary, [type="submit"].secondary,
+[type="reset"].secondary, .button.secondary {
+  background: rgba(198, 40, 40, 0.85);
+  color: #fafafa; }
+  button.secondary:hover, button.secondary:active, button.secondary:focus, [type="button"].secondary:hover, [type="button"].secondary:active, [type="button"].secondary:focus, [type="submit"].secondary:hover, [type="submit"].secondary:active, [type="submit"].secondary:focus,
+  [type="reset"].secondary:hover,
+  [type="reset"].secondary:active,
+  [type="reset"].secondary:focus, .button.secondary:hover, .button.secondary:active, .button.secondary:focus {
+    background: #c62828; }
+
+button.tertiary, [type="button"].tertiary, [type="submit"].tertiary,
+[type="reset"].tertiary, .button.tertiary {
+  background: rgba(139, 195, 74, 0.8); }
+  button.tertiary:hover, button.tertiary:active, button.tertiary:focus, [type="button"].tertiary:hover, [type="button"].tertiary:active, [type="button"].tertiary:focus, [type="submit"].tertiary:hover, [type="submit"].tertiary:active, [type="submit"].tertiary:focus,
+  [type="reset"].tertiary:hover,
+  [type="reset"].tertiary:active,
+  [type="reset"].tertiary:focus, .button.tertiary:hover, .button.tertiary:active, .button.tertiary:focus {
+    background: #8bc34a; }
+
+button.small, [type="button"].small, [type="submit"].small,
+[type="reset"].small, .button.small {
+  border-radius: 1px;
+  padding: 1px 2px;
+  margin: 2px; }
+
+button.large, [type="button"].large, [type="submit"].large,
+[type="reset"].large, .button.large {
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin: 7px; }
 
 mark.secondary {
   background: #f44336; }

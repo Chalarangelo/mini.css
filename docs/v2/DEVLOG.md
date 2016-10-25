@@ -192,4 +192,8 @@
 - Added `$hide-file-inputs` flag to decide the styling of `file` `<input>` elements.
 - Softcoded changes and optimized some things in the `button` module.
 - Updated demo page.
-- Added and optimized `make-button-alt-color` mixin, created primary color variant.
+- Added and optimized `make-button-alt-color` mixin, created `primary` color variant.
+- Added `secondary` and `tertiary` button variants using the mixin. Tested colors.
+- Added button overrides for links styled as buttons for `text-decoration: underline` and `&:hover { opacity: 0.75}`. Should now not give away the fact that it's a link.
+- Added `make-button-alt-style` mixin, created `small` and `large` style variants.
+- Added and tested an entirely custom button style that does something very different compared to the original variants. Variables and mixins included in the flavor file, but are commented out, as they are only used as a demonstration. *TODO* Add a blog post later down the line where I design a full flavor using the files etc., showcasing things like these.

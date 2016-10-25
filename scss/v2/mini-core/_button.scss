@@ -29,15 +29,21 @@ button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name
 @if $button-margin != 0 {
 	margin: $button-margin;
 }
+@if $apply-link-underline {		// Override for links if underline is enabled.
+	text-decoration: none;
+}
 	transition: all 0.3s ease 0s;
 	cursor: pointer;
-	&:hover, &:active, &:focus{
-		background: rgba($button-back-color, $button-hover-back-opacity);
-	}
-	&:disabled, &[disabled] {
-		cursor: not-allowed;
-		opacity: $button-disabled-opacity;
-	}
+&:hover, &:active, &:focus{
+	background: rgba($button-back-color, $button-hover-back-opacity);
+@if $apply-link-hover-fade {	// Override for links if hover-fade is enabled.
+	opacity: 1;
+}
+}
+&:disabled, &[disabled] {
+	cursor: not-allowed;
+	opacity: $button-disabled-opacity;
+}
 }
 $hide-file-inputs: true !default;
 @if $hide-file-inputs {
@@ -70,8 +76,37 @@ button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"]
 @if $button-alt-fore-color != $button-fore-color {
 	color: $button-alt-fore-color;
 }
-	&:hover, &:active, &:focus{
-		background: rgba($button-alt-back-color, $button-alt-hover-back-opacity);
-	}
+&:hover, &:active, &:focus{
+	background: rgba($button-alt-back-color, $button-alt-hover-back-opacity);
+}
+}
+}
+// Mixin for alternate button styles (button color variants).
+// Variables:
+// - $button-alt-name : The name of the class used for the alternate button style.
+// - $button-alt-border-style : The border style of the alternate button style.
+// - $button-alt-border-radius : Border radius of the alternate button style.
+// - $button-alt-padding : Padding of the alternate button style.
+// - $button-alt-margin : Margin of the alternate button style.
+// Notes:
+// Due to something like `.button.small` being a higher specificity than `a.small` or `a`, no extra rules are
+// required for such elements. However rules for the normal button elements are applied in order to not require the
+// base class for the button styles.
+@mixin make-button-alt-style ($button-alt-name, $button-alt-border-style, $button-alt-border-radius,
+	$button-alt-padding, $button-alt-margin) {
+button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name}, 
+[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name} {
+@if $button-alt-border-style != $button-border-style {
+	border: $button-alt-border-style;
+}
+@if $button-alt-border-radius != $button-border-radius {
+	border-radius: $button-alt-border-radius;
+}
+@if $button-alt-padding != $button-padding {
+	padding: $button-alt-padding;
+}
+@if $button-alt-margin != $button-margin {
+	margin: $button-alt-margin;
+}
 }
 }

@@ -200,3 +200,5 @@
 - Forms module started at `mini-core/form`.
 - `input` element selection is based on `not:()` selectors instead of straightforward selection as this is more compact in terms of code and allows for non-standard `input`s like `date` types to by easily styled.
 - Added a list of `TODO`s in the `form` module, tried some base styling just to make sure everything works.
+- Moved style links at the very top of the `<head>` of the page.
+- Updated live demo with latest stylesheet (again).

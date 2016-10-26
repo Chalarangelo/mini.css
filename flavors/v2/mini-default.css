@@ -616,7 +616,7 @@ form {
 input:not([type="button"]):not([type="reset"]):not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="file"]):not([type="image"]):not([type="hidden"]),
 textarea, select {
   box-sizing: border-box;
-  background-color: #f5f5f5;
+  background: #fafafa;
   color: #212121;
   border: 1px solid #e0e0e0;
   border-radius: 2px;

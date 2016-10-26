@@ -12,7 +12,7 @@ form {
 input:not([type="button"]):not([type="reset"]):not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="file"]):not([type="image"]):not([type="hidden"]),
 textarea, select {
 	box-sizing: border-box;
-	background-color: #f5f5f5;
+	background: #fafafa;
 	color: #212121;
 	border: 1px solid #e0e0e0;
 	border-radius: 2px;
@@ -31,3 +31,4 @@ textarea, select {
 // TODO: Find a way to make inline and vertical and aligned forms etc. (can also not be a style, but rather built in html)
 // TODO: Softcode everything.
 // TODO: Maybe style `select` and `number` somehow.
+// TODO: Add styles for focusing, disabled and readonlies.

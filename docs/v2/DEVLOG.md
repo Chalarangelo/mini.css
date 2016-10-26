@@ -209,3 +209,4 @@
 - Added rule for `:not([type="hidden"])`.
 - Added `form` element styling (hardcoded still).
 - Added demo forms for inline and aligned.
+- Modified `input` `background-color` from `#f5f5f5` to `#fafafa`. Changed `background-color` to `background`.

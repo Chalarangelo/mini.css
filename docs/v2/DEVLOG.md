@@ -202,3 +202,10 @@
 - Added a list of `TODO`s in the `form` module, tried some base styling just to make sure everything works.
 - Moved style links at the very top of the `<head>` of the page.
 - Updated live demo with latest stylesheet (again).
+
+## 20161026
+
+- Added `textarea` and `select` to the `form` `input` styling.
+- Added rule for `:not([type="hidden"])`.
+- Added `form` element styling (hardcoded still).
+- Added demo forms for inline and aligned.

@@ -272,18 +272,48 @@
             <input type="submit" value="Large submit button" class="large">
             <label disabled class="button small primary">Small primary disabled label button</label><br>
             <h3>Forms</h3>
-            <p>Forms are pre-styled as well and they offer consistency across all inputs. There are options for normal forms (unaligned) or inline forms (horizontal), as well as aligned forms, that utilise the grid system to present their content. Below are some examples:</p>
+            <p>Forms are inline by default and the input elements have been customized to offer consistency across all inputs. You can make elements take up as much as space as you want (e.g. using <code>width=&quot;100%&quot;</code>) and utilize the grid system to make forms aligned. Below are some examples:</p>
             <form>
-            <input type="text" value="text">
-            <input type="color">
-            <input type="email" value="mail@mail.com">
-            <input type="hidden" value="hidden">
-            <input type="number" value="4">
-            <input type="password" value="password">
-            <input type="range" value="4">
-            <input type="search">
-            <input type="url" value="data.google.com">
-            <input value="normal">
+              <strong>Inline form (default style):</strong><br>
+              <label for="username">Username</label> <input type="text" value="" id="username" placeholder="Username">&nbsp;
+              <label for="mail">Email</label> <input type="email" value="" id="mail" placeholder="mail@server.com">&nbsp;
+              <label for="pwd">Password</label> <input type="password" value="" id="pwd" placeholder="password"><br><br>
+              <strong>Aligned form (using <code>width</code> and grid):</strong><br>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-2" style="text-align:right;">
+                    <label for="website" style="vertical-align: text-top;">Website</label>
+                  </div>
+                  <div class="col-sm">
+                    <input type="text" value="" id="website" placeholder="Website" style="width:85%;">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-2" style="text-align:right;">
+                    <label for="weburl" style="vertical-align: text-top;">URL</label>
+                  </div>
+                  <div class="col-sm">
+                    <input type="url" value="" id="weburl" placeholder="https://www.mywebsite.com" style="width:85%;">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-2" style="text-align:right;">
+                    <label for="desc" style="vertical-align: text-top;">Description</label>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-2">
+                    <textarea type="url" value="" id="desc" placeholder="Description" style="width:85%;"></textarea>
+                  </div>
+                </div>
+              </div><br>
+              <input type="color">
+              <input type="hidden" value="hidden">
+              <input type="number" value="4">
+              <input type="range" value="4">
+              <input type="search">
+              <select>
+                <option>Test</option>
+                <option>Demo</option>
+              </select>
             </form>
           </div>
         </div>

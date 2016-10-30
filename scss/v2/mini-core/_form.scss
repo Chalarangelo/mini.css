@@ -62,7 +62,7 @@ textarea {
   overflow: auto;	// Remove the default vertical scrollbar in IE.
 }
 
-input:not([type]), [type="text"], [type="email"], [type="number"], 
+input:not([type]), [type="text"], [type="email"], [type="number"], [type="search"],
 [type="password"], [type="url"], [type="tel"], textarea, select {
 	box-sizing: border-box;
 	// Background, color and border should not be unassigned, as the browser defaults will apply.
@@ -106,6 +106,14 @@ input:not([type]), [type="text"], [type="email"], [type="number"],
 	color: $input-placeholder-fore-color;
 }
 
-// TODO: Checkboxes and radios will be in a different module.
-// TODO: Style `search` separately.
-// TODO: Move search fixes from core.
+// Correct style in Chrome and Safari.
+[type="search"] {
+  -webkit-appearance: textfield; 
+  outline-offset: -2px; 
+}
+
+// Correct style in Chrome and Safari.
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}

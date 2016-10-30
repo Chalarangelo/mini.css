@@ -223,3 +223,6 @@
 - Tested `form` styling thoroughly and optimized code.
 - Moved fixes from `core` to `form` module for most of the `form` elements (except `search`).
 - Deployed updated live page.
+- Decided to avoid styling `search` `input` `type`s, due to lack of support for magnifying lens icon for most search inputs. Generally speaking this can easily be added by the user.
+- Reorganized the loading order of modules in `core`.
+- Added `search` fixes to `form` module.

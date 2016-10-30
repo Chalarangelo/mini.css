@@ -222,3 +222,4 @@
 - Softcoded most of the stuff for `form` styling.
 - Tested `form` styling thoroughly and optimized code.
 - Moved fixes from `core` to `form` module for most of the `form` elements (except `search`).
+- Deployed updated live page.

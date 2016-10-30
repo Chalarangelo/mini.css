@@ -141,6 +141,35 @@ $table-mobile-label-font-weight:$bold-font-weight;								// Font weight for mob
 //	Notes:
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly. 
+//	Variables for forms and textual inputs
+$form-back-color:				#eceff1;										// Background color for forms
+$form-fore-color:				$fore-color;									// Text color for forms
+$form-border-style:				1px solid #90a4ae;								// Border style for forms
+$form-border-radius:			2px;											// Border radius for forms
+$form-margin:					8px;											// Margin for forms
+$form-padding:					8px;											// Padding for forms
+$fieldset-back-color:			$form-back-color;								// Background color for fieldset
+$fieldset-border-style:			1px solid #b0bec5;								// Border style for fieldset
+$fieldset-border-radius:		1px;											// Border radius for fieldset
+$fieldset-margin:				0;												// Margin for fieldset
+$fieldset-padding:				4px 6px 8px;									// Padding for fieldset
+$legend-font-weight:			$bold-font-weight;								// Font weight for legend
+$legend-font-size:				0.85em;											// Font size for legend
+$legend-fore-color:				$form-fore-color;								// Text color for legend
+$legend-padding:				4px;											// Padding for legend
+$input-group-name:				'input-group';									// Class for input groups
+$input-back-color:				$back-color;									// Background for input
+$input-fore-color:				$fore-color;									// Text color for input
+$input-border-style:			1px solid #b0bec5;								// Border style for input
+$input-border-radius:			1px;											// Border radius for input
+$input-margin:					2px;											// Margin for input
+$input-padding:					6px 8px;										// padding for input
+$input-focus-border-color:		#0288d1;										// Border color for focused input
+$input-invalid-border-color:	#d32f2f;										// Border color for invalid input
+$input-disabled-opacity:		0.75;											// Opacity for disabled input
+$input-readonly-back-color:		#eceff1;										// Background color for readonly input
+$input-readonly-border-color:	#90a4ae;										// Border color for readonly input
+$input-placeholder-fore-color:	#37474f;										// Text color for input placeholder
 //	Variables for button elements
 $button-back-color:				#cfd8dc;										// Back color for button elements
 $button-back-opacity:			0.75;											// Background opacity for button elements

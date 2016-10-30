@@ -210,3 +210,15 @@
 - Added `form` element styling (hardcoded still).
 - Added demo forms for inline and aligned.
 - Modified `input` `background-color` from `#f5f5f5` to `#fafafa`. Changed `background-color` to `background`.
+
+## 20161030
+
+- Opened issue about certain `input` elements.
+- Dropped styling for `range` and `color` `input`s.
+- Changed form styling a little bit (hardcoded).
+- Added styling for `placeholder`s.
+- Defined styles for `fieldset`, `legend` and custom class for `input` and `label` grouping (`input-group`).
+- Added variables for `form` styling.
+- Softcoded most of the stuff for `form` styling.
+- Tested `form` styling thoroughly and optimized code.
+- Moved fixes from `core` to `form` module for most of the `form` elements (except `search`).

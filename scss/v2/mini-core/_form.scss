@@ -2,33 +2,110 @@
 // Different elements are styled based on the same set of rules.
 
 form {
-	border: 1px solid #e0e0e0;
-	border-radius: 0;
-	margin: 8px;
-	padding: 4px;
-	box-shadow: 0.1px 1px 3px rgba(0,0,0,0.15);
+@if $form-back-color != $back-color {
+	background: $form-back-color;
+}
+@if $form-fore-color != $fore-color {
+	color: $form-fore-color;
+}
+@if $form-border-style != 0 {
+	border: $form-border-style;
+}
+@if $form-border-radius != 0 {
+	border-radius: $form-border-radius;
+}
+@if $form-margin != 0 {
+	margin: $form-margin;
+}
+@if $form-padding != 0 {
+	padding: $form-padding;
+}
 }
 
-input:not([type="button"]):not([type="reset"]):not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="file"]):not([type="image"]):not([type="hidden"]),
-textarea, select {
+fieldset {
+@if $fieldset-back-color != $form-back-color {
+	background: $fieldset-back-color;
+}
+	border: $fieldset-border-style;
+	border-radius: $fieldset-border-radius;
+	// Margin and padding should never be unassigned, because browser defaults will be applied.
+	margin: $fieldset-margin;
+  	padding: $fieldset-padding;
+}
+
+legend {
+	// IE and Edge fixes.
 	box-sizing: border-box;
-	background: #fafafa;
-	color: #212121;
-	border: 1px solid #e0e0e0;
-	border-radius: 2px;
-	vertical-align: baseline;
-	margin: 2px;
-	padding: 2px 4px;
+	display: table;
+	max-width: 100%;
+	white-space: normal;
+	// Actual styling.
+	font-weight: $legend-font-weight;
+	font-size: $legend-font-size;
+@if $legend-fore-color != $fore-color {
+	color: $legend-fore-color;
+}
+@if $legend-padding != 0 {
+	padding: $legend-padding;
+}
 }
 
-// TODO: Checkboxes and radios will be in a different module
-// TODO: https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ - For range sliders
-// TODO: Make form styles proper
-// TODO: Test if `form`'s `box-shadow` is fitting and adjust accordingly.
-// TODO: Add fixes from core
-// TODO: Add styles for stuff like `legend`, `fieldset` etc.
-// TODO: Add styling for forms
-// TODO: Find a way to make inline and vertical and aligned forms etc. (can also not be a style, but rather built in html)
-// TODO: Softcode everything.
-// TODO: Maybe style `select` and `number` somehow.
-// TODO: Add styles for focusing, disabled and readonlies.
+.#{$input-group-name} {
+	display: inline-block;
+}
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto; // Correct the cursor style of increment and decrement buttons in Chrome.
+}
+
+textarea {
+  overflow: auto;	// Remove the default vertical scrollbar in IE.
+}
+
+input:not([type]), [type="text"], [type="email"], [type="number"], 
+[type="password"], [type="url"], [type="tel"], textarea, select {
+	box-sizing: border-box;
+	// Background, color and border should not be unassigned, as the browser defaults will apply.
+	background: $input-back-color;
+	color: $input-fore-color;
+	border: $input-border-style;
+@if $input-border-radius != 0 {
+	border-radius: $input-border-radius;
+}		
+@if $input-margin != 0 {
+	margin: $input-margin;
+}
+@if $input-padding != 0 {
+	padding: $input-padding;
+}
+&:focus {
+	border-color: $input-focus-border-color;
+	box-shadow: none;
+}
+&[disabled] {
+	cursor: not-allowed;
+	opacity: $input-disabled-opacity;
+}
+&:invalid, &:focus:invalid, &:focus:invalid:focus{
+	border-color: $input-invalid-border-color;
+	box-shadow: none;
+}
+&[readonly]{
+	background-color: $input-readonly-back-color;
+	border-color: $input-readonly-border-color;
+}
+}
+
+::-webkit-placeholder {
+	color: $input-placeholder-fore-color;
+}
+::-moz-placeholder {
+	color: $input-placeholder-fore-color;
+}
+::-ms-placeholder {
+	color: $input-placeholder-fore-color;
+}
+
+// TODO: Checkboxes and radios will be in a different module.
+// TODO: Style `search` separately.
+// TODO: Move search fixes from core.

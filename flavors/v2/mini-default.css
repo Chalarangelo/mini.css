@@ -607,69 +607,72 @@ input[type="file"] {
   display: none; }
 
 form {
-  border: 1px solid #e0e0e0;
-  border-radius: 0;
-  margin: 8px;
-  padding: 4px;
-  box-shadow: 0.1px 1px 3px rgba(0, 0, 0, 0.15); }
-
-input:not([type="button"]):not([type="reset"]):not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="file"]):not([type="image"]):not([type="hidden"]),
-textarea, select {
-  box-sizing: border-box;
-  background: #fafafa;
-  color: #212121;
-  border: 1px solid #e0e0e0;
+  background: #eceff1;
+  border: 1px solid #90a4ae;
   border-radius: 2px;
-  vertical-align: baseline;
-  margin: 2px;
-  padding: 2px 4px; }
+  margin: 8px;
+  padding: 8px; }
 
-/**
- * Remove the inheritance of text transform in Firefox.
- */
-select {
-  text-transform: none; }
-
-/**
- * Change the border, margin, and padding in all browsers (opinionated).
- */
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  border: 1px solid #b0bec5;
+  border-radius: 1px;
+  margin: 0;
+  padding: 4px 6px 8px; }
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
 legend {
   box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
   display: table;
-  /* 1 */
   max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
   white-space: normal;
-  /* 1 */ }
+  font-weight: 700;
+  font-size: 0.85em;
+  padding: 4px; }
 
-/**
- * Remove the default vertical scrollbar in IE.
- */
+.input-group {
+  display: inline-block; }
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
 textarea {
   overflow: auto; }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
+input:not([type]), [type="text"], [type="email"], [type="number"],
+[type="password"], [type="url"], [type="tel"], textarea, select {
+  box-sizing: border-box;
+  background: #fafafa;
+  color: #212121;
+  border: 1px solid #b0bec5;
+  border-radius: 1px;
+  margin: 2px;
+  padding: 6px 8px; }
+  input:not([type]):focus, [type="text"]:focus, [type="email"]:focus, [type="number"]:focus,
+  [type="password"]:focus, [type="url"]:focus, [type="tel"]:focus, textarea:focus, select:focus {
+    border-color: #0288d1;
+    box-shadow: none; }
+  input:not([type])[disabled], [type="text"][disabled], [type="email"][disabled], [type="number"][disabled],
+  [type="password"][disabled], [type="url"][disabled], [type="tel"][disabled], textarea[disabled], select[disabled] {
+    cursor: not-allowed;
+    opacity: 0.75; }
+  input:not([type]):invalid, input:not([type]):focus:invalid, input:not([type]):focus:invalid:focus, [type="text"]:invalid, [type="text"]:focus:invalid, [type="text"]:focus:invalid:focus, [type="email"]:invalid, [type="email"]:focus:invalid, [type="email"]:focus:invalid:focus, [type="number"]:invalid, [type="number"]:focus:invalid, [type="number"]:focus:invalid:focus,
+  [type="password"]:invalid,
+  [type="password"]:focus:invalid,
+  [type="password"]:focus:invalid:focus, [type="url"]:invalid, [type="url"]:focus:invalid, [type="url"]:focus:invalid:focus, [type="tel"]:invalid, [type="tel"]:focus:invalid, [type="tel"]:focus:invalid:focus, textarea:invalid, textarea:focus:invalid, textarea:focus:invalid:focus, select:invalid, select:focus:invalid, select:focus:invalid:focus {
+    border-color: #d32f2f;
+    box-shadow: none; }
+  input:not([type])[readonly], [type="text"][readonly], [type="email"][readonly], [type="number"][readonly],
+  [type="password"][readonly], [type="url"][readonly], [type="tel"][readonly], textarea[readonly], select[readonly] {
+    background-color: #eceff1;
+    border-color: #90a4ae; }
+
+::-webkit-placeholder {
+  color: #37474f; }
+
+::-moz-placeholder {
+  color: #37474f; }
+
+::-ms-placeholder {
+  color: #37474f; }
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.

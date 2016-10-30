@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- Live demo styled as of 20161025 -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/2ad1bc879ab9735a4e680311163dcfd0873d861a/flavors/v2/mini-default.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/2ad1bc879ab9735a4e680311163dcfd0873d861a/flavors/v2/mini-default.min.css"> -->
     <link rel="stylesheet" href="../../flavors/v2/mini-default.css">
     <title>mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework</title>
     <meta charset="utf-8">
@@ -272,20 +272,22 @@
             <input type="submit" value="Large submit button" class="large">
             <label disabled class="button small primary">Small primary disabled label button</label><br>
             <h3>Forms</h3>
-            <p>Forms are inline by default and the input elements have been customized to offer consistency across all inputs. You can make elements take up as much as space as you want (e.g. using <code>width=&quot;100%&quot;</code>) and utilize the grid system to make forms aligned. Below are some examples:</p>
+            <p>Forms are inline by default and textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> and <code>&lt;select&gt;</code> elements have been pre-styled. To make inputs take up more space than their default, simply add something like <code>width=&quot;100%&quot;</code>. You can also utilize the grid system to align forms to your liking. Below are some examples:</p>
             <form>
-              <strong>Inline form (default style):</strong><br>
-              <label for="username">Username</label> <input type="text" value="" id="username" placeholder="Username">&nbsp;
-              <label for="mail">Email</label> <input type="email" value="" id="mail" placeholder="mail@server.com">&nbsp;
-              <label for="pwd">Password</label> <input type="password" value="" id="pwd" placeholder="password"><br><br>
-              <strong>Aligned form (using <code>width</code> and grid):</strong><br>
-              <div class="container">
+              <fieldset>
+                <legend>Inline form (default style):</legend>
+                <div class="input-group"><label for="username">Username</label> <input type="text" value="" id="username" placeholder="username">&nbsp;</div>
+                <div class="input-group"><label for="mail">Email</label> <input type="email" value="" id="mail" placeholder="mail@server.com">&nbsp;</div>
+                <div class="input-group"><label for="pwd">Password</label> <input type="password" value="" id="pwd" placeholder="password"></div>
+              </fieldset><br>
+              <fieldset class="container">
+                <legend>Aligned form (using <code>width</code> and grid):</legend>
                 <div class="row">
                   <div class="col-sm-2" style="text-align:right;">
                     <label for="website" style="vertical-align: text-top;">Website</label>
                   </div>
                   <div class="col-sm">
-                    <input type="text" value="" id="website" placeholder="Website" style="width:85%;">
+                    <input type="text" value="" id="website" placeholder="website" style="width:85%;">
                   </div>
                 </div>
                 <div class="row">
@@ -300,20 +302,20 @@
                   <div class="col-sm-2" style="text-align:right;">
                     <label for="desc" style="vertical-align: text-top;">Description</label>
                   </div>
-                  <div class="col-sm-10 col-sm-offset-2">
-                    <textarea type="url" value="" id="desc" placeholder="Description" style="width:85%;"></textarea>
+                  <div class="col-sm">
+                    <textarea type="url" value="" id="desc" placeholder="description" style="width:85%;"></textarea>
                   </div>
                 </div>
-              </div><br>
-              <input type="color">
-              <input type="hidden" value="hidden">
-              <input type="number" value="4">
-              <input type="range" value="4">
-              <input type="search">
-              <select>
-                <option>Test</option>
-                <option>Demo</option>
-              </select>
+              </fieldset><br>
+              <fieldset>
+                <legend>More inputs</legend>
+                <input disabled value="Disabled">
+                <input type="number" value="4">
+                <select>
+                  <option>Test</option>
+                  <option>Demo</option>
+                </select>
+              </fieldset>
             </form>
           </div>
         </div>

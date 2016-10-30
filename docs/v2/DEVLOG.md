@@ -235,3 +235,4 @@
 - All `checkbox` and `radio` elements will be `display: none` by default. Grouping one in an `input-group` with a `label` will give the desired style to the label.
 - Created module `mini-core/checkbox`.
 - Started styling `checkbox`es and `radio` buttons. Got most of the styling done, hardcoded.
+- Updated demo again.

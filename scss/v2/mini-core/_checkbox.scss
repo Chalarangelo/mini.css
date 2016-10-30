@@ -1,0 +1,62 @@
+// Definitions for checkboxes and radio button elements.
+// Note: both elements are hidden by default and use labels to show their input state.
+// Hide both input types.
+[type="checkbox"], [type="radio"] {
+	display: none;
+}
+// Use input-group to setup the style for labels.
+.#{$input-group-name} {
+
+[type="checkbox"] + label, [type="radio"] + label {
+position: relative;
+margin-left: 21px;
+&:before {
+	box-sizing: border-box;
+	position: absolute;
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	content: '';
+	border: 1px solid #b0bec5;
+	border-radius:  1px;
+	background: #fafafa;
+	color: #212121;
+	margin-left: -21px;
+	vertical-align: text-bottom;
+	padding: 2px;
+	top: 0;
+	left: 0;
+}
+}
+[type="radio"] + label {
+&:before, &:after {
+	border-radius: 50%;
+}
+}
+[type="checkbox"][disabled] + label, [type="radio"][disabled] + label {
+&:before {
+
+}
+}
+[type="checkbox"][readonly] + label, [type="radio"][readonly] + label {
+&:before {
+
+}
+}
+[type="checkbox"]:checked + label{
+&:after {
+	margin-left: -21px;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 9px;
+	height: 9px;
+	background: #212121;
+	content: '';
+}
+}
+}
+
+// TODO: Add a certain font-family like Arial to the afters to make sure they always display properly.
+// TODO: Softcode, setup everything etc.
+// TODO: Maybe move away from checkmark and change to a square instead.

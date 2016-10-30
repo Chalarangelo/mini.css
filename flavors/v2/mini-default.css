@@ -570,6 +570,14 @@ legend {
 textarea {
   overflow: auto; }
 
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px; }
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
 input:not([type]), [type="text"], [type="email"], [type="number"], [type="search"],
 [type="password"], [type="url"], [type="tel"], textarea, select {
   box-sizing: border-box;
@@ -607,14 +615,6 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 ::-ms-placeholder {
   color: #37474f; }
 
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px; }
-
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
 button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0; }
@@ -646,6 +646,40 @@ button, [type="button"], [type="submit"], [type="reset"], a.button, label.button
 
 input[type="file"] {
   display: none; }
+
+[type="checkbox"], [type="radio"] {
+  display: none; }
+
+.input-group [type="checkbox"] + label, .input-group [type="radio"] + label {
+  position: relative;
+  margin-left: 21px; }
+  .input-group [type="checkbox"] + label:before, .input-group [type="radio"] + label:before {
+    box-sizing: border-box;
+    position: absolute;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    content: '';
+    border: 1px solid #b0bec5;
+    border-radius: 1px;
+    background: #fafafa;
+    color: #212121;
+    margin-left: -21px;
+    vertical-align: text-bottom;
+    padding: 2px;
+    top: 0;
+    left: 0; }
+.input-group [type="radio"] + label:before, .input-group [type="radio"] + label:after {
+  border-radius: 50%; }
+.input-group [type="checkbox"]:checked + label:after {
+  margin-left: -21px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 9px;
+  height: 9px;
+  background: #212121;
+  content: ''; }
 
 mark {
   background: #0277bd;

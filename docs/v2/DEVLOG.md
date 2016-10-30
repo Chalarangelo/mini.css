@@ -226,3 +226,12 @@
 - Decided to avoid styling `search` `input` `type`s, due to lack of support for magnifying lens icon for most search inputs. Generally speaking this can easily be added by the user.
 - Reorganized the loading order of modules in `core`.
 - Added `search` fixes to `form` module.
+- *DESIGN DECISION* To deal with accessibility concerns and the very "hacky" way navigation was implemented in the previous version, the following design decisions have been made.
+  1. The top menu will be based around the `header` element and will not be able to do `display: fixed`. This will allow content over the fold to appear when important content exists in the menu. Space for a logo and some additional things will be added there.
+  2. `nav` will be used as a vertical menu, not `fixed`, that will display any navigational content as required by the user. This is the traditional navigation menu. It will be embeddable in a grid column left or right based on user preference.
+  3. Dropdown components will be removed, as the top bar does not need them to work properly and the side bar can be toggled with code.
+  4. Sidebar collapsing will not be added as a checkbox hack anymore, but users will be able to use Javascript for that.
+  5. An example of Javascript will be added for said collapse.
+- All `checkbox` and `radio` elements will be `display: none` by default. Grouping one in an `input-group` with a `label` will give the desired style to the label.
+- Created module `mini-core/checkbox`.
+- Started styling `checkbox`es and `radio` buttons. Got most of the styling done, hardcoded.

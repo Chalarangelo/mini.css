@@ -1,6 +1,6 @@
 // Definitions for forms and input elements.
 // Different elements are styled based on the same set of rules.
-
+// Base form styling.
 form {
 @if $form-back-color != $back-color {
 	background: $form-back-color;
@@ -21,7 +21,7 @@ form {
 	padding: $form-padding;
 }
 }
-
+// Fieldset styling.
 fieldset {
 @if $fieldset-back-color != $form-back-color {
 	background: $fieldset-back-color;
@@ -32,7 +32,7 @@ fieldset {
 	margin: $fieldset-margin;
   	padding: $fieldset-padding;
 }
-
+// Legend styling.
 legend {
 	// IE and Edge fixes.
 	box-sizing: border-box;
@@ -49,19 +49,29 @@ legend {
 	padding: $legend-padding;
 }
 }
-
+// Input group base naming.
 .#{$input-group-name} {
 	display: inline-block;
 }
-
+// Correct the cursor style of increment and decrement buttons in Chrome.
 [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
-  height: auto; // Correct the cursor style of increment and decrement buttons in Chrome.
+  height: auto; 
 }
-
+// Remove the default vertical scrollbar in IE.
 textarea {
-  overflow: auto;	// Remove the default vertical scrollbar in IE.
+  overflow: auto;	
 }
-
+// Correct style in Chrome and Safari.
+[type="search"] {
+  -webkit-appearance: textfield; 
+  outline-offset: -2px; 
+}
+// Correct style in Chrome and Safari.
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+// Common textual input styling.
 input:not([type]), [type="text"], [type="email"], [type="number"], [type="search"],
 [type="password"], [type="url"], [type="tel"], textarea, select {
 	box-sizing: border-box;
@@ -95,7 +105,7 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 	border-color: $input-readonly-border-color;
 }
 }
-
+// Placeholder styling.
 ::-webkit-placeholder {
 	color: $input-placeholder-fore-color;
 }
@@ -104,16 +114,4 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 }
 ::-ms-placeholder {
 	color: $input-placeholder-fore-color;
-}
-
-// Correct style in Chrome and Safari.
-[type="search"] {
-  -webkit-appearance: textfield; 
-  outline-offset: -2px; 
-}
-
-// Correct style in Chrome and Safari.
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
 }

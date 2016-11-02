@@ -664,6 +664,7 @@ footer {
   display: block;
   background: #263238;
   color: #fafafa;
+  margin: 18px 0 0;
   padding: 22px 10px 12px;
   font-size: 85%; }
   footer a, footer a:visited {

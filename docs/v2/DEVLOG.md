@@ -268,3 +268,8 @@
 - Added styling and variables for `footer`.
 - Changed optimization for links in `footer` and `nav` to not distinguish between `:visited` links and normal ones, style needed reapplication.
 - Tested `footer` component styling.
+- Added `footer` to the demo page.
+- Changed demo page structure to follow the ordering of modules in `core`.
+- Tweaked `progress` `inline` to `60vw` instead of `80vw`, should fit more screens properly.
+- Added a heading for the `utility` module section in demo page.
+- Deployed demo page yet again.

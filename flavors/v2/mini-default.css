@@ -844,7 +844,7 @@ mark.bubble {
 progress.inline {
   display: inline-block;
   vertical-align: middle;
-  width: 80vw; }
+  width: 60vw; }
 
 progress.secondary {
   color: #e53935; }

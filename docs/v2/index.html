@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Live demo styled as of 20161025 -->
-    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/f5e087212966652f4a538d53a62feff21c1c63bd/flavors/v2/mini-default.min.css"> -->
+    <!-- Live demo styled as of 20161102 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/70d0a4ee9c4fc110b62700b30b7ced80baf92fa6/flavors/v2/mini-default.min.css">
     <link rel="stylesheet" href="../../flavors/v2/mini-default.css">
     <title>mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework</title>
     <meta charset="utf-8">
@@ -217,16 +217,6 @@
         <div class="col-sm">
           <div>
             <p><strong>mini.css</strong> adds modern styles for many of the HTML elements.</p><br>
-            <h3>Progress bars</h3>
-            <p>The <code>&lt;progress&gt;</code> element is used for progress bars. There are three color variants (default, <code>secondary</code> and <code>tertiary</code>), as well as an <code>inline</code> class that displays the progress bar as an inline block, along with a <code>nano</code> variant for tiny progress bars. Below are some examples:</p>
-            <br>
-            <progress value="45" max="100""></progress><br>
-            <progress value="20" max="100" class="secondary"></progress><br>
-            <progress value="60" max="100" class="tertiary"></progress><br>
-            <p>Inline progress: <progress value="85" max="100" class="inline"></progress></p>
-            <p>Nano progress:</p>
-            <progress class="nano" value="35" max="100"></progress>
-            <br>
             <h3>Tables</h3>
             <p>Tables are responsive and use the <code>data-label</code> attribute to specify the header name for each cell, so that they can be displayed as cards on mobile devices. Here's an example (resize to see mobile display if you are on desktop):</p>
             <table>
@@ -267,24 +257,6 @@
               </tbody>
             </table>
             <br>
-            <h3>Buttons</h3>
-            <p>Buttons are already pre-styled in <strong>mini.css</strong> to allow for consistent presentation. However, there is a lot you can do to customize them, as the pre-applied styles are mostly overrides for the default presentation styles. Pre-styled buttons and other button-like inputs can be seen below:</p>
-            <span style="margin:3px;"></span>
-            <button>Normal button</button>
-            <input type="button" value="Input button">
-            <input type="submit" value="Submit button">
-            <input type="reset" value="Reset button">
-            <a href="#" class="button">Link button</a>
-            <button disabled>Disabled button</button><br>
-            <p>File inputs are a sore spot in most frameworks, as they cannot be easily stylized using CSS. <strong>mini.css</strong> deals with the problem, using a workaround involving labels that use the <code>button</code> class, which applies the exact same style to those labels. Just link it to the <code>&lt;input type=&quot;file&quot;&gt;</code> element of your choice and you're good to go. For example:</p>
-            <span style="margin:3px;"></span><input type="file" id="file-input-demo"><label for="file-input-demo" class="button"><i class="fa fa-upload" aria-hidden="true"></i>&nbsp;Upload file</label><br>
-            <p>There are also different kinds of buttons, specifically <code>primary</code>, <code>secondary</code> and <code>tertiary</code>, as well as <code>small</code> and <code>large</code> buttons. All of these types can be specified as classes. For example:</p>
-            <span style="margin:3px;"></span>
-            <button class="primary">Primary normal button</button>
-            <input type="button" value="Secondary input button" class="secondary">
-            <input type="reset" value="Tertiary reset button" class="tertiary">
-            <input type="submit" value="Large submit button" class="large">
-            <label disabled class="button small primary">Small primary disabled label button</label><br>
             <h3>Forms</h3>
             <p>Forms are inline by default and textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> and <code>&lt;select&gt;</code> elements have been pre-styled. To make inputs take up more space than their default, simply add something like <code>width=&quot;100%&quot;</code>. You can also utilize the grid system to align forms to your liking. Below are some examples:</p>
             <form>
@@ -332,26 +304,8 @@
                 </select>
                 <input type="search" placeholder="search..." value="">
               </fieldset>
-            </form><br>
-            <h3>Checkboxes and Radio buttons</h3>
-            <p>Checkboxes and radio buttons are styled using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, while keeping things simple and adding just the needed consistency for those input types. Place an <code>&lt;input&gt;</code> (checkbox or radio button) and a linked <code>&lt;label&gt;</code> inside an <code>.input-group</code> and the controls will style themselves. To allow accessibility for those controls, you can use <code>tabindex=&quot;0&quot;</code> on the <code>&lt;input&gt;</code> elements only. You can see some examples below:</p>
-            <form>
-              <fieldset>
-                <div class="input-group">
-                  <input type="checkbox" id="c1" tabindex="0"> <label for="c1">Checkbox</label>
-                </div>
-                <div class="input-group">
-                  <input type="checkbox" id="c2" disabled> <label for="c2" disabled>Disabled</label>
-                </div>
-              </fieldset>
-              <fieldset>
-                <div class="input-group">
-                  <input type="radio" name="radios" value="r1" checked id="r1" tabindex="0"> <label for="r1">Value 1</label>
-                  <input type="radio" name="radios" value="r2" id="r2" tabindex="0"> <label for="r2">Value 2</label>
-                  <input type="radio" name="radios" value="r3"checked id="r3" tabindex="0"> <label for="r3">Value 3</label>
-                </div>
-              </fieldset>
-            </form><br>
+            </form>
+            <br>
             <h3>Navigation</h3>
             <p>Use the <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code> and <code>&lt;footer&gt;</code> elements to add navigational elements to your page. The <code>&lt;header&gt;</code> element displays as a non-fixed horizontal bar and can contain a logo along with a set of links or buttons. Style any links using the <code>.button</code> class to give them the proper style. it is suggested that you place the <code>&lt;header&gt;</code> element outside of your grid system's <code>.container</code> to avoid styling problems. You can see an example below:</p>
             <header><a href="#" class="logo">Logo</a><button>Link 1</button><a href="#" class="button">Link 2</a><button>Link 3</button></header><br>
@@ -382,7 +336,59 @@
               </div>
             </div><br>
             <p>Finally, use the <code>&lt;footer&gt;</code> element to create your footer. Add links, images, credits. This element is not meant for main navigation, but many pages use it for some kind of navigation or other. Try to place the <code>&lt;footer&gt;</code> outside of the grid system for best results. Below is an example:</p>
-            <footer>&copy; 2016 mini.css | <a href="#">About</a> | <a href="#">Terms of use</a></footer><br>
+            <footer>&copy; 2016 mini.css | <a href="#">About</a> | <a href="#">Terms of use</a></footer>
+            <br>        
+            <h3>Buttons</h3>
+            <p>Buttons are already pre-styled in <strong>mini.css</strong> to allow for consistent presentation. However, there is a lot you can do to customize them, as the pre-applied styles are mostly overrides for the default presentation styles. Pre-styled buttons and other button-like inputs can be seen below:</p>
+            <span style="margin:3px;"></span>
+            <button>Normal button</button>
+            <input type="button" value="Input button">
+            <input type="submit" value="Submit button">
+            <input type="reset" value="Reset button">
+            <a href="#" class="button">Link button</a>
+            <button disabled>Disabled button</button><br>
+            <p>File inputs are a sore spot in most frameworks, as they cannot be easily stylized using CSS. <strong>mini.css</strong> deals with the problem, using a workaround involving labels that use the <code>button</code> class, which applies the exact same style to those labels. Just link it to the <code>&lt;input type=&quot;file&quot;&gt;</code> element of your choice and you're good to go. For example:</p>
+            <span style="margin:3px;"></span><input type="file" id="file-input-demo"><label for="file-input-demo" class="button"><i class="fa fa-upload" aria-hidden="true"></i>&nbsp;Upload file</label><br>
+            <p>There are also different kinds of buttons, specifically <code>primary</code>, <code>secondary</code> and <code>tertiary</code>, as well as <code>small</code> and <code>large</code> buttons. All of these types can be specified as classes. For example:</p>
+            <span style="margin:3px;"></span>
+            <button class="primary">Primary normal button</button>
+            <input type="button" value="Secondary input button" class="secondary">
+            <input type="reset" value="Tertiary reset button" class="tertiary">
+            <input type="submit" value="Large submit button" class="large">
+            <label disabled class="button small primary">Small primary disabled label button</label>
+            <br><br>  
+            <h3>Checkboxes and Radio buttons</h3>
+            <p>Checkboxes and radio buttons are styled using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, while keeping things simple and adding just the needed consistency for those input types. Place an <code>&lt;input&gt;</code> (checkbox or radio button) and a linked <code>&lt;label&gt;</code> inside an <code>.input-group</code> and the controls will style themselves. To allow accessibility for those controls, you can use <code>tabindex=&quot;0&quot;</code> on the <code>&lt;input&gt;</code> elements only. You can see some examples below:</p>
+            <form>
+              <fieldset>
+                <div class="input-group">
+                  <input type="checkbox" id="c1" tabindex="0"> <label for="c1">Checkbox</label>
+                </div>
+                <div class="input-group">
+                  <input type="checkbox" id="c2" disabled> <label for="c2" disabled>Disabled</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="input-group">
+                  <input type="radio" name="radios" value="r1" checked id="r1" tabindex="0"> <label for="r1">Value 1</label>
+                  <input type="radio" name="radios" value="r2" id="r2" tabindex="0"> <label for="r2">Value 2</label>
+                  <input type="radio" name="radios" value="r3"checked id="r3" tabindex="0"> <label for="r3">Value 3</label>
+                </div>
+              </fieldset>
+            </form>
+            <br>
+            <h3>Progress bars</h3>
+            <p>The <code>&lt;progress&gt;</code> element is used for progress bars. There are three color variants (default, <code>secondary</code> and <code>tertiary</code>), as well as an <code>inline</code> class that displays the progress bar as an inline block, along with a <code>nano</code> variant for tiny progress bars. Below are some examples:</p>
+            <br>
+            <progress value="45" max="100""></progress><br>
+            <progress value="20" max="100" class="secondary"></progress><br>
+            <progress value="60" max="100" class="tertiary"></progress><br>
+            <p>Inline progress: <progress value="85" max="100" class="inline"></progress></p>
+            <p>Nano progress:</p>
+            <progress class="nano" value="35" max="100"></progress>
+            <hr>
+            <h2>Utilities and Helpers <small>Useful classes for common problems</small></h2> 
+            <p>Implementation pending...</p>       
           </div>
         </div>
       </div>

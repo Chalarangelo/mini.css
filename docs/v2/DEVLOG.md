@@ -250,3 +250,14 @@
 - Added edge case for tabbing to checkbox for `focus`, which will make the `label`'s box `border` glow to the blue-ish shade usually used.
 - Removed `readonly` styling for `checkbox` and `radio` as it does not work due to technicalities.
 - Updated demo page for `checkbox` module.
+- Created `mini-core/navigation` for the navigational components.
+- Cleanup in `core`, moved fixes for navigational to proper file, moved leftover fixes to their proper place.
+- Added responsiveness for `img`.
+- Updated demo page for `checkbox` module.
+- Changed `inline` `progress` elements to use `vw` instead of `em`. Fixed a rare bug that would be caused due to that.
+- Coded the `header` element's styling. Optimized.
+- Made `header` responsive.
+- Added demo for `header` element.
+- Updated live page for `header`.
+- *NOTE* There is some bleedthrough of styles from `button` to `navigation`, specifically for `header`. This is not a problem, but should be noted for further reference/testing etc.
+- Extended testing for `header`, there seem to be no bugs.

@@ -14,8 +14,11 @@ body {
   color: #212121;
   background: #fafafa; }
 
-article, aside, footer, header, nav, section, figcaption, figure, main {
+article, aside, section, figcaption, figure, main, details, menu {
   display: block; }
+
+summary {
+  display: list-item; }
 
 abbr[title] {
   border-bottom: none;
@@ -30,9 +33,13 @@ svg:not(:root) {
 input {
   overflow: visible; }
 
+img {
+  width: 100%;
+  height: auto; }
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
-  margin: 0.7em 8px;
+  margin: 0;
   font-weight: 500; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     color: #424242;
@@ -615,6 +622,36 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 ::-ms-placeholder {
   color: #37474f; }
 
+header {
+  display: block;
+  height: 36px;
+  background: #263238;
+  color: #fafafa;
+  padding: 2px 8px;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden; }
+  header .logo {
+    color: #fafafa;
+    font-size: 1.75em;
+    line-height: 1.2;
+    margin: 1px 6px 1px 1px; }
+  header button, header [type="button"], header a.button, header label.button, header .button {
+    background: #263238;
+    color: #fafafa;
+    vertical-align: top;
+    margin: 2px 0 0; }
+    header button:hover, header button:active, header button:focus, header [type="button"]:hover, header [type="button"]:active, header [type="button"]:focus, header a.button:hover, header a.button:active, header a.button:focus, header label.button:hover, header label.button:active, header label.button:focus, header .button:hover, header .button:active, header .button:focus {
+      background: #37474f; }
+  header .logo, header a.button {
+    text-decoration: none; }
+
+nav {
+  display: block; }
+
+footer {
+  display: block; }
+
 button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0; }
@@ -730,20 +767,6 @@ progress {
   progress[value="100"]::-moz-progress-bar {
     border-radius: 1px; }
 
-/*
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- */
-details,
-menu {
-  display: block; }
-
-/*
- * Add the correct display in all browsers.
- */
-summary {
-  display: list-item; }
-
 button.primary, [type="button"].primary, [type="submit"].primary,
 [type="reset"].primary, .button.primary {
   background: #1565c0;
@@ -804,7 +827,7 @@ mark.bubble {
 progress.inline {
   display: inline-block;
   vertical-align: middle;
-  width: 20em; }
+  width: 80vw; }
 
 progress.secondary {
   color: #e53935; }

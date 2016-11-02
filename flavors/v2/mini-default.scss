@@ -170,6 +170,19 @@ $input-disabled-opacity:		0.75;											// Opacity for disabled input
 $input-readonly-back-color:		#eceff1;										// Background color for readonly input
 $input-readonly-border-color:	#90a4ae;										// Border color for readonly input
 $input-placeholder-fore-color:	#37474f;										// Text color for input placeholder
+//	Variables for navigational elements
+$header-height:					36px;											// Height for header
+$header-back-color:				#263238;										// Background color for header
+$header-fore-color:				$back-color;									// Text color for header
+$header-margin:					0;												// Margin for header
+$header-padding:				2px 8px;										// Padding for header
+$header-logo-name:				'logo';											// Class name for header's logo
+$header-logo-font-size:			1.75em;											// Font size for header's logo
+$header-logo-line-height:		1.2;											// Line height for header's logo
+$header-logo-margin:			1px 6px 1px 1px;								// Margin for header's logo
+$header-logo-padding:			0;												// Padding for header's logo
+$header-link-hover-color:		#37474f;										// Hover color for header's links
+$header-link-margin:			2px 0 0;										// Margin for header's links
 //	Variables for button elements
 $button-back-color:				#cfd8dc;										// Back color for button elements
 $button-back-opacity:			0.75;											// Background opacity for button elements
@@ -262,7 +275,7 @@ $progress-border-style:			0;												// Border style for <progress>
 $progress-border-radius:		1px;											// Border radius for the <progress> container
 $progress-margin:				1px auto;										// Margin for <progress>
 $progress-inline-name:			'inline';										// Class name for inline <progress>
-$progress-inline-width:			20em;											// Width for inline <progress>
+$progress-inline-width:			80vw;											// Width for inline <progress>
 $progress-variant1-name:		'secondary';									// Class name for <progress> variant 1
 $progress-variant1-fore-color:	#e53935;										// Progress bar color for <progress> variant 1
 $progress-variant2-name:		'tertiary';										// Class name for <progress> variant 2

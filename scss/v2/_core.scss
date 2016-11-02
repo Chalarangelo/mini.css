@@ -27,9 +27,14 @@ body {
 }
 
 // Correct display for older versions of IE.
-// TODO: Move styling of `nav` to the proper file.
-article, aside, footer, header, nav, section, figcaption, figure, main {
+// Fix display of some elements in other browsers as well.
+article, aside, section, figcaption, figure, main, details, menu {
   display: block;
+}
+
+// Correct display in all browsers.
+summary {
+  display: list-item;
 }
 
 abbr[title] {
@@ -52,6 +57,12 @@ svg:not(:root) {
 // Show overflow in IE.
 input { 
   overflow: visible;
+}
+
+// Make images responsive by default.
+img {
+  width: 100%;
+  height: auto;
 }
 
 // Fix display in older versions of Android.
@@ -347,28 +358,9 @@ a{
 @import 'mini-core/grid';
 @import 'mini-core/table';
 @import 'mini-core/form';
+@import 'mini-core/navigation';
 @import 'mini-core/button';
 @import 'mini-core/checkbox';
 @import 'mini-core/contextual';
 @import 'mini-core/progress';
-
-// TODO: Figure out where to move those.
-
-/*
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- */
-
-details, /* 1 */
-menu {
-  display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-
-summary {
-  display: list-item;
-}
 //===================================================

@@ -652,15 +652,22 @@ nav {
   border-radius: 1px;
   margin: 2px;
   padding: 4px 4px 4px 16px; }
-  nav a {
-    display: block; }
+  nav a, nav a:visited {
+    display: block;
+    color: #0277bd; }
   nav .sublink-1 {
     padding-left: 12px; }
   nav .sublink-2 {
     padding-left: 24px; }
 
 footer {
-  display: block; }
+  display: block;
+  background: #263238;
+  color: #fafafa;
+  padding: 22px 10px 12px;
+  font-size: 85%; }
+  footer a, footer a:visited {
+    color: #039be5; }
 
 button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
   border-style: none;

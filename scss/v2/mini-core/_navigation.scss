@@ -70,11 +70,9 @@ nav {
 @if $nav-padding != 0 {
 	padding: $nav-padding;
 }
-a {
-display: block;
-@if $nav-link-fore-color != $link-fore-color {
+a, a:visited {
+	display: block;
 	color: $nav-link-fore-color;
-}
 }
 // Subcategories in navigation.
 $nav-sublink-prefix:		'sublink' !default;		// Prefix for the subcategory tabs in nav
@@ -89,4 +87,16 @@ $nav-sublink-padding-left:	12px !default;		// Left padding to add to subcategori
 // Footer styling.
 footer {
 	display: block;		// Correct display for older versions of IE.
+	background: $footer-back-color;
+	color: $footer-fore-color;
+@if $footer-margin != 0 {
+	margin: $footer-margin;
+}
+@if $footer-padding != 0 {
+	padding: $footer-padding;
+}
+	font-size: $footer-font-size;
+a, a:visited {
+	color: $footer-link-fore-color;
+}
 }

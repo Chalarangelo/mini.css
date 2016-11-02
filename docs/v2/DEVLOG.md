@@ -265,3 +265,6 @@
 - Added simple styling for `nav`. Created iteration builder for `sublink` and categories tree.
 - Tested and optimized `nav`, added demo to `index`.
 - Deployed demo page again.
+- Added styling and variables for `footer`.
+- Changed optimization for links in `footer` and `nav` to not distinguish between `:visited` links and normal ones, style needed reapplication.
+- Tested `footer` component styling.

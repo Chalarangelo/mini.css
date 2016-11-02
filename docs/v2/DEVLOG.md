@@ -283,3 +283,5 @@
 - Added `make-floats` and `make-center-block` mixins along with `make-clearfix` mixin from *v1*.
 - Explained utilities in demo page.
 - Deployed demo page with utilities docs.
+- Started developing `shell`. Added `shell` file and `mini-shell/card` file for the `card` module.
+- Actually deleted `shell` file, moved everything to `core` file, renamed to `_mini.scss`.

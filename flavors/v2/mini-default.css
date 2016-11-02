@@ -884,6 +884,36 @@ progress.nano {
 .circular {
   border-radius: 50% !important; }
 
+.hidden {
+  display: none !important; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden !important; }
+
+.float-left {
+  float: left !important; }
+
+.float-right {
+  float: right !important; }
+
+.clearfix:before, .clearfix:after {
+  content: ' ';
+  display: table;
+  clear: both; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 ul.breadcrumbs {
   list-style: none; }
   ul.breadcrumbs > li {

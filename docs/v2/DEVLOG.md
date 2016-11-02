@@ -276,4 +276,9 @@
 - Created `mini-core/utility` for utilities and helper classes.
 - Copied almost verbatim the mixins from *v1* for `make-border-generic` and `make-border-radial-style`. Added variables and calls for mixins in flavor.
 - Copied and tweaked `make-breadcrumbs` mixin from *v1*'s extras.
+- Changed the way `breacrumbs` are built (use some `em`-based `padding` now instead of some whitespaces).
 - Dropped mixin for `make-btn-group`, opened issue (#23) to later build it.
+- Added utility mixin `make-hidden` from *v1*, exactly the same.
+- Added new utility mixin `make-visually-hidden` for accessible elements that are visually hidden.
+- Added `make-floats` and `make-center-block` mixins along with `make-clearfix` mixin from *v1*.
+- Explained utilities in demo page.

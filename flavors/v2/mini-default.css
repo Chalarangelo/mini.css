@@ -874,3 +874,21 @@ progress.nano {
     border-radius: 0; }
   progress.nano[value="100"]::-moz-progress-bar {
     border-radius: 0; }
+
+.bordered {
+  border: 1px solid rgba(0, 0, 0, 0.25) !important; }
+
+.rounded {
+  border-radius: 2px !important; }
+
+.circular {
+  border-radius: 50% !important; }
+
+ul.breadcrumbs {
+  list-style: none; }
+  ul.breadcrumbs > li {
+    display: inline-block;
+    padding-right: 0.125em; }
+    ul.breadcrumbs > li + li:before {
+      content: '\27e9';
+      padding: 0.125em; }

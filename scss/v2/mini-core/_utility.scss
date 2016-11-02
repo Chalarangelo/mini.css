@@ -1,0 +1,44 @@
+// Definitions for utilities and helper classes.
+// Note: most mixins need to be called separately to work.
+// Generic border mixin. ATTENTION: Uses !important.
+// Variables:
+// - $border-generic-name : The name of the class used for the generic border.
+@mixin make-border-generic ($border-generic-name) {
+.#{$border-generic-name} {
+	border: 1px solid rgba(0,0,0, 0.25) !important;
+}
+}
+// Generic radial border mixin. ATTENTION: Uses !important.
+// Variables:
+// - $border-radial-name : The name of the class used for the radial border.
+// - $border-radial-radius : The border radius used for the radial border.
+@mixin make-border-radial-style ($border-radial-name, $border-radial-radius) {
+.#{$border-radial-name} {
+	border-radius: $border-radial-radius !important;
+}	
+}
+// Breadcrumb mixin.
+// Variables:
+// - $breadcrumbs-name : The name of the class used for the breadcrumbs.
+// - $use-right-angle-symbol : Should the right angle symbol be used as a separator (`true`/`false`).
+//	Value is `true` by default. If `false` a forward slash will be used.
+@mixin make-breadcrumbs($breadcrumbs-name, $use-right-angle-symbol : true){
+ul.#{$breadcrumbs-name}{
+	list-style: none;
+& > li{
+	display: inline-block;
+// Some padding is needed for the breacrumbs to appear properly. 2px should be enough.
+	padding-right: 0.125em;	
+& + li:before{
+@if $use-right-angle-symbol{
+	content: '\27e9';
+}
+@else {
+	content: '\002f';
+}
+// Some padding is needed for the breacrumbs to appear properly. 2px should be enough.
+	padding: 0.125em;
+}
+}
+}
+}

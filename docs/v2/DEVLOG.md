@@ -273,3 +273,7 @@
 - Tweaked `progress` `inline` to `60vw` instead of `80vw`, should fit more screens properly.
 - Added a heading for the `utility` module section in demo page.
 - Deployed demo page yet again.
+- Created `mini-core/utility` for utilities and helper classes.
+- Copied almost verbatim the mixins from *v1* for `make-border-generic` and `make-border-radial-style`. Added variables and calls for mixins in flavor.
+- Copied and tweaked `make-breadcrumbs` mixin from *v1*'s extras.
+- Dropped mixin for `make-btn-group`, opened issue (#23) to later build it.

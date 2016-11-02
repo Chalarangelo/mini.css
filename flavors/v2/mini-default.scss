@@ -301,9 +301,16 @@ $progress-style1-height:		2px;											// Height for <progress> style 1
 $progress-style1-margin:		0 auto 1px;										// Margin for <progress> style 1
 $progress-style1-border-style:	0;												// Border style for <progress> style 1
 $progress-style1-border-radius:	0;												// Border radius for <progress> style 1
+//	Variables for core utilities and helper classes.
+$border-generic-name:			'bordered';										// Class name for generic border style
+$border-radial-style1-name:		'rounded';										// Class name for radial border style 1
+$border-radial-style1-radius:	2px;											// Border radius for radial border style 1
+$border-radial-style2-name:		'circular';										// Class name for radial border style 2
+$border-radial-style2-radius:	50%;											// Border radius for radial border style 2
+$breadcrumbs-name:				'breadcrumbs';									// Class name for breadcrumbs
 //	Enable base
 @import '../../scss/v2/core';
-//	Use mixins for button elements
+//	Use mixins for button elements.
 @include make-button-alt-color ($button-variant1-name, $button-variant1-back-color, 
 	$button-variant1-back-opacity, $button-variant1-hover-back-opacity, $button-variant1-fore-color);
 @include make-button-alt-color ($button-variant2-name, $button-variant2-back-color, 
@@ -314,19 +321,24 @@ $progress-style1-border-radius:	0;												// Border radius for <progress> st
 	$button-style1-border-radius, $button-style1-padding, $button-style1-margin);
 @include make-button-alt-style ($button-style2-name, $button-style2-border-style,
 	$button-style2-border-radius, $button-style2-padding, $button-style2-margin);
-// Custom button style demonstration (not enabled)
+// Custom button style demonstration (not enabled).
 //@include make-button-alt-color ($button-custom-name, $button-custom-back-color, 
 //	$button-custom-back-opacity, $button-custom-hover-back-opacity);
 //@include make-button-alt-style ($button-custom-name, $button-custom-border-style,
 //	$button-custom-border-radius, $button-custom-padding, $button-custom-margin);
-//	Use mixins for contextual background elements
-@include make-mark-alt-color($mark-variant1-name, $mark-variant1-back-color);
-@include make-mark-alt-color($mark-variant2-name, $mark-variant2-back-color);
-@include make-mark-alt-style($mark-style1-name, $mark-style1-border-radius, $mark-style1-padding);
-@include make-mark-alt-style($mark-style2-name, $mark-style2-border-radius, $mark-style2-padding);
-//	Use mixins for progress elements
-@include make-progress-inline($progress-inline-name, $progress-inline-width);
-@include make-progress-alt-color($progress-variant1-name, $progress-variant1-fore-color);
-@include make-progress-alt-color($progress-variant2-name, $progress-variant2-fore-color);
-@include make-progress-alt-style($progress-style1-name, $progress-style1-height, 
+//	Use mixins for contextual background elements.
+@include make-mark-alt-color ($mark-variant1-name, $mark-variant1-back-color);
+@include make-mark-alt-color ($mark-variant2-name, $mark-variant2-back-color);
+@include make-mark-alt-style ($mark-style1-name, $mark-style1-border-radius, $mark-style1-padding);
+@include make-mark-alt-style ($mark-style2-name, $mark-style2-border-radius, $mark-style2-padding);
+//	Use mixins for progress elements.
+@include make-progress-inline ($progress-inline-name, $progress-inline-width);
+@include make-progress-alt-color ($progress-variant1-name, $progress-variant1-fore-color);
+@include make-progress-alt-color ($progress-variant2-name, $progress-variant2-fore-color);
+@include make-progress-alt-style ($progress-style1-name, $progress-style1-height, 
 	$progress-style1-margin, $progress-style1-border-style, $progress-style1-border-radius);
+//	Use mixins for core utilities and helper classes.
+@include make-border-generic ($border-generic-name);
+@include make-border-radial-style ($border-radial-style1-name, $border-radial-style1-radius);
+@include make-border-radial-style ($border-radial-style2-name, $border-radial-style2-radius);
+@include make-breadcrumbs($breadcrumbs-name);

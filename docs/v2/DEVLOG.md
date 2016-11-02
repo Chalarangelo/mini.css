@@ -236,3 +236,17 @@
 - Created module `mini-core/checkbox`.
 - Started styling `checkbox`es and `radio` buttons. Got most of the styling done, hardcoded.
 - Updated demo again.
+
+## 20161102
+
+- Updated `checkbox` and `radio` styles for accesibility. Now they are visible to screen readers.
+- Added style for `:hover`, :focus`, `:active` for the `label` elements of the `checkbox` module.
+- Added `tabindex` marks for labels in the `checkbox` module demo.
+- Added styling for `readonly` and `disabled` for `checkbox` module.
+- Updated `checkbox` module and added variables.
+- Added issue for flag `use-checkbox-tick-mark` to allow for one of two styles for `checkboxes` and variables according to that. Implementation pending for **v2.1** or similar.
+- Minor updates to `button` and `form` for CSS consistencies.
+- Added variables for `checkbox` module, optimized a little bit. (Some optimizations do not make sense, like no-border checkboxes and radio buttons, so I omitted them for this reason).
+- Added edge case for tabbing to checkbox for `focus`, which will make the `label`'s box `border` glow to the blue-ish shade usually used.
+- Removed `readonly` styling for `checkbox` and `radio` as it does not work due to technicalities.
+- Updated demo page for `checkbox` module.

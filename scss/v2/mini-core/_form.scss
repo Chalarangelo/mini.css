@@ -101,7 +101,7 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 	box-shadow: none;
 }
 &[readonly]{
-	background-color: $input-readonly-back-color;
+	background: $input-readonly-back-color;
 	border-color: $input-readonly-border-color;
 }
 }

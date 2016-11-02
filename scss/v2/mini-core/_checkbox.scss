@@ -1,62 +1,73 @@
 // Definitions for checkboxes and radio button elements.
 // Note: both elements are hidden by default and use labels to show their input state.
-// Hide both input types.
+// Hide both input types - accessible (element is not visible, but screen readers read it normally).
 [type="checkbox"], [type="radio"] {
-	display: none;
+	height: 1px;
+	width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+	clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    		clip-path: inset(100%);	
 }
 // Use input-group to setup the style for labels.
 .#{$input-group-name} {
-
+// Label styling based on the specifics of the checkbox/radio variables.
 [type="checkbox"] + label, [type="radio"] + label {
-position: relative;
-margin-left: 21px;
+	position: relative;
+	margin-left: $checkbox-size + ($checkbox-size * 0.25);
+// Styling for checkbox/radio box part.
 &:before {
-	box-sizing: border-box;
-	position: absolute;
+	box-sizing: border-box;	
 	display: inline-block;
-	width: 17px;
-	height: 17px;
-	content: '';
-	border: 1px solid #b0bec5;
-	border-radius:  1px;
-	background: #fafafa;
-	color: #212121;
-	margin-left: -21px;
-	vertical-align: text-bottom;
-	padding: 2px;
+	position: absolute;
 	top: 0;
 	left: 0;
+	width: $checkbox-size;
+	height: $checkbox-size;
+	content: '';
+	border: $checkbox-border-style;
+	border-radius:  $checkbox-border-radius;
+	background: $checkbox-back-color;
+	color: $checkbox-fore-color;
+	margin-left: -($checkbox-size + ($checkbox-size * 0.25));
+	vertical-align: text-bottom;
+}
+// Hover, focus, active styling.
+&:hover, &:active, &:focus {
+&:before {
+	border-color: $checkbox-focus-border-color;
 }
 }
+}
+[type="checkbox"]:focus + label:before, [type="radio"]:focus + label:before {
+	border-color: $checkbox-focus-border-color;
+}
+// Make radio button box and fill circular.
 [type="radio"] + label {
 &:before, &:after {
 	border-radius: 50%;
 }
 }
+// Disabled and readonly styles.
 [type="checkbox"][disabled] + label, [type="radio"][disabled] + label {
-&:before {
-
+	cursor: not-allowed;
+&:before, &:after {
+	opacity: $checkbox-disabled-opacity;
 }
 }
-[type="checkbox"][readonly] + label, [type="radio"][readonly] + label {
-&:before {
-
-}
-}
-[type="checkbox"]:checked + label{
+// Fill for checked checkbox/radio elements.
+[type="checkbox"]:checked + label, [type="radio"]:checked + label{
 &:after {
-	margin-left: -21px;
+	margin-left: -($checkbox-size + ($checkbox-size * 0.25));
 	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 9px;
-	height: 9px;
-	background: #212121;
+	top: ($checkbox-size - ($checkbox-size * 0.55))/2;
+	left: ($checkbox-size - ($checkbox-size * 0.55))/2;
+	width: ($checkbox-size * 0.55);
+	height: ($checkbox-size * 0.55);
+	background: $checkbox-fore-color;
 	content: '';
 }
 }
 }
-
-// TODO: Add a certain font-family like Arial to the afters to make sure they always display properly.
-// TODO: Softcode, setup everything etc.
-// TODO: Maybe move away from checkmark and change to a square instead.

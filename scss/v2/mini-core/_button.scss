@@ -34,7 +34,7 @@ button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name
 }
 	transition: all 0.3s ease 0s;
 	cursor: pointer;
-&:hover, &:active, &:focus{
+&:hover, &:active, &:focus {
 	background: rgba($button-back-color, $button-hover-back-opacity);
 @if $apply-link-hover-fade {	// Override for links if hover-fade is enabled.
 	opacity: 1;

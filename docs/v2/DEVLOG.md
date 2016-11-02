@@ -282,3 +282,4 @@
 - Added new utility mixin `make-visually-hidden` for accessible elements that are visually hidden.
 - Added `make-floats` and `make-center-block` mixins along with `make-clearfix` mixin from *v1*.
 - Explained utilities in demo page.
+- Deployed demo page with utilities docs.

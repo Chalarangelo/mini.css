@@ -314,7 +314,16 @@ $clearfix-name:					'clearfix';										// Class name for clearfix
 $center-block-name:				'center-block';									// Class name for center block
 $breadcrumbs-name:				'breadcrumbs';									// Class name for breadcrumbs
 //	Variables for cards [1]
-
+$card-name:						'card';											// Class name for cards
+$card-back-color:				#f5f5f5;										// Background color for cards
+$card-fore-color:				$fore-color;									// Text color for cards
+$card-border-style:				1px solid #bdbdbd;								// Border style for cards
+$card-border-radius:			2px;											// Border radius for cards
+$card-margin:					2px 10px 20px;									// Margin for cards
+$card-section-name:				'section';										// Class name for card sections
+$card-section-media-name:		'media';										// Class name for card media sections
+$card-section-border-style:		1px solid #e0e0e0;								// Border style for card sections
+$card-breakpoint:				800px;											// Breakpoint for cards
 //	Notes:
 // [1] - The cards module depends heavily on the grid system module.
 //	Enable mini.css

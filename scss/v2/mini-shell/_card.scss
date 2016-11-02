@@ -1,2 +1,44 @@
 // Definitions for cards and containers.
 // Dependency: This module depends heavily on the grid system module.
+// Card styling
+$card-name:						'card' !default;								// Class name for the cards
+$card-section-name:				'section' !default;								// Class name for the cards' sections
+$card-section-media-name:		'media' !default;								// Class name for the cards' sections (media cotent)
+.#{$card-name} {
+	position: relative;
+	width: 100%;
+@if $card-back-color != $back-color {
+	background: $card-back-color;
+}
+@if $card-fore-color != $fore-color {
+	color: $card-fore-color;
+}
+@if $card-border-style != 0 {
+	border: $card-border-style;
+}
+@if $card-border-radius != 0 {
+	border-radius: $card-border-radius;
+}
+@if $card-margin != 0 {
+	margin: $card-margin;
+}
+	box-shadow: rgba(0, 0, 0, 0.19) 0 0 3px 0;
+& > .#{$card-section-name} {
+	border-bottom: $card-section-border-style;
+&.#{$card-section-media-name} {
+	padding: 0;
+}
+}
+& > .#{$card-section-name}:last-child {
+	border-bottom: 0;
+}
+}
+$card-breakpoint:				800px !default;									// Breakpoint for the card system
+@media only screen and (min-width: #{$grid-small-breakpoint}) {
+.#{$card-name} {
+	max-width: 320px;
+}
+}
+// TODO: Add paddings etc etc
+// TODO: Add different sizes for cards
+// TODO: Test excessively

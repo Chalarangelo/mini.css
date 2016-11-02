@@ -785,6 +785,24 @@ progress {
   progress[value="100"]::-moz-progress-bar {
     border-radius: 1px; }
 
+.card {
+  position: relative;
+  width: 100%;
+  background: #f5f5f5;
+  border: 1px solid #bdbdbd;
+  border-radius: 2px;
+  margin: 2px 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 0 3px 0; }
+  .card > .section {
+    border-bottom: 1px solid #e0e0e0; }
+    .card > .section.media {
+      padding: 0; }
+  .card > .section:last-child {
+    border-bottom: 0; }
+
+@media only screen and (min-width: 768px) {
+  .card {
+    max-width: 320px; } }
 button.primary, [type="button"].primary, [type="submit"].primary,
 [type="reset"].primary, .button.primary {
   background: #1565c0;

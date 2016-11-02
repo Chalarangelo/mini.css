@@ -264,3 +264,4 @@
 - Deployed demo page with `header`.
 - Added simple styling for `nav`. Created iteration builder for `sublink` and categories tree.
 - Tested and optimized `nav`, added demo to `index`.
+- Deployed demo page again.

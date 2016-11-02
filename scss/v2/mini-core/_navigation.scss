@@ -52,6 +52,39 @@ button, [type="button"], a.#{$button-class-name}, label.#{$button-class-name}, .
 // Navigation sidebar styling.
 nav {
 	display: block;		// Correct display for older versions of IE.
+@if $nav-back-color != $back-color {
+	background: $nav-back-color;
+}
+@if $nav-fore-color != $fore-color {
+	color: $nav-fore-color;
+}
+@if $nav-border-style != 0 {
+	border: $nav-border-style;
+}
+@if $nav-border-radius != 0 {
+	border-radius: $nav-border-radius;
+}
+@if $nav-margin != 0 {
+	margin: $nav-margin;
+}
+@if $nav-padding != 0 {
+	padding: $nav-padding;
+}
+a {
+display: block;
+@if $nav-link-fore-color != $link-fore-color {
+	color: $nav-link-fore-color;
+}
+}
+// Subcategories in navigation.
+$nav-sublink-prefix:		'sublink' !default;		// Prefix for the subcategory tabs in nav
+$nav-sublink-depth:			2 !default;			// Amount of subcategory classes to add
+$nav-sublink-padding-left:	12px !default;		// Left padding to add to subcategories
+@for $i from 1 through $nav-sublink-depth {
+.#{$nav-sublink-prefix}-#{$i} {
+	padding-left: $i * $nav-sublink-padding-left;
+}
+}
 }
 // Footer styling.
 footer {

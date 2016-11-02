@@ -353,8 +353,36 @@
               </fieldset>
             </form><br>
             <h3>Navigation</h3>
-            <p>Use the <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code> and <code>&lt;footer&gt;</code> elements to add navigational elements to your page. The <code>&lt;header&gt;</code> element displays as a non-fixed horizontal bar and can contain a logo along with a set of links or buttons. Style any links using the <code>.button</code> class to give them the proper style. You can see an example belo:</p>
+            <p>Use the <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code> and <code>&lt;footer&gt;</code> elements to add navigational elements to your page. The <code>&lt;header&gt;</code> element displays as a non-fixed horizontal bar and can contain a logo along with a set of links or buttons. Style any links using the <code>.button</code> class to give them the proper style. it is suggested that you place the <code>&lt;header&gt;</code> element outside of your grid system's <code>.container</code> to avoid styling problems. You can see an example below:</p>
             <header><a href="#" class="logo">Logo</a><button>Link 1</button><a href="#" class="button">Link 2</a><button>Link 3</button></header><br>
+            <p><code>&lt;nav&gt;</code> implements the traditional navigation sidebar, using simple styling. The sidebar is not fixed by default and it has no specific width set, so you can use the grid system or some Javascript code to show or hide it and decide its size. Use simple links and <code>&lt;span&gt;</code> elements to add links and categories. The <code>.sublink-1</code> and <code>.sublink-2</code> classes can be added to create links in categories and subcategories. Below you can see an example (sidebar is displayed next to text on medium-large displays, but fills the whole display on phones and smaller screens):</p>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-9">
+                  <p>This is some sample content that will show next to the navigation menu. Which means that we'll have to present some more fun facts about <strong>mini.css</strong> to occupy this space. Well, here's a couple:</p>
+                  <ul>
+                  <li><strong>mini.css</strong> was inspired by Bootstrap and Pure.css. Its original goal was to build a framework with the stylistic fluff of Bootstrap, but nearly the size of Pure.css. The first version, codenamed <strong>Neutrino</strong> was well-received and was mostly a tech demo of what <strong>Fermion</strong> now offers.</li>
+                  <li><strong>mini.css</strong> v2.0 has been designed with modern browser compatibility and recent web standards in mind. Part of its aim is to reduce the footprint of websites by providing a customizable base to work with, while cutting down a lot of the fat that comes with premade stylesheets.</li>
+                  </ul>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                  <nav>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <span>Category 1</span>
+                    <a href="#" class="sublink-1">Link 3</a>
+                    <a href="#" class="sublink-1">Link 4</a>
+                    <span class="sublink-1">Category 2</span>
+                    <a href="#" class="sublink-2">Link 5</a>
+                    <a href="#" class="sublink-2">Link 6</a>
+                    <a href="#" class="sublink-1">Link 7</a>
+                    <a href="#" >Link 8</a>
+                  </nav>
+                </div>
+              </div>
+            </div><br>
+            <p>Finally, use the <code>&lt;footer&gt;</code> element to create your very own footer, the way you want it.</p>
+            
           </div>
         </div>
       </div>

@@ -647,7 +647,17 @@ header {
     text-decoration: none; }
 
 nav {
-  display: block; }
+  display: block;
+  background: #eceff1;
+  border-radius: 1px;
+  margin: 2px;
+  padding: 4px 4px 4px 16px; }
+  nav a {
+    display: block; }
+  nav .sublink-1 {
+    padding-left: 12px; }
+  nav .sublink-2 {
+    padding-left: 24px; }
 
 footer {
   display: block; }

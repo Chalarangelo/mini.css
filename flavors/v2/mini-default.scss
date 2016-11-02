@@ -183,6 +183,16 @@ $header-logo-margin:			1px 6px 1px 1px;								// Margin for header's logo
 $header-logo-padding:			0;												// Padding for header's logo
 $header-link-hover-color:		#37474f;										// Hover color for header's links
 $header-link-margin:			2px 0 0;										// Margin for header's links
+$nav-back-color:				#eceff1;										// Background for nav
+$nav-fore-color:				$fore-color;									// Text color for nav
+$nav-border-style:				0;												// Border style for nav
+$nav-border-radius:				1px;											// Border radius for nav
+$nav-padding:					4px 4px 4px 16px;								// Padding for nav
+$nav-margin:					2px;											// Margin for nav
+$nav-link-fore-color:			$link-fore-color;								// Text color for links in nav
+$nav-sublink-prefix:			'sublink';										// Prefix for the subcategory links in nav
+$nav-sublink-depth:				2;												// Amount of subcategory classes to add
+$nav-sublink-padding-left:		12px;											// Left padding to add to subcategories
 //	Variables for button elements
 $button-back-color:				#cfd8dc;										// Back color for button elements
 $button-back-opacity:			0.75;											// Background opacity for button elements

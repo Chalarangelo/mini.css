@@ -262,3 +262,5 @@
 - *NOTE* There is some bleedthrough of styles from `button` to `navigation`, specifically for `header`. This is not a problem, but should be noted for further reference/testing etc.
 - Extended testing for `header`, there seem to be no bugs.
 - Deployed demo page with `header`.
+- Added simple styling for `nav`. Created iteration builder for `sublink` and categories tree.
+- Tested and optimized `nav`, added demo to `index`.

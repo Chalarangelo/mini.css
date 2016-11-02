@@ -261,3 +261,4 @@
 - Updated live page for `header`.
 - *NOTE* There is some bleedthrough of styles from `button` to `navigation`, specifically for `header`. This is not a problem, but should be noted for further reference/testing etc.
 - Extended testing for `header`, there seem to be no bugs.
+- Deployed demo page with `header`.

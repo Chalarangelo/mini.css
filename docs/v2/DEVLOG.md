@@ -298,3 +298,5 @@
 - Tested cards, seem to work properly.
 - Minor restructure of `utility` for consistency and such.
 - Created mixin `make-card-section-alt-color` for alternate background `card` `section`s. Added a couple of variants just for fluff.
+- Opened issue for more mixins to be added to `card` module later.
+- Deployed live page.

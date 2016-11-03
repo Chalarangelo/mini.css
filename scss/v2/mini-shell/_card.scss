@@ -4,9 +4,30 @@
 $card-name:						'card' !default;								// Class name for the cards
 $card-section-name:				'section' !default;								// Class name for the cards' sections
 $card-section-media-name:		'media' !default;								// Class name for the cards' sections (media cotent)
+$card-normal-width:				320px !default;									// Width for normal cards
+$card-large-name:				'large' !default;								// Class name for large cards
+$card-large-width:				480px !default;									// Width for large cards
+$card-small-name:				'small' !default;								// Class name for small cards
+$card-small-width:				240px !default;									// Width for small cards
 .#{$card-name} {
+// Make cards display properly using flexbox tricks
+// Old syntax
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: justify;
+	-webkit-box-align: center;
+// New syntax
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-flex-direction: column;
+			flex-direction: column;
+	-webkit-justify-content: space-between;
+  			justify-content: space-between;
+  	-webkit-align-self: center;
+  			align-self: center;
 	position: relative;
 	width: 100%;
+// Actual styling for the cards
 @if $card-back-color != $back-color {
 	background: $card-back-color;
 }
@@ -22,23 +43,68 @@ $card-section-media-name:		'media' !default;								// Class name for the cards'
 @if $card-margin != 0 {
 	margin: $card-margin;
 }
-	box-shadow: rgba(0, 0, 0, 0.19) 0 0 3px 0;
+// Tasteful shadow
+	box-shadow: rgba(0, 0, 0, 0.25) 0 0 3px 0;
+// Card sections
 & > .#{$card-section-name} {
+	box-sizing: border-box;
+	margin: 0;
 	border-bottom: $card-section-border-style;
+	padding: $card-section-padding;
+	width: 100%;
+// Card media sections
 &.#{$card-section-media-name} {
+	height: $card-section-media-height;
 	padding: 0;
+	-o-object-fit: cover;
+	   object-fit: cover;
 }
 }
+// Card input and button sections
+& > button, .#{$button-class-name}, input {
+&.#{$card-section-name} {
+	border-radius: 0;	// Clean button and input gaps from border-radius
+}
+}
+// Card sections - last
 & > .#{$card-section-name}:last-child {
-	border-bottom: 0;
+	border-bottom: 0;	// Clean the extra border for last section
 }
 }
-$card-breakpoint:				800px !default;									// Breakpoint for the card system
-@media only screen and (min-width: #{$grid-small-breakpoint}) {
+// Responsiveness (if the screen is larger than card, set max-width)
+@media only screen and (min-width: #{$card-normal-width}) {
 .#{$card-name} {
-	max-width: 320px;
+	max-width: $card-normal-width;
 }
 }
-// TODO: Add paddings etc etc
-// TODO: Add different sizes for cards
-// TODO: Test excessively
+@media only screen and (min-width: #{$card-large-width}) {
+.#{$card-name}.#{$card-large-name} {
+	max-width: $card-large-width;
+}
+}
+@media only screen and (min-width: #{$card-small-width}) {
+.#{$card-name}.#{$card-small-name} {
+	max-width: $card-small-width;
+}
+}
+// Mixin for alternate card sections (card section color variants).
+// Variables:
+// - $card-section-alt-name : The name of the class used for the alternate card section.
+// - $card-section-alt-back-color : The background color of the alternate card section.
+// - $card-section-alt-fore-color : The text color of the alternate card section.
+// - $card-section-alt-border-style : (Optional) The border style of the alternate card section. Defaults to
+//	the value of $card-border-style.
+@mixin make-card-section-alt-color ($card-section-alt-name, $card-section-alt-back-color, 
+	$card-section-alt-fore-color, $card-section-alt-border-style : $card-section-border-style) {
+.#{$card-name} > .#{$card-section-name}.#{$card-section-alt-name} {
+@if $card-section-alt-back-color != $card-back-color {
+	background: $card-section-alt-back-color;
+}
+@if $card-section-alt-fore-color != $card-fore-color {
+	color: $card-section-alt-fore-color;
+}
+@if $card-section-alt-border-style != $card-section-border-style {
+	border: $card-section-alt-border-style;
+}
+}
+}

@@ -317,13 +317,25 @@ $breadcrumbs-name:				'breadcrumbs';									// Class name for breadcrumbs
 $card-name:						'card';											// Class name for cards
 $card-back-color:				#f5f5f5;										// Background color for cards
 $card-fore-color:				$fore-color;									// Text color for cards
-$card-border-style:				1px solid #bdbdbd;								// Border style for cards
+$card-border-style:				1px solid #9e9e9e;								// Border style for cards
 $card-border-radius:			2px;											// Border radius for cards
 $card-margin:					2px 10px 20px;									// Margin for cards
 $card-section-name:				'section';										// Class name for card sections
+$card-section-border-style:		1px solid #bdbdbd;								// Border style for card sections
+$card-section-padding:			6px 8px 6px;									// Padding for card sections
 $card-section-media-name:		'media';										// Class name for card media sections
-$card-section-border-style:		1px solid #e0e0e0;								// Border style for card sections
-$card-breakpoint:				800px;											// Breakpoint for cards
+$card-section-media-height:		200px;											// Height for card media setions
+$card-normal-width:				320px;											// Width for normal cards
+$card-large-name:				'large';										// Class name for large cards
+$card-large-width:				480px;											// Width for large cards
+$card-small-name:				'small';										// Class name for small cards
+$card-small-width:				240px;											// Width for small cards
+$card-section-style1-name:		'dark';											// Class name for card section style 1
+$card-section-style1-back-color:#bdbdbd;										// Background color for card section style 1
+$card-section-style1-fore-color:$fore-color;									// Text color for card section style 1
+$card-section-style2-name:		'primary';										// Class name for card section style 2
+$card-section-style2-back-color:#0277bd;										// Background color for card section style 2
+$card-section-style2-fore-color:$fore-color;									// Text color for card section style 2
 //	Notes:
 // [1] - The cards module depends heavily on the grid system module.
 //	Enable mini.css
@@ -365,3 +377,8 @@ $card-breakpoint:				800px;											// Breakpoint for cards
 @include make-clearfix ($clearfix-name);
 @include make-center-block ($center-block-name);
 @include make-breadcrumbs ($breadcrumbs-name);
+//	Use mixins for cards
+@include make-card-section-alt-color ($card-section-style1-name, $card-section-style1-back-color, 
+	$card-section-style1-fore-color);
+@include make-card-section-alt-color ($card-section-style2-name, $card-section-style2-back-color, 
+	$card-section-style2-fore-color);

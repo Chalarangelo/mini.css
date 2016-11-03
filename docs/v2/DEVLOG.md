@@ -287,3 +287,14 @@
 - Actually deleted `shell` file, moved everything to `core` file, renamed to `_mini.scss`.
 - Played around with `card`s a little bit, got a few basic ideas down, tested centering in `row`, not worthwhile.
 - Some minor styling for cards has been done, lots of work needed still.
+
+## 20161103
+
+- Added some more info in issue #16 about breaking changes and cards etc.
+- Added the proper features needed for media inside `card`s, images and other parts named as media will respond as required and images will resize and center properly. This, in turn broke support for certain browsers.
+- Added flexbox properties to cards to `align-self` and `justify-content` so that contents and containers will display properly.
+- Created `large` and `small` variants for `card`s.
+- Optimized `card`s and added variables etc.
+- Tested cards, seem to work properly.
+- Minor restructure of `utility` for consistency and such.
+- Created mixin `make-card-section-alt-color` for alternate background `card` `section`s. Added a couple of variants just for fluff.

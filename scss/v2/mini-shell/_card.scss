@@ -147,3 +147,14 @@ $card-normal-width:				320px !default;									// Width for normal cards
 	padding: $card-section-alt-padding;
 }
 }
+// Mixin for grid system's row that spaces cards apart.
+@mixin add-grid-row-cards-alignment {
+$grid-row-name:					'row' !default;								// Class name for the cards
+.#{$grid-row-name}.#{$card-name}s {
+// Old syntax
+	-webkit-box-pack: justify;
+// New syntax
+	-webkit-justify-content: space-around;
+  			justify-content: space-around;
+}
+}

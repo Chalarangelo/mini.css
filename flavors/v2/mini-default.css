@@ -985,3 +985,8 @@ ul.breadcrumbs {
 
 .card > .section.double-padded {
   padding: 12px 16px 12px; }
+
+.row.cards {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-around;
+  justify-content: space-around; }

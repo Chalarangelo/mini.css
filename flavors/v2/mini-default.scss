@@ -396,3 +396,4 @@ $card-section-padding1-padding:	12px 16px 12px;									// Padding for card sect
 @include make-card-section-alt-color ($card-section-style2-name, $card-section-style2-back-color, 
 	$card-section-style2-fore-color);
 @include make-card-section-alt-style ($card-section-padding1-name, $card-section-padding1-padding);
+@include add-grid-row-cards-alignment;

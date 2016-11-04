@@ -314,3 +314,4 @@
 - Created mixin `make-card-section-alt-style`, added `double-padded` style to add twice the `padding` to sections.
 - Deployed updated demo page.
 - Added a new mixin `add-grid-row-cards-alignment` without parameters that allows `row`s to align the elements they contain automatically horizontally.
+- Deployed demo again.

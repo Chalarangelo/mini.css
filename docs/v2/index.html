@@ -418,13 +418,17 @@
                   <div class="section">You can use <code>&lt;button&gt;</code>s and other similar elements as card sections. Like the button below.</div>
                   <button class="section">Button section</button>
                 </div>
-                <div class="card">
-                  <p>Cards resize automatically to fit any and all content, allowing you to do anything you want with them. They also align the content automatically, so your sections will always look pretty. Nothing to worry about anymore!</p>
+                <div class="card primary">
+                  <p>Cards resize automatically to fit any and all content, allowing you to do anything you want with them. They also align the content automatically, so your sections will always look pretty. Nothing to worry about anymore! By the way, this is a <code>.primary</code> card.</p>
                 </div>
                 <div class="card">
                   <h2 class="section dark"><code>.dark</code> heading</h2>
                   <p class="section">Totally normal text.</p>
                   <p class="section primary"><code>.primary</code> section text.</p>
+                </div>
+                <div class="card fluid">
+                  <h1 class="section">Fluid</h1>
+                  <p class="section">Yes, <code>.fluid</code> cards are also available! You might want to use these in combination with the grid system's columns to achieve a better effect. There's an example below, after the other size variants for the cards. Have a look.</p>
                 </div>
                 <div class="card small">
                   <h2>&nbsp;Small</h2>
@@ -438,6 +442,31 @@
                     <p>Because you'll need them.</p><br>
                     </div>
                   <input class="section" placeholder="Enter some text here...">
+                </div>
+                <div class="card">
+                  <p class="section double-padded">
+                    These cards work quite well together, no matter the size. Well, except the <code>.fluid</code> ones which should be used together, without the other cards. Unless you want a fluid card to act as a separator of sorts, which might be desirable. Just use them in columns, like we show you below, it's the best way. By the way, this was a <code>.double-padded</code> section.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-md-3">
+                  <div class="card fluid">
+                    <h1 class="section double-padded">Card 1</h1>
+                    <p>This is the first card. It is placed inside a column.</p>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md">
+                  <div class="card fluid">
+                    <h1 class="section double-padded">Card 2</h1>
+                    <p>This is the second card. It is placed inside a larger column. On smaller displays these will display like a list of cards.</p>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                  <div class="card fluid">
+                    <h1 class="section double-padded">Card 3</h1>
+                    <p>This is the third card. It is placed inside a column.</p>
+                  </div>
                 </div>
               </div>
             </div>

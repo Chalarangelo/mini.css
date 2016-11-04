@@ -300,3 +300,15 @@
 - Created mixin `make-card-section-alt-color` for alternate background `card` `section`s. Added a couple of variants just for fluff.
 - Opened issue for more mixins to be added to `card` module later.
 - Deployed live page.
+
+
+## 20161104
+
+- Added mixin `make-card-alt-color` to `card` module. Supplied an example of a different card (`primary`).
+- Added mixin `make-card-alt-size` for `card` sizes.
+- Changed `card`'s `small` and `large` to use above mixin.
+- Added `fluid` for `card`s.
+- Fixed a bug with `fluid` `card`s, the new optimization and checking routine should work for all percentage-based values.
+- Updated demo a little bit to showcase all of the new features of `card`s.
+- For consistency reasons (inconsistent `margin`s might cause problems with `card`s of different types), there is no choice to change the `margin` of customized `card`s through via mixin.
+- Created mixin `make-card-section-alt-style`, added `double-padded` style to add twice the `padding` to sections.

@@ -326,16 +326,24 @@ $card-section-padding:			6px 8px 6px;									// Padding for card sections
 $card-section-media-name:		'media';										// Class name for card media sections
 $card-section-media-height:		200px;											// Height for card media setions
 $card-normal-width:				320px;											// Width for normal cards
-$card-large-name:				'large';										// Class name for large cards
-$card-large-width:				480px;											// Width for large cards
-$card-small-name:				'small';										// Class name for small cards
-$card-small-width:				240px;											// Width for small cards
+$card-size1-name:				'large';										// Class name for large cards
+$card-size1-width:				480px;											// Width for large cards
+$card-size2-name:				'small';										// Class name for small cards
+$card-size2-width:				160px;											// Width for small cards
+$card-size3-name:				'fluid';										// Class name for fluid cards
+$card-size3-width:				100%;											// Width for fluid cards
+$card-style1-name:				'primary';										// Class name for card style 1
+$card-style1-back-color:		#e1f5fe;										// Background color for card style 1
+$card-style1-fore-color:		#263238;										// Text color for card style 1
+$card-style1-border-style:		1px solid #01579b;								// Border style for card style 1
 $card-section-style1-name:		'dark';											// Class name for card section style 1
 $card-section-style1-back-color:#bdbdbd;										// Background color for card section style 1
 $card-section-style1-fore-color:$fore-color;									// Text color for card section style 1
 $card-section-style2-name:		'primary';										// Class name for card section style 2
 $card-section-style2-back-color:#0277bd;										// Background color for card section style 2
 $card-section-style2-fore-color:$fore-color;									// Text color for card section style 2
+$card-section-padding1-name:	'double-padded';								// Class name for card section padding style 1
+$card-section-padding1-padding:	12px 16px 12px;									// Padding for card section padding style 1
 //	Notes:
 // [1] - The cards module depends heavily on the grid system module.
 //	Enable mini.css
@@ -378,7 +386,13 @@ $card-section-style2-fore-color:$fore-color;									// Text color for card sect
 @include make-center-block ($center-block-name);
 @include make-breadcrumbs ($breadcrumbs-name);
 //	Use mixins for cards
+@include make-card-alt-size ($card-size1-name, $card-size1-width);
+@include make-card-alt-size ($card-size2-name, $card-size2-width);
+@include make-card-alt-size ($card-size3-name, $card-size3-width);
+@include make-card-alt-color ($card-style1-name, $card-style1-back-color, $card-style1-fore-color, 
+	$card-style1-border-style);
 @include make-card-section-alt-color ($card-section-style1-name, $card-section-style1-back-color, 
 	$card-section-style1-fore-color);
 @include make-card-section-alt-color ($card-section-style2-name, $card-section-style2-back-color, 
 	$card-section-style2-fore-color);
+@include make-card-section-alt-style ($card-section-padding1-name, $card-section-padding1-padding);

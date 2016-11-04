@@ -5,10 +5,6 @@ $card-name:						'card' !default;								// Class name for the cards
 $card-section-name:				'section' !default;								// Class name for the cards' sections
 $card-section-media-name:		'media' !default;								// Class name for the cards' sections (media cotent)
 $card-normal-width:				320px !default;									// Width for normal cards
-$card-large-name:				'large' !default;								// Class name for large cards
-$card-large-width:				480px !default;									// Width for large cards
-$card-small-name:				'small' !default;								// Class name for small cards
-$card-small-width:				240px !default;									// Width for small cards
 .#{$card-name} {
 // Make cards display properly using flexbox tricks
 // Old syntax
@@ -73,18 +69,52 @@ $card-small-width:				240px !default;									// Width for small cards
 }
 // Responsiveness (if the screen is larger than card, set max-width)
 @media only screen and (min-width: #{$card-normal-width}) {
-.#{$card-name} {
-	max-width: $card-normal-width;
+	.#{$card-name} {
+		max-width: $card-normal-width;
+	}
+}
+// Mixin for alternate card sizes.
+// Variables:
+// - $card-alt-size-name : The name of the class used for the alternate size card.
+// - $card-alt-size-width : The width of the alternate size card.
+@mixin make-card-alt-size ($card-alt-size-name, $card-alt-size-width) {
+@if type-of($card-alt-size-width) == 'number' && unit($card-alt-size-width) == '%' {
+.#{$card-name}.#{$card-alt-size-name} {
+		max-width: $card-alt-size-width;
 }
 }
-@media only screen and (min-width: #{$card-large-width}) {
-.#{$card-name}.#{$card-large-name} {
-	max-width: $card-large-width;
+@else {
+@media only screen and (min-width: #{$card-alt-size-width}) {
+	.#{$card-name}.#{$card-alt-size-name} {
+		max-width: $card-alt-size-width;
+	}
 }
 }
-@media only screen and (min-width: #{$card-small-width}) {
-.#{$card-name}.#{$card-small-name} {
-	max-width: $card-small-width;
+}
+// Mixin for alternate cards (card color variants).
+// Variables:
+// - $card-alt-name : The name of the class used for the alternate card.
+// - $card-alt-back-color : The background color of the alternate card.
+// - $card-alt-fore-color : The text color of the alternate card.
+// - $card-alt-border-style : (Optional) The border style of the alternate card. Defaults to the value
+//	of $card-border-style.
+// - $card-alt-border-radius : (Optional) The border radius of the alternate card. Defaults to the value
+//	of $card-border-radius.
+@mixin make-card-alt-color ($card-alt-name, $card-alt-back-color, $card-alt-fore-color, 
+	$card-alt-border-style : $card-border-style, $card-alt-border-radius : $card-border-radius) {
+.#{$card-name}.#{$card-alt-name} {
+@if $card-alt-back-color != $card-back-color {
+	background: $card-alt-back-color;
+}
+@if $card-alt-fore-color != $card-fore-color {
+	color: $card-alt-fore-color;
+}
+@if $card-alt-border-style != $card-border-style {
+	border: $card-alt-border-style;
+}
+@if $card-alt-border-radius != $card-border-radius {
+	border-radius: $card-alt-border-radius;
+}
 }
 }
 // Mixin for alternate card sections (card section color variants).
@@ -93,7 +123,7 @@ $card-small-width:				240px !default;									// Width for small cards
 // - $card-section-alt-back-color : The background color of the alternate card section.
 // - $card-section-alt-fore-color : The text color of the alternate card section.
 // - $card-section-alt-border-style : (Optional) The border style of the alternate card section. Defaults to
-//	the value of $card-border-style.
+//	the value of $card-section-border-style.
 @mixin make-card-section-alt-color ($card-section-alt-name, $card-section-alt-back-color, 
 	$card-section-alt-fore-color, $card-section-alt-border-style : $card-section-border-style) {
 .#{$card-name} > .#{$card-section-name}.#{$card-section-alt-name} {
@@ -106,5 +136,14 @@ $card-small-width:				240px !default;									// Width for small cards
 @if $card-section-alt-border-style != $card-section-border-style {
 	border: $card-section-alt-border-style;
 }
+}
+}
+// Mixin for alternate card sections (card section padding variants).
+// Variables:
+// - $card-section-alt-name : The name of the class used for the alternate card section.
+// - $card-section-alt-padding : The padding of the alternate card section.
+@mixin make-card-section-alt-style ($card-section-alt-name, $card-section-alt-padding) {
+.#{$card-name} > .#{$card-section-name}.#{$card-section-alt-name} {
+	padding: $card-section-alt-padding;
 }
 }

@@ -824,12 +824,6 @@ progress {
 @media only screen and (min-width: 320px) {
   .card {
     max-width: 320px; } }
-@media only screen and (min-width: 480px) {
-  .card.large {
-    max-width: 480px; } }
-@media only screen and (min-width: 240px) {
-  .card.small {
-    max-width: 240px; } }
 button.primary, [type="button"].primary, [type="submit"].primary,
 [type="reset"].primary, .button.primary {
   background: #1565c0;
@@ -969,8 +963,25 @@ ul.breadcrumbs {
       content: '\27e9';
       padding: 0.125em; }
 
+.card.large {
+  max-width: 480px; }
+
+.card.small {
+  max-width: 160px; }
+
+.card.fluid {
+  max-width: 100%; }
+
+.card.primary {
+  background: #e1f5fe;
+  color: #263238;
+  border: 1px solid #01579b; }
+
 .card > .section.dark {
   background: #bdbdbd; }
 
 .card > .section.primary {
   background: #0277bd; }
+
+.card > .section.double-padded {
+  padding: 12px 16px 12px; }

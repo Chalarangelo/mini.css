@@ -312,3 +312,4 @@
 - Updated demo a little bit to showcase all of the new features of `card`s.
 - For consistency reasons (inconsistent `margin`s might cause problems with `card`s of different types), there is no choice to change the `margin` of customized `card`s through via mixin.
 - Created mixin `make-card-section-alt-style`, added `double-padded` style to add twice the `padding` to sections.
+- Deployed updated demo page.

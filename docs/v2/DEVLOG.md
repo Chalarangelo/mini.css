@@ -357,3 +357,4 @@
 - Made a few minor tweaks, decided not to add `accordion`-specific styling, as the current styling is just enough.
 - Edited the demo page to include most of the new functionality.
 - *TODO* Move `_accordion.scss` to the `legacy` folder etc.
+- Deployed live demo.

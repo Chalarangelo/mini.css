@@ -337,3 +337,4 @@
 - Created `spinner-donut` class and made styling for that `spinner`.
 - Added mixin `make-spinner-donut-alt-color` to allow for custom `spinner` styles. No optimizations are applied to this mixin, due to the fact that overwriting the background might cause trouble with the foreground etc.
 - Optimized and softcoded most of the `spinner` module's stuff.
+- Tested `tab` system for a while, tried out a lot of things, hardcoded demo.

@@ -1,1 +1,86 @@
 // Definitions for tabs/horizontal accordions.
+// Tab styling
+$tab-container-name:			'tabs' !default;								// Class name for the tabs container
+.#{$tabs-container-name} {
+	width: 100%;
+// Old syntax
+	display: -webkit-box;
+	-webkit-box-pack: justify;
+// New syntax
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-justify-content: space-between;
+  			justify-content: space-between;
+  	-webkit-flex-wrap: wrap;
+  			flex-wrap: wrap;
+// Tab label styling
+& > label {	
+	display: inline-block;
+	height: 26px;
+	border: 1px solid #bdbdbd;
+	padding: 4px;
+	order: 1;
+	cursor: pointer;
+// Old syntax
+	-webkit-box-flex: 1;
+// New syntax
+	flex-grow: 1;
+}
+// Tab radio styling
+& > [type="radio"] {
+	display: none;
+	visibility: hidden;
+}
+// Tab content styling
+& > [type="radio"] + label + div {
+	order: 2;
+	flex-basis: auto;
+	// Hide content, while allowing accessibility
+	height: 1px;
+	width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+	clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    		clip-path: inset(100%);
+    + [type="radio"] + label {
+		border-left: 0;
+	}
+}
+// Tab content styling (visible)
+& > [type="radio"]:checked + label {
+	background: blue;
+}
+& > [type="radio"]:checked + label + div {
+
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	height: 320px;
+	margin: 0;
+	border: 1px solid #bdbdbd;
+
+	border-top: 0;
+	clip: auto;
+    -webkit-clip-path: inset(0%);
+    		clip-path: inset(0%);
+}
+}
+
+@media (max-width: 800px){
+.tabs {
+	flex-direction: column;
+	& > label {
+		order: initial;
+		
+	}
+	& > [type="radio"] + label + div {
+		order: initial;
+		+ [type="radio"] + label {
+			border: 1px solid #bdbdbd;
+			border-top: 0;
+		}
+	}
+}
+}

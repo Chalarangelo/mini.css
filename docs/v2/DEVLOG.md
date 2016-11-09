@@ -331,3 +331,4 @@
 - Added support for `-webkit-` prefix for `transform` to support some browsers.
 - Updated demo page for `accordion` with `radio`s as well.
 - Added a small section about `tab`s and `carousel`s, just to allow me to test presentation a bit more.
+- Deployed demo page with `accordion` demo.

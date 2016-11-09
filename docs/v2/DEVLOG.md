@@ -315,3 +315,7 @@
 - Deployed updated demo page.
 - Added a new mixin `add-grid-row-cards-alignment` without parameters that allows `row`s to align the elements they contain automatically horizontally.
 - Deployed demo again.
+
+## 20161109
+
+- Changed `checkbox` module a little bit to use `floor()` functions to fill the `:after` part, so that everything will look kinda tidier on most browsers. This has been modified after testing on more screens and noticing some minor discrepancies with the way `radio`s are presented.

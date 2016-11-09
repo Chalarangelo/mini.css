@@ -363,3 +363,4 @@
 - Deployed updated live demo page.
 - Tested on mobile, works better.
 - Minor `tabs` update for `:first-of-type` and `:last-of-type` selectors. This update should fix square top-right corners for single collapses.
+- Deployed live demo.

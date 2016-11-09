@@ -332,3 +332,4 @@
 - Updated demo page for `accordion` with `radio`s as well.
 - Added a small section about `tab`s and `carousel`s, just to allow me to test presentation a bit more.
 - Deployed demo page with `accordion` demo.
+- Added `mini-shell/tab` and `mini-shell/spinner` for the `tab` and `spinner` modules accordingly.

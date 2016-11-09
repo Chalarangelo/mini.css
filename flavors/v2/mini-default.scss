@@ -359,6 +359,26 @@ $accordion-border-radius:		2px;											// Border radius for accordion
 $accordion-margin-bottom:		2px;											// Bottom margin for accordion
 $accordion-separator-border-style:												// Border style for the accordion's separators
 								1px solid #bdbdbd;								// (border between label and content)
+//	Variables for tabs
+
+//	Variables for spinners
+$spinner-dot-name:				'spinner-dot';									// Class name for dot spinner
+$spinner-dot-font-size:			1em;											// Font size for dot spinner
+$spinner-donut-name:			'spinner-donut';								// Class name for donut spinner
+$spinner-donut-border-thickness:4px;											// Border thickness for donut spinner
+$spinner-donut-back-color:		#e3f2fd;										// Background color for donut spinner
+$spinner-donut-fore-color:		#1565c0;										// Foreground color for donut spinner
+$spinner-donut-size:			20px;											// Size for donut spinner
+$spinner-donut-variant1-name:	'secondary';									// Class name for donut spinner variant 1
+$spinner-donut-variant1-back-color:												// Background color for donut spinner variant 1
+								#ffebee;
+$spinner-donut-variant1-fore-color:												// Foreground color for donut spinner variant 1
+								#c62828;	
+$spinner-donut-variant2-name:	'tertiary';										// Class name for donut spinner variant 2
+$spinner-donut-variant2-back-color:												// Background color for donut spinner variant 2
+								#e8f5e9;
+$spinner-donut-variant2-fore-color:												// Foreground color for donut spinner variant 2
+								#2e7d32;	
 //	Enable mini.css
 @import '../../scss/v2/mini';
 //	Use mixins for button elements
@@ -410,3 +430,8 @@ $accordion-separator-border-style:												// Border style for the accordion'
 	$card-section-style2-fore-color);
 @include make-card-section-alt-style ($card-section-padding1-name, $card-section-padding1-padding);
 @include add-grid-row-cards-alignment;
+@include make-spinner-donut-alt-color ($spinner-donut-variant1-name, $spinner-donut-variant1-back-color, 
+	$spinner-donut-variant1-fore-color);
+@include add-grid-row-cards-alignment;
+@include make-spinner-donut-alt-color ($spinner-donut-variant2-name, $spinner-donut-variant2-back-color, 
+	$spinner-donut-variant2-fore-color);

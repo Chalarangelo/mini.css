@@ -883,20 +883,29 @@ progress {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
   .tabs > label {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-order: 1;
+    order: 1;
     display: inline-block;
     height: 26px;
-    border: 1px solid #bdbdbd;
-    padding: 4px;
-    order: 1;
     cursor: pointer;
-    -webkit-box-flex: 1;
-    flex-grow: 1; }
+    background: #e0e0e0;
+    border: 1px solid #9e9e9e;
+    padding: 4px 6px; }
+    .tabs > label:first-of-type {
+      border-top-left-radius: 2px; }
+    .tabs > label:last-of-type {
+      border-top-right-radius: 2px; }
   .tabs > [type="radio"] {
     display: none;
     visibility: hidden; }
   .tabs > [type="radio"] + label + div {
-    order: 2;
+    -webkit-flex-basis: auto;
     flex-basis: auto;
+    -webkit-order: 2;
+    order: 2;
     height: 1px;
     width: 1px;
     margin: -1px;
@@ -904,33 +913,55 @@ progress {
     position: absolute;
     clip: rect(0 0 0 0);
     -webkit-clip-path: inset(100%);
-    clip-path: inset(100%); }
+    clip-path: inset(100%);
+    transition: height 0.3s ease 0s;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; }
     .tabs > [type="radio"] + label + div + [type="radio"] + label {
       border-left: 0; }
   .tabs > [type="radio"]:checked + label {
-    background: blue; }
+    background: #bdbdbd; }
   .tabs > [type="radio"]:checked + label + div {
     box-sizing: border-box;
     position: relative;
+    height: 400px;
     width: 100%;
-    height: 320px;
+    overflow: auto;
     margin: 0;
-    border: 1px solid #bdbdbd;
+    border: 1px solid #9e9e9e;
     border-top: 0;
+    padding: 6px;
     clip: auto;
     -webkit-clip-path: inset(0%);
     clip-path: inset(0%); }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .tabs {
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
     flex-direction: column; }
     .tabs > label {
+      -webkit-order: initial;
       order: initial; }
+      .tabs > label:first-of-type {
+        border-top-right-radius: 2px; }
+      .tabs > label:last-of-type {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px; }
+    .tabs > [type="radio"]:checked + label {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0; }
     .tabs > [type="radio"] + label + div {
-      order: initial; }
+      -webkit-order: initial;
+      order: initial;
+      border-radius: 0; }
       .tabs > [type="radio"] + label + div + [type="radio"] + label {
-        border: 1px solid #bdbdbd;
-        border-top: 0; } }
+        border: 1px solid #9e9e9e;
+        border-top: 0; }
+    .tabs > [type="radio"] + label + div:last-of-type {
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px; } }
 @-webkit-keyframes spinner-dot-anim {
   to {
     -webkit-transform: translateY(-6em); } }

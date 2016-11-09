@@ -1,7 +1,8 @@
 // Definitions for tabs/horizontal accordions.
+// Dependency: This module is somewhat dependent on the grid system.
 // Tab styling
 $tab-container-name:			'tabs' !default;								// Class name for the tabs container
-.#{$tabs-container-name} {
+.#{$tab-container-name} {
 	width: 100%;
 // Old syntax
 	display: -webkit-box;
@@ -15,16 +16,39 @@ $tab-container-name:			'tabs' !default;								// Class name for the tabs contai
   			flex-wrap: wrap;
 // Tab label styling
 & > label {	
-	display: inline-block;
-	height: 26px;
-	border: 1px solid #bdbdbd;
-	padding: 4px;
-	order: 1;
-	cursor: pointer;
 // Old syntax
 	-webkit-box-flex: 1;
 // New syntax
-	flex-grow: 1;
+	-webkit-flex-grow: 1;
+			flex-grow: 1;
+// Make tab labels stay at the top on large displays
+	-webkit-order: 1;
+			order: 1;
+// Actual styling		
+	display: inline-block;
+	height: $tab-label-height;
+	cursor: pointer;
+@if $tab-label-back-color != $back-color {
+	background: $tab-label-back-color;
+}
+@if $tab-label-fore-color != $fore-color {
+	color: $tab-label-fore-color;
+}
+@if $tab-border-style != 0 {
+	border: $tab-border-style;
+}
+@if $tab-label-padding != 0 {
+	padding: $tab-label-padding;
+}
+@if $tab-border-radius != 0 {	// Style first and last tabs' labels' top corners as needed
+&:first-of-type {
+	border-top-left-radius: $tab-border-radius;
+}
+&:last-of-type {
+	border-top-right-radius: $tab-border-radius;
+}
+}
+					// TODO ADD HOVER STYLES HERE AND ON ACCORDION
 }
 // Tab radio styling
 & > [type="radio"] {
@@ -33,9 +57,13 @@ $tab-container-name:			'tabs' !default;								// Class name for the tabs contai
 }
 // Tab content styling
 & > [type="radio"] + label + div {
-	order: 2;
-	flex-basis: auto;
-	// Hide content, while allowing accessibility
+// New syntax
+	-webkit-flex-basis: auto;
+			flex-basis: auto;
+// Make tab panels display after all the labels on larger displays
+	-webkit-order: 2;
+			order: 2;
+// Hide content, while allowing accessibility
 	height: 1px;
 	width: 1px;
     margin: -1px;
@@ -44,43 +72,100 @@ $tab-container-name:			'tabs' !default;								// Class name for the tabs contai
 	clip: rect(0 0 0 0);
     -webkit-clip-path: inset(100%);
     		clip-path: inset(100%);
-    + [type="radio"] + label {
-		border-left: 0;
-	}
+	transition: height 0.3s ease 0s;
+// Style for tab labels except the first
+@if $tab-border-style != 0 {
++ [type="radio"] + label {
+	border-left: 0;
 }
-// Tab content styling (visible)
+}
+@if $tab-border-radius != 0 {
+	border-bottom-left-radius: $tab-border-radius;
+	border-bottom-right-radius: $tab-border-radius;
+}
+}
+// Tab label styling for open tab
 & > [type="radio"]:checked + label {
-	background: blue;
+@if $tab-label-selected-back-color != $tab-label-back-color {
+	background: $tab-label-selected-back-color;
 }
+@if $tab-label-selected-fore-color != $tab-label-fore-color {
+	color: $tab-label-selected-fore-color;
+}
+}
+// Tab content styling (open tab)
 & > [type="radio"]:checked + label + div {
-
 	box-sizing: border-box;
 	position: relative;
+	height: $tab-panel-height;
 	width: 100%;
-	height: 320px;
+	overflow: auto;
 	margin: 0;
-	border: 1px solid #bdbdbd;
-
+@if $tab-panel-back-color != $back-color {
+	background: $tab-panel-back-color;
+}
+@if $tab-panel-fore-color != $fore-color {
+	color: $tab-panel-fore-color;
+}
+@if $tab-border-style != 0 {
+	border: $tab-border-style;
 	border-top: 0;
+}
+@if $tab-panel-padding != 0 {
+	padding: $tab-panel-padding;
+}
+// Fix display for some browsers
 	clip: auto;
     -webkit-clip-path: inset(0%);
     		clip-path: inset(0%);
 }
 }
-
-@media (max-width: 800px){
-.tabs {
-	flex-direction: column;
-	& > label {
-		order: initial;
-		
-	}
-	& > [type="radio"] + label + div {
-		order: initial;
-		+ [type="radio"] + label {
-			border: 1px solid #bdbdbd;
-			border-top: 0;
-		}
-	}
+// Responsiveness
+@media only screen and (max-width: #{$tab-stacked-breakpoint}) {
+.#{$tab-container-name} {
+// Old syntax
+	-webkit-box-orient: vertical;
+// New syntax
+	-webkit-flex-direction: column;
+			flex-direction: column;
+& > label {
+	-webkit-order: initial;		// Reset order to show stacked tabs properly
+			order: initial;		
+@if $tab-border-radius != 0 {	// Style first and last tabs' labels' corners as needed
+&:first-of-type {
+	border-top-right-radius: $tab-border-radius;
+}
+&:last-of-type {
+	border-top-right-radius: 0;
+	border-bottom-left-radius: $tab-border-radius;
+	border-bottom-right-radius: $tab-border-radius;
+}
+}
+}
+@if $tab-border-radius != 0 {	// Style the last tabs' label corners when it's open as needed
+& > [type="radio"]:checked + label {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+}
+& > [type="radio"] + label + div {
+	-webkit-order: initial;		// Reset order to show stacked tabs properly
+			order: initial;	
+@if $tab-border-radius != 0 {
+	border-radius: 0;
+}
+& + [type="radio"] + label {
+@if $tab-border-style != 0 {
+	border: $tab-border-style;
+	border-top: 0;
+}
+}
+}
+@if $tab-border-radius != 0 {
+& > [type="radio"] + label + div:last-of-type {
+	border-bottom-left-radius: $tab-border-radius;
+	border-bottom-right-radius: $tab-border-radius;
+}
+}
 }
 }

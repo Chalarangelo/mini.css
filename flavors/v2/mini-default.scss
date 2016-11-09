@@ -360,7 +360,20 @@ $accordion-margin-bottom:		2px;											// Bottom margin for accordion
 $accordion-separator-border-style:												// Border style for the accordion's separators
 								1px solid #bdbdbd;								// (border between label and content)
 //	Variables for tabs
-$tabs-container-name:			'tabs';											// Class name for the tabs' container
+$tab-container-name:			'tabs';											// Class name for the tabs' container
+$tab-label-back-color:			#e0e0e0;										// Background color for tabs' labels
+$tab-label-fore-color:			$fore-color;									// Text color for tabs' labels
+$tab-label-selected-back-color:	#bdbdbd;										// Background color for open tab's label
+$tab-label-selected-fore-color:	$fore-color;									// Text color for open tab's label
+$tab-label-padding:				4px 6px;										// Padding for tabs' labels
+$tab-label-height:				26px;											// Height for tabs' labels
+$tab-border-style:				1px solid #9e9e9e;								// Border style for tabs
+$tab-border-radius:				2px;											// Border radius for tabs
+$tab-panel-back-color:			$back-color;									// Background color for tabs' panels
+$tab-panel-fore-color:			$fore-color;									// Text color for tabs' panels
+$tab-panel-padding:				6px;											// Padding for tabs' panels
+$tab-panel-height:				400px;											// Height for tabs' panels
+$tab-stacked-breakpoint:		$grid-medium-breakpoint;						// Breakpoint for tabs layout (stacked/horizontal)
 //	Variables for spinners
 $spinner-dot-name:				'spinner-dot';									// Class name for dot spinner
 $spinner-dot-font-size:			1em;											// Font size for dot spinner

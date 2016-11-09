@@ -1,0 +1,86 @@
+// Definitions for vertical accordions/collapses.
+// Accordion styling
+$accordion-name:				'accordion' !default;						// Class name for accordions/collapses
+[type="checkbox"].#{$accordion-name}, [type="radio"].#{$accordion-name} {
+	display: none;
+	visibility: hidden;
+// Style for the label (toggle)
++ label {
+	display: block;
+	cursor: pointer;
+@if $accordion-label-back-color != $back-color {
+	background: $accordion-label-back-color;
+}
+@if $accordion-label-fore-color != $fore-color {
+	color: $accordion-label-fore-color;
+}
+@if $accordion-border-style != 0 {
+	border: $accordion-border-style;
+}
+@if $accordion-border-radius != 0 {	
+	border-radius: $accordion-border-radius;
+}
+	padding: $accordion-label-padding;
+	margin-bottom: $accordion-margin-bottom;
+}
+// Style for the content (not customizable)
++ label + * {
+	// Hide content, while allowing accessibility
+	height: 1px;
+	width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+	clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    		clip-path: inset(100%);
+    // Presentation  		
+    -webkit-transform: scaleY(0);
+			transform: scaleY(0);    
+	-webkit-transform-origin: top;
+    		transform-origin: top;
+    transition: transform 0.3s ease 0s;
+}
+// Style for the label (toggle) when content is open
+&:checked + label {
+	margin-bottom: 0;	// Remove bottom margin
+@if $accordion-separator-border-style != $accordion-border-style {
+	border-bottom: $accordion-separator-border-style;
+}
+@if $accordion-border-radius != 0 {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+} 
+}
+// Style for the content when open
+&:checked + label + * {
+	// Display content
+	box-sizing: border-box;
+	position: relative;
+	height: auto;
+	width: 100%;
+	margin: 0;
+	clip: auto;
+    -webkit-clip-path: inset(0%);
+    		clip-path: inset(0%);
+    -webkit-transform: scaleY(1);
+			transform: scaleY(1);
+	// Content styling
+@if $accordion-content-back-color != $back-color {
+	background: $accordion-content-back-color;
+}
+@if $accordion-content-fore-color != $fore-color {
+	color: $accordion-content-fore-color;
+}
+@if $accordion-border-style != 0 {
+	border: $accordion-border-style;	
+	border-top: 0;
+}
+@if $accordion-border-radius != 0 {
+	border-bottom-right-radius: $accordion-border-radius;
+	border-bottom-left-radius: $accordion-border-radius; 
+}
+	padding: $accordion-content-padding;
+	margin-bottom: $accordion-margin-bottom;	
+}
+}

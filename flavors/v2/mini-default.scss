@@ -346,6 +346,19 @@ $card-section-padding1-name:	'double-padded';								// Class name for card sect
 $card-section-padding1-padding:	12px 16px 12px;									// Padding for card section padding style 1
 //	Notes:
 // [1] - The cards module depends heavily on the grid system module.
+//	Variables for accordions/collapses
+$accordion-name:				'accordion';									// Class name for accordions/collapses
+$accordion-label-back-color:	#e0e0e0;										// Background color for accordion label
+$accordion-label-fore-color:	$fore-color;									// Text color for accordion label
+$accordion-label-padding:		6px 10px 6px;									// Padding for accordion label
+$accordion-content-back-color:	$back-color;									// Background color for accordion content
+$accordion-content-fore-color:	$fore-color;									// Text color for accordion content
+$accordion-content-padding:		6px 10px 8px;									// Padding for accordion content
+$accordion-border-style:		1px solid #9e9e9e;								// Border style for accordion
+$accordion-border-radius:		2px;											// Border radius for accordion
+$accordion-margin-bottom:		2px;											// Bottom margin for accordion
+$accordion-separator-border-style:												// Border style for the accordion's separators
+								1px solid #bdbdbd;								// (border between label and content)
 //	Enable mini.css
 @import '../../scss/v2/mini';
 //	Use mixins for button elements

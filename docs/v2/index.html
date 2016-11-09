@@ -470,6 +470,21 @@
                 </div>
               </div>
             </div>
+            <h2>Content display <small>Present content any way you like</small></h2>
+            <p><strong>mini.css</strong> gives you some flexible components to show or hide the content you wish. These components are more generic than the ones found in other frameworks and aim to help you present any content the way you like. </p><br>
+            <h3>Accordion &amp; Collapse</h3>
+            <p>Use the <code>.accordion</code> class on a <code>&lt;input type=&quot;checkbox&quot;&gt;</code> or <code>&lt;input type=&quot;radio&quot;&gt;</code>, accompanied by a linked <code>&lt;label&gt;</code> and any content afterwards (use something like a <code>&lt;div&gt;</code> if you want to show/hide more than a paragraph of text or an image) to create a collapsible piece of content. Use multiple of these to create an accordion if you like. These components are accessible, although screen readers will read these as normal blocks of content, no distinctions made. Add <code>aria-hidden="true"</code> to the <code>&lt;label&gt;</code> to make sure there are no confusing elements. Below, you can see a couple of examples:</p>
+            <input type="checkbox" class="accordion" id="ac1" autocomplete="off"><label for="ac1">Toggle content</label>
+            <p>This is some content you can hide and show at will using the above label. Isn't that useful?</p>
+            <input type="checkbox" class="accordion" id="ac2" autocomplete="off"><label for="ac2">Toggle image</label>
+            <img src="catdemo.jpg">
+            <br>
+            <input type="radio" class="accordion" id="acr1" autocomplete="off" name="acr"><label for="acr1">Section 1</label>
+            <div><h4>Sample</h4> <p>This is the first piece of the accordion. These pieces are mutually exclusive.</p></div>
+            <input type="radio" class="accordion" id="acr2" autocomplete="off" name="acr"><label for="acr2">Section 2</label>
+            <div><h4>Demo</h4> <p>This is the second piece of the accordion. Notice how these samples use <code>&lt;div&gt;</code> to display more complex content.</p></div>
+            <h3>Tabs &amp; Carousels</h3>
+            <p>Tabbed navigation is a very common element for many websites and single page apps. <strong>mini.css</strong> supports both of these elements using one generic component. More coming soon...</p>
           </div>
         </div>
       </div>

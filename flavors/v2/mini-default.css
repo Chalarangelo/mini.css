@@ -741,12 +741,12 @@ input[type="file"] {
   .input-group [type="checkbox"][disabled] + label:before, .input-group [type="checkbox"][disabled] + label:after, .input-group [type="radio"][disabled] + label:before, .input-group [type="radio"][disabled] + label:after {
     opacity: 0.75; }
 .input-group [type="checkbox"]:checked + label:after, .input-group [type="radio"]:checked + label:after {
-  margin-left: -21.25px;
+  margin-left: -21px;
   position: absolute;
-  top: 3.825px;
-  left: 3.825px;
-  width: 9.35px;
-  height: 9.35px;
+  top: 4px;
+  left: 4px;
+  width: 9px;
+  height: 9px;
   background: #212121;
   content: ''; }
 
@@ -824,6 +824,54 @@ progress {
 @media only screen and (min-width: 320px) {
   .card {
     max-width: 320px; } }
+[type="checkbox"].accordion, [type="radio"].accordion {
+  display: none;
+  visibility: hidden; }
+  [type="checkbox"].accordion + label, [type="radio"].accordion + label {
+    display: block;
+    cursor: pointer;
+    background: #e0e0e0;
+    border: 1px solid #9e9e9e;
+    border-radius: 2px;
+    padding: 6px 10px 6px;
+    margin-bottom: 2px; }
+  [type="checkbox"].accordion + label + *, [type="radio"].accordion + label + * {
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    transition: transform 0.3s ease 0s; }
+  [type="checkbox"].accordion:checked + label, [type="radio"].accordion:checked + label {
+    margin-bottom: 0;
+    border-bottom: 1px solid #bdbdbd;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  [type="checkbox"].accordion:checked + label + *, [type="radio"].accordion:checked + label + * {
+    box-sizing: border-box;
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    clip: auto;
+    -webkit-clip-path: inset(0%);
+    clip-path: inset(0%);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    border: 1px solid #9e9e9e;
+    border-top: 0;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    padding: 6px 10px 8px;
+    margin-bottom: 2px; }
+
 button.primary, [type="button"].primary, [type="submit"].primary,
 [type="reset"].primary, .button.primary {
   background: #1565c0;

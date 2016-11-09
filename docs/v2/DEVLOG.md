@@ -319,3 +319,15 @@
 ## 20161109
 
 - Changed `checkbox` module a little bit to use `floor()` functions to fill the `:after` part, so that everything will look kinda tidier on most browsers. This has been modified after testing on more screens and noticing some minor discrepancies with the way `radio`s are presented.
+- Created `mini-shell/accordion` for the `accordion/collapse` module (`accordion` from now on).
+- Started styling the `accordion` component.
+- *DESIGN DECISION* The `accordion` component will be used both for single collapses and multiple ones.
+- Added accessibility to `accordion` component.
+- Tweaked the way the `accordion` works to use `transform: scaleY()` so that the `transition` will work with it. Using `height` did not work due to the value of `auto` when content was shown.
+- Fixed bug with `clip` and `clip-path` in Chrome for `accordion` module.
+- Changed the way `accordion` works to use variables. Optimized code.
+- Added demo for `accordion` to the `index` page.
+- Tweaked values and colors of `accordion`. Tested in both Chrome and Firefox.
+- Added support for `-webkit-` prefix for `transform` to support some browsers.
+- Updated demo page for `accordion` with `radio`s as well.
+- Added a small section about `tab`s and `carousel`s, just to allow me to test presentation a bit more.

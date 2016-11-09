@@ -374,3 +374,5 @@
   - Renamed `scss` directory to `src`. Renamed `flavors` directory to `dist`.
   - Moved flavors from their directory to the `src` directory. CSS files produced from flavor files will go to the `dist` folder, along with the minified versions.
   - *TODO* Update the `package.json` and `bower.json` files according to the new framework version.
+  - Updated live demo page reference to use the new structure.
+  

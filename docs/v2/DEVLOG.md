@@ -367,3 +367,6 @@
 - New module restructure: all modules will be moved to core, some merges might have to be applied (check issue #14). Restructure was applied as follows:
   - Added the functionality of the new `alert` module to `contextual`. Includes mixin `make-alert-alt-color` for different `alert` color variants.
   - Restructured folders. `mini-shell` removed, `mini-core` renamed to `mini`. `mini` is the core folder now.
+  - Created branch `v1-neutrino` both locally and on Github to support legacy versions in the future. `master` is now the branch for **Fermion** only.
+  - Aggressive deletion of older files. The following folder are now gone: `scss/mini`, `scss/mini-extra`, `flavors` except for the contents of the `v2` folder and the folder itself.
+  

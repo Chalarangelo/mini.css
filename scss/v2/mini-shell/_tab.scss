@@ -153,13 +153,13 @@ $tab-stacked-name:				'stacked' !default;								// Class name for stacked tabs 
 	-webkit-order: initial;		// Reset order to show stacked tabs properly
 			order: initial;		
 @if $tab-border-radius != 0 {	// Style first and last tabs' labels' corners as needed
-&:first-of-type {
-	border-top-right-radius: $tab-border-radius;
-}
 &:last-of-type {
 	border-top-right-radius: 0;
 	border-bottom-left-radius: $tab-border-radius;
 	border-bottom-right-radius: $tab-border-radius;
+}	// Keep :first-of-type below :last-of-type to make sure that single collapses get proper radiuses
+&:first-of-type {
+	border-top-right-radius: $tab-border-radius;
 }
 }
 }

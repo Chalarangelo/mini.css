@@ -361,3 +361,5 @@
 - Tested on mobile, found some presentational problems.
 - Minor change to the way `transition`s work for `tabs`, they will now all utilize the `transform` implementation.
 - Deployed updated live demo page.
+- Tested on mobile, works better.
+- Minor `tabs` update for `:first-of-type` and `:last-of-type` selectors. This update should fix square top-right corners for single collapses.

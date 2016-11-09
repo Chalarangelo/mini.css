@@ -908,12 +908,12 @@ progress {
   .tabs.stacked > label {
     -webkit-order: initial;
     order: initial; }
-    .tabs.stacked > label:first-of-type {
-      border-top-right-radius: 2px; }
     .tabs.stacked > label:last-of-type {
       border-top-right-radius: 0;
       border-bottom-left-radius: 2px;
       border-bottom-right-radius: 2px; }
+    .tabs.stacked > label:first-of-type {
+      border-top-right-radius: 2px; }
   .tabs.stacked > [type="radio"]:checked + label, .tabs.stacked > [type="checkbox"]:checked + label {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; }

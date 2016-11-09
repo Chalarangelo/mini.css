@@ -366,3 +366,4 @@
 - Deployed live demo.
 - New module restructure: all modules will be moved to core, some merges might have to be applied (check issue #14). Restructure was applied as follows:
   - Added the functionality of the new `alert` module to `contextual`. Includes mixin `make-alert-alt-color` for different `alert` color variants.
+  - Restructured folders. `mini-shell` removed, `mini-core` renamed to `mini`. `mini` is the core folder now.

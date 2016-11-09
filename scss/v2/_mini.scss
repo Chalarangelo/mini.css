@@ -355,20 +355,16 @@ a{
 // SECTION: External files - core
 //===================================================
 // You can comment out modules you do not want to use.
-@import 'mini-core/grid';
-@import 'mini-core/table';
-@import 'mini-core/form';
-@import 'mini-core/navigation';
-@import 'mini-core/button';
-@import 'mini-core/checkbox';
-@import 'mini-core/contextual';
-@import 'mini-core/progress';
-@import 'mini-core/utility';
-//===================================================
-// SECTION: External files - shell
-//===================================================
-// You can comment out modules you do not want to use.
-@import 'mini-shell/card';
-@import 'mini-shell/tab';
-@import 'mini-shell/spinner';
+@import 'mini/grid';
+@import 'mini/table';
+@import 'mini/form';
+@import 'mini/navigation';
+@import 'mini/button';
+@import 'mini/checkbox';
+@import 'mini/contextual';
+@import 'mini/progress';
+@import 'mini/utility';
+@import 'mini/card';
+@import 'mini/tab';
+@import 'mini/spinner';
 //===================================================

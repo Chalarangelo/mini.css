@@ -358,3 +358,4 @@
 - Edited the demo page to include most of the new functionality.
 - *TODO* Move `_accordion.scss` to the `legacy` folder etc.
 - Deployed live demo.
+- Minor change to the way `transition`s work for `tabs`, they will now all utilize the `transform` implementation.

@@ -870,7 +870,11 @@ progress {
     clip: rect(0 0 0 0);
     -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
-    transition: height 0.3s ease 0s;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    transition: -webkit-transform 0.3s ease 0s,  transform 0.3s ease 0s;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px; }
     .tabs > [type="radio"] + label + div + [type="radio"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="radio"] + label {
@@ -888,6 +892,8 @@ progress {
     width: 100%;
     overflow: auto;
     margin: 0;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
     border: 1px solid #78909c;
     border-top: 0;
     padding: 6px;
@@ -914,19 +920,14 @@ progress {
   .tabs.stacked > [type="radio"] + label + div, .tabs.stacked > [type="checkbox"] + label + div {
     -webkit-order: initial;
     order: initial;
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
     -webkit-transform-origin: top;
     transform-origin: top;
-    transition: -webkit-transform 0.3s ease 0s,  transform 0.3s ease 0s;
     border-radius: 0; }
     .tabs.stacked > [type="radio"] + label + div + [type="radio"] + label, .tabs.stacked > [type="radio"] + label + div + [type="checkbox"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="radio"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
       border: 1px solid #78909c;
       border-top: 0; }
   .tabs.stacked > [type="radio"]:checked + label + div, .tabs.stacked > [type="checkbox"]:checked + label + div {
-    height: auto;
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1); }
+    height: auto; }
   .tabs.stacked > [type="radio"] + label + div:last-of-type, .tabs.stacked > [type="checkbox"] + label + div:last-of-type {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px; }

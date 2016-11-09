@@ -78,7 +78,13 @@ $tab-stacked-name:				'stacked' !default;								// Class name for stacked tabs 
 	clip: rect(0 0 0 0);
     -webkit-clip-path: inset(100%);
     		clip-path: inset(100%);
-	transition: height 0.3s ease 0s;
+    // Presentation
+    -webkit-transform: scaleY(0);
+			transform: scaleY(0); 	
+	-webkit-transform-origin: top;
+    		transform-origin: top;
+    transition: -webkit-transform 0.3s ease 0s, 
+    					transform 0.3s ease 0s;
 // Style for tab labels except the first
 @if $tab-border-style != 0 {
 & + [type="radio"] + label{
@@ -115,6 +121,8 @@ $tab-stacked-name:				'stacked' !default;								// Class name for stacked tabs 
 	width: 100%;
 	overflow: auto;
 	margin: 0;
+	-webkit-transform: scaleY(1);
+			transform: scaleY(1);	
 @if $tab-panel-back-color != $back-color {
 	background: $tab-panel-back-color;
 }
@@ -164,13 +172,9 @@ $tab-stacked-name:				'stacked' !default;								// Class name for stacked tabs 
 & > [type="radio"] + label + div, & > [type="checkbox"] + label + div {
 	-webkit-order: initial;		// Reset order to show stacked tabs properly
 			order: initial;	
-// Presentation  		
-    -webkit-transform: scaleY(0);
-			transform: scaleY(0);    
+// Presentation  		   
 	-webkit-transform-origin: top;
     		transform-origin: top;
-    transition: -webkit-transform 0.3s ease 0s, 
-    					transform 0.3s ease 0s;
 @if $tab-border-radius != 0 {
 	border-radius: 0;
 }
@@ -183,8 +187,6 @@ $tab-stacked-name:				'stacked' !default;								// Class name for stacked tabs 
 }
 & > [type="radio"]:checked + label + div, & > [type="checkbox"]:checked + label + div {
 	height: auto;
-	-webkit-transform: scaleY(1);
-		transform: scaleY(1);
 }
 @if $tab-border-radius != 0 {
 & > [type="radio"] + label + div:last-of-type, & > [type="checkbox"] + label + div:last-of-type {

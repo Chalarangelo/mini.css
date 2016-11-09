@@ -1,4 +1,4 @@
-// Definitions for contextual background elements.
+// Definitions for contextual background elements and alerts.
 // Contextual background elements use the mark element as their base.
 // Default styling for mark. Use mixins for alternate styles.
 mark {
@@ -45,6 +45,45 @@ mark.#{$mark-alt-name} {
 }
 @if $mark-alt-padding != $mark-padding {
   padding: $mark-alt-padding;
+}
+}
+}
+// Default styling for alerts. Use mixins for alternate styles
+$alert-name:              'alert' !default;               // Class name for the alerts
+.#{$alert-name} {
+  display: block;
+  max-width: 100%;
+@if $alert-back-color != $back-color {
+  background: $alert-back-color;
+}
+@if $alert-fore-color != $fore-color {
+  color: $alert-fore-color;
+}
+@if $alert-border-style != 0 {
+  border: $alert-border-style;
+}
+@if $alert-border-radius != 0 {
+  border-radius: $alert-border-radius;
+}
+@if $alert-margin != 0 {
+  margin: $alert-margin;
+}
+@if $alert-padding != 0 {
+  padding: $alert-padding;
+}
+}
+// Mixin for alternate alert (alert color variants).
+// Variables:
+// - $alert-alt-name : The name of the class used for the alternate alert.
+// - $alert-alt-back-color : The background color of the alternate alert.
+// - $alert-alt-fore-color : (Optional) The text color of the alternate mark. Defaults to the text color of the alert.
+@mixin make-alert-alt-color ($alert-alt-name, $alert-alt-back-color, $alert-alt-fore-color: $alert-fore-color) {
+.#{$alert-name}.#{$alert-alt-name} {
+@if $alert-alt-back-color != $alert-back-color {
+  background: $alert-alt-back-color;
+}
+@if $alert-alt-fore-color != $alert-fore-color {
+  color: $alert-alt-fore-color;
 }
 }
 }

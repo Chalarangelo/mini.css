@@ -283,6 +283,13 @@ $mark-style1-padding:			2px;											// Padding for <mark> style 1
 $mark-style2-name:				'bubble';										// Class name for <mark> style 2
 $mark-style2-border-radius:		200px;											// Border radius for <mark> style 2
 $mark-style2-padding:			3px 5px;										// Padding for <mark> style 2	
+$alert-name:					'alert';										// Class name for alerts
+$alert-back-color:				#eeeeee;										// Background color for alerts
+$alert-fore-color:				$fore-color;									// Text color for alerts
+$alert-border-style:			1px solid #bdbdbd;								// Border style for alerts
+$alert-border-radius:			2px;											// Border radius for alerts
+$alert-padding:					12px 16px;										// Padding for alerts
+$alert-margin:					1px 10px;										// Margin for alerts
 //	Variables for progress elements
 $progress-back-color:			#f5f5f5;										// Background color for <progress>
 $progress-fore-color:			#01579b;										// Progress bar color for <progress>

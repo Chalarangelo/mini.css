@@ -757,6 +757,15 @@ mark {
   line-height: 1;
   padding: 1px; }
 
+.alert {
+  display: block;
+  max-width: 100%;
+  background: #eeeeee;
+  border: 1px solid #bdbdbd;
+  border-radius: 2px;
+  margin: 1px 10px;
+  padding: 12px 16px; }
+
 progress {
   display: block;
   vertical-align: baseline;

@@ -2,8 +2,10 @@
 // Dependency: This module is somewhat dependent on the grid system.
 // Tab styling
 $tab-container-name:			'tabs' !default;								// Class name for the tabs container
-.#{$tab-container-name} {
+$tab-stacked-name:				'stacked' !default;								// Class name for stacked tabs container
+.#{$tab-container-name} { 
 	width: 100%;
+	opacity: 1;
 // Old syntax
 	display: -webkit-box;
 	-webkit-box-pack: justify;
@@ -27,7 +29,8 @@ $tab-container-name:			'tabs' !default;								// Class name for the tabs contai
 // Actual styling		
 	display: inline-block;
 	height: $tab-label-height;
-	cursor: pointer;
+	cursor: pointer;	
+	transition: background 0.3s ease 0s;
 @if $tab-label-back-color != $back-color {
 	background: $tab-label-back-color;
 }
@@ -48,15 +51,18 @@ $tab-container-name:			'tabs' !default;								// Class name for the tabs contai
 	border-top-right-radius: $tab-border-radius;
 }
 }
-					// TODO ADD HOVER STYLES HERE AND ON ACCORDION
+// Hover styling for tabs' labels
+&:hover, &:active, &:focus {
+	background: rgba($tab-label-back-color, $tab-label-hover-opacity);
+}
 }
 // Tab radio styling
-& > [type="radio"] {
+& > [type="radio"], &.#{$tab-stacked-name} > [type="checkbox"] {
 	display: none;
 	visibility: hidden;
 }
 // Tab content styling
-& > [type="radio"] + label + div {
+& > [type="radio"] + label + div, &.#{$tab-stacked-name} > [type="checkbox"] + label + div {
 // New syntax
 	-webkit-flex-basis: auto;
 			flex-basis: auto;
@@ -75,7 +81,7 @@ $tab-container-name:			'tabs' !default;								// Class name for the tabs contai
 	transition: height 0.3s ease 0s;
 // Style for tab labels except the first
 @if $tab-border-style != 0 {
-+ [type="radio"] + label {
+& + [type="radio"] + label{
 	border-left: 0;
 }
 }
@@ -84,17 +90,25 @@ $tab-container-name:			'tabs' !default;								// Class name for the tabs contai
 	border-bottom-right-radius: $tab-border-radius;
 }
 }
+@if $tab-border-style != 0 {
+&.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
+	border-left: 0;
+}
+}
 // Tab label styling for open tab
-& > [type="radio"]:checked + label {
+& > [type="radio"]:checked + label, &.#{$tab-stacked-name} > [type="checkbox"]:checked + label {
 @if $tab-label-selected-back-color != $tab-label-back-color {
 	background: $tab-label-selected-back-color;
+&:hover, &:active, &:focus {
+	background: rgba($tab-label-selected-back-color, $tab-label-hover-opacity);
+}
 }
 @if $tab-label-selected-fore-color != $tab-label-fore-color {
 	color: $tab-label-selected-fore-color;
 }
 }
 // Tab content styling (open tab)
-& > [type="radio"]:checked + label + div {
+& > [type="radio"]:checked + label + div, &.#{$tab-stacked-name} > [type="checkbox"]:checked + label + div {
 	box-sizing: border-box;
 	position: relative;
 	height: $tab-panel-height;
@@ -118,6 +132,65 @@ $tab-container-name:			'tabs' !default;								// Class name for the tabs contai
 	clip: auto;
     -webkit-clip-path: inset(0%);
     		clip-path: inset(0%);
+}
+}
+// Stacked tabs
+.#{$tab-container-name}.#{$tab-stacked-name} {
+// Old syntax
+	-webkit-box-orient: vertical;
+// New syntax
+	-webkit-flex-direction: column;
+			flex-direction: column;
+& > label {
+	-webkit-order: initial;		// Reset order to show stacked tabs properly
+			order: initial;		
+@if $tab-border-radius != 0 {	// Style first and last tabs' labels' corners as needed
+&:first-of-type {
+	border-top-right-radius: $tab-border-radius;
+}
+&:last-of-type {
+	border-top-right-radius: 0;
+	border-bottom-left-radius: $tab-border-radius;
+	border-bottom-right-radius: $tab-border-radius;
+}
+}
+}
+@if $tab-border-radius != 0 {	// Style the last tabs' label corners when it's open as needed
+& > [type="radio"]:checked + label, & > [type="checkbox"]:checked + label {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+}
+& > [type="radio"] + label + div, & > [type="checkbox"] + label + div {
+	-webkit-order: initial;		// Reset order to show stacked tabs properly
+			order: initial;	
+// Presentation  		
+    -webkit-transform: scaleY(0);
+			transform: scaleY(0);    
+	-webkit-transform-origin: top;
+    		transform-origin: top;
+    transition: -webkit-transform 0.3s ease 0s, 
+    					transform 0.3s ease 0s;
+@if $tab-border-radius != 0 {
+	border-radius: 0;
+}
+& + [type="radio"] + label, & + [type="checkbox"] + label {
+@if $tab-border-style != 0 {
+	border: $tab-border-style;
+	border-top: 0;
+}
+}
+}
+& > [type="radio"]:checked + label + div, & > [type="checkbox"]:checked + label + div {
+	height: auto;
+	-webkit-transform: scaleY(1);
+		transform: scaleY(1);
+}
+@if $tab-border-radius != 0 {
+& > [type="radio"] + label + div:last-of-type, & > [type="checkbox"] + label + div:last-of-type {
+	border-bottom-left-radius: $tab-border-radius;
+	border-bottom-right-radius: $tab-border-radius;
+}
 }
 }
 // Responsiveness

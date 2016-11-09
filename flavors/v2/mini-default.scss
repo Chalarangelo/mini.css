@@ -346,34 +346,25 @@ $card-section-padding1-name:	'double-padded';								// Class name for card sect
 $card-section-padding1-padding:	12px 16px 12px;									// Padding for card section padding style 1
 //	Notes:
 // [1] - The cards module depends heavily on the grid system module.
-//	Variables for accordions/collapses
-$accordion-name:				'accordion';									// Class name for accordions/collapses
-$accordion-label-back-color:	#e0e0e0;										// Background color for accordion label
-$accordion-label-fore-color:	$fore-color;									// Text color for accordion label
-$accordion-label-padding:		6px 10px 6px;									// Padding for accordion label
-$accordion-content-back-color:	$back-color;									// Background color for accordion content
-$accordion-content-fore-color:	$fore-color;									// Text color for accordion content
-$accordion-content-padding:		6px 10px 8px;									// Padding for accordion content
-$accordion-border-style:		1px solid #9e9e9e;								// Border style for accordion
-$accordion-border-radius:		2px;											// Border radius for accordion
-$accordion-margin-bottom:		2px;											// Bottom margin for accordion
-$accordion-separator-border-style:												// Border style for the accordion's separators
-								1px solid #bdbdbd;								// (border between label and content)
-//	Variables for tabs
+//	Variables for tabs [1]
 $tab-container-name:			'tabs';											// Class name for the tabs' container
-$tab-label-back-color:			#e0e0e0;										// Background color for tabs' labels
+$tab-label-back-color:			#b0bec5;										// Background color for tabs' labels
 $tab-label-fore-color:			$fore-color;									// Text color for tabs' labels
-$tab-label-selected-back-color:	#bdbdbd;										// Background color for open tab's label
+$tab-label-selected-back-color:	#cfd8dc;										// Background color for open tab's label
 $tab-label-selected-fore-color:	$fore-color;									// Text color for open tab's label
+$tab-label-hover-opacity:		0.75;											// Opacity of the tab's label on hover
 $tab-label-padding:				4px 6px;										// Padding for tabs' labels
 $tab-label-height:				26px;											// Height for tabs' labels
-$tab-border-style:				1px solid #9e9e9e;								// Border style for tabs
+$tab-border-style:				1px solid #78909c;								// Border style for tabs
 $tab-border-radius:				2px;											// Border radius for tabs
 $tab-panel-back-color:			$back-color;									// Background color for tabs' panels
 $tab-panel-fore-color:			$fore-color;									// Text color for tabs' panels
 $tab-panel-padding:				6px;											// Padding for tabs' panels
 $tab-panel-height:				400px;											// Height for tabs' panels
 $tab-stacked-breakpoint:		$grid-medium-breakpoint;						// Breakpoint for tabs layout (stacked/horizontal)
+$tab-stacked-name:				'stacked';										// Class name for stacked tabs
+//	Notes:
+// [1] - The tabs module is somewhat dependent on the grid system module.
 //	Variables for spinners
 $spinner-dot-name:				'spinner-dot';									// Class name for dot spinner
 $spinner-dot-font-size:			1em;											// Font size for dot spinner

@@ -342,3 +342,18 @@
 - Softcoded `tab` module with variables. Optimized.
 - Added responsiveness to `tab` module.
 - Tested `tab` module thoroughly on both Firefox and Chrome (PC), will test further on phone.
+- *DESIGN DECISION* The `accordion` and collapse module will be merged with the `tab` and carousel module. This is a very well-thought out decision, based on the fact that `accordion` components behave like `stacked` `tab` components. This means that users will be forced to use a heavier module for both components (which might not be beneficial if they only wish to use the `accordion` component), however this helps users mnemonically, by allowing more functionality in one technically identical structure. The specifics of this decision are laid out below:
+  1. The `stacked` class will be used for a `tabs` container, so that an `accordion` component can be easily emulated.
+  2. Some of the versatility of the `accordion` class will be sacrificed to allow `stacked` `tabs` to include the same functionality. Minor changes can still be made manually.
+  3. The `tabs` module will use different transformation tricks for `stacked` and normal tabs. Specifically, the responsive stacked tabs on smaller screens will use preset `height`, while `stacked` tabs will use `height: auto;`.
+  4. All controls for both types of `tab`s will be hidden from screen readers to make the content accessible as-is.
+  5. The old `accordion` module will be retired and possibly stored in a legacy folder. People that only want that old-school `accordion` module can use it.
+  6. `stacked` `tabs` will allow both `checkbox` and `radio` `input`s, normal ones will not allow `checkbox`. This is in line with the philosophy of the two components.
+  7. Carousels can still be built using any of the two styles.
+  8. `stacked` `tabs` will feature their own color scheme for some things to allow more customization within the module.
+  9. Both components will use a generic `:hover` effect.
+  10. The `transform`s applied before to `accordion` will still apply to `stacked` `tabs`.
+- Refactored code of `tabs` to work with the above decision, removed obsolete artifacts from the `accordion` module.
+- Made a few minor tweaks, decided not to add `accordion`-specific styling, as the current styling is just enough.
+- Edited the demo page to include most of the new functionality.
+- *TODO* Move `_accordion.scss` to the `legacy` folder etc.

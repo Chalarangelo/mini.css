@@ -824,56 +824,9 @@ progress {
 @media only screen and (min-width: 320px) {
   .card {
     max-width: 320px; } }
-[type="checkbox"].accordion, [type="radio"].accordion {
-  display: none;
-  visibility: hidden; }
-  [type="checkbox"].accordion + label, [type="radio"].accordion + label {
-    display: block;
-    cursor: pointer;
-    background: #e0e0e0;
-    border: 1px solid #9e9e9e;
-    border-radius: 2px;
-    padding: 6px 10px 6px;
-    margin-bottom: 2px; }
-  [type="checkbox"].accordion + label + *, [type="radio"].accordion + label + * {
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    overflow: hidden;
-    position: absolute;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(100%);
-    clip-path: inset(100%);
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: top;
-    transform-origin: top;
-    transition: transform 0.3s ease 0s; }
-  [type="checkbox"].accordion:checked + label, [type="radio"].accordion:checked + label {
-    margin-bottom: 0;
-    border-bottom: 1px solid #bdbdbd;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0; }
-  [type="checkbox"].accordion:checked + label + *, [type="radio"].accordion:checked + label + * {
-    box-sizing: border-box;
-    position: relative;
-    height: auto;
-    width: 100%;
-    margin: 0;
-    clip: auto;
-    -webkit-clip-path: inset(0%);
-    clip-path: inset(0%);
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    border: 1px solid #9e9e9e;
-    border-top: 0;
-    border-bottom-right-radius: 2px;
-    border-bottom-left-radius: 2px;
-    padding: 6px 10px 8px;
-    margin-bottom: 2px; }
-
 .tabs {
   width: 100%;
+  opacity: 1;
   display: -webkit-box;
   -webkit-box-pack: justify;
   display: -webkit-flex;
@@ -891,17 +844,20 @@ progress {
     display: inline-block;
     height: 26px;
     cursor: pointer;
-    background: #e0e0e0;
-    border: 1px solid #9e9e9e;
+    transition: background 0.3s ease 0s;
+    background: #b0bec5;
+    border: 1px solid #78909c;
     padding: 4px 6px; }
     .tabs > label:first-of-type {
       border-top-left-radius: 2px; }
     .tabs > label:last-of-type {
       border-top-right-radius: 2px; }
-  .tabs > [type="radio"] {
+    .tabs > label:hover, .tabs > label:active, .tabs > label:focus {
+      background: rgba(176, 190, 197, 0.75); }
+  .tabs > [type="radio"], .tabs.stacked > [type="checkbox"] {
     display: none;
     visibility: hidden; }
-  .tabs > [type="radio"] + label + div {
+  .tabs > [type="radio"] + label + div, .tabs.stacked > [type="checkbox"] + label + div {
     -webkit-flex-basis: auto;
     flex-basis: auto;
     -webkit-order: 2;
@@ -917,23 +873,63 @@ progress {
     transition: height 0.3s ease 0s;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px; }
-    .tabs > [type="radio"] + label + div + [type="radio"] + label {
+    .tabs > [type="radio"] + label + div + [type="radio"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="radio"] + label {
       border-left: 0; }
-  .tabs > [type="radio"]:checked + label {
-    background: #bdbdbd; }
-  .tabs > [type="radio"]:checked + label + div {
+  .tabs.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
+    border-left: 0; }
+  .tabs > [type="radio"]:checked + label, .tabs.stacked > [type="checkbox"]:checked + label {
+    background: #cfd8dc; }
+    .tabs > [type="radio"]:checked + label:hover, .tabs > [type="radio"]:checked + label:active, .tabs > [type="radio"]:checked + label:focus, .tabs.stacked > [type="checkbox"]:checked + label:hover, .tabs.stacked > [type="checkbox"]:checked + label:active, .tabs.stacked > [type="checkbox"]:checked + label:focus {
+      background: rgba(207, 216, 220, 0.75); }
+  .tabs > [type="radio"]:checked + label + div, .tabs.stacked > [type="checkbox"]:checked + label + div {
     box-sizing: border-box;
     position: relative;
     height: 400px;
     width: 100%;
     overflow: auto;
     margin: 0;
-    border: 1px solid #9e9e9e;
+    border: 1px solid #78909c;
     border-top: 0;
     padding: 6px;
     clip: auto;
     -webkit-clip-path: inset(0%);
     clip-path: inset(0%); }
+
+.tabs.stacked {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+  .tabs.stacked > label {
+    -webkit-order: initial;
+    order: initial; }
+    .tabs.stacked > label:first-of-type {
+      border-top-right-radius: 2px; }
+    .tabs.stacked > label:last-of-type {
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px; }
+  .tabs.stacked > [type="radio"]:checked + label, .tabs.stacked > [type="checkbox"]:checked + label {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  .tabs.stacked > [type="radio"] + label + div, .tabs.stacked > [type="checkbox"] + label + div {
+    -webkit-order: initial;
+    order: initial;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    transition: -webkit-transform 0.3s ease 0s,  transform 0.3s ease 0s;
+    border-radius: 0; }
+    .tabs.stacked > [type="radio"] + label + div + [type="radio"] + label, .tabs.stacked > [type="radio"] + label + div + [type="checkbox"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="radio"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
+      border: 1px solid #78909c;
+      border-top: 0; }
+  .tabs.stacked > [type="radio"]:checked + label + div, .tabs.stacked > [type="checkbox"]:checked + label + div {
+    height: auto;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); }
+  .tabs.stacked > [type="radio"] + label + div:last-of-type, .tabs.stacked > [type="checkbox"] + label + div:last-of-type {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; }
 
 @media only screen and (max-width: 800px) {
   .tabs {
@@ -957,7 +953,7 @@ progress {
       order: initial;
       border-radius: 0; }
       .tabs > [type="radio"] + label + div + [type="radio"] + label {
-        border: 1px solid #9e9e9e;
+        border: 1px solid #78909c;
         border-top: 0; }
     .tabs > [type="radio"] + label + div:last-of-type {
       border-bottom-left-radius: 2px;

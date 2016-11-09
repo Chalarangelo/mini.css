@@ -470,21 +470,29 @@
                 </div>
               </div>
             </div>
-            <h2>Content display <small>Present content any way you like</small></h2>
-            <p><strong>mini.css</strong> gives you some flexible components to show or hide the content you wish. These components are more generic than the ones found in other frameworks and aim to help you present any content the way you like. </p><br>
-            <h3>Accordion &amp; Collapse</h3>
-            <p>Use the <code>.accordion</code> class on a <code>&lt;input type=&quot;checkbox&quot;&gt;</code> or <code>&lt;input type=&quot;radio&quot;&gt;</code>, accompanied by a linked <code>&lt;label&gt;</code> and any content afterwards (use something like a <code>&lt;div&gt;</code> if you want to show/hide more than a paragraph of text or an image) to create a collapsible piece of content. Use multiple of these to create an accordion if you like. These components are accessible, although screen readers will read these as normal blocks of content, no distinctions made. Add <code>aria-hidden=&quot;true&quot;</code> to the <code>&lt;label&gt;</code> to make sure there are no confusing elements. Below, you can see a couple of examples:</p>
-            <input type="checkbox" class="accordion" id="ac1" autocomplete="off"><label for="ac1">Toggle content</label>
-            <p>This is some content you can hide and show at will using the above label. Isn't that useful?</p>
-            <input type="checkbox" class="accordion" id="ac2" autocomplete="off"><label for="ac2">Toggle image</label>
-            <img src="catdemo.jpg">
-            <br>
-            <input type="radio" class="accordion" id="acr1" autocomplete="off" name="acr"><label for="acr1">Section 1</label>
-            <div><h4>Sample</h4> <p>This is the first piece of the accordion. These pieces are mutually exclusive.</p></div>
-            <input type="radio" class="accordion" id="acr2" autocomplete="off" name="acr"><label for="acr2">Section 2</label>
-            <div><h4>Demo</h4> <p>This is the second piece of the accordion. Notice how these samples use <code>&lt;div&gt;</code> to display more complex content.</p></div>
-            <h3>Tabs &amp; Carousels</h3>
-            <p>Tabbed navigation is a very common element for many websites and single page apps. Carousels provide similar functionality for image portfolios. <strong>mini.css</strong> supports both of these elements using one generic component. Simply create a container with the <code>.tabs</code> class, add a few <code>&lt;label&gt;</code>s inside it, add the complementary <code>&lt;input type=&quot;radio&quot;&gt;</code>s each followed by each tab's content inside a <code>&lt;div&gt;</code> or <code>&lt;section&gt;</code> and you are ready to go. Tabs are accessible, as screen readers will ignore the tab labels and only read the content. Remember to add <code>aria-hidden=&quot;true&quot;</code> to the <code>&lt;label&gt;</code>s. Oh, by the way, tabs are responsive on mobile and will display as a list on smaller displays, so that your users will not have any trouble navigating them. You can see examples of how tabs work below:</p>
+            <h2>Tabs &amp; accordions<small>Present content any way you like</small></h2>
+            <p><strong>mini.css</strong> provides you with a very modern tab component, that can easily be used for multiple things, like tabbed navigation, single collapses, accordion collapses and even image carousels. This might sound like a lot to do with one component, but the design behind it allows it to be truly versatile and replace all those components. To use the tab component, simply create a container using a <code>&lt;div&gt;</code> with the <code>.tabs</code> class. Populate it with <code>&lt;input type=&quot;radio&quot;&gt;</code>s, each followed by a linked <code>&lt;label&gt;</code> and another <code>&lt;div&gt;</code> which includes the tab's contents. If you want to create an accordion add the <code>.stacked</code> class to the container. The same thing works for collapses as well. Accordions and collapses can also use <code>&lt;input type=&quot;checkbox&quot;&gt;</code>s instead. Carousels can be created similarly, remember to add images to the inner content <code>&lt;div&gt;</code> and you're good to go. You can see some examples below:</p><br>
+            <div class="tabs stacked">
+              <input type="checkbox" id="collapse" autocomplete="off">
+              <label for="collapse">Single collapse</label>
+              <div>
+                <p>This is some content you can hide and show at will using the above label. Isn't that useful?</p>
+              </div>
+            </div><br>
+            <div class="tabs stacked">
+              <input type="radio" name="accordion" id="a1" autocomplete="off" checked>
+              <label for="a1">Accordion section 1</label>
+              <div>
+                <h3>Section 1 - The amazing versatility of tabs</h3>
+                <p>Yes, this is still based on tabs. Isn't it wonderful how many things you can accomplish using one simple component?</p>
+              </div>              
+              <input type="radio" name="accordion" id="a2" autocomplete="off">
+              <label for="a2">Accordion section 2</label>
+              <div>
+                <h3>Section 2 - How accordions work</h3>
+                <p>Accordions are very similar to collapses. Just add multiple <code>&lt;input type=&quot;radio&quot;&gt;</code>s, along with their content and you are ready to go.</p>
+              </div>
+            </div><br>
             <div class="tabs">
               <input type="radio" name="tabdemo" id="tab1" checked>
               <label for="tab1">Tab 1</label>
@@ -510,7 +518,24 @@
                 <h3>Tab 4</h3>
                 <p>This is the fourth tab's content.</p>
               </div>
-            </div>
+            </div><br>
+            <div class="tabs">
+              <input type="radio" name="carousel" id="car1" checked>
+              <label for="car1">Image 1</label>
+              <div>
+                <img src="catdemo.jpg" style="height: 240px; width: auto;">
+              </div>
+              <input type="radio" name="carousel" id="car2">
+              <label for="car2">Image 2</label>
+              <div>
+                <img src="catdemo.jpg" style="height: 480px; width: auto">
+              </div>
+              <input type="radio" name="carousel" id="car3">
+              <label for="car3">Image 3</label>
+              <div>
+                <img src="catdemo.jpg" style="height: 720px; width: auto">
+              </div>
+            </div><br>
             <h2>Spinners<small>Loading with style</small></h2>
             <p>Finally, <strong>mini.css</strong> provides you with a couple of spinner variations, <code>.spinner-dot</code> and <code>.spinner-donut</code>. Simply apply these to a <code>&lt;div&gt;</code> and you are ready to go. Both are showcased below:</p>
             <p>This is some text with a <code>.spinner-dot</code> spinner. These spinners are designed with normal paragraphs in mind, so some tweaking of the component itself and/or the way it is presented might be requird. Loading looks like this <span class="spinner-dot"></span></p>

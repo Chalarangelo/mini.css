@@ -391,7 +391,7 @@ $spinner-donut-variant2-back-color:												// Background color for donut spi
 $spinner-donut-variant2-fore-color:												// Foreground color for donut spinner variant 2
 								#2e7d32;	
 //	Enable mini.css
-@import '../../scss/v2/mini';
+@import '../mini/core';
 //	Use mixins for button elements
 @include make-button-alt-color ($button-variant1-name, $button-variant1-back-color, 
 	$button-variant1-back-opacity, $button-variant1-hover-back-opacity, $button-variant1-fore-color);

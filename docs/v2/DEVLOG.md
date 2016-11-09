@@ -369,4 +369,8 @@
   - Restructured folders. `mini-shell` removed, `mini-core` renamed to `mini`. `mini` is the core folder now.
   - Created branch `v1-neutrino` both locally and on Github to support legacy versions in the future. `master` is now the branch for **Fermion** only.
   - Aggressive deletion of older files. The following folder are now gone: `scss/mini`, `scss/mini-extra`, `flavors` except for the contents of the `v2` folder and the folder itself.
-  
+  - Renamed `_mini.scss` to `_core.scss`, moved to the `scss/v2/mini` directory.
+  - Deleted `accordion` module file as it was obsolete.
+  - Renamed `scss` directory to `src`. Renamed `flavors` directory to `dist`.
+  - Moved flavors from their directory to the `src` directory. CSS files produced from flavor files will go to the `dist` folder, along with the minified versions.
+  - *TODO* Update the `package.json` and `bower.json` files according to the new framework version.

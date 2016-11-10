@@ -2,33 +2,33 @@
 // Different elements are styled based on the same set of rules.
 // Base form styling.
 form {
-@if $form-back-color != $back-color {
-	background: $form-back-color;
-}
-@if $form-fore-color != $fore-color {
-	color: $form-fore-color;
-}
-@if $form-border-style != 0 {
-	border: $form-border-style;
-}
-@if $form-border-radius != 0 {
-	border-radius: $form-border-radius;
-}
-@if $form-margin != 0 {
-	margin: $form-margin;
-}
-@if $form-padding != 0 {
-	padding: $form-padding;
-}
+	@if $form-back-color != $back-color {
+		background: $form-back-color;
+	}
+	@if $form-fore-color != $fore-color {
+		color: $form-fore-color;
+	}
+	@if $form-border-style != 0 {
+		border: $form-border-style;
+	}
+	@if $form-border-radius != 0 {
+		border-radius: $form-border-radius;
+	}
+	@if $form-margin != 0 {
+		margin: $form-margin;
+	}
+	@if $form-padding != 0 {
+		padding: $form-padding;
+	}
 }
 // Fieldset styling.
 fieldset {
-@if $fieldset-back-color != $form-back-color {
-	background: $fieldset-back-color;
-}
-	border: $fieldset-border-style;
+	@if $fieldset-back-color != $form-back-color {
+		background: $fieldset-back-color;
+	}
+	// Apply always to overwrite defaults for all of the below.
+	border: $fieldset-border-style;			
 	border-radius: $fieldset-border-radius;
-	// Margin and padding should never be unassigned, because browser defaults will be applied.
 	margin: $fieldset-margin;
   	padding: $fieldset-padding;
 }
@@ -42,12 +42,12 @@ legend {
 	// Actual styling.
 	font-weight: $legend-font-weight;
 	font-size: $legend-font-size;
-@if $legend-fore-color != $fore-color {
-	color: $legend-fore-color;
-}
-@if $legend-padding != 0 {
-	padding: $legend-padding;
-}
+	@if $legend-fore-color != $fore-color {
+		color: $legend-fore-color;
+	}
+	@if $legend-padding != 0 {
+		padding: $legend-padding;
+	}
 }
 // Input group base naming.
 .#{$input-group-name} {
@@ -55,21 +55,21 @@ legend {
 }
 // Correct the cursor style of increment and decrement buttons in Chrome.
 [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
-  height: auto; 
+	height: auto; 
 }
 // Remove the default vertical scrollbar in IE.
 textarea {
-  overflow: auto;	
+	overflow: auto;	
 }
 // Correct style in Chrome and Safari.
 [type="search"] {
-  -webkit-appearance: textfield; 
-  outline-offset: -2px; 
+	-webkit-appearance: textfield; 
+	outline-offset: -2px; 
 }
 // Correct style in Chrome and Safari.
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 // Common textual input styling.
 input:not([type]), [type="text"], [type="email"], [type="number"], [type="search"],
@@ -79,31 +79,31 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 	background: $input-back-color;
 	color: $input-fore-color;
 	border: $input-border-style;
-@if $input-border-radius != 0 {
-	border-radius: $input-border-radius;
-}		
-@if $input-margin != 0 {
-	margin: $input-margin;
-}
-@if $input-padding != 0 {
-	padding: $input-padding;
-}
-&:focus {
-	border-color: $input-focus-border-color;
-	box-shadow: none;
-}
-&[disabled] {
-	cursor: not-allowed;
-	opacity: $input-disabled-opacity;
-}
-&:invalid, &:focus:invalid, &:focus:invalid:focus{
-	border-color: $input-invalid-border-color;
-	box-shadow: none;
-}
-&[readonly]{
-	background: $input-readonly-back-color;
-	border-color: $input-readonly-border-color;
-}
+	@if $input-border-radius != 0 {
+		border-radius: $input-border-radius;
+	}		
+	@if $input-margin != 0 {
+		margin: $input-margin;
+	}
+	@if $input-padding != 0 {
+		padding: $input-padding;
+	}
+	&:focus {
+		border-color: $input-focus-border-color;
+		box-shadow: none;
+	}
+	&[disabled] {
+		cursor: not-allowed;
+		opacity: $input-disabled-opacity;
+	}
+	&:invalid, &:focus:invalid, &:focus:invalid:focus{
+		border-color: $input-invalid-border-color;
+		box-shadow: none;
+	}
+	&[readonly]{
+		background: $input-readonly-back-color;
+		border-color: $input-readonly-border-color;
+	}
 }
 // Placeholder styling.
 ::-webkit-placeholder {

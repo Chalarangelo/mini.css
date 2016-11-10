@@ -700,7 +700,16 @@ button, [type="button"], [type="submit"], [type="reset"], a.button, label.button
     opacity: 0.65; }
 
 input[type="file"] {
-  display: none; }
+  border: 0;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%); }
 
 [type="checkbox"], [type="radio"] {
   height: 1px;

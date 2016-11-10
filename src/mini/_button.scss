@@ -2,12 +2,12 @@
 // Different elements are styled based on the same set of rules.
 // Reset for Firefox focusing on button elements.
 button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+	border-style: none;
+	padding: 0;
 }
 // Fixes for Android 4, iOS and Safari.
 button, html [type="button"], [type="reset"], [type="submit"] {
-  -webkit-appearance: button;
+	-webkit-appearance: button;
 }
 // Other fixes.
 button {
@@ -15,47 +15,57 @@ button {
 	text-transform: none;	// Remove inheritance of text-transform in Edge, Firefox, and IE.
 }
 // Default styling
-button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name}{
+button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
 	display: inline-block;
 	background: rgba($button-back-color, $button-back-opacity);
 	color: $button-fore-color;
 	border: $button-border-style;
-@if $button-border-radius != 0 {
-	border-radius: $button-border-radius;
-}
-@if $button-padding != 0 {
-	padding: $button-padding;
-}
-@if $button-margin != 0 {
-	margin: $button-margin;
-}
-@if $apply-link-underline {		// Override for links if underline is enabled.
-	text-decoration: none;
-}
+	@if $button-border-radius != 0 {
+		border-radius: $button-border-radius;
+	}
+	@if $button-padding != 0 {
+		padding: $button-padding;
+	}
+	@if $button-margin != 0 {
+		margin: $button-margin;
+	}
+	@if $apply-link-underline {		// Override for links if underline is enabled.
+		text-decoration: none;
+	}
 	transition: all 0.3s ease 0s;
 	cursor: pointer;
-&:hover, &:active, &:focus {
-	background: rgba($button-back-color, $button-hover-back-opacity);
-@if $apply-link-hover-fade {	// Override for links if hover-fade is enabled.
-	opacity: 1;
+	&:hover, &:active, &:focus {
+		background: rgba($button-back-color, $button-hover-back-opacity);
+		@if $apply-link-hover-fade {	// Override for links if hover-fade is enabled.
+			opacity: 1;
+		}
+	}
+	&:disabled, &[disabled] {
+		cursor: not-allowed;
+		opacity: $button-disabled-opacity;
+	}
 }
-}
-&:disabled, &[disabled] {
-	cursor: not-allowed;
-	opacity: $button-disabled-opacity;
-}
-}
+// Styling for file inputs
 $hide-file-inputs: true !default;
 @if $hide-file-inputs {
-input[type="file"] {
-	display: none;	// Hide, use labels instead.
-}
+	input[type="file"] { // Hide, use labels instead. Hidden inputs like this are still accessible.
+		border: 0;
+		height: 1px;
+		width: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;	
+		clip: rect(0 0 0 0);
+		-webkit-clip-path: inset(100%);
+				clip-path: inset(100%);	
+	}
 }
 @else {
-::-webkit-file-upload-button {
-  -webkit-appearance: button; 	// Correct inability to style in iOS and Safari.
-  font: inherit; 				// Change font propery to `inherit` in Safari.
-}
+	::-webkit-file-upload-button {
+		-webkit-appearance: button; 	// Correct inability to style in iOS and Safari.
+		font: inherit; 					// Change font propery to `inherit` in Safari.
+	}
 }
 // Mixin for alternate buttons (button color variants).
 // Variables:
@@ -70,16 +80,16 @@ input[type="file"] {
 // base class for the button styles.
 @mixin make-button-alt-color ($button-alt-name, $button-alt-back-color, $button-alt-back-opacity,
 	$button-alt-hover-back-opacity, $button-alt-fore-color: $button-fore-color) {
-button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name}, 
-[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name} {
-	background: rgba($button-alt-back-color, $button-alt-back-opacity);
-@if $button-alt-fore-color != $button-fore-color {
-	color: $button-alt-fore-color;
-}
-&:hover, &:active, &:focus{
-	background: rgba($button-alt-back-color, $button-alt-hover-back-opacity);
-}
-}
+	button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name}, 
+	[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name} {
+		background: rgba($button-alt-back-color, $button-alt-back-opacity);
+		@if $button-alt-fore-color != $button-fore-color {
+			color: $button-alt-fore-color;
+		}
+		&:hover, &:active, &:focus {
+			background: rgba($button-alt-back-color, $button-alt-hover-back-opacity);
+		}
+	}
 }
 // Mixin for alternate button styles (button color variants).
 // Variables:
@@ -94,19 +104,19 @@ button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"]
 // base class for the button styles.
 @mixin make-button-alt-style ($button-alt-name, $button-alt-border-style, $button-alt-border-radius,
 	$button-alt-padding, $button-alt-margin) {
-button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name}, 
-[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name} {
-@if $button-alt-border-style != $button-border-style {
-	border: $button-alt-border-style;
-}
-@if $button-alt-border-radius != $button-border-radius {
-	border-radius: $button-alt-border-radius;
-}
-@if $button-alt-padding != $button-padding {
-	padding: $button-alt-padding;
-}
-@if $button-alt-margin != $button-margin {
-	margin: $button-alt-margin;
-}
-}
+	button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name}, 
+	[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name} {
+		@if $button-alt-border-style != $button-border-style {
+			border: $button-alt-border-style;
+		}
+		@if $button-alt-border-radius != $button-border-radius {
+			border-radius: $button-alt-border-radius;
+		}
+		@if $button-alt-padding != $button-padding {
+			padding: $button-alt-padding;
+		}
+		@if $button-alt-margin != $button-margin {
+			margin: $button-alt-margin;
+		}
+	}
 }

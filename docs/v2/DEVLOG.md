@@ -383,4 +383,6 @@
 	- Started converting media queries from `only screen and ()` to plain `()`. Changes have been applied to `grid` module.
 	- Code cleanup in `grid`, indentation etc.
 	- Code cleanup in `table`. Media query conversions applied. Optimization.
-	
+	- Code cleanup in `form`. 
+	- Code cleanup in `button`. Updated `file` `input`s to be accessible.
+	- Code cleanup in `checkbox`. Optimizations.

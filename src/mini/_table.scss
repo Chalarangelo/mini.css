@@ -23,7 +23,7 @@ tr {
 th, td {
 	padding: $table-column-padding;		// Apply always to overwrite default.
 	border-left: $table-border-style;
-    border-top: $table-border-style;
+	border-top: $table-border-style;
 }
 th {
 	border-top: 0;
@@ -44,13 +44,13 @@ th:first-child, td:first-child {
 		border: 0;
 		height: 1px;
 		width: 1px;
-    	margin: -1px;
-    	overflow: hidden;
-    	padding: 0;
-    	position: absolute;	
-    	clip: rect(0 0 0 0);
-    	-webkit-clip-path: inset(100%);
-    			clip-path: inset(100%);	
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;	
+		clip: rect(0 0 0 0);
+		-webkit-clip-path: inset(100%);
+				clip-path: inset(100%);	
 	}
 	tr {
 		display: block;
@@ -58,7 +58,7 @@ th:first-child, td:first-child {
 		@if $table-border-radius != 0 {
 			border-radius: $table-border-radius;
 		}  	
-    	margin-bottom: $table-mobile-card-spacing;
+		margin-bottom: $table-mobile-card-spacing;
 	}
 	td {
 		display: block;
@@ -66,12 +66,12 @@ th:first-child, td:first-child {
 		@if $table-border-style != 0 {
 			border-bottom: $table-border-style;	
 		}
-    	text-align: right;
+		text-align: right;
 	}
 	td:before {
 		content: attr(#{$table-mobile-card-label});
-    	float: left;
-    	font-weight: $table-mobile-label-font-weight;
+		float: left;
+		font-weight: $table-mobile-label-font-weight;
 	}
 	td:last-child {
 		@if $table-border-style != 0 {

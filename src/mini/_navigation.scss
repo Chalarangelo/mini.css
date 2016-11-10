@@ -6,97 +6,97 @@ header {
 	height: $header-height;
 	background: $header-back-color;
 	color: $header-fore-color;
-@if $header-margin != 0 {
-	margin: $header-margin;
-}
-@if $header-padding != 0 {
-	padding: $header-padding;
-}
+	@if $header-margin != 0 {
+		margin: $header-margin;
+	}
+	@if $header-padding != 0 {
+		padding: $header-padding;
+	}
 	// Reposnivenes for smaller displays, scrolls horizontally.
 	white-space: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;
-// Header logo styling.
-.#{$header-logo-name} {
-	color: $header-fore-color;
-@if $header-logo-font-size != $base-font-size {
-	font-size: $header-logo-font-size;
-}
-@if $header-logo-line-height != $base-line-height {
-	line-height: $header-logo-line-height;
-}
-@if $header-logo-margin != 0 {
-	margin: $header-logo-margin;
-}
-@if $header-logo-padding != 0 {
-	padding: $header-logo-padding;
-}
-}
-button, [type="button"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
-	background: $header-back-color;
-	color: $header-fore-color;
-	vertical-align: top;
-@if $header-link-margin != 0 {
-	margin: $header-link-margin;
-}
-&:hover, &:active, &:focus {
-	background: $header-link-hover-color;
-}
-}
-@if $apply-link-underline {		// Override for links if underline is enabled.
-.#{$header-logo-name}, a.#{$button-class-name} {
-	text-decoration: none;
-}
-}
+	// Header logo styling.
+	.#{$header-logo-name} {
+		color: $header-fore-color;		// Keep this in case people use SVGs? Is it necessary?
+		@if $header-logo-font-size != $base-font-size {
+			font-size: $header-logo-font-size;
+		}
+		@if $header-logo-line-height != $base-line-height {
+			line-height: $header-logo-line-height;
+		}
+		@if $header-logo-margin != 0 {
+			margin: $header-logo-margin;
+		}
+		@if $header-logo-padding != 0 {
+			padding: $header-logo-padding;
+		}
+	}
+	button, [type="button"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
+		background: $header-back-color;
+		color: $header-fore-color;
+		vertical-align: top;
+		@if $header-link-margin != 0 {
+			margin: $header-link-margin;
+		}
+		&:hover, &:active, &:focus {
+			background: $header-link-hover-color;
+		}
+	}
+	@if $apply-link-underline {		// Override for links if underline is enabled.
+		.#{$header-logo-name}, a.#{$button-class-name} {
+			text-decoration: none;
+		}
+	}
 }
 // Navigation sidebar styling.
 nav {
 	display: block;		// Correct display for older versions of IE.
-@if $nav-back-color != $back-color {
-	background: $nav-back-color;
-}
-@if $nav-fore-color != $fore-color {
-	color: $nav-fore-color;
-}
-@if $nav-border-style != 0 {
-	border: $nav-border-style;
-}
-@if $nav-border-radius != 0 {
-	border-radius: $nav-border-radius;
-}
-@if $nav-margin != 0 {
-	margin: $nav-margin;
-}
-@if $nav-padding != 0 {
-	padding: $nav-padding;
-}
-a, a:visited {
-	display: block;
-	color: $nav-link-fore-color;
-}
-// Subcategories in navigation.
-$nav-sublink-prefix:		'sublink' !default;		// Prefix for the subcategory tabs in nav
-$nav-sublink-depth:			2 !default;			// Amount of subcategory classes to add
-$nav-sublink-padding-left:	12px !default;		// Left padding to add to subcategories
-@for $i from 1 through $nav-sublink-depth {
-.#{$nav-sublink-prefix}-#{$i} {
-	padding-left: $i * $nav-sublink-padding-left;
-}
-}
+	@if $nav-back-color != $back-color {
+		background: $nav-back-color;
+	}
+	@if $nav-fore-color != $fore-color {
+		color: $nav-fore-color;
+	}
+	@if $nav-border-style != 0 {
+		border: $nav-border-style;
+	}
+	@if $nav-border-radius != 0 {
+		border-radius: $nav-border-radius;
+	}
+	@if $nav-margin != 0 {
+		margin: $nav-margin;
+	}
+	@if $nav-padding != 0 {
+		padding: $nav-padding;
+	}
+	a, a:visited {
+		display: block;
+		color: $nav-link-fore-color;
+	}
+	// Subcategories in navigation.
+	$nav-sublink-prefix:		'sublink' !default;		// Prefix for the subcategory tabs in nav
+	$nav-sublink-depth:			2 !default;			// Amount of subcategory classes to add
+	$nav-sublink-padding-left:	12px !default;		// Left padding to add to subcategories
+	@for $i from 1 through $nav-sublink-depth {
+		.#{$nav-sublink-prefix}-#{$i} {
+			padding-left: $i * $nav-sublink-padding-left;
+		}
+	}
 }
 // Footer styling.
 footer {
 	display: block;		// Correct display for older versions of IE.
 	background: $footer-back-color;
 	color: $footer-fore-color;
-@if $footer-margin != 0 {
-	margin: $footer-margin;
-}
-@if $footer-padding != 0 {
-	padding: $footer-padding;
-}
+	@if $footer-margin != 0 {
+		margin: $footer-margin;
+	}
+	@if $footer-padding != 0 {
+		padding: $footer-padding;
+	}
 	font-size: $footer-font-size;
-a, a:visited {
-	color: $footer-link-fore-color;
-}
+	a, a:visited {
+		color: $footer-link-fore-color;
+	}
 }

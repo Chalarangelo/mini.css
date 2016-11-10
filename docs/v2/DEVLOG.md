@@ -390,3 +390,4 @@
 	- Code cleanup in `progress`. Merged `spinner` into `progress`. Removed `spinner-dot` from the `spinner` module as it was not a great component.
 	- Code cleanup for `contextual`. Minor `mark` optimizations. Added `alert` mixin `make-alert-alt-style` for alternative `alert` styles.
 	- Removed `spinner` file.
+	- Cleanup for `navigation`.

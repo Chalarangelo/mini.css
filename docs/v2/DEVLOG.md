@@ -394,3 +394,4 @@
 	- Cleanup for `utility`.
 	- Cleanup for `card`. Changed loading order and variables to better reflect the new module system. Updated media queries.
 	- Cleanup for `tab`, updated media queries.
+- Deployed live demo after cleanup.

@@ -654,6 +654,41 @@ input[type="file"] {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%); }
 
+.button-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex; }
+  .button-group button, .button-group [type="button"], .button-group [type="submit"], .button-group [type="reset"], .button-group a.button, .button-group label.button, .button-group .button {
+    margin: 0;
+    -webkit-box-flex: 1;
+    max-width: 100%;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 0;
+    flex-basis: 0;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    border-radius: 0; }
+    .button-group button:first-child, .button-group [type="button"]:first-child, .button-group [type="submit"]:first-child, .button-group [type="reset"]:first-child, .button-group a.button:first-child, .button-group label.button:first-child, .button-group .button:first-child {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px; }
+    .button-group button:last-child, .button-group [type="button"]:last-child, .button-group [type="submit"]:last-child, .button-group [type="reset"]:last-child, .button-group a.button:last-child, .button-group label.button:last-child, .button-group .button:last-child {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px; }
+
+@media (max-width: 768px) {
+  .button-group {
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+    .button-group button:first-child, .button-group [type="button"]:first-child, .button-group [type="submit"]:first-child, .button-group [type="reset"]:first-child, .button-group a.button:first-child, .button-group label.button:first-child, .button-group .button:first-child {
+      border-radius: 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px; }
+    .button-group button:last-child, .button-group [type="button"]:last-child, .button-group [type="submit"]:last-child, .button-group [type="reset"]:last-child, .button-group a.button:last-child, .button-group label.button:last-child, .button-group .button:last-child {
+      border-radius: 0;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px; } }
 [type="checkbox"], [type="radio"] {
   height: 1px;
   width: 1px;

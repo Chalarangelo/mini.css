@@ -406,3 +406,4 @@
 - Added modular `box-shadow` for `progress` element.
 - Added modular `box-shadow` for `table` element. Tweaked to be responsive on smaller screens.
 - Added modular `box-shadow` for `tabs` container. This might have some minor problems with `border-radius`es.
+- Added flexbox-based `button-group` system. Added responsiveness to it and optimized accordingly.

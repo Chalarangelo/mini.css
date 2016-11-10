@@ -190,6 +190,63 @@ $hide-file-inputs: true !default;
 		font: inherit; 					// Change font propery to `inherit` in Safari.
 	}
 }
+// Button group definition
+.#{$button-group-name} {
+	// Old syntax
+	display: -webkit-box;
+	// New syntax
+	display: -webkit-flex;
+	display: 		 flex;
+	button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
+		margin: 0;
+		// Old syntax
+		-webkit-box-flex: 1;
+		max-width: 100%;
+		// New syntax
+		-webkit-flex-grow: 1;
+				flex-grow: 1;
+		-webkit-flex-basis: 0;
+				flex-basis: 0;
+		text-align: center;
+		border: $button-group-border-style;
+		@if $button-border-radius != 0 {
+			border-radius: 0;
+			&:first-child {
+				border-top-left-radius: $button-border-radius;
+				border-bottom-left-radius: $button-border-radius;
+			}
+			&:last-child {
+				border-top-right-radius: $button-border-radius;
+				border-bottom-right-radius: $button-border-radius;
+			}
+		}
+	}
+}
+// Responsiveness for 
+@media (max-width: #{$button-group-mobile-breakpoint}) {
+	.#{$button-group-name} {
+		// Old syntax
+		-webkit-box-orient: vertical;
+		// New syntax
+		-webkit-flex-direction: column;
+				flex-direction: column;
+		@if $button-border-radius != 0 {
+			button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
+				&:first-child {
+					border-radius: 0;
+					border-top-left-radius: $button-border-radius;
+					border-top-right-radius: $button-border-radius;
+				}
+				&:last-child {
+					border-radius: 0;
+					border-bottom-left-radius: $button-border-radius;
+					border-bottom-right-radius: $button-border-radius;
+				}
+			}
+		}
+	}
+}
+
 // Mixin for alternate buttons (button color variants).
 // Variables:
 // - $button-alt-name : The name of the class used for the alternate button.

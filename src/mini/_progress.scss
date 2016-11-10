@@ -145,8 +145,8 @@ progress {
 // - $spinner-donut-alt-back-color : The background color of the alternate donut spinner.
 // - $spinner-donut-alt-fore-color : The foreground color of the alternate donut spinner.
 @mixin make-spinner-donut-alt-color ($spinner-donut-alt-name, $spinner-donut-alt-back-color, $spinner-donut-alt-fore-color) {
-.#{$spinner-donut-name}.#{$spinner-donut-alt-name} {
-	border: $spinner-donut-border-thickness solid $spinner-donut-alt-back-color;
-	border-left: $spinner-donut-border-thickness solid $spinner-donut-alt-fore-color;
-}
+	.#{$spinner-donut-name}.#{$spinner-donut-alt-name} {
+		border: $spinner-donut-border-thickness solid $spinner-donut-alt-back-color;
+		border-left: $spinner-donut-border-thickness solid $spinner-donut-alt-fore-color;
+	}
 }

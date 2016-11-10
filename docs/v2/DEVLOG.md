@@ -386,3 +386,4 @@
 	- Code cleanup in `form`. 
 	- Code cleanup in `button`. Updated `file` `input`s to be accessible.
 	- Code cleanup in `checkbox`. Optimizations.
+	- Restructured `form`, `button` and `checkbox` into one module: `input_control`. Made necessary changes for this to work properly.

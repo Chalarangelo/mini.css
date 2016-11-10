@@ -12,6 +12,9 @@ table {
 	@if $table-margin != 0 {
 		margin: $table-margin;
 	}
+	@if $table-box-shadow !=0 {
+		box-shadow: $table-box-shadow;
+	}
 }
 caption {
 	font-size: $table-caption-font-size;
@@ -38,6 +41,9 @@ th:first-child, td:first-child {
 		border-collapse: collapse;
 		border: 0;	
 		width: 100%;
+		@if $table-box-shadow !=0 {
+			box-shadow: none;
+		}
 	}
 	// Accessibility (element is not visible, but screen readers read it normally)
 	thead {
@@ -57,7 +63,10 @@ th:first-child, td:first-child {
 		border: $table-border-style;
 		@if $table-border-radius != 0 {
 			border-radius: $table-border-radius;
-		}  	
+		}  
+		@if $table-box-shadow !=0 {
+			box-shadow: $table-box-shadow;
+		}	
 		margin-bottom: $table-mobile-card-spacing;
 	}
 	td {

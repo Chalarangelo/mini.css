@@ -16,6 +16,9 @@ $tab-stacked-name:				'stacked' !default;								// Class name for stacked tabs 
 			justify-content: space-between;
 	-webkit-flex-wrap: wrap;
 			flex-wrap: wrap;
+	@if $tab-container-box-shadow != 0 {
+		box-shadow: $tab-container-box-shadow;
+	}
 	// Tab label styling
 	& > label {	
 		// Old syntax

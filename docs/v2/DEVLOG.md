@@ -395,3 +395,14 @@
 	- Cleanup for `card`. Changed loading order and variables to better reflect the new module system. Updated media queries.
 	- Cleanup for `tab`, updated media queries.
 - Deployed live demo after cleanup.
+- Added modular `box-shadow` to `card`s.
+- Added modular `box-shadow` for `pre`, `code`, `kbd` and `mark`.
+- Added `border-style` and `border-radius` to `mark` contextual defaults.
+- Changed `padding` of `mark` elements.
+- Added modular `box-shadow` to `alert`s.
+- Added modular `box-shadow` for `form`, decided not to add for `fieldset` due to the way it displays and how it sort of clashes with the ideas of material design.
+- Added modular `box-shadow` for `button` and button-like elements.
+- Added modular `box-shadow` for `header` decided not to add for `nav` and `footer`.
+- Added modular `box-shadow` for `progress` element.
+- Added modular `box-shadow` for `table` element. Tweaked to be responsive on smaller screens.
+- Added modular `box-shadow` for `tabs` container. This might have some minor problems with `border-radius`es.

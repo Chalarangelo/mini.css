@@ -12,6 +12,9 @@ header {
 	@if $header-padding != 0 {
 		padding: $header-padding;
 	}
+	@if $header-box-shadow != 0 {
+		box-shadow: $header-box-shadow;
+	}
 	// Reposnivenes for smaller displays, scrolls horizontally.
 	white-space: nowrap;
 	overflow-x: auto;

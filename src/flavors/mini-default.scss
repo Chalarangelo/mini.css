@@ -48,12 +48,16 @@ $code-element-fore-color:		$fore-color;									// Text color for <code>
 $code-element-back-color:		#e0e0e0;										// Background color for <code>
 $code-element-border-style:		0;												// Border style for <code>
 $code-element-border-radius:	2px;											// Border radius for <code>
+$code-element-box-shadow:														// Box shadow for <code>
+	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
 $pre-element-padding:			12px;											// Padding for <pre>
 $pre-element-fore-color:		$code-element-fore-color;						// Text color for <pre>
 $pre-element-back-color:		$code-element-back-color;						// Background color for <pre>
 $pre-element-border-style:		0;												// Border style for <pre>
 $pre-element-border-radius:		0 2px 2px 0;									// Border radius for <pre>
 $pre-element-margin:			1px 10px;										// Margin for <pre>
+$pre-element-box-shadow:														// Box shadow for <pre>
+	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);		
 $add-pre-element-sidebar:		true;											// Should a fancy sidebar be added to the
 																				// left side of <pre> (`true`/`false`)
 $pre-element-sidebar-style:		3px solid #1565c0;								// Style of the sidebar of <pre>
@@ -62,6 +66,8 @@ $kbd-element-fore-color:		$back-color;									// Text color for <kbd>
 $kbd-element-back-color:		$fore-color;									// Background color for <kbd>
 $kbd-element-border-style:		0;												// Border style for <kbd>
 $kbd-element-border-radius:		2px;											// Border radius for <kbd>
+$kbd-element-box-shadow:														// Box shadow for <kbd>
+	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
 $style-samp-element:			false;											// Should styles for <samp> be included? 
 																				// (`true`/`false`) [6]
 //$samp-element-padding:		2px 4px;										// Padding for <samp>
@@ -130,6 +136,8 @@ $header-back-color:				#263238;										// Background color for header
 $header-fore-color:				$back-color;									// Text color for header
 $header-margin:					0;												// Margin for header
 $header-padding:				2px 8px;										// Padding for header
+$header-box-shadow:																// Box shadow for header
+	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);	
 $header-logo-name:				'logo';											// Class name for header's logo
 $header-logo-font-size:			1.75em;											// Font size for header's logo
 $header-logo-line-height:		1.2;											// Line height for header's logo
@@ -160,6 +168,8 @@ $form-border-style:				1px solid #90a4ae;								// Border style for forms
 $form-border-radius:			2px;											// Border radius for forms
 $form-margin:					8px;											// Margin for forms
 $form-padding:					8px;											// Padding for forms
+$form-box-shadow:																// Box shadow for forms
+	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);	
 $fieldset-back-color:			$form-back-color;								// Background color for fieldset
 $fieldset-border-style:			1px solid #b0bec5;								// Border style for fieldset
 $fieldset-border-radius:		1px;											// Border radius for fieldset
@@ -191,6 +201,8 @@ $button-border-style:			0;												// Border style for button elements
 $button-border-radius:			2px;											// Border radius for button elements
 $button-padding:				4px 6px;										// Padding for button elements
 $button-margin:					4px;											// Margin for button elements
+$button-box-shadow:																// Box shadow for buttons
+	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
 $button-disabled-opacity:		0.65;											// Disabled button elements opacity
 $button-class-name:				'button';										// Class for custom button elements
 $hide-file-inputs:				true;											// Should a style be added that makes all
@@ -250,6 +262,8 @@ $checkbox-disabled-opacity:		$input-disabled-opacity;						// Opacity for disabl
 $table-border-style:			1px solid #bdbdbd;								// Border style for <table> and children
 $table-border-radius:			2px;											// Border radius for <table> and children
 $table-margin:					0 auto;											// Margin for <table>
+$table-box-shadow:																// Box shadow for <table>
+	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);	
 $table-caption-font-size:		1.5em;											// Font size for <caption>
 $table-caption-margin:			6px 0 12px;										// Margin for <caption>
 $table-row-padding:				6px;											// Padding for <tr> - both views
@@ -270,6 +284,8 @@ $card-fore-color:				$fore-color;									// Text color for cards
 $card-border-style:				1px solid #9e9e9e;								// Border style for cards
 $card-border-radius:			2px;											// Border radius for cards
 $card-margin:					2px 10px 20px;									// Margin for cards
+$card-box-shadow:																// Box shadow for cards
+	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);					
 $card-section-name:				'section';										// Class name for card sections
 $card-section-border-style:		1px solid #bdbdbd;								// Border style for card sections
 $card-section-padding:			6px 8px 6px;									// Padding for card sections
@@ -298,6 +314,8 @@ $card-section-padding1-padding:	12px 16px 12px;									// Padding for card sect
 // [1] - The cards module depends heavily on the grid system module.
 //	Variables for tabs [1]
 $tab-container-name:			'tabs';											// Class name for the tabs' container
+$tab-container-box-shadow:														// Box shadow for the tabs' container
+	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);		
 $tab-label-back-color:			#b0bec5;										// Background color for tabs' labels
 $tab-label-fore-color:			$fore-color;									// Text color for tabs' labels
 $tab-label-selected-back-color:	#cfd8dc;										// Background color for open tab's label
@@ -313,13 +331,17 @@ $tab-panel-padding:				6px;											// Padding for tabs' panels
 $tab-panel-height:				400px;											// Height for tabs' panels
 $tab-stacked-breakpoint:		$grid-medium-breakpoint;						// Breakpoint for tabs layout (stacked/horizontal)
 $tab-stacked-name:				'stacked';										// Class name for stacked tabs
-//	Variables for contextual background elements
+//	Variables for contextual background elements and alerts
 $mark-back-color:				#0277bd;										// Background color for <mark>
 $mark-fore-color:				$back-color;									// Text color for <mark>
 $mark-font-size:				95%;											// Font size for <mark>
 $mark-line-height:				1;												// Line height for <mark>
-$mark-padding:					1px;											// Padding for <mark>
+$mark-border-style:				0;												// Border style for <mark>
+$mark-border-radius:			2px;											// Border radius for <mark>
+$mark-padding:					2px 4px;										// Padding for <mark>
 $mark-margin:					0;												// Margin for <mark>	
+$mark-box-shadow:																// Box shadow for <mark>
+	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
 $mark-variant1-name:			'secondary';									// Class name for <mark> variant 1
 $mark-variant1-back-color:		#f44336;										// Background color for <mark> variant 1
 $mark-variant2-name:			'tertiary';										// Class name for <mark> variant 2
@@ -337,6 +359,8 @@ $alert-border-style:			1px solid #bdbdbd;								// Border style for alerts
 $alert-border-radius:			2px;											// Border radius for alerts
 $alert-padding:					12px 16px;										// Padding for alerts
 $alert-margin:					1px 10px;										// Margin for alerts
+$alert-box-shadow:																// Box shadow for alerts
+	0 1px 3px rgba(0,0,0, 0.18), 0 1px 2px rgba(0, 0, 0, 0.26);	
 //	Variables for progress elements and spinners
 $progress-back-color:			#f5f5f5;										// Background color for <progress>
 $progress-fore-color:			#01579b;										// Progress bar color for <progress>
@@ -344,6 +368,8 @@ $progress-height:				10px;											// Height of <progress>
 $progress-border-style:			0;												// Border style for <progress>
 $progress-border-radius:		1px;											// Border radius for the <progress> container
 $progress-margin:				1px auto;										// Margin for <progress>
+$progress-box-shadow:															// Box shadow for <progress>
+	0 0.5px 1px rgba(0,0,0, 0.1), 0 0.5px 0.5px rgba(0, 0, 0, 0.15);
 $progress-inline-name:			'inline';										// Class name for inline <progress>
 $progress-inline-width:			60vw;											// Width for inline <progress>
 $progress-variant1-name:		'secondary';									// Class name for <progress> variant 1

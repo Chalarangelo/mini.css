@@ -163,6 +163,9 @@ code {
 	@if $code-element-padding != 0 {
 		padding: $code-element-padding;
 	}
+	@if $code-element-box-shadow != 0 {
+		box-shadow: $code-element-box-shadow;
+	}
 }
 
 pre {
@@ -189,6 +192,9 @@ pre {
 	@if $add-pre-element-sidebar {
 		border-left: $pre-element-sidebar-style;
 	}
+	@if $pre-element-box-shadow != 0 {
+		box-shadow: $pre-element-box-shadow;
+	}
 }
 
 kbd {
@@ -206,6 +212,9 @@ kbd {
 	}
 	@if $kbd-element-padding != 0 {
 		padding: $kbd-element-padding;
+	}
+	@if $kbd-element-box-shadow != 0 {
+		box-shadow: $kbd-element-box-shadow;
 	}
 }
 

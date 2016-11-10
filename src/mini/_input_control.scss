@@ -20,6 +20,9 @@ form {
 	@if $form-padding != 0 {
 		padding: $form-padding;
 	}
+	@if $form-box-shadow != 0 {
+		box-shadow: $form-box-shadow;
+	}
 }
 // Fieldset styling.
 fieldset {
@@ -145,6 +148,9 @@ button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name
 	}
 	@if $button-margin != 0 {
 		margin: $button-margin;
+	}
+	@if $button-box-shadow != 0 {
+		box-shadow: $button-box-shadow;
 	}
 	@if $apply-link-underline {		// Override for links if underline is enabled.
 		text-decoration: none;

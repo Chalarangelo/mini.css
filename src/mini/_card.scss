@@ -39,7 +39,9 @@ $card-normal-width:				320px !default;									// Width for normal cards
 		margin: $card-margin;
 	}
 	// Tasteful shadow
-	box-shadow: rgba(0, 0, 0, 0.25) 0 0 3px 0;
+	@if $card-box-shadow != 0 {
+		box-shadow: $card-box-shadow;
+	}
 	// Card sections
 	& > .#{$card-section-name} {
 		box-sizing: border-box;

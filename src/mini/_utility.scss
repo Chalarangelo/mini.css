@@ -4,76 +4,76 @@
 // Variables:
 // - $border-generic-name : The name of the class used for the generic border.
 @mixin make-border-generic ($border-generic-name) {
-.#{$border-generic-name} {
-	border: 1px solid rgba(0,0,0, 0.25) !important;
-}
+	.#{$border-generic-name} {
+		border: 1px solid rgba(0,0,0, 0.25) !important;
+	}
 }
 // Generic radial border mixin. ATTENTION: Uses !important.
 // Variables:
 // - $border-radial-name : The name of the class used for the radial border.
 // - $border-radial-radius : The border radius used for the radial border.
 @mixin make-border-radial-style ($border-radial-name, $border-radial-radius) {
-.#{$border-radial-name} {
-	border-radius: $border-radial-radius !important;
-}	
+	.#{$border-radial-name} {
+		border-radius: $border-radial-radius !important;
+	}	
 }
 // Hidden mixin. ATTENTION: Uses !important.
 // Variables:
 // - $hidden-name : The name of the class used for the hidden elements.
 @mixin make-hidden ($hidden-name) {
-.#{$hidden-name}{
-	display: none !important;
-}
+	.#{$hidden-name}{
+		display: none !important;
+	}
 }
 // Visually hidden mixin. ATTENTION: Uses !important.
 // Makes element invisible, but still accessible to screen readers.
 // Variables:
 // - $visually-hidden-name : The name of the class used for the visually hidden elements.
 @mixin make-visually-hidden ($visually-hidden-name) {
-.#{$visually-hidden-name} {
-	position: absolute !important;
-	width: 1px !important;
-	height: 1px !important;
-	margin: -1px !important;
-	border: 0 !important;
-	padding: 0 !important;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden !important;
-}
+	.#{$visually-hidden-name} {
+		position: absolute !important;
+		width: 1px !important;
+		height: 1px !important;
+		margin: -1px !important;
+		border: 0 !important;
+		padding: 0 !important;
+		clip-path: inset(100%);
+		clip: rect(0 0 0 0);
+		overflow: hidden !important;
+	}
 }
 // Floats mixin. ATTENTION: Uses !important.
 // Variables:
 // - $float-prefix : Prefix for the class names of floats.
 @mixin make-floats ($float-prefix) {
-.#{$float-prefix}-left {
-	float: left !important;
-}
-.#{$float-prefix}-right {
-	float: right !important;
-}
+	.#{$float-prefix}-left {
+		float: left !important;
+	}
+	.#{$float-prefix}-right {
+		float: right !important;
+	}
 }
 // Clearfix mixin.
 // Variables:
 // - $clearfix-name : The name of the class used for the clearfix.
 @mixin make-clearfix ($clearfix-name) {
-.#{$clearfix-name} {
-&:before, &:after {
-	content: ' ';
-	display: table;
-	clear: both;
-}
-}
+	.#{$clearfix-name} {
+		&:before, &:after {
+			content: ' ';
+			display: table;
+			clear: both;
+		}
+	}
 }
 // Center block mixin.
 // Variables:
 // - $center-block-name : The name of the class used for the center block.
 @mixin make-center-block ($center-block-name) {
-.#{$center-block-name} {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
+	.#{$center-block-name} {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 // Breadcrumb mixin.
 // Variables:
@@ -81,22 +81,22 @@
 // - $use-right-angle-symbol : (Optional) Should the right angle symbol be used as a separator (`true`/`false`).
 //	Value is `true` by default. If `false` a forward slash will be used.
 @mixin make-breadcrumbs ($breadcrumbs-name, $use-right-angle-symbol : true) {
-ul.#{$breadcrumbs-name} {
-	list-style: none;
-& > li{
-	display: inline-block;
-// Some padding is needed for the breacrumbs to appear properly. 2px should be enough.
-	padding-right: 0.125em;	
-& + li:before{
-@if $use-right-angle-symbol {
-	content: '\27e9';
-}
-@else {
-	content: '\002f';
-}
-// Some padding is needed for the breacrumbs to appear properly. 2px should be enough.
-	padding: 0.125em;
-}
-}
-}
+	ul.#{$breadcrumbs-name} {
+		list-style: none;
+		& > li{
+			display: inline-block;
+			// Some padding is needed for the breacrumbs to appear properly. 2px should be enough.
+			padding-right: 0.125em;	
+			& + li:before{
+				@if $use-right-angle-symbol {
+					content: '\27e9';
+				}
+				@else {
+					content: '\002f';
+				}
+				// Some padding is needed for the breacrumbs to appear properly. 2px should be enough.
+				padding: 0.125em;
+			}
+		}
+	}
 }

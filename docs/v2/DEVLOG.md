@@ -391,3 +391,4 @@
 	- Code cleanup for `contextual`. Minor `mark` optimizations. Added `alert` mixin `make-alert-alt-style` for alternative `alert` styles.
 	- Removed `spinner` file.
 	- Cleanup for `navigation`.
+	- Cleanup for `utility`.

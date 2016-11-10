@@ -287,7 +287,7 @@ $alert-border-style:			1px solid #bdbdbd;								// Border style for alerts
 $alert-border-radius:			2px;											// Border radius for alerts
 $alert-padding:					12px 16px;										// Padding for alerts
 $alert-margin:					1px 10px;										// Margin for alerts
-//	Variables for progress elements
+//	Variables for progress elements and spinners
 $progress-back-color:			#f5f5f5;										// Background color for <progress>
 $progress-fore-color:			#01579b;										// Progress bar color for <progress>
 $progress-height:				10px;											// Height of <progress>
@@ -305,18 +305,21 @@ $progress-style1-height:		2px;											// Height for <progress> style 1
 $progress-style1-margin:		0 auto 1px;										// Margin for <progress> style 1
 $progress-style1-border-style:	0;												// Border style for <progress> style 1
 $progress-style1-border-radius:	0;												// Border radius for <progress> style 1
-//	Variables for core utilities and helper classes
-$border-generic-name:			'bordered';										// Class name for generic border style
-$border-radial-style1-name:		'rounded';										// Class name for radial border style 1
-$border-radial-style1-radius:	2px;											// Border radius for radial border style 1
-$border-radial-style2-name:		'circular';										// Class name for radial border style 2
-$border-radial-style2-radius:	50%;											// Border radius for radial border style 2
-$hidden-name:					'hidden';										// Class name for hidden elements
-$visually-hidden-name:			'visually-hidden';								// Class name for visually hidden elements
-$float-prefix:					'float';										// Prefix for float classes
-$clearfix-name:					'clearfix';										// Class name for clearfix
-$center-block-name:				'center-block';									// Class name for center block
-$breadcrumbs-name:				'breadcrumbs';									// Class name for breadcrumbs
+$spinner-donut-name:			'spinner-donut';								// Class name for donut spinner
+$spinner-donut-border-thickness:4px;											// Border thickness for donut spinner
+$spinner-donut-back-color:		#e3f2fd;										// Background color for donut spinner
+$spinner-donut-fore-color:		#1565c0;										// Foreground color for donut spinner
+$spinner-donut-size:			20px;											// Size for donut spinner
+$spinner-donut-variant1-name:	'secondary';									// Class name for donut spinner variant 1
+$spinner-donut-variant1-back-color:												// Background color for donut spinner variant 1
+								#ffebee;
+$spinner-donut-variant1-fore-color:												// Foreground color for donut spinner variant 1
+								#c62828;	
+$spinner-donut-variant2-name:	'tertiary';										// Class name for donut spinner variant 2
+$spinner-donut-variant2-back-color:												// Background color for donut spinner variant 2
+								#e8f5e9;
+$spinner-donut-variant2-fore-color:												// Foreground color for donut spinner variant 2
+								#2e7d32;	
 //	Variables for cards [1]
 $card-name:						'card';											// Class name for cards
 $card-back-color:				#f5f5f5;										// Background color for cards
@@ -367,24 +370,20 @@ $tab-panel-padding:				6px;											// Padding for tabs' panels
 $tab-panel-height:				400px;											// Height for tabs' panels
 $tab-stacked-breakpoint:		$grid-medium-breakpoint;						// Breakpoint for tabs layout (stacked/horizontal)
 $tab-stacked-name:				'stacked';										// Class name for stacked tabs
+//	Variables for utilities and helper classes
+$border-generic-name:			'bordered';										// Class name for generic border style
+$border-radial-style1-name:		'rounded';										// Class name for radial border style 1
+$border-radial-style1-radius:	2px;											// Border radius for radial border style 1
+$border-radial-style2-name:		'circular';										// Class name for radial border style 2
+$border-radial-style2-radius:	50%;											// Border radius for radial border style 2
+$hidden-name:					'hidden';										// Class name for hidden elements
+$visually-hidden-name:			'visually-hidden';								// Class name for visually hidden elements
+$float-prefix:					'float';										// Prefix for float classes
+$clearfix-name:					'clearfix';										// Class name for clearfix
+$center-block-name:				'center-block';									// Class name for center block
+$breadcrumbs-name:				'breadcrumbs';									// Class name for breadcrumbs
 //	Notes:
 // [1] - The tabs module is somewhat dependent on the grid system module.
-//	Variables for spinners
-$spinner-donut-name:			'spinner-donut';								// Class name for donut spinner
-$spinner-donut-border-thickness:4px;											// Border thickness for donut spinner
-$spinner-donut-back-color:		#e3f2fd;										// Background color for donut spinner
-$spinner-donut-fore-color:		#1565c0;										// Foreground color for donut spinner
-$spinner-donut-size:			20px;											// Size for donut spinner
-$spinner-donut-variant1-name:	'secondary';									// Class name for donut spinner variant 1
-$spinner-donut-variant1-back-color:												// Background color for donut spinner variant 1
-								#ffebee;
-$spinner-donut-variant1-fore-color:												// Foreground color for donut spinner variant 1
-								#c62828;	
-$spinner-donut-variant2-name:	'tertiary';										// Class name for donut spinner variant 2
-$spinner-donut-variant2-back-color:												// Background color for donut spinner variant 2
-								#e8f5e9;
-$spinner-donut-variant2-fore-color:												// Foreground color for donut spinner variant 2
-								#2e7d32;	
 //	Enable mini.css
 @import '../mini/core';
 //	Use mixins for button elements
@@ -414,16 +413,8 @@ $spinner-donut-variant2-fore-color:												// Foreground color for donut spi
 @include make-progress-alt-color ($progress-variant2-name, $progress-variant2-fore-color);
 @include make-progress-alt-style ($progress-style1-name, $progress-style1-height, 
 	$progress-style1-margin, $progress-style1-border-style, $progress-style1-border-radius);
-//	Use mixins for core utilities and helper classes
-@include make-border-generic ($border-generic-name);
-@include make-border-radial-style ($border-radial-style1-name, $border-radial-style1-radius);
-@include make-border-radial-style ($border-radial-style2-name, $border-radial-style2-radius);
-@include make-hidden ($hidden-name);
-@include make-visually-hidden ($visually-hidden-name);
-@include make-floats ($float-prefix);
-@include make-clearfix ($clearfix-name);
-@include make-center-block ($center-block-name);
-@include make-breadcrumbs ($breadcrumbs-name);
+@include make-spinner-donut-alt-color ($spinner-donut-variant2-name, $spinner-donut-variant2-back-color, 
+	$spinner-donut-variant2-fore-color);
 //	Use mixins for cards
 @include make-card-alt-size ($card-size1-name, $card-size1-width);
 @include make-card-alt-size ($card-size2-name, $card-size2-width);
@@ -439,5 +430,13 @@ $spinner-donut-variant2-fore-color:												// Foreground color for donut spi
 @include make-spinner-donut-alt-color ($spinner-donut-variant1-name, $spinner-donut-variant1-back-color, 
 	$spinner-donut-variant1-fore-color);
 @include add-grid-row-cards-alignment;
-@include make-spinner-donut-alt-color ($spinner-donut-variant2-name, $spinner-donut-variant2-back-color, 
-	$spinner-donut-variant2-fore-color);
+//	Use mixins for utilities and helper classes
+@include make-border-generic ($border-generic-name);
+@include make-border-radial-style ($border-radial-style1-name, $border-radial-style1-radius);
+@include make-border-radial-style ($border-radial-style2-name, $border-radial-style2-radius);
+@include make-hidden ($hidden-name);
+@include make-visually-hidden ($visually-hidden-name);
+@include make-floats ($float-prefix);
+@include make-clearfix ($clearfix-name);
+@include make-center-block ($center-block-name);
+@include make-breadcrumbs ($breadcrumbs-name);

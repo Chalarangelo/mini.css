@@ -9,27 +9,27 @@
 - Initialized `mini-default` flavor.
 - Initialized `DEVLOG.md`.
 - **Started developing base from [Normalize.css](https://github.com/necolas/normalize.css) v5.0.0**
-  - Removed support for displaying `[hidden]` in IE 10-.
-  - Removed support for the display of `template` in IE. `template` is not supported yet in IE, thus this will not make any difference, as long as the element itself is not yet supported.
-  - Removed support for the display of `canvas` in IE 9-.
-  - Removed styling fixes for checkboxes and radio buttons in IE 10-.
-  - Kept the styling fix for `textarea` that only affects IE. It seems like it could be useful elsewhere as well. **Needs further work!**
-  - Removed the `progress` styling fix for IE 9- as the element is not supported in IE 9-.
-  - Kept the styling for `svg:not(:root)` although it only affects IE 9-. This is due to the fact that SVG rendering is very important.
-  - Removed the `img` style fix for IE 10-.
-  - Removed the fix for `audio:not([controls])` which only applies to iOS 4-7.
-  - Kept the styling fix of `audio` and `video` for IE 9-, as IE 9 supports both elements.
-  - *TODO* Change `mark` color to customized from flavor, override normalized default and fix.
-  - Kept styling fix of `dfn` for Android 4.3-, as element is properly supported.
-  - *TODO*,*UNCERTAIN* Change the `font-weight` of `b` and `strong` elements to a set number (e.g. 700) to avoid the normalize hack.
-  - Kept styling fix for `abbr` in Firefox 39-, as the element is well supported.
-  - Kept styling fixes for links (`a`), as they are a core element in all browsers and they should be supported well even in older browsers.
-  - Removed the styling fix for `figure` for IE 8. `figure` styling will probably be built from the ground up in the core anyways, so this should not be a problem.
-  - Kept styling fixes for `figure` and `figcaption` for IE 9-. These elements are supported by IE 9, but not the older versions of IE.
-  - Kept the styling fixes for `article`, `aside`, `footer`, `header`, `nav` and `section` for IE 9-. Elements are only supported in IE 9.
+	- Removed support for displaying `[hidden]` in IE 10-.
+	- Removed support for the display of `template` in IE. `template` is not supported yet in IE, thus this will not make any difference, as long as the element itself is not yet supported.
+	- Removed support for the display of `canvas` in IE 9-.
+	- Removed styling fixes for checkboxes and radio buttons in IE 10-.
+	- Kept the styling fix for `textarea` that only affects IE. It seems like it could be useful elsewhere as well. **Needs further work!**
+	- Removed the `progress` styling fix for IE 9- as the element is not supported in IE 9-.
+	- Kept the styling for `svg:not(:root)` although it only affects IE 9-. This is due to the fact that SVG rendering is very important.
+	- Removed the `img` style fix for IE 10-.
+	- Removed the fix for `audio:not([controls])` which only applies to iOS 4-7.
+	- Kept the styling fix of `audio` and `video` for IE 9-, as IE 9 supports both elements.
+	- *TODO* Change `mark` color to customized from flavor, override normalized default and fix.
+	- Kept styling fix of `dfn` for Android 4.3-, as element is properly supported.
+	- *TODO*,*UNCERTAIN* Change the `font-weight` of `b` and `strong` elements to a set number (e.g. 700) to avoid the normalize hack.
+	- Kept styling fix for `abbr` in Firefox 39-, as the element is well supported.
+	- Kept styling fixes for links (`a`), as they are a core element in all browsers and they should be supported well even in older browsers.
+	- Removed the styling fix for `figure` for IE 8. `figure` styling will probably be built from the ground up in the core anyways, so this should not be a problem.
+	- Kept styling fixes for `figure` and `figcaption` for IE 9-. These elements are supported by IE 9, but not the older versions of IE.
+	- Kept the styling fixes for `article`, `aside`, `footer`, `header`, `nav` and `section` for IE 9-. Elements are only supported in IE 9.
 - **Organized and cleaned the base**
-  - Merged styling fixes for `article`, `aside`, `footer`, `header`, `nav` and `section` with fixes for `figure`, `figcaption` and `main`.
-  - Merged styling for `kbd`, `code`, `pre` and `samp`.
+	- Merged styling fixes for `article`, `aside`, `footer`, `header`, `nav` and `section` with fixes for `figure`, `figcaption` and `main`.
+	- Merged styling for `kbd`, `code`, `pre` and `samp`.
 - Started documenting default flavor.
 
 ## 20161013
@@ -44,7 +44,7 @@
 - Built styling for horizontal rules, fixes apply as before.
 - `hr` elements get a margin for left and right (`4px`). This is a design decision for the flavor.
 - `hr` top and bottom margins changed to `0.5em` from `0.7em`.
-- Removed the `font-size: 1em` for the code elements (`code`, `pre`, `kbd`, `samp`) as they should normally be styled using the first style that applies to `html` and all elements. **Highly suggested to use `$apply-defaults-to-all:	true;` always.**
+- Removed the `font-size: 1em` for the code elements (`code`, `pre`, `kbd`, `samp`) as they should normally be styled using the first style that applies to `html` and all elements. **Highly suggested to use `$apply-defaults-to-all: true;` always.**
 - Added variables for `code`, `pre`, `kbd`, `samp` and a flag for `samp` (`$style-samp-element`) to make sure that no unnecessary styles are added if the `samp` element is not to be used by the developer.
 - Added conditions to make sure the least amount of code is used and no defaults are redefined when styling `code`. `kbd`, `samp` and `pre`.
 - Changed padding of `pre` elements to `6px` and later to `8px`. Changed color for `hr` to `#666` and later to `#888`.
@@ -103,9 +103,9 @@
 - Added flag for `a` using fancy `:hover` and other focused effects instead of `color` (`$apply-link-hover-fade`).
 - Opened issue for module restructure (#14).
 - Module restructure based on issue #14 (partial for whatever work was already done):
-  - Renamed `_base.scss` to `_core.scss` and created folder for submodules (`mini-core`).
-  - Created `_contextual.scss` for `mark` styling.
-  - Comments and sections for core.
+	- Renamed `_base.scss` to `_core.scss` and created folder for submodules (`mini-core`).
+	- Created `_contextual.scss` for `mark` styling.
+	- Comments and sections for core.
 - Changed import in flavor, imported contextual in core.
 - Corrected and finalized display of `abbr` elements with a `title` attribute: Border fix for older Firefox version was kept, dropped some styling for the underline, underline will now always be normal `text-decoration: underline` on all browsers (opinionated).
 - Kept display fix for `audio` and `video` for IE 9, as the elements are supported, moved to top of head.
@@ -227,11 +227,11 @@
 - Reorganized the loading order of modules in `core`.
 - Added `search` fixes to `form` module.
 - *DESIGN DECISION* To deal with accessibility concerns and the very "hacky" way navigation was implemented in the previous version, the following design decisions have been made.
-  1. The top menu will be based around the `header` element and will not be able to do `display: fixed`. This will allow content over the fold to appear when important content exists in the menu. Space for a logo and some additional things will be added there.
-  2. `nav` will be used as a vertical menu, not `fixed`, that will display any navigational content as required by the user. This is the traditional navigation menu. It will be embeddable in a grid column left or right based on user preference.
-  3. Dropdown components will be removed, as the top bar does not need them to work properly and the side bar can be toggled with code.
-  4. Sidebar collapsing will not be added as a checkbox hack anymore, but users will be able to use Javascript for that.
-  5. An example of Javascript will be added for said collapse.
+	1. The top menu will be based around the `header` element and will not be able to do `display: fixed`. This will allow content over the fold to appear when important content exists in the menu. Space for a logo and some additional things will be added there.
+	2. `nav` will be used as a vertical menu, not `fixed`, that will display any navigational content as required by the user. This is the traditional navigation menu. It will be embeddable in a grid column left or right based on user preference.
+	3. Dropdown components will be removed, as the top bar does not need them to work properly and the side bar can be toggled with code.
+	4. Sidebar collapsing will not be added as a checkbox hack anymore, but users will be able to use Javascript for that.
+	5. An example of Javascript will be added for said collapse.
 - All `checkbox` and `radio` elements will be `display: none` by default. Grouping one in an `input-group` with a `label` will give the desired style to the label.
 - Created module `mini-core/checkbox`.
 - Started styling `checkbox`es and `radio` buttons. Got most of the styling done, hardcoded.
@@ -343,16 +343,16 @@
 - Added responsiveness to `tab` module.
 - Tested `tab` module thoroughly on both Firefox and Chrome (PC), will test further on phone.
 - *DESIGN DECISION* The `accordion` and collapse module will be merged with the `tab` and carousel module. This is a very well-thought out decision, based on the fact that `accordion` components behave like `stacked` `tab` components. This means that users will be forced to use a heavier module for both components (which might not be beneficial if they only wish to use the `accordion` component), however this helps users mnemonically, by allowing more functionality in one technically identical structure. The specifics of this decision are laid out below:
-  1. The `stacked` class will be used for a `tabs` container, so that an `accordion` component can be easily emulated.
-  2. Some of the versatility of the `accordion` class will be sacrificed to allow `stacked` `tabs` to include the same functionality. Minor changes can still be made manually.
-  3. The `tabs` module will use different transformation tricks for `stacked` and normal tabs. Specifically, the responsive stacked tabs on smaller screens will use preset `height`, while `stacked` tabs will use `height: auto;`.
-  4. All controls for both types of `tab`s will be hidden from screen readers to make the content accessible as-is.
-  5. The old `accordion` module will be retired and possibly stored in a legacy folder. People that only want that old-school `accordion` module can use it.
-  6. `stacked` `tabs` will allow both `checkbox` and `radio` `input`s, normal ones will not allow `checkbox`. This is in line with the philosophy of the two components.
-  7. Carousels can still be built using any of the two styles.
-  8. `stacked` `tabs` will feature their own color scheme for some things to allow more customization within the module.
-  9. Both components will use a generic `:hover` effect.
-  10. The `transform`s applied before to `accordion` will still apply to `stacked` `tabs`.
+	1. The `stacked` class will be used for a `tabs` container, so that an `accordion` component can be easily emulated.
+	2. Some of the versatility of the `accordion` class will be sacrificed to allow `stacked` `tabs` to include the same functionality. Minor changes can still be made manually.
+	3. The `tabs` module will use different transformation tricks for `stacked` and normal tabs. Specifically, the responsive stacked tabs on smaller screens will use preset `height`, while `stacked` tabs will use `height: auto;`.
+	4. All controls for both types of `tab`s will be hidden from screen readers to make the content accessible as-is.
+	5. The old `accordion` module will be retired and possibly stored in a legacy folder. People that only want that old-school `accordion` module can use it.
+	6. `stacked` `tabs` will allow both `checkbox` and `radio` `input`s, normal ones will not allow `checkbox`. This is in line with the philosophy of the two components.
+	7. Carousels can still be built using any of the two styles.
+	8. `stacked` `tabs` will feature their own color scheme for some things to allow more customization within the module.
+	9. Both components will use a generic `:hover` effect.
+	10. The `transform`s applied before to `accordion` will still apply to `stacked` `tabs`.
 - Refactored code of `tabs` to work with the above decision, removed obsolete artifacts from the `accordion` module.
 - Made a few minor tweaks, decided not to add `accordion`-specific styling, as the current styling is just enough.
 - Edited the demo page to include most of the new functionality.
@@ -365,14 +365,19 @@
 - Minor `tabs` update for `:first-of-type` and `:last-of-type` selectors. This update should fix square top-right corners for single collapses.
 - Deployed live demo.
 - New module restructure: all modules will be moved to core, some merges might have to be applied (check issue #14). Restructure was applied as follows:
-  - Added the functionality of the new `alert` module to `contextual`. Includes mixin `make-alert-alt-color` for different `alert` color variants.
-  - Restructured folders. `mini-shell` removed, `mini-core` renamed to `mini`. `mini` is the core folder now.
-  - Created branch `v1-neutrino` both locally and on Github to support legacy versions in the future. `master` is now the branch for **Fermion** only.
-  - Aggressive deletion of older files. The following folder are now gone: `scss/mini`, `scss/mini-extra`, `flavors` except for the contents of the `v2` folder and the folder itself.
-  - Renamed `_mini.scss` to `_core.scss`, moved to the `scss/v2/mini` directory.
-  - Deleted `accordion` module file as it was obsolete.
-  - Renamed `scss` directory to `src`. Renamed `flavors` directory to `dist`.
-  - Moved flavors from their directory to the `src` directory. CSS files produced from flavor files will go to the `dist` folder, along with the minified versions.
-  - *TODO* Update the `package.json` and `bower.json` files according to the new framework version.
-  - Updated live demo page reference to use the new structure.
-  
+	- Added the functionality of the new `alert` module to `contextual`. Includes mixin `make-alert-alt-color` for different `alert` color variants.
+	- Restructured folders. `mini-shell` removed, `mini-core` renamed to `mini`. `mini` is the core folder now.
+	- Created branch `v1-neutrino` both locally and on Github to support legacy versions in the future. `master` is now the branch for **Fermion** only.
+	- Aggressive deletion of older files. The following folder are now gone: `scss/mini`, `scss/mini-extra`, `flavors` except for the contents of the `v2` folder and the folder itself.
+	- Renamed `_mini.scss` to `_core.scss`, moved to the `scss/v2/mini` directory.
+	- Deleted `accordion` module file as it was obsolete.
+	- Renamed `scss` directory to `src`. Renamed `flavors` directory to `dist`.
+	- Moved flavors from their directory to the `src` directory. CSS files produced from flavor files will go to the `dist` folder, along with the minified versions.
+	- *TODO* Update the `package.json` and `bower.json` files according to the new framework version.
+	- Updated live demo page reference to use the new structure.
+	
+## 20161110
+
+- Continued module restructure and cleanup as follows:
+	- Code cleanup in `core`, indentation change to tabs for consistency, indentation fixes etc.
+	

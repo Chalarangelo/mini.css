@@ -387,3 +387,5 @@
 	- Code cleanup in `button`. Updated `file` `input`s to be accessible.
 	- Code cleanup in `checkbox`. Optimizations.
 	- Restructured `form`, `button` and `checkbox` into one module: `input_control`. Made necessary changes for this to work properly.
+	- Code cleanup in `progress`. Merged `spinner` into `progress`. Removed `spinner-dot` from the `spinner` module as it was not a great component.
+	

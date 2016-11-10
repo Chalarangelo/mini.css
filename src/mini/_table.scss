@@ -4,19 +4,24 @@
 table {	
 	border-collapse: separate;
 	border-spacing: 0;
+	// Apply border style by default always. Otherwise, browser default will be applied.
 	border: $table-border-style;
-	border-radius: $table-border-radius;
-	margin: $table-margin;
+	@if $table-border-radius != 0 {
+		border-radius: $table-border-radius;
+	}
+	@if $table-margin != 0 {
+		margin: $table-margin;
+	}
 }
 caption {
 	font-size: $table-caption-font-size;
 	margin: $table-caption-margin;
 }
 tr {
-	padding: $table-row-padding;
+	padding: $table-row-padding;		// Apply always to overwrite default.
 }
 th, td {
-	padding: $table-column-padding;
+	padding: $table-column-padding;		// Apply always to overwrite default.
 	border-left: $table-border-style;
     border-top: $table-border-style;
 }
@@ -24,16 +29,17 @@ th {
 	border-top: 0;
 	background: $table-head-back-color;
 }
-th:first-child, td:first-child{
+th:first-child, td:first-child {
 	border-left: 0;
 }
 // Mobile view.
-@media only screen and (max-width: #{$table-mobile-breakpoint}) {
+@media (max-width: #{$table-mobile-breakpoint}) {
 	table {
 		border-collapse: collapse;
 		border: 0;	
 		width: 100%;
 	}
+	// Accessibility (element is not visible, but screen readers read it normally)
 	thead {
 		border: 0;
 		height: 1px;
@@ -42,21 +48,24 @@ th:first-child, td:first-child{
     	overflow: hidden;
     	padding: 0;
     	position: absolute;	
-		// Accessibility (element is not visible, but screen readers read it normally)
     	clip: rect(0 0 0 0);
     	-webkit-clip-path: inset(100%);
-    	        clip-path: inset(100%);	
+    			clip-path: inset(100%);	
 	}
 	tr {
 		display: block;
 		border: $table-border-style;
-		border-radius: $table-border-radius;  	
+		@if $table-border-radius != 0 {
+			border-radius: $table-border-radius;
+		}  	
     	margin-bottom: $table-mobile-card-spacing;
 	}
 	td {
 		display: block;
 		border: 0;
-		border-bottom: $table-border-style;	
+		@if $table-border-style != 0 {
+			border-bottom: $table-border-style;	
+		}
     	text-align: right;
 	}
 	td:before {
@@ -65,6 +74,8 @@ th:first-child, td:first-child{
     	font-weight: $table-mobile-label-font-weight;
 	}
 	td:last-child {
-		border-bottom: 0;
+		@if $table-border-style != 0 {
+			border-bottom: 0;
+		}
 	}
 }

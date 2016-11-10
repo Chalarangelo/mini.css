@@ -509,7 +509,7 @@ th {
 th:first-child, td:first-child {
   border-left: 0; }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   table {
     border-collapse: collapse;
     border: 0;

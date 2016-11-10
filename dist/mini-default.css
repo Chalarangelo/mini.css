@@ -257,7 +257,7 @@ a {
 .col-sm-offset-11 {
   margin-left: 91.66667%; }
 
-@media only screen and (min-width: 800px) {
+@media (min-width: 800px) {
   .col-md,
   [class^='col-md-'],
   [class^='col-md-offset-'] {
@@ -370,7 +370,7 @@ a {
 
   .col-md-offset-11 {
     margin-left: 91.66667%; } }
-@media only screen and (min-width: 1080px) {
+@media (min-width: 1080px) {
   .col-lg,
   [class^='col-lg-'],
   [class^='col-lg-offset-'] {

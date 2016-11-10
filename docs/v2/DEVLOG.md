@@ -380,4 +380,6 @@
 
 - Continued module restructure and cleanup as follows:
 	- Code cleanup in `core`, indentation change to tabs for consistency, indentation fixes etc.
+	- Started converting media queries from `only screen and ()` to plain `()`. Changes have been applied to `grid` module.
+	- Code cleanup in `grid`, indentation etc.
 	

@@ -2,20 +2,24 @@
 // Contextual background elements use the mark element as their base.
 // Default styling for mark. Use mixins for alternate styles.
 mark {
-  background: $mark-back-color;
-  color: $mark-fore-color;
-@if $mark-font-size != 100% {
-  font-size: $mark-font-size;
-}
-@if $mark-line-height != $base-line-height {
-  line-height: $mark-line-height;
-}
-@if $mark-padding != 0 {
-  padding: $mark-padding;
-}
-@if $mark-margin != 0 {
-  margin: $mark-margin;
-}
+	@if $mark-back-color != $back-color {
+		background: $mark-back-color;
+	}
+	@if $mark-fore-color != $fore-color {
+		color: $mark-fore-color;
+	}
+	@if $mark-font-size != 100% {
+		font-size: $mark-font-size;
+	}
+	@if $mark-line-height != $base-line-height {
+		line-height: $mark-line-height;
+	}
+	@if $mark-padding != 0 {
+		padding: $mark-padding;
+	}
+	@if $mark-margin != 0 {
+		margin: $mark-margin;
+	}
 }
 // Mixin for alternate mark (contextual color variants).
 // Variables:
@@ -23,14 +27,14 @@ mark {
 // - $mark-alt-back-color : The background color of the alternate mark.
 // - $mark-alt-fore-color : (Optional) The text color of the alternate mark. Defaults to the text color of the mark.
 @mixin make-mark-alt-color ($mark-alt-name, $mark-alt-back-color, $mark-alt-fore-color: $mark-fore-color) {
-mark.#{$mark-alt-name} {
-@if $mark-alt-back-color != $mark-back-color {
-  background: $mark-alt-back-color;
-}
-@if $mark-alt-fore-color != $mark-fore-color {
-  color: $mark-alt-fore-color;
-}
-}
+	mark.#{$mark-alt-name} {
+		@if $mark-alt-back-color != $mark-back-color {
+			background: $mark-alt-back-color;
+		}
+		@if $mark-alt-fore-color != $mark-fore-color {
+			color: $mark-alt-fore-color;
+		}
+	}
 }
 // Mixin for alternative mark styles (contextual tags).
 // Variables:
@@ -38,39 +42,39 @@ mark.#{$mark-alt-name} {
 // - $mark-alt-border-radius : The border-radius of the alternate mark style.
 // - $mark-alt-padding : (Optional) The padding of the alternate mark style. Defaults to the padding of the mark.
 @mixin make-mark-alt-style ($mark-alt-name, $mark-alt-border-radius, $mark-alt-padding: $mark-padding) {
-mark.#{$mark-alt-name} {
-  display: inline-block;
-@if $mark-alt-border-radius != 0 {
-  border-radius: $mark-alt-border-radius;
-}
-@if $mark-alt-padding != $mark-padding {
-  padding: $mark-alt-padding;
-}
-}
+	mark.#{$mark-alt-name} {
+		display: inline-block;
+		@if $mark-alt-border-radius != 0 {
+			border-radius: $mark-alt-border-radius;
+		}
+		@if $mark-alt-padding != $mark-padding {
+			padding: $mark-alt-padding;
+		}
+	}
 }
 // Default styling for alerts. Use mixins for alternate styles
 $alert-name:              'alert' !default;               // Class name for the alerts
 .#{$alert-name} {
-  display: block;
-  max-width: 100%;
-@if $alert-back-color != $back-color {
-  background: $alert-back-color;
-}
-@if $alert-fore-color != $fore-color {
-  color: $alert-fore-color;
-}
-@if $alert-border-style != 0 {
-  border: $alert-border-style;
-}
-@if $alert-border-radius != 0 {
-  border-radius: $alert-border-radius;
-}
-@if $alert-margin != 0 {
-  margin: $alert-margin;
-}
-@if $alert-padding != 0 {
-  padding: $alert-padding;
-}
+	display: block;
+	max-width: 100%;
+	@if $alert-back-color != $back-color {
+		background: $alert-back-color;
+	}
+	@if $alert-fore-color != $fore-color {
+		color: $alert-fore-color;
+	}
+	@if $alert-border-style != 0 {
+		border: $alert-border-style;
+	}
+	@if $alert-border-radius != 0 {
+		border-radius: $alert-border-radius;
+	}
+	@if $alert-margin != 0 {
+		margin: $alert-margin;
+	}
+	@if $alert-padding != 0 {
+		padding: $alert-padding;
+	}
 }
 // Mixin for alternate alert (alert color variants).
 // Variables:
@@ -78,12 +82,36 @@ $alert-name:              'alert' !default;               // Class name for the 
 // - $alert-alt-back-color : The background color of the alternate alert.
 // - $alert-alt-fore-color : (Optional) The text color of the alternate mark. Defaults to the text color of the alert.
 @mixin make-alert-alt-color ($alert-alt-name, $alert-alt-back-color, $alert-alt-fore-color: $alert-fore-color) {
-.#{$alert-name}.#{$alert-alt-name} {
-@if $alert-alt-back-color != $alert-back-color {
-  background: $alert-alt-back-color;
+	.#{$alert-name}.#{$alert-alt-name} {
+		@if $alert-alt-back-color != $alert-back-color {
+			background: $alert-alt-back-color;
+		}
+		@if $alert-alt-fore-color != $alert-fore-color {
+			color: $alert-alt-fore-color;
+		}
+	}
 }
-@if $alert-alt-fore-color != $alert-fore-color {
-  color: $alert-alt-fore-color;
-}
-}
+// Mixin for alternate alert styles (alert style variants).
+// Variables:
+// - $alert-alt-name : The name of the class used for the alternate alert style.
+// - $alert-alt-border-style : The border style of the alternate alert style.
+// - $alert-alt-border-radius : Border radius of the alternate alert style.
+// - $alert-alt-padding : Padding of the alternate alert style.
+// - $alert-alt-margin : Margin of the alternate alert style.
+@mixin make-alert-alt-style ($aert-alt-name, $alert-alt-border-style, $alert-alt-border-radius,
+	$alert-alt-padding, $alert-alt-margin) {
+	.#{$alert-name}.#{$alert-alt-name} {
+		@if $alert-alt-border-style != $alert-border-style {
+			border: $alert-alt-border-style;
+		}
+		@if $alert-alt-border-radius != $alert-border-radius {
+			border-radius: $alert-alt-border-radius;
+		}
+		@if $alert-alt-padding != $alert-padding {
+			padding: $alert-alt-padding;
+		}
+		@if $alert-alt-margin != $alert-margin {
+			margin: $alert-alt-margin;
+		}
+	}
 }

@@ -6,69 +6,68 @@ $card-section-name:				'section' !default;								// Class name for the cards' s
 $card-section-media-name:		'media' !default;								// Class name for the cards' sections (media cotent)
 $card-normal-width:				320px !default;									// Width for normal cards
 .#{$card-name} {
-// Make cards display properly using flexbox tricks
-// Old syntax
+	// Old syntax
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-box-pack: justify;
 	-webkit-box-align: center;
-// New syntax
+	// New syntax
 	display: -webkit-flex;
 	display:         flex;
 	-webkit-flex-direction: column;
 			flex-direction: column;
 	-webkit-justify-content: space-between;
-  			justify-content: space-between;
-  	-webkit-align-self: center;
-  			align-self: center;
+			justify-content: space-between;
+	-webkit-align-self: center;
+			align-self: center;
 	position: relative;
 	width: 100%;
-// Actual styling for the cards
-@if $card-back-color != $back-color {
-	background: $card-back-color;
-}
-@if $card-fore-color != $fore-color {
-	color: $card-fore-color;
-}
-@if $card-border-style != 0 {
-	border: $card-border-style;
-}
-@if $card-border-radius != 0 {
-	border-radius: $card-border-radius;
-}
-@if $card-margin != 0 {
-	margin: $card-margin;
-}
-// Tasteful shadow
+	// Actual styling for the cards
+	@if $card-back-color != $back-color {
+		background: $card-back-color;
+	}
+	@if $card-fore-color != $fore-color {
+		color: $card-fore-color;
+	}
+	@if $card-border-style != 0 {
+		border: $card-border-style;
+	}
+	@if $card-border-radius != 0 {
+		border-radius: $card-border-radius;
+	}
+	@if $card-margin != 0 {
+		margin: $card-margin;
+	}
+	// Tasteful shadow
 	box-shadow: rgba(0, 0, 0, 0.25) 0 0 3px 0;
-// Card sections
-& > .#{$card-section-name} {
-	box-sizing: border-box;
-	margin: 0;
-	border-bottom: $card-section-border-style;
-	padding: $card-section-padding;
-	width: 100%;
-// Card media sections
-&.#{$card-section-media-name} {
-	height: $card-section-media-height;
-	padding: 0;
-	-o-object-fit: cover;
-	   object-fit: cover;
-}
-}
-// Card input and button sections
-& > button, .#{$button-class-name}, input {
-&.#{$card-section-name} {
-	border-radius: 0;	// Clean button and input gaps from border-radius
-}
-}
-// Card sections - last
-& > .#{$card-section-name}:last-child {
-	border-bottom: 0;	// Clean the extra border for last section
-}
+	// Card sections
+	& > .#{$card-section-name} {
+		box-sizing: border-box;
+		margin: 0;
+		border-bottom: $card-section-border-style;
+		padding: $card-section-padding;
+		width: 100%;
+		// Card media sections
+		&.#{$card-section-media-name} {
+			height: $card-section-media-height;
+			padding: 0;
+			-o-object-fit: cover;
+			   object-fit: cover;
+		}
+	}
+	// Card input and button sections
+	& > button, .#{$button-class-name}, input {
+		&.#{$card-section-name} {
+			border-radius: 0;	// Clean button and input gaps from border-radius
+		}
+	}
+	// Card sections - last
+	& > .#{$card-section-name}:last-child {
+		border-bottom: 0;	// Clean the extra border for last section
+	}
 }
 // Responsiveness (if the screen is larger than card, set max-width)
-@media only screen and (min-width: #{$card-normal-width}) {
+@media (min-width: #{$card-normal-width}) {
 	.#{$card-name} {
 		max-width: $card-normal-width;
 	}
@@ -78,18 +77,18 @@ $card-normal-width:				320px !default;									// Width for normal cards
 // - $card-alt-size-name : The name of the class used for the alternate size card.
 // - $card-alt-size-width : The width of the alternate size card.
 @mixin make-card-alt-size ($card-alt-size-name, $card-alt-size-width) {
-@if type-of($card-alt-size-width) == 'number' && unit($card-alt-size-width) == '%' {
-.#{$card-name}.#{$card-alt-size-name} {
-		max-width: $card-alt-size-width;
-}
-}
-@else {
-@media only screen and (min-width: #{$card-alt-size-width}) {
-	.#{$card-name}.#{$card-alt-size-name} {
-		max-width: $card-alt-size-width;
+	@if type-of($card-alt-size-width) == 'number' && unit($card-alt-size-width) == '%' {
+		.#{$card-name}.#{$card-alt-size-name} {
+				max-width: $card-alt-size-width;
+		}
 	}
-}
-}
+	@else {
+		@media (min-width: #{$card-alt-size-width}) {
+			.#{$card-name}.#{$card-alt-size-name} {
+				max-width: $card-alt-size-width;
+			}
+		}
+	}
 }
 // Mixin for alternate cards (card color variants).
 // Variables:
@@ -102,20 +101,20 @@ $card-normal-width:				320px !default;									// Width for normal cards
 //	of $card-border-radius.
 @mixin make-card-alt-color ($card-alt-name, $card-alt-back-color, $card-alt-fore-color, 
 	$card-alt-border-style : $card-border-style, $card-alt-border-radius : $card-border-radius) {
-.#{$card-name}.#{$card-alt-name} {
-@if $card-alt-back-color != $card-back-color {
-	background: $card-alt-back-color;
-}
-@if $card-alt-fore-color != $card-fore-color {
-	color: $card-alt-fore-color;
-}
-@if $card-alt-border-style != $card-border-style {
-	border: $card-alt-border-style;
-}
-@if $card-alt-border-radius != $card-border-radius {
-	border-radius: $card-alt-border-radius;
-}
-}
+	.#{$card-name}.#{$card-alt-name} {
+		@if $card-alt-back-color != $card-back-color {
+			background: $card-alt-back-color;
+		}
+		@if $card-alt-fore-color != $card-fore-color {
+			color: $card-alt-fore-color;
+		}
+		@if $card-alt-border-style != $card-border-style {
+			border: $card-alt-border-style;
+		}
+		@if $card-alt-border-radius != $card-border-radius {
+			border-radius: $card-alt-border-radius;
+		}
+	}
 }
 // Mixin for alternate card sections (card section color variants).
 // Variables:
@@ -126,35 +125,35 @@ $card-normal-width:				320px !default;									// Width for normal cards
 //	the value of $card-section-border-style.
 @mixin make-card-section-alt-color ($card-section-alt-name, $card-section-alt-back-color, 
 	$card-section-alt-fore-color, $card-section-alt-border-style : $card-section-border-style) {
-.#{$card-name} > .#{$card-section-name}.#{$card-section-alt-name} {
-@if $card-section-alt-back-color != $card-back-color {
-	background: $card-section-alt-back-color;
-}
-@if $card-section-alt-fore-color != $card-fore-color {
-	color: $card-section-alt-fore-color;
-}
-@if $card-section-alt-border-style != $card-section-border-style {
-	border: $card-section-alt-border-style;
-}
-}
+	.#{$card-name} > .#{$card-section-name}.#{$card-section-alt-name} {
+		@if $card-section-alt-back-color != $card-back-color {
+			background: $card-section-alt-back-color;
+		}
+		@if $card-section-alt-fore-color != $card-fore-color {
+			color: $card-section-alt-fore-color;
+		}
+		@if $card-section-alt-border-style != $card-section-border-style {
+			border: $card-section-alt-border-style;
+		}
+	}
 }
 // Mixin for alternate card sections (card section padding variants).
 // Variables:
 // - $card-section-alt-name : The name of the class used for the alternate card section.
 // - $card-section-alt-padding : The padding of the alternate card section.
 @mixin make-card-section-alt-style ($card-section-alt-name, $card-section-alt-padding) {
-.#{$card-name} > .#{$card-section-name}.#{$card-section-alt-name} {
-	padding: $card-section-alt-padding;
-}
+	.#{$card-name} > .#{$card-section-name}.#{$card-section-alt-name} {
+		padding: $card-section-alt-padding;
+	}
 }
 // Mixin for grid system's row that spaces cards apart.
 @mixin add-grid-row-cards-alignment {
-$grid-row-name:					'row' !default;								// Class name for the cards
-.#{$grid-row-name}.#{$card-name}s {
-// Old syntax
-	-webkit-box-pack: justify;
-// New syntax
-	-webkit-justify-content: space-around;
-  			justify-content: space-around;
-}
+	$grid-row-name:					'row' !default;							// Class name for the cards
+	.#{$grid-row-name}.#{$card-name}s {
+	// Old syntax
+		-webkit-box-pack: justify;
+	// New syntax
+		-webkit-justify-content: space-around;
+				justify-content: space-around;
+	}
 }

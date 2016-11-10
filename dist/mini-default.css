@@ -906,7 +906,7 @@ th:first-child, td:first-child {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px; }
 
-@media only screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .tabs {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;

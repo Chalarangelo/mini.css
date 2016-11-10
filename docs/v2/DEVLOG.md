@@ -392,4 +392,5 @@
 	- Removed `spinner` file.
 	- Cleanup for `navigation`.
 	- Cleanup for `utility`.
-	- Cleanup for `card`. Changed loading order and variables to better reflect the new module system.
+	- Cleanup for `card`. Changed loading order and variables to better reflect the new module system. Updated media queries.
+	- Cleanup for `tab`, updated media queries.

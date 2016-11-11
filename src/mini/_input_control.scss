@@ -197,6 +197,10 @@ $hide-file-inputs: true !default;
 	// New syntax
 	display: -webkit-flex;
 	display: 		 flex;
+	border: $button-group-border-style;
+	@if $button-border-radius != 0 {
+		border-radius: $button-border-radius;
+	}
 	button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
 		margin: 0;
 		// Old syntax
@@ -208,21 +212,18 @@ $hide-file-inputs: true !default;
 		-webkit-flex-basis: 0;
 				flex-basis: 0;
 		text-align: center;
-		border: $button-group-border-style;
+		border: 0;
 		@if $button-border-radius != 0 {
 			border-radius: 0;
-			&:first-child {
-				border-top-left-radius: $button-border-radius;
-				border-bottom-left-radius: $button-border-radius;
-			}
-			&:last-child {
-				border-top-right-radius: $button-border-radius;
-				border-bottom-right-radius: $button-border-radius;
+		}
+		@if $button-group-border-style !=0 {
+			+ button, + [type="button"], + [type="submit"], + [type="reset"], + a.#{$button-class-name}, + label.#{$button-class-name}, + .#{$button-class-name} {
+				border-left: $button-group-border-style;
 			}
 		}
 	}
 }
-// Responsiveness for 
+// Responsiveness for button groups
 @media (max-width: #{$button-group-mobile-breakpoint}) {
 	.#{$button-group-name} {
 		// Old syntax
@@ -230,23 +231,16 @@ $hide-file-inputs: true !default;
 		// New syntax
 		-webkit-flex-direction: column;
 				flex-direction: column;
-		@if $button-border-radius != 0 {
+		@if $button-group-border-style !=0 {
 			button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
-				&:first-child {
-					border-radius: 0;
-					border-top-left-radius: $button-border-radius;
-					border-top-right-radius: $button-border-radius;
-				}
-				&:last-child {
-					border-radius: 0;
-					border-bottom-left-radius: $button-border-radius;
-					border-bottom-right-radius: $button-border-radius;
+				+ button, + [type="button"], + [type="submit"], + [type="reset"], + a.#{$button-class-name}, + label.#{$button-class-name}, + .#{$button-class-name} {
+					border: 0;
+					border-top: $button-group-border-style;
 				}
 			}
 		}
 	}
 }
-
 // Mixin for alternate buttons (button color variants).
 // Variables:
 // - $button-alt-name : The name of the class used for the alternate button.
@@ -271,7 +265,7 @@ $hide-file-inputs: true !default;
 		}
 	}
 }
-// Mixin for alternate button styles (button color variants).
+// Mixin for alternate button styles (button style variants).
 // Variables:
 // - $button-alt-name : The name of the class used for the alternate button style.
 // - $button-alt-border-style : The border style of the alternate button style.

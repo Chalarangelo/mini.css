@@ -1,5 +1,98 @@
 // Definitions for utilities and helper classes.
-// Note: most mixins need to be called separately to work.
+// Hidden elements class. ATTENTION: Uses !important.
+.#{$hidden-name}{
+	display: none !important;
+}
+// Visually hidden elements class. ATTENTIONS: Uses !important.
+.#{$visually-hidden-name} {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden !important;
+}
+// Breadcrumbs
+ul.#{$breadcrumbs-name} {
+	// Old syntax
+	display: -webkit-box;
+	// New syntax
+	display: -webkit-flex;
+	display: 		 flex;
+	list-style: none;
+	padding: 0;				// Remove unnecessary left and right empty space
+	@if $breadcrumbs-border-style !=0 {
+		border: $breadcrumbs-border-style;
+	}
+	@if $breadcrumbs-border-radius != 0 {
+		border-radius: $breadcrumbs-border-radius;
+	}
+	@if $breadcrumbs-box-shadow !=0 {
+		box-shadow: $breadcrumbs-box-shadow;
+	}
+	li {
+		// Old syntax
+		-webkit-box-flex: 1;
+		max-width: 100%;
+		// New syntax
+		-webkit-flex-grow: 1;
+				flex-grow: 1;
+		-webkit-flex-basis: 0;
+				flex-basis: 0;
+		position: relative;
+		text-align: center;
+		background: $breadcrumbs-back-color;
+		height: $breadcrumbs-height;
+		line-height: $breadcrumbs-height;
+		margin-right: ($breadcrumbs-height/2) + $breadcrumbs-separator-width;
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			width: 0;
+			height: 0;
+			border: 0 solid $breadcrumbs-back-color;
+			border-width: ($breadcrumbs-height/2) ($breadcrumbs-height/4);
+		}
+		&:before {
+			left: -($breadcrumbs-height/2);
+			border-left-color: transparent;
+		}
+		&:after {
+			left: 100%;
+			border-color: transparent;
+			border-left-color: $breadcrumbs-back-color;
+		}
+		&:first-child {
+			&:before {
+				border: 0;
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+			&:after {
+				border: 0;
+			}
+		}
+	}	
+}
+// Clearfix
+.#{$clearfix-name} {
+	&:before, &:after {
+		content: ' ';
+		display: table;
+		clear: both;
+	}
+}
+// Center block
+.#{$center-block-name} {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 // Generic border mixin. ATTENTION: Uses !important.
 // Variables:
 // - $border-generic-name : The name of the class used for the generic border.
@@ -17,32 +110,8 @@
 		border-radius: $border-radial-radius !important;
 	}	
 }
-// Hidden mixin. ATTENTION: Uses !important.
-// Variables:
-// - $hidden-name : The name of the class used for the hidden elements.
-@mixin make-hidden ($hidden-name) {
-	.#{$hidden-name}{
-		display: none !important;
-	}
-}
-// Visually hidden mixin. ATTENTION: Uses !important.
-// Makes element invisible, but still accessible to screen readers.
-// Variables:
-// - $visually-hidden-name : The name of the class used for the visually hidden elements.
-@mixin make-visually-hidden ($visually-hidden-name) {
-	.#{$visually-hidden-name} {
-		position: absolute !important;
-		width: 1px !important;
-		height: 1px !important;
-		margin: -1px !important;
-		border: 0 !important;
-		padding: 0 !important;
-		clip-path: inset(100%);
-		clip: rect(0 0 0 0);
-		overflow: hidden !important;
-	}
-}
 // Floats mixin. ATTENTION: Uses !important.
+// NOTE: This mixin might be obsolete and not play well with others.
 // Variables:
 // - $float-prefix : Prefix for the class names of floats.
 @mixin make-floats ($float-prefix) {
@@ -51,52 +120,5 @@
 	}
 	.#{$float-prefix}-right {
 		float: right !important;
-	}
-}
-// Clearfix mixin.
-// Variables:
-// - $clearfix-name : The name of the class used for the clearfix.
-@mixin make-clearfix ($clearfix-name) {
-	.#{$clearfix-name} {
-		&:before, &:after {
-			content: ' ';
-			display: table;
-			clear: both;
-		}
-	}
-}
-// Center block mixin.
-// Variables:
-// - $center-block-name : The name of the class used for the center block.
-@mixin make-center-block ($center-block-name) {
-	.#{$center-block-name} {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-// Breadcrumb mixin.
-// Variables:
-// - $breadcrumbs-name : The name of the class used for the breadcrumbs.
-// - $use-right-angle-symbol : (Optional) Should the right angle symbol be used as a separator (`true`/`false`).
-//	Value is `true` by default. If `false` a forward slash will be used.
-@mixin make-breadcrumbs ($breadcrumbs-name, $use-right-angle-symbol : true) {
-	ul.#{$breadcrumbs-name} {
-		list-style: none;
-		& > li{
-			display: inline-block;
-			// Some padding is needed for the breacrumbs to appear properly. 2px should be enough.
-			padding-right: 0.125em;	
-			& + li:before{
-				@if $use-right-angle-symbol {
-					content: '\27e9';
-				}
-				@else {
-					content: '\002f';
-				}
-				// Some padding is needed for the breacrumbs to appear properly. 2px should be enough.
-				padding: 0.125em;
-			}
-		}
 	}
 }

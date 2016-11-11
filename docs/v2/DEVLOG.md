@@ -408,3 +408,9 @@
 - Added modular `box-shadow` for `tabs` container. This might have some minor problems with `border-radius`es.
 - Added flexbox-based `button-group` system. Added responsiveness to it and optimized accordingly.
 - Deployed live demo with new features.
+
+## 20161111
+
+- Rebuilt `breadcrumbs` from scratch. Uses flexbox.
+- Changed `clearfix`, `center-block`, `hidden` and `visually-hidden` from mixins to normal components.
+- Changed the appearance of `button-group`, it will now use `border` and `border-radius` more creatively to get rid of unnecessary and excessive styling.

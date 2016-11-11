@@ -657,7 +657,9 @@ input[type="file"] {
 .button-group {
   display: -webkit-box;
   display: -webkit-flex;
-  display: flex; }
+  display: flex;
+  border: 1px solid #bdbdbd;
+  border-radius: 2px; }
   .button-group button, .button-group [type="button"], .button-group [type="submit"], .button-group [type="reset"], .button-group a.button, .button-group label.button, .button-group .button {
     margin: 0;
     -webkit-box-flex: 1;
@@ -667,28 +669,19 @@ input[type="file"] {
     -webkit-flex-basis: 0;
     flex-basis: 0;
     text-align: center;
-    border: 1px solid #bdbdbd;
+    border: 0;
     border-radius: 0; }
-    .button-group button:first-child, .button-group [type="button"]:first-child, .button-group [type="submit"]:first-child, .button-group [type="reset"]:first-child, .button-group a.button:first-child, .button-group label.button:first-child, .button-group .button:first-child {
-      border-top-left-radius: 2px;
-      border-bottom-left-radius: 2px; }
-    .button-group button:last-child, .button-group [type="button"]:last-child, .button-group [type="submit"]:last-child, .button-group [type="reset"]:last-child, .button-group a.button:last-child, .button-group label.button:last-child, .button-group .button:last-child {
-      border-top-right-radius: 2px;
-      border-bottom-right-radius: 2px; }
+    .button-group button + button, .button-group button + [type="button"], .button-group button + [type="submit"], .button-group button + [type="reset"], .button-group button + a.button, .button-group button + label.button, .button-group button + .button, .button-group [type="button"] + button, .button-group [type="button"] + [type="button"], .button-group [type="button"] + [type="submit"], .button-group [type="button"] + [type="reset"], .button-group [type="button"] + a.button, .button-group [type="button"] + label.button, .button-group [type="button"] + .button, .button-group [type="submit"] + button, .button-group [type="submit"] + [type="button"], .button-group [type="submit"] + [type="submit"], .button-group [type="submit"] + [type="reset"], .button-group [type="submit"] + a.button, .button-group [type="submit"] + label.button, .button-group [type="submit"] + .button, .button-group [type="reset"] + button, .button-group [type="reset"] + [type="button"], .button-group [type="reset"] + [type="submit"], .button-group [type="reset"] + [type="reset"], .button-group [type="reset"] + a.button, .button-group [type="reset"] + label.button, .button-group [type="reset"] + .button, .button-group a.button + button, .button-group a.button + [type="button"], .button-group a.button + [type="submit"], .button-group a.button + [type="reset"], .button-group a.button + a.button, .button-group a.button + label.button, .button-group a.button + .button, .button-group label.button + button, .button-group label.button + [type="button"], .button-group label.button + [type="submit"], .button-group label.button + [type="reset"], .button-group label.button + a.button, .button-group label.button + label.button, .button-group label.button + .button, .button-group .button + button, .button-group .button + [type="button"], .button-group .button + [type="submit"], .button-group .button + [type="reset"], .button-group .button + a.button, .button-group .button + label.button, .button-group .button + .button {
+      border-left: 1px solid #bdbdbd; }
 
 @media (max-width: 768px) {
   .button-group {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
     flex-direction: column; }
-    .button-group button:first-child, .button-group [type="button"]:first-child, .button-group [type="submit"]:first-child, .button-group [type="reset"]:first-child, .button-group a.button:first-child, .button-group label.button:first-child, .button-group .button:first-child {
-      border-radius: 0;
-      border-top-left-radius: 2px;
-      border-top-right-radius: 2px; }
-    .button-group button:last-child, .button-group [type="button"]:last-child, .button-group [type="submit"]:last-child, .button-group [type="reset"]:last-child, .button-group a.button:last-child, .button-group label.button:last-child, .button-group .button:last-child {
-      border-radius: 0;
-      border-bottom-left-radius: 2px;
-      border-bottom-right-radius: 2px; } }
+    .button-group button + button, .button-group button + [type="button"], .button-group button + [type="submit"], .button-group button + [type="reset"], .button-group button + a.button, .button-group button + label.button, .button-group button + .button, .button-group [type="button"] + button, .button-group [type="button"] + [type="button"], .button-group [type="button"] + [type="submit"], .button-group [type="button"] + [type="reset"], .button-group [type="button"] + a.button, .button-group [type="button"] + label.button, .button-group [type="button"] + .button, .button-group [type="submit"] + button, .button-group [type="submit"] + [type="button"], .button-group [type="submit"] + [type="submit"], .button-group [type="submit"] + [type="reset"], .button-group [type="submit"] + a.button, .button-group [type="submit"] + label.button, .button-group [type="submit"] + .button, .button-group [type="reset"] + button, .button-group [type="reset"] + [type="button"], .button-group [type="reset"] + [type="submit"], .button-group [type="reset"] + [type="reset"], .button-group [type="reset"] + a.button, .button-group [type="reset"] + label.button, .button-group [type="reset"] + .button, .button-group a.button + button, .button-group a.button + [type="button"], .button-group a.button + [type="submit"], .button-group a.button + [type="reset"], .button-group a.button + a.button, .button-group a.button + label.button, .button-group a.button + .button, .button-group label.button + button, .button-group label.button + [type="button"], .button-group label.button + [type="submit"], .button-group label.button + [type="reset"], .button-group label.button + a.button, .button-group label.button + label.button, .button-group label.button + .button, .button-group .button + button, .button-group .button + [type="button"], .button-group .button + [type="submit"], .button-group .button + [type="reset"], .button-group .button + a.button, .button-group .button + label.button, .button-group .button + .button {
+      border: 0;
+      border-top: 1px solid #bdbdbd; } }
 [type="checkbox"], [type="radio"] {
   height: 1px;
   width: 1px;
@@ -1045,6 +1038,73 @@ progress {
   height: 20px;
   animation: spinner-donut-anim 1.2s linear infinite; }
 
+.hidden {
+  display: none !important; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden !important; }
+
+ul.breadcrumbs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15); }
+  ul.breadcrumbs li {
+    -webkit-box-flex: 1;
+    max-width: 100%;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 0;
+    flex-basis: 0;
+    position: relative;
+    text-align: center;
+    background: #e0e0e0;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 18px; }
+    ul.breadcrumbs li:before, ul.breadcrumbs li:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 0;
+      border: 0 solid #e0e0e0;
+      border-width: 16px 8px; }
+    ul.breadcrumbs li:before {
+      left: -16px;
+      border-left-color: transparent; }
+    ul.breadcrumbs li:after {
+      left: 100%;
+      border-color: transparent;
+      border-left-color: #e0e0e0; }
+    ul.breadcrumbs li:first-child:before {
+      border: 0; }
+    ul.breadcrumbs li:last-child {
+      margin-right: 0; }
+      ul.breadcrumbs li:last-child:after {
+        border: 0; }
+
+.clearfix:before, .clearfix:after {
+  content: ' ';
+  display: table;
+  clear: both; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 button.primary, [type="button"].primary, [type="submit"].primary,
 [type="reset"].primary, .button.primary {
   background: #1565c0;
@@ -1186,41 +1246,8 @@ progress.nano {
 .circular {
   border-radius: 50% !important; }
 
-.hidden {
-  display: none !important; }
-
-.visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  border: 0 !important;
-  padding: 0 !important;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden !important; }
-
 .float-left {
   float: left !important; }
 
 .float-right {
   float: right !important; }
-
-.clearfix:before, .clearfix:after {
-  content: ' ';
-  display: table;
-  clear: both; }
-
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-ul.breadcrumbs {
-  list-style: none; }
-  ul.breadcrumbs > li {
-    display: inline-block;
-    padding-right: 0.125em; }
-    ul.breadcrumbs > li + li:before {
-      content: '\27e9';
-      padding: 0.125em; }

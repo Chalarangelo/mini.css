@@ -400,17 +400,25 @@ $spinner-donut-variant2-back-color:												// Background color for donut spi
 $spinner-donut-variant2-fore-color:												// Foreground color for donut spinner variant 2
 								#2e7d32;	
 //	Variables for utilities and helper classes
+$hidden-name:					'hidden';										// Class name for hidden elements
+$visually-hidden-name:			'visually-hidden';								// Class name for visually hidden elements
+$breadcrumbs-name:				'breadcrumbs';									// Class name for breadcrumbs
+$breadcrumbs-back-color:		#e0e0e0;										// Background color for breadcrumbs
+$breadcrumbs-height:			32px;											// Height of the breadcrumbs
+$breadcrumbs-separator-width:	2px;											// Width of the breadcrumbs' separator
+$breadcrumbs-border-style:		0;												// Border style for breadcrumbs
+$breadcrumbs-border-radius:		4px;											// Border radius for breadcrumbs
+$breadcrumbs-box-shadow:														// Box shadow for breadcrumbs
+	0 1px 3px rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.15);
 $border-generic-name:			'bordered';										// Class name for generic border style
 $border-radial-style1-name:		'rounded';										// Class name for radial border style 1
 $border-radial-style1-radius:	2px;											// Border radius for radial border style 1
 $border-radial-style2-name:		'circular';										// Class name for radial border style 2
 $border-radial-style2-radius:	50%;											// Border radius for radial border style 2
-$hidden-name:					'hidden';										// Class name for hidden elements
-$visually-hidden-name:			'visually-hidden';								// Class name for visually hidden elements
+
 $float-prefix:					'float';										// Prefix for float classes
 $clearfix-name:					'clearfix';										// Class name for clearfix
 $center-block-name:				'center-block';									// Class name for center block
-$breadcrumbs-name:				'breadcrumbs';									// Class name for breadcrumbs
 //	Notes:
 // [1] - The tabs module is somewhat dependent on the grid system module.
 //	Enable mini.css
@@ -463,9 +471,4 @@ $breadcrumbs-name:				'breadcrumbs';									// Class name for breadcrumbs
 @include make-border-generic ($border-generic-name);
 @include make-border-radial-style ($border-radial-style1-name, $border-radial-style1-radius);
 @include make-border-radial-style ($border-radial-style2-name, $border-radial-style2-radius);
-@include make-hidden ($hidden-name);
-@include make-visually-hidden ($visually-hidden-name);
 @include make-floats ($float-prefix);
-@include make-clearfix ($clearfix-name);
-@include make-center-block ($center-block-name);
-@include make-breadcrumbs ($breadcrumbs-name);

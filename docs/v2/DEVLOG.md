@@ -419,3 +419,6 @@
 - Added extra variables and styles for `grid` reordeing for `first`, `last` and `normal` (reset).
 - Deployed demo page.
 - Squashed a couple of bugs in header caused by `button` elements and button-likes using `box-shadow` and/or `border`/`border-style`.
+- Renamed `index.html` from `v2` to `demo.html`.
+- Created `template.html` as an empty template for pages for the framework's demo pages.
+- Created new `index.html` as introduction page. Bare minimum content added.

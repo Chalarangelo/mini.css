@@ -118,6 +118,9 @@ $grid-container-side-padding:	10px;											// Padding for the grid container 
 $grid-row-name:					'row';											// Class name for the grid's rows
 $grid-column-prefix:			'col';											// Class name prefix for the grid's columns
 $grid-column-offset-suffix:		'offset';										// Class name suffix for the grid's offsets
+$grid-order-normal-suffix:		'normal';										// Class name suffix for grid columns with normal priority
+$grid-order-first-suffix:		'first';										// Class name suffix for grid columns with highest priority
+$grid-order-last-suffix:		'last';											// Class name suffix for grid columns with lowest priorty
 $grid-column-count:				12;												// Number of columns in the grid (integer value only)
 $grid-column-padding:			0 4px;											// Padding for the columns of the grid
 //$grid-extra-small-prefix:		'xs';											// Extra small screen class prefix for grid

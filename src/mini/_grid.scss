@@ -29,6 +29,9 @@ $grid-column-prefix:			'col' !default;									// Class name prefix for the grid
 $grid-column-offset-suffix:		'offset' !default;								// Class name suffix for the grid's offsets
 $grid-column-count:				12 !default;									// Number of columns in the grid (integer value only)
 $grid-column-padding:			0 4px !default;									// Padding for the columns of the grid
+$grid-order-normal-suffix:		'normal' !default;								// Class name suffix for grid columns with normal priority
+$grid-order-first-suffix:		'first' !default;								// Class name suffix for grid columns with highest priority
+$grid-order-last-suffix:		'last' !default;								// Class name suffix for grid columns with lowest priorty
 $grid-extra-small-prefix:		'xs' !default;									// Extra small screen class prefix for grid
 // Legacy grid system definitions.
 @if $use-four-step-grid {
@@ -75,7 +78,19 @@ $grid-extra-small-prefix:		'xs' !default;									// Extra small screen class pr
 				margin-left: #{($i * 100% / $grid-column-count)};
 			}
 		}
-	}	
+	}
+	.#{$grid-column-prefix}-#{$grid-extra-small-prefix}-#{$grid-order-normal-suffix}	{
+		-webkit-order: initial;
+				order: initial;
+	}
+	.#{$grid-column-prefix}-#{$grid-extra-small-prefix}-#{$grid-order-first-suffix}	{
+		-webkit-order: -999;
+				order: -999;
+	}
+	.#{$grid-column-prefix}-#{$grid-extra-small-prefix}-#{$grid-order-lst-suffix}	{
+		-webkit-order: 999;
+				order: 999;
+	}
 }
 $grid-small-breakpoint:			768px !default;									// Small screen breakpoint for grid
 $grid-small-prefix:				'sm' !default;									// Small screen class prefix for grid
@@ -127,6 +142,18 @@ $grid-small-prefix:				'sm' !default;									// Small screen class prefix for g
 				}
 			}
 		}
+		.#{$grid-column-prefix}-#{$grid-small-prefix}-#{$grid-order-normal-suffix} {
+			-webkit-order: initial;
+					order: initial;
+		}
+		.#{$grid-column-prefix}-#{$grid-small-prefix}-#{$grid-order-first-suffix}	{
+			-webkit-order: -999;
+					order: -999;
+		}
+		.#{$grid-column-prefix}-#{$grid-small-prefix}-#{$grid-order-last-suffix} {
+			-webkit-order: 999;
+					order: 999;
+		}
 	}
 }
 // Non-legacy grid system definitions.
@@ -174,6 +201,18 @@ $grid-small-prefix:				'sm' !default;									// Small screen class prefix for g
 				margin-left: #{($i * 100% / $grid-column-count)};
 			}
 		}
+	}
+	.#{$grid-column-prefix}-#{$grid-small-prefix}-#{$grid-order-normal-suffix} {
+		-webkit-order: initial;
+				order: initial;
+	}
+	.#{$grid-column-prefix}-#{$grid-small-prefix}-#{$grid-order-first-suffix}	{
+		-webkit-order: -999;
+				order: -999;
+	}
+	.#{$grid-column-prefix}-#{$grid-small-prefix}-#{$grid-order-last-suffix} {
+		-webkit-order: 999;
+				order: 999;
 	}
 }
 // The rest is mixed definitions.
@@ -225,6 +264,18 @@ $grid-medium-prefix:			'md' !default;									// Medium screen class prefix for 
 			}
 		}
 	}
+	.#{$grid-column-prefix}-#{$grid-medium-prefix}-#{$grid-order-normal-suffix} {
+		-webkit-order: initial;
+				order: initial;
+	}
+	.#{$grid-column-prefix}-#{$grid-medium-prefix}-#{$grid-order-first-suffix}	{
+		-webkit-order: -999;
+				order: -999;
+	}
+	.#{$grid-column-prefix}-#{$grid-medium-prefix}-#{$grid-order-last-suffix} {
+		-webkit-order: 999;
+				order: 999;
+	}
 }
 $grid-large-breakpoint:			1200px !default;								// Large screen breakpoint for grid
 $grid-large-prefix:				'lg' !default;									// Large screen class prefix for grid
@@ -273,5 +324,17 @@ $grid-large-prefix:				'lg' !default;									// Large screen class prefix for g
 				margin-left: #{($i * 100% / $grid-column-count)};
 			}
 		}
+	}
+	.#{$grid-column-prefix}-#{$grid-large-prefix}-#{$grid-order-normal-suffix} {
+		-webkit-order: initial;
+				order: initial;
+	}
+	.#{$grid-column-prefix}-#{$grid-large-prefix}-#{$grid-order-first-suffix}	{
+		-webkit-order: -999;
+				order: -999;
+	}
+	.#{$grid-column-prefix}-#{$grid-large-prefix}-#{$grid-order-last-suffix} {
+		-webkit-order: 999;
+				order: 999;
 	}
 }

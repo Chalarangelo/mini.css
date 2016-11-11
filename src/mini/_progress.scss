@@ -142,7 +142,7 @@ progress {
 	height: $spinner-donut-size;
 	animation: spinner-donut-anim 1.2s linear infinite;
 }
-// Mixin for alternate donut spinner styles (spinner donut color variants).
+// Mixin for alternate donut spinner colors (spinner donut color variants).
 // Variables:
 // - $spinner-donut-alt-name : The name of the class used for the alternate donut spinner.
 // - $spinner-donut-alt-back-color : The background color of the alternate donut spinner.
@@ -151,5 +151,23 @@ progress {
 	.#{$spinner-donut-name}.#{$spinner-donut-alt-name} {
 		border: $spinner-donut-border-thickness solid $spinner-donut-alt-back-color;
 		border-left: $spinner-donut-border-thickness solid $spinner-donut-alt-fore-color;
+	}
+}
+// Mixin for alternate donut spinner styles (spinner donut styles variants).
+// Variables:
+// - $spinner-donut-alt-name : The name of the class used for the alternate donut spinner style.
+// - $spinner-donut-alt-size : The size of the alternate donut spinner style.
+// - $spinner-donut-alt-border-thickness : (Optional) The border thickness of the alternate donut spinner style.
+//	Defaults to the value of $spinner-donut-alt-border-thickness.
+@mixin make-spinner-donut-alt-style ($spinner-donut-alt-name, $spinner-donut-alt-size, 
+	$spinner-donut-alt-border-thickness : $spinner-donut-border-thickness) {
+	.#{$spinner-donut-name}.#{$spinner-donut-alt-name} {
+		@if $spinner-donut-alt-border-thickness != $spinner-donut-border-thickness {
+			border-width: $spinner-donut-alt-border-thickness;
+		}
+		@if $spinner-donut-alt-size != $spinner-donut-size {
+			width: $spinner-donut-alt-size;
+			height: $spinner-donut-alt-size;
+		}
 	}
 }

@@ -1237,6 +1237,11 @@ progress.nano {
   border: 4px solid #e8f5e9;
   border-left: 4px solid #2e7d32; }
 
+.spinner-donut.large {
+  border-width: 6px;
+  width: 32px;
+  height: 32px; }
+
 .bordered {
   border: 1px solid rgba(0, 0, 0, 0.25) !important; }
 

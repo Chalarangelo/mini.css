@@ -414,3 +414,4 @@
 - Rebuilt `breadcrumbs` from scratch. Uses flexbox.
 - Changed `clearfix`, `center-block`, `hidden` and `visually-hidden` from mixins to normal components.
 - Changed the appearance of `button-group`, it will now use `border` and `border-radius` more creatively to get rid of unnecessary and excessive styling.
+- Added mixin `make-box-shadow-generic` in `utility`, used it to create a class for `box-shadow:none;` just in case.

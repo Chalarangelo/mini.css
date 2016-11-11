@@ -1246,6 +1246,9 @@ progress.nano {
 .circular {
   border-radius: 50% !important; }
 
+.no-shadow {
+  box-shadow: none !important; }
+
 .float-left {
   float: left !important; }
 

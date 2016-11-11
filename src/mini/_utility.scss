@@ -110,6 +110,15 @@ ul.#{$breadcrumbs-name} {
 		border-radius: $border-radial-radius !important;
 	}	
 }
+// Generic box shadow mixin. ATTENTION: Uses !important.
+// Variables:
+// - $box-shadow-name : The name of the class used for the generic box shadow.
+// - $box-shadow-value : The box shadow value of the generic box shadow.
+@mixin make-box-shadow-generic ($box-shadow-name, $box-shadow-value) {
+	.#{$box-shadow-name} {
+		box-shadow: $box-shadow-value !important;
+	}
+}
 // Floats mixin. ATTENTION: Uses !important.
 // NOTE: This mixin might be obsolete and not play well with others.
 // Variables:

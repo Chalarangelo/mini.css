@@ -70,19 +70,19 @@ $include-dfn-fix: true !default;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: $header-line-height;
-	margin: $header-margin;
-	font-weight: $header-font-weight;
+	line-height: $heading-line-height;
+	margin: $heading-margin;
+	font-weight: $heading-font-weight;
 	small {
-		color: $header-smalltext-fore-color;
-		$make-header-smalltext-block: false !default;
-		@if $make-header-smalltext-block {
+		color: $heading-smalltext-fore-color;
+		$make-heading-smalltext-block: false !default;
+		@if $make-heading-smalltext-block {
 			display: block;
-			@if $header-smalltext-b-top-margin != 0 {
-				margin-top: $header-smalltext-b-top-margin;
+			@if $heading-smalltext-b-top-margin != 0 {
+				margin-top: $heading-smalltext-b-top-margin;
 			}
-			@if $header-smalltext-b-font-size != $small-font-size {
-				font-size: $header-smalltext-b-font-size;
+			@if $heading-smalltext-b-font-size != $small-font-size {
+				font-size: $heading-smalltext-b-font-size;
 			}
 		}
 	}

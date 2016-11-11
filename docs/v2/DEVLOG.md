@@ -425,3 +425,7 @@
 - Added some custom styling for the cards in `index`.
 - Changed the `border-radius` of `card`s to `0`.
 - Deployed new live demo page.
+- Fixed a mixup bug with `header` and `heading`. All the `hX` elements now use `heading` instead of `header` to deal with that problem.
+- Slightly tweaked the `margin`s and stuff of `p` and `hX` elements.
+- Added file size comparison between toolkits.
+- Updated `table` `border-radius`es.

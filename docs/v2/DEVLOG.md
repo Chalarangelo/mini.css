@@ -422,3 +422,5 @@
 - Renamed `index.html` from `v2` to `demo.html`.
 - Created `template.html` as an empty template for pages for the framework's demo pages.
 - Created new `index.html` as introduction page. Bare minimum content added.
+- Added some custom styling for the cards in `index`.
+- Changed the `border-radius` of `card`s to `0`.

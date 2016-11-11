@@ -815,7 +815,7 @@ th:first-child, td:first-child {
     display: block;
     border: 1px solid #bdbdbd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
-    margin-bottom: 4px; }
+    margin-bottom: 10px; }
 
   td {
     display: block;

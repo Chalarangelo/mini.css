@@ -430,3 +430,4 @@
 - Added file size comparison between toolkits.
 - Updated `table` `border-radius`es.
 - Deployed live demo with fixes etc.
+- Added a module list and browser support to the `index` page.

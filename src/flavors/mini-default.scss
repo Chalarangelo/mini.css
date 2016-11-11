@@ -276,7 +276,7 @@ $table-row-padding:				6px;											// Padding for <tr> - both views
 $table-column-padding:			10px;											// Padding for <td> and <th> - desktop view
 $table-head-back-color:			#eceff1;										// Background color for <th>
 $table-mobile-breakpoint:		768px;											// Breakpoint for <table> mobile view
-$table-mobile-card-spacing:		4px;											// Space between <tr> cards - mobile view
+$table-mobile-card-spacing:		10px;											// Space between <tr> cards - mobile view
 $table-mobile-card-label:		'data-label';									// Attribute used to replace column headers
 																				// in mobile view [1]
 $table-mobile-label-font-weight:$bold-font-weight;								// Font weight for mobile headers

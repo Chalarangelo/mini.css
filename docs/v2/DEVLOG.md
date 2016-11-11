@@ -417,3 +417,5 @@
 - Added mixin `make-box-shadow-generic` in `utility`, used it to create a class for `box-shadow:none;` just in case.
 - Added mixin in `progress` `make-spinner-donut-alt-style` for `spinner-donut` and created `large` variant with it.
 - Added extra variables and styles for `grid` reordeing for `first`, `last` and `normal` (reset).
+- Deployed demo page.
+- Squashed a couple of bugs in header caused by `button` elements and button-likes using `box-shadow` and/or `border`/`border-style`.

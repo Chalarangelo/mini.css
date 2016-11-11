@@ -45,6 +45,12 @@ header {
 		&:hover, &:active, &:focus {
 			background: $header-link-hover-color;
 		}
+		@if $button-box-shadow !=0 {	// Override for buttons when shadow is enabled.
+			box-shadow: none;
+		}
+		@if $button-border-style != 0 {	// Override for buttons when border-style is enabled.
+			border: 0;
+		}
 	}
 	@if $apply-link-underline {		// Override for links if underline is enabled.
 		.#{$header-logo-name}, a.#{$button-class-name} {

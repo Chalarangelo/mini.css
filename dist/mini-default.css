@@ -541,7 +541,8 @@ header {
     background: #263238;
     color: #fafafa;
     vertical-align: top;
-    margin: 2px 0 0; }
+    margin: 2px 0 0;
+    box-shadow: none; }
     header button:hover, header button:active, header button:focus, header [type="button"]:hover, header [type="button"]:active, header [type="button"]:focus, header a.button:hover, header a.button:active, header a.button:focus, header label.button:hover, header label.button:active, header label.button:focus, header .button:hover, header .button:active, header .button:focus {
       background: #37474f; }
   header .logo, header a.button {

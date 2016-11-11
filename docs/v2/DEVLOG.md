@@ -424,3 +424,4 @@
 - Created new `index.html` as introduction page. Bare minimum content added.
 - Added some custom styling for the cards in `index`.
 - Changed the `border-radius` of `card`s to `0`.
+- Deployed new live demo page.

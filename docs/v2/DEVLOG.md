@@ -441,3 +441,6 @@
 - Removed the old fix from the `index` page, updated as needed.
 - Removed a typo in the index page that read `Reponsive`.
 - Figured out a good enough solution for the `fluid` `card` problem.
+- Pushed the urgent `fluid` `card` fix to all deployed pages.
+- Removed the `playground` page as its purpose was fulfilled.
+- Closed issue #31 for good.

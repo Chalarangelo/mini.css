@@ -1180,13 +1180,16 @@ button.large, [type="button"].large, [type="submit"].large,
   margin: 7px; }
 
 .card.large {
-  max-width: 480px; }
+  max-width: 480px;
+  width: auto; }
 
 .card.small {
-  max-width: 160px; }
+  max-width: 160px;
+  width: auto; }
 
 .card.fluid {
-  max-width: 100%; }
+  max-width: 100%;
+  width: auto; }
 
 .card.primary {
   background: #e1f5fe;

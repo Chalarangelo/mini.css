@@ -431,3 +431,13 @@
 - Updated `table` `border-radius`es.
 - Deployed live demo with fixes etc.
 - Added a module list and browser support to the `index` page.
+
+
+## 20161113
+
+- Added `docs/v2/playground.html` to more extensively test some of the components, especially `card`s and more specifically `fluid` ones.
+- Added the fix for `fluid` `card`s using `width: auto;` which was supposed to solve some issues (see #31).
+- Figured out a new design paradigm for `fluid` `card`s inside `col-` elements: if two separate `div` containers are used, no `card` "spilling" is observed. This could be either a temporary or a permanent solution depending on the complexity of the real issue at hand. However **Fermion** can initially release like this, as the issue is considered controlled and stable for now.
+- Removed the old fix from the `index` page, updated as needed.
+- Removed a typo in the index page that read `Reponsive`.
+- Figured out a good enough solution for the `fluid` `card` problem.

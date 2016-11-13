@@ -31,23 +31,13 @@
       .box-centered { text-align: center; }
       .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
       .box-colored.red { background: #b71c1c; }
-      .card.fluid.box-centered {
-          -webkit-box-pack: start;
-          -webkit-box-align: start; 
-          -webkit-justify-content: flex-start;
-                  justify-content: flex-start;
-          -webkit-align-self: auto;
-                  align-self: auto;
-      }
-      @media (max-width: 800px) {
-        .row.cards {
-          -webkit-box-orient: vertical;
-          -webkit-flex-direction: column;
-                  flex-direction: column;
-        }
-        .card.fluid.box-centered {
-          width: auto;
-        }
+      .box-centered > .card.fluid {
+        -webkit-box-pack: start;
+        -webkit-box-align: start; 
+        -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+        -webkit-align-self: auto;
+                align-self: auto;
       }
     </style>
   </head>
@@ -76,28 +66,34 @@
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row cards" style="padding-top: 20px;">
-        <div class="col-sm-12 col-md card fluid box-centered">
-          <div class="section">
-            <h2>Minimal<small>Size matters!</small></h2><br>
-            <i class="fa fa-compress fa-4x" aria-hidden="true"></i>
-            <br><br>
-            <p><strong>mini.css</strong> aims to provide as much functionality as possible in about 5KB gzipped. This very small footprint means that your websites and web applications will load faster, while still looking great utilising the modern components we provide!</p><br>
+        <div class="col-sm-12 col-md box-centered row">
+          <div class="card fluid">  
+            <div class="section">
+              <h2>Minimal<small>Size matters!</small></h2><br>
+              <i class="fa fa-compress fa-4x" aria-hidden="true"></i>
+              <br><br>
+              <p><strong>mini.css</strong> aims to provide as much functionality as possible in about 5KB gzipped. This very small footprint means that your websites and web applications will load faster, while still looking great utilising the modern components we provide!</p><br>
+            </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md card fluid box-centered">
-          <div class="section">
-            <h2>Reponsive<small>Think mobile!</small></h2><br>
-            <i class="fa fa-mobile fa-4x" aria-hidden="true"></i>
-            <br><br>
-            <p><strong>mini.css</strong> is crafted with both desktops and mobile devices in mind. All of its components are well-tested on different devices and will respond to any changes in the viewport, allowing for an experience tailored to each user's device!</p><br>
+        <div class="col-sm-12 col-md box-centered row">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Reponsive<small>Think mobile!</small></h2><br>
+              <i class="fa fa-mobile fa-4x" aria-hidden="true"></i>
+              <br><br>
+              <p><strong>mini.css</strong> is crafted with both desktops and mobile devices in mind. All of its components are well-tested on different devices and will respond to any changes in the viewport, allowing for an experience tailored to each user's device!</p><br>
+            </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md card fluid box-centered">
-          <div class="section">
-            <h2>Style-agnostic<small>Infinitely customizable!</small></h2><br>
-            <i class="fa fa-paint-brush fa-4x" aria-hidden="true"></i>
-            <br><br>
-            <p><strong>mini.css</strong> provides you with a customizable flavor system, allowing you to be a designer without all the hard work. This way you can create your own custom design and personalize your websites any way you want!</p><br>
+        <div class="col-sm-12 col-md box-centered row">
+          <div class="card fluid"> 
+            <div class="section">
+              <h2>Style-agnostic<small>Infinitely customizable!</small></h2><br>
+              <i class="fa fa-paint-brush fa-4x" aria-hidden="true"></i>
+              <br><br>
+              <p><strong>mini.css</strong> provides you with a customizable flavor system, allowing you to be a designer without all the hard work. This way you can create your own custom design and personalize your websites any way you want!</p><br>
+            </div>
           </div>
         </div>
       </div>

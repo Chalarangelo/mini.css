@@ -28,9 +28,22 @@ th, td {
 	border-left: $table-border-style;
 	border-top: $table-border-style;
 }
+td {
+	@if $table-body-back-color != $back-color {
+		background: $table-body-back-color;
+	}
+	@if $table-body-fore-color != $fore-color {
+		color: $table-body-fore-color;
+	}
+}
 th {
 	border-top: 0;
-	background: $table-head-back-color;
+	@if $table-head-back-color != $back-color {
+		background: $table-head-back-color;
+	}
+	@if $table-head-fore-color != $fore-color {
+		color: $table-head-fore-color;
+	}
 }
 th:first-child, td:first-child {
 	border-left: 0;
@@ -67,6 +80,9 @@ th:first-child, td:first-child {
 		@if $table-box-shadow !=0 {
 			box-shadow: $table-box-shadow;
 		}	
+		@if $table-body-back-color != $back-color {
+			background: $table-body-back-color;
+		}
 		margin-bottom: $table-mobile-card-spacing;
 	}
 	td {

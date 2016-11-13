@@ -445,3 +445,6 @@
 - Removed the `playground` page as its purpose was fulfilled.
 - Closed issue #31 for good.
 - Squashed another major bug in the `make-card-alt-size` mixin, stemming from the use of the conditions and logical operators in that. The issue was thoroughly tested and resolved for all cases. `&&` was replaced with `and` in said condition combination.
+- Tested some minor color issues with the page's background color and the cards' background color. Made some adjustments, uncertain if I will keep them.
+- Added `$table-body-back-color`, `$table-body-fore-color` and `$table-head-fore-color` in addition to the existing `$table-head-back-color` and optimized them accordingly.
+- *TODO* Some minor changes to `.button-group` might be needed (button shadows overlapping and existing, the extra border etc.).

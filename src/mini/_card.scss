@@ -79,10 +79,10 @@ $card-normal-width:				320px !default;									// Width for normal cards
 // - $card-alt-size-name : The name of the class used for the alternate size card.
 // - $card-alt-size-width : The width of the alternate size card.
 @mixin make-card-alt-size ($card-alt-size-name, $card-alt-size-width) {
-	@if type-of($card-alt-size-width) == 'number' && unit($card-alt-size-width) == '%' {
+	@if type-of($card-alt-size-width) == 'number' and unit($card-alt-size-width) == '%' {
 		.#{$card-name}.#{$card-alt-size-name} {
-				max-width: $card-alt-size-width;
-				width: auto;
+			max-width: $card-alt-size-width;
+			width: auto;
 		}
 	}
 	@else {

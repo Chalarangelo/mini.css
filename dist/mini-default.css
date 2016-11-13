@@ -1179,14 +1179,12 @@ button.large, [type="button"].large, [type="submit"].large,
   padding: 10px 15px;
   margin: 7px; }
 
-.card.large {
-  max-width: 480px;
-  width: auto; }
-
-.card.small {
-  max-width: 160px;
-  width: auto; }
-
+@media (min-width: 480px) {
+  .card.large {
+    max-width: 480px; } }
+@media (min-width: 160px) {
+  .card.small {
+    max-width: 160px; } }
 .card.fluid {
   max-width: 100%;
   width: auto; }

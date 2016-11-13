@@ -444,3 +444,4 @@
 - Pushed the urgent `fluid` `card` fix to all deployed pages.
 - Removed the `playground` page as its purpose was fulfilled.
 - Closed issue #31 for good.
+- Squashed another major bug in the `make-card-alt-size` mixin, stemming from the use of the conditions and logical operators in that. The issue was thoroughly tested and resolved for all cases. `&&` was replaced with `and` in said condition combination.

@@ -454,3 +454,5 @@
 
 - Added the basic setup instructions in the `index` page.
 - Added a few links for getting started in the `index` page. Page is complete for now.
+- Minor updates to resources, description, title etc, updated `template` as well.
+- Added links for the rest of the docs.

@@ -39,6 +39,9 @@
         -webkit-align-self: auto;
                 align-self: auto;
       }
+      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
+      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
+      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
     </style>
   </head>
   <body>  
@@ -98,10 +101,26 @@
         </div>
       </div>
       <div class="row">
+        <div class="col-sm">
+        <h2>Setup and usage</h2>
+        <p>You can import he default flavor of <strong>mini.css</strong> in your webpage by simply adding the following reference inside your HTML page's <code>&lt;head&gt;</code> tag:</p><br>
+        <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
+        <p>If you want to download the package using your favorite package manager, you can use either <strong>Bower</strong> or <strong>NPM</strong>:</p><br>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <pre><span class="fore-tertiary">bower install</span> <span class="fore-primary">mini.css</span></pre>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <pre><span class="fore-tertiary">npm install</span> <span class="fore-primary">mini.css</span></pre>
+          </div>
+        </div><br>
+        <p>If you are interested in tinkering with the flavor files and cooking your own flavor, check out the <a href="#">Customization</a> page for information, tips on how to get started and general guidelines.</p>
+        <hr>
+      </div>
+      <div class="row">
         <div class="col-sm-12">
           <h2>Quick overview</h2>
-          <p>Take a couple of minutes to learn how <strong>mini.css</strong> differs from all those other UI toolkits (Bootstrap, Semantic UI etc).</p>
-          <hr>
+          <p>Take a couple of minutes to learn how <strong>mini.css</strong> differs from all those other UI toolkits (Bootstrap, Semantic UI etc):</p>       
           <table>        
               <caption>Toolkit file size comparison</caption>
               <thead>
@@ -231,6 +250,18 @@
           </tbody>
         </table><br>
         <p><mark class="secondary" style="font-size: 1.4em; padding: 3px 10px;">!</mark>&nbsp;Due to the way <strong>mini.css</strong> is crafted, some legacy browsers are not supported anymore and some others are partially supported. This could be a dealbreaker for some developers, however most legacy browsers will display a less feature-rich and modern website. Apart from the above table, note that some mobile browsers like Opera Mini, IE Mobile and UC Browser for Android are officially supported, but some features may not display or behave properly due to the browsers themselves.</p>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <h2>Getting started</h2>
+          <p>If you are still here after reading this far, we will assume you are interested or at least curious. Based on that assumption, here are a few links to help get you started:</p>
+            <ul>
+            <li>For a quick guide on getting started, you might wanna take a look at the available <a href="#">modules</a> list and the tutorials provided for each one!</li>
+            <li><strong>mini.css</strong> comes with a few nice pre-built customizable <a href="#">flavors</a>. See which one of them better suits your needs!</li>
+            <li>If you are more experienced or demanding, you can always take a look at the <a href="#">customization</a> section to cook up a flavor of your own custom-tailored to your needs!</li>
+            </ul>
+        </div>
       </div>
     </div></main>
     <!-- End of page content-->

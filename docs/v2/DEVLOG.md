@@ -457,3 +457,8 @@
 - Minor updates to resources, description, title etc, updated `template` as well.
 - Added links for the rest of the docs.
 - Added browser logos to the table of `index`.
+
+## 20161115
+
+- Fixed `Reponsive` in `index`...
+- Tested `table` `horizontal` layout with flexbox.

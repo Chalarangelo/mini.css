@@ -462,3 +462,9 @@
 
 - Fixed `Reponsive` in `index`...
 - Tested `table` `horizontal` layout with flexbox.
+
+
+## 20161116
+
+- Created `modules.html` page, added content.
+- Bumped FontAwesome to v4.7.0 as some icons I used were from that version.

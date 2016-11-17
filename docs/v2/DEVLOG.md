@@ -468,3 +468,9 @@
 
 - Created `modules.html` page, added content.
 - Bumped FontAwesome to v4.7.0 as some icons I used were from that version.
+
+
+## 20161117
+
+- Started writing `core.html` page.
+- Added basic info in `core` page and info on headings.

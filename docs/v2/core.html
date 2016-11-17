@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Live demo styled as of 20161113 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/3e0ae4fa7fa87cb51187ae5df2e3cab21f60eb52/dist/mini-default.min.css">
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="../../dist/mini-default.min.css">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>mini.css - Core</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
+    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass, module, core">
+    <meta name="author" content="Angelos Chalaris (chalarangelo)">
+    <link rel="icon" type="image/png" href="favicon.png">    
+    <style>
+      /* Classes and ids used in multiple pages - page top and utilities */
+      #header-logo {
+        display: inline; height: 28px; width: 28px; margin-top: 2px; background: #558b2f; border-radius: 1px;
+        margin-left: -3px; padding: 2px;
+      }
+      #top-logo {
+        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
+        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      #top-heading {
+        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
+      }
+      #top-version-tag {
+        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      .box-centered { text-align: center; }
+      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
+      .box-colored.red { background: #b71c1c; }
+      .box-centered > .card.fluid {
+        -webkit-box-pack: start;
+        -webkit-box-align: start; 
+        -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+        -webkit-align-self: auto;
+                align-self: auto;
+      }
+      /* Local classes and ids for this page */
+      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
+      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
+      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
+      .col-sm-12.col-sm-last.col-md-4.col-md-normal {
+        box-sizing: border-box;
+        border-right: 1px solid #bdbdbd;
+      }
+      @media (max-width: 800px){
+        .col-sm-12.col-sm-last.col-md-4.col-md-normal {
+          border: 0;
+          border-top: 1px solid #bdbdbd;
+        }
+      }
+    </style>
+  </head>
+  <body>  
+    <header>
+      <img class="logo" src="mini-logo.svg" id="header-logo"><div style="display: inline; overflow: auto;">
+      <a href="index.html" class="button">Introduction</a>
+      <a href="modules.html" class="button">Modules</a>
+      <a href="flavors.html" class="button">Flavors</a>
+      <a href="customization.html" class="button">Customization</a>
+      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
+      </div>
+    </header>
+    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
+      <div class="row">
+        <div class="col-sm">
+          <div class="box-centered">
+            <img src="mini-logo.svg" id="top-logo">
+            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
+            <mark class="tag tertiary" id="top-version-tag">v2.0</mark>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-sm">
+          <h1>Core</h1>
+          <p>The <strong>core</strong> module contains basic reset and fix rules, based on <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> v5.0.0, along with lots of custom typography rules. Most textual HTML5 elements are styled by this module, so you can start writing your pages immediately without worrying about font families, weights, sizes, line heights, paddings and the like.</p>
+          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
+          <ul class="breadcrumbs"><li><a href="index.html">Home</a></li><li><a href="modules.html">Modules</a></li><li>Core</li></ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Quick overview</h2>
+              <p>Before applying any typography and styling rules, some resets need to be applied to make sure that different elements display consistently on all browsers. The <strong>core</strong> module utilizes the ruleset of <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> v5.0.0 to apply those much needed resets and fixes. However, to keep the framework small, we removed some rules that only help with legacy browser support and also tweaked a lot of the rules around to use customizable variables so no duplicate rules are applied, taking up unnecessary space. The typography rules in <strong>core</strong> deal with a page's basics, like fonts and styling of headings and paragraphs, horizontal rules, colors, margins, padding etc.</p><br>
+            </div>
+            <div class="section">
+              <h2>Quick start</h2>
+              <p>To use the <strong>core</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
+              <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Headings</h2>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal row">
+                <div class="col-sm-12 col-lg-6"><h1>Heading 1<small>Subheading</small></h1></div>
+                <div class="col-sm-12 col-lg-6"><h2>Heading 2<small>Subheading</small></h2></div>
+                <div class="col-sm-12 col-lg-6"><h3>Heading 3<small>Subheading</small></h3></div>
+                <div class="col-sm-12 col-lg-6"><h4>Heading 4<small>Subheading</small></h4></div>
+                <div class="col-sm-12 col-lg-6"><h5>Heading 5<small>Subheading</small></h5></div>
+                <div class="col-sm-12 col-lg-6"><h6>Heading 6<small>Subheading</small></h6></div>
+              </div>
+              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+                <p>All six of the HTML headings (<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>) are styled with simple rules, providing a clean base for your pages' headings. Apart from the headings themselves, complementary rules are provided for <code>&lt;small&gt;</code> elements inside headings, allowing you to define subheadings or explanatory text for those headings. These subheadings are stylized to display below the headings in smaller, lighter type.</p>
+                <h3>Sample code</h3>
+                <pre>&lt;h1&gt;Heading 1&lt;small&gt;Subheading&lt;/small&gt;&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;small&gt;Subheading&lt;/small&gt;&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;small&gt;Subheading&lt;/small&gt;&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;small&gt;Subheading&lt;/small&gt;&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;small&gt;Subheading&lt;/small&gt;&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;small&gt;Subheading&lt;/small&gt;&lt;/h6&gt;</pre><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

@@ -476,3 +476,4 @@
 - Added basic info in `core` page and info on headings.
 - Minor changes in `core` module formatting.
 - Added `core` documentation for common textual elements.
+- Updated stylesheet reference to the latest changes for live pages.

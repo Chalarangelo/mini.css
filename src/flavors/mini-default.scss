@@ -24,17 +24,17 @@ $h4-font-size:					1.1em;											// Font size for h4
 $h5-font-size:					1em;											// Font size for h5
 $h6-font-size:					0.85em;											// Font size for h6
 $heading-line-height:			1.2em;											// Line height for all headings
-$heading-margin:				0.7em 8px;										// Margin for all headings
+$heading-margin:				12px 8px;										// Margin for all headings
 $heading-font-weight:			500;											// Font weight for all headings
 $heading-smalltext-fore-color:	#424242;										// <small> color in headings	
 $make-heading-smalltext-block:	true;											// Should <small> elements in headings
 																				// be displayed as blocks (`true`/`false`) [2]
 $heading-smalltext-b-font-size:	75%;											// Font size of block <small> elements in headings
-$heading-smalltext-b-top-margin:-0.35em;										// Top margin of block <small> elements in headings
+$heading-smalltext-b-top-margin:-4px;											// Top margin of block <small> elements in headings
 $paragraph-margin:				1px 8px;										// Paragraph element margin
 $bold-font-weight:				700;											// Font weight for <b> and <strong>
-$horizontal-rule-line-height:	1.2em;											// <hr> line height
-$horizontal-rule-margin:		0.5em 8px;										// <hr> margin
+$horizontal-rule-line-height:	1.25em;											// <hr> line height
+$horizontal-rule-margin:		8px;											// <hr> margin
 $horizontal-rule-border-style:	1px solid #757575;								// Border style for horizontal rules (used 
 																				// in the <hr> element's border-top)
 $horizontal-rule-fancy-style:	true;											// Should a fancy styling be applied for the
@@ -55,7 +55,7 @@ $pre-element-fore-color:		$code-element-fore-color;						// Text color for <pre>
 $pre-element-back-color:		$code-element-back-color;						// Background color for <pre>
 $pre-element-border-style:		0;												// Border style for <pre>
 $pre-element-border-radius:		0 2px 2px 0;									// Border radius for <pre>
-$pre-element-margin:			1px 10px;										// Margin for <pre>
+$pre-element-margin:			8px 10px;										// Margin for <pre>
 $pre-element-box-shadow:														// Box shadow for <pre>
 	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);		
 $add-pre-element-sidebar:		true;											// Should a fancy sidebar be added to the
@@ -75,13 +75,13 @@ $style-samp-element:			false;											// Should styles for <samp> be included?
 //$samp-element-back-color:		#2196f3;										// Background color for <samp>
 //$samp-element-border-style:	0;												// Border style for <samp>
 //$samp-element-border-radius:	2px;											// Border radius for <samp>
-$include-dfn-fix:				false;											// Should the fix for Android 4.3 concerning <dfn>
+$include-dfn-fix:				true;											// Should the fix for Android 4.3 concerning <dfn>
 																				// be included (`true`/`false`) [7]
 $small-font-size:				75%;											// Font size for <small> elements
 $sup-font-size:					75%;											// Font size for <sup> elements
 $sub-font-size:					75%;											// Font size for <sub> elements
-$sup-top:						-0.5em;											// <sup> top
-$sub-bottom:					-0.25em;										// <sub> bottom
+$sup-top:						-8px;											// <sup> top
+$sub-bottom:					-4px;											// <sub> bottom
 $link-fore-color:				#0277bd;										// Text color for <a>
 $link-visited-fore-color:		#01579b;										// Text color for visited <a>
 $link-font-weight:				500;											// Font weight for <a>

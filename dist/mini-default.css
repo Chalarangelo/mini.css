@@ -37,14 +37,17 @@ img {
   width: 100%;
   height: auto; }
 
+dfn {
+  font-style: italic; }
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
-  margin: 0.7em 8px;
+  margin: 12px 8px;
   font-weight: 500; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     color: #424242;
     display: block;
-    margin-top: -0.35em; }
+    margin-top: -4px; }
 
 h1 {
   font-size: 2em; }
@@ -74,8 +77,8 @@ hr {
   box-sizing: content-box;
   border: 0;
   overflow: visible;
-  line-height: 1.2em;
-  margin: 0.5em 8px;
+  line-height: 1.25em;
+  margin: 8px;
   height: 1px;
   background: -webkit-linear-gradient(to right, #bdbdbd, #616161, #bdbdbd);
   background: linear-gradient(to right, #bdbdbd, #616161, #bdbdbd); }
@@ -94,7 +97,7 @@ pre {
   border-radius: 0 2px 2px 0;
   background: #e0e0e0;
   padding: 12px;
-  margin: 1px 10px;
+  margin: 8px 10px;
   border-left: 3px solid #1565c0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15); }
 
@@ -109,10 +112,10 @@ small, sup, sub {
   font-size: 75%; }
 
 sup {
-  top: -0.5em; }
+  top: -8px; }
 
 sub {
-  bottom: -0.25em; }
+  bottom: -4px; }
 
 sup, sub {
   line-height: 0;

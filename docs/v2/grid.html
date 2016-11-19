@@ -54,6 +54,7 @@
           border-top: 1px solid #bdbdbd;
         }
       }
+      .box-colored.green { background: #1b5e20; }
     </style>
   </head>
   <body>  
@@ -215,7 +216,16 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-                <!-- sample -->
+                <div class="container">
+                <div class="row"><div class="col-sm"><h4>Small screen layout</h4><hr></div></div>
+                  <div class="row"><div class="col-sm"><div class="box-colored"></div></div></div>
+                  <div class="row"><div class="col-sm-12"><div class="box-colored red" style="height: 40px;"></div></div><div class="col-sm-12"><div class="box-colored green" style="height: 60px;"></div></div><div class="col-sm-12"><div class="box-colored red" style="height: 40px;"></div></div></div>
+                  <div class="row"><div class="col-sm"><div class="box-colored"></div></div></div>
+                  <div class="row"><div class="col-sm"><h4>Medium/Large screen layout</h4><hr></div></div>
+                  <div class="row"><div class="col-sm"><div class="box-colored"></div></div></div>
+                  <div class="row"><div class="col-sm-3"><div class="box-colored red" style="height: 100px;"></div></div><div class="col-sm-5"><div class="box-colored green" style="height: 100px;"></div></div><div class="col-sm-4"><div class="box-colored red" style="height: 100px;"></div></div></div>
+                  <div class="row"><div class="col-sm"><div class="box-colored"></div></div></div>
+                </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
                 <p></p>
@@ -275,7 +285,7 @@
                 <!-- sample -->
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>DO: Col-sm row example, DONT: Col in col, WHATEVER: col-sm > container > row, DO: Col-sm-12 col-md, col-sm-12 col-md, DONT: row > col-sm-12 col-md / row > col-sm-12 col-md, DONT: Spec col-md but no col-sm!!, DONT: MIX free elements that are not flexible with grid columns in the same thing or ignore flex rows etc. - MAYBE PUT DOS AND DONTS BELOW THEIR RESPECTIVE SECTIONS</p>
                 <h3>Sample code</h3>
                 <pre</pre><br>
               </div>

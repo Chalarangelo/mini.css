@@ -483,3 +483,4 @@
 
 - Started writing `grid.html` page.
 - Added basic info for grid, set layout for the page, checked styles - they're all good for grid.
+- Added layout demo showcase for the screen specific layouts.

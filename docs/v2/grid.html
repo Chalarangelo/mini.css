@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Live demo styled as of 20161117 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/e6d74493378ebf8837bb3fc2469864dda719af41/dist/mini-default.min.css">
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="../../dist/mini-default.min.css">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>mini.css - Grid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
+    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass, module, grid">
+    <meta name="author" content="Angelos Chalaris (chalarangelo)">
+    <link rel="icon" type="image/png" href="favicon.png">    
+    <style>
+      /* Classes and ids used in multiple pages - page top and utilities */
+      #header-logo {
+        display: inline; height: 28px; width: 28px; margin-top: 2px; background: #558b2f; border-radius: 1px;
+        margin-left: -3px; padding: 2px;
+      }
+      #top-logo {
+        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
+        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      #top-heading {
+        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
+      }
+      #top-version-tag {
+        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      .box-centered { text-align: center; }
+      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
+      .box-colored.red { background: #b71c1c; }
+      .box-centered > .card.fluid {
+        -webkit-box-pack: start;
+        -webkit-box-align: start; 
+        -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+        -webkit-align-self: auto;
+                align-self: auto;
+      }
+      /* Local classes and ids for this page */
+      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
+      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
+      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
+      .col-sm-12.col-sm-last.col-md-4.col-md-normal {
+        box-sizing: border-box;
+        border-right: 1px solid #bdbdbd;
+      }
+      @media (max-width: 800px){
+        .col-sm-12.col-sm-last.col-md-4.col-md-normal {
+          border: 0;
+          border-top: 1px solid #bdbdbd;
+        }
+      }
+    </style>
+  </head>
+  <body>  
+    <header>
+      <img class="logo" src="mini-logo.svg" id="header-logo"><div style="display: inline; overflow: auto;">
+      <a href="index.html" class="button">Introduction</a>
+      <a href="modules.html" class="button">Modules</a>
+      <a href="flavors.html" class="button">Flavors</a>
+      <a href="customization.html" class="button">Customization</a>
+      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
+      </div>
+    </header>
+    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
+      <div class="row">
+        <div class="col-sm">
+          <div class="box-centered">
+            <img src="mini-logo.svg" id="top-logo">
+            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
+            <mark class="tag tertiary" id="top-version-tag">v2.0</mark>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-sm">
+          <h1>Grid</h1>
+          <p>The <strong>grid</strong> module provides you with a modern, responsive grid system based on the Flexible Layout Module (commonly known as <em>flexbox</em>). The structure of the grid is simple and logical, allowing you to quickly build your pages from scratch. Setting the layout for a page is easy and will behave the way you want them to on mobile devices and smaller screens.</p>
+          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
+          <ul class="breadcrumbs"><li><a href="index.html">Home</a></li><li><a href="modules.html">Modules</a></li><li>Grid</li></ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Quick overview</h2>
+              <p>Easy page layout is one of the main advantages of using a CSS toolkit over writing your own styles. The <strong>grid</strong> module utilizes the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Layout</a> to provide you with a modern and responsive layout grid system for all your needs. Rules in the <strong>grid</strong> module help you create basic fluid containers for your grid and allow you to design layouts that work well on all screen sizes using a simple row and column structure. The grid system contains definitions for both fluid columns that resize according to their siblings and columns with preset sizes on different screen sizes, as well as rules that allow you to move certain columns to the first or last place on the grid's row on different devices, helping you present the page in a different layout without duplicating any content. All of the rules in the module are built around accessibility, so screen readers can easily read you pages.</p><br>
+            </div>
+            <div class="section">
+              <h2>Quick start</h2>
+              <p>To use the <strong>grid</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
+              <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Basic layout</h2>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+                <div class="container"><br>
+                  <div class="row"><div class="col-sm-1"><div class="box-colored">1</div></div><div class="col-sm-11"><div class="box-colored">11</div></div></div>
+                  <div class="row"><div class="col-sm-2"><div class="box-colored">2</div></div><div class="col-sm-10"><div class="box-colored">10</div></div></div>
+                  <div class="row"><div class="col-sm-3"><div class="box-colored">3</div></div><div class="col-sm-9"><div class="box-colored">9</div></div></div>
+                  <div class="row"><div class="col-sm-4"><div class="box-colored">4</div></div><div class="col-sm-8"><div class="box-colored">8</div></div></div>
+                  <div class="row"><div class="col-sm-5"><div class="box-colored">5</div></div><div class="col-sm-7"><div class="box-colored">7</div></div></div>
+                  <div class="row"><div class="col-sm-6"><div class="box-colored">6</div></div><div class="col-sm-6"><div class="box-colored">6</div></div></div>
+                  <div class="row"><div class="col-sm-12"><div class="box-colored">12</div></div></div>       
+                  <div class="row"><div class="col-sm"><div class="box-colored">fluid</div></div><div class="col-sm"><div class="box-colored">fluid</div></div></div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+                <p>The grid system's basic layout is composed of three components, presented below in the order they should be added to the DOM tree:</p>
+                <ol>
+                  <li>The grid's <code>.container</code> is the outermost shell for your grid. It is a fluid container that serves wrap the flexible grid system inside it.</li>
+                  <li>Inside the container, <code>.row</code>s are added to specify each row of the grid layout. Rows serve to provide you with a simple basis for your layout's columns.</li>
+                  <li>Finally, inside the rows, <code>.col-</code> elements are added for the columns. The columns are a little bit more complex than the container and rows, as they are what makes the layout respond to changes. There are two basic ways to define a column for your layout:
+                    <ul>
+                      <li>using <code>.col-<span class="fore-primary">SCR_SZ</span></code> to specify fluid columns, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names (<code><span class="fore-tertiary">sm</span></code> for smaller screens, <code><span class="fore-tertiary">md</span></code> for medium-sized screens or <code><span class="fore-tertiary">lg</span></code> for larger screens).</li>
+                      <li>using <code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code> to specify columns with fixed width, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names and <code><span class="fore-secondary">COL_WD</span></code> with a number from <code>1</code> to <code>12</code> specifying the width of the column (<code>1</code> meaning 1/12 of the width of the row and <code>12</code> meaning 100% of the width of the row).</li>
+                    </ul>
+                  </li>
+                </ol>
+                <h3>Sample code</h3>
+                <p>The sample code is a bit lengthy, so we hid it by default to make it easier for mobile device users to read this page. Click or tap on <strong>Show sample code</strong> below to see the code sample for this example. Also, the example presented showcases the grid system's syntax for smaller screens, but you can do the same thing for any screen size.</p><br>
+                <div class="container"><div class="row"><div class="tabs stacked"">
+                  <input type="checkbox" id="grid-base-sample" autocomplete="off">
+                  <label for="grid-base-sample">Show sample code</label>
+                  <div>
+                    <pre>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-1&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-11&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-2&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-3&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-9&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-4&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-8&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-5&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-7&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-6&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-6&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-12&quot;&gt; 
+    &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  </div>
+                </div></div></div><br>
+              </div>
+            </div>
+            <div class="section">
+            <h3>Notes</h3>
+              <ul>
+                <li><strong>mini.css</strong> uses a mobile-first approach to the grid system. This means that specifying a layout for smaller device sizes will apply the same layout on medium and large screens, so you do not have to rewrite the same layout for all three screen sizes. However, if you want to change the layout on different screen sizes, check the section below.</li>
+                <li>The <strong>grid</strong> module is compatible with modern browsers, but does not display properly on older browsers.</li>
+                <li>The specific breakpoints for small, medium and large screen sizes are as follows:
+                  <ul>
+                    <li><strong>small</strong>: <code>800px</code> wide or less</li>
+                    <li><strong>medium</strong>: more than <code>800px</code> wide but less than <code>1080px</code> wide</li>
+                    <li><strong>large</strong>: <code>1080px</code> wide or more</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Screen-specific layouts</h2>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+                <!-- sample -->
+              </div>
+              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+                <p></p>
+                <h3>Sample code</h3>
+                <pre</pre><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Column offsets</h2>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+                <!-- sample -->
+              </div>
+              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+                <p></p>
+                <h3>Sample code</h3>
+                <pre</pre><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Column ordering</h2>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+                <!-- sample -->
+              </div>
+              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+                <p></p>
+                <h3>Sample code</h3>
+                <pre</pre><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Dos and Don'ts</h2>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+                <!-- sample -->
+              </div>
+              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+                <p></p>
+                <h3>Sample code</h3>
+                <pre</pre><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="padding-bottom: 20px; padding-top:20px;">
+        <div class="col-sm">
+          <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
+        </div>
+      </div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

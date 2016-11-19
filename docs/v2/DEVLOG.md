@@ -477,3 +477,9 @@
 - Minor changes in `core` module formatting.
 - Added `core` documentation for common textual elements.
 - Updated stylesheet reference to the latest changes for live pages.
+
+
+## 20161119
+
+- Started writing `grid.html` page.
+- Added basic info for grid, set layout for the page, checked styles - they're all good for grid.

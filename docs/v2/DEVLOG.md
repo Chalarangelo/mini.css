@@ -491,3 +491,5 @@
 - Changed `grid` breakpoints to `768px` and `1280px` accordingly to better support different resolutions.
 - Updated `$button-group-mobile-breakpoint` to `767px` so that it will break on resolutions under `768px` instead of including `768px`.
 - Same update for `$table-mobile-breakpoint` to `767px`.
+- Updated `grid.html` documentation to reflect the latest changes.
+- Updated all demo pages with latest reference to css file.

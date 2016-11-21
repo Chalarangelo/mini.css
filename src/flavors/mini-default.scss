@@ -283,6 +283,9 @@ $table-mobile-card-spacing:		10px;											// Space between <tr> cards - mobil
 $table-mobile-card-label:		'data-label';									// Attribute used to replace column headers
 																				// in mobile view [1]
 $table-mobile-label-font-weight:$bold-font-weight;								// Font weight for mobile headers
+$table-horizontal-breakpoint:	768px;											// Breakpoint for <table> horizontal view
+$table-horizontal-name:			'horizontal';									// Class name for <table> horizontal view
+$table-not-responsive-name:		'preset';										// Class name for <table> non-responsive view
 //	Notes:
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly. 

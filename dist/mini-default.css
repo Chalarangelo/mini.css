@@ -775,68 +775,167 @@ table {
   border: 1px solid #bdbdbd;
   margin: 0 auto;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15); }
-
-caption {
-  font-size: 1.5em;
-  margin: 6px 0 12px; }
-
-tr {
-  padding: 6px; }
-
-th, td {
-  padding: 10px;
-  border-left: 1px solid #bdbdbd;
-  border-top: 1px solid #bdbdbd; }
-
-td {
-  background: #fafafa; }
-
-th {
-  border-top: 0;
-  background: #eceff1; }
-
-th:first-child, td:first-child {
-  border-left: 0; }
+  table caption {
+    font-size: 1.5em;
+    margin: 6px 0 12px; }
+  table tr {
+    padding: 6px; }
+  table th, table td {
+    padding: 10px;
+    border-left: 1px solid #bdbdbd;
+    border-top: 1px solid #bdbdbd; }
+  table td {
+    background: #fafafa; }
+  table th {
+    border-top: 0;
+    background: #eceff1; }
+  table th:first-child, table td:first-child {
+    border-left: 0; }
 
 @media (max-width: 767px) {
-  table {
+  table:not(.preset) {
     border-collapse: collapse;
     border: 0;
     width: 100%;
     box-shadow: none; }
-
-  thead {
-    border: 0;
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(100%);
-    clip-path: inset(100%); }
-
-  tr {
-    display: block;
-    border: 1px solid #bdbdbd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
-    background: #fafafa;
-    margin-bottom: 10px; }
-
-  td {
-    display: block;
-    border: 0;
-    border-bottom: 1px solid #bdbdbd;
-    text-align: right; }
-
-  td:before {
-    content: attr(data-label);
-    float: left;
-    font-weight: 700; }
-
-  td:last-child {
-    border-bottom: 0; } }
+    table:not(.preset) thead, table:not(.preset) th {
+      border: 0;
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      clip: rect(0 0 0 0);
+      -webkit-clip-path: inset(100%);
+      clip-path: inset(100%); }
+    table:not(.preset) tr {
+      display: block;
+      border: 1px solid #bdbdbd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
+      background: #fafafa;
+      margin-bottom: 10px; }
+    table:not(.preset) td {
+      display: block;
+      border: 0;
+      border-bottom: 1px solid #bdbdbd;
+      text-align: right; }
+    table:not(.preset) td:before {
+      content: attr(data-label);
+      float: left;
+      font-weight: 700; }
+    table:not(.preset) td:last-child {
+      border-bottom: 0; } }
+@media (min-width: 768px) {
+  table.horizontal {
+    display: -webkit-box;
+    -webkit-box-flex: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap; }
+    table.horizontal caption {
+      -webkit-box-flex: 1;
+      max-width: 100%;
+      -webkit-flex: 0 0 100%;
+      flex: 0 0 100%; }
+    table.horizontal thead, table.horizontal tbody {
+      display: -webkit-box;
+      -webkit-box-flex: 0;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap; }
+    table.horizontal thead {
+      z-index: 999; }
+    table.horizontal tbody {
+      overflow: auto;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-flex: 1 0 0;
+      flex: 1 0 0; }
+    table.horizontal tr {
+      display: -webkit-box;
+      -webkit-box-flex: 1;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex: 1 0 auto;
+      flex: 1 0 auto; }
+    table.horizontal th, table.horizontal td {
+      width: 100%;
+      border: 1px solid #bdbdbd; }
+      table.horizontal th + th, table.horizontal th + td, table.horizontal td + th, table.horizontal td + td {
+        border-top: 0; }
+    table.horizontal th {
+      text-align: right; }
+    table.horizontal tbody tr:first-child > td {
+      padding-left: 20px; } }
+@media (max-width: 767px) {
+  table.horizontal.preset {
+    display: -webkit-box;
+    -webkit-box-flex: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap; }
+    table.horizontal.preset caption {
+      -webkit-box-flex: 1;
+      max-width: 100%;
+      -webkit-flex: 0 0 100%;
+      flex: 0 0 100%; }
+    table.horizontal.preset thead, table.horizontal.preset tbody {
+      display: -webkit-box;
+      -webkit-box-flex: 0;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap; }
+    table.horizontal.preset thead {
+      z-index: 999; }
+    table.horizontal.preset tbody {
+      overflow: auto;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-flex: 1 0 0;
+      flex: 1 0 0; }
+    table.horizontal.preset tr {
+      display: -webkit-box;
+      -webkit-box-flex: 1;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex: 1 0 auto;
+      flex: 1 0 auto; }
+    table.horizontal.preset th, table.horizontal.preset td {
+      width: 100%;
+      border: 1px solid #bdbdbd; }
+      table.horizontal.preset th + th, table.horizontal.preset th + td, table.horizontal.preset td + th, table.horizontal.preset td + td {
+        border-top: 0; }
+    table.horizontal.preset th {
+      text-align: right; }
+    table.horizontal.preset tbody tr:first-child > td {
+      padding-left: 20px; } }
 .card {
   display: -webkit-box;
   -webkit-box-orient: vertical;

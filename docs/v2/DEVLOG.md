@@ -499,3 +499,7 @@
 - Added reordering to the `grid.html` doc page, `grid` documentation finished - some polishing might still be required.
 - Added a rule for `fluid` `card`s inside `col-` elements, allowing the side margins to disappear at the edges of the grid, allowing for better content viewing on mobile. Only for the demo, not in the actual toolkit.
 - Changed the value of `$tab-stacked-breakpoint` to	`767px` in line with above changes.
+- Added `th` to the accessible hiding rule in the `table` module as a safeguard for different things.
+- Heavily edited the `table` module. Desktop view now includes whole ruleset inside the `table` element, so no leaks will happen. Did the same for the responsive part of the module.
+- Added support for horizontal and non-responsive tables in the `table` module. Added lots of new variables and rules as needed.
+- Tested new `table` module functionality thoroughly. Everything seems to work like a charm, even if the implementation is a little bit fiddly due to flexbox playing some tricks.

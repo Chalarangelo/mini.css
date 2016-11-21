@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- Live demo styled as of 20161111 -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/64af6f2d5fb2bdcad4ed49631031bf2ef4c3cd54/dist/mini-default.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/64af6f2d5fb2bdcad4ed49631031bf2ef4c3cd54/dist/mini-default.min.css"> -->
     <!-- Local stylesheet -->
     <link rel="stylesheet" href="../../dist/mini-default.min.css">
     <title>mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework</title>
@@ -75,17 +75,360 @@
     </div>
     <!-- Insert your page content here-->
     <main><div class="container" style="padding-top: 20px;">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="box-colored"></div>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <div class="card fluid"></div>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <div class="card fluid"></div>
-        </div>
-      </div>
+      <table>
+              <caption>Hacker List</caption>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Email</th>
+                  <th>Handle</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <td>Sum</td>
+                  <td>$180</td>
+                  <td>Sum</td>
+                  <td>$180</td>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <br>
+
+            <table class="preset">
+              <caption>Hacker List</caption>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Email</th>
+                  <th>Handle</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <td>Sum</td>
+                  <td>$180</td>
+                  <td>Sum</td>
+                  <td>$180</td>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <br>
+
+            <table class="horizontal">
+              <caption>Hacker List</caption>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Email</th>
+                  <th>Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <br>
+
+            <table class="horizontal preset">
+              <caption>Hacker List</caption>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Email</th>
+                  <th>Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="preset">
+              <caption>Hacker List</caption>
+              <tbody>
+                <tr>
+                  <th data-label="Name"></th>
+                  <th data-label="Surname">Surname</td>
+                  <th data-label="Email">Email</td>
+                  <th data-label="Handle">Handle</td>
+                </tr>
+                <tr>
+                  <th data-label="Name">John</th>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <th data-label="Name">Lisa</th>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <th data-label="Name">Max</th>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <th data-label="Name">Adam</th>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+              </tbody>
+            </table>
+
     </div></main>
     <!-- End of page content-->
     <footer><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>

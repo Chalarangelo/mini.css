@@ -939,6 +939,9 @@ table {
 table.striped tr:nth-of-type(2n) > td {
   background: #eeeeee; }
 
+@media (max-width: 767px) {
+  table.striped:not(.preset) tr:nth-of-type(2n) {
+    background: #eeeeee; } }
 .card {
   display: -webkit-box;
   -webkit-box-orient: vertical;

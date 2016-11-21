@@ -505,3 +505,4 @@
 - Tested new `table` module functionality thoroughly. Everything seems to work like a charm, even if the implementation is a little bit fiddly due to flexbox playing some tricks.
 - Updated a few colors for consistency.
 - Added support for `striped` `table`s in the `table` module. Updated accordingly with variables and the likes.
+- Added responsiveness for `striped` `table`s.

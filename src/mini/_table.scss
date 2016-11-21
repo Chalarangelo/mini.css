@@ -278,3 +278,11 @@ table.#{$table-striped-name} {
 		background: $table-striped-alt-body-back-color;
 	}
 }
+// Responsiveness for striped tables.
+@media (max-width: #{$table-mobile-breakpoint}) {
+	table.#{$table-striped-name}:not(.#{$table-not-responsive-name}) {
+		tr:nth-of-type(2n) {
+			background: $table-striped-alt-body-back-color;
+		}
+	}
+}

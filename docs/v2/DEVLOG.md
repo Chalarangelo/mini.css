@@ -493,3 +493,4 @@
 - Same update for `$table-mobile-breakpoint` to `767px`.
 - Updated `grid.html` documentation to reflect the latest changes.
 - Updated all demo pages with latest reference to css file.
+- Added dos and don'ts in the grid page under the first section.

@@ -55,6 +55,14 @@
         }
       }
       .box-colored.green { background: #1b5e20; }
+      .do {
+        border-top: 15px solid #558b2f;
+        padding-top: 10px;
+      }
+      .dont {
+        border-top: 15px solid #f44336;
+        padding-top: 10px;
+      }
     </style>
   </head>
   <body>  
@@ -204,6 +212,77 @@
                   </ul>
                 </li>
               </ul>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;div class=&quot;col-sm&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+<span class="fore-tertiary">&lt;!-- or --&gt;</span>
+&lt;div class=&quot;col-sm&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;A column can contain a container or a row inside it. The container can also be skipped if inside a column, so you only need to add a row.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;div class=&quot;col-sm&quot;&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using columns inside columns without a row wrapping them. Either make the outer column a row in itself or wrap the inside columns in a row.</p>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;div class=&quot;col-sm row&quot;&gt;
+    &lt;div class=&quot;col-sm-6&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-6&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;A column can also be a row at the same time, if you want to include sub-columns inside it. You can make the same element both a column in its own row and a row for its containing columns. The same can be applied for the container. Containers can, however, be omitted, when already inside a grid.</p>
+                  <p></p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;div class=&quot;row&quot;&gt;
+    <span class="fore-secondary">&lt;!-- content without columns --&gt;</span>
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using rows with content inside that is not in columns. Prefer to use a single <code>.col-sm</code> to wrap the content inside these, otherwise there might be unexpected behavior.</p>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <pre> &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;div&gt;
+    &lt;div class=&quot;col-sm-4&quot;&gt;
+    &lt;/div&gt;
+ &lt;/div&gt;
+<span class="fore-tertiary">&lt;!-- or --&gt;</span>
+ &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-12&quot;&gt;
+    &lt;div&gt;
+    &lt;div class=&quot;col-sm-12&quot;&gt;
+    &lt;/div&gt;
+ &lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Mix fluid columns with fixed, if you like. Fluid columns will adapt to the size of the container left for them. You can also use columns with a total width of more than <code>12</code>, meaning with a total width of over 100%. The remaining content will flow below the rest, allowing you to specify multiple blocks of content inside the same row if you need to.</p>
+                  <p></p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-sm&quot;&gt;
+        &lt;div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Normal paragraph.&lt;/p&gt;
+&lt;/div&gt;
+<span class="fore-secondary">&lt;!-- or --&gt;</span>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Normal paragraph.&lt;/p&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid mixing rows and columns with normal content that is not wrapped in the respective level of the grid system. Always wrap content inside the proper containers (container, row or column) in your grid layout.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -285,7 +364,7 @@
                 <!-- sample -->
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>DO: Col-sm row example, DONT: Col in col, WHATEVER: col-sm > container > row, DO: Col-sm-12 col-md, col-sm-12 col-md, DONT: row > col-sm-12 col-md / row > col-sm-12 col-md, DONT: Spec col-md but no col-sm!!, DONT: MIX free elements that are not flexible with grid columns in the same thing or ignore flex rows etc. - MAYBE PUT DOS AND DONTS BELOW THEIR RESPECTIVE SECTIONS</p>
+                <p> DO: Col-sm-12 col-md, col-sm-12 col-md, DONT: row > col-sm-12 col-md / row > col-sm-12 col-md, DONT: Spec col-md but no col-sm!!</p>
                 <h3>Sample code</h3>
                 <pre</pre><br>
               </div>

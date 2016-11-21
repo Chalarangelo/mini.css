@@ -63,6 +63,9 @@
         border-top: 15px solid #f44336;
         padding-top: 10px;
       }
+      .box-colored {
+        color: #f5f5f5;
+      }
     </style>
   </head>
   <body>  
@@ -211,10 +214,11 @@
                     <li><strong>large</strong>: <code>1280px</code> wide or more</li>
                   </ul>
                 </li>
+                <li>Fluid columns can be used for sizes that are not of the form <code>100%/12 * X</code> where <code>X</code> an integer value between <code>1</code> and <code>12</code>. For example, if you have 7 <code>col-sm</code> elements in one row, each of the elements will have a width of 1/7th the width of the row.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre>&lt;div class=&quot;col-sm&quot;&gt;
     &lt;div class=&quot;container&quot;&gt;
     &lt;/div&gt;
@@ -226,14 +230,14 @@
 &lt;/div&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;A column can contain a container or a row inside it. The container can also be skipped if inside a column, so you only need to add a row.</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;col-sm&quot;&gt;
     &lt;div class=&quot;col-sm&quot;&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using columns inside columns without a row wrapping them. Either make the outer column a row in itself or wrap the inside columns in a row.</p>
                 </div>
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre>&lt;div class=&quot;col-sm row&quot;&gt;
     &lt;div class=&quot;col-sm-6&quot;&gt;
     &lt;/div&gt;
@@ -243,13 +247,13 @@
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;A column can also be a row at the same time, if you want to include sub-columns inside it. You can make the same element both a column in its own row and a row for its containing columns. The same can be applied for the container. Containers can, however, be omitted, when already inside a grid.</p>
                   <p></p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;row&quot;&gt;
     <span class="fore-secondary">&lt;!-- content without columns --&gt;</span>
 &lt;/div&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using rows with content inside that is not in columns. Prefer to use a single <code>.col-sm</code> to wrap the content inside these, otherwise there might be unexpected behavior.</p>
                 </div>
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre> &lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col-sm&quot;&gt;
     &lt;div&gt;
@@ -263,10 +267,10 @@
     &lt;div class=&quot;col-sm-12&quot;&gt;
     &lt;/div&gt;
  &lt;/div&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Mix fluid columns with fixed, if you like. Fluid columns will adapt to the size of the container left for them. You can also use columns with a total width of more than <code>12</code>, meaning with a total width of over 100%. The remaining content will flow below the rest, allowing you to specify multiple blocks of content inside the same row if you need to.</p>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Mix fluid columns with fixed, if you like. Fluid columns will adapt to the size of the container left for them. You can also use columns with a total size of more than <code>12</code>, meaning with a total width of over 100%. The remaining content will flow below the rest, allowing you to specify multiple blocks of content inside the same row if you need to.</p>
                   <p></p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-sm&quot;&gt;
@@ -307,9 +311,74 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>You can specify different layouts for your pages and web apps, using the grid system's columns. To do this add classes to your columns for different screen sizes, using either the fluid column syntax (<code>.col-<span class="fore-primary">SCR_SZ</span></code>) or the fixed width column syntax (<code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code>) or even both.</p>
                 <h3>Sample code</h3>
-                <pre</pre><br>
+                <pre>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-12 col-md-3 col-lg-2&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-12 col-md-5 col-lg-7&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-12 col-md-4 col-lg-3&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre><br>
+              </div>
+            </div>
+            <div class="section">
+              <h3>Notes</h3>
+              <ul>
+                <li>Leaving a column's size unspecified for a resolution will use the style applied for the previous largest resolution recursively.</li>
+                <li>Changing the layout for different screen sizes can sometime require complex content realignment, offsetting and reordering. For these features, check the sections below.</li>
+              </ul>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-12 col-md-6&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm-12 col-md-6&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can radically change the layout of your content for different displays. Laying out your content vertically in <code>col-sm-12</code>s for small devices and then compacting it to <code>col-md-6</code>s for medium displays is pretty common. If your columns exceed a total size of <code>12</code> on some displays, they will wrap accordingly, so do not worry.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-12 col-md-6&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-12 col-md-6&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;If you want to place two columns side by side on some displays, but not on others (e.g. placing them vertically on smaller displays, then nex to each other on medium or large displays), place them in one row, not multiple, otherwise you will not achieve the desired effect.</p>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm col-lg-3&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm-6 col-md-8&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Specify only the screen-specific column sizes that you need. You can omit the medium-sized screens' size from a column if its layout on smaller screens is fluid or should be the same as in medium-sized displays. Or, if your large screen layout is the same as your medium-sized screen layout, you can omit the class for the large screen.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-lg&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Never omit the class needed for the smallest screen size you have (<code>col-sm</code> or <code>col-sm-X</code>), otherwise the column's layout on smaller displays might behave unexpectedly. You can, however, omit layout for the other two screen sizes if you want.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -328,7 +397,7 @@
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
                 <p></p>
                 <h3>Sample code</h3>
-                <pre</pre><br>
+                <pre></pre><br>
               </div>
             </div>
           </div>
@@ -347,26 +416,7 @@
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
                 <p></p>
                 <h3>Sample code</h3>
-                <pre</pre><br>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm">
-          <div class="card fluid">
-            <div class="section">
-              <h2>Dos and Don'ts</h2>
-            </div>
-            <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-                <!-- sample -->
-              </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p> DO: Col-sm-12 col-md, col-sm-12 col-md, DONT: row > col-sm-12 col-md / row > col-sm-12 col-md, DONT: Spec col-md but no col-sm!!</p>
-                <h3>Sample code</h3>
-                <pre</pre><br>
+                <pre></pre><br>
               </div>
             </div>
           </div>

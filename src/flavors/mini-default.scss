@@ -274,7 +274,7 @@ $table-caption-font-size:		1.5em;											// Font size for <caption>
 $table-caption-margin:			6px 0 12px;										// Margin for <caption>
 $table-row-padding:				6px;											// Padding for <tr> - both views
 $table-column-padding:			10px;											// Padding for <td> and <th> - desktop view
-$table-head-back-color:			#eceff1;										// Background color for <th>
+$table-head-back-color:			#cfd8dc;										// Background color for <th>
 $table-head-fore-color:			$fore-color;									// Tex color for <th>
 $table-body-back-color:			#fafafa;										// Background color for <td>
 $table-body-fore-color:			$fore-color;									// Text color for <td>
@@ -328,9 +328,9 @@ $card-section-padding1-padding:	12px 16px 12px;									// Padding for card sect
 $tab-container-name:			'tabs';											// Class name for the tabs' container
 $tab-container-box-shadow:														// Box shadow for the tabs' container
 	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);		
-$tab-label-back-color:			#b0bec5;										// Background color for tabs' labels
+$tab-label-back-color:			#cfd8dc;										// Background color for tabs' labels
 $tab-label-fore-color:			$fore-color;									// Text color for tabs' labels
-$tab-label-selected-back-color:	#cfd8dc;										// Background color for open tab's label
+$tab-label-selected-back-color:	#b0bec5;										// Background color for open tab's label
 $tab-label-selected-fore-color:	$fore-color;									// Text color for open tab's label
 $tab-label-hover-opacity:		0.75;											// Opacity of the tab's label on hover
 $tab-label-padding:				4px 6px;										// Padding for tabs' labels

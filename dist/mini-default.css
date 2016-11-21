@@ -788,7 +788,7 @@ table {
     background: #fafafa; }
   table th {
     border-top: 0;
-    background: #eceff1; }
+    background: #cfd8dc; }
   table th:first-child, table td:first-child {
     border-left: 0; }
 
@@ -996,7 +996,7 @@ table {
     height: 26px;
     cursor: pointer;
     transition: background 0.3s ease 0s;
-    background: #b0bec5;
+    background: #cfd8dc;
     border: 1px solid #78909c;
     padding: 4px 6px; }
     .tabs > label:first-of-type {
@@ -1004,7 +1004,7 @@ table {
     .tabs > label:last-of-type {
       border-top-right-radius: 2px; }
     .tabs > label:hover, .tabs > label:active, .tabs > label:focus {
-      background: rgba(176, 190, 197, 0.75); }
+      background: rgba(207, 216, 220, 0.75); }
   .tabs > [type="radio"], .tabs.stacked > [type="checkbox"] {
     display: none;
     visibility: hidden; }
@@ -1033,9 +1033,9 @@ table {
   .tabs.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
     border-left: 0; }
   .tabs > [type="radio"]:checked + label, .tabs.stacked > [type="checkbox"]:checked + label {
-    background: #cfd8dc; }
+    background: #b0bec5; }
     .tabs > [type="radio"]:checked + label:hover, .tabs > [type="radio"]:checked + label:active, .tabs > [type="radio"]:checked + label:focus, .tabs.stacked > [type="checkbox"]:checked + label:hover, .tabs.stacked > [type="checkbox"]:checked + label:active, .tabs.stacked > [type="checkbox"]:checked + label:focus {
-      background: rgba(207, 216, 220, 0.75); }
+      background: rgba(176, 190, 197, 0.75); }
   .tabs > [type="radio"]:checked + label + div, .tabs.stacked > [type="checkbox"]:checked + label + div {
     box-sizing: border-box;
     position: relative;

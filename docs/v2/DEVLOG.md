@@ -497,3 +497,5 @@
 - Added screen-specific layouts in the `grid.html` doc page.
 - Added offsets to the `grid.html` doc page.
 - Added reordering to the `grid.html` doc page, `grid` documentation finished - some polishing might still be required.
+- Added a rule for `fluid` `card`s inside `col-` elements, allowing the side margins to disappear at the edges of the grid, allowing for better content viewing on mobile. Only for the demo, not in the actual toolkit.
+- Changed the value of `$tab-stacked-breakpoint` to	`767px` in line with above changes.

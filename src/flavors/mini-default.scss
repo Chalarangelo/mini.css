@@ -338,7 +338,7 @@ $tab-panel-back-color:			$back-color;									// Background color for tabs' pane
 $tab-panel-fore-color:			$fore-color;									// Text color for tabs' panels
 $tab-panel-padding:				6px;											// Padding for tabs' panels
 $tab-panel-height:				400px;											// Height for tabs' panels
-$tab-stacked-breakpoint:		$grid-medium-breakpoint;						// Breakpoint for tabs layout (stacked/horizontal)
+$tab-stacked-breakpoint:		767px;											// Breakpoint for tabs layout (stacked/horizontal)
 $tab-stacked-name:				'stacked';										// Class name for stacked tabs
 //	Variables for contextual background elements and alerts
 $mark-back-color:				#0277bd;										// Background color for <mark>

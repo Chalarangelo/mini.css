@@ -496,3 +496,4 @@
 - Added dos and don'ts in the grid page under the first section.
 - Added screen-specific layouts in the `grid.html` doc page.
 - Added offsets to the `grid.html` doc page.
+- Added reordering to the `grid.html` doc page, `grid` documentation finished - some polishing might still be required.

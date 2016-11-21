@@ -277,7 +277,7 @@ $grid-medium-prefix:			'md' !default;									// Medium screen class prefix for 
 				order: 999;
 	}
 }
-$grid-large-breakpoint:			1200px !default;								// Large screen breakpoint for grid
+$grid-large-breakpoint:			1280px !default;								// Large screen breakpoint for grid
 $grid-large-prefix:				'lg' !default;									// Large screen class prefix for grid
 // Large screen breakpoint.
 @media (min-width: #{$grid-large-breakpoint}){

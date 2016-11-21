@@ -274,7 +274,7 @@ a {
   -webkit-order: 999;
   order: 999; }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .col-md,
   [class^='col-md-'],
   [class^='col-md-offset-'] {
@@ -399,7 +399,7 @@ a {
   .col-md-last {
     -webkit-order: 999;
     order: 999; } }
-@media (min-width: 1080px) {
+@media (min-width: 1280px) {
   .col-lg,
   [class^='col-lg-'],
   [class^='col-lg-offset-'] {
@@ -713,7 +713,7 @@ input[type="file"] {
     .button-group button + button, .button-group button + [type="button"], .button-group button + [type="submit"], .button-group button + [type="reset"], .button-group button + a.button, .button-group button + label.button, .button-group button + .button, .button-group [type="button"] + button, .button-group [type="button"] + [type="button"], .button-group [type="button"] + [type="submit"], .button-group [type="button"] + [type="reset"], .button-group [type="button"] + a.button, .button-group [type="button"] + label.button, .button-group [type="button"] + .button, .button-group [type="submit"] + button, .button-group [type="submit"] + [type="button"], .button-group [type="submit"] + [type="submit"], .button-group [type="submit"] + [type="reset"], .button-group [type="submit"] + a.button, .button-group [type="submit"] + label.button, .button-group [type="submit"] + .button, .button-group [type="reset"] + button, .button-group [type="reset"] + [type="button"], .button-group [type="reset"] + [type="submit"], .button-group [type="reset"] + [type="reset"], .button-group [type="reset"] + a.button, .button-group [type="reset"] + label.button, .button-group [type="reset"] + .button, .button-group a.button + button, .button-group a.button + [type="button"], .button-group a.button + [type="submit"], .button-group a.button + [type="reset"], .button-group a.button + a.button, .button-group a.button + label.button, .button-group a.button + .button, .button-group label.button + button, .button-group label.button + [type="button"], .button-group label.button + [type="submit"], .button-group label.button + [type="reset"], .button-group label.button + a.button, .button-group label.button + label.button, .button-group label.button + .button, .button-group .button + button, .button-group .button + [type="button"], .button-group .button + [type="submit"], .button-group .button + [type="reset"], .button-group .button + a.button, .button-group .button + label.button, .button-group .button + .button {
       border-left: 1px solid #bdbdbd; }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .button-group {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
@@ -798,7 +798,7 @@ th {
 th:first-child, td:first-child {
   border-left: 0; }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   table {
     border-collapse: collapse;
     border: 0;
@@ -984,7 +984,7 @@ th:first-child, td:first-child {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px; }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .tabs {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;

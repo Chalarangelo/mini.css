@@ -126,9 +126,9 @@ $grid-column-padding:			0 4px;											// Padding for the columns of the grid
 //$grid-extra-small-prefix:		'xs';											// Extra small screen class prefix for grid
 //$grid-small-breakpoint:		480px;											// Small screen breakpoint for grid
 $grid-small-prefix:				'sm';											// Small screen class prefix for grid
-$grid-medium-breakpoint:		800px;											// Medium screen breakpoint for grid
+$grid-medium-breakpoint:		768px;											// Medium screen breakpoint for grid
 $grid-medium-prefix:			'md';											// Medium screen class prefix for grid
-$grid-large-breakpoint:			1080px;											// Large screen breakpoint for grid
+$grid-large-breakpoint:			1280px;											// Large screen breakpoint for grid
 $grid-large-prefix:				'lg';											// Large screen class prefix for grid
 //	Notes:
 // [1] - If the value of $use-four-step-grid is `true`, the grid system will contain 4 breakpoints instead of 3, along with
@@ -210,7 +210,7 @@ $button-disabled-opacity:		0.65;											// Disabled button elements opacity
 $button-class-name:				'button';										// Class for custom button elements
 $button-group-name:				'button-group';									// Class for button groups
 $button-group-border-style:		1px solid #bdbdbd;								// Border style for button groups
-$button-group-mobile-breakpoint:768px;											// Breakpoint for button group mobile view
+$button-group-mobile-breakpoint:767px;											// Breakpoint for button group mobile view
 $hide-file-inputs:				true;											// Should a style be added that makes all
 																				// <input>s of type `file` hidden?
 																				// (`true`/`false`) [1]
@@ -278,7 +278,7 @@ $table-head-back-color:			#eceff1;										// Background color for <th>
 $table-head-fore-color:			$fore-color;									// Tex color for <th>
 $table-body-back-color:			#fafafa;										// Background color for <td>
 $table-body-fore-color:			$fore-color;									// Text color for <td>
-$table-mobile-breakpoint:		768px;											// Breakpoint for <table> mobile view
+$table-mobile-breakpoint:		767px;											// Breakpoint for <table> mobile view
 $table-mobile-card-spacing:		10px;											// Space between <tr> cards - mobile view
 $table-mobile-card-label:		'data-label';									// Attribute used to replace column headers
 																				// in mobile view [1]

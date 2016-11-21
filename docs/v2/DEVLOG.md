@@ -484,3 +484,10 @@
 - Started writing `grid.html` page.
 - Added basic info for grid, set layout for the page, checked styles - they're all good for grid.
 - Added layout demo showcase for the screen specific layouts.
+
+
+## 20161121
+
+- Changed `grid` breakpoints to `768px` and `1280px` accordingly to better support different resolutions.
+- Updated `$button-group-mobile-breakpoint` to `767px` so that it will break on resolutions under `768px` instead of including `768px`.
+- Same update for `$table-mobile-breakpoint` to `767px`.

@@ -936,6 +936,9 @@ table {
       text-align: right; }
     table.horizontal.preset tbody tr:first-child > td {
       padding-left: 20px; } }
+table.striped tr:nth-of-type(2n) > td {
+  background: #eeeeee; }
+
 .card {
   display: -webkit-box;
   -webkit-box-orient: vertical;

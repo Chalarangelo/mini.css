@@ -286,6 +286,9 @@ $table-mobile-label-font-weight:$bold-font-weight;								// Font weight for mob
 $table-horizontal-breakpoint:	768px;											// Breakpoint for <table> horizontal view
 $table-horizontal-name:			'horizontal';									// Class name for <table> horizontal view
 $table-not-responsive-name:		'preset';										// Class name for <table> non-responsive view
+$table-striped-name:			'striped';										// Class name for striped <table>
+$table-striped-alt-body-back-color:												// Alternate background color for <td> in
+								#eeeeee;										// striped <table>
 //	Notes:
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly. 

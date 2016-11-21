@@ -271,3 +271,10 @@ $table-horizontal-name:			'horizontal' !default;							// Class name for table h
 	   	
 	}
 }
+// Striped tables.
+$table-striped-name:			'striped' !default;								// Class name for striped table
+table.#{$table-striped-name} {
+	tr:nth-of-type(2n) > td {
+		background: $table-striped-alt-body-back-color;
+	}
+}

@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- Live demo styled as of 20161121 -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/1e86e6fa5a86792ac46681aafd02e4b71cbd14f2/dist/mini-default.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/f3acf0b06d3784e17b6bf89ed2913e6e53f3c5a0/dist/mini-default.min.css">
     <!-- Local stylesheet -->
     <link rel="stylesheet" href="../../dist/mini-default.min.css">   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -105,7 +105,7 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Easy page layout is one of the main advantages of using a CSS toolkit over writing your own styles. The <strong>grid</strong> module utilizes the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Layout</a> to provide you with a modern and responsive layout grid system for all your needs. Rules in the <strong>grid</strong> module help you create basic fluid containers for your grid and allow you to design layouts that work well on all screen sizes using a simple row and column structure. The grid system contains definitions for both fluid columns that resize according to their siblings and columns with preset sizes on different screen sizes, as well as rules that allow you to move certain columns to the first or last place on the grid's row on different devices, helping you present the page in a different layout without duplicating any content. All of the rules in the module are built around accessibility, so screen readers can easily read you pages.</p><br>
+              <p>Easy page layout is one of the main advantages of using a CSS toolkit over writing your own styles. The <strong>grid</strong> module utilizes the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Layout</a> to provide you with a modern and responsive layout grid system for all your needs. Rules in the <strong>grid</strong> module help you create basic fluid containers for your grid and allow you to design layouts that work well on all screen sizes using a simple row and column structure. The grid system contains definitions for both fluid columns that resize according to their siblings and columns with preset sizes on different screen sizes, as well as rules that allow you to offset or move certain columns to the first or last place on the grid's row on different devices, helping you present the page in a different layout without duplicating any content. All of the rules in the module are built around accessibility, so screen readers can easily read you pages.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
@@ -137,7 +137,7 @@
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
                 <p>The grid system's basic layout is composed of three components, presented below in the order they should be added to the DOM tree:</p>
                 <ol>
-                  <li>The grid's <code>.container</code> is the outermost shell for your grid. It is a fluid container that serves wrap the flexible grid system inside it.</li>
+                  <li>The grid's <code>.container</code> is the outermost layer of your grid system. It is a fluid container that wraps the flexible grid system inside it.</li>
                   <li>Inside the container, <code>.row</code>s are added to specify each row of the grid layout. Rows serve to provide you with a simple basis for your layout's columns.</li>
                   <li>Finally, inside the rows, <code>.col-</code> elements are added for the columns. The columns are a little bit more complex than the container and rows, as they are what makes the layout respond to changes. There are two basic ways to define a column for your layout:
                     <ul>
@@ -206,7 +206,7 @@
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li><strong>mini.css</strong> uses a mobile-first approach to the grid system. This means that specifying a layout for smaller device sizes will apply the same layout on medium and large screens, so you do not have to rewrite the same layout for all three screen sizes. However, if you want to change the layout on different screen sizes, check the section below.</li>
+                <li><strong>mini.css</strong> uses a mobile-first approach in its grid system. This means that specifying a layout for smaller device sizes will apply the same layout on medium-sized and larger screens, so you do not have to rewrite the same layout for all three screen sizes. However, if you want to change the layout on different screen sizes, check the section below.</li>
                 <li>The <strong>grid</strong> module is compatible with modern browsers, but does not display properly on older browsers.</li>
                 <li>The specific breakpoints for small, medium and large screen sizes are as follows:
                   <ul>
@@ -215,7 +215,7 @@
                     <li><strong>large</strong>: <code>1280px</code> wide or more</li>
                   </ul>
                 </li>
-                <li>Fluid columns can be used for sizes that are not of the form <code>100%/12 * X</code> where <code>X</code> an integer value between <code>1</code> and <code>12</code>. For example, if you have 7 <code>.col-sm</code> elements in one row, each of the elements will have a width of 1/7th the width of the row.</li>
+                <li>Fluid columns can be used for sizes that are not of the form <code>100%/12&times;<span class="fore-tertiary">X</span></code> where <code><span class="fore-tertiary">X</span></code> an integer value between <code>1</code> and <code>12</code>. For example, if you have 7 <code>.col-sm</code> elements in one row, each of the elements will have a width of 1/7th the width of the row.</li>
               </ul>
               <hr>
               <div class="row">
@@ -245,14 +245,14 @@
     &lt;div class=&quot;col-sm-6&quot;&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;A column can also be a row at the same time, if you want to include sub-columns inside it. You can make the same element both a column in its own row and a row for its containing columns. The same can be applied for the container. Containers can, however, be omitted, when already inside a grid.</p>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;A column can also be a row at the same time, if you want to include sub-columns inside it. You can make the same element both a column in its own row and a row for its containing columns. The same idea can be applied for the container. Containers can, however, be omitted, when already inside a grid.</p>
                   <p></p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;row&quot;&gt;
     <span class="fore-secondary">&lt;!-- content without columns --&gt;</span>
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using rows with content inside that is not in columns. Prefer to use a single <code>.col-sm</code> to wrap the content inside these, otherwise there might be unexpected behavior.</p>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using rows with content inside that is not in wrapped in columns. Try to use a single <code>.col-sm</code> to wrap the content inside these, otherwise there might be unexpected behavior.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre> &lt;div class=&quot;row&quot;&gt;
@@ -285,7 +285,7 @@
     &lt;/div&gt;
     &lt;p&gt;Normal paragraph.&lt;/p&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid mixing rows and columns with normal content that is not wrapped in the respective level of the grid system. Always wrap content inside the proper containers (container, row or column) in your grid layout.</p>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid mixing rows and columns with normal content that is not wrapped on the respective level of the grid system. Always wrap content inside the proper containers (container, row or column) in your grid layout.</p>
                 </div>
               </div>
             </div>
@@ -338,7 +338,7 @@
               <h3>Notes</h3>
               <ul>
                 <li>Leaving a column's size unspecified for a resolution will use the style applied for the previous largest resolution recursively.</li>
-                <li>Changing the layout for different screen sizes can sometime require complex content realignment, offsetting and reordering. For these features, check the sections below.</li>
+                <li>Changing the layout for different screen sizes can sometimes require complex content realignment, offsetting and reordering. For these features, check the sections below.</li>
               </ul>
               <hr>
               <div class="row">
@@ -360,7 +360,7 @@
   &lt;div class=&quot;col-sm-12 col-md-6&quot;&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;If you want to place two columns side by side on some displays, but not on others (e.g. placing them vertically on smaller displays, then nex to each other on medium or large displays), place them in one row, not multiple, otherwise you will not achieve the desired effect.</p>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;If you want to place two columns side by side on some displays, but not on others (e.g. placing them vertically on smaller displays, then next to each other on medium-sized or larger displays), place them in one row, not multiple, otherwise you will not achieve the desired effect.</p>
                 </div>
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;div class=&quot;row&quot;&gt;
@@ -369,7 +369,7 @@
   &lt;div class=&quot;col-sm-6 col-md-8&quot;&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Specify only the screen-specific column sizes that you need. You can omit the medium-sized screens' size from a column if its layout on smaller screens is fluid or should be the same as in medium-sized displays. Or, if your large screen layout is the same as your medium-sized screen layout, you can omit the class for the large screen.</p>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Specify only the screen-specific column sizes that you need. You can omit the medium-sized screens' size from a column if its layout on smaller screens is fluid or should be the same as in medium-sized displays. Or, if your larger screen layout is the same as your medium-sized screen layout, you can omit the class for the larger screen.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;div class=&quot;row&quot;&gt;
@@ -449,7 +449,7 @@
     &lt;div class=&quot;col-sm col-md-5 col-lg-4 col-lg-offset-2&quot;&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can specify offset classes when you need them and omit them otherwise. This means that, if you want to offset a column only on a medium-sized or a larger screen, you can just specify the offset for that specific screen. Specifying an offset for a smaller screen, however, will apply it to medium-sized and larger screens as well, medium-sized screen offsets will apply to larger screen etc. similar to how the layout system works.</p>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can specify offset classes when you need them and omit them otherwise. This means that, if you want to offset a column only on a medium-sized or a larger screen, you can just specify the offset for that specific screen. Specifying an offset for a smaller screen, however, will apply it to medium-sized and larger screens as well, medium-sized screen offsets will apply to larger screens etc. similar to how the layout system works.</p>
                 </div>
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;div class=&quot;row&quot;&gt;

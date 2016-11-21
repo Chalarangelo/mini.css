@@ -506,3 +506,6 @@
 - Updated a few colors for consistency.
 - Added support for `striped` `table`s in the `table` module. Updated accordingly with variables and the likes.
 - Added responsiveness for `striped` `table`s.
+- Updated stylesheet references for all live pages.
+- Fixed typos and proofread the `grid` documentation page.
+- Added sample `hr` to the `core` documentation page.

@@ -163,7 +163,7 @@ code {
 	@if $code-element-padding != 0 {
 		padding: $code-element-padding;
 	}
-	@if $code-element-box-shadow != 0 {
+	@if $code-element-box-shadow != none {
 		box-shadow: $code-element-box-shadow;
 	}
 }
@@ -192,7 +192,7 @@ pre {
 	@if $add-pre-element-sidebar {
 		border-left: $pre-element-sidebar-style;
 	}
-	@if $pre-element-box-shadow != 0 {
+	@if $pre-element-box-shadow != none {
 		box-shadow: $pre-element-box-shadow;
 	}
 }
@@ -213,7 +213,7 @@ kbd {
 	@if $kbd-element-padding != 0 {
 		padding: $kbd-element-padding;
 	}
-	@if $kbd-element-box-shadow != 0 {
+	@if $kbd-element-box-shadow != none {
 		box-shadow: $kbd-element-box-shadow;
 	}
 }

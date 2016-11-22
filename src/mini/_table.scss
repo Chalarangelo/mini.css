@@ -12,7 +12,7 @@ table {
 	@if $table-margin != 0 {
 		margin: $table-margin;
 	}
-	@if $table-box-shadow !=0 {
+	@if $table-box-shadow != none {
 		box-shadow: $table-box-shadow;
 	}
 	caption {
@@ -58,7 +58,7 @@ $table-not-responsive-name:		'preset' !default;								// Class name for table n
 		border-collapse: collapse;
 		border: 0;	
 		width: 100%;
-		@if $table-box-shadow !=0 {
+		@if $table-box-shadow != none {
 			box-shadow: none;
 		}
 		// Accessibility (element is not visible, but screen readers read it normally)
@@ -80,7 +80,7 @@ $table-not-responsive-name:		'preset' !default;								// Class name for table n
 			@if $table-border-radius != 0 {
 				border-radius: $table-border-radius;
 			}  
-			@if $table-box-shadow !=0 {
+			@if $table-box-shadow != none {
 				box-shadow: $table-box-shadow;
 			}	
 			@if $table-body-back-color != $back-color {

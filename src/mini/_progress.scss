@@ -16,7 +16,7 @@ progress {
 	@if $progress-margin != 0 {
 		margin: $progress-margin;	
 	}
-	@if $progress-box-shadow != 0 {
+	@if $progress-box-shadow != none {
 		box-shadow: $progress-box-shadow;
 	}
 	background: $progress-back-color;		// Background color of the element (IE 10+ and Firefox).

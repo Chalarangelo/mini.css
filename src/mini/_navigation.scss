@@ -19,7 +19,7 @@ header {
 	@if $header-padding != 0 {
 		padding: $header-padding;
 	}
-	@if $header-box-shadow != 0 {
+	@if $header-box-shadow != none {
 		box-shadow: $header-box-shadow;
 	}
 	// Reposnivenes for smaller displays, scrolls horizontally.
@@ -53,7 +53,7 @@ header {
 		&:hover, &:active, &:focus {
 			background: $header-link-hover-color;
 		}
-		@if $button-box-shadow != 0 {	// Override for buttons when shadow is enabled.
+		@if $button-box-shadow != none {	// Override for buttons when shadow is enabled.
 			box-shadow: none;
 		}
 		@if $button-border-style != 0 {	// Override for buttons when border-style is enabled.
@@ -87,7 +87,7 @@ nav {
 	@if $nav-padding != 0 {
 		padding: $nav-padding;
 	}
-	@if $nav-box-shadow != 0 {
+	@if $nav-box-shadow != none {
 		box-shadow: $nav-box-shadow;
 	}
 	a, a:visited {

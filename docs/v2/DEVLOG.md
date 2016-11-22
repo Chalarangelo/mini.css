@@ -522,3 +522,4 @@
 - Added `box-shadow` to the `nav` element to be in line with the rest of the design. Added a `border`, too.
 - Tweaked colors and values of other things in the `navigation` module's variables in the flavor file.
 - Updated `navigation` module with optimization and borders.
+- Updated all `box-shadow` variable checks to test for `none` instead of `0` as that is the proper syntax used for no shadows. This will help with user-friendliness in customization.

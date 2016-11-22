@@ -30,7 +30,7 @@ ul.#{$breadcrumbs-name} {
 	@if $breadcrumbs-border-radius != 0 {
 		border-radius: $breadcrumbs-border-radius;
 	}
-	@if $breadcrumbs-box-shadow !=0 {
+	@if $breadcrumbs-box-shadow != none {
 		box-shadow: $breadcrumbs-box-shadow;
 	}
 	li {

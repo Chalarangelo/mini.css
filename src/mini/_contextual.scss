@@ -26,7 +26,7 @@ mark {
 	@if $mark-margin != 0 {
 		margin: $mark-margin;
 	}
-	@if $mark-box-shadow != 0 {
+	@if $mark-box-shadow != none {
 		box-shadow: $mark-box-shadow;
 	}
 }
@@ -84,7 +84,7 @@ $alert-name:              'alert' !default;               // Class name for the 
 	@if $alert-padding != 0 {
 		padding: $alert-padding;
 	}
-	@if $alert-box-shadow != 0 {
+	@if $alert-box-shadow != none {
 		box-shadow: $alert-box-shadow;
 	}
 }

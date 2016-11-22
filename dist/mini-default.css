@@ -547,6 +547,8 @@ header {
     box-shadow: none; }
     header button:hover, header button:active, header button:focus, header [type="button"]:hover, header [type="button"]:active, header [type="button"]:focus, header a.button:hover, header a.button:active, header a.button:focus, header label.button:hover, header label.button:active, header label.button:focus, header .button:hover, header .button:active, header .button:focus {
       background: #37474f; }
+  header > span:not(.logo) {
+    vertical-align: super; }
   header .logo, header a.button {
     text-decoration: none; }
 

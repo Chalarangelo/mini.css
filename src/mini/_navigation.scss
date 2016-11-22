@@ -1,6 +1,8 @@
 // Definitions for navigation elements.
 // Different elements are styled based on the same set of rules.
 // Header styling.
+$button-class-name:				'button' !default;								// Class name for the button-like elements
+$header-logo-name:				'logo' !default;								// Class name for <header>'s logo
 header {
 	display: block;		// Correct display for older versions of IE.
 	height: $header-height;
@@ -22,7 +24,7 @@ header {
 	@if $header-box-shadow != none {
 		box-shadow: $header-box-shadow;
 	}
-	// Reposnivenes for smaller displays, scrolls horizontally.
+	// Resposniveness for smaller displays, scrolls horizontally.
 	white-space: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -59,6 +61,9 @@ header {
 		@if $button-border-style != 0 {	// Override for buttons when border-style is enabled.
 			border: 0;
 		}
+	}
+	> span:not(.#{$header-logo-name}) {	// Style separators' vertical alignment.
+		vertical-align: super;
 	}
 	@if $apply-link-underline {		// Override for links if underline is enabled.
 		.#{$header-logo-name}, a.#{$button-class-name} {

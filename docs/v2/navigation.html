@@ -129,6 +129,7 @@
                   <a href="#" class="logo">Logo</a>
                   <button>Home</button>
                   <a href="#" class="button">News</a>
+                  <span>|</span>
                   <button>About</button>
                   <button>Contact</button>
                 </header>
@@ -136,26 +137,45 @@
             </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>The <code>&lt;header&gt;</code> HTML element is used for a page's top horizontal navigation menu. It can contain a unique <code>.logo</code> element as its first child (this structure is not mandatory, but still recommended as a best practice), which can be either text (with or without a link) or an image. The rest of the elements inside the <code>&lt;header&gt;</code> must be <code>&lt;button&gt;</code>, <code>&lt;label class=&quot;button&quot;&gt;</code> or <code>&lt;a class=&quot;button&quot;&gt;</code> elements in order to be styled properly. Textual separators between those can be added using <code>&lt;span&gt;</code> elements.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;header&gt;
+  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt;
+  &lt;button&gt;Home&lt;/button&gt;
+  &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;News&lt;/a&gt;
+  &lt;span&gt;|&lt;/span&gt;
+  &lt;button&gt;About&lt;/button&gt;
+  &lt;button&gt;Contact&lt;/button&gt;
+&lt;/header&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>The <code>&lt;header&gt;</code> element is partially responsive on smaller screen devices. More specifically, when the content inside it exceeds the width of the viewport (ie. overflows to the right), users will be able to scroll horizontally in order to see the rest of the menu.</li>
+                <li>The <code>&lt;header&gt;</code> element does not display as <code class="fore-tertiary">fixed</code> by default. You can, however, alter this CSS property manually, if you so desire.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;header&gt;
+  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt;
+  &lt;button&gt;Action 1&lt;/button&gt;
+  &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Action 2&lt;/a&gt;
+  &lt;label class=&quot;button&quot;&gt;Action 3&lt;/label&gt;
+&lt;/header&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can mix different elements styled like buttons inside a <code>&lt;header&gt;</code> element. In fact, we strongly recommend doing so, if you need to.</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;header&gt;
+  &lt;a href=&quot;#&quot; class=&quot;button logo&quot;&gt;Logo&lt;/a&gt;
+&lt;/header&gt;
+<span class="fore-secondary">&lt;!-- or --&gt;</span>
+&lt;header&gt;
+  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+&lt;/header&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;The <code>.logo</code> element should not be a <code>&lt;button&gt;</code> or a <code>.button</code> element. On the other hand, links and labels in the <code>&lt;header&gt;</code> should not be without a <code>.button</code> class. Ignoring this rule might cause unexpected behavior.</p>
                 </div>
               </div>
             </div>

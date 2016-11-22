@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- Live demo styled as of 20161111 -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/f3acf0b06d3784e17b6bf89ed2913e6e53f3c5a0/dist/mini-default.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/f3acf0b06d3784e17b6bf89ed2913e6e53f3c5a0/dist/mini-default.min.css"> -->
     <!-- Local stylesheet -->
     <link rel="stylesheet" href="../../dist/mini-default.min.css">
     <title>mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework</title>
@@ -393,16 +393,50 @@
               </tbody>
             </table>
 
+
+            <style> .border-fix > td, .border-fix > th { border-top: 0; } </style>
+
             <table class="preset">
               <caption>Hacker List</caption>
               <tbody>
-                <tr>
+                <tr class="border-fix">
                   <th data-label="Name"></th>
                   <th data-label="Surname">Surname</td>
                   <th data-label="Email">Email</td>
                   <th data-label="Handle">Handle</td>
                 </tr>
                 <tr>
+                  <th data-label="Name">John</th>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <th data-label="Name">Lisa</th>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <th data-label="Name">Max</th>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <th data-label="Name">Adam</th>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+            <table class="preset">
+              <caption>Hacker List</caption>
+              <tbody>
+                <tr class="border-fix">
                   <th data-label="Name">John</th>
                   <td data-label="Surname">Smith</td>
                   <td data-label="Email">johnsmith@mail.com</td>

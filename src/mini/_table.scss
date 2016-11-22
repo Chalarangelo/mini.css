@@ -35,8 +35,10 @@ table {
 			color: $table-body-fore-color;
 		}
 	}
+	thead th {
+		border-top: 0;	
+	}
 	th {
-		border-top: 0;
 		@if $table-head-back-color != $back-color {
 			background: $table-head-back-color;
 		}
@@ -122,6 +124,7 @@ $table-horizontal-name:			'horizontal' !default;							// Class name for table h
 				flex: 0 1 auto;
 		-webkit-flex-flow: row wrap;
 	    		flex-flow: row wrap;
+	    padding: $table-row-padding;
 	   	caption {
 	   		// Old syntax
 			-webkit-box-flex: 1;
@@ -180,6 +183,11 @@ $table-horizontal-name:			'horizontal' !default;							// Class name for table h
 	   	}
 	   	th {
 	   		text-align: right;
+	   	}
+	   	thead {
+	   		tr:first-child {
+	   			padding-left: 0;
+	   		}
 	   	}
 	   	tbody {
 	   		tr:first-child > td {

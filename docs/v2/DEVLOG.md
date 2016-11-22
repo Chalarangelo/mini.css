@@ -509,3 +509,9 @@
 - Updated stylesheet references for all live pages.
 - Fixed typos and proofread the `grid` documentation page.
 - Added sample `hr` to the `core` documentation page.
+
+## 20161122
+
+- Added side `padding` to the `horizontal` `table`s.
+- Fixed the way `th` elements display on `vertical` `table`s that contain `th` elements inside the `tbody` by adding a semi-specific rule for the `thead` `th` elements. More specificity caused problems.
+- Tested `table` module changes on mobile, Firefox and Chrome.

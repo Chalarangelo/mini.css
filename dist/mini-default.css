@@ -786,8 +786,9 @@ table {
     border-top: 1px solid #bdbdbd; }
   table td {
     background: #fafafa; }
+  table thead th {
+    border-top: 0; }
   table th {
-    border-top: 0;
     background: #cfd8dc; }
   table th:first-child, table td:first-child {
     border-left: 0; }
@@ -837,7 +838,8 @@ table {
     -webkit-flex: 0 1 auto;
     flex: 0 1 auto;
     -webkit-flex-flow: row wrap;
-    flex-flow: row wrap; }
+    flex-flow: row wrap;
+    padding: 6px; }
     table.horizontal caption {
       -webkit-box-flex: 1;
       max-width: 100%;
@@ -879,6 +881,8 @@ table {
         border-top: 0; }
     table.horizontal th {
       text-align: right; }
+    table.horizontal thead tr:first-child {
+      padding-left: 0; }
     table.horizontal tbody tr:first-child > td {
       padding-left: 20px; } }
 @media (max-width: 767px) {

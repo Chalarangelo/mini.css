@@ -134,36 +134,40 @@ $grid-large-prefix:				'lg';											// Large screen class prefix for grid
 // [1] - If the value of $use-four-step-grid is `true`, the grid system will contain 4 breakpoints instead of 3, along with
 //	the needed styles. In this case, values should be specified for $grid-extra-small-prefix and $grid-small-breakpoint.
 //	Variables for navigational elements
-$header-height:					36px;											// Height for header
-$header-back-color:				#263238;										// Background color for header
-$header-fore-color:				$back-color;									// Text color for header
-$header-margin:					0;												// Margin for header
-$header-padding:				2px 8px;										// Padding for header
-$header-box-shadow:																// Box shadow for header
+$header-height:					36px;											// Height for <header>
+$header-back-color:				#263238;										// Background color for <header>
+$header-fore-color:				$back-color;									// Text color for <header>
+$header-border-style:			0;												// Border style for <header>
+$header-margin:					0;												// Margin for <header>
+$header-padding:				2px 8px;										// Padding for <header>
+$header-box-shadow:																// Box shadow for <header>
 	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);	
-$header-logo-name:				'logo';											// Class name for header's logo
-$header-logo-font-size:			1.75em;											// Font size for header's logo
-$header-logo-line-height:		1.2;											// Line height for header's logo
-$header-logo-margin:			1px 6px 1px 1px;								// Margin for header's logo
-$header-logo-padding:			0;												// Padding for header's logo
-$header-link-hover-color:		#37474f;										// Hover color for header's links
-$header-link-margin:			2px 0 0;										// Margin for header's links
-$nav-back-color:				#eceff1;										// Background for nav
-$nav-fore-color:				$fore-color;									// Text color for nav
-$nav-border-style:				0;												// Border style for nav
-$nav-border-radius:				1px;											// Border radius for nav
-$nav-padding:					4px 4px 4px 16px;								// Padding for nav
-$nav-margin:					2px;											// Margin for nav
-$nav-link-fore-color:			$link-fore-color;								// Text color for links in nav
-$nav-sublink-prefix:			'sublink';										// Prefix for the subcategory links in nav
+$header-logo-name:				'logo';											// Class name for <header>'s logo
+$header-logo-font-size:			1.75em;											// Font size for <header>'s logo
+$header-logo-line-height:		1.2;											// Line height for <header>'s logo
+$header-logo-margin:			1px 6px 1px 1px;								// Margin for <header>'s logo
+$header-logo-padding:			0;												// Padding for <header>'s logo
+$header-link-hover-color:		#37474f;										// Hover color for <header>'s links
+$header-link-margin:			2px 0 0;										// Margin for <header>'s links
+$nav-back-color:				#eceff1;										// Background for <nav>
+$nav-fore-color:				$fore-color;									// Text color for <nav>
+$nav-border-style:				1px solid #bdbdbd;								// Border style for <nav>
+$nav-border-radius:				0;												// Border radius for <nav>
+$nav-padding:					8px 8px 16px 20px;								// Padding for <nav>
+$nav-margin:					2px;											// Margin for <nav>
+$nav-box-shadow: 																// Box shadow for <nav>
+	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);	
+$nav-link-fore-color:			#1565c0;										// Text color for links in <nav>
+$nav-sublink-prefix:			'sublink';										// Prefix for the subcategory links in <nav>
 $nav-sublink-depth:				2;												// Amount of subcategory classes to add
 $nav-sublink-padding-left:		12px;											// Left padding to add to subcategories
-$footer-back-color:				#263238;										// Background color for footer
-$footer-fore-color:				$back-color;									// Text color for footer
-$footer-font-size:				85%;											// Font size for footer
-$footer-margin:					18px 0 0;										// Margin for footer
-$footer-padding:				22px 10px 12px;									// Padding for footer
-$footer-link-fore-color:		#039be5;										// Text color for links in footer
+$footer-back-color:				#263238;										// Background color for <footer>
+$footer-fore-color:				$back-color;									// Text color for <footer>
+$footer-border-style:			0;												// Border stye for <footer>
+$footer-font-size:				85%;											// Font size for <footer>
+$footer-margin:					18px 0 0;										// Margin for <footer>
+$footer-padding:				22px 10px 12px;									// Padding for <footer>
+$footer-link-fore-color:		#039be5;										// Text color for links in <footer>
 //	Variables for forms and inputs
 $form-back-color:				#eceff1;										// Background color for forms
 $form-fore-color:				$fore-color;									// Text color for forms

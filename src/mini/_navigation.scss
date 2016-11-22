@@ -4,8 +4,15 @@
 header {
 	display: block;		// Correct display for older versions of IE.
 	height: $header-height;
-	background: $header-back-color;
-	color: $header-fore-color;
+	@if $header-back-color != $back-color {
+		background: $header-back-color;
+	}
+	@if $header-fore-color != $fore-color {
+		color: $header-fore-color;
+	}
+	@if $header-border-style != 0 {
+		border: $header-border-style;
+	}
 	@if $header-margin != 0 {
 		margin: $header-margin;
 	}
@@ -35,17 +42,18 @@ header {
 			padding: $header-logo-padding;
 		}
 	}
+	// Link styling.
 	button, [type="button"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
-		background: $header-back-color;
+		background: $header-back-color;		// Apply color regardless to override styling from other things.
 		color: $header-fore-color;
-		vertical-align: top;
+		vertical-align: top;		// Alignemt, really important to make this work well.
 		@if $header-link-margin != 0 {
 			margin: $header-link-margin;
 		}
 		&:hover, &:active, &:focus {
 			background: $header-link-hover-color;
 		}
-		@if $button-box-shadow !=0 {	// Override for buttons when shadow is enabled.
+		@if $button-box-shadow != 0 {	// Override for buttons when shadow is enabled.
 			box-shadow: none;
 		}
 		@if $button-border-style != 0 {	// Override for buttons when border-style is enabled.
@@ -79,9 +87,12 @@ nav {
 	@if $nav-padding != 0 {
 		padding: $nav-padding;
 	}
+	@if $nav-box-shadow != 0 {
+		box-shadow: $nav-box-shadow;
+	}
 	a, a:visited {
 		display: block;
-		color: $nav-link-fore-color;
+		color: $nav-link-fore-color;	// Apply regardless to de-stylize visited links.
 	}
 	// Subcategories in navigation.
 	$nav-sublink-prefix:		'sublink' !default;		// Prefix for the subcategory tabs in nav
@@ -96,8 +107,15 @@ nav {
 // Footer styling.
 footer {
 	display: block;		// Correct display for older versions of IE.
-	background: $footer-back-color;
-	color: $footer-fore-color;
+	@if $footer-back-color != $back-color {
+		background: $footer-back-color;
+	}
+	@if $footer-fore-color != $fore-color {
+		color: $footer-fore-color;
+	}
+	@if $footer-border-style != 0 {
+		border: $footer-border-style;
+	}
 	@if $footer-margin != 0 {
 		margin: $footer-margin;
 	}

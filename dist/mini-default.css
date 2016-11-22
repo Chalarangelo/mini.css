@@ -553,12 +553,13 @@ header {
 nav {
   display: block;
   background: #eceff1;
-  border-radius: 1px;
+  border: 1px solid #bdbdbd;
   margin: 2px;
-  padding: 4px 4px 4px 16px; }
+  padding: 8px 8px 16px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15); }
   nav a, nav a:visited {
     display: block;
-    color: #0277bd; }
+    color: #1565c0; }
   nav .sublink-1 {
     padding-left: 12px; }
   nav .sublink-2 {

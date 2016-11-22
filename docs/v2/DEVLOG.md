@@ -515,3 +515,6 @@
 - Added side `padding` to the `horizontal` `table`s.
 - Fixed the way `th` elements display on `vertical` `table`s that contain `th` elements inside the `tbody` by adding a semi-specific rule for the `thead` `th` elements. More specificity caused problems.
 - Tested `table` module changes on mobile, Firefox and Chrome.
+- Created `navigation.html`.
+- Added basic info for `navigation` doc page.
+- Added basic structure for `navigation` doc page.

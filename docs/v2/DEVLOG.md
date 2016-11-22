@@ -526,3 +526,5 @@
 - Added some extra styling to the `header` component, allowing `span` elements to be used as separators between links.
 - Added defaults to header at the very top.
 - Added description for the `header` component in the `navigation` doc page.
+- Added description for the `nav` component in the `navigation` doc page.
+- Added `footer` documentation in the `navigation` doc page. Finished the page.

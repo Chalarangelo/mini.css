@@ -45,12 +45,12 @@
       .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
       .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
       .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
-      .col-sm-12.col-sm-last.col-md-4.col-md-normal {
+      .col-sm-12.col-sm-last.col-lg-4.col-lg-normal {
         box-sizing: border-box;
         border-right: 1px solid #bdbdbd;
       }
       @media (max-width: 800px){
-        .col-sm-12.col-sm-last.col-md-4.col-md-normal {
+        .col-sm-12.col-sm-last.col-lg-4.col-lg-normal {
           border: 0;
           border-top: 1px solid #bdbdbd;
         }
@@ -105,7 +105,7 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Menus and navigation are some of the most important elements for any website or web app and their design and ease-of-use are key factors that can determine a page's bounce rates. The <strong>navigation</strong> module takes a step back from all the complicated menu and navigation design paradigms of the modern web, like dropdown menus and hamburger buttons, and tries to reinvent the basics for page navigation using HTML5 elements (i.e. <code>header</code>, <code>nav</code> and <code>footer</code>). Instead of sticking to either horizontal navigation menus (headers) or vertical menus (sidebars), we opted to allow the use of both for different things. Header menus are designed to stand out and contain links to help users find new content, whereas vertical navigation aims to provide a more traditional navigation menu that maps out your website's structure. Finally, footers are also part of the <strong>navigation</strong> module, as they can often provide the user with useful information and/or links that are very important to enhancing their experience.</p><br>
+              <p>Menus and navigation are some of the most important elements for any website or web app and their design and ease-of-use are key factors that can determine a page's bounce rates. The <strong>navigation</strong> module takes a step back from all the complicated menu and navigation design paradigms of the modern web, like dropdown menus and hamburger buttons, and tries to reinvent the basics for page navigation using HTML5 elements (i.e. <code>header</code>, <code>nav</code> and <code>footer</code>) and make navigation fully accessible for screen readers. Instead of sticking to either horizontal navigation menus (headers) or vertical menus (sidebars), we opted to allow the use of both for different things. Header menus are designed to stand out and contain links to help users find new content, whereas vertical navigation aims to provide a more traditional navigation menu that maps out your website's structure. Finally, footers are also part of the <strong>navigation</strong> module, as they can often provide the user with useful information and/or links that are very important to enhancing their experience.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
@@ -189,7 +189,7 @@
               <h2>Navigation Bar</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
                 <div>
                   <br>
                   <nav>
@@ -202,32 +202,43 @@
                     <a href="#" class="sublink-2">Staff AMA - 16th, Dec</a>
                     <a href="#" class="sublink-1">Policy Update</a>                
                     <a href="#">About</a>
-                    <a href="#" >Contact</a>
+                    <a href="#">Contact</a>
                   </nav>
                   <br>
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>To add vertical navigation to your websites, use the <code>&lt;nav&gt;</code> HTML element. Adding links is pretty simple, just use <code>&lt;a&gt;</code> elements, no lists or anything else required. In order to add subcategories to your vertical navigation, use any normal textual element as the title of the subcategory and follow it with its links as normal, adding the <code>.sublink-1</code> class to them. Similarly, you can create a subcategory with a depth of 2, using a similar structure and the <code>.sublink-2</code> class.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;nav&gt;
+     &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+     &lt;span&gt;News&lt;/span&gt;
+     &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;New Courses&lt;/a&gt;
+     &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;Certifications&lt;/a&gt;
+     &lt;span class=&quot;sublink-1&quot;&gt;Events&lt;/span&gt;
+     &lt;a href=&quot;#&quot; class=&quot;sublink-2&quot;&gt;Course Showcase - 12th, Dec&lt;/a&gt;
+     &lt;a href=&quot;#&quot; class=&quot;sublink-2&quot;&gt;Staff AMA - 16th, Dec&lt;/a&gt;
+     &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;Policy Update&lt;/a&gt;                
+     &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
+     &lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>Subcategories and their links support a depth of 2 by default. If, however, you need more than that, we recommend you check the <a href="customization.html">customization page</a> for instructions on how to add more depth to the vertical navigation.</li>
+                <li>We strongly suggest you do not add irrelevant things inside your <code>&nav;</code> element, like images or text that are not part of the navigation menu.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12">
+                  <pre>&lt;div class=&quot;col-sm-12 col-sm-last col-md-3 col-md-first&quot;&gt;
+      &lt;nav&gt;
+            <span class="fore-tertiary">&lt;!-- navigation content --&gt;</span>
+      &lt;/nav&gt;
+&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;We strongly recommend using the <code>&lt;nav&gt;</code> element in combination with the <a href="grid.html"><strong>grid</strong> module</a> to make your layouts more responsive. For example, you could make your sidebar appear on the left side of your content in medium-sized and larger screens, but move to the very bottom of your content on smaller screens.</p>
                 </div>
               </div>
             </div>
@@ -251,27 +262,11 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>The <code>&lt;footer&gt;</code> element is used to create your page's footer. As normal, add the <code>&lt;footer&gt;</code> at or near the end of your <code>&lt;body&gt;</code> element and add content to it like you would otherwise.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
-              </div>
-            </div>
-            <div class="section">
-            <h3>Notes</h3>
-              <ul>
-                <li></li>
-                <li></li>
-              </ul>
-              <hr>
-              <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
-                </div>
+                <pre>&lt;footer&gt;
+      &lt;p&gt;&amp;copy; 2001-2016 Web Corporation | &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Terms of use&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;</pre>
               </div>
             </div>
           </div>

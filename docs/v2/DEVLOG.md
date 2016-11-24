@@ -528,3 +528,11 @@
 - Added description for the `header` component in the `navigation` doc page.
 - Added description for the `nav` component in the `navigation` doc page.
 - Added `footer` documentation in the `navigation` doc page. Finished the page.
+
+## 20161124
+
+- Created `docs/v2/progress.html` doc page for `progress` module.
+- Added variable `$progress-max-value` for the arithmetic max value of the `progress` elements, changed to `1000` from original default `100`.
+- Made some minor tweaks to the `progress` module and component.
+- Opened a question on SO about the `progress` element's `margin-right`: http://stackoverflow.com/questions/40795218/progress-element-does-not-respect-right-margin
+- Wrote the basic information for the `progress` module on the doc page.

@@ -1149,26 +1149,26 @@ progress {
   -moz-appearance: none;
   appearance: none;
   width: 100%;
-  height: 10px;
+  height: 14px;
   border: 0;
   border-radius: 1px;
-  margin: 1px auto;
+  margin: 2px 10px;
   box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.1), 0 0.5px 0.5px rgba(0, 0, 0, 0.15);
-  background: #f5f5f5;
+  background: #eeeeee;
   color: #01579b; }
   progress::-webkit-progress-value {
     background: #01579b;
     border-top-left-radius: 1px;
     border-bottom-left-radius: 1px; }
   progress::-webkit-progress-bar {
-    background: #f5f5f5; }
+    background: #eeeeee; }
   progress::-moz-progress-bar {
     background: #01579b;
     border-top-left-radius: 1px;
     border-bottom-left-radius: 1px; }
-  progress[value="100"]::-webkit-progress-value {
+  progress[value="1000"]::-webkit-progress-value {
     border-radius: 1px; }
-  progress[value="100"]::-moz-progress-bar {
+  progress[value="1000"]::-moz-progress-bar {
     border-radius: 1px; }
 
 @-webkit-keyframes spinner-donut-anim {
@@ -1355,7 +1355,7 @@ mark.bubble {
 progress.inline {
   display: inline-block;
   vertical-align: middle;
-  width: 60vw; }
+  width: 60%; }
 
 progress.secondary {
   color: #e53935; }
@@ -1381,9 +1381,9 @@ progress.nano {
   progress.nano::-moz-progress-bar {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
-  progress.nano[value="100"]::-webkit-progress-value {
+  progress.nano[value="1000"]::-webkit-progress-value {
     border-radius: 0; }
-  progress.nano[value="100"]::-moz-progress-bar {
+  progress.nano[value="1000"]::-moz-progress-bar {
     border-radius: 0; }
 
 .spinner-donut.tertiary {

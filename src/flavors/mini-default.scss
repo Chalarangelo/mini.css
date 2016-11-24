@@ -381,16 +381,17 @@ $alert-margin:					1px 10px;										// Margin for alerts
 $alert-box-shadow:																// Box shadow for alerts
 	0 1px 3px rgba(0,0,0, 0.18), 0 1px 2px rgba(0, 0, 0, 0.26);	
 //	Variables for progress elements and spinners
-$progress-back-color:			#f5f5f5;										// Background color for <progress>
+$progress-back-color:			#eeeeee;										// Background color for <progress>
 $progress-fore-color:			#01579b;										// Progress bar color for <progress>
-$progress-height:				10px;											// Height of <progress>
+$progress-height:				14px;											// Height of <progress>
+$progress-max-value:			1000;											// Arithmetic max value of <progress>
 $progress-border-style:			0;												// Border style for <progress>
 $progress-border-radius:		1px;											// Border radius for the <progress> container
-$progress-margin:				1px auto;										// Margin for <progress>
+$progress-margin:				2px 10px;										// Margin for <progress>
 $progress-box-shadow:															// Box shadow for <progress>
 	0 0.5px 1px rgba(0,0,0, 0.1), 0 0.5px 0.5px rgba(0, 0, 0, 0.15);
 $progress-inline-name:			'inline';										// Class name for inline <progress>
-$progress-inline-width:			60vw;											// Width for inline <progress>
+$progress-inline-width:			60%;											// Width for inline <progress>
 $progress-variant1-name:		'secondary';									// Class name for <progress> variant 1
 $progress-variant1-fore-color:	#e53935;										// Progress bar color for <progress> variant 1
 $progress-variant2-name:		'tertiary';										// Class name for <progress> variant 2

@@ -1,6 +1,7 @@
 // Definitions for progress elements and spinners.
 // Progress elements use the progress element as their base.
 // Default styling for progress. Use mixins for alternate styles.
+$progress-max-value:			100 !default;									// Arithmetic max value of <progress>
 progress {
 	display: block;
 	vertical-align: baseline;	// Correct vertical alignment in certain browsers.	
@@ -38,7 +39,7 @@ progress {
 			border-bottom-left-radius: $progress-border-radius;
 		}
 	}
-	&[value="100"] {
+	&[value="#{$progress-max-value}"] {
 		&::-webkit-progress-value {
 			@if $progress-border-radius != 0 {
 				border-radius: $progress-border-radius;
@@ -118,7 +119,7 @@ progress {
 				border-top-left-radius: $progress-alt-border-radius;
 				border-bottom-left-radius: $progress-alt-border-radius;
 			}
-			&[value="100"] {
+			&[value="#{$progress-max-value}"] {
 				&::-webkit-progress-value {
 					border-radius: $progress-alt-border-radius;
 				}

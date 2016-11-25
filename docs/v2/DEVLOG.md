@@ -541,3 +541,5 @@
 
 - Added high-tech feature queries for `progress` elements and variants, `margin` and `width` should now work properly. Tested in Firefox and Chrome.
 - Updated demo pages with latest build.
+- Tweaks in the `core` module to use a `px`-based root in the `html` element.
+- Tweaks in the `core` module to use the "native font stack" - See here: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/

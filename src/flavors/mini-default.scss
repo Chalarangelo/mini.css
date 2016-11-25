@@ -11,12 +11,15 @@
 //	Basic rules for body and typography
 $fore-color:					#212121;										// Text and general foreground color
 $back-color:					#f5f5f5;										// Body background color
-$base-font-family:				"\"Helvetica Neue\", Helvetica, sans-serif";	// Default fonts for all elements
-$base-font-size:				1em;											// Default font sizing for all elements
+$base-font-family:																// Default font stack for all elements:
+	'-apple-system, BlinkMacSystemFont,\"Segoe UI\",\"Roboto\", \"Droid Sans\",\"Helvetica Neue\", Helvetica, Arial, sans-serif';
+// OS X and iOS system fonts (San Francisco) -> Windows system fonts -> Android system fonts (newer and older) -> Fallback fonts 
+$base-root-font-size:			16px;											// Root font sizing for all elements [1]
+$base-font-size:				1em;											// Default font sizing for all elements [2]
 $base-line-height:				1.5;											// Default line height for all elements.
 $body-margin:					0;												// Margin for the body
 $apply-defaults-to-all:			true;											// Should default values be applied to all 
-																				// elements? (`true` or `false`) [1]
+																				// elements? (`true` or `false`) [3]
 $h1-font-size:					2em;											// Font size of h1
 $h2-font-size:					1.5em;											// Font size for h2
 $h3-font-size:					1.25em;											// Font size for h3
@@ -28,7 +31,7 @@ $heading-margin:				12px 8px;										// Margin for all headings
 $heading-font-weight:			500;											// Font weight for all headings
 $heading-smalltext-fore-color:	#424242;										// <small> color in headings	
 $make-heading-smalltext-block:	true;											// Should <small> elements in headings
-																				// be displayed as blocks (`true`/`false`) [2]
+																				// be displayed as blocks (`true`/`false`) [4]
 $heading-smalltext-b-font-size:	75%;											// Font size of block <small> elements in headings
 $heading-smalltext-b-top-margin:-4px;											// Top margin of block <small> elements in headings
 $paragraph-margin:				1px 8px;										// Paragraph element margin
@@ -38,10 +41,10 @@ $horizontal-rule-margin:		8px;											// <hr> margin
 $horizontal-rule-border-style:	1px solid #757575;								// Border style for horizontal rules (used 
 																				// in the <hr> element's border-top)
 $horizontal-rule-fancy-style:	true;											// Should a fancy styling be applied for the
-																				// <hr> element (`true`/`false`) [3]
+																				// <hr> element (`true`/`false`) [5]
 $horizontal-rule-fancy-gradient:"to right, #bdbdbd, #616161, #bdbdbd";			// Gradient style for fancy horizontal rule
 $use-default-code-fonts:		true;											// Should default font choice (monospace) be
-																				// used for code elements? (`true`/`false`) [4]
+																				// used for code elements? (`true`/`false`) [6]
 //$code-font-family:			monospace, monospace;							// Fonts for code elements if not default
 $code-element-padding:			2px 4px;										// Padding for <code>
 $code-element-fore-color:		$fore-color;									// Text color for <code>
@@ -59,7 +62,7 @@ $pre-element-margin:			8px 10px;										// Margin for <pre>
 $pre-element-box-shadow:														// Box shadow for <pre>
 	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);		
 $add-pre-element-sidebar:		true;											// Should a fancy sidebar be added to the
-																				// left side of <pre> (`true`/`false`)
+																				// left side of <pre> (`true`/`false`) [7]
 $pre-element-sidebar-style:		3px solid #1565c0;								// Style of the sidebar of <pre>
 $kbd-element-padding:			2px 4px;										// Padding for <kbd>
 $kbd-element-fore-color:		$back-color;									// Text color for <kbd>
@@ -69,14 +72,14 @@ $kbd-element-border-radius:		2px;											// Border radius for <kbd>
 $kbd-element-box-shadow:														// Box shadow for <kbd>
 	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
 $style-samp-element:			false;											// Should styles for <samp> be included? 
-																				// (`true`/`false`) [6]
+																				// (`true`/`false`) [8]
 //$samp-element-padding:		2px 4px;										// Padding for <samp>
 //$samp-element-fore-color:		$fore-color;									// Text color for <samp>
 //$samp-element-back-color:		#2196f3;										// Background color for <samp>
 //$samp-element-border-style:	0;												// Border style for <samp>
 //$samp-element-border-radius:	2px;											// Border radius for <samp>
 $include-dfn-fix:				true;											// Should the fix for Android 4.3 concerning <dfn>
-																				// be included (`true`/`false`) [7]
+																				// be included (`true`/`false`) [9]
 $small-font-size:				75%;											// Font size for <small> elements
 $sup-font-size:					75%;											// Font size for <sup> elements
 $sub-font-size:					75%;											// Font size for <sub> elements
@@ -86,29 +89,34 @@ $link-fore-color:				#0277bd;										// Text color for <a>
 $link-visited-fore-color:		#01579b;										// Text color for visited <a>
 $link-font-weight:				500;											// Font weight for <a>
 $apply-link-underline:			true;											// Should an underline be applied to all <a>
-																				// elements? (`true`/`false`) [8]
+																				// elements? (`true`/`false`) [10]
 $apply-link-hover-fade:			true;											// Should the :hover and :focus state of <a>
 																				// elements use fade-out instead of a different
-																				// color (`true`/`false`) [9]
+																				// color (`true`/`false`) [11]
 //$link-hover-fore-color:		#0288d1;										// Text color for <a> when hovered or focused
 //	Notes:
-// [1] - It is recommended to set the value of $apply-defaults-to-all to `true`, unless you want to apply extra styling 
+// [1] - The value $base-root-font-size should be in `px` only! This rule is very important, as it will determine the root
+//	element's font sizing.
+// [2] - The value of $base-font-size will only be used if the value of $apply-defaults-to-all is set to `true` (see [3]).
+//	This is due to the fact that applying the value of it on the root element again will overwrite the value of 
+//	$base-root-font-size (see [1]). The value of this variable should be set in either `em` or `rem`.
+// [3] - It is recommended to set the value of $apply-defaults-to-all to `true`, unless you want to apply extra styling 
 //	to elements manually.
-// [2] - If the value of $make-header-smalltext-block is `true` the <small> elements in headers will be displayed below
-//	the main header and the 2 values specified below will apply.
-// [3] - If $horizontal-rule-fancy-style is set to `true` the value of $horizontal-rule-border-style will not be used and
+// [4] - If the value of $make-heading-smalltext-block is `true` the <small> elements in headings will be displayed below
+//	the main heading and the 2 values specified below will apply.
+// [5] - If $horizontal-rule-fancy-style is set to `true` the value of $horizontal-rule-border-style will not be used and
 //	a gradient with the style specified in $horizontal-rule-fancy-gradient will be applied instead.
-// [4] - If the value of $use-default-code-fonts is set to `false` the value of $code-font-family will be used. `true`
+// [6] - If the value of $use-default-code-fonts is set to `false` the value of $code-font-family will be used. `true`
 //	will apply the proper fix to use monospace font without any problems on all browsers.
-// [5] - if the value of $add-pre-element-sidebar is set to true, the style specified in $pre-element-sidebar-style will
+// [7] - if the value of $add-pre-element-sidebar is set to true, the style specified in $pre-element-sidebar-style will
 //	be applied as a left border for the <pre> elements. 
-// [6] - If the value of $style-samp-element is set to `false`, no styling will be included in the final CSS file for
+// [8] - If the value of $style-samp-element is set to `false`, no styling will be included in the final CSS file for
 //	`samp` elements. Otherwise, the styling defined in the $samp-... variables will be applied.
-// [7] - If the value of $include-dfn-fix is set to `true` a styling fix will be applied, so that the <dfn> elements are
+// [9] - If the value of $include-dfn-fix is set to `true` a styling fix will be applied, so that the <dfn> elements are
 //	displayed properly on older versions of Android (4.3-) in italics. Otherwise, said fix will not be included.
-// [8] - If the value of $apply-link-underline is set to `true`, an underline will be applied to the link in its normal
+// [10] - If the value of $apply-link-underline is set to `true`, an underline will be applied to the link in its normal
 //	color, as defined in $link-fore-color.
-// [9] - If `apply-link-hover-fade` is set to `true`, a fading transition will be used for the link when hovered over or
+// [11] - If `apply-link-hover-fade` is set to `true`, a fading transition will be used for the link when hovered over or
 //	focused. Otherwise, the color specified in $link-hover-fore-color will be used.
 //	Variables for grid elements
 $use-four-step-grid:			false;											// Should the old 4-step grid system be used

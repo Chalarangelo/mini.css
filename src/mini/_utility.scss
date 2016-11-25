@@ -23,6 +23,8 @@ ul.#{$breadcrumbs-name} {
 	display: -webkit-flex;
 	display: 		 flex;
 	list-style: none;
+	margin-left: 0;			// Reset margins from list styling
+	margin-right: 0;		// Reset margins from list styling
 	padding: 0;				// Remove unnecessary left and right empty space
 	@if $breadcrumbs-border-style !=0 {
 		border: $breadcrumbs-border-style;

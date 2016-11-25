@@ -116,6 +116,11 @@ p {
 	margin: $paragraph-margin;
 }
 
+ol, ul {
+	margin: $list-margin;
+	padding-left: $list-left-padding;
+}
+
 b, strong {
 	font-weight: $bold-font-weight;
 }

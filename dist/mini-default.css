@@ -75,6 +75,10 @@ h6 {
 p {
   margin: 1px 8px; }
 
+ol, ul {
+  margin: 1px 8px 10px;
+  padding-left: 28px; }
+
 b, strong {
   font-weight: 700; }
 
@@ -1220,6 +1224,8 @@ ul.breadcrumbs {
   display: -webkit-flex;
   display: flex;
   list-style: none;
+  margin-left: 0;
+  margin-right: 0;
   padding: 0;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15); }
@@ -1398,6 +1404,11 @@ progress.nano {
   progress.nano[value="1000"]::-moz-progress-bar {
     border-radius: 0; }
 
+@supports (width: calc(100% - 2*0)) or (width: -webkit-calc(100% - 2*0)) {
+  progress.nano {
+    width: -webkit-calc(100% - 2*0);
+    width: calc(100% - 2*0);
+    margin: 0 0; } }
 .spinner-donut.tertiary {
   border: 4px solid #e8f5e9;
   border-left: 4px solid #2e7d32; }

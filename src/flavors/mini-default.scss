@@ -34,7 +34,9 @@ $make-heading-smalltext-block:	true;											// Should <small> elements in hea
 																				// be displayed as blocks (`true`/`false`) [4]
 $heading-smalltext-b-font-size:	75%;											// Font size of block <small> elements in headings
 $heading-smalltext-b-top-margin:-4px;											// Top margin of block <small> elements in headings
-$paragraph-margin:				1px 8px;										// Paragraph element margin
+$paragraph-margin:				1px 8px;										// Margin for <p> elements
+$list-margin:					1px 8px 10px;									// Margin for <ol> and <ul> elements
+$list-left-padding:				28px;											// Left padding for <ol> and <ul> elements
 $bold-font-weight:				700;											// Font weight for <b> and <strong>
 $horizontal-rule-line-height:	1.25em;											// <hr> line height
 $horizontal-rule-margin:		8px;											// <hr> margin
@@ -410,7 +412,7 @@ $progress-style1-height:		2px;											// Height for <progress> style 1
 $progress-style1-top-bottom-margin:												// Top and bottom margin for <progress> style 1
 								0;
 $progress-style1-left-right-margin:												// Left and right margin for <progress> style 1
-								auto;								
+								0;								
 $progress-style1-border-style:	0;												// Border style for <progress> style 1
 $progress-style1-border-radius:	0;												// Border radius for <progress> style 1
 $spinner-donut-name:			'spinner-donut';								// Class name for donut spinner

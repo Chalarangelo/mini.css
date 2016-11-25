@@ -545,3 +545,7 @@
 - Tweaks in the `core` module to use the "native font stack" - See here: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
 - Documented basic `progress` module's `progress` element structure.
 - Added `spinner` support for older `webkit`-based browsers.
+- Added variables and styling for `ol` and `ul` lists in the `core` module after realising I forgot to style these elements and having found a bit of a styling discrepancy.
+- Updated `core` documentation page to reflect list changes.
+- Made some tweaks in the `utility` module to make `breadcrumbs` work as before.
+- Added `progress` variant section in the `progress` module's doc page.

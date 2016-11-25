@@ -536,3 +536,7 @@
 - Made some minor tweaks to the `progress` module and component.
 - Opened a question on SO about the `progress` element's `margin-right`: http://stackoverflow.com/questions/40795218/progress-element-does-not-respect-right-margin
 - Wrote the basic information for the `progress` module on the doc page.
+
+## 20161125
+
+- Added high-tech feature queries for `progress` elements and variants, `margin` and `width` should now work properly. Tested in Firefox and Chrome.

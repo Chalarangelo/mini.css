@@ -7,15 +7,16 @@ progress {
 	vertical-align: baseline;	// Correct vertical alignment in certain browsers.	
 	-webkit-appearance: none;
 	   -moz-appearance: none;
-			appearance: none;
-	width: 100%;
+			appearance: none;	
 	height: $progress-height;
+	width: 100%;
 	border: $progress-border-style;
 	@if $progress-border-radius != 0 {
 		border-radius: $progress-border-radius;
 	}	
-	@if $progress-margin != 0 {
-		margin: $progress-margin;	
+	@if $progress-top-bottom-margin != 0 {
+		margin: $progress-top-bottom-margin auto;
+		// Check somewhere below for the feature query that allows left and right margins to display properly on newer browsers.
 	}
 	@if $progress-box-shadow != none {
 		box-shadow: $progress-box-shadow;
@@ -49,6 +50,16 @@ progress {
 			@if $progress-border-radius != 0 {
 				border-radius: $progress-border-radius;
 			}
+		}
+	}
+}
+// Feature query that checks if the left and right margins can be applied properly.
+@if $progress-left-right-margin != 0 and $progress-left-right-margin != auto {
+	@supports (width: calc(100% - 2*#{$progress-left-right-margin})) or (width: -webkit-calc(100% - 2*#{$progress-left-right-margin})) {
+		progress {
+			width: 	-webkit-calc(100% - 2*#{$progress-left-right-margin});
+			width: 			calc(100% - 2*#{$progress-left-right-margin});
+			margin: $progress-top-bottom-margin $progress-left-right-margin;
 		}
 	}
 }
@@ -93,18 +104,20 @@ progress {
 // Variables:
 // - $progress-alt-name : The name of the class used for the alternate progress style.
 // - $progress-alt-height : The height of the alternate progress style.
-// - $progress-alt-margin : (Optional) The margin of the alternate progress style. Defaults to the margin of the progress.
+// - $progress-alt-top-bottom-margin : (Optional) The top and bottom margin of the alternate progress style. Defaults to the margin of the progress.
+// - $progress-alt-left-right-margin : (Optional) The left and right margin of the alternate progress style. Defaults to the margin of the progress.
 // - $progress-alt-border-style : (Optional) The border style of the alternate progress style. Defaults to the border style of the progress.
 // - $progress-alt-border-radius : (Optional) The border radius of the alternate progress style. Defaults to the border radius of the progress.
 @mixin make-progress-alt-style ($progress-alt-name, $progress-alt-height, 
-	$progress-alt-margin: $progress-margin, $progress-alt-border-style: $progress-border-style, 
-	$progress-alt-border-radius: $progress-border-radius) {
+	$progress-alt-top-bottom-margin: $progress-top-bottom-margin, $progress-alt-left-right-margin: $progress-left-right-margin, 
+	$progress-alt-border-style: $progress-border-style, $progress-alt-border-radius: $progress-border-radius) {
 	progress.#{$progress-alt-name} {
 		@if $progress-alt-height != $progress-height {
 			height: $progress-alt-height;
 		}
-		@if $progress-alt-margin != $progress-margin {
-			margin: $progress-alt-margin;
+		width: 100%;
+		@if $progress-alt-top-bottom-margin != $progress-top-bottom-margin {
+			margin: $progress-alt-top-bottom-margin auto;
 		}
 		@if $progress-alt-border-style != $progress-border-style {
 			border: $progress-alt-border-style;
@@ -126,6 +139,16 @@ progress {
 				&::-moz-progress-bar {
 					border-radius: $progress-alt-border-radius;
 				}
+			}
+		}
+	}
+// Feature query that checks if the left and right margins can be applied properly.
+	@if $progress-alt-left-right-margin != $progress-left-right-margin and $progress-alt-left-right-margin != auto {
+		@supports (width: calc(100% - 2*#{$progress-alt-left-right-margin})) or (width: -webkit-calc(100% - 2*#{$progress-alt-left-right-margin})) {
+			progress.#{$progress-alt-name} {
+				width: 	-webkit-calc(100% - 2*#{$progress-alt-left-right-margin});
+				width: 			calc(100% - 2*#{$progress-alt-left-right-margin});
+				margin: $progress-alt-top-bottom-margin $progress-alt-left-right-margin;
 			}
 		}
 	}

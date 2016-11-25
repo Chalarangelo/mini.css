@@ -387,7 +387,8 @@ $progress-height:				14px;											// Height of <progress>
 $progress-max-value:			1000;											// Arithmetic max value of <progress>
 $progress-border-style:			0;												// Border style for <progress>
 $progress-border-radius:		1px;											// Border radius for the <progress> container
-$progress-margin:				2px 10px;										// Margin for <progress>
+$progress-top-bottom-margin:	2px;											// Top and bottom margin for <progress>
+$progress-left-right-margin:	10px;											// Left and right margin for <progress>
 $progress-box-shadow:															// Box shadow for <progress>
 	0 0.5px 1px rgba(0,0,0, 0.1), 0 0.5px 0.5px rgba(0, 0, 0, 0.15);
 $progress-inline-name:			'inline';										// Class name for inline <progress>
@@ -398,7 +399,10 @@ $progress-variant2-name:		'tertiary';										// Class name for <progress> vari
 $progress-variant2-fore-color:	#689f38;										// Progress bar color for <progress> variant 2
 $progress-style1-name:			'nano';											// Class name for <progress> style 1
 $progress-style1-height:		2px;											// Height for <progress> style 1
-$progress-style1-margin:		0 auto 1px;										// Margin for <progress> style 1
+$progress-style1-top-bottom-margin:												// Top and bottom margin for <progress> style 1
+								0;
+$progress-style1-left-right-margin:												// Left and right margin for <progress> style 1
+								auto;								
 $progress-style1-border-style:	0;												// Border style for <progress> style 1
 $progress-style1-border-radius:	0;												// Border radius for <progress> style 1
 $spinner-donut-name:			'spinner-donut';								// Class name for donut spinner
@@ -486,7 +490,7 @@ $center-block-name:				'center-block';									// Class name for center block
 @include make-progress-alt-color ($progress-variant1-name, $progress-variant1-fore-color);
 @include make-progress-alt-color ($progress-variant2-name, $progress-variant2-fore-color);
 @include make-progress-alt-style ($progress-style1-name, $progress-style1-height, 
-	$progress-style1-margin, $progress-style1-border-style, $progress-style1-border-radius);
+	$progress-style1-top-bottom-margin, $progress-style1-left-right-margin, $progress-style1-border-style, $progress-style1-border-radius);
 @include make-spinner-donut-alt-color ($spinner-donut-variant2-name, $spinner-donut-variant2-back-color, 
 	$spinner-donut-variant2-fore-color);
 @include make-spinner-donut-alt-style ($spinner-donut-style1-name, $spinner-donut-style1-size, 

@@ -123,29 +123,36 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
+                <p>Process is 0% complete!</p>
+                <progress value="0" max="1000"></progress>
+                <p>Process is 45% complete!</p>
+                <progress value="450" max="1000"></progress>
+                <p>Process is 100% complete!</p>
+                <progress value="1000" max="1000"></progress>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>To create a progress bar, use the <code>&lt;progress&gt;</code> HTML element, specify the preset maximum of <code>max="1000"</code> and set a <code>value</code> between <code>0</code> and <code>1000</code>. Update your <code>&lt;progress&gt;</code> element using some Javascript code, by changing its <code>value</code> to any integer in the same range.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;progress value=&quot;0&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
+&lt;progress value=&quot;450&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
+&lt;progress value=&quot;1000&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>We made sure that the <code>&lt;progress&gt;</code> element displays properly on all modern browsers, using browser-specific rules. However, there might be some irregularities with older browsers, especially legacy versions of Internet Explorer.</li>
+                <li>If the preset <code>max="1000"</code> does not suit your needs, you should check the <a href="customization.html">customization page</a> for instructions on how to set your own maximum value for the <code>&lt;progress&gt;</code> element.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;progress value=&quot;80&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using different values for the <code>&lt;progress&gt;</code> element's <code>max</code>, except for the preset one (<code>1000</code>).</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;progress value=&quot;450.5&quot; max=&quot;1000.0&quot;&gt;&lt;/progress&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Try not to use floating point values for either the <code>&lt;progress&gt;</code> element's <code>value</code> or <code>max</code>. During testing of the module, we found that floating point values could cause unexpected behavior. </p>
                 </div>
               </div>
             </div>

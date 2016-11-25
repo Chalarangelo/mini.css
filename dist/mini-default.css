@@ -1176,11 +1176,11 @@ progress {
   progress[value="1000"]::-moz-progress-bar {
     border-radius: 1px; }
 
-@supports (width: calc(100% - 2*10px)) or (width: -webkit-calc(100% - 2*10px)) {
+@supports (width: calc(100% - 2*8px)) or (width: -webkit-calc(100% - 2*8px)) {
   progress {
-    width: -webkit-calc(100% - 2*10px);
-    width: calc(100% - 2*10px);
-    margin: 2px 10px; } }
+    width: -webkit-calc(100% - 2*8px);
+    width: calc(100% - 2*8px);
+    margin: 2px 8px; } }
 @-webkit-keyframes spinner-donut-anim {
   0% {
     -webkit-transform: rotate(0deg); }

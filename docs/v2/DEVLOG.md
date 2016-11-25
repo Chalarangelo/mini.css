@@ -544,3 +544,4 @@
 - Tweaks in the `core` module to use a `px`-based root in the `html` element.
 - Tweaks in the `core` module to use the "native font stack" - See here: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
 - Documented basic `progress` module's `progress` element structure.
+- Added `spinner` support for older `webkit`-based browsers.

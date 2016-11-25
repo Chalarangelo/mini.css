@@ -1198,6 +1198,7 @@ progress {
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  -webkit-animation: spinner-donut-anim 1.2s linear infinite;
   animation: spinner-donut-anim 1.2s linear infinite; }
 
 .hidden {

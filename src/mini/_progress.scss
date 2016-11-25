@@ -164,7 +164,8 @@ progress {
 	border-radius: 50%;
 	width: $spinner-donut-size;
 	height: $spinner-donut-size;
-	animation: spinner-donut-anim 1.2s linear infinite;
+	-webkit-animation: spinner-donut-anim 1.2s linear infinite;
+			animation: spinner-donut-anim 1.2s linear infinite;
 }
 // Mixin for alternate donut spinner colors (spinner donut color variants).
 // Variables:

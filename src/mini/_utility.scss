@@ -23,6 +23,7 @@ ul.#{$breadcrumbs-name} {
 	display: -webkit-flex;
 	display: 		 flex;
 	list-style: none;
+	// TODO: ADD MARGIN-TOP WITH A VARIABLE TO MAKE THIS BETTER SPACED, MAYBE ALSO MARGIN-BOTTOM!
 	margin-left: 0;			// Reset margins from list styling
 	margin-right: 0;		// Reset margins from list styling
 	padding: 0;				// Remove unnecessary left and right empty space

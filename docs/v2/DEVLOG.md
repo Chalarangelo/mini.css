@@ -549,3 +549,5 @@
 - Updated `core` documentation page to reflect list changes.
 - Made some tweaks in the `utility` module to make `breadcrumbs` work as before.
 - Added `progress` variant section in the `progress` module's doc page.
+- Updated `index` to reflect the minor bloating of the files that has occured lately. Shame, really.
+- Completed documentation for `progress` module.

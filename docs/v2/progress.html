@@ -49,7 +49,7 @@
         box-sizing: border-box;
         border-right: 1px solid #bdbdbd;
       }
-      @media (max-width: 800px){
+      @media (max-width: 767px){
         .col-sm-12.col-sm-last.col-md-4.col-md-normal {
           border: 0;
           border-top: 1px solid #bdbdbd;
@@ -216,29 +216,32 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
+              <div class="box-centered">
+              <br>
+              <div class="spinner-donut"></div>
+              <br>
+              </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>Donut spinners can be used to indicate that something is loading or that a process is running in the background. To create a donut spinner, add the <code>.spinner-donut</code> class to an element of your liking. We would recommend using a <code>&lt;div&gt;</code> element for most cases, but <code>&lt;span&gt;</code> elements should work pretty well, too.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;spinner-donut&quot;&gt;&lt;/div&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>The <code>.spinner-donut</code> is an animated component, meaning that if a browsers does not support animation, this element might display incorrectly.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;p&gt;Loading... &lt;span class=&quot;spinner-donut&quot;&gt;&lt;/span&gt;&lt;/p&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can place a <code>.spinner-donut</code> inside a paragraph or some other textual context and it will display inline.</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;div class=&quot;spinner-donut&quot;&gt;Loading...&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid inserting text inside the <code>.spinner-donut</code>, as this might cause unexpected bahavior and will probably make the text spin along with it.</p>
                 </div>
               </div>
             </div>
@@ -253,31 +256,27 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
+                <div class="box-centered">
+                  <br>
+                  <div class="spinner-donut secondary"></div><br>
+                  <div class="spinner-donut tertiary"></div><br>
+                  <div class="spinner-donut large"></div>
+                  <br>
+                </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>Apart from the default donut spinner style, there are also two more contextual color classes: <code>.secondary</code> and <code>.tertiary</code>. If your donut spinners are too small, you can also use the <code>.large</code> class to make it pop out a little bit more.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;spinner-donut secondary&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-donut tertiary&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-donut large&quot;&gt;&lt;/div&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>You can mix one of the contextual color classes and the <code>.large</code> class, if you want, similarly to what you can do with progress bars.</li>
               </ul>
-              <hr>
-              <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

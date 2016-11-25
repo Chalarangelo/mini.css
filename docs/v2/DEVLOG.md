@@ -540,3 +540,4 @@
 ## 20161125
 
 - Added high-tech feature queries for `progress` elements and variants, `margin` and `width` should now work properly. Tested in Firefox and Chrome.
+- Updated demo pages with latest build.

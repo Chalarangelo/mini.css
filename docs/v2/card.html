@@ -49,7 +49,7 @@
         box-sizing: border-box;
         border-bottom: 1px solid #bdbdbd;
       }
-      @media (max-width: 1279px){
+      @media (max-width: 767px){
         .col-sm-12.col-sm-last.col-md-12.col-md-normal {
           border: 0;
           border-top: 1px solid #bdbdbd;
@@ -276,17 +276,6 @@
                 <li>Depending on the source website, some embedded videos might not display properly inside a <code>.media</code> section.</li>
                 <li>The <code>.media</code> class has a preset size of <code>height: 200px</code>. If you want to customize this, you should check the <a href="customization.html">customization page</a> for instructions.</li>
               </ul>
-              <hr>
-              <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -299,29 +288,72 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
-              <!-- sample -->
+              <div class="container">  
+                  <br>
+                  <div class="row">
+                    <div class="card small"><div class="section"><h3>Small Card</h3><p>Small cards are <code>240px</code> wide.</p></div></div>
+                    <div class="card large"><div class="section"><h3>Large Card</h3><p>Large cards are <code>480px</code> wide.</p></div></div>
+                    <div class="col-sm-12 col-md-12 col-lg">
+                      <div class="card fluid" style="margin: 2px 10px 20px;"><div class="section"><h3>Fluid Card</h3><p>Fluid cards scale their width based on their container. Always wrap them in a column.</p></div></div>
+                    </div>
+                  </div>
+                  <br>
+                </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
-                <p></p>
+                <p>Apart from the normal-sized cards (<code>320px</code> wide), there are also two different fixed-width card styles, which can be applied using the <code>.small</code> and <code>.large</code> classes respectively. Fluid cards are available via the <code>.fluid</code> class, but they require one extra step in the card structure, between the <code>.row</code> and <code>.card</code> step, which is to insert either a <code>.col-<span class="fore-primary">SCR_SZ</span></code>, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names (<code><span class="fore-tertiary">sm</span></code> for smaller screens, <code><span class="fore-tertiary">md</span></code> for medium-sized screens or <code><span class="fore-tertiary">lg</span></code> for larger screens) or a <code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code> to specify columns with fixed width, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names and <code><span class="fore-secondary">COL_WD</span></code> with a number from <code>1</code> to <code>12</code> specifying the width of the column.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;card small&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+         &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;card large&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+         &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;col-sm-12&quot;&gt;
+    &lt;div class=&quot;card fluid&quot;&gt;
+        &lt;div class=&quot;section&quot;&gt;
+            &lt;p&gt;Content&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li><code>.fluid</code> cards might not display properly in older browsers, especially legacy versions of Internet Explorer.</li>
+                <li>Due to the fact that <code>.fluid</code> cards stretch to fill their parent container, they might not fully respect their margins, like the rest of the cards. However, this should not cause any noticable problems with layout, except maybe the odd pixel here and there.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+         &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;card fluid&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+        &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid mixing fixed-width cards with <code>.fluid</code> cards. Mixing the two could result in some unexpected behaviors. You can, however, mix fixed-width cards with fluid columns, which can contain <code>.fluid</code> cards inside them, effectively achieving the desired effect.</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;card fluid&quot;&gt;
+        &lt;div class=&quot;section&quot;&gt;
+            &lt;p&gt;Content&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using <code>.fluid</code> cards without wrapping them in columns. Try to use a single <code>.col-sm</code> to wrap the card inside it, otherwise there might be unexpected behavior.</p>
                 </div>
               </div>
             </div>

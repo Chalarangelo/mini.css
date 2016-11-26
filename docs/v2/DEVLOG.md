@@ -570,3 +570,4 @@
 - Tested video embedding in `card`s and it works!
 - Added some information and demos about `card` `section`s.
 - Changed values for some `card` module variables used in mixins.
+- Fully documented `card` module.

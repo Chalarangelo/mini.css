@@ -207,7 +207,7 @@
             <h3>Notes</h3>
               <ul>
                 <li><strong>mini.css</strong> uses a mobile-first approach in its grid system. This means that specifying a layout for smaller device sizes will apply the same layout on medium-sized and larger screens, so you do not have to rewrite the same layout for all three screen sizes. However, if you want to change the layout on different screen sizes, check the section below.</li>
-                <li>The <strong>grid</strong> module is compatible with modern browsers, but does not display properly on older browsers.</li>
+                <li>The <strong>grid</strong> module is compatible with modern browsers, but might not display properly on older browsers.</li>
                 <li>The specific breakpoints for small, medium and large screen sizes are as follows:
                   <ul>
                     <li><strong>small</strong>: less than <code>768px</code> wide</li>
@@ -250,7 +250,7 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;row&quot;&gt;
-    <span class="fore-secondary">&lt;!-- content without columns --&gt;</span>
+    &lt;p&gt;Content without columns...&lt;/p&gt;
 &lt;/div&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using rows with content inside that is not in wrapped in columns. Try to use a single <code>.col-sm</code> to wrap the content inside these, otherwise there might be unexpected behavior.</p>
                 </div>

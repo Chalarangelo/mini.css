@@ -134,7 +134,13 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
-                <p>To start using cards in your layout, you need to first create a <code>&lt;div class=&quot;row&quot;&gt;</code> element (you can learn more about that in the <a href="grid.html"><strong>grid</strong></a> module's page). After doing that, you can easily add cards inside the element using <code>&lt;div&gt;</code> elements with the <code>.card</code> class. Add your content inside the cards, splitting it in <code>.section</code>s using <code>&lt;div&gt;</code> elements. Cards will respond to screen changes, realigning themselves as necessary to fit on the page. Due to this property, the example showcased here might not make it immediately apparent that cards normally display side by side in order to fill their parent container.</p>
+                <p>To start using cards in your layout, you need to be somewhat familiar with the <a href="grid.html"><strong>grid</strong></a> module, so if you aren't take a minute to read how its basic layout works. The basic syntax for cards is composed of three components, presented below in the order they should be added to the DOM tree:</p>
+                <ol>
+                  <li>At the outermost level of the card layout syntax is a <code>.row</code>, which serves as a wrapper for all the cards inside it.</li>
+                  <li>Inside the <code>.row</code>, cards are defined as <code>&lt;div&gt;</code> elements of the <code>.card</code> class.</li>
+                  <li>Finally, inside the <code>.card</code>s, you can define sections using the <code>.section</code> class to wrap your content.</li>
+                </ol>
+                <p>Cards will respond to screen changes, realigning themselves as necessary to fit on the page. Due to this property, the example showcased here might not make it immediately apparent that cards normally display side by side in order to fill their parent container.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;card&quot;&gt;
@@ -155,18 +161,73 @@
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li>Check below for section!!!!</li>
-                <li></li>
+                <li>The <strong>card</strong> module is compatible with modern browsers, but might not display properly on older browsers.</li>
+                <li>If you want to further customize your <code>.section</code>s, check the section below.</li>
               </ul>
               <hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                  <pre>&lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+        &lt;h3&gt;Card Title&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section&quot;&gt;
+        &lt;p&gt;Card content...&lt;/p&gt;
+        &lt;p&gt;More card content...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can add as many <code>.section</code>s as you like to a card.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                  <pre>&lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+        &lt;h3&gt;Card Title&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Content not in a section!&lt;/p&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using cards with content inside them that is not wrapped in sections. Try to use a single <code>.section</code> to wrap the content inside these to avoid unexpected behavior.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <pre>&lt;div class=&quot;card&quot;&gt;
+    &lt;h3 class=&quot;section&quot;&gt;Card Title&lt;/h3&gt;
+    &lt;p class=&quot;section&quot;&gt;Card content...&lt;/p&gt;
+&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use the <code>.section</code> class for things other than <code>&lt;div&gt;</code> elements (e.g. <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;button&gt;</code>).</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
+                  <pre>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;If you want to place multiple cards side by side, add them all inside the same <code>.row</code>. Placing cards inside different rows or not inside rows at all can result in unexpected behavior. </p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <pre>&lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;section row&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+<span class="fore-tertiary">&lt;!-- or --&gt;</span>
+&lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can place <code>.row</code> elements inside <code>.card</code> elements, if you want. you should normally also make those rows into card <code>.section</code>s, but for this specific case you might want to make an exception sometimes.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
+                  <pre>&lt;div class=&quot;card row&quot;&gt;
+&lt;/div&gt;
+<span class="fore-secondary">&lt;!-- or --&gt;</span>
+&lt;div class=&quot;card col-sm&quot;&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;You should not have elements that are cards and rows or columns at the same time.</p>
                 </div>
               </div>
             </div>
@@ -214,7 +275,7 @@
         <div class="col-sm">
           <div class="card fluid">
             <div class="section">
-              <h2>Fluid Cards</h2>
+              <h2>Card sizing and fluidity</h2>
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">

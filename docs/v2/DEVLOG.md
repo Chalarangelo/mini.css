@@ -565,3 +565,4 @@
 - Documented `animated` `alert`s. Documentation of `contextual` seems to be complete.
 - Added `card` doc page.
 - Added some basic info on `card`s in doc page.
+- Updated basic documentation for `card` module in doc page.

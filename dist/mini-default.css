@@ -1402,6 +1402,19 @@ mark.inline-block {
   line-height: 1.35;
   padding: 5px; }
 
+.alert.urgent {
+  background: #ffca28; }
+
+.alert.critical {
+  background: #b71c1c;
+  color: #fafafa; }
+
+.alert.urgent {
+  border: 1px solid #ff6f00; }
+
+.alert.critical {
+  border: 1px solid #d50000; }
+
 progress.inline {
   display: inline-block;
   vertical-align: middle;

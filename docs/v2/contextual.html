@@ -185,29 +185,45 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
+              <div>
+                <div class="alert" style="margin-top: 8px; margin-bottom: 8px;"><h3>This is an alert</h3><p>Make sure you read this!</p></div>
+                <div class="alert urgent" style="margin-bottom: 8px;"><h3>This is an urgent alert</h3><p>Make absolutely sure you read this!</p></div>
+                <div class="alert critical" style="margin-bottom: 8px;"><h3>This is a critical alert</h3><p>Make certain you read and actually understand this!</p></div>
+              </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>Alerts replace modal dialogs, along with messages, notifications and traditional alerts with a simpler, easier design paradigm. To create an alert, use a <code>&lt;div&gt;</code> element, which will contain one or more elements (for example a <code>&lt;h3&gt;</code> and a <code>&lt;p&gt;</code>) and add the <code>.alert</code> class to it. For more urgent alerts, use the <code>.urgent</code> class and for critical alerts, use the <code>.critical</code> class.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;alert&quot;&gt;
+    &lt;h3&gt;This is an alert&lt;/h3&gt;
+    &lt;p&gt;Make sure you read this!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert urgent&quot;&gt;
+    &lt;h3&gt;This is an urgent alert&lt;/h3&gt;
+    &lt;p&gt;Make absolutely sure you read this!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert critical&quot;&gt;
+    &lt;h3&gt;This is a critical alert&lt;/h3&gt;
+    &lt;p&gt;Make certain you read and actually understand this!&lt;/p&gt;
+&lt;/div&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>Alert elements do not have any pre-defined behavior. You should use your own Javascript code and interactive HTML elements to deal with showing and hiding them as necessary.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;p class=&quot;alert&quot;&gt;Short and to the point&lt;/p&gt;
+<span class="fore-tertiary">&lt;!-- or --&gt;</span>
+&lt;h2 class=&quot;alert urgent&quot;&gt;Large and to the point&lt;/h2&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Instead of using a <code>&lt;div&gt;</code> element, you can also apply the <code>.alert</code> class to common textual elements, such as paragraphs or headings.</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;button class=&quot;alert&quot;&gt;Not a good alert&lt;/button&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid applying the <code>.alert</code> class to non-textual HTML elements, such as buttons or images. Doing so might result in unexpected behavior.</p>
                 </div>
               </div>
             </div>

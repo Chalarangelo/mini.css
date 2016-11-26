@@ -561,3 +561,4 @@
 - Updated transitions to use `-webkit-` prefix as needed.
 - Added animated `alert`s on condition.
 - Documented basic `mark` behavior and stuff.
+- Basic documentation for `alert`s.

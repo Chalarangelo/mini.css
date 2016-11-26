@@ -1,6 +1,7 @@
 // Definitions for contextual background elements and alerts.
 // Contextual background elements use the mark element as their base.
 // Default styling for mark. Use mixins for alternate styles.
+$mark-inline-block-name:		'inline-block' !default;						// Class name for <mark> inline block styling
 mark {
 	@if $mark-back-color != $back-color {
 		background: $mark-back-color;
@@ -29,6 +30,9 @@ mark {
 	@if $mark-box-shadow != none {
 		box-shadow: $mark-box-shadow;
 	}
+	&.#{$mark-inline-block-name}{
+		display: inline-block; // Can be used to deal with some problems.
+	}
 }
 // Mixin for alternate mark (contextual color variants).
 // Variables:
@@ -48,16 +52,24 @@ mark {
 // Mixin for alternative mark styles (contextual tags).
 // Variables:
 // - $mark-alt-name : The name of the class used for the alternate mark style.
+// - $mark-alt-border-style : The border-style of the alternate mark style.
 // - $mark-alt-border-radius : The border-radius of the alternate mark style.
 // - $mark-alt-padding : (Optional) The padding of the alternate mark style. Defaults to the padding of the mark.
-@mixin make-mark-alt-style ($mark-alt-name, $mark-alt-border-radius, $mark-alt-padding: $mark-padding) {
+// - $mark-alt-box-shadow : (Optional) The box shadow of the alternate mark style. Defaults to the box shadow of the mark.
+@mixin make-mark-alt-style ($mark-alt-name, $mark-alt-border-style, $mark-alt-border-radius,
+	$mark-alt-padding: $mark-padding, $mark-alt-box-shadow : $mark-box-shadow ) {
 	mark.#{$mark-alt-name} {
-		display: inline-block;
-		@if $mark-alt-border-radius != 0 {
+		@if $mark-alt-border-style != $mark-border-style {
+			border: $mark-alt-border-style;
+		}
+		@if $mark-alt-border-radius != $mark-border-radius {
 			border-radius: $mark-alt-border-radius;
 		}
 		@if $mark-alt-padding != $mark-padding {
 			padding: $mark-alt-padding;
+		}
+		@if $mark-alt-box-shadow != $mark-box-shadow {
+			box-shadow: $mark-alt-box-shadow;
 		}
 	}
 }
@@ -65,7 +77,6 @@ mark {
 $alert-name:              'alert' !default;               // Class name for the alerts
 .#{$alert-name} {
 	display: block;
-	max-width: 100%;
 	@if $alert-back-color != $back-color {
 		background: $alert-back-color;
 	}
@@ -108,10 +119,12 @@ $alert-name:              'alert' !default;               // Class name for the 
 // - $alert-alt-name : The name of the class used for the alternate alert style.
 // - $alert-alt-border-style : The border style of the alternate alert style.
 // - $alert-alt-border-radius : Border radius of the alternate alert style.
-// - $alert-alt-padding : Padding of the alternate alert style.
-// - $alert-alt-margin : Margin of the alternate alert style.
-@mixin make-alert-alt-style ($aert-alt-name, $alert-alt-border-style, $alert-alt-border-radius,
-	$alert-alt-padding, $alert-alt-margin) {
+// - $alert-alt-padding : (Optional) Padding of the alternate alert style. Defaults to the alert's padding.
+// - $alert-alt-margin : (Optional) Margin of the alternate alert style. Defaults to the alert's margin.
+// - $alert-alt-box-shadow : (Optional) Box shadow of the alretnate alert style. Defaults to the alert's box shadow.
+@mixin make-alert-alt-style ($alert-alt-name, $alert-alt-border-style, $alert-alt-border-radius,
+	$alert-alt-padding : $alert-padding, $alert-alt-margin : $alert-margin, 
+	$alert-alt-box-shadow : $alert-box-shadow) {
 	.#{$alert-name}.#{$alert-alt-name} {
 		@if $alert-alt-border-style != $alert-border-style {
 			border: $alert-alt-border-style;
@@ -124,6 +137,9 @@ $alert-name:              'alert' !default;               // Class name for the 
 		}
 		@if $alert-alt-margin != $alert-margin {
 			margin: $alert-alt-margin;
+		}
+		@if $alert-alt-box-shadow != $alert-box-shadow {
+			box-shadow: $alert-alt-box-shadowbox-shadow;
 		}
 	}
 }

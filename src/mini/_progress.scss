@@ -108,9 +108,11 @@ progress {
 // - $progress-alt-left-right-margin : (Optional) The left and right margin of the alternate progress style. Defaults to the margin of the progress.
 // - $progress-alt-border-style : (Optional) The border style of the alternate progress style. Defaults to the border style of the progress.
 // - $progress-alt-border-radius : (Optional) The border radius of the alternate progress style. Defaults to the border radius of the progress.
+// - $progress-alt-box-shadow : (Optional) The box shadow of the alternate progress style. Defaults to the box shadow of the progress.
 @mixin make-progress-alt-style ($progress-alt-name, $progress-alt-height, 
-	$progress-alt-top-bottom-margin: $progress-top-bottom-margin, $progress-alt-left-right-margin: $progress-left-right-margin, 
-	$progress-alt-border-style: $progress-border-style, $progress-alt-border-radius: $progress-border-radius) {
+	$progress-alt-top-bottom-margin : $progress-top-bottom-margin, $progress-alt-left-right-margin : $progress-left-right-margin, 
+	$progress-alt-border-style : $progress-border-style, $progress-alt-border-radius : $progress-border-radius, 
+	$progress-alt-box-shadow : $progress-box-shadow) {
 	progress.#{$progress-alt-name} {
 		@if $progress-alt-height != $progress-height {
 			height: $progress-alt-height;
@@ -140,6 +142,9 @@ progress {
 					border-radius: $progress-alt-border-radius;
 				}
 			}
+		}
+		@if $progress-alt-box-shadow != $progress-box-shadow {
+			box-shadow: $progress-alt-box-shadow;
 		}
 	}
 // Feature query that checks if the left and right margins can be applied properly.

@@ -551,3 +551,10 @@
 - Added `progress` variant section in the `progress` module's doc page.
 - Updated `index` to reflect the minor bloating of the files that has occured lately. Shame, really.
 - Completed documentation for `progress` module.
+
+## 20161126
+
+- Tweaks and additions to the `contextual` module. `alert`s should now have the proper mixins, `mark` has an extra class for `inline-block` and `mark` mixins have been updated to incorporate shadows.
+- Contextual testing in `playground`.
+- Updated `progress` module mixin to use `box-shadow` if available.
+- Removed `max-width: 100%` from the `alert` component as it was not needed due to `display: block;`.

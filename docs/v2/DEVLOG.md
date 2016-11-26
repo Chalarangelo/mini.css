@@ -573,3 +573,6 @@
 - Fully documented `card` module.
 - Updated `img` responsiveness in `core` to use `max-width` instead of `width`.
 - Added documentation for responsive `img` and general typography rules in the `core` doc page.
+- Deployed latest demo CSS file.
+- Deleted `template.html` as I never actually used it.
+- Deleted parts of `playground.html` to reflect documented modules.

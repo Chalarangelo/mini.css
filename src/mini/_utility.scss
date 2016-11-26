@@ -3,7 +3,7 @@
 .#{$hidden-name}{
 	display: none !important;
 }
-// Visually hidden elements class. ATTENTIONS: Uses !important.
+// Visually hidden elements class. ATTENTION: Uses !important.
 .#{$visually-hidden-name} {
 	position: absolute !important;
 	width: 1px !important;

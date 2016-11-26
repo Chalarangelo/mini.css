@@ -571,3 +571,5 @@
 - Added some information and demos about `card` `section`s.
 - Changed values for some `card` module variables used in mixins.
 - Fully documented `card` module.
+- Updated `img` responsiveness in `core` to use `max-width` instead of `width`.
+- Added documentation for responsive `img` and general typography rules in the `core` doc page.

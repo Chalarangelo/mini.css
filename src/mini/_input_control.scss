@@ -155,7 +155,8 @@ button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name
 	@if $apply-link-underline {		// Override for links if underline is enabled.
 		text-decoration: none;
 	}
-	transition: all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+			transition: all 0.3s ease 0s;
 	cursor: pointer;
 	&:hover, &:active, &:focus {
 		background: rgba($button-back-color, $button-hover-back-opacity);

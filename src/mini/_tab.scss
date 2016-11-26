@@ -33,7 +33,8 @@ $tab-stacked-name:				'stacked' !default;								// Class name for stacked tabs 
 		display: inline-block;
 		height: $tab-label-height;
 		cursor: pointer;	
-		transition: background 0.3s ease 0s;
+		-webkit-transition: background 0.3s ease 0s;
+				transition: background 0.3s ease 0s;
 		@if $tab-label-back-color != $back-color {
 			background: $tab-label-back-color;
 		}
@@ -86,8 +87,10 @@ $tab-stacked-name:				'stacked' !default;								// Class name for stacked tabs 
 				transform: scaleY(0); 	
 		-webkit-transform-origin: top;
 				transform-origin: top;
-		transition: -webkit-transform 0.3s ease 0s, 
-							transform 0.3s ease 0s;
+		-webkit-transition:	-webkit-transform 0.3s ease 0s, 
+									transform 0.3s ease 0s;
+				transition: -webkit-transform 0.3s ease 0s, 
+									transform 0.3s ease 0s;
 		// Style for tab labels except the first
 		@if $tab-border-style != 0 {
 			& + [type="radio"] + label {

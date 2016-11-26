@@ -350,7 +350,8 @@ a{
 	}
 	@if $apply-link-hover-fade {
 		opacity: 1;
-		transition: all 0.3s ease 0s;
+		-webkit-transition: all 0.3 ease 0s;
+				transition: all 0.3s ease 0s;
 	}
 	&:visited {
 		color: $link-visited-fore-color;

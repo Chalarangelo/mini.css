@@ -73,8 +73,28 @@ mark {
 		}
 	}
 }
+// Alert variables
+$alert-name:              	'alert' !default;               // Class name for the alerts
+$alert-include-animated:   	true !default;               	// Should animated alerts be included?
+$alert-animated-name:		'animated' !default;			// Class name for animated alerts
+// Animation definition for animated alerts (included if wanted)
+@if $alert-include-animated {
+	@-webkit-keyframes alert-anim { 
+		0% 		{ 	-webkit-transform: scale(1); 	} 
+		45% 	{	-webkit-transform: scale(1);	}
+		50% 	{	-webkit-transform: scale(1.005);}
+		55% 	{	-webkit-transform: scale(1);	}
+		100% 	{	-webkit-transform: scale(1);	} 
+	}
+			@keyframes alert-anim { 
+		0% 		{ 			transform: scale(1); 	} 
+		45% 	{			transform: scale(1);	}
+		50% 	{			transform: scale(1.005);}
+		55% 	{			transform: scale(1);	}
+		100% 	{			transform: scale(1);	} 
+	}
+}
 // Default styling for alerts. Use mixins for alternate styles
-$alert-name:              'alert' !default;               // Class name for the alerts
 .#{$alert-name} {
 	display: block;
 	@if $alert-back-color != $back-color {
@@ -97,6 +117,18 @@ $alert-name:              'alert' !default;               // Class name for the 
 	}
 	@if $alert-box-shadow != none {
 		box-shadow: $alert-box-shadow;
+	}
+	@if $alert-include-animated {
+		&.#{$alert-animated-name} {
+			// Try to make the animated alert not blurry
+			-webkit-backface-visibility: hidden;
+					backface-visibility: hidden;
+			-webkit-transform: translateZ(0);
+					transform: translateZ(0);
+			// Apply the animation
+			-webkit-animation: alert-anim 6s linear infinite;
+					animation: alert-anim 6s linear infinite;
+		}
 	}
 }
 // Mixin for alternate alert (alert color variants).

@@ -558,3 +558,5 @@
 - Contextual testing in `playground`.
 - Updated `progress` module mixin to use `box-shadow` if available.
 - Removed `max-width: 100%` from the `alert` component as it was not needed due to `display: block;`.
+- Updated transitions to use `-webkit-` prefix as needed.
+- Added animated `alert`s on condition.

@@ -45,12 +45,12 @@
       .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
       .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
       .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
-      .col-sm-12.col-sm-last.col-lg-4.col-lg-normal {
+      .col-sm-12.col-sm-last.col-md-12.col-md-normal {
         box-sizing: border-box;
-        border-right: 1px solid #bdbdbd;
+        border-bottom: 1px solid #bdbdbd;
       }
       @media (max-width: 1279px){
-        .col-sm-12.col-sm-last.col-lg-4.col-lg-normal {
+        .col-sm-12.col-sm-last.col-md-12.col-md-normal {
           border: 0;
           border-top: 1px solid #bdbdbd;
         }
@@ -122,7 +122,7 @@
               <h2>Basic syntax</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
               <div class="container">  
                   <br>
                   <div class="row">
@@ -133,14 +133,14 @@
                   <br>
                 </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
                 <p>To start using cards in your layout, you need to be somewhat familiar with the <a href="grid.html"><strong>grid</strong></a> module, so if you aren't take a minute to read how its basic layout works. The basic syntax for cards is composed of three components, presented below in the order they should be added to the DOM tree:</p>
                 <ol>
                   <li>At the outermost level of the card layout syntax is a <code>.row</code>, which serves as a wrapper for all the cards inside it.</li>
                   <li>Inside the <code>.row</code>, cards are defined as <code>&lt;div&gt;</code> elements of the <code>.card</code> class.</li>
                   <li>Finally, inside the <code>.card</code>s, you can define sections using the <code>.section</code> class to wrap your content.</li>
                 </ol>
-                <p>Cards will respond to screen changes, realigning themselves as necessary to fit on the page. Due to this property, the example showcased here might not make it immediately apparent that cards normally display side by side in order to fill their parent container.</p>
+                <p>Note that cards will respond to screen changes, realigning themselves as necessary to fit on the page.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;card&quot;&gt;
@@ -227,7 +227,7 @@
 <span class="fore-secondary">&lt;!-- or --&gt;</span>
 &lt;div class=&quot;card col-sm&quot;&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;You should not have elements that are cards and rows or columns at the same time.</p>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;You should not have elements that are both cards and rows or columns at the same time.</p>
                 </div>
               </div>
             </div>
@@ -241,20 +241,40 @@
               <h2>Sections &amp; media</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
-              <!-- sample -->
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
+              <div class="container">  
+                  <br>
+                  <div class="row">
+                    <div class="card"><div class="section"><h3>Card with image</h3></div><img class="section media" src="http://placehold.it/800x600"><div class="section"><p>Content</p></div></div>
+                    <div class="card"><iframe class="section media" width="1280" height="720" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0"></iframe><div class="section"><h3>Card with video</h3></div></div>
+                    <div class="card"><div class="section"><h3>Normal section</h3></div><div class="section double-padded"><h3>Double-padded section</h3></div></div>
+                    <div class="card"><div class="section"><h3>Normal section</h3></div><div class="section dark"><h3>Dark section</h3></div><div class="section darker"><h3>Darker section</h3></div></div>
+                    <div class="card inverse"><div class="section"><h3>Inverse card</h3></div><img class="section media" src="http://placehold.it/800x600"><div class="section"><p>Content</p></div><div class="section"><p>More content</p></div></div>         
+                  </div>
+                  <br>
+                </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
-                <p></p>
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
+                <p>You can do a lot more with card sections apart from filling them with textual content. First off, you can add media sections to your cards, applying the styles of <code>.section</code> and <code>.media</code> to an <code>&lt;img&gt;</code> element or a video element of your choice (e.g. using a <code>&lt;iframe&gt;</code> element in the same manner). If you want a section to have more space around it, use the <code>.double-padded</code> class. There are also two section color variations: <code>.dark</code> and <code>.darker</code>. Finally, you can turn a whole <code>.card</code> black, by applying the <code>.inverse</code> class to it. This is not really a section trick, but we thought we should include it here anyway.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;card&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;section media&quot;&gt;
+    &lt;div class=&quot;section double-padded&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;section dark&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;section darker&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;card inverse&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>The <code>.media</code> class might not be well supported on older browsers, especially legacy versions of Internet Explorer.</li>
+                <li>Depending on the source website, some embedded videos might not display properly inside a <code>.media</code> section.</li>
+                <li>The <code>.media</code> class has a preset size of <code>height: 200px</code>. If you want to customize this, you should check the <a href="customization.html">customization page</a> for instructions.</li>
               </ul>
               <hr>
               <div class="row">
@@ -278,10 +298,10 @@
               <h2>Card sizing and fluidity</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
               <!-- sample -->
               </div>
-              <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
                 <p></p>
                 <h3>Sample code</h3>
                 <pre></pre>

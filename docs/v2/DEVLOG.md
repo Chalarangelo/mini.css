@@ -566,3 +566,7 @@
 - Added `card` doc page.
 - Added some basic info on `card`s in doc page.
 - Updated basic documentation for `card` module in doc page.
+- Updated some mixins in the `card` module.
+- Tested video embedding in `card`s and it works!
+- Added some information and demos about `card` `section`s.
+- Changed values for some `card` module variables used in mixins.

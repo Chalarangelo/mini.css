@@ -102,8 +102,11 @@ $card-normal-width:				320px !default;									// Width for normal cards
 //	of $card-border-style.
 // - $card-alt-border-radius : (Optional) The border radius of the alternate card. Defaults to the value
 //	of $card-border-radius.
+// - $card-alt-section-border-style : (Optional) The border style of the alternate card's sections. Defaults to
+//	the value of $card-section-border-style.
 @mixin make-card-alt-color ($card-alt-name, $card-alt-back-color, $card-alt-fore-color, 
-	$card-alt-border-style : $card-border-style, $card-alt-border-radius : $card-border-radius) {
+	$card-alt-border-style : $card-border-style, $card-alt-border-radius : $card-border-radius,
+	$card-alt-section-border-style : $card-section-border-style) {
 	.#{$card-name}.#{$card-alt-name} {
 		@if $card-alt-back-color != $card-back-color {
 			background: $card-alt-back-color;
@@ -116,6 +119,14 @@ $card-normal-width:				320px !default;									// Width for normal cards
 		}
 		@if $card-alt-border-radius != $card-border-radius {
 			border-radius: $card-alt-border-radius;
+		}
+		@if $card-alt-section-border-style != $card-section-border-style{
+			& > .#{$card-section-name} {
+				border-bottom: $card-alt-section-border-style;
+			}
+			& > .#{$card-section-name}:last-child {
+				border-bottom: 0;	// Clean the extra border for last section
+			}
 		}
 	}
 }
@@ -147,16 +158,5 @@ $card-normal-width:				320px !default;									// Width for normal cards
 @mixin make-card-section-alt-style ($card-section-alt-name, $card-section-alt-padding) {
 	.#{$card-name} > .#{$card-section-name}.#{$card-section-alt-name} {
 		padding: $card-section-alt-padding;
-	}
-}
-// Mixin for grid system's row that spaces cards apart.
-@mixin add-grid-row-cards-alignment {
-	$grid-row-name:					'row' !default;							// Class name for the cards
-	.#{$grid-row-name}.#{$card-name}s {
-	// Old syntax
-		-webkit-box-pack: justify;
-	// New syntax
-		-webkit-justify-content: space-around;
-				justify-content: space-around;
 	}
 }

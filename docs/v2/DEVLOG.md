@@ -560,3 +560,4 @@
 - Removed `max-width: 100%` from the `alert` component as it was not needed due to `display: block;`.
 - Updated transitions to use `-webkit-` prefix as needed.
 - Added animated `alert`s on condition.
+- Documented basic `mark` behavior and stuff.

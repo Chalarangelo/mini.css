@@ -1394,11 +1394,13 @@ mark.tertiary {
   background: #558b2f; }
 
 mark.tag {
-  padding: 2px; }
-
-mark.bubble {
   border-radius: 200px;
-  padding: 3px 5px; }
+  padding: 4px 8px; }
+
+mark.inline-block {
+  font-size: 100%;
+  line-height: 1.35;
+  padding: 5px; }
 
 progress.inline {
   display: inline-block;

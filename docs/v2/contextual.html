@@ -123,29 +123,54 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
+                <div>
+                  <p>This is some text with a <mark>highlight</mark>.</p>
+                  <p>Apart from the primary highlight style, there are also <mark class="secondary">secondary</mark> and <mark class="tertiary">tertiary</mark> styles for highlighting.</p><br>
+                  <p><mark class="inline-block">If you want to highlight a longer piece of text, without line breaks, you can turn the highlight into an inline-block like you see this piece of text being displayed.</mark></p><br>
+                  <p>Finally, you can create contextual tags like <mark class="tag">this</mark> or <mark class="tag">7</mark>.</p><br>
+                </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>To add simple highlights in your text, you can use the <code>&lt;mark&gt;</code> HTML element. These highlights come pre-styled to use the default primary color, but if you would rather use another color for your highlight you can easily add the <code>.secondary</code> or <code>.tertiary</code> class to a <code>&lt;mark&gt;</code> element. For longer pieces of text that need highlighting, consider adding the <code>.inline-block</code> class to make them stand out even more. Finally, you can create contextual tags, using the <code>.tag</code> class.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;mark&gt;primary&lt;/mark&gt;
+&lt;mark class=&quot;secondary&quot;&gt;secondary&lt;/mark&gt;
+&lt;mark class=&quot;tertiary&quot;&gt;tertiary&lt;/mark&gt;
+&lt;mark class=&quot;inline-block&quot;&gt;long highlight text...&lt;/mark&gt;
+&lt;mark class=&quot;tag&quot;&gt;tag&lt;/mark&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>Try to use elements with the <code>.inline-block</code> class only when absolutely necessary, as they break the normal text flow of the document. Avoid using this class on shorter pieces of text that span a few words and contain no line breaks.</li>
+                <li><code>&lt;mark&gt;</code> elements, along with their supporting classes (except for <code>.inline-block</code>) can be easily used in paragraphs, headings and other elements, as they scale according to their parent element.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;mark class=&quot;tag tertiary&quot;&gt;green tag&lt;/mark&gt;
+<span class="fore-tertiary">&lt;!-- or --&gt;</span>
+&lt;mark class=&quot;inline-block secondary&quot;&gt;red chunk&lt;/mark&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can combine any of the contextual color classes (<code>.secondary</code> or <code>.tertiary</code>) with the <code>.tag</code> or <code>.inline-block</code> class.</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;mark class=&quot;secondary tertiary&quot;&gt;no, no&lt;/mark&gt;
+<span class="fore-secondary">&lt;!-- or --&gt;</span>
+&lt;mark class=&quot;inline-block tag&quot;&gt;oh, no&lt;/mark&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining two contextual color classes or a <code>.tag</code> and an <code>.inline-block</code>, as these combinations might result in unexpected behavior.</p>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;mark class=&quot;inline-block&quot;&gt;some 
+    &lt;mark class=&quot;secondary&quot;&gt;text&lt;/mark&gt;
+&lt;/mark&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can only nest a <code>&lt;mark&gt;</code> inside another if the outer one is of the <code>.inline-block</code> class. You can color the inner <code>&lt;mark&gt;</code> using any of the contextual color classses or even make it a <code>.tag</code>. Be careful, however, to not make the inner <code>&lt;mark&gt;</code> an <code>.inline-block</code> as well.</p>
+                </div>          
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;mark&gt;some 
+    &lt;mark class=&quot;secondary&quot;&gt;text&lt;/mark&gt;
+&lt;/mark&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using nested <code>&lt;mark&gt;</code> elements, unless the outer <code>&lt;mark&gt;</code> element is an <code>.inline-block</code>.</p>
                 </div>
               </div>
             </div>

@@ -378,12 +378,14 @@ $mark-variant2-name:			'tertiary';										// Class name for <mark> variant 2
 $mark-variant2-back-color:		#558b2f;										// Background color for <mark> variant 2
 $mark-style1-name:				'tag';											// Class name for <mark> style 1
 $mark-style1-border-style:		0;												// Border style for <mark> style 1
-$mark-style1-border-radius:		2px;											// Border radius for <mark> style 1
-$mark-style1-padding:			2px;											// Padding for <mark> style 1	
-$mark-style2-name:				'bubble';										// Class name for <mark> style 2
+$mark-style1-border-radius:		200px;											// Border radius for <mark> style 1
+$mark-style1-padding:			4px 8px;										// Padding for <mark> style 1	
+$mark-style2-name:				'inline-block';									// Class name for <mark> style 2
 $mark-style2-border-style:		0;												// Border style for <mark> style 2
-$mark-style2-border-radius:		200px;											// Border radius for <mark> style 2
-$mark-style2-padding:			3px 5px;										// Padding for <mark> style 2	
+$mark-style2-border-radius:		2px;											// Border radius for <mark> style 2
+$mark-style2-padding:			5px;											// Padding for <mark> style 2
+$mark-style2-font-size:			100%;											// Font size for <mark> style 2
+$mark-style2-line-height:		1.35;											// Line height for <mark> style 2
 $alert-name:					'alert';										// Class name for alerts
 $alert-back-color:				#eeeeee;										// Background color for alerts
 $alert-fore-color:				$fore-color;									// Text color for alerts
@@ -502,14 +504,17 @@ $center-block-name:				'center-block';									// Class name for center block
 //	Use mixins for contextual background elements and alerts
 @include make-mark-alt-color ($mark-variant1-name, $mark-variant1-back-color);
 @include make-mark-alt-color ($mark-variant2-name, $mark-variant2-back-color);
-@include make-mark-alt-style ($mark-style1-name, $mark-style1-border-style, $mark-style1-border-radius, $mark-style1-padding);
-@include make-mark-alt-style ($mark-style2-name, $mark-style2-border-style, $mark-style2-border-radius, $mark-style2-padding);
+@include make-mark-alt-style ($mark-style1-name, $mark-style1-border-style, 
+	$mark-style1-border-radius, $mark-style1-padding);
+@include make-mark-alt-style ($mark-style2-name, $mark-style2-border-style, 
+	$mark-style2-border-radius, $mark-style2-padding, $mark-style2-font-size, $mark-style2-line-height);
 //	Use mixins for progress elements and spinners
 @include make-progress-inline ($progress-inline-name, $progress-inline-width);
 @include make-progress-alt-color ($progress-variant1-name, $progress-variant1-fore-color);
 @include make-progress-alt-color ($progress-variant2-name, $progress-variant2-fore-color);
 @include make-progress-alt-style ($progress-style1-name, $progress-style1-height, 
-	$progress-style1-top-bottom-margin, $progress-style1-left-right-margin, $progress-style1-border-style, $progress-style1-border-radius);
+	$progress-style1-top-bottom-margin, $progress-style1-left-right-margin, 
+	$progress-style1-border-style, $progress-style1-border-radius);
 @include make-spinner-donut-alt-color ($spinner-donut-variant2-name, $spinner-donut-variant2-back-color, 
 	$spinner-donut-variant2-fore-color);
 @include make-spinner-donut-alt-style ($spinner-donut-style1-name, $spinner-donut-style1-size, 

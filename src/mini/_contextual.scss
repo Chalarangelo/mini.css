@@ -55,10 +55,19 @@ mark {
 // - $mark-alt-border-style : The border-style of the alternate mark style.
 // - $mark-alt-border-radius : The border-radius of the alternate mark style.
 // - $mark-alt-padding : (Optional) The padding of the alternate mark style. Defaults to the padding of the mark.
+// - $mark-alt-font-size : (Optional) The font-size of the alternate mark style. Defaults to the font-size of the mark.
+// - $mark-alt-line-height : (Optional) The line height of the alternate mark style. Defaults to the line height of the mark.
 // - $mark-alt-box-shadow : (Optional) The box shadow of the alternate mark style. Defaults to the box shadow of the mark.
 @mixin make-mark-alt-style ($mark-alt-name, $mark-alt-border-style, $mark-alt-border-radius,
-	$mark-alt-padding: $mark-padding, $mark-alt-box-shadow : $mark-box-shadow ) {
+	$mark-alt-padding : $mark-padding, $mark-alt-font-size : $mark-font-size, $mark-alt-line-height : $mark-line-height, 
+	$mark-alt-box-shadow : $mark-box-shadow ) {
 	mark.#{$mark-alt-name} {
+		@if $mark-alt-font-size != $mark-font-size {
+			font-size: $mark-alt-font-size;
+		}
+		@if $mark-alt-line-height != $mark-line-height {
+			line-height: $mark-alt-line-height;
+		}
 		@if $mark-alt-border-style != $mark-border-style {
 			border: $mark-alt-border-style;
 		}

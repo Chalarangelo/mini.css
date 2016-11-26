@@ -562,3 +562,4 @@
 - Added animated `alert`s on condition.
 - Documented basic `mark` behavior and stuff.
 - Basic documentation for `alert`s.
+- Documented `animated` `alert`s. Documentation of `contextual` seems to be complete.

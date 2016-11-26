@@ -238,31 +238,32 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
+              <div>
+                <div class="animated alert" style="margin-top: 8px; margin-bottom: 8px;"><h3>This is an alert</h3><p>Make sure you read this!</p></div>
+                <div class="animated alert urgent" style="margin-bottom: 8px;"><h3>This is an urgent alert</h3><p>Make absolutely sure you read this!</p></div>
+                <div class="animated alert critical" style="margin-bottom: 8px;"><h3>This is a critical alert</h3><p>Make certain you read and actually understand this!</p></div>
+              </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>Alerts can be animated, so that they pop out a little more to make sure your users can see them. To animate an alert box, use the <code>.animated</code> class on an existing <code>.alert</code> and it shall periodically scale up a little bit to make users notice it.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;alert animated&quot;&gt;
+    &lt;h3&gt;Animated alert&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert urgent animated&quot;&gt;
+    &lt;h3&gt;Animated urgent alert&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert critical animated&quot;&gt;
+    &lt;h3&gt;Animated critical alert&lt;/h3&gt;
+&lt;/div&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>Animated alerts may not display properly on older browsers, especially legacy versions of Internet Explorer.</li>
+                <li>It has been reported that some Webkit-based browsers, such as Chrome, display animated alerts in a very blurry fashion. Despite our best attempts at solving these problems, they seem to be quite persistent and we do not yet know how to fix them. Thus, you might want to hold off on using animated alerts if you think this might be an issue or try to control them using Javascript code to make the animation stop after a short amount of time (i.e. removing the <code>.animated</code> class).</li>
               </ul>
-              <hr>
-              <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

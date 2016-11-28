@@ -285,10 +285,10 @@ $table-margin:					0 auto;											// Margin for <table>
 $table-box-shadow:																// Box shadow for <table>
 	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);	
 $table-caption-font-size:		1.5em;											// Font size for <caption>
-$table-caption-margin:			6px 0 12px;										// Margin for <caption>
-$table-row-padding:				6px;											// Padding for <tr> - both views
+$table-caption-margin:			6px 8px 12px;										// Margin for <caption>
+$table-row-padding:				8px;											// Padding for <tr> - both views
 $table-column-padding:			10px;											// Padding for <td> and <th> - desktop view
-$table-head-back-color:			#cfd8dc;										// Background color for <th>
+$table-head-back-color:			#e0e0e0;										// Background color for <th>
 $table-head-fore-color:			$fore-color;									// Tex color for <th>
 $table-body-back-color:			#fafafa;										// Background color for <td>
 $table-body-fore-color:			$fore-color;									// Text color for <td>
@@ -393,7 +393,7 @@ $alert-name:					'alert';										// Class name for alerts
 $alert-back-color:				#eeeeee;										// Background color for alerts
 $alert-fore-color:				$fore-color;									// Text color for alerts
 $alert-border-style:			1px solid #bdbdbd;								// Border style for alerts
-$alert-border-radius:			2px;											// Border radius for alerts
+$alert-border-radius:			0;											// Border radius for alerts
 $alert-padding:					12px 16px;										// Padding for alerts
 $alert-margin:					1px 10px;										// Margin for alerts
 $alert-box-shadow:																// Box shadow for alerts

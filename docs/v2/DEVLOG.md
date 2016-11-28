@@ -576,3 +576,10 @@
 - Deployed latest demo CSS file.
 - Deleted `template.html` as I never actually used it.
 - Deleted parts of `playground.html` to reflect documented modules.
+
+## 20161128
+
+- Updated the `card` doc page to include some technical info about the `object-fit` usage. Polyfills should help with the problems.
+- Started the `table` doc page.
+- Made `alert`s not have rounded corners.
+- Added some base info on `table` module doc page and a basic example.

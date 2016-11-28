@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Live demo styled as of 20161121 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/021d634b90da1ee87f970e80322feacd904e3bdd/dist/mini-default.min.css">
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="../../dist/mini-default.min.css">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>mini.css - Table</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
+    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass, module, table">
+    <meta name="author" content="Angelos Chalaris (chalarangelo)">
+    <link rel="icon" type="image/png" href="favicon.png">    
+    <style>
+      /* Classes and ids used in multiple pages - page top and utilities */
+      #header-logo {
+        display: inline; height: 28px; width: 28px; margin-top: 2px; background: #558b2f; border-radius: 1px;
+        margin-left: -3px; padding: 2px;
+      }
+      #top-logo {
+        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
+        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      #top-heading {
+        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
+      }
+      #top-version-tag {
+        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      .box-centered { text-align: center; }
+      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
+      .box-colored.red { background: #b71c1c; }
+      .box-centered > .card.fluid {
+        -webkit-box-pack: start;
+        -webkit-box-align: start; 
+        -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+        -webkit-align-self: auto;
+                align-self: auto;
+      }
+      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+      /* Local classes and ids for this page */
+      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
+      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
+      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
+      .col-sm-12.col-sm-last.col-md-4.col-md-normal {
+        box-sizing: border-box;
+        border-right: 1px solid #bdbdbd;
+      }
+      @media (max-width: 767px){
+        .col-sm-12.col-sm-last.col-md-4.col-md-normal {
+          border: 0;
+          border-top: 1px solid #bdbdbd;
+        }
+      }
+      .box-colored.green { background: #1b5e20; }
+      .do {
+        border-top: 15px solid #558b2f;
+        padding-top: 10px;
+      }
+      .dont {
+        border-top: 15px solid #f44336;
+        padding-top: 10px;
+      }
+      .box-colored {
+        color: #f5f5f5;
+      }
+      table#carded {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    box-shadow: none; }
+    table#carded thead, table#carded th {
+      border: 0;
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      clip: rect(0 0 0 0);
+      -webkit-clip-path: inset(100%);
+      clip-path: inset(100%); }
+    table#carded tr {
+      display: block;
+      border: 1px solid #bdbdbd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
+      background: #fafafa;
+      margin-bottom: 10px; }
+    table#carded td {
+      display: block;
+      border: 0;
+      border-bottom: 1px solid #bdbdbd;
+      text-align: right; }
+    table#carded td:before {
+      content: attr(data-label);
+      float: left;
+      font-weight: 700; }
+    table#carded td:last-child {
+      border-bottom: 0; }
+    </style>
+  </head>
+  <body>  
+    <header>
+      <img class="logo" src="mini-logo.svg" id="header-logo"><div style="display: inline; overflow: auto;">
+      <a href="index.html" class="button">Introduction</a>
+      <a href="modules.html" class="button">Modules</a>
+      <a href="flavors.html" class="button">Flavors</a>
+      <a href="customization.html" class="button">Customization</a>
+      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
+      </div>
+    </header>
+    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
+      <div class="row">
+        <div class="col-sm">
+          <div class="box-centered">
+            <img src="mini-logo.svg" id="top-logo">
+            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
+            <mark class="tag tertiary" id="top-version-tag">v2.0</mark>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-sm">
+          <h1>Table</h1>
+          <p>The <strong>table</strong> module provides styling and responsiveness for tables. Simple rules and accessible design paradigms have been used to make creating tables quick and easy. Large tables will collapse to cards when on smaller devices or, if you don't want that, they can be locked into their default, desktop view.</p>
+          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
+          <ul class="breadcrumbs"><li><a href="index.html">Home</a></li><li><a href="modules.html">Modules</a></li><li>Table</li></ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Quick overview</h2>
+              <p>Presenting information the right way is very important, especially so when dealing with large amounts of data. The <strong>table</strong> module reinvents tabular data presentation, using modern styling and responsiveness to help make tables fun again for all users no matter the device size. Tables can be either vertical or horizontal, both collapsing to a card view on smaller devices, so that they are easier to view properly. Horizontal tables are also flexible, allowing you to take as little space as possible, while still providing your users with a pleasant way to view their data. Finally, like in most UI toolkits nowadays, you can stripe your tables to make reading them slightly less tiresome for your users' eyes. Note that all of the table variants are fully accessible.</p><br>
+            </div>
+            <div class="section">
+              <h2>Quick start</h2>
+              <p>To use the <strong>table</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
+              <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Basic syntax and responsiveness</h2>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div>
+                <h4>Medium/Large screen layout</h4><hr>
+                <table class="preset">
+                <caption>People</caption>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Alias</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Name">Chad</td>
+                    <td data-label="Surname">Wilberts</td>
+                    <td data-label="Alias">MrOne</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Adam</td>
+                    <td data-label="Surname">Smith</td>
+                    <td data-label="Alias">TheSmith</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Sophia</td>
+                    <td data-label="Surname">Canderson</td>
+                    <td data-label="Alias">Candee</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+              <h4>Small screen layout</h4><hr>
+              <table id="carded">
+                <caption>People</caption>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Alias</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Name">Chad</td>
+                    <td data-label="Surname">Wilberts</td>
+                    <td data-label="Alias">MrOne</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Adam</td>
+                    <td data-label="Surname">Smith</td>
+                    <td data-label="Alias">TheSmith</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Sophia</td>
+                    <td data-label="Surname">Canderson</td>
+                    <td data-label="Alias">Candee</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+            </div>
+              </div>
+              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+                <p>Table layout utilizes the <code>&lt;table&gt;</code> HTML element with the following structure (usual tabular structure):</p>
+                <ol>
+                  <li>On the outermost level, there is the <code>&lt;table&gt;</code> element.</li>
+                  <li>If you want to include a <code>&lt;caption&gt;</code> element, it must by the first element inside the <code>&lt;table&gt;</code> element.</li>
+                  <li>Following the above, you need to add a <code>&lt;thead&gt;</code> element. Inside it, you should usually add one <code>&lt;tr&gt;</code> element, which contains one or more <code>&lt;th&gt;</code> elements.</li>
+                  <li>Immediately after the <code>&lt;thead&gt;</code> element, you can add a <code>&lt;tfoot&gt;</code> element, if you want to. Inside it, you should usually add one or more <code>&lt;tr&gt;</code> elements, which contain one or more <code>&lt;td&gt;</code> elements. </li>
+                  <li>Finally, add your <code>&lt;tbody&gt;</code> element. Inside it, you should usually add one or more <code>&lt;tr&gt;</code> elements, which contain one or more <code>&lt;td&gt;</code> elements. For each <code>&lt;td&gt;</code> element, specify a <code>data-label</code> attribute equal to the heading of the column. This enables responsibility for your table, so that the values in the columns will be properly labeled on mobile devices.</li>
+                </ol>
+                <h3>Sample code</h3>
+                <pre>&lt;table&gt;
+  &lt;caption&gt;People&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Surname&lt;/th&gt;
+      &lt;th&gt;Alias&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Chad&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Wilberts&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;MrOne&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Adam&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Smith&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;TheSmith&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Sophia&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Canderson&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;Candee&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+              </div>
+            </div>
+            <div class="section">
+            <h3>Notes</h3>
+              <ul>
+                <li>Tables are responsive by default and will change to a card-like view below a certain screen width. If you'd rather not make them responsive, check the last section on this page.</li>
+                <li>Specifying the <code>data-label</code> attribute is essential for the responsive version of a table to display properly. You can, however, use a value different from the column's name. Make sure it does not confuse your users, though.</li>
+              </ul>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <pre><!-- do code --></pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
+                  <pre><!-- don't code --></pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Horizontal tables</h2>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <!-- sample -->
+              </div>
+              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+                <p></p>
+                <h3>Sample code</h3>
+                <pre></pre>
+              </div>
+            </div>
+            <div class="section">
+            <h3>Notes</h3>
+              <ul>
+                <li></li>
+                <li></li>
+              </ul>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <pre><!-- do code --></pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
+                  <pre><!-- don't code --></pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div class="row">
+        <div class="col-sm">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Table variants and matrices</h2>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <!-- sample -->
+              </div>
+              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+                <p></p>
+                <h3>Sample code</h3>
+                <pre></pre>
+              </div>
+            </div>
+            <div class="section">
+            <h3>Notes</h3>
+              <ul>
+                <li></li>
+                <li></li>
+              </ul>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <pre><!-- do code --></pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
+                  <pre><!-- don't code --></pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="row" style="padding-bottom: 20px; padding-top:20px;">
+        <div class="col-sm">
+          <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
+        </div>
+      </div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

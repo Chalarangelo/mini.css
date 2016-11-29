@@ -583,3 +583,5 @@
 - Started the `table` doc page.
 - Made `alert`s not have rounded corners.
 - Added some base info on `table` module doc page and a basic example.
+- Full documentation for `table` module.
+- Updated all doc pages to use **2 spaces** per indentation.

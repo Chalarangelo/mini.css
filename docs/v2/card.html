@@ -143,18 +143,18 @@
                 <p>Note that cards will respond to screen changes, realigning themselves as necessary to fit on the page.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;card&quot;&gt;
-        &lt;div class=&quot;section&quot;&gt;
-            &lt;h3&gt;Card Title&lt;/h3&gt;
-            &lt;p&gt;Card content...&lt;/p&gt;
-        &lt;/div&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+      &lt;h3&gt;Card Title&lt;/h3&gt;
+      &lt;p&gt;Card content...&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;card&quot;&gt;
-        &lt;div class=&quot;section&quot;&gt;
-            &lt;h3&gt;Card Title&lt;/h3&gt;
-            &lt;p&gt;Card content...&lt;/p&gt;
-        &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+      &lt;h3&gt;Card Title&lt;/h3&gt;
+      &lt;p&gt;Card content...&lt;/p&gt;
     &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
               </div>
             </div>
@@ -168,29 +168,29 @@
               <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre>&lt;div class=&quot;card&quot;&gt;
-    &lt;div class=&quot;section&quot;&gt;
-        &lt;h3&gt;Card Title&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;section&quot;&gt;
-        &lt;p&gt;Card content...&lt;/p&gt;
-        &lt;p&gt;More card content...&lt;/p&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;section&quot;&gt;
+    &lt;h3&gt;Card Title&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;section&quot;&gt;
+    &lt;p&gt;Card content...&lt;/p&gt;
+    &lt;p&gt;More card content...&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can add as many <code>.section</code>s as you like to a card.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;card&quot;&gt;
-    &lt;div class=&quot;section&quot;&gt;
-        &lt;h3&gt;Card Title&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;p&gt;Content not in a section!&lt;/p&gt;
+  &lt;div class=&quot;section&quot;&gt;
+    &lt;h3&gt;Card Title&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Content not in a section!&lt;/p&gt;
 &lt;/div&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using cards with content inside them that is not wrapped in sections. Try to use a single <code>.section</code> to wrap the content inside these to avoid unexpected behavior.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre>&lt;div class=&quot;card&quot;&gt;
-    &lt;h3 class=&quot;section&quot;&gt;Card Title&lt;/h3&gt;
-    &lt;p class=&quot;section&quot;&gt;Card content...&lt;/p&gt;
+  &lt;h3 class=&quot;section&quot;&gt;Card Title&lt;/h3&gt;
+  &lt;p class=&quot;section&quot;&gt;Card content...&lt;/p&gt;
 &lt;/div&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use the <code>.section</code> class for things other than <code>&lt;div&gt;</code> elements (e.g. <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;button&gt;</code>).</p>
                 </div>
@@ -258,14 +258,14 @@
                 <p>You can do a lot more with card sections apart from filling them with textual content. First off, you can add media sections to your cards, applying the styles of <code>.section</code> and <code>.media</code> to an <code>&lt;img&gt;</code> element or a video element of your choice (e.g. using a <code>&lt;iframe&gt;</code> element in the same manner). If you want a section to have more space around it, use the <code>.double-padded</code> class. There are also two section color variations: <code>.dark</code> and <code>.darker</code>. Finally, you can turn a whole <code>.card</code> black, by applying the <code>.inverse</code> class to it. This is not really a section trick, but we thought we should include it here anyway.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;card&quot;&gt;
-    &lt;img src=&quot;...&quot; class=&quot;section media&quot;&gt;
-    &lt;div class=&quot;section double-padded&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
-    &lt;div class=&quot;section dark&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
-    &lt;div class=&quot;section darker&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+  &lt;img src=&quot;...&quot; class=&quot;section media&quot;&gt;
+  &lt;div class=&quot;section double-padded&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;section dark&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;section darker&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;card inverse&quot;&gt;
-    &lt;div class=&quot;section&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;section&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
               </div>
             </div>
@@ -305,23 +305,23 @@
                 <p>Apart from the normal-sized cards (<code>320px</code> wide), there are also two different fixed-width card styles, which can be applied using the <code>.small</code> and <code>.large</code> classes respectively. Fluid cards are available via the <code>.fluid</code> class, but they require one extra step in the card structure, between the <code>.row</code> and <code>.card</code> step, which is to insert either a <code>.col-<span class="fore-primary">SCR_SZ</span></code>, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names (<code><span class="fore-tertiary">sm</span></code> for smaller screens, <code><span class="fore-tertiary">md</span></code> for medium-sized screens or <code><span class="fore-tertiary">lg</span></code> for larger screens) or a <code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code> to specify columns with fixed width, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names and <code><span class="fore-secondary">COL_WD</span></code> with a number from <code>1</code> to <code>12</code> specifying the width of the column.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;card small&quot;&gt;
-    &lt;div class=&quot;section&quot;&gt;
-         &lt;p&gt;Content&lt;/p&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;section&quot;&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;card large&quot;&gt;
-    &lt;div class=&quot;section&quot;&gt;
-         &lt;p&gt;Content&lt;/p&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;section&quot;&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;col-sm-12&quot;&gt;
-    &lt;div class=&quot;card fluid&quot;&gt;
-        &lt;div class=&quot;section&quot;&gt;
-            &lt;p&gt;Content&lt;/p&gt;
-        &lt;/div&gt;
+  &lt;div class=&quot;card fluid&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+      &lt;p&gt;Content&lt;/p&gt;
     &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
               </div>
             </div>
@@ -335,24 +335,24 @@
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;div class=&quot;card&quot;&gt;
-    &lt;div class=&quot;section&quot;&gt;
-         &lt;p&gt;Content&lt;/p&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;section&quot;&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;card fluid&quot;&gt;
-    &lt;div class=&quot;section&quot;&gt;
-        &lt;p&gt;Content&lt;/p&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;section&quot;&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid mixing fixed-width cards with <code>.fluid</code> cards. Mixing the two could result in some unexpected behaviors. You can, however, mix fixed-width cards with fluid columns, which can contain <code>.fluid</code> cards inside them, effectively achieving the desired effect.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;card fluid&quot;&gt;
-        &lt;div class=&quot;section&quot;&gt;
-            &lt;p&gt;Content&lt;/p&gt;
-        &lt;/div&gt;
+  &lt;div class=&quot;card fluid&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+      &lt;p&gt;Content&lt;/p&gt;
     &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using <code>.fluid</code> cards without wrapping them in columns. Try to use a single <code>.col-sm</code> to wrap the card inside it, otherwise there might be unexpected behavior.</p>
                 </div>

@@ -221,69 +221,69 @@
               <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre>&lt;div class=&quot;col-sm&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;container&quot;&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 <span class="fore-tertiary">&lt;!-- or --&gt;</span>
 &lt;div class=&quot;col-sm&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;A column can contain a container or a row inside it. The container can also be skipped if inside a column, so you only need to add a row.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;col-sm&quot;&gt;
-    &lt;div class=&quot;col-sm&quot;&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;col-sm&quot;&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using columns inside columns without a row wrapping them. Either make the outer column a row in itself or wrap the inside columns in a row.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre>&lt;div class=&quot;col-sm row&quot;&gt;
-    &lt;div class=&quot;col-sm-6&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;col-sm-6&quot;&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;col-sm-6&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm-6&quot;&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;A column can also be a row at the same time, if you want to include sub-columns inside it. You can make the same element both a column in its own row and a row for its containing columns. The same idea can be applied for the container. Containers can, however, be omitted, when already inside a grid.</p>
                   <p></p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;row&quot;&gt;
-    &lt;p&gt;Content without columns...&lt;/p&gt;
+  &lt;p&gt;Content without columns...&lt;/p&gt;
 &lt;/div&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using rows with content inside that is not in wrapped in columns. Try to use a single <code>.col-sm</code> to wrap the content inside these, otherwise there might be unexpected behavior.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre> &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-sm&quot;&gt;
-    &lt;div&gt;
-    &lt;div class=&quot;col-sm-4&quot;&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;col-sm&quot;&gt;
+  &lt;div&gt;
+  &lt;div class=&quot;col-sm-4&quot;&gt;
+  &lt;/div&gt;
  &lt;/div&gt;
 <span class="fore-tertiary">&lt;!-- or --&gt;</span>
  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-sm-12&quot;&gt;
-    &lt;div&gt;
-    &lt;div class=&quot;col-sm-12&quot;&gt;
-    &lt;/div&gt;
- &lt;/div&gt;</pre>
+  &lt;div class=&quot;col-sm-12&quot;&gt;
+  &lt;div&gt;
+  &lt;div class=&quot;col-sm-12&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Mix fluid columns with fixed, if you like. Fluid columns will adapt to the size of the container left for them. You can also use columns with a total size of more than <code>12</code>, meaning with a total width of over 100%. The remaining content will flow below the rest, allowing you to specify multiple blocks of content inside the same row if you need to.</p>
                   <p></p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;container&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-        &lt;div class=&quot;col-sm&quot;&gt;
-        &lt;div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;div&gt;
     &lt;/div&gt;
-    &lt;p&gt;Normal paragraph.&lt;/p&gt;
+  &lt;p&gt;Normal paragraph.&lt;/p&gt;
 &lt;/div&gt;
 <span class="fore-secondary">&lt;!-- or --&gt;</span>
 &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-sm&quot;&gt;
-    &lt;/div&gt;
-    &lt;p&gt;Normal paragraph.&lt;/p&gt;
+  &lt;div class=&quot;col-sm&quot;&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Normal paragraph.&lt;/p&gt;
 &lt;/div&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid mixing rows and columns with normal content that is not wrapped on the respective level of the grid system. Always wrap content inside the proper containers (container, row or column) in your grid layout.</p>
                 </div>
@@ -444,10 +444,10 @@
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-sm col-md-offset-1 col-md-5 col-lg-4&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;col-sm col-md-5 col-lg-4 col-lg-offset-2&quot;&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;col-sm col-md-offset-1 col-md-5 col-lg-4&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm col-md-5 col-lg-4 col-lg-offset-2&quot;&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can specify offset classes when you need them and omit them otherwise. This means that, if you want to offset a column only on a medium-sized or a larger screen, you can just specify the offset for that specific screen. Specifying an offset for a smaller screen, however, will apply it to medium-sized and larger screens as well, medium-sized screen offsets will apply to larger screens etc. similar to how the layout system works.</p>
                 </div>

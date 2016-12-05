@@ -585,3 +585,9 @@
 - Added some base info on `table` module doc page and a basic example.
 - Full documentation for `table` module.
 - Updated all doc pages to use **2 spaces** per indentation.
+
+## 20161205
+
+- `playground` cleanup, readying for the rest of the modules to be tested and documented.
+- Added empty `input_control.html` documentation page for the module of the same name.
+- Basic structure for `input_control` module's doc page.

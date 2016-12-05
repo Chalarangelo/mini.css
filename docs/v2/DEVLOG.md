@@ -594,3 +594,9 @@
 - Updated color definitions for almost all the `input_control` `form` elements.
 - Changed the `placeholder` rules a little bit to work properly for all elements now.
 - Tested a few things in `playground` about `input_control`.
+- Changed a little it of the colors used for `button` components. The `background` color used is custom, not from the material colors of Google Material, as I had to find a middle ground. The only discrepancy so far.
+- Added customizable `$button-group-margin` and `$button-group-box-shadow` for `button-group` to make it more well-defined.
+- Tweaked size variants for `button`s.
+- Added `inverse` `button` style to the list of `button` styles.
+- Removed the `custom` `button` demo that was still lingering in the current flavor.
+- Updated colors and stuff for `button` color variants. They should be consistent now.

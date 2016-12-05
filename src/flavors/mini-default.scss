@@ -209,30 +209,33 @@ $input-disabled-opacity:		0.75;											// Opacity for disabled input
 $input-readonly-back-color:		#e0e0e0;										// Background color for readonly input
 $input-readonly-border-color:	#bdbdbd;										// Border color for readonly input
 $input-placeholder-fore-color:	#616161;										// Text color for input placeholder
-$button-back-color:				#cfd8dc;										// Back color for button elements
+$button-back-color:				#cfcfcf;										// Back color for button elements
 $button-back-opacity:			0.75;											// Background opacity for button elements
 $button-hover-back-opacity:		1;												// Background opacity for button elements
 																				// on hover or focus
-$button-fore-color:				#212121;										// Text color for button elements
+$button-fore-color:				$fore-color;									// Text color for button elements
 $button-border-style:			0;												// Border style for button elements
 $button-border-radius:			2px;											// Border radius for button elements
-$button-padding:				4px 6px;										// Padding for button elements
-$button-margin:					4px;											// Margin for button elements
+$button-padding:				8px 12px;										// Padding for button elements
+$button-margin:					8px;											// Margin for button elements
 $button-box-shadow:																// Box shadow for buttons
 	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
 $button-disabled-opacity:		0.65;											// Disabled button elements opacity
 $button-class-name:				'button';										// Class for custom button elements
 $button-group-name:				'button-group';									// Class for button groups
-$button-group-border-style:		1px solid #bdbdbd;								// Border style for button groups
+$button-group-border-style:		1px solid #9e9e9e;								// Border style for button groups
+$button-group-margin:			$button-margin;									// Margin for button groups
+$button-group-box-shadow:														// Box shadow for button groups
+	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);			
 $button-group-mobile-breakpoint:767px;											// Breakpoint for button group mobile view
 $hide-file-inputs:				true;											// Should a style be added that makes all
 																				// <input>s of type `file` hidden?
 																				// (`true`/`false`) [1]
 $button-variant1-name:			'primary';										// Class name for button variant 1
-$button-variant1-back-color:	#1565c0;										// Background color for button variant 1
-$button-variant1-back-opacity:	1;												// Background opacity for button variant 1
+$button-variant1-back-color:	#0277bd;										// Background color for button variant 1
+$button-variant1-back-opacity:	0.9;											// Background opacity for button variant 1
 $button-variant1-hover-back-opacity:											// Background opacity for button variant 1
-								0.85;											// on hover or focus
+								1;												// on hover or focus
 $button-variant1-fore-color:	$back-color;									// Text color for button variant 1
 $button-variant2-name:			'secondary';									// Class name for button variant 2
 $button-variant2-back-color:	#c62828;										// Background color for button variant 2
@@ -240,31 +243,28 @@ $button-variant2-back-opacity:	0.85;											// Background opacity for button 
 $button-variant2-hover-back-opacity:											// Background opacity for button variant 2
 								1;												// on hover or focus
 $button-variant2-fore-color:	$back-color;									// Text color for button variant 2
-$button-variant3-name:			'tertiary';										// Class name for button variant 2
-$button-variant3-back-color:	#8bc34a;										// Background color for button variant 2
-$button-variant3-back-opacity:	0.8;											// Background opacity for button variant 2
-$button-variant3-hover-back-opacity:											// Background opacity for button variant 2
+$button-variant3-name:			'tertiary';										// Class name for button variant 3
+$button-variant3-back-color:	#558b2f;										// Background color for button variant 3
+$button-variant3-back-opacity:	0.85;											// Background opacity for button variant 3
+$button-variant3-hover-back-opacity:											// Background opacity for button variant 3
 								1;												// on hover or focus
+$button-variant3-fore-color:	$back-color;									// Text color for button variant 3
+$button-variant4-name:			'inverse';										// Class name for button variant 4
+$button-variant4-back-color:	$fore-color;									// Background color for button variant 4
+$button-variant4-back-opacity:	1;												// Background opacity for button variant 4
+$button-variant4-hover-back-opacity:											// Background opacity for button variant 4
+								0.9;											// on hover or focus
+$button-variant4-fore-color:	#fafafa;										// Text color for button variant 4
 $button-style1-name:			'small';										// Class name for button style 1
 $button-style1-border-style:	0;												// Border style for button style 1
 $button-style1-border-radius:	1px;											// Border radius for button style 1
-$button-style1-padding:			1px 2px;										// Padding for button style 1
-$button-style1-margin:			2px;											// Margin for button style 1
+$button-style1-padding:			4px 6px;										// Padding for button style 1
+$button-style1-margin:			6px 8px;										// Margin for button style 1
 $button-style2-name:			'large';										// Class name for button style 2
 $button-style2-border-style:	0;												// Border style for button style 2
 $button-style2-border-radius:	4px;											// Border radius for button style 2
-$button-style2-padding:			10px 15px;										// Padding for button style 2
-$button-style2-margin:			7px;											// Margin for button style 2
-// Custom button style demonstration (not enabled)
-//$button-custom-name:			'custom';										// Custom button class name
-//$button-custom-back-color:	#ffb300;										// Custom button back color
-//$button-custom-back-opacity:	0;												// Custom button back opacity
-//$button-custom-hover-back-opacity:											// Custom button back opacity
-//								1;												// on hover or focus
-//$button-custom-border-style:	3px solid #ffb300;								// Custom button border style
-//$button-custom-border-radius:	0;												// Custom button border radius
-//$button-custom-padding:		6px 8px;										// Custom button padding
-//$button-custom-margin:		4px;											// Custom button margin
+$button-style2-padding:			12px 18px;										// Padding for button style 2
+$button-style2-margin:			10px 8px;										// Margin for button style 2
 $checkbox-size:					17px;											// Size for checkbox/radio [2]
 $checkbox-back-color:			$input-back-color;								// Background clor for checkbox/radio
 $checkbox-fore-color:			$input-fore-color;								// Text/mark color for checkbox/radio
@@ -490,16 +490,13 @@ $center-block-name:				'center-block';									// Class name for center block
 @include make-button-alt-color ($button-variant2-name, $button-variant2-back-color, 
 	$button-variant2-back-opacity, $button-variant2-hover-back-opacity, $button-variant2-fore-color);
 @include make-button-alt-color ($button-variant3-name, $button-variant3-back-color, 
-	$button-variant3-back-opacity, $button-variant3-hover-back-opacity);
+	$button-variant3-back-opacity, $button-variant3-hover-back-opacity, $button-variant3-fore-color);
+@include make-button-alt-color ($button-variant4-name, $button-variant4-back-color, 
+	$button-variant4-back-opacity, $button-variant4-hover-back-opacity, $button-variant4-fore-color);
 @include make-button-alt-style ($button-style1-name, $button-style1-border-style,
 	$button-style1-border-radius, $button-style1-padding, $button-style1-margin);
 @include make-button-alt-style ($button-style2-name, $button-style2-border-style,
 	$button-style2-border-radius, $button-style2-padding, $button-style2-margin);
-// Custom button style demonstration (not enabled)
-//@include make-button-alt-color ($button-custom-name, $button-custom-back-color, 
-//	$button-custom-back-opacity, $button-custom-hover-back-opacity);
-//@include make-button-alt-style ($button-custom-name, $button-custom-border-style,
-//	$button-custom-border-radius, $button-custom-padding, $button-custom-margin);
 //	Use mixins for cards
 @include make-card-alt-size ($card-size1-name, $card-size1-width);
 @include make-card-alt-size ($card-size2-name, $card-size2-width);

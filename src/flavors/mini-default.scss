@@ -179,36 +179,36 @@ $footer-margin:					18px 0 0;										// Margin for <footer>
 $footer-padding:				22px 10px 12px;									// Padding for <footer>
 $footer-link-fore-color:		#039be5;										// Text color for links in <footer>
 //	Variables for forms and inputs
-$form-back-color:				#eceff1;										// Background color for forms
+$form-back-color:				#eeeeee;										// Background color for forms
 $form-fore-color:				$fore-color;									// Text color for forms
-$form-border-style:				1px solid #90a4ae;								// Border style for forms
-$form-border-radius:			2px;											// Border radius for forms
+$form-border-style:				1px solid #bdbdbd;								// Border style for forms
+$form-border-radius:			0;												// Border radius for forms
 $form-margin:					8px;											// Margin for forms
-$form-padding:					8px;											// Padding for forms
+$form-padding:					12px 10px 18px;									// Padding for forms
 $form-box-shadow:																// Box shadow for forms
 	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);	
 $fieldset-back-color:			$form-back-color;								// Background color for fieldset
-$fieldset-border-style:			1px solid #b0bec5;								// Border style for fieldset
-$fieldset-border-radius:		1px;											// Border radius for fieldset
-$fieldset-margin:				0;												// Margin for fieldset
-$fieldset-padding:				4px 6px 8px;									// Padding for fieldset
+$fieldset-border-style:			1px solid #bdbdbd;								// Border style for fieldset
+$fieldset-border-radius:		2px;											// Border radius for fieldset
+$fieldset-margin:				2px;											// Margin for fieldset
+$fieldset-padding:				6px 8px 8px;									// Padding for fieldset
 $legend-font-weight:			$bold-font-weight;								// Font weight for legend
-$legend-font-size:				0.85em;											// Font size for legend
+$legend-font-size:				0.925em;										// Font size for legend
 $legend-fore-color:				$form-fore-color;								// Text color for legend
-$legend-padding:				4px;											// Padding for legend
+$legend-padding:				2px 4px;										// Padding for legend
 $input-group-name:				'input-group';									// Class for input groups
 $input-back-color:				$back-color;									// Background for input
 $input-fore-color:				$fore-color;									// Text color for input
-$input-border-style:			1px solid #b0bec5;								// Border style for input
+$input-border-style:			1px solid #bdbdbd;								// Border style for input
 $input-border-radius:			1px;											// Border radius for input
 $input-margin:					2px;											// Margin for input
-$input-padding:					6px 8px;										// padding for input
+$input-padding:					8px 12px;										// padding for input
 $input-focus-border-color:		#0288d1;										// Border color for focused input
 $input-invalid-border-color:	#d32f2f;										// Border color for invalid input
 $input-disabled-opacity:		0.75;											// Opacity for disabled input
-$input-readonly-back-color:		#eceff1;										// Background color for readonly input
-$input-readonly-border-color:	#90a4ae;										// Border color for readonly input
-$input-placeholder-fore-color:	#37474f;										// Text color for input placeholder
+$input-readonly-back-color:		#e0e0e0;										// Background color for readonly input
+$input-readonly-border-color:	#bdbdbd;										// Border color for readonly input
+$input-placeholder-fore-color:	#616161;										// Text color for input placeholder
 $button-back-color:				#cfd8dc;										// Back color for button elements
 $button-back-opacity:			0.75;											// Background opacity for button elements
 $button-hover-back-opacity:		1;												// Background opacity for button elements

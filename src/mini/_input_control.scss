@@ -109,13 +109,16 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 	}
 }
 // Placeholder styling.
-::-webkit-placeholder {
+::-webkit-input-placeholder {
+	opacity: 1;
 	color: $input-placeholder-fore-color;
 }
 ::-moz-placeholder {
+	opacity: 1;
 	color: $input-placeholder-fore-color;
 }
 ::-ms-placeholder {
+	opacity: 1;
 	color: $input-placeholder-fore-color;
 }
 // Definitions for the button and button-like elements.

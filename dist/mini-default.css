@@ -588,18 +588,17 @@ footer {
     color: #039be5; }
 
 form {
-  background: #eceff1;
-  border: 1px solid #90a4ae;
-  border-radius: 2px;
+  background: #eeeeee;
+  border: 1px solid #bdbdbd;
   margin: 8px;
-  padding: 8px;
+  padding: 12px 10px 18px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15); }
 
 fieldset {
-  border: 1px solid #b0bec5;
-  border-radius: 1px;
-  margin: 0;
-  padding: 4px 6px 8px; }
+  border: 1px solid #bdbdbd;
+  border-radius: 2px;
+  margin: 2px;
+  padding: 6px 8px 8px; }
 
 legend {
   box-sizing: border-box;
@@ -607,8 +606,8 @@ legend {
   max-width: 100%;
   white-space: normal;
   font-weight: 700;
-  font-size: 0.85em;
-  padding: 4px; }
+  font-size: 0.925em;
+  padding: 2px 4px; }
 
 .input-group {
   display: inline-block; }
@@ -632,10 +631,10 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
   box-sizing: border-box;
   background: #f5f5f5;
   color: #212121;
-  border: 1px solid #b0bec5;
+  border: 1px solid #bdbdbd;
   border-radius: 1px;
   margin: 2px;
-  padding: 6px 8px; }
+  padding: 8px 12px; }
   input:not([type]):focus, [type="text"]:focus, [type="email"]:focus, [type="number"]:focus, [type="search"]:focus,
   [type="password"]:focus, [type="url"]:focus, [type="tel"]:focus, textarea:focus, select:focus {
     border-color: #0288d1;
@@ -652,17 +651,18 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
     box-shadow: none; }
   input:not([type])[readonly], [type="text"][readonly], [type="email"][readonly], [type="number"][readonly], [type="search"][readonly],
   [type="password"][readonly], [type="url"][readonly], [type="tel"][readonly], textarea[readonly], select[readonly] {
-    background: #eceff1;
-    border-color: #90a4ae; }
+    background: #e0e0e0;
+    border-color: #bdbdbd; }
 
-::-webkit-placeholder {
-  color: #37474f; }
+::-webkit-input-placeholder {
+  color: #616161; }
 
 ::-moz-placeholder {
-  color: #37474f; }
+  opacity: 1;
+  color: #616161; }
 
 ::-ms-placeholder {
-  color: #37474f; }
+  color: #616161; }
 
 button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
   border-style: none;
@@ -757,7 +757,7 @@ input[type="file"] {
     width: 17px;
     height: 17px;
     content: '';
-    border: 1px solid #b0bec5;
+    border: 1px solid #bdbdbd;
     border-radius: 1px;
     background: #f5f5f5;
     color: #212121;

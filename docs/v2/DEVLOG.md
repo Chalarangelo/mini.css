@@ -593,3 +593,4 @@
 - Basic structure for `input_control` module's doc page.
 - Updated color definitions for almost all the `input_control` `form` elements.
 - Changed the `placeholder` rules a little bit to work properly for all elements now.
+- Tested a few things in `playground` about `input_control`.

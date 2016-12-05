@@ -75,6 +75,52 @@
     </div>
     <!-- Insert your page content here-->
     <main><div class="container" style="padding-top: 20px;">
+        <p>Use rows and columns for normal alignment, use input-groups in rows without columns for unaligned but just vertical forms or predesigned forms etc.</p>
+          <form>
+            <fieldset>
+                <legend>Aligned form (using <code>width</code> and grid - no container):</legend>
+                <div class="row">
+                  <div class="col-sm-12 col-md-2" style="text-align:right;">
+                    <label for="website" style="vertical-align: text-top;">Website</label>
+                  </div>
+                  <div class="col-sm-12 col-md">
+                    <input type="text" value="" id="website" placeholder="website" style="width:85%;">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-2" style="text-align:right;">
+                    <label for="username">Username</label> 
+                  </div>
+                  <div class="col-sm-12 col-md">
+                    <input type="text" value="" id="username" placeholder="username">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-offset-1 col-sm-12 input-group">
+                    <label for="username">Username</label> 
+                    <input type="text" value="" id="username" placeholder="username">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-2" style="text-align:right;">
+                    <label for="weburl" style="vertical-align: text-top;">URL</label>
+                  </div>
+                  <div class="col-sm-12 col-md">
+                    <input type="url" value="" id="weburl" placeholder="https://www.mywebsite.com" style="width:85%;">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-2" style="text-align:right;">
+                    <label for="desc" style="vertical-align: text-top;">Description</label>
+                  </div>
+                  <div class="col-sm-12 col-md">
+                    <textarea type="url" value="" id="desc" placeholder="description" style="width:85%;"></textarea>
+                  </div>
+                </div>
+              </fieldset>
+          </form>
+
+
             <form>
               <fieldset>
                 <legend>Inline form (default style):</legend>
@@ -82,7 +128,7 @@
                 <div class="input-group"><label for="mail">Email</label> <input type="email" value="" id="mail" placeholder="mail@server.com">&nbsp;</div>
                 <div class="input-group"><label for="pwd">Password</label> <input type="password" value="" id="pwd" placeholder="password"></div>
               </fieldset><br>
-              <fieldset class="container">
+              <fieldset>
                 <legend>Aligned form (using <code>width</code> and grid):</legend>
                 <div class="row">
                   <div class="col-sm-12 col-md-2" style="text-align:right;">

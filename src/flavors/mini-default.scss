@@ -350,18 +350,18 @@ $card-section-padding1-padding:	10px 12px 10px;									// Padding for card sect
 $tab-container-name:			'tabs';											// Class name for the tabs' container
 $tab-container-box-shadow:														// Box shadow for the tabs' container
 	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);		
-$tab-label-back-color:			#cfd8dc;										// Background color for tabs' labels
+$tab-label-back-color:			#e0e0e0;										// Background color for tabs' labels
 $tab-label-fore-color:			$fore-color;									// Text color for tabs' labels
-$tab-label-selected-back-color:	#b0bec5;										// Background color for open tab's label
+$tab-label-selected-back-color:	#eeeeee;										// Background color for open tab's label
 $tab-label-selected-fore-color:	$fore-color;									// Text color for open tab's label
-$tab-label-hover-opacity:		0.75;											// Opacity of the tab's label on hover
-$tab-label-padding:				4px 6px;										// Padding for tabs' labels
+$tab-label-hover-opacity:		0.8;											// Opacity of the tab's label on hover
+$tab-label-padding:				8px 12px;										// Padding for tabs' labels
 $tab-label-height:				26px;											// Height for tabs' labels
-$tab-border-style:				1px solid #78909c;								// Border style for tabs
-$tab-border-radius:				2px;											// Border radius for tabs
-$tab-panel-back-color:			$back-color;									// Background color for tabs' panels
+$tab-border-style:				1px solid #9e9e9e;								// Border style for tabs
+$tab-border-radius:				0;												// Border radius for tabs
+$tab-panel-back-color:			#fafafa;										// Background color for tabs' panels
 $tab-panel-fore-color:			$fore-color;									// Text color for tabs' panels
-$tab-panel-padding:				6px;											// Padding for tabs' panels
+$tab-panel-padding:				8px;											// Padding for tabs' panels
 $tab-panel-height:				400px;											// Height for tabs' panels
 $tab-stacked-breakpoint:		767px;											// Breakpoint for tabs layout (stacked/horizontal)
 $tab-stacked-name:				'stacked';										// Class name for stacked tabs

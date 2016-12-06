@@ -609,3 +609,4 @@
 - Logo in `header` changed to reflect the new style.
 - Changed `button` default coloration to a material color palette from Google Material Design, so that it will now be more consistent. Tweaked `opacity` to make this work.
 - Bumped demo stylesheet to latest commit.
+- Tweaked `tab` module colors and variables for consistency with the rest of the modules.

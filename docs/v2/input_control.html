@@ -45,12 +45,12 @@
       .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
       .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
       .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
-      .col-sm-12.col-sm-last.col-md-4.col-md-normal {
+      .col-sm-12.col-sm-last.col-lg-4.col-lg-normal {
         box-sizing: border-box;
         border-right: 1px solid #bdbdbd;
       }
       @media (max-width: 767px){
-        .col-sm-12.col-sm-last.col-md-4.col-md-normal {
+        .col-sm-12.col-sm-last.col-lg-4.col-lg-normal {
           border: 0;
           border-top: 1px solid #bdbdbd;
         }
@@ -105,7 +105,7 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p><!-- Input_control description --></p><br>
+              <p>The presentation of forms, input fields, buttons and other interactive elements is always very important for any website or app. The <strong>input_control</strong> module provides you with much needed styling improvements for all of these elements, while keeping everything simple to use and understand, as well as combine with the other modules. Forms and input elements have a clean, modern design, while some elements like checkoxes and radio buttons get a much needed facelift. Buttons have also been stylized to look the same in all browsers, while keeping their design clean and allowing for a few color and size variants. Grouping inputs and labels or buttons is also part of this module and, as always, responsiveness is an important feature. Finally, all of the components are accessible, with a few minor caveats, that are discussed in their respective section in this page.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
@@ -122,30 +122,173 @@
               <h2>Forms &amp; input</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
+              <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
+              <form>
+              <fieldset>
+                <legend>Inline form (default style)</legend>
+                <div class="input-group"><label for="username">username</label> <input type="email" value="" id="username" placeholder="username">&nbsp;</div>
+                <div class="input-group"><label for="pwd">password</label> <input type="password" value="" id="pwd" placeholder="password"></div>
+              </fieldset>
+              </form>
+              <style>
+                .responsive-label {
+                  align-items: center;
+                }
+                @media (min-width: 768px) { 
+                  .responsive-label .col-md-3 {
+                    text-align: right;
+                  }
+                }
+              </style>
+              <form>
+              <fieldset>
+                <legend>Aligned form (using grid)</legend>
+                <div class="row responsive-label">
+                  <div class="col-sm-12 col-md-3">
+                    <label for="number">Number</label>
+                  </div>
+                  <div class="col-sm-12 col-md">
+                    <input type="number" value="4" id="number" style="width:85%;">
+                  </div>
+                </div>
+                <div class="row responsive-label">
+                  <div class="col-sm-12 col-md-3">
+                    <label for="disabled">Disabled</label>
+                  </div>
+                  <div class="col-sm-12 col-md">
+                    <input disabled value="disabled" id="disabled" style="width:85%;">
+                  </div>
+                </div>
+                <div class="row responsive-label">
+                  <div class="col-sm-12 col-md-3">
+                    <label for="readonly">Readonly</label>
+                  </div>
+                  <div class="col-sm-12 col-md">
+                    <input readonly value="readonly" id="readonly" style="width:85%;">
+                  </div>
+                </div>
+                <div class="row responsive-label">
+                  <div class="col-sm-12 col-md-3">
+                    <label for="select">Select</label>
+                  </div>
+                  <div class="col-sm-12 col-md">
+                    <select id="select">
+                      <option>Apples</option>
+                      <option>Oranges</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+              </form>
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+              <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
+                <p>Forms are structured the same way you would structure a normal form in HTML5. Simply create a root <code>&lt;form&gt;</code> element and add your <code>&lt;input&gt;</code> elements inside. Link them to <code>&lt;label&gt;</code> elements for ease of acces and you are pretty much set. We highly recommend using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements to annotate your forms as well, but you can skip them if you wish.</p>
+                <p>Forms are inline by default. Use the <code>.button-group</code> class on a <code>&lt;div&gt;</code> wrapping inside it an <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> pair to make sure they always display together in one line. If you want to create aligned forms with a preset layout, you can utilize the <a href="grid.html"><strong>grid</strong></a> module's rows and columns.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Inline form (default style)&lt;/legend&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+      &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+      &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+      &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt; 
+      &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>Using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements is highly recommended for a better presentational effect. Using these elements is a matter of personal preference, however try to keep your forms consistent (i.e. either use them in all forms or no forms as to not confuse users).</li>
+                <li>Some <code>&lt;input&gt;</code> elements, such as date &amp; time, color and range types, are not supported and, as a result, do not have a default style defined for them. You can define said styles manually if you need to use them in your website or app.</li>
+                <li>Checkboxes and radio buttons are not stylized the same way as most of the other elements, nor do they follow the exact same stucture for layout. Please refer to the next section for information on how to use those.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Responsive form&lt;/legend&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
+        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-12 col-md&quot;&gt;
+        &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
+        &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt; 
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
+        &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use <code>.row</code> and <code>.col-<span class="fore-primary">SCR_SZ</span></code> or <code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code> (replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names (<code><span class="fore-tertiary">sm</span></code> for smaller screens, <code><span class="fore-tertiary">md</span></code> for medium-sized screens or <code><span class="fore-tertiary">lg</span></code> for larger screens and <code><span class="fore-secondary">COL_WD</span></code> with a number from <code>1</code> to <code>12</code> specifying the width of the column) to set specific layouts for your aligned forms. You can also use the same column classes to make them responsive for different screen sizes.</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Responsive form&lt;/legend&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-12 col-md-10 col-md-offset-1&quot;&gt;
+        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+        &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-12 col-md-10 col-md-offset-1&quot;&gt;
+        &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt; 
+        &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Apart from using <code>.row</code> and <code>.col-<span class="fore-primary">SCR_SZ</span></code> or <code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code> for responsiveness, you can also use other classes from the <strong>grid</strong> module such as the offset classes to make your form layouts more interesting.</p>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;style&gt;
+  .label-aligned {
+    align-items: center;
+  }
+&lt;/style&gt;
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Responsive form&lt;/legend&gt;
+    &lt;div class=&quot;row label-aligned&quot;&gt;
+      &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
+        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-12 col-md&quot;&gt;
+        &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;When creating aligned forms using the <strong>grid</strong> module's classes, labels might be off-center vertically compared to their inline counterparts. Use a simple styling for their parent <code>.row</code> element, if you want to adjust their vertical alignment.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre><&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Responsive form&lt;/legend&gt;
+    &lt;div class=&quot;row input-group&quot;&gt;
+      &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
+        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-12 col-md&quot;&gt;
+        &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using the <code>.button-group</code> class when creating aligned forms. This might cause unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -159,10 +302,10 @@
               <h2>Checkboxes &amp; radio buttons</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
               <!-- sample -->
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
                 <p></p>
                 <h3>Sample code</h3>
                 <pre></pre>
@@ -196,10 +339,10 @@
               <h2>Buttons &amp; button groups</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
               <!-- sample -->
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
                 <p></p>
                 <h3>Sample code</h3>
                 <pre></pre>
@@ -233,10 +376,10 @@
               <h2>File upload buttons</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
               <!-- sample -->
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
                 <p></p>
                 <h3>Sample code</h3>
                 <pre></pre>

@@ -678,7 +678,7 @@ button {
 
 button, [type="button"], [type="submit"], [type="reset"], a.button, label.button, .button {
   display: inline-block;
-  background: rgba(207, 207, 207, 0.75);
+  background: rgba(189, 189, 189, 0.65);
   color: #212121;
   border: 0;
   border-radius: 2px;
@@ -690,7 +690,7 @@ button, [type="button"], [type="submit"], [type="reset"], a.button, label.button
   transition: all 0.3s ease 0s;
   cursor: pointer; }
   button:hover, button:active, button:focus, [type="button"]:hover, [type="button"]:active, [type="button"]:focus, [type="submit"]:hover, [type="submit"]:active, [type="submit"]:focus, [type="reset"]:hover, [type="reset"]:active, [type="reset"]:focus, a.button:hover, a.button:active, a.button:focus, label.button:hover, label.button:active, label.button:focus, .button:hover, .button:active, .button:focus {
-    background: #cfcfcf;
+    background: rgba(189, 189, 189, 0.8);
     opacity: 1; }
   button:disabled, button[disabled], [type="button"]:disabled, [type="button"][disabled], [type="submit"]:disabled, [type="submit"][disabled], [type="reset"]:disabled, [type="reset"][disabled], a.button:disabled, a.button[disabled], label.button:disabled, label.button[disabled], .button:disabled, .button[disabled] {
     cursor: not-allowed;

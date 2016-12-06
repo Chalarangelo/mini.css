@@ -607,3 +607,4 @@
 - Tweaks to the `checkbox` and `radio` components. Added a lot of customization and recalculated their values from the ground up. This should fix problems with displaying them on different screens.
 - Updated the awkward `navigation` `header` component after the `button` changes.
 - Logo in `header` changed to reflect the new style.
+- Changed `button` default coloration to a material color palette from Google Material Design, so that it will now be more consistent. Tweaked `opacity` to make this work.

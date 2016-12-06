@@ -144,7 +144,7 @@ $grid-large-prefix:				'lg';											// Large screen class prefix for grid
 // [1] - If the value of $use-four-step-grid is `true`, the grid system will contain 4 breakpoints instead of 3, along with
 //	the needed styles. In this case, values should be specified for $grid-extra-small-prefix and $grid-small-breakpoint.
 //	Variables for navigational elements
-$header-height:					36px;											// Height for <header>
+$header-height:					44px;											// Height for <header>
 $header-back-color:				#263238;										// Background color for <header>
 $header-fore-color:				$back-color;									// Text color for <header>
 $header-border-style:			0;												// Border style for <header>
@@ -156,7 +156,7 @@ $header-logo-name:				'logo';											// Class name for <header>'s logo
 $header-logo-font-size:			1.75em;											// Font size for <header>'s logo
 $header-logo-line-height:		1.2;											// Line height for <header>'s logo
 $header-logo-margin:			1px 6px 1px 1px;								// Margin for <header>'s logo
-$header-logo-padding:			0;												// Padding for <header>'s logo
+$header-logo-padding:			3px 0 0;										// Padding for <header>'s logo
 $header-link-hover-color:		#37474f;										// Hover color for <header>'s links
 $header-link-margin:			2px 0 0;										// Margin for <header>'s links
 $nav-back-color:				#eceff1;										// Background for <nav>

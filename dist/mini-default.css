@@ -536,7 +536,7 @@ a {
     order: 999; } }
 header {
   display: block;
-  height: 36px;
+  height: 44px;
   background: #263238;
   color: #f5f5f5;
   padding: 2px 8px;
@@ -548,7 +548,8 @@ header {
     color: #f5f5f5;
     font-size: 1.75em;
     line-height: 1.2;
-    margin: 1px 6px 1px 1px; }
+    margin: 1px 6px 1px 1px;
+    padding: 3px 0 0; }
   header button, header [type="button"], header a.button, header label.button, header .button {
     background: #263238;
     color: #f5f5f5;
@@ -557,8 +558,6 @@ header {
     box-shadow: none; }
     header button:hover, header button:active, header button:focus, header [type="button"]:hover, header [type="button"]:active, header [type="button"]:focus, header a.button:hover, header a.button:active, header a.button:focus, header label.button:hover, header label.button:active, header label.button:focus, header .button:hover, header .button:active, header .button:focus {
       background: #37474f; }
-  header > span:not(.logo) {
-    vertical-align: super; }
   header .logo, header a.button {
     text-decoration: none; }
 

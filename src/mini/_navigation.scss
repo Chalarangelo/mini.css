@@ -62,9 +62,6 @@ header {
 			border: 0;
 		}
 	}
-	> span:not(.#{$header-logo-name}) {	// Style separators' vertical alignment.
-		vertical-align: super;
-	}
 	@if $apply-link-underline {		// Override for links if underline is enabled.
 		.#{$header-logo-name}, a.#{$button-class-name} {
 			text-decoration: none;

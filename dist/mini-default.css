@@ -752,22 +752,20 @@ input[type="file"] {
 
 .input-group [type="checkbox"] + label, .input-group [type="radio"] + label {
   position: relative;
-  margin-left: 21.25px; }
+  margin-left: 20px; }
   .input-group [type="checkbox"] + label:before, .input-group [type="radio"] + label:before {
-    box-sizing: border-box;
     display: inline-block;
     position: absolute;
-    top: 0;
+    bottom: 3px;
     left: 0;
-    width: 17px;
-    height: 17px;
+    width: 16px;
+    height: 16px;
     content: '';
     border: 1px solid #bdbdbd;
     border-radius: 1px;
     background: #f5f5f5;
     color: #212121;
-    margin-left: -21.25px;
-    vertical-align: text-bottom; }
+    margin-left: -20px; }
   .input-group [type="checkbox"] + label:hover:before, .input-group [type="checkbox"] + label:active:before, .input-group [type="checkbox"] + label:focus:before, .input-group [type="radio"] + label:hover:before, .input-group [type="radio"] + label:active:before, .input-group [type="radio"] + label:focus:before {
     border-color: #0288d1; }
 .input-group [type="checkbox"]:focus + label:before, .input-group [type="radio"]:focus + label:before {
@@ -779,12 +777,12 @@ input[type="file"] {
   .input-group [type="checkbox"][disabled] + label:before, .input-group [type="checkbox"][disabled] + label:after, .input-group [type="radio"][disabled] + label:before, .input-group [type="radio"][disabled] + label:after {
     opacity: 0.75; }
 .input-group [type="checkbox"]:checked + label:after, .input-group [type="radio"]:checked + label:after {
-  margin-left: -21px;
+  margin-left: -20px;
   position: absolute;
-  top: 4px;
+  bottom: 7px;
   left: 4px;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   background: #212121;
   content: ''; }
 

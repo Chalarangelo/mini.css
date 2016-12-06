@@ -325,27 +325,24 @@ $hide-file-inputs: true !default;
 	// Label styling based on the specifics of the checkbox/radio variables.
 	[type="checkbox"] + label, [type="radio"] + label {
 		position: relative;
-		margin-left: $checkbox-size + ($checkbox-size * 0.25);
+		margin-left: floor($checkbox-size + floor($checkbox-size * 0.25));
 		// Styling for checkbox/radio box part.
 		&:before {
-			box-sizing: border-box;	
+			//box-sizing: border-box;	
 			display: inline-block;
 			position: absolute;
-			top: 0;
+			bottom: $checkbox-bottom-spacing;
 			left: 0;
 			width: $checkbox-size;
 			height: $checkbox-size;
 			content: '';
-			@if $checkbox-border-style != 0 {
-				border: $checkbox-border-style;
-			}
+			border: $checkbox-border-thickness solid $checkbox-border-color;
 			@if $checkbox-border-radius != 0 {
 				border-radius:  $checkbox-border-radius;
 			}
 			background: $checkbox-back-color;
 			color: $checkbox-fore-color;
 			margin-left: -($checkbox-size + ($checkbox-size * 0.25));
-			vertical-align: text-bottom;
 		}
 		// Hover, focus, active styling.
 		&:hover, &:active, &:focus {
@@ -375,10 +372,10 @@ $hide-file-inputs: true !default;
 		&:after {
 			margin-left: - floor($checkbox-size + floor($checkbox-size * 0.25));
 			position: absolute;
-			top: ($checkbox-size - floor($checkbox-size * 0.55))/2;
-			left: ($checkbox-size - floor($checkbox-size * 0.55))/2;
-			width: floor($checkbox-size * 0.55);
-			height: floor($checkbox-size * 0.55);
+			bottom: floor($checkbox-size * 0.25) + $checkbox-bottom-spacing;
+			left: floor($checkbox-size * 0.25);
+			width: floor($checkbox-size * 0.5) + floor($checkbox-border-thickness * 2);
+			height: floor($checkbox-size * 0.5) + floor($checkbox-border-thickness * 2);
 			background: $checkbox-fore-color;
 			content: '';
 		}

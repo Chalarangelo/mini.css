@@ -600,3 +600,8 @@
 - Added `inverse` `button` style to the list of `button` styles.
 - Removed the `custom` `button` demo that was still lingering in the current flavor.
 - Updated colors and stuff for `button` color variants. They should be consistent now.
+
+
+## 20161206
+
+- Tweaks to the `checkbox` and `radio` components. Added a lot of customization and recalculated their values from the ground up. This should fix problems with displaying them on different screens.

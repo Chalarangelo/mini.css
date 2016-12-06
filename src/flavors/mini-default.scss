@@ -265,12 +265,14 @@ $button-style2-border-style:	0;												// Border style for button style 2
 $button-style2-border-radius:	4px;											// Border radius for button style 2
 $button-style2-padding:			12px 18px;										// Padding for button style 2
 $button-style2-margin:			10px 8px;										// Margin for button style 2
-$checkbox-size:					17px;											// Size for checkbox/radio [2]
+$checkbox-size:					16px;											// Size for checkbox/radio [2]
 $checkbox-back-color:			$input-back-color;								// Background clor for checkbox/radio
 $checkbox-fore-color:			$input-fore-color;								// Text/mark color for checkbox/radio
-$checkbox-border-style:			$input-border-style;							// Border style for checkbox/radio
+$checkbox-border-thickness:		1px;											// Border thickness for checkbox/radio
+$checkbox-border-color:			#bdbdbd;										// Border color for checkbox/radio
 $checkbox-border-radius:		$input-border-radius;							// Border radius for checkbox/radio
 $checkbox-focus-border-color: 	$input-focus-border-color;						// Border color for checkbox/radio on focus
+$checkbox-bottom-spacing:		3px;											// Bottom spacing for checkbox/radio
 $checkbox-disabled-opacity:		$input-disabled-opacity;						// Opacity for disabled checkbox/radio
 // 	Notes:
 // [1] - If the value of $hide-file-inputs is `true`, all <input type="file"> elements will be hidden and the only way

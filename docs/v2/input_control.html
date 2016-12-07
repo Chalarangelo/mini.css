@@ -394,29 +394,76 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
-              <!-- sample -->
+                <button>Default button</button>
+                <button class="primary">Primary button</button>
+                <button class="secondary">Secondary button</button>
+                <button class="tertiary">Tertiary button</button>
+                <button class="inverse">Inverse button</button>
+                <button class="small">Small button</button>
+                <button class="large">Large button</button>           
+                <button disabled>Disabled button</button>
+                <h4>Button group</h4>
+                <div class="button-group">
+                  <button>Button</button>
+                  <button>Button</button>
+                  <button>Button</button>
+                </div>
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
-                <p></p>
+                <p>All button types have been stylized by default, while maintaining accessiblity. Simply add any <code>&lt;button&gt;</code> or an <code>&lt;input&gt;</code> with a button <code><span class="secondary">type</span></code> (i.e. <code><span class="fore-primary">&quot;button&quot;</span></code>, <code><span class="fore-primary">&quot;submit&quot;</span></code> or <code><span class="fore-primary">&quot;reset&quot;</span></code>) and they will be styled accordingly. You can also use the <code>.button</code> class for links, labels and other elements of your choice to make them look like buttons.</p>
+                <p>Color variants are available in the form of the <code>.primary</code>, <code>.secondary</code>, <code>.tertiary</code> and <code>.inverse</code> classes. Size variants are available as well in the form of <code>.small</code> and <code>.large</code> classes.</p>
+                <p>Finally, you can create responsive groups of buttons by wrapping them inside a <code>&lt;div&gt;</code> with the <code>.button-group</code> class.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;button&gt;Default button&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;primary&quot; value=&quot;Primary button&quot;&gt;
+&lt;input type=&quot;reset&quot; class=&quot;secondary&quot; value=&quot;Secondary button&quot;&gt;
+&lt;input type=&quot;submit&quot; class=&quot;tertiary&quot; value=&quot;Tertiary button&quot;&gt;
+&lt;button class=&quot;inverse&quot;&gt;Inverse button&lt;/button&gt;
+&lt;button class=&quot;small&quot;&gt;Small button&lt;/button&gt;
+&lt;button class=&quot;large&quot;&gt;Large button&lt;/button&gt;           
+&lt;button disabled&gt;Disabled button&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Link button&lt;/a&gt;
+&lt;label class=&quot;button&quot;&gt;Label button&lt;/label&gt;
+
+&lt;div class=&quot;button-group&quot;&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+&lt;/div&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>If you want more color or size variants for your buttons, check out the <a href="customization.html">customization</a> page.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;button class=&quot;inverse small&quot;&gt;Small inverse button&lt;/button&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can mix and match button color and size variants to achieve the desired effect.</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;button class=&quot;secondary inverse&quot;&gt;Problematic button&lt;/button&gt;
+<span class="fore-secondary">&lt;!-- or --&gt;</span>
+&lt;button class=&quot;small large&quot;&gt;Problematic button&lt;/button&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid mixing two or more button color or size variants, as these combinations might result in unexpected behavior.</p>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;div class=&quot;button-group&quot;&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+  &lt;input type=&quot;reset&quot; class=&quot;secondary&quot; value=&quot;Secondary button&quot;&gt;
+  &lt;label class=&quot;button inverse&quot;&gt;Label button&lt;/label&gt;
+&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use button color variants inside the same <code>.button-group</code>. You can also use any component styled like a button inside a <code>.button-group</code>.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;div class=&quot;button-group&quot;&gt;
+  &lt;button class=&quot;large&quot;&gt;Button&lt;/button&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+  &lt;button class=&quot;small&quot;&gt;Button&lt;/button&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using button size variants inside a <code>.button-group</code>, as this might result in unexpected behavior.</p>
                 </div>
               </div>
             </div>

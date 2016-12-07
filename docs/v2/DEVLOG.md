@@ -617,3 +617,4 @@
 - Documented `radio` and `checkbox` in the `input_control` doc page.
 - Tweaked all references of `$back-color` to now use `#fafafa` instead of the previous `#f5f5f5`. This will make contrast better and allow for better visibility of certain pieces of text.
 - Full documentation for `button`s and `button-group`s.
+- Added documentation for `file` upload in the `input_control` module. Docs complete.

@@ -480,29 +480,34 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
-              <!-- sample -->
+                <div class="input-group">
+                  <br>
+                  <input type="file" id="file-input-demo">
+                  <label for="file-input-demo" class="button"><i class="fa fa-upload" aria-hidden="true"></i>&nbsp;Upload file</label>
+                  <br>
+                </div>
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
-                <p></p>
+                <p>File upload buttons are commonly a sore spot in UI toolkits. We try to remedy this problem by hiding the <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code>, while maintaining accessiblity and using a linked <code>&lt;label&gt;</code> of the <code>.button</code> class to display it in a modern way.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;input type=&quot;file&quot; id=&quot;file-input&quot;&gt;
+&lt;label for=&quot;file-input&quot; class=&quot;button&quot;&gt;Upload file...&lt;/label&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>The icon displayed in the example above is not part of the button styling.</li>
+                <li>File upload buttons do not change their text to the name of the file after the user has selected a file to upload. You can, however, add this functionality using a few lines of Javascript.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12">
+                  <pre>&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;file&quot; id=&quot;file-input&quot;&gt;
+  &lt;label for=&quot;file-input&quot; class=&quot;button&quot;&gt;Upload file...&lt;/label&gt;
+&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use a <code>.input-group</code> to wrap the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code>, if you wish.</p>
                 </div>
               </div>
             </div>

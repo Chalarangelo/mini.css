@@ -67,7 +67,7 @@ $add-pre-element-sidebar:		true;											// Should a fancy sidebar be added to
 																				// left side of <pre> (`true`/`false`) [7]
 $pre-element-sidebar-style:		3px solid #1565c0;								// Style of the sidebar of <pre>
 $kbd-element-padding:			2px 4px;										// Padding for <kbd>
-$kbd-element-fore-color:		$back-color;									// Text color for <kbd>
+$kbd-element-fore-color:		#fafafa;										// Text color for <kbd>
 $kbd-element-back-color:		$fore-color;									// Background color for <kbd>
 $kbd-element-border-style:		0;												// Border style for <kbd>
 $kbd-element-border-radius:		2px;											// Border radius for <kbd>
@@ -146,7 +146,7 @@ $grid-large-prefix:				'lg';											// Large screen class prefix for grid
 //	Variables for navigational elements
 $header-height:					44px;											// Height for <header>
 $header-back-color:				#263238;										// Background color for <header>
-$header-fore-color:				$back-color;									// Text color for <header>
+$header-fore-color:				#fafafa;										// Text color for <header>
 $header-border-style:			0;												// Border style for <header>
 $header-margin:					0;												// Margin for <header>
 $header-padding:				2px 8px;										// Padding for <header>
@@ -172,7 +172,7 @@ $nav-sublink-prefix:			'sublink';										// Prefix for the subcategory links i
 $nav-sublink-depth:				2;												// Amount of subcategory classes to add
 $nav-sublink-padding-left:		12px;											// Left padding to add to subcategories
 $footer-back-color:				#263238;										// Background color for <footer>
-$footer-fore-color:				$back-color;									// Text color for <footer>
+$footer-fore-color:				#fafafa;										// Text color for <footer>
 $footer-border-style:			0;												// Border stye for <footer>
 $footer-font-size:				85%;											// Font size for <footer>
 $footer-margin:					18px 0 0;										// Margin for <footer>
@@ -197,7 +197,7 @@ $legend-font-size:				0.925em;										// Font size for legend
 $legend-fore-color:				$form-fore-color;								// Text color for legend
 $legend-padding:				2px 4px;										// Padding for legend
 $input-group-name:				'input-group';									// Class for input groups
-$input-back-color:				$back-color;									// Background for input
+$input-back-color:				#fafafa;										// Background for input
 $input-fore-color:				$fore-color;									// Text color for input
 $input-border-style:			1px solid #bdbdbd;								// Border style for input
 $input-border-radius:			1px;											// Border radius for input
@@ -236,19 +236,19 @@ $button-variant1-back-color:	#0277bd;										// Background color for button va
 $button-variant1-back-opacity:	0.9;											// Background opacity for button variant 1
 $button-variant1-hover-back-opacity:											// Background opacity for button variant 1
 								1;												// on hover or focus
-$button-variant1-fore-color:	$back-color;									// Text color for button variant 1
+$button-variant1-fore-color:	#fafafa;										// Text color for button variant 1
 $button-variant2-name:			'secondary';									// Class name for button variant 2
 $button-variant2-back-color:	#c62828;										// Background color for button variant 2
 $button-variant2-back-opacity:	0.85;											// Background opacity for button variant 2
 $button-variant2-hover-back-opacity:											// Background opacity for button variant 2
 								1;												// on hover or focus
-$button-variant2-fore-color:	$back-color;									// Text color for button variant 2
+$button-variant2-fore-color:	#fafafa;										// Text color for button variant 2
 $button-variant3-name:			'tertiary';										// Class name for button variant 3
 $button-variant3-back-color:	#558b2f;										// Background color for button variant 3
 $button-variant3-back-opacity:	0.85;											// Background opacity for button variant 3
 $button-variant3-hover-back-opacity:											// Background opacity for button variant 3
 								1;												// on hover or focus
-$button-variant3-fore-color:	$back-color;									// Text color for button variant 3
+$button-variant3-fore-color:	#fafafa;										// Text color for button variant 3
 $button-variant4-name:			'inverse';										// Class name for button variant 4
 $button-variant4-back-color:	$fore-color;									// Background color for button variant 4
 $button-variant4-back-opacity:	1;												// Background opacity for button variant 4
@@ -367,7 +367,7 @@ $tab-stacked-breakpoint:		767px;											// Breakpoint for tabs layout (stacke
 $tab-stacked-name:				'stacked';										// Class name for stacked tabs
 //	Variables for contextual background elements and alerts
 $mark-back-color:				#0277bd;										// Background color for <mark>
-$mark-fore-color:				$back-color;									// Text color for <mark>
+$mark-fore-color:				#fafafa;										// Text color for <mark>
 $mark-font-size:				95%;											// Font size for <mark>
 $mark-line-height:				1;												// Line height for <mark>
 $mark-border-style:				0;												// Border style for <mark>
@@ -395,7 +395,7 @@ $alert-name:					'alert';										// Class name for alerts
 $alert-back-color:				#eeeeee;										// Background color for alerts
 $alert-fore-color:				$fore-color;									// Text color for alerts
 $alert-border-style:			1px solid #bdbdbd;								// Border style for alerts
-$alert-border-radius:			0;											// Border radius for alerts
+$alert-border-radius:			0;												// Border radius for alerts
 $alert-padding:					12px 16px;										// Padding for alerts
 $alert-margin:					1px 10px;										// Margin for alerts
 $alert-box-shadow:																// Box shadow for alerts

@@ -75,161 +75,78 @@
     </div>
     <!-- Insert your page content here-->
     <main><div class="container" style="padding-top: 20px;">
-        <button class="small">small</button>
-        <button>normal</button>
-        <button class="large">large</button>
-        <button class="inverse">button</button>
-        <p>Use rows and columns for normal alignment, use input-groups in rows without columns for unaligned but just vertical forms or predesigned forms etc.</p>
-        <p>Add align-items:center hack style</p>
-          <form>
-            <fieldset>
-                <legend>Aligned form (using <code>width</code> and grid - no container):</legend>
-                <div class="row">
-                  <div class="col-sm-12 col-md-2" style="text-align:right;">
-                    <label for="website">Website</label>
-                  </div>
-                  <div class="col-sm-12 col-md">
-                    <input type="text" value="" id="website" placeholder="website" style="width:85%;">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12 col-md-2" style="text-align:right;">
-                    <label for="username">Username</label> 
-                  </div>
-                  <div class="col-sm-12 col-md">
-                    <input type="text" value="" id="username" placeholder="username">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-offset-1 col-sm-12 input-group">
-                    <label for="username">Username</label> 
-                    <input type="text" value="" id="username" placeholder="username">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12 col-md-2" style="text-align:right;">
-                    <label for="weburl">URL</label>
-                  </div>
-                  <div class="col-sm-12 col-md">
-                    <input type="url" value="" id="weburl" placeholder="https://www.mywebsite.com" style="width:85%;">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12 col-md-2" style="text-align:right;">
-                    <label for="desc" style="vertical-align: text-top;">Description</label>
-                  </div>
-                  <div class="col-sm-12 col-md">
-                    <textarea type="url" value="" id="desc" placeholder="description" style="width:85%;"></textarea>
-                  </div>
-                </div>
-              </fieldset>
-          </form>
-
-
-            <form>
-              <fieldset>
-                <legend>Inline form (default style):</legend>
-                <div class="input-group"><label for="username">Username</label> <input type="text" value="" id="username" placeholder="username">&nbsp;</div>
-                <div class="input-group"><label for="mail">Email</label> <input type="email" value="" id="mail" placeholder="mail@server.com">&nbsp;</div>
-                <div class="input-group"><label for="pwd">Password</label> <input type="password" value="" id="pwd" placeholder="password"></div>
-              </fieldset><br>
-              <fieldset>
-                <legend>Aligned form (using <code>width</code> and grid):</legend>
-                <div class="row">
-                  <div class="col-sm-12 col-md-2" style="text-align:right;">
-                    <label for="website" style="vertical-align: text-top;">Website</label>
-                  </div>
-                  <div class="col-sm-12 col-md">
-                    <input type="text" value="" id="website" placeholder="website" style="width:85%;">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12 col-md-2" style="text-align:right;">
-                    <label for="weburl" style="vertical-align: text-top;">URL</label>
-                  </div>
-                  <div class="col-sm-12 col-md">
-                    <input type="url" value="" id="weburl" placeholder="https://www.mywebsite.com" style="width:85%;">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12 col-md-2" style="text-align:right;">
-                    <label for="desc" style="vertical-align: text-top;">Description</label>
-                  </div>
-                  <div class="col-sm-12 col-md">
-                    <textarea type="url" value="" id="desc" placeholder="description" style="width:85%;"></textarea>
-                  </div>
-                </div>
-              </fieldset><br>
-              <fieldset>
-                <legend>More inputs</legend>
-                <input disabled value="Disabled">
-                <input readonly value="Readonly">
-                <input type="number" value="4">
-                <select>
-                  <option>Test</option>
-                  <option>Demo</option>
-                </select>
-                <input type="search" placeholder="search..." value="">
-              </fieldset>
-            </form>
-            <form>
-              <fieldset>
-                <div class="input-group">
-                  <input type="checkbox" id="c1" tabindex="0"> <label for="c1">Checkbox</label>
-                </div>
-                <div class="input-group">
-                  <input type="checkbox" id="c2" disabled> <label for="c2" disabled>Disabled</label>
-                </div>
-              </fieldset>
-              <fieldset>
-                <div class="input-group">
-                  <input type="radio" name="radios" value="r1" checked id="r1" tabindex="0"> <label for="r1">Value 1</label>
-                  <input type="radio" name="radios" value="r2" id="r2" tabindex="0"> <label for="r2">Value 2</label>
-                  <input type="radio" name="radios" value="r3"checked id="r3" tabindex="0"> <label for="r3">Value 3</label>
-                </div>
-              </fieldset>
-            </form>
-            <button>Normal button</button>
-            <input type="button" value="Input button">
-            <input type="submit" value="Submit button">
-            <input type="reset" value="Reset button">
-            <a href="#" class="button">Link button</a>
-            <button disabled>Disabled button</button><br>
-            <p>Button groups can also be created, utilising the <code>.button-group</code> class. Simply add a set of buttons in it and you're good to go. Check it out below:</p>
-            <div class="button-group">
-              <input type="button" value="Input button" class="secondary">
-              <input type="submit" value="Submit button" class="primary">
-              <input type="reset" value="Reset button" class="inverse">
-              <button>Normal button</button>
-              <a href="#" class="button">Link button</a>
-            </div>
-            <p>File inputs are a sore spot in most frameworks, as they cannot be easily stylized using CSS. <strong>mini.css</strong> deals with the problem, using a workaround involving labels that use the <code>button</code> class, which applies the exact same style to those labels. Just link it to the <code>&lt;input type=&quot;file&quot;&gt;</code> element of your choice and you're good to go. For example:</p>
-            <span style="margin:3px;"></span><input type="file" id="file-input-demo"><label for="file-input-demo" class="button"><i class="fa fa-upload" aria-hidden="true"></i>&nbsp;Upload file</label><br>
-            <p>There are also different kinds of buttons, specifically <code>primary</code>, <code>secondary</code> and <code>tertiary</code>, as well as <code>small</code> and <code>large</code> buttons. All of these types can be specified as classes. For example:</p>
-            <span style="margin:3px;"></span>
-            <button class="primary">Primary normal button</button>
-            <input type="button" value="Secondary input button" class="secondary">
-            <input type="reset" value="Tertiary reset button" class="tertiary">
-            <input type="submit" value="Large submit button" class="large">
-            <label disabled class="button small primary">Small primary disabled label button</label>
-            <br><br>
-            <button>Default button</button>
-<input type="button" class="primary" value="Primary button">
-<input type="reset" class="secondary" value="Secondary button">
-<input type="submit" class="tertiary" value="Tertiary button">
-<button class="inverse">Inverse button</button>
-<button class="small">Small button</button>
-<button class="large">Large button</button>           
-<button disabled>Disabled button</button>
-<a href="#" class="button">Link button</a>
-<label class="button">Label button</label>
-<div class="button-group">
-  <button>Button</button>
-  <button>Button</button>
-  <button>Button</button>
-</div>
-<br>
-<input type="file" id="file-input-demo"><label for="file-input-demo" class="button"><i class="fa fa-upload" aria-hidden="true"></i>&nbsp;Upload file</label>
+                    <h2>Tabs &amp; accordions<small>Present content any way you like</small></h2>
+            <p><strong>mini.css</strong> provides you with a very modern tab component, that can easily be used for multiple things, like tabbed navigation, single collapses, accordion collapses and even image carousels. This might sound like a lot to do with one component, but the design behind it allows it to be truly versatile and replace all those components. To use the tab component, simply create a container using a <code>&lt;div&gt;</code> with the <code>.tabs</code> class. Populate it with <code>&lt;input type=&quot;radio&quot;&gt;</code>s, each followed by a linked <code>&lt;label&gt;</code> and another <code>&lt;div&gt;</code> which includes the tab's contents. If you want to create an accordion add the <code>.stacked</code> class to the container. The same thing works for collapses as well. Accordions and collapses can also use <code>&lt;input type=&quot;checkbox&quot;&gt;</code>s instead. Carousels can be created similarly, remember to add images to the inner content <code>&lt;div&gt;</code> and you're good to go. You can see some examples below:</p><br>
+            <div class="tabs stacked">
+              <input type="checkbox" id="collapse" autocomplete="off">
+              <label for="collapse">Single collapse</label>
+              <div>
+                <p>This is some content you can hide and show at will using the above label. Isn't that useful?</p>
+              </div>
+            </div><br>
+            <div class="tabs stacked">
+              <input type="radio" name="accordion" id="a1" autocomplete="off" checked>
+              <label for="a1">Accordion section 1</label>
+              <div>
+                <h3>Section 1 - The amazing versatility of tabs</h3>
+                <p>Yes, this is still based on tabs. Isn't it wonderful how many things you can accomplish using one simple component?</p>
+              </div>              
+              <input type="radio" name="accordion" id="a2" autocomplete="off">
+              <label for="a2">Accordion section 2</label>
+              <div>
+                <h3>Section 2 - How accordions work</h3>
+                <p>Accordions are very similar to collapses. Just add multiple <code>&lt;input type=&quot;radio&quot;&gt;</code>s, along with their content and you are ready to go.</p>
+              </div>
+            </div><br>
+            <div class="tabs">
+              <input type="radio" name="tabdemo" id="tab1" checked>
+              <label for="tab1">Tab 1</label>
+              <div>
+                <h3>Tab 1</h3>
+                <p>This is the first tab's content.</p>
+              </div>
+              <input type="radio" name="tabdemo" id="tab2">
+              <label for="tab2">Tab 2</label>
+              <div>
+                <h3>Tab 2</h3>
+                <p>This is the second tab's content.</p>
+              </div>
+              <input type="radio" name="tabdemo" id="tab3">
+              <label for="tab3">Tab 3</label>
+              <div>
+                <h3>Tab 3</h3>
+                <p>This is the third tab's content.</p>
+              </div>
+              <input type="radio" name="tabdemo" id="tab4">
+              <label for="tab4">Tab 4</label>
+              <div>
+                <h3>Tab 4</h3>
+                <p>This is the fourth tab's content.</p>
+              </div>
+            </div><br>
+            <div class="tabs">
+              <input type="radio" name="carousel" id="car1" checked>
+              <label for="car1">Image 1</label>
+              <div>
+                <img src="catdemo.jpg" style="height: 240px; width: auto;">
+              </div>
+              <input type="radio" name="carousel" id="car2">
+              <label for="car2">Image 2</label>
+              <div>
+                <img src="catdemo.jpg" style="height: 480px; width: auto">
+              </div>
+              <input type="radio" name="carousel" id="car3">
+              <label for="car3">Image 3</label>
+              <div>
+                <img src="catdemo.jpg" style="height: 720px; width: auto">
+              </div>
+            </div><br>
+            <h2>Utilities and Helpers <small>Useful classes for common problems</small></h2> 
+            <p>The utilities provided with <strong>mini.css</strong> aim to solve common problems and allow ease of use whenever possible. Some of them are showcased below:</p>
+            <p><span class="bordered">Generic border (using black outline and opacity of 0.25)</span>, <span class="bordered rounded">Radial border style 1</span> &amp; <span class="bordered circular">&nbsp;2 </span>.</p>  
+            <ul class="breadcrumbs"><li><a href="#">These</a></li><li><a href="#">is</a></li><li><a href="#">what</a></li><li><a href="#">breadcrumbs</a></li><li><a href="#">look</a></li><li><span>like</span></li></ul>
+            <p>You can also use the <code>.hidden</code> class to hide any element you want or the <code>.visually-hidden</code> class for elements that need to be invisible to users but exist in the accessibility tree, set <code>float</code>s to left or right using the <code>.float-left</code> and <code>.float-right</code> classes or clear <code>float</code>s using the <code>.clearfix</code> class, which implements the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">micro clearfix</a> by Nicolas Gallagher. Finally, use the <code>.center-block</code> class to make an element center and display as a block.</p><br>
+            
     </div></main>
     <!-- End of page content-->
     <footer><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>

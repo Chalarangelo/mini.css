@@ -318,7 +318,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
-                <p>Checkboxes and radio buttons come pre-styled, using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, while remaining fully accessible. To create a checkbox or radio button, start using a <code>&lt;div&gt;</code> that implements the <code>.input-group</code> class, and then add a proper <code>&lt;input&gt;</code> inside it (<code>checkbox</code> or <code>radio</code>), followed immediately by a <code>&lt;label&gt;</code> linking to it. Remember to add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to your <code>&lt;input&gt;</code>, so that it will register properly for screen readers.</p>
+                <p>Checkboxes and radio buttons come pre-styled, using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, while remaining fully accessible. To create a checkbox or radio button, start using a <code>&lt;div&gt;</code> that implements the <code>.input-group</code> class, and then add an <code>&lt;input&gt;</code> of the proper <code><span class="secondary">type</span></code> inside it (<code><span class="fore-primary">&quot;checkbox&quot;</span></code> or <code><span class="fore-primary">&quot;radio&quot;</span></code>), followed immediately by a <code>&lt;label&gt;</code> linking to it. Remember to add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to your <code>&lt;input&gt;</code>, so that it will register properly for screen readers.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;input-group&quot;&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt; 
@@ -436,6 +436,8 @@
             <h3>Notes</h3>
               <ul>
                 <li>If you want more color or size variants for your buttons, check out the <a href="customization.html">customization</a> page.</li>
+                <li>The <code>.button-group</code> component is compatible with modern browsers, but might not display properly on older browsers.</li>
+                <li><code>.button-group</code>s will display as a horizontal container with all their buttons in one row on medium-sized and larger displays, however they will collapse into a column view for smaller displays.</li>
               </ul>
               <hr>
               <div class="row">

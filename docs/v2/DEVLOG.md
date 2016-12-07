@@ -611,3 +611,7 @@
 - Bumped demo stylesheet to latest commit.
 - Tweaked `tab` module colors and variables for consistency with the rest of the modules.
 - Added basic documentation for `form`s and `input`s in the `input_control` doc page.
+
+## 20161207
+
+- Documented `radio` and `checkbox` in the `input_control` doc page.

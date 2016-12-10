@@ -631,3 +631,6 @@
 - Added `$breadcrumbs-margin` and updated accordingly to actually use a proper `margin` value if one is speciified, otherwise it will apply the resets.
 - *TODO* Add responsive margin and responsive padding mixins in `utility`.
 - *TODO* Add circular fixed size elements with close and dropdown icon that will change background color from opacity 0.00 to 1 (transitioned) when hovered over, selected, active etc.
+- *TODO* Add folder for `v1` in `docs`, keep folder for `v2`. Add an `index.html` in `v2` that will redirect to the main `index.html`, move contents currently in `v2` to main `docs` folder. Move contents of main `docs` folder to `v1` afterwards. This will allow doc pages by version, while being SEO friendly.
+- *TODO* Create a cheatsheet page for all the syntaxes for `v2` as a quick and easy guide to find things. Add to main menu.
+- *TODO* Update the `style`sheet for all pages to use a file probably (more calls, but easier to maintain).

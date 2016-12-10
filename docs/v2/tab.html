@@ -123,29 +123,122 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
+                <div class="tabs" style="margin-top: 5px; margin-bottom: 5px;">
+                  <input type="radio" name="tabdemo" id="tab1" checked aria-hidden="true">
+                  <label for="tab1" aria-hidden="true">Tab 1</label>
+                  <div>
+                    <h3>Tab 1</h3>
+                    <p>This is the first tab's content.</p>
+                  </div>
+                  <input type="radio" name="tabdemo" id="tab2" aria-hidden="true">
+                  <label for="tab2" aria-hidden="true">Tab 2</label>
+                  <div>
+                    <h3>Tab 2</h3>
+                    <p>This is the second tab's content.</p>
+                  </div>
+                  <input type="radio" name="tabdemo" id="tab3" aria-hidden="true">
+                  <label for="tab3" aria-hidden="true">Tab 3</label>
+                  <div>
+                    <h3>Tab 3</h3>
+                    <p>This is the third tab's content.</p>
+                  </div>
+                  <input type="radio" name="tabdemo" id="tab4" aria-hidden="true">
+                  <label for="tab4" aria-hidden="true">Tab 4</label>
+                  <div>
+                    <h3>Tab 4</h3>
+                    <p>This is the fourth tab's content.</p>
+                  </div>
+                </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>The tab container's basic sytanx is composed of two components, presented below in the order they should be added to the DOM tree:</p>
+                <ul>
+                  <li>At the outermost level of the tab container is a <code>&lt;div&gt;</code> element implementing the <code>.tabs</code> class. This serves as the wrapper of the tab container.</li>
+                  <li>Inside the <code>.tabs</code> container, add a set of the following three elements for each tab:
+                    <ol>
+                      <li>First, add an <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;radio&quot;</span>&gt;</code> element. Give it a <code><span class="fore-secondary">name</span></code> and an <code><span class="fore-secondary">id</span></code> in order to be able to link to it and group it with the rest of the radio buttons in the container.</li>
+                      <li>Follow the <code>&lt;input&gt;</code> element with a <code>&lt;label&gt;</code> element linking to it. Inside this element, add the text you want to be shown as the title of your tab.</li>
+                      <li>Finally, add a <code>&lt;div&gt;</code> immediately after the <code>&lt;label&gt;</code>'s closing tag. This will be the panel that contains the tab's content. Inside this element, you can add all the content you want in your tab (headings, images, text).</li>
+                    </ol>
+                  </li>
+                </ul>
+                <p>Tabs are responsive and will collapse into a stacked display on smaller screens, allowing the user to view the actual content more easily. The tab container's syntax is accessible, but parts of it might confuse screen readers, so we suggest adding the <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> to all the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> elements inside the <code>.tabs</code> container.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;tabs&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tab-group&quot; id=&quot;tab1&quot; checked aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;tab1&quot; aria-hidden=&quot;true&quot;&gt;Tab 1&lt;/label&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Tab 1&lt;/h3&gt;
+    &lt;p&gt;This is the first tab's content.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tab-group&quot; id=&quot;tab2&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;tab2&quot; aria-hidden=&quot;true&quot;&gt;Tab 2&lt;/label&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Tab 2&lt;/h3&gt;
+    &lt;p&gt;This is the second tab's content.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tab-group&quot; id=&quot;tab3&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;tab3&quot; aria-hidden=&quot;true&quot;&gt;Tab 3&lt;/label&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Tab 3&lt;/h3&gt;
+    &lt;p&gt;This is the third tab's content.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>Tabs are compatible with modern browsers, but might not display properly in older browsers.</li>
+                <li>Remember to add the <code><span class="fore-secondary">checked</span></code> attribute to one of your <code>&lt;input&gt;</code>s if you want that tab to be the one displayed by default. If none is specified, the first one will be displayed.</li>
+                <li>The <code>height</code> of the tab container's panel area is <code>400px</code>. If you want to change this default size, please check out the <a href="customization.html">customization</a> page.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;div class=&quot;tabs&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;tab-group&quot; id=&quot;tab1&quot; checked aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;tab1&quot; aria-hidden=&quot;true&quot;&gt;Tab 1&lt;/label&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Bad Tab&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Do not use checkboxes inside the default <code>.tabs</code> container, otherwise you might notice unexpected behavior. If you want to use an <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;checkbox&quot;</span>&gt;</code>, check out the next section.</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;div class=&quot;tabs&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tab-group&quot; id=&quot;tab1&quot; checked aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;tab1&quot; aria-hidden=&quot;true&quot;&gt;Tab 1&lt;/label&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Lonely Tab&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;You can add a single tab in a <code>.tabs</code> container, but what use would that be? You should probably read the next section to see what you can do with a stacked tab container instead.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;div class=&quot;tabs&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tab-group&quot; id=&quot;tab1&quot; checked aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;tab1&quot; aria-hidden=&quot;true&quot;&gt;Tab 1&lt;/label&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tab-group&quot; id=&quot;tab2&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;tab2&quot; aria-hidden=&quot;true&quot;&gt;Tab 2&lt;/label&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Bad Tab&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Bad Tab&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;The syntax and structure of the tab container is very strict. Try to follow it exactly as described in this section.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;div class=&quot;tabs&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tab-group&quot; id=&quot;tab1&quot; checked&gt;
+  &lt;label for=&quot;tab1&quot;&gt;Tab&lt;/label&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Not fully accessible tab&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Remember to use the <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> attribute to make your tabs fully accessible.</p>
                 </div>
               </div>
             </div>
@@ -160,7 +253,32 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
+                <div class="tabs stacked" style="margin-top: 5px; margin-bottom: 5px;">
+                  <input type="radio" name="accordion" id="a1" autocomplete="off" checked aria-hidden="true">
+                  <label for="a1" aria-hidden="true">Accordion section 1</label>
+                  <div>
+                    <h3>Section 1</h3>
+                    <p>This is the first accordion section's content.</p>
+                  </div>              
+                  <input type="radio" name="accordion" id="a2" autocomplete="off" aria-hidden="true">
+                  <label for="a2" aria-hidden="true">Accordion section 2</label>
+                  <div>
+                    <h3>Section 2</h3>
+                    <p>This is the second accordion section's content.</p>
+                  </div>
+                </div>
+                <div class="tabs stacked" style="margin-top: 5px; margin-bottom: 5px;">
+                  <input type="checkbox" id="c1" autocomplete="off" aria-hidden="true">
+                  <label for="c1" aria-hidden="true">Collapse section 1</label>
+                  <div>
+                    <p>This is the first collapse section's content.</p>
+                  </div>
+                  <input type="checkbox" id="c2" autocomplete="off" aria-hidden="true">
+                  <label for="c2" aria-hidden="true">Collapse section 2</label>
+                  <div>
+                    <p>This is the second collapse section's content.</p>
+                  </div>
+                </div>       
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
                 <p></p>
@@ -176,11 +294,11 @@
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6">
                   <pre><!-- do code --></pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre><!-- don't code --></pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
                 </div>

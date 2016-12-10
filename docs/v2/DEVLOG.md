@@ -625,3 +625,4 @@
 ## 20161210
 
 - Added `tab.html` for `tab` module documentation.
+- Basic documentation and syntax explanation of `tab` module.

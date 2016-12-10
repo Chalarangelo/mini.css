@@ -1228,8 +1228,9 @@ ul.breadcrumbs {
   display: -webkit-flex;
   display: flex;
   list-style: none;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 10px 8px;
+  /*	margin-left: 0;			// Reset margins from list styling
+  	margin-right: 0;		// Reset margins from list styling*/
   padding: 0;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15); }

@@ -628,3 +628,6 @@
 - Basic documentation and syntax explanation of `tab` module.
 - Added documentation for `stacked` `tab`s in `tab` module doc page. Module documentation complete.
 - `playground` cleanup, only `utility` module remains there now.
+- Added `$breadcrumbs-margin` and updated accordingly to actually use a proper `margin` value if one is speciified, otherwise it will apply the resets.
+- *TODO* Add responsive margin and responsive padding mixins in `utility`.
+- *TODO* Add circular fixed size elements with close and dropdown icon that will change background color from opacity 0.00 to 1 (transitioned) when hovered over, selected, active etc.

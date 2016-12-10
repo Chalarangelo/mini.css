@@ -620,3 +620,8 @@
 - Added documentation for `file` upload in the `input_control` module. Docs complete.
 - Removed `demo.html` as it had outlived its purpose.
 - `playground.html` cleanup. Moved all the rest of the data from the old `demo` page into it.
+
+
+## 20161210
+
+- Added `tab.html` for `tab` module documentation.

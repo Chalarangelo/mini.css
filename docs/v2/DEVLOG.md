@@ -626,3 +626,5 @@
 
 - Added `tab.html` for `tab` module documentation.
 - Basic documentation and syntax explanation of `tab` module.
+- Added documentation for `stacked` `tab`s in `tab` module doc page. Module documentation complete.
+- `playground` cleanup, only `utility` module remains there now.

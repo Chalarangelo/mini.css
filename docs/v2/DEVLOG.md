@@ -91,7 +91,6 @@
 - Updated page to test `mark` in headers.
 - Deployed live version with updated tags.
 
-
 ## 20161019
 
 - More fiddling with palettes. Tried to update colors to material design: `body` `color` is now `#212121`. `body` `background` is now `#fafafa`. `small` inside header `color` is now `#424242`. Codeblock `background` is now `#e0e0e0` and `pre` sidebar `border-color` is `#1565c0`. `mark` `background`s changed to `#0277bd`, `#f44336` and `#558b2f` respectively.
@@ -136,7 +135,6 @@
 - Created mixin `make-progress-alt-style` for style variants of `progress`.
 - Created `nano` variant for `progress` (nanobar progress) using above mixin.
 - Documented mixins for `progress`, optimized etc.
-
 
 ## 20161021 (last change a bit past midnight but still counts)
 
@@ -301,7 +299,6 @@
 - Opened issue for more mixins to be added to `card` module later.
 - Deployed live page.
 
-
 ## 20161104
 
 - Added mixin `make-card-alt-color` to `card` module. Supplied an example of a different card (`primary`).
@@ -432,7 +429,6 @@
 - Deployed live demo with fixes etc.
 - Added a module list and browser support to the `index` page.
 
-
 ## 20161113
 
 - Added `docs/v2/playground.html` to more extensively test some of the components, especially `card`s and more specifically `fluid` ones.
@@ -449,7 +445,6 @@
 - Added `$table-body-back-color`, `$table-body-fore-color` and `$table-head-fore-color` in addition to the existing `$table-head-back-color` and optimized them accordingly.
 - *TODO* Some minor changes to `.button-group` might be needed (button shadows overlapping and existing, the extra border etc.).
 
-
 ## 20161114
 
 - Added the basic setup instructions in the `index` page.
@@ -463,12 +458,10 @@
 - Fixed `Reponsive` in `index`...
 - Tested `table` `horizontal` layout with flexbox.
 
-
 ## 20161116
 
 - Created `modules.html` page, added content.
 - Bumped FontAwesome to v4.7.0 as some icons I used were from that version.
-
 
 ## 20161117
 
@@ -477,7 +470,6 @@
 - Minor changes in `core` module formatting.
 - Added `core` documentation for common textual elements.
 - Updated stylesheet reference to the latest changes for live pages.
-
 
 ## 20161119
 
@@ -601,7 +593,6 @@
 - Removed the `custom` `button` demo that was still lingering in the current flavor.
 - Updated colors and stuff for `button` color variants. They should be consistent now.
 
-
 ## 20161206
 
 - Tweaks to the `checkbox` and `radio` components. Added a lot of customization and recalculated their values from the ground up. This should fix problems with displaying them on different screens.
@@ -621,7 +612,6 @@
 - Removed `demo.html` as it had outlived its purpose.
 - `playground.html` cleanup. Moved all the rest of the data from the old `demo` page into it.
 
-
 ## 20161210
 
 - Added `tab.html` for `tab` module documentation.
@@ -634,3 +624,7 @@
 - *TODO* Add folder for `v1` in `docs`, keep folder for `v2`. Add an `index.html` in `v2` that will redirect to the main `index.html`, move contents currently in `v2` to main `docs` folder. Move contents of main `docs` folder to `v1` afterwards. This will allow doc pages by version, while being SEO friendly.
 - *TODO* Create a cheatsheet page for all the syntaxes for `v2` as a quick and easy guide to find things. Add to main menu.
 - *TODO* Update the `style`sheet for all pages to use a file probably (more calls, but easier to maintain).
+
+## 20161211
+
+- Created `utility.html`, started documentation.

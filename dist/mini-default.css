@@ -1267,15 +1267,47 @@ ul.breadcrumbs {
       ul.breadcrumbs li:last-child:after {
         border: 0; }
 
+.close {
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  position: relative;
+  border-radius: 1em;
+  font-size: 32px;
+  text-overflow: clip;
+  background: rgba(224, 224, 224, 0);
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; }
+  .close:hover, .close:active, .close:focus {
+    background: #e0e0e0; }
+  .close:before, .close:after {
+    display: inline-block;
+    width: 0.45em;
+    height: 0.1em;
+    position: absolute;
+    content: "";
+    top: 0.33em;
+    left: 0.155em;
+    text-overflow: clip;
+    background: #212121; }
+  .close:before {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg); }
+  .close:after {
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg); }
+
 .clearfix:before, .clearfix:after {
-  content: ' ';
-  display: table;
-  clear: both; }
+  content: ' ' !important;
+  display: table !important;
+  clear: both !important; }
 
 .center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important; }
 
 button.primary, [type="button"].primary, [type="submit"].primary,
 [type="reset"].primary, .button.primary {
@@ -1447,8 +1479,17 @@ progress.nano {
 .circular {
   border-radius: 50% !important; }
 
-.no-shadow {
+.shadow-none {
   box-shadow: none !important; }
+
+.shadow-small {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15) !important; }
+
+.shadow-medium {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15) !important; }
+
+.shadow-large {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15) !important; }
 
 .float-left {
   float: left !important; }

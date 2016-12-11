@@ -628,3 +628,6 @@
 ## 20161211
 
 - Created `utility.html`, started documentation.
+- Implemented mixins for responsive `padding` and `margin` in `utility`.
+- Implemented new `close` icon/button in `utility`.
+- Documented visibility helpers, floats etc., borders and shadows for `utility`.

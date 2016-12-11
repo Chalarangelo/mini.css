@@ -473,13 +473,26 @@ $breadcrumbs-border-style:		0;												// Border style for breadcrumbs
 $breadcrumbs-border-radius:		4px;											// Border radius for breadcrumbs
 $breadcrumbs-box-shadow:														// Box shadow for breadcrumbs
 	0 1px 3px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.15);
+$close-icon-name:				'close';										// Class name for close icon
+$close-icon-size:				32px;											// Size of the close icon
+$close-icon-back-color:			#e0e0e0;										// Background color for the close icon
+$close-icon-fore-color:			#212121;										// Foreground color for the close icon
 $border-generic-name:			'bordered';										// Class name for generic border style
 $border-radial-style1-name:		'rounded';										// Class name for radial border style 1
 $border-radial-style1-radius:	2px;											// Border radius for radial border style 1
 $border-radial-style2-name:		'circular';										// Class name for radial border style 2
 $border-radial-style2-radius:	50%;											// Border radius for radial border style 2
-$box-shadow-none-name:			'no-shadow';									// Class name for generic no-box-shadow
-$box-shadow-none-value:			none;											// Box shadow value for generic no-box-shadow
+$box-shadow-style1-name:		'shadow-none';									// Class name for generic box-shadow style 1
+$box-shadow-style1-value:		none;											// Box shadow value for generic box-shadow style 1
+$box-shadow-style2-name:		'shadow-small';									// Class name for generic box-shadow style 2
+$box-shadow-style2-value:														// Box shadow value for generic box-shadow style 2
+	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
+$box-shadow-style3-name:		'shadow-medium';								// Class name for generic box-shadow style 3
+$box-shadow-style3-value:														// Box shadow value for generic box-shadow style 3
+	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);	
+$box-shadow-style4-name:		'shadow-large';									// Class name for generic box-shadow style 4
+$box-shadow-style4-value:														// Box shadow value for generic box-shadow style 4
+	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);	
 $float-prefix:					'float';										// Prefix for float classes
 $clearfix-name:					'clearfix';										// Class name for clearfix
 $center-block-name:				'center-block';									// Class name for center block
@@ -539,5 +552,8 @@ $center-block-name:				'center-block';									// Class name for center block
 @include make-border-generic ($border-generic-name);
 @include make-border-radial-style ($border-radial-style1-name, $border-radial-style1-radius);
 @include make-border-radial-style ($border-radial-style2-name, $border-radial-style2-radius);
-@include make-box-shadow-generic ($box-shadow-none-name, $box-shadow-none-value);
+@include make-box-shadow-generic ($box-shadow-style1-name, $box-shadow-style1-value);
+@include make-box-shadow-generic ($box-shadow-style2-name, $box-shadow-style2-value);
+@include make-box-shadow-generic ($box-shadow-style3-name, $box-shadow-style3-value);
+@include make-box-shadow-generic ($box-shadow-style4-name, $box-shadow-style4-value);
 @include make-floats ($float-prefix);

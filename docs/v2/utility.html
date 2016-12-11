@@ -119,33 +119,27 @@
         <div class="col-sm">
           <div class="card fluid">
             <div class="section">
-              <h2>Visiblity helpers</h2>
+              <h2>Visibility helpers</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
-              </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+              <div class="col-sm-12 col-sm-first">
+                <p>You can hide content for all your users, using the default <code><span class="fore-secondary">hidden</span></code> attribute. However, we provide you with the <code>.hidden</code> class for the same purpose, as well as the <code>.visually-hidden</code> class which will make your content hidden, except for screen readers.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;span class=&quot;hidden&quot;&gt;Hidden text&lt;/span&gt;
+&lt;span class=&quot;visually-hidden&quot;&gt;Screen-reader-only text&lt;/span&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
+                <li>Both classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
                 <li></li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12">
+                  <pre>&lt;span class=&quot;hidden visually-hidden&quot;&gt;Not a good idea&lt;/span&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using both classes at the same time. Instead, use <code>.hidden</code> to hide content for all users, <code>.visually-hidden</code> to hide it for non-screen-reader users or <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> to hide it for screen-reader-only users.</p>
                 </div>
               </div>
             </div>
@@ -159,30 +153,25 @@
               <h2>Floats, centering &amp; clearfix</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
-              </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+              <div class="col-sm-12 col-sm-first">
+                <p>You can easily make content float left or right, using the <code>.float-left</code> and <code>.float-right</code> classes. Clear all floats, using the <code>.clearfix</code> class, based on the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">micro clearfix</a> by Nicolas Gallagher. Finally, use the <code>.center-block</code> class to make an element center and display as a block.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;span class=&quot;float-left&quot;&gt;Float left&lt;/span&gt;
+&lt;span class=&quot;float-right&quot;&gt;Float right&lt;/span&gt;
+&lt;span class=&quot;clearfix&quot;&gt;Clearfix&lt;/span&gt;
+&lt;span class=&quot;center-block&quot;&gt;Center block&lt;/span&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>All of these classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12">
+                  <pre>&lt;span class=&quot;float-left float-right&quot;&gt;Avoid this&lt;/span&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining any two of the above classes (except if you use <code>.clearfix</code> to temporarily clear a float or something similar), as they might overwrite each other and cause unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -197,29 +186,44 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
+                <div>
+                  <br>
+                  <p>This is a paragraph with a piece of <span class="bordered">bordered text</span>.</p>
+                  <button class="bordered">Bordered button</button><button class="bordered primary">Bordered button</button><br>
+                  <p><img src="http://placehold.it/200x200?text=rounded" class="rounded">&nbsp;&nbsp;<img src="http://placehold.it/200x200?text=circular" class="circular"></p><br>
+                  <p><span class="shadow-none">No shadow</span>&nbsp;&nbsp;<span class="shadow-small">Small shadow</span>&nbsp;&nbsp;<span class="shadow-medium">Medium shadow</span>&nbsp;&nbsp;<span class="shadow-large">Large shadow</span></p><br>
+                </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>Use the <code>.bordered</code> class to apply a generic black border with 25% opacity to any element. Apart from that you can use the <code>.rounded</code> and <code>.circular</code> classes to create generic border radiuses. Finally, you can use the <code>.shadow-small</code>, <code>.shadow-medium</code> and <code>.shadow-large</code> to add a generic <code><span class="fore-secondary">box-shadow</span></code> to any element, as well as the <code>.shadow-none</code> class to remove it entirely.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;span class=&quot;bordered&quot;&gt;Bordered&lt;/span&gt;
+&lt;span class=&quot;rounded&quot;&gt;Rounded&lt;/span&gt;
+&lt;span class=&quot;circular&quot;&gt;Circular&lt;/span&gt;
+&lt;span class=&quot;shadow-none&quot;&gt;No shadow&lt;/span&gt;
+&lt;span class=&quot;shadow-small&quot;&gt;Small shadow&lt;/span&gt;
+&lt;span class=&quot;shadow-medium&quot;&gt;Medium shadow&lt;/span&gt;
+&lt;span class=&quot;shadow-large&quot;&gt;Large shadow&lt;/span&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>All of these classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
+                <li>The <code>.bordered</code> class was originally created with elements such as buttons in mind, to allow users highlighting certain elements in their designs, without having to change any default styles.</li>
+                <li>All of the above classes can be used with most modern HTML elements.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;span class=&quot;bordered rounded shadow-small&quot;&gt;Stylized element&lt;/span&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;span class=&quot;rounded circular&quot;&gt;Bad radius&lt;/span&gt;
+<span class="fore-secondary">&lt;!-- or --&gt;</span>
+&lt;span class=&quot;shadow-small shadow-large&quot;&gt;Bad shadow&lt;/span&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining two classes of the same type (i.e. two radii or two shadow styles), as they might overwrite each other and cause unexpected behavior.</p>
                 </div>
               </div>
             </div>

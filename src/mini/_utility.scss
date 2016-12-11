@@ -87,19 +87,56 @@ ul.#{$breadcrumbs-name} {
 		}
 	}	
 }
-// Clearfix
-.#{$clearfix-name} {
+// Close icon
+.#{$close-icon-name}{
+	display: inline-block;
+	width: 0.75em;
+	height: 0.75em;
+	position: relative;
+	border-radius: 1em;
+	font-size: $close-icon-size;
+	text-overflow: clip;
+	background: rgba($close-icon-back-color,0);
+	vertical-align: top;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease 0s;
+			transition: all 0.3s ease 0s;
+	&:hover, &:active, &:focus {
+		background: rgba($close-icon-back-color,1);
+	}
 	&:before, &:after {
-		content: ' ';
-		display: table;
-		clear: both;
+		display: inline-block;
+		width: 0.45em;
+		height: 0.1em;
+		position: absolute;
+		content: "";
+		top: 0.33em;
+		left: 0.155em;
+		text-overflow: clip;
+		background: $close-icon-fore-color;
+	}
+	&:before {
+		-webkit-transform: rotateZ(45deg);
+				transform: rotateZ(45deg);		
+	}
+	&:after {
+		-webkit-transform: rotateZ(-45deg);
+				transform: rotateZ(-45deg);	
 	}
 }
-// Center block
+// Clearfix. ATTENTION: Uses !important.
+.#{$clearfix-name} {
+	&:before, &:after {
+		content: ' ' !important;
+		display: table !important;
+		clear: both !important;
+	}
+}
+// Center block. ATTENTION: Uses !important.
 .#{$center-block-name} {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
 }
 // Generic border mixin. ATTENTION: Uses !important.
 // Variables:
@@ -125,6 +162,56 @@ ul.#{$breadcrumbs-name} {
 @mixin make-box-shadow-generic ($box-shadow-name, $box-shadow-value) {
 	.#{$box-shadow-name} {
 		box-shadow: $box-shadow-value !important;
+	}
+}
+// Responsive margin mixin. ATTENTION: Uses !important.
+// Variables:
+// - $margin-name : The name of the class used for the responsive margin.
+// - $margin-medium-breakpoint : Medium screen breakpoint for the responsive margin.
+// - $margin-large-breakpoint : Large screen breakpoint for the responsive margin.
+// - $margin-small-value : Responsive margin value for smaller screens.
+// - $margin-medium-value : Responsive margin value for medium screens.
+// - $margin-large-value : Responsive margin value for large screens.
+@mixin make-margin-responsive ($margin-name, $margin-medium-breakpoint, 
+	$margin-large-breakpoint, $margin-small-value, $margin-medium-value, 
+	$margin-large-value) {
+	.#{$margin-name} {
+		margin: $margin-small-value !important;
+	}
+	@media (min-width: #{$margin-medium-breakpoint}) {
+		.#{$margin-name} {
+			margin: $margin-medium-value !important;
+		}
+	}
+	@media (min-width: #{$margin-large-breakpoint}) {
+		.#{$margin-name} {
+			margin: $margin-large-value !important;
+		}
+	}
+}
+// Responsive padding mixin. ATTENTION: Uses !important.
+// Variables:
+// - $padding-name : The name of the class used for the responsive padding.
+// - $padding-medium-breakpoint : Medium screen breakpoint for the responsive padding.
+// - $padding-large-breakpoint : Large screen breakpoint for the responsive padding.
+// - $padding-small-value : Responsive padding value for smaller screens.
+// - $padding-medium-value : Responsive padding value for medium screens.
+// - $padding-large-value : Responsive padding value for large screens.
+@mixin make-padding-responsive ($padding-name, $padding-medium-breakpoint, 
+	$padding-large-breakpoint, $padding-small-value, $padding-medium-value, 
+	$padding-large-value) {
+	.#{$padding-name} {
+		padding: $padding-small-value !important;
+	}
+	@media (min-width: #{$padding-medium-breakpoint}) {
+		.#{$padding-name} {
+			padding: $padding-medium-value !important;
+		}
+	}
+	@media (min-width: #{$padding-large-breakpoint}) {
+		.#{$padding-name} {
+			padding: $padding-large-value !important;
+		}
 	}
 }
 // Floats mixin. ATTENTION: Uses !important.

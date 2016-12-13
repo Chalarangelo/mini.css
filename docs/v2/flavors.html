@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Live demo styled as of 20161213 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/62c8893e1a86dceb0707eee001b8ca6cd8169165/dist/mini-default.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>mini.css - Flavors</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
+    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass, flavor, flavors">
+    <meta name="author" content="Angelos Chalaris (chalarangelo)">
+    <link rel="icon" type="image/png" href="favicon.png">    
+    <style>
+      /* Classes and ids used in multiple pages - page top and utilities */
+      #header-logo {
+        display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px;
+         padding: 4px;
+      }
+      #top-logo {
+        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
+        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      #top-heading {
+        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
+      }
+      #top-version-tag {
+        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      .box-centered { text-align: center; }
+      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
+      .box-colored.red { background: #b71c1c; }
+      .box-centered > .card.fluid {
+        -webkit-box-pack: start;
+        -webkit-box-align: start; 
+        -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+        -webkit-align-self: auto;
+                align-self: auto;
+      }
+      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+      /* Local classes and ids for this page */
+      .box-left { text-align: left; }
+      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
+      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
+      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
+    </style>
+  </head>
+  <body>  
+    <header>
+      <img class="logo" src="mini-logo.svg" id="header-logo"><div style="display: inline; overflow: auto;">
+      <a href="index.html" class="button">Introduction</a>
+      <a href="modules.html" class="button">Modules</a>
+      <a href="flavors.html" class="button">Flavors</a>
+      <a href="customization.html" class="button">Customization</a>
+      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
+      </div>
+    </header>
+    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
+      <div class="row">
+        <div class="col-sm">
+          <div class="box-centered">
+            <img src="mini-logo.svg" id="top-logo">
+            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
+            <mark class="tertiary" id="top-version-tag">v2.0</mark>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-sm">
+          <h1>Flavors</h1>
+          <p>One of the core ideas behind <strong>mini.css</strong> is its flavor system. A flavor is the final compiled stylesheet a website or web app uses. When you start using <strong>mini.css</strong>, you usually try out the default flavor, using the following reference inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
+        <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
+        <p>There are, however a handful of other flavors included with <strong>mini.css</strong>. Below, you can see a full list of them:</p><br>
+        <ul style="margin-left:0px; padding-left: 10px">
+          <li class="card fluid">
+            <h2 class="section double-padded">Default <small>mini-default</small></h2>
+            <pre class="section double-padded" style="border-left:0; box-shadow: none;">&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0/dist/mini-default.min.css&quot;</span>&gt;</pre>
+            <p class="section double-padded">The default flavor for <strong>mini.css</strong> uses a light gray background and gray-black foreground color. Certain containers, such as cards and tabs use white-gray backgrounds. The grid system has 12 columns and most of the components and modules use sharp corners with blurred shadows to give it a material-like design. All of the colors used in this flavor are based on <a href="https://material.google.com/style/color.html">Google's Material design color palette</a>.</p>
+          </li>
+
+          <li class="card fluid">
+            <h2 class="section double-padded">Classic <small>mini-classic</small></h2>
+            <p class="section double-padded">Simpler, lighter version of the default flavor. Coming soon...</p>
+          </li>
+        </ul>
+        <p>If you would rather modify one of the pre-defined flavors or create your own, check out our <a href="customization.html">customization</a> page for instructions.</p>
+        </div>
+      </div>
+      <div class="row box-centered">
+        <div class="col-sm-12">
+        </div>
+      </div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

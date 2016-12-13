@@ -1,4 +1,6 @@
-// Browsers resets and base typography.
+/* 
+	Browsers resets and base typography. 
+*/
 $apply-defaults-to-all: 		true !default;									// Should default values be applied to all elements? (`true` or `false`).
 $base-root-font-size:			16px !default;									// Root font sizing for all elements - In `px` only!
 html {

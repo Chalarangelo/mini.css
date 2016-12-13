@@ -1,12 +1,10 @@
-// 	This is a flavor file. Duplicate it and edit it to create your own
-//	flavor. Read instructions carefully.
-// 	Single-line comments, starting with '//' will not be included in
-//	your final CSS file. Multiline comments, structured like the flavor
-//	description below, will be included in your final CSS file.
+// 	This is a flavor file. Duplicate it and edit it to create your own flavor. Read instructions carefully.
+// 	Single-line comments, starting with '//' will not be included in your final CSS file. Multiline comments,
+//	structured like the flavor description below, will be included in your final CSS file.
 /*
 	Flavor name: Default (mini-default)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v2.0 (in-production)
+	mini.css version: v2.0.0 (Fermion)
 */
 //	Basic rules for body and typography
 $fore-color:					#212121;										// Text and general foreground color
@@ -518,6 +516,9 @@ $center-block-name:				'center-block';									// Class name for center block
 //	Enable mini.css
 @import '../mini/core';
 //	Use mixins for forms and inputs
+/* 
+	Custom elements for forms and input elements. 
+*/
 @include make-button-alt-color ($button-variant1-name, $button-variant1-back-color, 
 	$button-variant1-back-opacity, $button-variant1-hover-back-opacity, $button-variant1-fore-color);
 @include make-button-alt-color ($button-variant2-name, $button-variant2-back-color, 
@@ -531,6 +532,9 @@ $center-block-name:				'center-block';									// Class name for center block
 @include make-button-alt-style ($button-style2-name, $button-style2-border-style,
 	$button-style2-border-radius, $button-style2-padding, $button-style2-margin);
 //	Use mixins for cards
+/* 
+	Custom elements for cards and containers. 
+*/
 @include make-card-alt-size ($card-size1-name, $card-size1-width);
 @include make-card-alt-size ($card-size2-name, $card-size2-width);
 @include make-card-alt-size ($card-size3-name, $card-size3-width);
@@ -542,6 +546,9 @@ $center-block-name:				'center-block';									// Class name for center block
 	$card-section-style2-fore-color);
 @include make-card-section-alt-style ($card-section-padding1-name, $card-section-padding1-padding);
 //	Use mixins for contextual background elements and alerts
+/* 
+	Custom contextual background elements and alerts. 
+*/
 @include make-mark-alt-color ($mark-variant1-name, $mark-variant1-back-color);
 @include make-mark-alt-color ($mark-variant2-name, $mark-variant2-back-color);
 @include make-mark-alt-style ($mark-style1-name, $mark-style1-border-style, 
@@ -553,6 +560,9 @@ $center-block-name:				'center-block';									// Class name for center block
 @include make-alert-alt-style ($alert-style1-name, $alert-style1-border-style, $alert-style1-border-radius);
 @include make-alert-alt-style ($alert-style2-name, $alert-style2-border-style, $alert-style2-border-radius);
 //	Use mixins for progress elements and spinners
+/* 
+	Custom elements for progress elements and spinners. 
+*/
 @include make-progress-inline ($progress-inline-name, $progress-inline-width);
 @include make-progress-alt-color ($progress-variant1-name, $progress-variant1-fore-color);
 @include make-progress-alt-color ($progress-variant2-name, $progress-variant2-fore-color);
@@ -566,6 +576,9 @@ $center-block-name:				'center-block';									// Class name for center block
 @include make-spinner-donut-alt-style ($spinner-donut-style1-name, $spinner-donut-style1-size, 
 	$spinner-donut-style1-border-thickness);
 //	Use mixins for utilities and helper classes
+/* 
+	Custom elements for utilities and helper classes. 
+*/
 @include make-border-generic ($border-generic-name);
 @include make-border-radial-style ($border-radial-style1-name, $border-radial-style1-radius);
 @include make-border-radial-style ($border-radial-style2-name, $border-radial-style2-radius);

@@ -1,4 +1,6 @@
-// Definitions for progress elements and spinners.
+/*
+	Definitions for progress elements and spinners. 
+*/
 // Progress elements use the progress element as their base.
 // Default styling for progress. Use mixins for alternate styles.
 $progress-max-value:			100 !default;									// Arithmetic max value of <progress>

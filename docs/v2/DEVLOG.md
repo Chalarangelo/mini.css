@@ -639,3 +639,4 @@
 - Thoroughly tested `close` and `breadcrumbs`. Found dos and don'ts.
 - Completed documentation for `utility` module.
 - Removed `playground.html` page, as it was no longer needed.
+- Updated comments for modules, so that they can show up in the resulting file.

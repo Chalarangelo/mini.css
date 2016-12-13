@@ -1,7 +1,10 @@
 /*
 	Flavor name: Default (mini-default)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v2.0 (in-production)
+	mini.css version: v2.0.0 (Fermion)
+*/
+/* 
+	Browsers resets and base typography. 
 */
 html {
   font-size: 16px; }
@@ -142,6 +145,9 @@ a {
   a:hover, a:focus, a:active {
     opacity: 0.75; }
 
+/* 
+	Definitions for the grid system. 
+*/
 .container {
   margin: 0 auto;
   padding: 0 10px; }
@@ -534,6 +540,9 @@ a {
   .col-lg-last {
     -webkit-order: 999;
     order: 999; } }
+/*
+	Definitions for navigation elements. 
+*/
 header {
   display: block;
   height: 44px;
@@ -586,6 +595,9 @@ footer {
   footer a, footer a:visited {
     color: #039be5; }
 
+/* 
+	Definitions for forms and input elements. 
+*/
 form {
   background: #eeeeee;
   border: 1px solid #bdbdbd;
@@ -785,6 +797,9 @@ input[type="file"] {
   background: #212121;
   content: ''; }
 
+/* 
+	Definitions for the responsive table component. 
+*/
 table {
   border-collapse: separate;
   border-spacing: 0;
@@ -962,6 +977,9 @@ table.striped tr:nth-of-type(2n) > td {
 @media (max-width: 767px) {
   table.striped:not(.preset) tr:nth-of-type(2n) {
     background: #eeeeee; } }
+/* 
+	Definitions for cards and containers. 
+*/
 .card {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1000,6 +1018,9 @@ table.striped tr:nth-of-type(2n) > td {
 @media (min-width: 320px) {
   .card {
     max-width: 320px; } }
+/* 
+	Definitions for tabs/horizontal accordions. 
+*/
 .tabs {
   width: 100%;
   opacity: 1;
@@ -1107,6 +1128,9 @@ table.striped tr:nth-of-type(2n) > td {
       .tabs > [type="radio"] + label + div + [type="radio"] + label {
         border: 1px solid #9e9e9e;
         border-top: 0; } }
+/* 
+	Definitions for contextual background elements and alerts. 
+*/
 mark {
   background: #0277bd;
   color: #fafafa;
@@ -1155,6 +1179,9 @@ mark {
     -webkit-animation: alert-anim 6s linear infinite;
     animation: alert-anim 6s linear infinite; }
 
+/*
+	Definitions for progress elements and spinners. 
+*/
 progress {
   display: block;
   vertical-align: baseline;
@@ -1209,6 +1236,9 @@ progress {
   -webkit-animation: spinner-donut-anim 1.2s linear infinite;
   animation: spinner-donut-anim 1.2s linear infinite; }
 
+/* 
+	Definitions for utilities and helper classes. 
+*/
 .hidden {
   display: none !important; }
 
@@ -1309,6 +1339,9 @@ ul.breadcrumbs {
   margin-left: auto !important;
   margin-right: auto !important; }
 
+/* 
+	Custom elements for forms and input elements. 
+*/
 button.primary, [type="button"].primary, [type="submit"].primary,
 [type="reset"].primary, .button.primary {
   background: rgba(2, 119, 189, 0.9);
@@ -1361,6 +1394,9 @@ button.large, [type="button"].large, [type="submit"].large,
   padding: 12px 18px;
   margin: 10px 8px; }
 
+/* 
+	Custom elements for cards and containers. 
+*/
 @media (min-width: 480px) {
   .card.large {
     max-width: 480px; } }
@@ -1389,6 +1425,9 @@ button.large, [type="button"].large, [type="submit"].large,
 .card > .section.double-padded {
   padding: 10px 12px 10px; }
 
+/* 
+	Custom contextual background elements and alerts. 
+*/
 mark.secondary {
   background: #f44336; }
 
@@ -1417,6 +1456,9 @@ mark.inline-block {
 .alert.critical {
   border: 1px solid #d50000; }
 
+/* 
+	Custom elements for progress elements and spinners. 
+*/
 progress.inline {
   display: inline-block;
   vertical-align: middle;
@@ -1470,6 +1512,9 @@ progress.nano {
   width: 32px;
   height: 32px; }
 
+/* 
+	Custom elements for utilities and helper classes. 
+*/
 .bordered {
   border: 1px solid rgba(0, 0, 0, 0.25) !important; }
 

@@ -1,4 +1,6 @@
-// Definitions for the grid system.
+/* 
+	Definitions for the grid system. 
+*/
 // The grid system uses the flexbox module, meaning it might be incompatible with certain browsers.
 $use-four-step-grid:			false !default;									// Flag for the grid system choice
 $grid-container-name:			'container' !default;							// Class name for the grid system container

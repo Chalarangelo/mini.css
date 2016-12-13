@@ -1,4 +1,6 @@
-// Definitions for contextual background elements and alerts.
+/* 
+	Definitions for contextual background elements and alerts. 
+*/
 // Contextual background elements use the mark element as their base.
 // Default styling for mark. Use mixins for alternate styles.
 $mark-inline-block-name:		'inline-block' !default;						// Class name for <mark> inline block styling

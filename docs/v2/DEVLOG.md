@@ -642,3 +642,4 @@
 - Updated comments for modules, so that they can show up in the resulting file.
 - Removed local stylesheet from all pages, added newest version of live stylesheet.
 - **Updated live demo to showcase new file size, new module components and full documentation for modules.**
+- Added some basic OpenGraph meta properties to `index` for Facebook sharing tests.

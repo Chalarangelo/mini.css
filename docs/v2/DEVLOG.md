@@ -640,3 +640,5 @@
 - Completed documentation for `utility` module.
 - Removed `playground.html` page, as it was no longer needed.
 - Updated comments for modules, so that they can show up in the resulting file.
+- Removed local stylesheet from all pages, added newest version of live stylesheet.
+- **Updated live demo to showcase new file size, new module components and full documentation for modules.**

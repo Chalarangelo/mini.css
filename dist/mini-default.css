@@ -1479,6 +1479,24 @@ progress.nano {
 .circular {
   border-radius: 50% !important; }
 
+.responsive-margin {
+  margin: 4px !important; }
+
+@media (min-width: 768px) {
+  .responsive-margin {
+    margin: 6px !important; } }
+@media (min-width: 1280px) {
+  .responsive-margin {
+    margin: 8px !important; } }
+.responsive-padding {
+  padding: 2px 4px !important; }
+
+@media (min-width: 768px) {
+  .responsive-padding {
+    padding: 4px 6px !important; } }
+@media (min-width: 1280px) {
+  .responsive-padding {
+    padding: 6px 8px !important; } }
 .shadow-none {
   box-shadow: none !important; }
 

@@ -133,7 +133,6 @@
             <h3>Notes</h3>
               <ul>
                 <li>Both classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
-                <li></li>
               </ul>
               <hr>
               <div class="row">
@@ -237,30 +236,23 @@
               <h2>Responsive sizing &amp; spacing classes</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
-              </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+              <div class="col-sm-12 col-sm-first">
+                <p>Helper classes for the <code>padding</code> and <code>margin</code> attributes are provided in the form of <code>.responsive-margin</code> and <code>.responsive-padding</code> classes. Both of these classes are responsive, allowing you to collapse the spacing and size of elements on different displays to make better use of the device's viewport.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;responsive-padding&quot;&gt;Responsive padding&lt;/div&gt;
+&lt;div class=&quot;responsive-margin&quot;&gt;Responsive margin&lt;/div&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>If the default values of these classes are not suited to your needs, check out the <a href="customization.html">customization</a> page.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12">
+                  <pre>&lt;div class=&quot;responsive-padding responsive-margin&quot;&gt;Responsive padding and margin&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use both of these classes to make certain element adapt to changes. This could be especially useful for certain grid layouts.</p>
                 </div>
               </div>
             </div>
@@ -275,29 +267,52 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
+                <div>
+                  <br>
+                  <ul class="breadcrumbs">
+                    <li><a href="#">Root</a></li>
+                    <li><a href="#">Folder</a></li>
+                    <li>File</li>
+                  </ul>
+                  <br>
+                </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>Breadcrumbs are usually used to show the navigational hierarchy of pages or folders. To use them, simply create a <code>&lt;ul&gt;</code> element that implements the <code>.breadcrumbs</code> class. Inside this unordered list, add as many <code>&lt;li&gt;</code> elements as needed to show your hierarchy. You can add links to the list elements, as necessary.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;ul class=&quot;breadcrumbs&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Root&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Folder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;File&lt;/li&gt;
+&lt;/ul&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>The separators between breadcrumbs are added using some tricky CSS rules. Due to that, there might be a few browser versions or devices where you can see part of the seams between the element separators.</li>
+                <li>Breadcrumbs show a hierarchy, an ordered list. However, we do not use the <code>&lt;ol&gt;</code> element, as it might conflict with some custom styles we've seen people use.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;ol class=&quot;breadcrumbs&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Does&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Not&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Work&lt;/li&gt;
+&lt;/ol&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;The structure of the breadcrumb component prohibits the use of <code>&lt;ol&gt;</code> in place of the <code>&lt;ul&gt;</code> element.</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;ul class=&quot;breadcrumbs&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Root&lt;/a&gt;
+    &lt;ul class=&quot;breadcrumbs&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Folder&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;File&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid nesting lists, breadcrumbs or a combination of the two inside the <code>.breadcrumbs</code> list, as this might cause unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -312,29 +327,32 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <!-- sample -->
+                <div>
+                  <br>
+                  <p style="text-align:center;">&nbsp;&nbsp;<span class="close"></span>&nbsp;&nbsp;</p>
+                  <br>
+                </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p></p>
+                <p>To create a close icon, simply add an element implementing the <code>.close</code> class.</p>
                 <h3>Sample code</h3>
-                <pre></pre>
+                <pre>&lt;span class=&quot;close&quot;&gt;&lt;/span&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li></li>
-                <li></li>
+                <li>The close icon behaves similar to a button when hovering over it or otherwise focusing or selecting it.</li>
               </ul>
               <hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <pre><!-- do code --></pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;div class=&quot;close&quot;&gt;&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use a handful of other HTML elements instead of the <code>&lt;span&gt;</code> element showcased in the example above, most commonly <code>&lt;div&gt;</code> elements.</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre><!-- don't code --></pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;</p>
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;button class=&quot;close&quot;&gt;&lt;/button&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;If you want your close icon to behave like a button (i.e. register as a button on screen readers and have the required logic attached to it), you can apply the <code>.close</code> class to a <code>&lt;button&gt;</code> element instead. You can even apply any of the button color variant classes.</p>
                 </div>
               </div>
             </div>

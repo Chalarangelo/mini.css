@@ -631,3 +631,11 @@
 - Implemented mixins for responsive `padding` and `margin` in `utility`.
 - Implemented new `close` icon/button in `utility`.
 - Documented visibility helpers, floats etc., borders and shadows for `utility`.
+
+
+## 20161213
+
+- Used `utility` mixins to create `responsive-margin` and `responsive-padding` classes.
+- Thoroughly tested `close` and `breadcrumbs`. Found dos and don'ts.
+- Completed documentation for `utility` module.
+- Removed `playground.html` page, as it was no longer needed.

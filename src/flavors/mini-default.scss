@@ -493,6 +493,23 @@ $box-shadow-style3-value:														// Box shadow value for generic box-shado
 $box-shadow-style4-name:		'shadow-large';									// Class name for generic box-shadow style 4
 $box-shadow-style4-value:														// Box shadow value for generic box-shadow style 4
 	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);	
+$responsive-margin-name:		'responsive-margin';							// Class name for responsive margin
+$responsive-margin-medium-breakpoint:											// Medium screen breakpoint for responsive margin
+								$grid-medium-breakpoint;
+$responsive-margin-large-breakpoint:											// Large screen breakpoint for responsive margin
+								$grid-large-breakpoint;
+$responsive-margin-small-value:	4px;											// Margin value for responsive margin on small screens
+$responsive-margin-medium-value:6px;											// Margin value for responsive margin on medium screens
+$responsive-margin-large-value:	8px;											// Margin value for responsive margin on large screens
+$responsive-padding-name:		'responsive-padding';							// Class name for responsive padding
+$responsive-padding-medium-breakpoint:											// Medium screen breakpoint for responsive padding
+								$grid-medium-breakpoint;
+$responsive-padding-large-breakpoint:											// Large screen breakpoint for responsive padding
+								$grid-large-breakpoint;
+$responsive-padding-small-value:2px 4px;										// Padding value for responsive padding on small screens
+$responsive-padding-medium-value:												// Padding value for responsive padding on medium screens
+								4px 6px;
+$responsive-padding-large-value:6px 8px;										// Padding value for responsive padding on large screens
 $float-prefix:					'float';										// Prefix for float classes
 $clearfix-name:					'clearfix';										// Class name for clearfix
 $center-block-name:				'center-block';									// Class name for center block
@@ -552,6 +569,12 @@ $center-block-name:				'center-block';									// Class name for center block
 @include make-border-generic ($border-generic-name);
 @include make-border-radial-style ($border-radial-style1-name, $border-radial-style1-radius);
 @include make-border-radial-style ($border-radial-style2-name, $border-radial-style2-radius);
+@include make-margin-responsive ($responsive-margin-name, $responsive-margin-medium-breakpoint, 
+	$responsive-margin-large-breakpoint, $responsive-margin-small-value, $responsive-margin-medium-value,
+	$responsive-margin-large-value);
+@include make-padding-responsive ($responsive-padding-name, $responsive-padding-medium-breakpoint, 
+	$responsive-padding-large-breakpoint, $responsive-padding-small-value, $responsive-padding-medium-value,
+	$responsive-padding-large-value);
 @include make-box-shadow-generic ($box-shadow-style1-name, $box-shadow-style1-value);
 @include make-box-shadow-generic ($box-shadow-style2-name, $box-shadow-style2-value);
 @include make-box-shadow-generic ($box-shadow-style3-name, $box-shadow-style3-value);

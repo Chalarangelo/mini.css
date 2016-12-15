@@ -147,6 +147,44 @@ hr {
 	}
 }
 
+blockquote {
+	display: block;
+	position: relative;
+	font-style: italic;
+	@if $blockquote-back-color != $back-color {
+		background: $blockquote-back-color;
+	}
+	@if $blockquote-fore-color != $fore-color {
+		color: $blockquote-fore-color;
+	}
+	// Overwrite defaults
+	margin: $blockquote-margin;
+	padding: $blockquote-padding;
+	@if $blockquote-sidebar-style != 0 {
+		border-left: $blockquote-sidebar-style;
+	}
+	@if $blockquote-border-style != 0 {
+		border: $blockquote-border-style;
+	}
+	@if $blockquote-border-radius != 0 {
+		border-radius: $blockquote-border-radius;
+	}
+	@if $blockquote-box-shadow != none {
+		box-shadow: $blockquote-box-shadow;
+	}
+	&:after {
+		position: absolute;
+		font-style: normal;
+		font-size: $blockquote-cite-font-size;
+		@if $blockquote-cite-fore-color != $blockquote-fore-color {
+			color: $blockquote-cite-fore-color;
+		}
+		left: $blockquote-cite-left-position;
+		bottom: $blockquote-cite-bottom-position;
+		content: '\2014 \2009'attr(cite);
+	}
+}
+
 $use-default-code-fonts: true !default;
 @if $use-default-code-fonts {
 	code, kbd, pre, samp{

@@ -645,3 +645,7 @@
 - Added some basic OpenGraph meta properties to `index` for Facebook sharing tests.
 - Added `flavors.html` and `customization.html`.
 - Probably finished `flavor.html`.
+
+## 20161215
+
+- Added styling for `blockquote` in `core` module, just to make sure nothing is really missing.

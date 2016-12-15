@@ -43,6 +43,20 @@ $horizontal-rule-border-style:	1px solid #757575;								// Border style for hor
 $horizontal-rule-fancy-style:	true;											// Should a fancy styling be applied for the
 																				// <hr> element (`true`/`false`) [5]
 $horizontal-rule-fancy-gradient:"to right, #bdbdbd, #616161, #bdbdbd";			// Gradient style for fancy horizontal rule
+$blockquote-back-color:			#eeeeee;										// Background color for <blockquote>
+$blockquote-fore-color:			$fore-color;									// Text color for <blockquote>
+$blockquote-margin:				8px 10px;										// Margin for <blockquote>
+$blockquote-padding:			6px 10px 24px;									// Padding for <blockquote>
+$blockquote-sidebar-style:		3px solid #616161;								// Style for the sidebar of <blockquote>
+$blockquote-cite-font-size:		0.85em;											// Font size for citation of <blockquote>
+$blockquote-cite-fore-color:	#616161;										// Text color for citation of <blockquote>
+$blockquote-cite-left-position:	10px;											// Left padding for citation of <blockquote>
+$blockquote-cite-bottom-position:												// Bottom padding for citation of <blockquote>
+								0;
+$blockquote-border-style:		0;												// Border style for <blockquote>
+$blockquote-border-radius:		0 2px 2px 0;									// Border radius for <blockquote>
+$blockquote-box-shadow:															// Box shadow for <blockquote>
+	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);		
 $use-default-code-fonts:		true;											// Should default font choice (monospace) be
 																				// used for code elements? (`true`/`false`) [6]
 //$code-font-family:			monospace, monospace;							// Fonts for code elements if not default

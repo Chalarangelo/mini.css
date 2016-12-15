@@ -130,7 +130,7 @@ $apply-link-hover-fade:			true;											// Should the :hover and :focus state 
 //	displayed properly on older versions of Android (4.3-) in italics. Otherwise, said fix will not be included.
 // [10] - If the value of $apply-link-underline is set to `true`, an underline will be applied to the link in its normal
 //	color, as defined in $link-fore-color.
-// [11] - If `apply-link-hover-fade` is set to `true`, a fading transition will be used for the link when hovered over or
+// [11] - If `$apply-link-hover-fade` is set to `true`, a fading transition will be used for the link when hovered over or
 //	focused. Otherwise, the color specified in $link-hover-fore-color will be used.
 //	Variables for grid elements
 $use-four-step-grid:			false;											// Should the old 4-step grid system be used

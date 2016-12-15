@@ -108,7 +108,96 @@
         <div class="col-sm-12">
         <br>
           <h2>Building a flavor</h2>
-          <p>Creating your own flavor can be as easy or as complicated as your needs. In this section, we will briefly walk you through most of the variables usually present in a flavor, along with some flags and mixins. This section serves as a complementary documentation to the comment column present in our pre-defined flavors, instead of a replacement and should be always viewed alongside it.</p>
+          <p>Creating your own flavor can be as easy or as complicated as your needs. In this section, we will briefly walk you through most of the variables usually present in a flavor, along with some flags and mixins. This section serves as a complementary documentation to the comment column present in our pre-defined flavors, instead of a replacement and should be always viewed alongside it.</p><br>
+          <div class="card fluid">
+            <div class="section">
+              <h3>Core</h3>
+            </div>
+            <div class="section">
+              <p>The <strong>core</strong> module uses a lot of variables, most of which are pretty straightforward. Some of the most important ones are as follows:</p>
+              <ul>
+                <li><code>$fore-color</code> - base text color</li>
+                <li><code>$back-color</code> - base background color or image</li>
+                <li><code>$base-font-family</code> - font stack</li>
+                <li><code>$base-root-font-size</code> - font size of the page's root element, <strong>must be specified in <mark>px</mark> units</strong></li>
+                <li><code>$base-line-height</code> - base line height for the page's text</li>
+                <li><code>$body-margin</code> - margin of the <code>&lt;body&gt;</code> element</li>
+              </ul>
+              <p>Apart from the above variables, you should take note of the boolean <code>$apply-defaults-to-all</code>, which will reset font styling for all elements, utilizing the value of <code>$base-font-size</code> in the process. Certain elements like headings, horizontal rules and code blocks have some opinionated &quot;modern&quot; styles which can be turned on or off, using the boolean variables <code>$make-heading-smalltext-block</code>, <code>$horizontal-rule-fancy-style</code> and <code>$add-pre-element-sidebar</code>. The <code>$style-samp-element</code> and <code>$include-dfn-fix</code> boolean variables will either add styling for the elements they affect or completely omit it. This is part of the code optimization process, as most websites rarely use these elements. Finally, there are two boolean variables for link styling, <code>$apply-link-underline</code> and <code>$apply-link-hover-fade</code>.</p>
+            </div>
+          </div>
+          <div class="card fluid">
+            <div class="section">
+              <h3>Grid</h3>
+            </div>
+            <div class="section">
+              <p></p>
+            </div>
+          </div>
+          <div class="card fluid">
+            <div class="section">
+              <h3>Navigation</h3>
+            </div>
+            <div class="section">
+              <p></p>
+            </div>
+          </div>
+          <div class="card fluid">
+            <div class="section">
+              <h3>Input Control</h3>
+            </div>
+            <div class="section">
+              <p></p>
+            </div>
+          </div>
+          <div class="card fluid">
+            <div class="section">
+              <h3>Table</h3>
+            </div>
+            <div class="section">
+              <p></p>
+            </div>
+          </div>
+          <div class="card fluid">
+            <div class="section">
+              <h3>Card</h3>
+            </div>
+            <div class="section">
+              <p></p>
+            </div>
+          </div>
+          <div class="card fluid">
+            <div class="section">
+              <h3>Tab</h3>
+            </div>
+            <div class="section">
+              <p></p>
+            </div>
+          </div>
+          <div class="card fluid">
+            <div class="section">
+              <h3>Contextual</h3>
+            </div>
+            <div class="section">
+              <p></p>
+            </div>
+          </div>
+          <div class="card fluid">
+            <div class="section">
+              <h3>Progress</h3>
+            </div>
+            <div class="section">
+              <p></p>
+            </div>
+          </div>
+          <div class="card fluid">
+            <div class="section">
+              <h3>Utility</h3>
+            </div>
+            <div class="section">
+              <p></p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row box-centered">

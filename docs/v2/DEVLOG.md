@@ -652,3 +652,4 @@
 - Demo updated to include the latest addition.
 - Updated table of sized in `index`.
 - Started writing `customization`.
+- Documented `core` in `customization`.

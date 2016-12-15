@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Live demo styled as of 20161213 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/0f7cd386b36094d9878c6b43bc8aa58d010c450d/dist/mini-default.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>mini.css - Customization</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
+    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass, customization, flavor">
+    <meta name="author" content="Angelos Chalaris (chalarangelo)">
+    <link rel="icon" type="image/png" href="favicon.png">    
+    <style>
+      /* Classes and ids used in multiple pages - page top and utilities */
+      #header-logo {
+        display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px;
+         padding: 4px;
+      }
+      #top-logo {
+        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
+        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      #top-heading {
+        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
+      }
+      #top-version-tag {
+        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      .box-centered { text-align: center; }
+      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
+      .box-colored.red { background: #b71c1c; }
+      .box-centered > .card.fluid {
+        -webkit-box-pack: start;
+        -webkit-box-align: start; 
+        -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+        -webkit-align-self: auto;
+                align-self: auto;
+      }
+      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+      /* Local classes and ids for this page */
+      .box-left { text-align: left; }
+      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
+      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
+      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
+    </style>
+  </head>
+  <body>  
+    <header>
+      <img class="logo" src="mini-logo.svg" id="header-logo"><div style="display: inline; overflow: auto;">
+      <a href="index.html" class="button">Introduction</a>
+      <a href="modules.html" class="button">Modules</a>
+      <a href="flavors.html" class="button">Flavors</a>
+      <a href="customization.html" class="button">Customization</a>
+      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
+      </div>
+    </header>
+    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
+      <div class="row">
+        <div class="col-sm">
+          <div class="box-centered">
+            <img src="mini-logo.svg" id="top-logo">
+            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
+            <mark class="tertiary" id="top-version-tag">v2.0</mark>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-sm">
+          <h1>Customization</h1>
+          <p><strong>mini.css</strong> is built in such a way that customizing it is really simple. You can try out one of the <a href="flavors.html">pre-defined flavors</a>, if you want to start learning and build something quickly. We strongly suggest, however, that you customize an existing flavor or build your own, by tweaking variables and using mixins, in order to create your own, unique style. In this page, we will try to give you some guidelines and tips on how to do so and explain a few more things about the inner workings of <strong>mini.css</strong>.</p><br>
+          <h2>Introduction &amp; basics</h2>
+          <p><strong>mini.css</strong> is written using <a href="http://sass-lang.com/">Sass</a>, a very popular CSS preprocessor. We use Sass to do four things:</p>
+          <ul>
+            <li>Make the code modular</li>
+            <li>Create variables that can be changed on the fly</li>
+            <li>Optimize the code</li>
+            <li>Create reusable mixins</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h3>Modules &amp; file structure</h3>
+          <p>At the heart of <strong>mini.css</strong> are modules - groups of classes and styles that aim to solve one set of needs. There are 10 modules in <strong>mini.css</strong>, which have been already written for you. All of the modules are built using partial files, named <code>_module_name.scss</code> and placed in the <code>src/mini</code> folder. You can edit any of the modules' code and/or add your own modules, following the same structure. The only thing you need to remember to do, in order to add your module to your flavor, is to add an <code>@import</code> statement at the very bottom of <code>_core.scss</code> and it will be compiled along with the rest of <strong>mini.css</strong>. Similarly, to disable a module, just comment out its <code>@import</code> statement from the core module.</p>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <h3>Variables</h3>
+          <p>Everything in <strong>mini.css</strong> is based on Sass variables. We try to make our variable names as descriptive as possible, usually using names like <code>$block-element-property-name</code>, but some things might vary a little bit. Changing the values of variables should be reasonably easy, simply navigate to the <code>src/flavors/flavor-name.scss</code> file for a pre-defined flavor and you will see a list of variables that you can tweak. Change the values as you see fit and your finalized stylesheet will reflect the changes you have made. We did our best to make everything as customizable as possible, so that different people can build entirely different flavors using the same building blocks.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h3>Code optimization</h3>
+          <p>Building <strong>mini.css</strong> was no small task. Making it lightweight and customizable made things even harder, because these two things don't go well together most of the time. What we did was put more of the load on the preprocessor, instead of the final file. In order to accomplish this, we optimized as much of the code was possible, using conditions, flags and other tricks, so that compiling a flavor file might take one second longer, but loading won't. If you add any code to a flavor yourself, remember not only to make it customizable, but also to optimize it as best as possible.</p>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <h3>Mixins</h3>
+          <p>A lot of elements and components can be styled in many ways and a lot of the time we want a few styles to be available, without having to rewrite everything. We utilized the <code>@mixin</code> directive of Sass wherever we could to make it possible for you to easily create styles for pre-existing components and elements without having to tweak the base code for said elements or components. To use a mixin, simply <code>@include</code> it, passing values to at least its mandatory parameters. We recommend you write mixins wherever possible, if you create any new modules for <strong>mini.css</strong></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+        <br>
+          <h2>Building a flavor</h2>
+          <p>Creating your own flavor can be as easy or as complicated as your needs. In this section, we will briefly walk you through most of the variables usually present in a flavor, along with some flags and mixins. This section serves as a complementary documentation to the comment column present in our pre-defined flavors, instead of a replacement and should be always viewed alongside it.</p>
+        </div>
+      </div>
+      <div class="row box-centered">
+        <div class="col-sm-12">
+        </div>
+      </div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

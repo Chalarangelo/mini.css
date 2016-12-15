@@ -651,3 +651,4 @@
 - Added styling for `blockquote` in `core` module, just to make sure nothing is really missing.
 - Demo updated to include the latest addition.
 - Updated table of sized in `index`.
+- Started writing `customization`.

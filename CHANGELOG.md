@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.0
+
+- New version, rebuilt from scratch.
+- Breaking changes in legacy browser compatibility.
+- Full module and component redesign and restructure.
+- New documentation and demo pages.
+
 ## v1.1.0
 
 - Fixed a problem with disabled buttons not behaving properly (issue #7).

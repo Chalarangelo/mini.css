@@ -1,857 +1,160 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework</title>
+    <!-- Live demo styled as of 20161213 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/0f7cd386b36094d9878c6b43bc8aa58d010c450d/dist/mini-default.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>mini.css - Modules</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework">
-    <meta name="keywords" content="mini, mini.css, CSS, responsive, framework, mobile first, style agnostic, Sass">
+    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
+    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass, module, modules">
     <meta name="author" content="Angelos Chalaris (chalarangelo)">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <!-- For local testing only -->
-    <!-- <link rel="stylesheet" href="../flavors/mini-default.min.css"> -->
-    <!-- Correct link -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v1.1.0/flavors/mini-default.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">    
     <style>
-      .panelcode{ border-top-left-radius:0; border-top-right-radius:0; margin-bottom:0; }
-      pre{ overflow: auto; }
-      input[type="checkbox"].stateful{display: none;}
-      input[type="checkbox"].stateful+label{display:block;}
-      input[type="checkbox"].stateful+label+label{display:none;}
-      input[type="checkbox"]:checked.stateful+label{display:none;}
-      input[type="checkbox"]:checked.stateful+label+label{display:block;}
-      .btn-grp .btn{margin-left:-5px;}
-      .footer{background-color:#272727; color:#ddd;}
-      .footer a, .footer a:hover, .footer a:visited, .footer a:visited:hover, .footer a:active, .footer a:visited:active{color: #fff;}
-      .footer a:hover{text-decoration: underline;}
-      .panel > .nav , .panel > .bordered, .panel > .circle{ padding: 0 !important; }
-      .panel > .btn { padding: 6px 12px !important;}
-      .panel > .lbl { padding: 6px 10px !important; }
-      .panel > .bdg { padding: 3px 8px !important; }
-      .panel > .well { padding: 20px !important; }
-      .panel code, .panel kbd, .panel pre{ padding: 2px 4px !important; }
+      /* Classes and ids used in multiple pages - page top and utilities */
+      #header-logo {
+        display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px;
+         padding: 4px;
+      }
+      #top-logo {
+        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
+        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      #top-heading {
+        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
+      }
+      #top-version-tag {
+        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      .box-centered { text-align: center; }
+      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
+      .box-colored.red { background: #b71c1c; }
+      .box-centered > .card.fluid {
+        -webkit-box-pack: start;
+        -webkit-box-align: start; 
+        -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+        -webkit-align-self: auto;
+                align-self: auto;
+      }
+      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+      /* Local classes and ids for this page */
+      .box-left { text-align: left; }
     </style>
   </head>
-  <body>
-    <input type="checkbox" class="modal" id="modal1"><div><label for="modal1" autocomplete="off"></label><div><label for="modal1"><span class="close"></span></label><h3>Modal dialog</h3><hr><p>This is a modal dialog.</p></div></div>  
-    <input type="checkbox" id="nav-toggle" autocomplete="off" class="hidden">
-    <div class="nav fixed">
-      <a href="https://chalarangelo.github.io/mini.css"><span class="logo">&nbsp;<img src="favicon.png" style="height: 34px; width: auto; display: inline-block; vertical-align: middle;">&nbsp;mini.css&nbsp;</span></a>
-      <ul>
-        <li><a href="https://chalarangelo.github.io/mini.css/#why-mini-css" class="link">Introduction</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/#modules" class="link">Module overview</a></li>
-        <li><label class="link dropdown" for="menu-drop1">Module demos</label></li>
-      </ul>
-      <input type="checkbox" id="menu-drop1" class="dropdown" autocomplete="off"><div>
-        <ul>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#base" class="link">Base</a></li>    
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#grid" class="link">Responsive Grid</a></li> 
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#nav" class="link">Navigation</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#dropdown" class="link">Dropdowns</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#tab" class="link">Tabs</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#table" class="link">Tables</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#form" class="link">Forms</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#button" class="link">Buttons</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#label" class="link">Labels</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#modal" class="link">Modals</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#collapse" class="link">Collapse</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#progress" class="link">Progress Bars</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#carousel" class="link">Carousel</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#utility" class="link">Utilities &amp; Helper Classes</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#utility-extra" class="link">Utilities &amp; Experimental Classes</a></li>
-        </ul>
+  <body>  
+    <header>
+      <img class="logo" src="mini-logo.svg" id="header-logo"><div style="display: inline; overflow: auto;">
+      <a href="index.html" class="button">Introduction</a>
+      <a href="modules.html" class="button">Modules</a>
+      <a href="flavors.html" class="button">Flavors</a>
+      <a href="customization.html" class="button">Customization</a>
+      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
       </div>
-    </div>
-    <label for="nav-toggle"></label>
-    <br>      
-    <div class="grid-container">
+    </header>
+    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
       <div class="row">
-        <div class="col xs-no md-1"></div>
-        <div class="col xs-12 md-10">
-        <h1>mini.css<small> a minimal Sass-y responsive mobile-first style-agnostic CSS framework</small></h1>
-        <p>Below you can see each module in action, along with certain suggestions on how to add functionality to the various components. Bear in mind that this demo is for the <strong>Default</strong> flavor. Naming conventions may vary between flavors, however the structure and functionality of the modules should be the same. Please refer to specific flavors for those differences. The <strong><a href="https://chalarangelo.github.io/mini.css/modules-niteowl">NiteOwl</a></strong> flavor uses the same naming conventions for the module components, so you won't have any trouble. If you are migrating from Bootstrap and want to use the <strong>Bootstrap</strong> flavor, most naming conventions are based on the original naming conventions of Bootstrap 3.3.7.</p>
-        <p><strong>To use the Default flavor, add the following code inside your HTML page's <code>&lt;head&gt;</code> tag:</strong></p>
-        <pre style="overflow: auto;">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v1.1.0/flavors/mini-default.min.css&quot;&gt;</pre><br>
-
-        <h2 id="base">Base</h2>
-        <p>The Base module contains customized typography rules, colors and most of the functionality provided in <a href="https://necolas.github.io/normalize.css/">normalize.css</a>. Below we showcase some of the most important typography styles.</p>
-
-        <h3>Fonts, sizes and colors</h3>
-        <p>The default flavor uses the <strong>Helvetica</strong> font family and a font-size of <strong>1em</strong> with a line-height of <strong>1.5</strong>. Colors used are <strong>#f5f5f5</strong> for the background and <strong>#222</strong> for the text. Most of the things in this module are subjective to one's preferences and should be changed according to your liking. Heading, <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code> and <code>&lt;small&gt;</code> elements use multipliers, so changing the base font-size should affect those too. Apart from that, colors and styles for links can easily be changed, as well as a lot of other parameters. Images are responsive by default, so they will shrink to fit smaller viewports without any additional work. Below we highlight some important things, like heading and code styling, but you can see most of the typography rules in action in these pages.</p>
-        
-        <h3>Headings</h3>
-        <div class="panel"><h4 class="head">Example</h4>
-          <h1>Heading 1 <small>small text</small></h1>
-          <h2>Heading 2 <small>small text</small></h2>
-          <h3>Heading 3 <small>small text</small></h3>
-          <h4>Heading 4 <small>small text</small></h4>
-          <h5>Heading 5 <small>small text</small></h5>
-          <h6>Heading 6 <small>small text</small></h6>
-          <pre class="panelcode">&lt;h1&gt;Heading 1 &lt;small&gt;small text&lt;/small&gt;&lt;/h1&gt;
-&lt;h2&gt;Heading 2 &lt;small&gt;small text&lt;/small&gt;&lt;/h2&gt;
-&lt;h3&gt;Heading 3 &lt;small&gt;small text&lt;/small&gt;&lt;/h3&gt;
-&lt;h4&gt;Heading 4 &lt;small&gt;small text&lt;/small&gt;&lt;/h4&gt;
-&lt;h5&gt;Heading 5 &lt;small&gt;small text&lt;/small&gt;&lt;/h5&gt;
-&lt;h6&gt;Heading 6 &lt;small&gt;small text&lt;/small&gt;&lt;/h6&gt;</pre>
+        <div class="col-sm">
+          <div class="box-centered">
+            <img src="mini-logo.svg" id="top-logo">
+            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
+            <mark class="tertiary" id="top-version-tag">v2.0</mark>
         </div>
-
-        <h3>Code, <code>&lt;pre&gt;</code> and <code>&lt;kbd&gt;</code> elements</h3>
-        <div class="panel"><h4 class="head">Example</h4>
-        <p>Inline code looks like <code>this</code>. User input looks like <kbd>this</kbd>. Finally, code blocks look like...</p>
-        <pre style="margin-left: 10px; margin-right: 10px;">this! This is a code block!</pre>
-        <br><pre class="panelcode">&lt;code&gt;Inline code&lt;/code&gt;
-&lt;kbd&gt;User input&lt;/kbd&gt;
-&lt;pre&gt;Code block&lt;/pre&gt;</pre>
-        </div><br>
-
-        <h2 id="grid">Responsive grid</h2>
-        <p>The grid system provided can be fully customized to use as many columns as you wish and have custom breakpoints for different device sizes. The default grid uses 12 columns (as shown below). Customized classes are also defined to hide certain columns in certain viewport sizes. This can be specifically used to customize column offseting on different devices.</p>
-
-        <h3>Grid structure</h3>
-        <p>The basic grid structure is as follows:</p>
-        <ul>
-          <li>The outer wrapper of the grid system uses the <code>.grid-container</code> class.</li>
-          <li>Inside this wrapper, rows can be defined using the <code>.row</code> class.</li>
-          <li>Inside the rows, columns can be defined using the <code>.col</code> class.</li>
-          <li>Column width can be specified for different devices using the respective class prefixes (<code>.xs-</code>, <code>.sm-</code>, <code>.md-</code>, <code>.lg-</code>) followed by the width (in columns) of the specific column.</li>
-          <li>Columns can be hidden in certain viewports, using the <code>-no</code> suffix for the specific screen size.</li>
-        </ul>
-
-        <h3>12-column grid example</h3>
-        <div class="panel"><h4 class="head">Example</h4>
-          <div class="grid-container">
-            <div class="row">
-              <div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div>
-              <div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div>
-              <div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div>
-              <div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div><div class="col xs-1 bordered">1/12</div>
-            </div>
-            <div class="row">
-              <div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div>
-              <div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div><div class="col xs-2 bordered">1/6</div>
-            </div>
-            <div class="row">
-              <div class="col xs-3 bordered">1/4</div><div class="col xs-3 bordered">1/4</div><div class="col xs-3 bordered">1/4</div>
-              <div class="col xs-3 bordered">1/4</div>
-            </div>
-            <div class="row">
-              <div class="col xs-4 bordered">1/3</div><div class="col xs-4 bordered">1/3</div><div class="col xs-4 bordered">1/3</div>
-            </div>
-            <div class="row">
-              <div class="col xs-6 bordered">1/2</div><div class="col xs-6 bordered">1/2</div>
-            </div>
-            <div class="row">
-              <div class="col xs-12 bordered">1/1</div>
-            </div>
-          </div>
-            <pre class="panelcode">&lt;div class=&quot;grid-container&quot;&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
-    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
-    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
-    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
-    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
-    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
-    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
-    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
-    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
-    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
-    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
-    &lt;div class=&quot;col xs-1&quot;&gt;1/12&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col xs-2&quot;&gt;1/6&lt;/div&gt;
-    &lt;div class=&quot;col xs-2&quot;&gt;1/6&lt;/div&gt;
-    &lt;div class=&quot;col xs-2&quot;&gt;1/6&lt;/div&gt;
-    &lt;div class=&quot;col xs-2&quot;&gt;1/6&lt;/div&gt;
-    &lt;div class=&quot;col xs-2&quot;&gt;1/6&lt;/div&gt;
-    &lt;div class=&quot;col xs-2&quot;&gt;1/6&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col xs-3&quot;&gt;1/4&lt;/div&gt;
-    &lt;div class=&quot;col xs-3&quot;&gt;1/4&lt;/div&gt;
-    &lt;div class=&quot;col xs-3&quot;&gt;1/4&lt;/div&gt;
-    &lt;div class=&quot;col xs-3&quot;&gt;1/4&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col xs-4&quot;&gt;1/3&lt;/div&gt;
-    &lt;div class=&quot;col xs-4&quot;&gt;1/3&lt;/div&gt;
-    &lt;div class=&quot;col xs-4&quot;&gt;1/3&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col xs-6&quot;&gt;1/2&lt;/div&gt;
-    &lt;div class=&quot;col xs-6&quot;&gt;1/2&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col xs-12&quot;&gt;1/1&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-</div><br>
-
-      <h2 id="nav">Navigation</h2>
-      <p>The navigation system provided contains custom classes for the navigation bar, logo and links. Navigation bars can be horizontal or vertical, fixed or otherwise. Navigation bars are responsive by default, so fixed navigation bars will properly shrink down to a button on smaller screens and, when the menu is opened, it will be displayed on top of the page's content.</p>
-
-      <h3>Navigation structure</h3>
-      <p>The structure of the navigation system is as follows:</p>
-      <ul>
-        <li>You should wrap your navigation system in a <code>&lt;div&gt;</code> with the <code>.nav</code> class.</li>
-        <li>If you want your navigation bar to be vertical (horizontal is the default), use the <code>.vertical</code> class.</li>
-        <li>If you want your navigation bar to be fixed, use the <code>.fixed</code> class.</li>
-        <li>Use an element with the <code>.logo</code> class for your website's logo.</li>
-        <li>For the navigation links, use an unordered list (<code>&lt;ul&gt;</code>) and <strong>inside</strong> each <code>&lt;li&gt;</code> element, add another element with the <code>.link</code> class to stylize the element as a navigation link.</li>
-        <li>Responsiveness can be added for fixed navigation bars by adding a hidden <code>&lt;input type=&quot;checkbox&quot;&gt;</code> right before the navigation bar and a label linking to that specific checkbox right after the navigation bar.</li>
-        <li>Use <code>autocomplete=&quot;off&quot;</code> to make your menu not open by default in mobile devices.</li>
-      </ul>
-
-      <h3>Horizontal navigation bar</h3>
-      <div class="panel"><h4 class="head">Example</h4><br>
-        <div class="nav" style="margin-left: 10px; margin-right: 10px;">
-          <span class="logo">Logo</span>
-          <ul>
-            <li><a href="#" class="link">Link 1</a></li>
-            <li><a href="#" class="link">Link 2</a></li>
-          </ul>
-        </div><br>
-        <pre class="panelcode">&lt;div class=&quot;nav&quot;&gt;
-  &lt;span class=&quot;logo&quot;&gt;Logo&lt;/span&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
       </div>
-
-      <h3>Vertical navigation bar</h3>
-      <div class="panel"><h4 class="head">Example</h4><br>
-        <div class="nav vertical" style="margin-left: 10px; margin-right: 10px;">
-          <span class="logo">Logo</span>
-          <ul>
-            <li><a href="#" class="link">Link 1</a></li>
-            <li><a href="#" class="link">Link 2</a></li>
-          </ul>
-        </div><br>
-        <pre class="panelcode">&lt;div class=&quot;nav vertical&quot;&gt;
-  &lt;span class=&quot;logo&quot;&gt;Logo&lt;/span&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
-      </div><br>
-          
-      <h2 id="dropdown">Dropdowns</h2>
-      <p>The dropdown module is an extra module that allows you to add dropdown components to your navigation bars. These components can be customized and work well on mobile devices. <strong>Using too many dropdowns or nesting dropdowns is yet undocumented and might cause unexpected behavior.</strong></p>
-
-      <h3>Dropdown structure</h3>
-      <p>The basic structure of dropdowns is as follows</p>
-      <ul>
-        <li>To add a dropdown component, add the <code>.dropdown</code> class to one of your link elements inside the navigation bar.</li>
-        <li>Add an <code>&lt;input type=&quot;checkbox&quot;&gt;</code> with the <code>.dropdown</code> class and right after it a <code>&lt;div&gt;</code> element that contains an unordered list with list elements that contains navigation links, exactly like you would make a normal navigation menu.</li>
-        <li>For multiple dropdowns, you should use <code>&lt;input type=&quot;radio&quot;&gt;</code> elements.</li>
-        <li>On mobile devices, there might be issues with the dropdown not closing after a link is clicked (mainly when it links to the same page). This can be easily dealt with using javascript (by making all the links inside the dropdown's <code>&lt;div&gt;</code> element uncheck the navigation bar's checkbox) or using <code>&lt;label&gt;</code> elements creatively inside the links.</li>
-        <li>Use <code>autocomplete=&quot;off&quot;</code> to make your dropdown not open by default in mobile devices.</li>
-      </ul>
-
-      <h3>Horizontal navigation dropdown example</h3>
-      <div class="panel"><h4 class="head">Example</h4><br>
-        <div class="nav">
-            <span class="logo">Logo</span>
-            <ul>
-              <li><a href="#" class="link">Link 1</a></li>
-              <li><label class="link dropdown" for="dropdown1">Dropdown</label></li>
-            </ul>
-            <input type="checkbox" id="dropdown1" class="dropdown" autocomplete="off">
-            <div>
-              <ul>
-                <li><a href="#" class="link">Link 2</a></li>
-                <li><a href="#" class="link">Link 3</a></li>
-              </ul>
-            </div>
-          </div><br>
-        <pre class="panelcode">&lt;div class=&quot;nav&quot;&gt;
-  &lt;span class=&quot;logo&quot;&gt;Logo&lt;/span&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;label class=&quot;link dropdown&quot; for=&quot;dropdown1&quot;&gt;Dropdown&lt;/label&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;input type=&quot;checkbox&quot; id=&quot;dropdown1&quot; class=&quot;dropdown&quot; autocomplete=&quot;off&quot;&gt;
-  &lt;div&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-      </div>
-
-      <h3>Vertical navigation dropdown example</h3>
-      <div class="panel"><h4 class="head">Example</h4><br>
-        <div class="nav vertical" style="margin-left: 10px; margin-right: 10px;">
-          <span class="logo">Logo</span>
-          <ul>
-            <li><a href="#" class="link">Link 1</a></li>
-            <li><label class="link dropdown" for="dropdown2">Dropdown</label></li>
-          </ul>
-          <input type="checkbox" id="dropdown2" class="dropdown" autocomplete="off">
-          <div>
-            <ul>
-              <li><a href="#" class="link">Link 2</a></li>
-              <li><a href="#" class="link">Link 3</a></li>
-            </ul>
-          </div>
-        </div><br>
-        <pre class="panelcode">&lt;div class=&quot;nav vertical&quot;&gt;
-  &lt;span class=&quot;logo&quot;&gt;Logo&lt;/span&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;label class=&quot;link dropdown&quot; for=&quot;dropdown1&quot;&gt;Dropdown&lt;/label&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;input type=&quot;checkbox&quot; id=&quot;dropdown1&quot; class=&quot;dropdown&quot; autocomplete=&quot;off&quot;&gt;
-  &lt;div&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-      </div><br>
-
-      <h2 id="tab">Tabs</h2>
-      <p>The tabbed navigation module allows you to easily create tabbed navigation systems, that are fully customizable to fit your needs. <strong>Nested tabs are not supported and might cause unexpected behavior.</strong></p>
-
-      <h3>Tabbed navigation structure</h3>
-      <p>The structure of the tabbed navigation system is as follows:</p>
-      <ul>
-        <li>Use the <code>.tabs</code> class to specify the container for the tabbed navigation system.</li>
-        <li>For each tab use an <code>&lt;input type=&quot;radio&quot;&gt;</code>, immediately followed by a <code>&lt;div&gt;</code> element.</li>
-        <li>This last element should contain a <code>&lt;label&gt;</code> linking to the radio button of the tab and another <code>&lt;div&gt;</code> that will contain the tab's contents.</li>
-        <li>Specify the tab that will be open by default using the <code>checked</code> property on one of the radio buttons.</li>
-      </ul>
-
-
-    <h3>Tabbed navigation example <sup>*</sup></h3>
-    <div class="tabs">
-      <input type="radio" name="tabs-radio" id="tab1" checked>
-      <div>
-        <label for="tab1">Tab 1</label>
-        <div>Tab 1 content...</div>
-      </div>
-      <input type="radio" name="tabs-radio" id="tab2">
-      <div>
-        <label for="tab2">Tab 2</label>
-        <div>Tab 2 content...</div>
-      </div>
-      <input type="radio" name="tabs-radio" id="tab3">
-      <div>
-        <label for="tab3">Tab 3</label>
-        <div>Tab 3 content...</div>
       </div>
     </div>
-    <pre class="panelcode">&lt;div class=&quot;tabs&quot;&gt;
-  &lt;input type=&quot;radio&quot; name=&quot;tabs-radio&quot; id=&quot;tab1&quot; checked&gt;
-  &lt;div&gt;
-    &lt;label for=&quot;tab1&quot;&gt;Tab 1&lt;/label&gt;
-    &lt;div&gt;Tab 1 content...&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;input type=&quot;radio&quot; name=&quot;tabs-radio&quot; id=&quot;tab2&quot;&gt;
-  &lt;div&gt;
-    &lt;label for=&quot;tab2&quot;&gt;Tab 2&lt;/label&gt;
-    &lt;div&gt;Tab 2 content...&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;input type=&quot;radio&quot; name=&quot;tabs-radio&quot; id=&quot;tab3&quot;&gt;
-  &lt;div&gt;
-    &lt;label for=&quot;tab3&quot;&gt;Tab 3&lt;/label&gt;
-    &lt;div&gt;Tab 3 content...&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre><br>
-  <p>(*):Due to a minor incompatibility between panels and tabs, the above example is not shown like most of the others. Our most experienced teams of developers and designers are on this.</p><br>
-
-      <h2 id="table">Tables</h2>
-      <p>Tables can be easily stylized to look more modern, using stripes and selective borders (vertical only by default). Classes for horizontal only borders(<code>.hor</code>) and full borders(<code>.bor</code>) are also provided. Use the <code>.tbl</code> class in your <code>&lt;table&gt;</code> elements to easily apply your styling.</p>
-
-      <h3>Default table example</h3>
-      <div class="panel"><h4 class="head">Example</h4><br>
-        <table class="tbl" style="margin-left: 10px; margin-right: 10px;">
-          <thead>
-            <th>Column 1</th> <th>Column 2</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Name</td> <td>Value</td>
-            </tr>
-            <tr>
-              <td>Name</td> <td>Value</td>
-            </tr>
-            <tr>
-              <td>Name</td> <td>Value</td>
-            </tr>
-            <tr>
-              <td>Name</td> <td>Value</td>
-            </tr>
-          </tbody>
-        </table><br>
-        <pre class="panelcode">&lt;table class=&quot;tbl&quot;&gt;
-  &lt;thead&gt;
-    &lt;th&gt;Column 1&lt;/th&gt; &lt;th&gt;Column 2&lt;/th&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Name&lt;/td&gt; &lt;td&gt;Value&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Name&lt;/td&gt; &lt;td&gt;Value&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Name&lt;/td&gt; &lt;td&gt;Value&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Name&lt;/td&gt; &lt;td&gt;Value&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
-      </div><br>
-
-      <h2 id="form">Forms</h2>
-      <p>Form customization and styling is easy using the <code>.frm</code> class in any <code>&lt;form&gt;</code> element. Inputs inside the form will be automatically styled and they will use complementary highlights for certain events (<code>:focus</code>, <code>disabled</code>, <code>:invalid</code> etc.). You can use the <code>.aligned</code> and <code>.inline</code> classes to create aligned and inline forms respectively. Aligned forms should be used in combination with the <code>.ctrl-group</code> class to group together labels with their respective inputs.</p>
-
-      <h3>Vertical form</h3>
-      <div class="panel"><h4 class="head">Example</h4>
-        <form class="frm" autocomplete="off">
-          <label for="email1">Email</label>
-          <input type="email" id="email1">
-          <label for="password1">Password</label>
-          <input type="password" id="password1">
-        </form>
-        <pre class="panelcode">&lt;form class=&quot;frm&quot;&gt;
-  &lt;label for=&quot;email1&quot;&gt;Email&lt;/label&gt;
-  &lt;input type=&quot;email&quot; id=&quot;email1&quot;&gt;
-  &lt;label for=&quot;password1&quot;&gt;Password&lt;/label&gt;
-  &lt;input type=&quot;password&quot; id=&quot;password1&quot;&gt;
-&lt;/form&gt;</pre>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-sm">
+          <h1>Modules</h1>
+          <p><strong>mini.css</strong> uses modules as its base building blocks. Each module contains one or more components that affect the same part of the user experience. Below you can see a quick overview of all the modules that compose <strong>mini.css</strong>.</p><br>
+        </div>
       </div>
-
-      <h3>Inline form</h3>
-      <div class="panel"><h4 class="head">Example</h4>
-        <form class="frm inline" autocomplete="off">
-          <label for="email2">Email</label>
-          <input type="email" id="email2">
-          <label for="password2">Password</label>
-          <input type="password" id="password2">
-        </form>
-        <pre class="panelcode">&lt;form class=&quot;frm inline&quot;&gt;
-  &lt;label for=&quot;email1&quot;&gt;Email&lt;/label&gt;
-  &lt;input type=&quot;email&quot; id=&quot;email1&quot;&gt;
-  &lt;label for=&quot;password1&quot;&gt;Password&lt;/label&gt;
-  &lt;input type=&quot;password&quot; id=&quot;password1&quot;&gt;
-&lt;/form&gt;</pre>
-      </div>
-
-      <h3>Aligned form</h3>
-      <div class="panel"><h4 class="head">Example</h4>
-        <form class="frm aligned" autocomplete="off">
-          <div class="ctrl-group">
-            <label for="email3">Email</label>
-            <input type="email" id="email3">
-          </div>
-          <div class="ctrl-group">
-            <label for="password3">Password</label>
-            <input type="password" id="password3">
-          </div>
-        </form>
-        <pre class="panelcode">&lt;form class=&quot;frm aligned&quot;&gt;
-  &lt;div class=&quot;ctrl-group&quot;&gt;
-    &lt;label for=&quot;email1&quot;&gt;Email&lt;/label&gt;
-    &lt;input type=&quot;email&quot; id=&quot;email1&quot;&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;ctrl-group&quot;&gt;
-    &lt;label for=&quot;password1&quot;&gt;Password&lt;/label&gt;
-    &lt;input type=&quot;password&quot; id=&quot;password1&quot;&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
-      </div><br>
-
-      <h2 id="button">Buttons</h2>
-      <p>Use the <code>.btn</code> class on <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;label&gt;</code> or similar elements to give them a unique style. Color variants are provided (<code>.red</code>, <code>.green</code> and <code>.blue</code>), as well as size variants (<code>.sm</code> and <code>.lg</code>).</p>
-
-      <h3>Button styles and variants</h3>
-      <div class="panel" ><h4 class="head">Example</h4><br>
-        &nbsp;&nbsp;<button class="btn">Default button</button>
-        &nbsp;&nbsp;<button class="btn red">Red button</button>
-        &nbsp;&nbsp;<button class="btn green">Green button</button>
-        &nbsp;&nbsp;<button class="btn blue">Blue button</button>
-        &nbsp;&nbsp;<button class="btn sm">Small button</button>
-        &nbsp;&nbsp;<button class="btn lg">Large button</button><br><br>
-        <pre class="panelcode">&lt;button class=&quot;btn&quot;&gt;Default button&lt;/button&gt;
-&lt;button class=&quot;btn red&quot;&gt;Red button&lt;/button&gt;
-&lt;button class=&quot;btn green&quot;&gt;Green button&lt;/button&gt;
-&lt;button class=&quot;btn blue&quot;&gt;Blue button&lt;/button&gt;
-&lt;button class=&quot;btn sm&quot;&gt;Small button&lt;/button&gt;
-&lt;button class=&quot;btn lg&quot;&gt;Large button&lt;/button&gt;</pre>
-      </div><br>
-
-      <h2 id="label">Labels &amp; Badges</h2>
-      <p>Use the <code>.lbl</code> or <code>.bdg</code> class on any elements to style them like labels or badges. Color variants are provided (<code>.red</code>, <code>.green</code> and <code>.blue</code>) for both of these styles.</p>
-
-      <h3>Labels and badge styles</h3>
-      <div class="panel" ><h4 class="head">Example</h4><br>
-        &nbsp;&nbsp;<span class="lbl">Label</span>
-        <span class="lbl red">Red label</span>
-        <span class="lbl green">Green label</span>
-        <span class="lbl blue">Blue label</span>
-        <span class="bdg">12</span>
-        <span class="bdg red">3</span>
-        <span class="bdg green">45</span>
-        <span class="bdg blue">6</span><br><br>
-        <pre class="panelcode">&lt;span class=&quot;lbl&quot;&gt;Label&lt;/span&gt;
-&lt;span class=&quot;lbl red&quot;&gt;Red label&lt;/span&gt;
-&lt;span class=&quot;lbl green&quot;&gt;Green label&lt;/span&gt;
-&lt;span class=&quot;lbl blue&quot;&gt;Blue label&lt;/span&gt;
-
-&lt;span class=&quot;bdg&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;bdg red&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;bdg green&quot;&gt;45&lt;/span&gt;
-&lt;span class=&quot;bdg blue&quot;&gt;6&lt;/span&gt;</pre>
-      </div><br>
-
-      <h2 id="modal">Modals</h2>
-      <p>Modal dialogs can be easily added and customized to the user's liking and offer support for the close button utility. <strong>Showing more than one modal dialog at once might have unexpected results and is not encouraged.</strong></p>
-
-      <h3>Modal dialog structure</h3>
-      <p>The basic structure of a modal dialog is as follows:</p>
-      <ul>
-      <li>Use the <code>.modal</code> class on an <code>&lt;input type=&quot;checkbox&quot;&gt;</code>. <strong>Place this checkbox along with any other elements specified below at the very start of your <code>&lt;body&gt;</code>.</strong></li>
-      <li>Add a <code>&lt;div&gt;</code> right after the checkbox. Inside it add a second <code>&lt;div&gt;</code> with your modal dialog's contents, as well as a <code>&lt;label&gt;</code> for the checkbox <strong>without any content inside it.</strong> This label will act as the overlay behind the modal. If you do not want clicking the background to close the modal dialog, add the label without linking it to the checkbox.</li>
-      <li>If you have enabled close button support, you can add a <code>&lt;span class=&quot;close&quot;&gt;</code> inside a label for the checkbox in the innermost <code>&lt;div&gt;</code> to add a close button to the top right corner of your modal dialog.</li>
-      <li>Finally, add a label linking to the modal dialog's checkbox anywhere in your page. You can also toggle the modal using Javascript, by setting the checkbox's state to <code>checked</code>.</li>
-      </ul>
-
-      <h3>Modal dialog example</h3>
-      <div class="panel" ><h4 class="head">Example</h4><br>
-        &nbsp;&nbsp;<label for="modal1" class="btn red">Open modal</label><br><br>
-        <pre class="panelcode">&lt;input type=&quot;checkbox&quot; class=&quot;modal&quot; id=&quot;modal1&quot;&gt;
-&lt;div&gt;
-  &lt;label for=&quot;modal1&quot; autocomplete=&quot;off&quot;&gt;&lt;/label&gt;
-  &lt;div&gt;
-    &lt;label for=&quot;modal1&quot;&gt;
-      &lt;span class=&quot;close&quot;&gt;&lt;/span&gt;
-    &lt;/label&gt;
-    &lt;h3&gt;Modal dialog&lt;/h3&gt;
-    &lt;hr&gt;
-    &lt;p&gt;This is a modal dialog.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-...
-&lt;label for=&quot;modal1&quot; class=&quot;btn red&quot;&gt;Open modal&lt;/label&gt;</pre>
-      </div><br>
-
-      <h2 id="collapse">Collapse</h2>
-      <p>The collapse module adds two components with similar functionality. </p>
-      <ul>
-      <li>Single collapse components can be created by adding the <code>.clps</code> class on an <code>&lt;input type=&quot;checkbox&quot;&gt;</code> element, followed by a <code>&lt;div&gt;</code> with the content to be hidden/shown based on the collapse's state.</li> 
-      <li>Similarly, accordion collapse components can be created by adding the <code>.acrd</code> class to as many <code>&lt;input type=&quot;radio&quot;&gt;</code> elements as you want. You should add a <code>&lt;label&gt;</code> linking to each radio immediately after it, followed by a <code>&lt;div&gt;</code> with the content to be hidden/shown based on the accordion's state. </li>
-      <li>You can use the single collapse component's styling for a set of radio buttons or the accordion's styling for a single checkbox if you would like to use a different styling for your collapse components without adding new CSS definitions.</li>
-      </ul>
-
-      <h3>Single collapse style</h3>
-      <div class="panel" ><h4 class="head">Example</h4><br>
-        &nbsp;&nbsp;<label for="collapse1" class="btn blue">Toggle collapse</label><br>
-        <input type="checkbox" class="clps" id="collapse1" autocomplete="off"><div class="well" style="margin-left: 10px; margin-right: 10px;">This text will be shown or hidden based on the above button.</div><br>
-        <pre class="panelcode">&lt;label for=&quot;collapse1&quot; class=&quot;btn blue&quot;&gt;Toggle collapse&lt;/label&gt;
-&lt;input type=&quot;checkbox&quot; class=&quot;clps&quot; id=&quot;collapse1&quot;&gt;
-&lt;div&gt;This text will be shown or hidden based on the above button.&lt;/div&gt;</pre>
-      </div>
-
-      <h3>Accordion style</h3>
-      <div class="panel" ><h4 class="head">Example</h4>
-      <div style="margin-left: 10px; margin-right: 10px;">
-        <input type="radio" class="acrd" id="acrd1" autocomplete="off" name="accordion"><label for="acrd1">First option</label>
-        <div>This is the first collapse of the accordion.</div>
-        <input type="radio" class="acrd" id="acrd2" autocomplete="off" name="accordion"><label for="acrd2">Second option</label>
-        <div>This is the second collapse of the accordion.</div>
-        <input type="radio" class="acrd" id="acrd3" autocomplete="off" name="accordion"><label for="acrd3">Third option</label>
-        <div>This is the final collapse of the accordion.</div>
-      </div>
-      <pre class="panelcode">&lt;input type=&quot;radio&quot; class=&quot;acrd&quot; id=&quot;acrd1&quot; autocomplete=&quot;off&quot; name=&quot;accordion&quot;&gt;
-&lt;label for=&quot;acrd1&quot;&gt;First option&lt;/label&gt;
-&lt;div&gt;This is the first collapse of the accordion.&lt;/div&gt;
-&lt;input type=&quot;radio&quot; class=&quot;acrd&quot; id=&quot;acrd2&quot; autocomplete=&quot;off&quot; name=&quot;accordion&quot;&gt;
-&lt;label for=&quot;acrd2&quot;&gt;Second option&lt;/label&gt;
-&lt;div&gt;This is the second collapse of the accordion.&lt;/div&gt;
-&lt;input type=&quot;radio&quot; class=&quot;acrd&quot; id=&quot;acrd3&quot; autocomplete=&quot;off&quot; name=&quot;accordion&quot;&gt;
-&lt;label for=&quot;acrd3&quot;&gt;Third option&lt;/label&gt;
-&lt;div&gt;This is the final collapse of the accordion.&lt;/div&gt;</pre>
-      </div><br>
-
-      <h2 id="progress">Progress bars</h2>
-      <p>The progress bar module is very easy to use and extend. Simply create a <code>&lt;div&gt;</code> with the <code>.prg</code> class and inside it add a <code>&lt;span&gt;</code> element with the desired <code>style=&quot;width:XX%&quot;</code> and you have a progress bar. Add text inside the <code>&lt;span&gt;</code> element if you want. You can use the <code>.green</code> or <code>.red</code> variants for the <code>&lt;span&gt;</code> element if you want to use different colors. Finally, you can always stack multiple progress bars, by simply adding more <code>&lt;span&gt;</code> elements, just make sure their widths add up to 100% or less.</p>
-
-      <h3>Default progress bar style</h3>
-      <div class="panel" ><h4 class="head">Example</h4><br>
-        <div class="prg" style="margin-left: 10px; margin-right: 10px; padding:0;"><span style="width:60%;">60%</span></div><br>
-        <pre class="panelcode">&lt;div class=&quot;prg&quot;&gt;&lt;span style=&quot;width:60%;&quot;&gt;60%&lt;/span&gt;&lt;/div&gt;</pre>
-      </div>
-
-      <h3>Progress bar variant styles</h3>
-      <div class="panel" ><h4 class="head">Example</h4><br>
-        <div class="prg" style="margin-left: 10px; margin-right: 10px; padding:0;"><span class="green" style="width:40%;"></span></div><br>
-        <div class="prg" style="margin-left: 10px; margin-right: 10px; padding:0;"><span class="red" style="width:70%;"></span></div><br>
-        <pre class="panelcode">&lt;div class=&quot;prg&quot;&gt;&lt;span class=&quot;green&quot; style=&quot;width:40%;&quot;&gt;&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;prg&quot;&gt;&lt;span class=&quot;red&quot; style=&quot;width:70%;&quot;&gt;&lt;/span&gt;&lt;/div&gt;</pre>
-      </div>
-
-      <h3>Stacked progress bars</h3>
-      <div class="panel" ><h4 class="head">Example</h4><br>
-      <div class="prg" style="margin-left: 10px; margin-right: 10px; padding:0;">
-        <span class="red" style="width:30%;"></span>
-        <span class="green" style="width:20%;"></span>
-        <span style="width:40%;"></span>
-      </div><br>
-        <pre class="panelcode">&lt;div class=&quot;prg&quot;&gt;
-  &lt;span class=&quot;red&quot; style=&quot;width:30%;&quot;&gt;&lt;/span&gt;
-  &lt;span class=&quot;green&quot; style=&quot;width:20%;&quot;&gt;&lt;/span&gt;
-  &lt;span style=&quot;width:40%;&quot;&gt;&lt;/span&gt;
-&lt;/div&gt;</pre>
-      </div>
-      
-      <h3>Progress spinners</h3>
-      <div class="panel" ><h4 class="head">Example</h4><br>
-      <p>Spinner dots: <span class="spinner-dots"></span></p>
-      <p>Spinner round: <span class="spinner-round"></span></p>
-      <br>
-        <pre class="panelcode">&lt;span class=&quot;spinner-dots&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner-round&quot;&gt;&lt;/span&gt;</pre>
-      </div><br>
-
-      <h2 id="carousel">Carousel</h2>
-      <p>The carousel module allows you to create manually-controlled image slideshows for your pages. <strong>Nested carousels might cause unexpected behavior, please refrain from using them.</strong></p>
-
-      <h3>Carousel structure</h3>
-      <p>The base structure for the carousel component is as follows:</p>
-      <ul>
-      <li>Specify a carousel wrapper, using the <code>.carousel</code> class on a <code>&lt;div&gt;</code> element.</li>
-      <li>Inside the wrapper, add the an <code>&lt;input type=&quot;radio&quot;&gt;</code>, followed immediately by a <code>&lt;div&gt;</code> element. Inside the latter, add an <code>&lt;img&gt;</code> element, followed by a <code>&lt;div&gt;</code> element which will act as the image's description. Finally, right after closing the first <code>&lt;div&gt;</code> element, add a <code>&lt;label&gt;</code> linked to the radio button for the image.</li>
-      <li>Repeat the process as many times as you want to add more images. <strong>Remember that you cannot skip the description <code>&lt;div&gt;</code> element, even if it is empty, as it is required for the component to work properly.</strong></li>
-      <li>Add the <code>checked</code> attribute to the first radio button of your carousel (or the one corresponding to the image you want to be displayed by default) to make the carousel work properly.</li>
-      </ul>
-      <p><strong>Auto-scrolling is not enabled by default in this carousel component.</strong> If you want the carousel to scroll automatically, you can check each of the radio buttons automatically using Javascript on set intervals. Using a similar technique you can pause the automatic scrolling when the user's cursor is inside the carousel.</p>
-
-      <h3>Carousel example</h3>
-      <div class="panel" ><h4 class="head">Example</h4><br>
-      <div class="carousel">
-        <input type="radio" name="carousel-control" id="crs1" checked>
-        <div>
-          <img src="favicon.png">
-          <div>
-            <h3>First image</h3>
-            <p>This is a sample image description.</p>
+      <div class="row box-centered">
+        <div class="col-sm-12 col-md-6 row">
+          <div class="card fluid">
+            <h2 class="section"><mark class="primary"><i class="fa fa-font fa-fw" aria-hidden="true"></i></mark>&nbsp;Core</h2>
+            <p class="section box-left">The <strong>core</strong> module contains basic reset and fix rules, based on <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> v5.0.0, along with lots of custom typography rules. Most textual HTML5 elements are styled by this module, so you can start writing your pages immediately without worrying about font families, weights, sizes, line heights, paddings and the like.</p>
+            <a href="core.html" class="button section">See more</a>
           </div>
         </div>
-        <label for="crs1"></label>
-        <input type="radio" name="carousel-control" id="crs2">
-        <div>
-          <img src="favicon.png" style="transform: scale(1,-1);">
-          <div>
-            <h3>Second image</h3>
-            <p>This is another sample image description.</p>
+        <div class="col-sm-12 col-md-6 row">
+          <div class="card fluid">
+            <h2 class="section"><mark class="secondary"><i class="fa fa-th-large fa-fw" aria-hidden="true"></i></mark>&nbsp;Grid</h2>
+            <p class="section box-left">The <strong>grid</strong> module provides you with a modern, responsive grid system based on the Flexible Layout Module (commonly known as <em>flexbox</em>). The structure of the grid is simple and logical, allowing you to quickly build your pages from scratch. Setting the layout for a page is easy and will behave the way you want them to on mobile devices and smaller screens.</p>
+            <a href="grid.html" class="button section">See more</a>
           </div>
         </div>
-        <label for="crs2"></label>
-        <input type="radio" name="carousel-control" id="crs3">
-        <div>
-          <img src="favicon.png" style="transform: scale(-1,-1);">
-          <div>
-            <h3>Third image</h3>
-            <p>This is yet another image description.</p>
+      </div>
+      <div class="row box-centered">
+        <div class="col-sm-12 col-md-6 row">
+          <div class="card fluid">
+            <h2 class="section"><mark class="primary"><i class="fa fa-compass fa-fw" aria-hidden="true"></i></mark>&nbsp;Navigation</h2>
+            <p class="section box-left">The <strong>navigation</strong> module seeks to remedy the problems of vertical and horizontal navigation design paradigms, by combining the two for a better presentational effect. HTML5 navigational elements are at the heart of the module, allowing you to quickly build your navigation without complicated structures and hacks.</p>
+            <a href="navigation.html" class="button section">See more</a>
           </div>
         </div>
-        <label for="crs3"></label>
-      </div>
-      <br>
-        <pre class="panelcode">&lt;div class=&quot;carousel&quot;&gt;
-  &lt;input type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;crs1&quot; checked&gt;
-  &lt;div&gt;
-    &lt;img src=&quot;favicon.png&quot;&gt;
-    &lt;div&gt;
-      &lt;h3&gt;First image&lt;/h3&gt;
-      &lt;p&gt;This is a sample image description.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;label for=&quot;crs1&quot;&gt;&lt;/label&gt;
-  &lt;input type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;crs2&quot;&gt;
-  &lt;div&gt;
-    &lt;img src=&quot;favicon.png&quot; style=&quot;transform: scale(1,-1);&quot;&gt;
-    &lt;div&gt;
-      &lt;h3&gt;Second image&lt;/h3&gt;
-      &lt;p&gt;This is another sample image description.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;label for=&quot;crs2&quot;&gt;&lt;/label&gt;
-  &lt;input type=&quot;radio&quot; name=&quot;carousel-control&quot; id=&quot;crs3&quot;&gt;
-  &lt;div&gt;
-    &lt;img src=&quot;favicon.png&quot; style=&quot;transform: scale(-1,-1);&quot;&gt;
-    &lt;div&gt;
-      &lt;h3&gt;Third image&lt;/h3&gt;
-      &lt;p&gt;This is yet another image description.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;label for=&quot;crs3&quot;&gt;&lt;/label&gt;
-&lt;/div&gt;</pre>
-      </div><br>
-
-      <h2 id="utility">Utilities &amp; Helper classes</h2>
-      <p>The core utilities module contains a set of useful utilities and helper classes to make common tasks easier when developing new pages.</p>
-
-      <h3>Generic borders</h3>
-      <p>By using the <code>opacity</code> CSS property in a creative way, along with <code>border-radius</code>es, we have created utility classes that will create generic borders for virtually any element you want. Simply add the <code>.bordered</code> class to create a generic border around an element. You can also use the <code>.rounded</code> and <code>.circle</code> classes (with or without the border style) to create reounded or circular corners for different elements accordingly.</p>
-      <div class="panel" ><h4 class="head">Example</h4><br>
-      <span>Button with generic border:</span>&nbsp;&nbsp;<button class="btn blue bordered">Button</button><br>
-      <span>Image with generic border and rounded corners:</span>&nbsp;&nbsp;<img class="bordered rounded" src="favicon.png" style="height: 100px; width: auto; display:inline-block;vertical-align: middle;"><br>
-      <span>Image with circular corners:</span>&nbsp;&nbsp;<img class="circle" src="favicon.png" style="height: 100px; width: auto; display:inline-block;vertical-align: middle;"><br><br>
-        <pre class="panelcode">&lt;button class=&quot;btn blue bordered&quot;&gt;Button&lt;/button&gt;
-&lt;img class=&quot;bordered rounded&quot; src=&quot;favicon.png&quot;&gt;
-&lt;img class=&quot;circle&quot; src=&quot;favicon.png&quot;&gt;</pre>
-      </div>
-
-
-      <h3>Contextual colors and backgrounds</h3>
-      <p>You can easily add contextual text or background color to certain textual elements by simply using one of the contextual prefixes (<code>.txt-</code> and <code>.bg-</code> respectively) and a color suffix (<code>red</code>, <code>green</code> or <code>blue</code>).</p>
-      <div class="panel" ><h4 class="head">Example</h4>
-      <p>Here is some text with contextual colors: <span class="txt-red">red</span>, <span class="txt-green">green</span> &amp; <span class="txt-blue">blue</span>.<br>
-      And here is some text with contextual backgrounds: <span class="bg-red">red</span>, <span class="bg-green">green</span> &amp; <span class="bg-blue">blue</span>.</p>
-        <pre class="panelcode">&lt;span class=&quot;txt-red&quot;&gt;red text&lt;/span&gt;
-&lt;span class=&quot;txt-green&quot;&gt;green text&lt;/span&gt; 
-&lt;span class=&quot;txt-blue&quot;&gt;blue text&lt;/span&gt;
-
-&lt;span class=&quot;bg-red&quot;&gt;red background&lt;/span&gt;
-&lt;span class=&quot;bg-green&quot;&gt;green background&lt;/span&gt;
-&lt;span class=&quot;bg-blue&quot;&gt;blue background&lt;/span&gt;</pre>
-      </div>
-
-      <h3>Image thumbnails</h3>
-      <p>Image thumbnails can be used to stylize images by adding a custom border around them by simply using the <code>.thumb</code> class.</p>
-      <div class="panel" ><h4 class="head">Example</h4><br>
-      &nbsp;&nbsp;<img class="thumb" src="favicon.png" style="height: 100px; width: auto; display:inline-block;"><br><br>
-        <pre class="panelcode">&lt;img class=&quot;thumb&quot; src=&quot;favicon.png&quot;&gt;</pre>
-      </div>
-
-      <h3>Utility symbols</h3>
-      <p>You can easily add carets and close symbols by using the <code>.caret</code> and <code>.close</code> classes respectively.</p>
-      <div class="panel" ><h4 class="head">Example</h4>
-      &nbsp;&nbsp;<span class="caret" style="padding:0;"></span>
-      <span class="close"></span><br>
-        <pre class="panelcode">&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;close&quot;&gt;&lt;/span&gt;</pre>
-      </div>
-
-      <h3>Helper classes</h3>
-      <p>Apart from the above utilities, there are some extra classes provided to help streamline the development process. Some of these classes use the <code class="txt-red">!important</code> property to override other styles, so be careful when using them. The provided helper classes are as follows:</p>
-      <ul>  
-      <li>Quick floats can be created using the <code>.drg-left</code> and <code>.drg-right</code> classes.</li>
-      <li>Center content blocks can be created using the <code>.ct-block</code> class.</li>
-      <li>Utilize the popular <a href="http://nicolasgallagher.com/micro-clearfix-hack/">micro clearfix hack</a> using the <code>.cf</code> class.</li>
-      <li>Use the <code>.hidden</code> class to hide any content you wish.</li>
-      </ul>
-
-      <h2 id="utility-extra">Utilities &amp; Experimental classes</h2>
-      <p>The extra utilities module contains some more useful utilities, as well as some more experimental and unstable utility classes, that some people might find of use. <strong>Any components marked as experimental might be unstable and behave unexpectedly, use at your own risk!</strong></p>
-
-      <h3>Breadcrumbs</h3>
-      <p>Create breadcrumbs to indicate the navigational hierarchy of a page's location, using the <code>.brdcrmb</code> class on a list element.</p>
-      <div class="panel" ><h4 class="head">Example</h4>
-      <ol class="brdcrmb">
-        <li><a href="#">Core</a></li>
-        <li><a href="#">Modules</a></li>
-        <li>Utility</li>
-      </ol>
-        <pre class="panelcode">&lt;ol class=&quot;brdcrmb&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Core&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Modules&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;Utility&lt;/li&gt;
-&lt;/ol&gt;</pre>
-      </div>
-
-      <h3>Containers</h3>
-      <p>There are multiple types of generic containers provided:</p>
-      <ul>
-      <li>Wells can be created using the <code>.well</code> class and are the simplest type of generic container.</li>
-      <li>Alerts are similar to wells, but are contextualized can be toggled on or off (manually or using scripts). Use the <code>.alert-</code> prefix on an <code>&lt;input type=&quot;checkbox&quot;&gt;</code> along with a color suffix (<code>red</code>, <code>green</code> or <code>blue</code>) and a <code>&lt;div&gt;</code> element to create an alert. Adding a <code>&lt;span class=&quot;close&quot;&gt;</li> element inside a label pointing to the alert's checkbox will allow user to dismiss the alert.</code>
-      <li>Panels are similar to wells, but looks like application windows. You can create a panel using the <code>.panel</code> class and you can specify a title element for your panel using the <code>.head</code> class on the very first element of your panel.</li> 
-      </ul>
-      <div class="panel" ><h4 class="head">Example</h4><br>
-      <strong>Well:</strong><br><br>
-      <div class="well" style="margin-left: 10px; margin-right: 10px;">This is a well.</div><br>
-      <strong>Alerts:</strong><br><br>
-      <input type="checkbox" id="alert1" class="alert-red" checked><div style="margin-left: 10px; margin-right: 10px;">This is a red alert without a close button.</div><br>
-      <input type="checkbox" id="alert2" class="alert-green" checked><div style="margin-left: 10px; margin-right: 10px;">This is a green alert with a <a href="#">link</a> but no close button either.</div><br>
-      <input type="checkbox" id="alert3" class="alert-blue" checked autocomplete="off"><div style="margin-left: 10px; margin-right: 10px;">This is a blue alert with a close button. <label for="alert3"><span class="close"></span></label></div><br>
-      <strong>Panel:</strong><br><br>
-      <div class="panel" style="margin-left: 10px; margin-right: 10px; padding:0"><h3 class="head">Panel head</h3>
-        <p>This is a panel.</p>
-      </div><br>
-        <pre class="panelcode">&lt;div class=&quot;well&quot;&gt;This is a well.&lt;/div&gt;
-
-&lt;input type=&quot;checkbox&quot; id=&quot;alert1&quot; class=&quot;alert-red&quot; checked&gt;
-&lt;div&gt;This is a red alert without a close button.&lt;/div&gt;
-&lt;input type=&quot;checkbox&quot; id=&quot;alert2&quot; class=&quot;alert-green&quot; checked&gt;
-&lt;div&gt;This is a green alert with a &lt;a href=&quot;#&quot;&gt;link&lt;/a&gt; but no close button either.&lt;/div&gt;
-&lt;input type=&quot;checkbox&quot; id=&quot;alert3&quot; class=&quot;alert-blue&quot; checked&gt;
-&lt;div&gt;This is a blue alert with a close button. &lt;label for=&quot;alert3&quot;&gt;&lt;span class=&quot;close&quot;&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
-
-&lt;div class=&quot;panel&quot;&gt;
-  &lt;h3 class=&quot;head&quot;&gt;Panel head&lt;/h3&gt;
-    &lt;p&gt;This is a panel.&lt;/p&gt;
-&lt;/div&gt;</pre>
-      </div>
-
-      <h3>Popovers</h3>
-      <p>You can show a small overlay of content when the user clicks on specific elements using the <code>.popover-</code> prefix on an <code>&lt;input type=&quot;checkbox&quot;&gt;</code> along with the <code>top</code> or <code>bottom</code> suffix. Add a <code>&lt;label&gt;</code> right after the checkbox linked to it and inside it add another element with the popover's class you are using. When you click the label, the popover will appear above or below the label. Click on the label again or the popover text itself to hide it.</p>
-      <div class="panel"><h4 class="head">Example</h4><br>
-        &nbsp;&nbsp;<input type="checkbox" id="popover1" class="popover-top" autocomplete="off"><label for="popover1" class="btn green">Open top popover<span class="popover-top">This is the popover text.</span></label>
-        &nbsp;&nbsp;
-        <input type="checkbox" id="popover2" class="popover-bottom" autocomplete="off"><label for="popover2" class="btn red">Open bottom popover<span class="popover-bottom">This is the popover text.</span></label><br><br>
-        <pre class="panelcode">&lt;input type=&quot;checkbox&quot; id=&quot;popover1&quot; class=&quot;popover-top&quot; autocomplete=&quot;off&quot;&gt;
-&lt;label for=&quot;popover1&quot; class=&quot;btn green&quot;&gt;Open top popover
-  &lt;span class=&quot;popover-top&quot;&gt;This is the popover text.&lt;/span&gt;
-&lt;/label&gt;
-
-&lt;input type=&quot;checkbox&quot; id=&quot;popover2&quot; class=&quot;popover-bottom&quot; autocomplete=&quot;off&quot;&gt;
-&lt;label for=&quot;popover2&quot; class=&quot;btn red&quot;&gt;Open bottom popover
-  &lt;span class=&quot;popover-bottom&quot;&gt;This is the popover text.&lt;/span&gt;
-&lt;/label&gt;</pre>
-      </div>
-
-      <h3>Experimental components</h3>
-      <p>There are two experimental components provided, stateful buttons and button groups:
-      <ul><li>To create a stateful button apply the <code>.stateful</code> class to an <code>&lt;input type=&quot;checkbox&quot;&gt;</code>, followed by two labels (the first is for the inactive state and the second one for the active state).<strong>This component is not enabled by default as it is unstable, you can enable it manually.</strong></li>
-      <li>To create a button group, use the <code>.btn-grp</code> class to wrap a set of <code>.btn</code> elements.<strong>This component is considered stable enough, so it is enabled by default, you can disable it manually.</strong></li></ul>
-      <div class="panel"><h4 class="head">Example</h4>
-        &nbsp;&nbsp;<input type="checkbox" id="stateful1" class="stateful" autocomplete="off"><label for="stateful1" class="btn blue" style="margin-left: 10px; margin-right: 10px;width:200px;">Click to load</label><label class="btn blue" style="margin-left: 10px; margin-right: 10px;width:200px;">Loading...</label>
-        <div class="btn-grp">&nbsp;&nbsp;
-          <button class="btn">1</button>
-          <button class="btn">2</button>
-          <button class="btn">3</button>
-          <button class="btn">4</button>
-        </div>
-        <pre class="panelcode">&lt;input type=&quot;checkbox&quot; id=&quot;stateful1&quot; class=&quot;stateful&quot; autocomplete=&quot;off&quot;&gt;
-&lt;label for=&quot;stateful1&quot; class=&quot;btn blue&quot;&gt;Click to load&lt;/label&gt;
-&lt;label class=&quot;btn blue&quot;&gt;Loading...&lt;/label&gt;
-
-&lt;div class=&quot;btn-grp&quot;&gt;
-  &lt;button class=&quot;btn&quot;&gt;1&lt;/button&gt;
-  &lt;button class=&quot;btn&quot;&gt;2&lt;/button&gt;
-  &lt;button class=&quot;btn&quot;&gt;3&lt;/button&gt;
-  &lt;button class=&quot;btn&quot;&gt;4&lt;/button&gt;
-&lt;/div&gt;</pre>
-      </div><br>
-
+        <div class="col-sm-12 col-md-6 row">
+          <div class="card fluid">
+            <h2 class="section"><mark class="tertiary"><i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i></mark>&nbsp;Input Control</h2>
+            <p class="section box-left">The <strong>input_control</strong> module contains rules that affect forms, input elements, buttons, checkboxes and radio buttons. All of these elements's styles are predefined, allowing you to create modern, responsive forms quickly. Layout alternatives are also provided if you want your forms to look a certain way.</p>
+            <a href="input_control.html" class="button section">See more</a>
+          </div>
         </div>
       </div>
-      <div class="row footer">
-      <div class="col xs-no md-1"></div>
-        <div class="col xs-12 md-10 footer">   
-          <p style="padding-top: 10px;"><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</p>
+      <div class="row box-centered">
+        <div class="col-sm-12 col-md-6">
+          <div class="card fluid">
+            <h2 class="section"><mark class="primary"><i class="fa fa-table fa-fw" aria-hidden="true"></i></mark>&nbsp;Table</h2>
+            <p class="section box-left">The <strong>table</strong> module provides styling and responsiveness for tables. Simple rules and accessible design paradigms have been used to make creating tables quick and easy. Large tables will collapse to cards when on smaller devices or, if you don't want that, they can be locked into their default, desktop view.</p>
+            <a href="table.html" class="button section">See more</a>
+          </div>
         </div>
-      </div>     
-    </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="card fluid">
+            <h2 class="section"><mark class="secondary"><i class="fa fa-id-card-o fa-fw" aria-hidden="true"></i></mark>&nbsp;Card</h2>
+            <p class="section box-left">The <strong>card</strong> module provides you with modern, responsive, general-purpose containers for your page's contents. They are very easy to use and their structure is really simple and versatile. Layouts will respond to smaller screens, realigning the cards in a manner that makes your page mobile-friendly.</p>
+            <a href="card.html" class="button section">See more</a>
+          </div>
+        </div>
+      </div>
+      <div class="row box-centered">
+        <div class="col-sm-12 col-md-6">
+          <div class="card fluid">
+            <h2 class="section"><mark class="secondary"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i></mark>&nbsp;Tab</h2>
+            <p class="section box-left">The <strong>tab</strong> module aims to combine multiple components and design paradigms, like collapses, accordions, carousels and tabs, into one general-purpose component. Tabs are very simple in structure, responsive on mobile and they allow for layout customization so that you can turn them into accordions or collapses whenever you want.</p>
+            <a href="tab.html" class="button section">See more</a>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="card fluid">
+            <h2 class="section"><mark class="secondary"><i class="fa fa-tags fa-fw" aria-hidden="true"></i></mark>&nbsp;Contextual</h2>
+            <p class="section box-left">The <strong>contextual</strong> module provides you with simple tags, marks and highlights for your pages, allowing you to easily emphasize parts of your text. The contextual alerts aim to replace the commonly used modal dialog design paradigm with a more modern one. HTML5 elements and simple rules are used in order to make important messages and pieces of content stand out easily.</p>
+            <a href="contextual.html" class="button section">See more</a>
+          </div>
+        </div>
+      </div>
+      <div class="row box-centered" style="padding-bottom: 40px;">
+        <div class="col-sm-12 col-md-6">
+          <div class="card fluid">
+            <h2 class="section"><mark class="tertiary bordered"><i class="fa fa-spinner fa-fw" aria-hidden="true"></i></mark>&nbsp;Progress</h2>
+            <p class="section box-left">The <strong>progress</strong> module gives you full control over the presentation of progress and loading on your pages. Apart from progress bars and color variants for them, spinner elements are provided to help communicate that something is loading.</p>
+            <a href="progress.html" class="button section">See more</a>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="card fluid">
+            <h2 class="section"><mark class="tertiary"><i class="fa fa-wrench fa-fw" aria-hidden="true"></i></mark>&nbsp;Utility</h2>
+            <p class="section box-left">The <strong>utility</strong> module contains all the utilities and helper classes that you might want when designing a website or application. They solve common design problems efficiently and provide you with generic rules you can easily apply everywhere.</p>
+            <a href="utility.html" class="button section">See more</a>
+          </div>
+        </div>
+      </div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>
 </html>

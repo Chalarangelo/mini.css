@@ -1,123 +1,276 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework</title>
+    <!-- Live demo styled as of 20161213 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/0f7cd386b36094d9878c6b43bc8aa58d010c450d/dist/mini-default.min.css">
+    <!-- Font Awesome --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>mini.css - Minimal, responsive, style-agnostic CSS toolkit</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework">
-    <meta name="keywords" content="mini, mini.css, CSS, responsive, framework, mobile first, style agnostic, Sass">
+    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
+    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass">
     <meta name="author" content="Angelos Chalaris (chalarangelo)">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <!-- For local testing only -->
-    <!-- <link rel="stylesheet" href="../flavors/mini-default.min.css"> -->
-    <!-- Correct link -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v1.1.0/flavors/mini-default.min.css">
+    <meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="mini.css v2 (Fermion) helps you build quick, modern, responsive websites and web apps with minimal effort."/>
+    <meta property="og:image" content="favicon.png">
+    <meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
+    <link rel="icon" type="image/png" href="favicon.png">  
     <style>
-      .footer{background-color:#272727; color:#ddd;}
-      .footer a, .footer a:hover, .footer a:visited, .footer a:visited:hover, .footer a:active, .footer a:visited:active{color: #fff;}
-      .footer a:hover{text-decoration: underline;}
+      /* Classes and ids used in multiple pages - page top and utilities */
+      #header-logo {
+        display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px;
+         padding: 4px;
+      }
+      #top-logo {
+        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
+        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      #top-heading {
+        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
+      }
+      #top-version-tag {
+        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      .box-centered { text-align: center; }
+      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
+      .box-colored.red { background: #b71c1c; }
+      .box-centered > .card.fluid {
+        -webkit-box-pack: start;
+        -webkit-box-align: start; 
+        -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+        -webkit-align-self: auto;
+                align-self: auto;
+      }
+      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+      /* Local classes and ids for this page */
+      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
+      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
+      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
     </style>
   </head>
-  <body>
-    <input type="checkbox" class="hidden" id="nav-toggle" autocomplete="off" class="hidden">
-    <div class="nav fixed">
-      <a href="https://chalarangelo.github.io/mini.css"><span class="logo">&nbsp;<img src="favicon.png" style="height: 34px; width: auto; display: inline-block; vertical-align: middle;">&nbsp;mini.css&nbsp;</span></a>
-      <ul>
-        <li><a href="https://chalarangelo.github.io/mini.css/#why-mini-css" class="link">Introduction</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/#modules" class="link">Module overview</a></li>
-        <li><label class="link dropdown" for="menu-drop1">Module demos</label></li>
-      </ul>
-      <input type="checkbox" id="menu-drop1" class="dropdown" autocomplete="off"><div>
-        <ul>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#base" class="link">Base</a></li>    
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#grid" class="link">Responsive Grid</a></li> 
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#nav" class="link">Navigation</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#dropdown" class="link">Dropdowns</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#tab" class="link">Tabs</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#table" class="link">Tables</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#form" class="link">Forms</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#button" class="link">Buttons</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#label" class="link">Labels</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#modal" class="link">Modals</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#collapse" class="link">Collapse</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#progress" class="link">Progress Bars</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#carousel" class="link">Carousel</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#utility" class="link">Utilities &amp; Helper Classes</a></li>
-        <li><a href="https://chalarangelo.github.io/mini.css/modules#utility-extra" class="link">Utilities &amp; Experimental Classes</a></li>
-        </ul>
+  <body>  
+    <header>
+      <img class="logo" src="mini-logo.svg" id="header-logo"><div style="display: inline; overflow: auto;">
+      <a href="index.html" class="button">Introduction</a>
+      <a href="modules.html" class="button">Modules</a>
+      <a href="flavors.html" class="button">Flavors</a>
+      <a href="customization.html" class="button">Customization</a>
+      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
       </div>
-    </div>
-    <label for="nav-toggle"></label>
-    <br>      
-    <div class="grid-container">
+    </header>
+    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
       <div class="row">
-        <div class="col xs-no md-1"></div>
-        <div class="col xs-12 md-10">
-          <h1>mini.css<small> a minimal Sass-y responsive mobile-first style-agnostic CSS framework</small></h1>
-          <p>If you want to create your own flavor, get involved or report an issue, head over to <strong>mini.css</strong>'s <a href="https://github.com/Chalarangelo/mini.css">Github repository</a> or the <a href="https://github.com/Chalarangelo/mini.css/wiki">wiki</a>. If you want to give <strong>mini.css</strong> a try using the default flavor, paste the following code inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
-          <pre style="overflow: auto;">&lt;link rel=<span class="txt-green">&quot;stylesheet&quot;</span> href=<span class="txt-blue">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v1.1.0/flavors/mini-default.min.css&quot;</span>&gt;</pre>
-          
-          <p>If you'd rather use a package manager, <strong>mini.css</strong> is available in both Bower and NPM:</p>
-          <pre style="margin-left: 1px; border-left: 5px solid #3f84b3; border-top-left-radius: 0; border-bottom-left-radius: 0;"> <span class="txt-blue">bower install</span> mini.css</pre>
-          <pre style="margin-left: 1px; border-left: 5px solid #3f84b3; border-top-left-radius: 0; border-bottom-left-radius: 0;"> <span class="txt-blue">npm install</span> mini.css</pre><br>
-
-          <h2 id="why-mini-css">Why mini.css?</h2><hr>
-          <ul>
-            <li><strong>Size matters!</strong> - The key focus of <strong>mini.css</strong> is to provide developers with a very light framework to build their pages with. To accomplish this, we stripped down most of the commonly-used components to their essentials, utilising the magic of CSS. By building lighter components, using only CSS, we made <strong>mini.css</strong> really tiny, just under 5KB for the default flavor.</li>
-            
-            <li><strong>Easily customize your pages!</strong> - <strong>mini.css</strong> does not rely on a huge monolithic CSS file to do everything. In fact, we split the framework into smaller modules using Sass(SCSS), so you can easily distinguish what pieces you want in your final stylesheet. But that's not all! Every single detail of the provided modules can be changed, from colors and border styles to class names and structure. It's all really simple and you can do it without a lot of CSS or Sass knowledge. These customized stylesheets are called <strong>flavors</strong> and are one of the key differences between <strong>mini.css</strong> and other frameworks.</li>
-            
-            <li><strong>We are mobile-friendly!</strong><sup>*</sup> - That's right! We built <strong>mini.css</strong> from the ground up to support mobile devices as best as possible and be responsive. All of this functionality can be fully customized to suit your end-users.</li>
-            
-            <li><strong>No Javascript!</strong> - As much as we all love Javascript, we tried to keep all of the modules in <strong>mini.css</strong> pure CSS. This means no dependencies on Javascript libraries or excessive code for events you might never use.</li>
-
-          </ul>
-          <small>(*): We do not want to claim that any website will ever instantly work 100% the way you want on mobile, but mini.css eliminates a lot of the tedious work of making your websites mobile-friendly, so you can focus on the interesting parts that actually need your attention.</small>
-
-          <h2 id="modules">What does it contain?</h2>
-          <p><strong>mini.css</strong> is split up into modules, each with a specific focus or set of components. These modules are categorized under core modules and extra modules. We suggest that you use most of the core modules in your projects, as most projects can make good use of them. As for the extra modules, we suggest you carefully pick the ones you need for your project. Below is a quick overview of all the modules:</p>
-
-          <ul>
-            
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#base">Core : Base</a></h3><p>A modified version of <a href="https://necolas.github.io/normalize.css/">normalize.css</a> combined with a long list of variables produces a customized base for your projects along with typography rules and colors.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#grid">Core : Responsive Grid</a></h3><p>A customizable reponsive grid that lets you build pages that look great on all devices wih minimal tweaking..</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#nav">Core : Navigation</a></h3><p>A customizable responsive navigation bar for your pages.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#dropdown">Extra : Navigation - Dropdown</a></h3><p>The navigation system can easily be extended using the dropdown component.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#tab">Extra : Navigation - Tabs</a></h3><p>If you would rather use tabs instead of the usual navigation bar, you can use this module to enable tabbed navigation.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#table">Core : Tables</a></h3><p>Give a fresh style to your tables without overloading your page.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#form">Core : Forms</a></h3><p>Simple, elegant and light forms that will work well and give feedback to the user.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#button">Core : Buttons</a></h3><p>Tiny button styles that allow you to beautify your buttons, labels and links.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#label">Extra : Labels &amp; Badges</a></h3><p>Small badges and labels to provide your user's with all the info they need.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#modal">Extra : Modals</a></h3><p>Modal dialog prompts to notify your users the easy way.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#collapse">Extra : Collapse</a></h3><p>Hide and show text using customizable collapse buttons.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#progress">Extra : Progress Bars</a></h3><p>A simple module that allows you to create progess bars for your pages.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#carousel">Extra : Carousel</a></h3><p>Really light and customizable imaage slideshow for all your showcase needs.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#utility">Core : Utilities &amp; Helper Classes</a></h3><p>Classes for generic borders, image thumbnails, contextual text coloring, utility buttons and more.</p></li>
-
-            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#utility-extra">Extra : Utilities &amp; Experimental Classes</a></h3><p>Breadcrumbs, containers, panels, alerts, popovers, button groups and more.</p></li>
-
-          </ul>
+        <div class="col-sm">
+          <div class="box-centered">
+            <img src="mini-logo.svg" id="top-logo">
+            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
+            <mark class="tertiary" id="top-version-tag">v2.0</mark>
         </div>
       </div>
-      <div class="row footer">
-      <div class="col xs-no md-1"></div>
-        <div class="col xs-12 md-10 footer">   
-          <p style="padding-top: 10px;"><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</p>
-        </div>
-      </div>     
+      </div>
     </div>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-sm-12 col-md box-centered row">
+          <div class="card fluid">  
+            <div class="section">
+              <h2>Minimal<small>Size matters!</small></h2><br>
+              <i class="fa fa-compress fa-4x" aria-hidden="true"></i>
+              <br><br>
+              <p><strong>mini.css</strong> aims to provide as much functionality as possible in about 5KB gzipped. This very small footprint means that your websites and web applications will load faster, while still looking great utilising the modern components we provide!</p><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md box-centered row">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Responsive<small>Think mobile!</small></h2><br>
+              <i class="fa fa-mobile fa-4x" aria-hidden="true"></i>
+              <br><br>
+              <p><strong>mini.css</strong> is crafted with both desktops and mobile devices in mind. All of its components are well-tested on different devices and will respond to any changes in the viewport, allowing for an experience tailored to each user's device!</p><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md box-centered row">
+          <div class="card fluid"> 
+            <div class="section">
+              <h2>Style-agnostic<small>Infinitely customizable!</small></h2><br>
+              <i class="fa fa-paint-brush fa-4x" aria-hidden="true"></i>
+              <br><br>
+              <p><strong>mini.css</strong> provides you with a customizable flavor system, allowing you to be a designer without all the hard work. This way you can create your own custom design and personalize your websites any way you want!</p><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+        <h2>Setup and usage</h2>
+        <p>You can import he default flavor of <strong>mini.css</strong> in your webpage by simply adding the following reference inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
+        <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
+        <p>If you want to download the package using your favorite package manager, you can use either <strong>Bower</strong> or <strong>NPM</strong>:</p>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <pre><span class="fore-tertiary">bower install</span> <span class="fore-primary">mini.css</span></pre>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <pre><span class="fore-tertiary">npm install</span> <span class="fore-primary">mini.css</span></pre>
+          </div>
+        </div><br>
+        <p>If you are interested in tinkering with the flavor files and cooking your own flavor, check out the <a href="#">Customization</a> page for information, tips on how to get started and general guidelines.</p>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>Quick overview</h2>
+          <p>Take a couple of minutes to learn how <strong>mini.css</strong> differs from all those other UI toolkits (Bootstrap, Semantic UI etc):</p>       
+          <table>        
+              <caption>Toolkit file size comparison</caption>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Version</th>
+                  <th>Size (uncompressed)</th>
+                  <th>Size (minified)</th>
+                  <th>Size (gzipped)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Name">Bootstrap</td>
+                  <td data-label="Version"><a href="https://github.com/twbs/bootstrap/blob/0b9c4a4007c44201dce9a6cc1a38407005c26c86/dist/css/bootstrap.css">v3.3.7</a></td>
+                  <td data-label="Size (uncompressed)">143 KB</td>
+                  <td data-label="Size (minified)">117 KB</td>
+                  <td data-label="Size (gzipped)">20 KB</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Material Framework</td>
+                  <td data-label="Version"><a href="https://github.com/nt1m/material-framework/blob/c5f7fed174686118dded31aecca311d4cc9d8b07/css/material.css">v3.0</a></td>
+                  <td data-label="Size (uncompressed)">114 KB</td>
+                  <td data-label="Size (minified)">90 KB</td>
+                  <td data-label="Size (gzipped)">18 KB</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">mini.css</td>
+                  <td data-label="Version"><a href="https://github.com/chalarangelo/mini.css/blob/v2.0/dist/css/mini-default.css">v2.0</a></td>
+                  <td data-label="Size (uncompressed)">47 KB</td>
+                  <td data-label="Size (minified)">36 KB</td>
+                  <td data-label="Size (gzipped)">7 KB</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Semantic UI</td>
+                  <td data-label="Version"><a href="https://github.com/Semantic-Org/Semantic-UI/blob/0b1b59b0e1c780e842820df5c1904a162034812c/dist/semantic.css">v2.2.6</a></td>
+                  <td data-label="Size (uncompressed)">730 KB</td>
+                  <td data-label="Size (minified)">550 KB</td>
+                  <td data-label="Size (gzipped)">95 KB</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Zurb Foundation</td>
+                  <td data-label="Version"><a href="https://github.com/zurb/foundation-sites/blob/ab172838d6de406204956015c9fd393c5a526e0e/dist/foundation.css">v3.0</a></td>
+                  <td data-label="Size (uncompressed)">90 KB</td>
+                  <td data-label="Size (minified)">64 KB</td>
+                  <td data-label="Size (gzipped)">12 KB</td>
+                </tr>
+              </tbody>
+          </table><br>
+          <p><mark class="secondary" style="font-size: 1.4em; padding: 3px 10px;">!</mark>&nbsp;The above comparison takes into account only the CSS files of each framework. <strong>mini.css</strong>'s size is an approximation due to the nature of its flavor system. The calculated results were produced using <a href="http://refresh-sf.com/">Refresh-SF</a>.</p>
+          <br>
+          </div>
+          <div class="col-sm-12 col-md">
+            <h3>Module list</h3>
+            <ul>
+              <li><strong>Core</strong> - Resets, typography rules and fixes</li>
+              <li><strong>Grid</strong> - Powerful, responsive flexbox-based grid</li>
+              <li><strong>Navigation</strong> - Common elements for navigation</li>          
+              <li><strong>Input Control</strong> - Forms, buttons and inputs</li>
+              <li><strong>Table</strong> - Modern, responsive tables</li>
+              <li><strong>Card</strong> - Sleek, modern content containers</li>
+              <li><strong>Tab</strong> - Responsive tabs and accordions</li>
+              <li><strong>Contextual</strong> - Contextual highlights and alerts</li>
+              <li><strong>Progress</strong> - Modern progress bars and loaders</li>
+              <li><strong>Utility</strong> - Utility and helper classes</li>
+            </ul>
+        </div>
+        <div class="col-sm-12 col-md">
+          <h3>Why does <strong>mini.css</strong> have so few modules?</h3>
+          <p>Modules are what makes toolkits so powerful, by giving developers the essential components they need to structure and style their websites. <strong>mini.css</strong> simplifies the crafting and learning process for new developers by providing a handful of very powerful modules that can do many different things. This way, new developers will only have to learn a few different HTML structures and patterns, while having the ability to build a lot of interesting things with them. For example, cards can be used for almost any type of layout and can be customized to do exactly what the developer wants. Tabs, on the other hand, are very responsive on mobile, collapsing to a stack below a certain width, but they can also be forced into a stack, allowing accordions and collapses to be built using the same building block as tabs.</p>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <table>        
+          <caption>Browser support</caption>
+          <thead>
+            <tr>
+              <th>Browser</th>
+              <th>Not supported</th>
+              <th>Partially supported</th>
+              <th>Fully supported</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Browser"><i class="fa fa-internet-explorer" aria-hidden="true" style="color: #1565c0;"></i>&nbsp;Internet Explorer</td>
+              <td data-label="Not supported">8-</td>
+              <td data-label="Partially supported">9-10</td>
+              <td data-label="Fully supported">11+</td>
+            </tr>
+            <tr>
+              <td data-label="Browser"><i class="fa fa-edge" aria-hidden="true" style="color: #0d47a1;"></i>&nbsp;Edge</td>
+              <td data-label="Not supported">n/a</td>
+              <td data-label="Partially supported">n/a</td>
+              <td data-label="Fully supported">12+</td>
+            </tr>
+            <tr>
+              <td data-label="Browser"><i class="fa fa-firefox" aria-hidden="true" style="color: #bf360c;"></i>&nbsp;Firefox</td>
+              <td data-label="Not supported">21-</td>
+              <td data-label="Partially supported">22-27</td>
+              <td data-label="Fully supported">28+</td>
+            </tr>
+            <tr>
+              <td data-label="Browser"><i class="fa fa-chrome" aria-hidden="true" style="color: #ff8f00;"></i>&nbsp;Chrome</td>
+              <td data-label="Not supported">20-</td>
+              <td data-label="Partially supported">n/a</td>
+              <td data-label="Fully supported">21+</td>
+            </tr>
+            <tr>
+              <td data-label="Browser"><i class="fa fa-safari" aria-hidden="true" style="color: #0277bd;"></i>&nbsp;Safari</td>
+              <td data-label="Not supported">6-</td>
+              <td data-label="Partially supported">n/a</td>
+              <td data-label="Fully supported">6.1+</td>
+            </tr>
+            <tr>
+              <td data-label="Browser"><i class="fa fa-opera" aria-hidden="true" style="color: #b71c1c;"></i>&nbsp;Opera</td>
+              <td data-label="Not supported">11.5-</td>
+              <td data-label="Partially supported">12.1-16</td>
+              <td data-label="Fully supported">17+</td>
+            </tr>
+            <tr>
+              <td data-label="Browser"><i class="fa fa-android" aria-hidden="true" style="color: #827717;"></i>&nbsp;Android Browser</td>
+              <td data-label="Not supported">4.3-</td>
+              <td data-label="Partially supported">n/a</td>
+              <td data-label="Fully supported">4.4+</td>
+            </tr>
+          </tbody>
+        </table><br>
+        <p><mark class="secondary" style="font-size: 1.4em; padding: 3px 10px;">!</mark>&nbsp;Due to the way <strong>mini.css</strong> is crafted, some legacy browsers are not supported anymore and some others are partially supported. This could be a dealbreaker for some developers, however most legacy browsers will display a less feature-rich and modern website. Apart from the above table, note that some mobile browsers like Opera Mini, IE Mobile and UC Browser for Android are officially supported, but some features may not display or behave properly due to the browsers themselves.</p>
+        <hr>
+      </div>
+      <div class="row" style="padding-bottom: 40px;">
+        <div class="col-sm">
+          <h2>Getting started</h2>
+          <p>If you are still here after reading this far, we will assume you are interested or at least curious. Based on that assumption, here are a few links to help get you started:</p>
+            <ul>
+            <li>For a quick guide on getting started, you might wanna take a look at the available <a href="modules.html">modules</a> list and the tutorials provided for each one!</li>
+            <li><strong>mini.css</strong> comes with a few nice pre-built customizable <a href="flavors.html">flavors</a>. See which one of them better suits your needs!</li>
+            <li>If you are more experienced or demanding, you can always take a look at the <a href="customization.html">customization</a> section to cook up a flavor of your own custom-tailored to your needs!</li>
+            </ul>
+        </div>
+      </div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>
 </html>

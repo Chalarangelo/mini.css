@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework">
+    <meta name="keywords" content="mini, mini.css, CSS, responsive, framework, mobile first, style agnostic, Sass">
+    <meta name="author" content="Angelos Chalaris (chalarangelo)">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- For local testing only -->
+    <!-- <link rel="stylesheet" href="../flavors/mini-default.min.css"> -->
+    <!-- Correct link -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v1.1.0/flavors/mini-default.min.css">
+    <style>
+      .footer{background-color:#272727; color:#ddd;}
+      .footer a, .footer a:hover, .footer a:visited, .footer a:visited:hover, .footer a:active, .footer a:visited:active{color: #fff;}
+      .footer a:hover{text-decoration: underline;}
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" class="hidden" id="nav-toggle" autocomplete="off" class="hidden">
+    <div class="nav fixed">
+      <a href="https://chalarangelo.github.io/mini.css"><span class="logo">&nbsp;<img src="favicon.png" style="height: 34px; width: auto; display: inline-block; vertical-align: middle;">&nbsp;mini.css&nbsp;</span></a>
+      <ul>
+        <li><a href="https://chalarangelo.github.io/mini.css/#why-mini-css" class="link">Introduction</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/#modules" class="link">Module overview</a></li>
+        <li><label class="link dropdown" for="menu-drop1">Module demos</label></li>
+      </ul>
+      <input type="checkbox" id="menu-drop1" class="dropdown" autocomplete="off"><div>
+        <ul>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#base" class="link">Base</a></li>    
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#grid" class="link">Responsive Grid</a></li> 
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#nav" class="link">Navigation</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#dropdown" class="link">Dropdowns</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#tab" class="link">Tabs</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#table" class="link">Tables</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#form" class="link">Forms</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#button" class="link">Buttons</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#label" class="link">Labels</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#modal" class="link">Modals</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#collapse" class="link">Collapse</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#progress" class="link">Progress Bars</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#carousel" class="link">Carousel</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#utility" class="link">Utilities &amp; Helper Classes</a></li>
+        <li><a href="https://chalarangelo.github.io/mini.css/modules#utility-extra" class="link">Utilities &amp; Experimental Classes</a></li>
+        </ul>
+      </div>
+    </div>
+    <label for="nav-toggle"></label>
+    <br>      
+    <div class="grid-container">
+      <div class="row">
+        <div class="col xs-no md-1"></div>
+        <div class="col xs-12 md-10">
+          <h1>mini.css<small> a minimal Sass-y responsive mobile-first style-agnostic CSS framework</small></h1>
+          <p>If you want to create your own flavor, get involved or report an issue, head over to <strong>mini.css</strong>'s <a href="https://github.com/Chalarangelo/mini.css">Github repository</a> or the <a href="https://github.com/Chalarangelo/mini.css/wiki">wiki</a>. If you want to give <strong>mini.css</strong> a try using the default flavor, paste the following code inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
+          <pre style="overflow: auto;">&lt;link rel=<span class="txt-green">&quot;stylesheet&quot;</span> href=<span class="txt-blue">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v1.1.0/flavors/mini-default.min.css&quot;</span>&gt;</pre>
+          
+          <p>If you'd rather use a package manager, <strong>mini.css</strong> is available in both Bower and NPM:</p>
+          <pre style="margin-left: 1px; border-left: 5px solid #3f84b3; border-top-left-radius: 0; border-bottom-left-radius: 0;"> <span class="txt-blue">bower install</span> mini.css</pre>
+          <pre style="margin-left: 1px; border-left: 5px solid #3f84b3; border-top-left-radius: 0; border-bottom-left-radius: 0;"> <span class="txt-blue">npm install</span> mini.css</pre><br>
+
+          <h2 id="why-mini-css">Why mini.css?</h2><hr>
+          <ul>
+            <li><strong>Size matters!</strong> - The key focus of <strong>mini.css</strong> is to provide developers with a very light framework to build their pages with. To accomplish this, we stripped down most of the commonly-used components to their essentials, utilising the magic of CSS. By building lighter components, using only CSS, we made <strong>mini.css</strong> really tiny, just under 5KB for the default flavor.</li>
+            
+            <li><strong>Easily customize your pages!</strong> - <strong>mini.css</strong> does not rely on a huge monolithic CSS file to do everything. In fact, we split the framework into smaller modules using Sass(SCSS), so you can easily distinguish what pieces you want in your final stylesheet. But that's not all! Every single detail of the provided modules can be changed, from colors and border styles to class names and structure. It's all really simple and you can do it without a lot of CSS or Sass knowledge. These customized stylesheets are called <strong>flavors</strong> and are one of the key differences between <strong>mini.css</strong> and other frameworks.</li>
+            
+            <li><strong>We are mobile-friendly!</strong><sup>*</sup> - That's right! We built <strong>mini.css</strong> from the ground up to support mobile devices as best as possible and be responsive. All of this functionality can be fully customized to suit your end-users.</li>
+            
+            <li><strong>No Javascript!</strong> - As much as we all love Javascript, we tried to keep all of the modules in <strong>mini.css</strong> pure CSS. This means no dependencies on Javascript libraries or excessive code for events you might never use.</li>
+
+          </ul>
+          <small>(*): We do not want to claim that any website will ever instantly work 100% the way you want on mobile, but mini.css eliminates a lot of the tedious work of making your websites mobile-friendly, so you can focus on the interesting parts that actually need your attention.</small>
+
+          <h2 id="modules">What does it contain?</h2>
+          <p><strong>mini.css</strong> is split up into modules, each with a specific focus or set of components. These modules are categorized under core modules and extra modules. We suggest that you use most of the core modules in your projects, as most projects can make good use of them. As for the extra modules, we suggest you carefully pick the ones you need for your project. Below is a quick overview of all the modules:</p>
+
+          <ul>
+            
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#base">Core : Base</a></h3><p>A modified version of <a href="https://necolas.github.io/normalize.css/">normalize.css</a> combined with a long list of variables produces a customized base for your projects along with typography rules and colors.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#grid">Core : Responsive Grid</a></h3><p>A customizable reponsive grid that lets you build pages that look great on all devices wih minimal tweaking..</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#nav">Core : Navigation</a></h3><p>A customizable responsive navigation bar for your pages.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#dropdown">Extra : Navigation - Dropdown</a></h3><p>The navigation system can easily be extended using the dropdown component.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#tab">Extra : Navigation - Tabs</a></h3><p>If you would rather use tabs instead of the usual navigation bar, you can use this module to enable tabbed navigation.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#table">Core : Tables</a></h3><p>Give a fresh style to your tables without overloading your page.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#form">Core : Forms</a></h3><p>Simple, elegant and light forms that will work well and give feedback to the user.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#button">Core : Buttons</a></h3><p>Tiny button styles that allow you to beautify your buttons, labels and links.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#label">Extra : Labels &amp; Badges</a></h3><p>Small badges and labels to provide your user's with all the info they need.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#modal">Extra : Modals</a></h3><p>Modal dialog prompts to notify your users the easy way.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#collapse">Extra : Collapse</a></h3><p>Hide and show text using customizable collapse buttons.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#progress">Extra : Progress Bars</a></h3><p>A simple module that allows you to create progess bars for your pages.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#carousel">Extra : Carousel</a></h3><p>Really light and customizable imaage slideshow for all your showcase needs.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#utility">Core : Utilities &amp; Helper Classes</a></h3><p>Classes for generic borders, image thumbnails, contextual text coloring, utility buttons and more.</p></li>
+
+            <li><h3><a href="https://chalarangelo.github.io/mini.css/modules#utility-extra">Extra : Utilities &amp; Experimental Classes</a></h3><p>Breadcrumbs, containers, panels, alerts, popovers, button groups and more.</p></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="row footer">
+      <div class="col xs-no md-1"></div>
+        <div class="col xs-12 md-10 footer">   
+          <p style="padding-top: 10px;"><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</p>
+        </div>
+      </div>     
+    </div>
+  </body>
+</html>

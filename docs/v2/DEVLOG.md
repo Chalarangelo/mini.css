@@ -654,3 +654,7 @@
 - Started writing `customization`.
 - Documented `core` in `customization`.
 - `customization` documentation complete (very simplistic, but I think the flavor file is better as a guideline).
+- Updated `bower.json` and `package.json`.
+- Added `.npmignore` and tested to see if it works.
+- Moved docs around, getting ready for release.
+- *TODO* Delete this file eventually.

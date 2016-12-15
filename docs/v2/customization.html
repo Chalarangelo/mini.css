@@ -131,7 +131,7 @@
               <h3>Grid</h3>
             </div>
             <div class="section">
-              <p></p>
+              <p>The <strong>grid</strong> module contains two importan variables, the boolean <code>$use-four-step-grid</code> which determines if the grid has 3 or 4 breakpoints and the <code>$grid-column-count</code> which determines the amount of vertical columns used for the grid's layout. Apart from those, there are a few variables that set the names for the grid system's classes, prefixes and suffixes and the grid's screen size breakpoint definitions.</p>
             </div>
           </div>
           <div class="card fluid">
@@ -139,7 +139,7 @@
               <h3>Navigation</h3>
             </div>
             <div class="section">
-              <p></p>
+              <p>The <strong>navigation</strong> module contains a plethora of variables used in the styling of the navigational elements. Most of them concern colors, spacing and sizing and similar things. Bear in mind that the presentation of buttons inside the <code>&lt;header&gt;</code> element will be affected by the styling of all button elements, as defined in the <code>input_control</code> module. The variable stands out in this module is <code>$nav-sublink-depth</code> which determines how deep a navigational hierarchy tree can be.</p>
             </div>
           </div>
           <div class="card fluid">
@@ -147,7 +147,12 @@
               <h3>Input Control</h3>
             </div>
             <div class="section">
-              <p></p>
+              <p>The <strong>input_control</strong> module is one of the larger modules, containg a lot of variables to style a multitude of elements. Forms and textual <code>&lt;input&gt;</code> elements utilize variables that concern color, spacing, sizing etc. Button variables are more interesting, especially the ones concerning the opacity of button elements (<code>$button-back-opacity</code> and <code>$button-hover-back-opacity</code>). The <code>$hide-file-inputs</code> boolean variable determines how <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code> elements will be handled. Checkboxes and radio buttons also use a few variables concerning basic styling, but special attention needs to be paid to the <code>$checkbox-size</code> variable, as it determines a few attributes of both elements.</p>
+              <p>There are two mixins in the <strong>input_control</strong> module, specifically:</p>
+              <ul>
+                <li><code>make-button-alt-color</code> - button color variants</li>
+                <li><code>make-button-alt-style</code> - button size and spacing variants</li>
+              </ul>
             </div>
           </div>
           <div class="card fluid">
@@ -155,7 +160,7 @@
               <h3>Table</h3>
             </div>
             <div class="section">
-              <p></p>
+              <p>The <strong>table</strong> module's variables deal mostly with basic table styling. The <code>$table-mobile-breakpoint</code> is very important as it determines the breakpoint for responsive tables' mobile view, along with <code>$table-mobile-card-label</code> which determines the attribute that will be used to display the table headings on mobile devices.</p>
             </div>
           </div>
           <div class="card fluid">
@@ -163,7 +168,13 @@
               <h3>Card</h3>
             </div>
             <div class="section">
-              <p></p>
+              <p>The <strong>card</strong> modules' variables mostly deal with things like class names, spacing, sizing and colors. Cards offer a handful of mixins, specifically:</p>
+              <ul>
+                <li><code>make-card-alt-size</code> - card size variants</li>
+                <li><code>make-card-alt-color</code> - card color variants</li>
+                <li><code>make-card-section-alt-color</code> - card section color variants</li>
+                <li><code>make-card-section-alt-style</code> - card section size and spacing variants</li>
+              </ul>
             </div>
           </div>
           <div class="card fluid">
@@ -171,7 +182,7 @@
               <h3>Tab</h3>
             </div>
             <div class="section">
-              <p></p>
+              <p>The <strong>tab</strong> module utilizes a few naming and color variables, along with some sizing and spacing variables to deal with presentation and functionality. Many of the sizing variables are very dependent on each other's values. The <code>$tab-stacked-breakpoint</code> variable is especially important, as it determines the mobile view breakpoint for the tabs component.</p>
             </div>
           </div>
           <div class="card fluid">
@@ -179,7 +190,13 @@
               <h3>Contextual</h3>
             </div>
             <div class="section">
-              <p></p>
+              <p>The <strong>contextual</strong> module features, apart from basic naming and styling variables, a few things of note. The boolean variable <code>$alert-include-animated</code> determines if animted alerts will be inluded or not. There are also a handful of mixins, which are the most important part of the contextual module as they are what makes it useful:</p>
+              <ul>
+                <li><code>make-mark-alt-color</code> - mark color variants</li>
+                <li><code>make-mark-alt-style</code> - mark size and spacing variants</li>
+                <li><code>make-alert-alt-color</code> - alert color variants</li>
+                <li><code>make-alert-alt-style</code> - alert size and spacing variants</li>
+              </ul>
             </div>
           </div>
           <div class="card fluid">
@@ -187,7 +204,14 @@
               <h3>Progress</h3>
             </div>
             <div class="section">
-              <p></p>
+              <p>The <strong>progress</strong> module contains lots of variables that affect basic styling, but it also features a few interesting mixins:</p>
+              <ul>
+                <li><code>make-progress-inline</code> - inline progress variant</li>
+                <li><code>make-progress-alt-color</code> - progress color variants</li>
+                <li><code>make-progress-alt-style</code> - progress size and spacing variants</li>
+                <li><code>make-spinner-donut-alt-color</code> - spinner donut color variants</li>
+                <li><code>make-spinner-donutt-alt-style</code> - spinner donut size and spacing variants</li>
+              </ul>
             </div>
           </div>
           <div class="card fluid">
@@ -195,9 +219,22 @@
               <h3>Utility</h3>
             </div>
             <div class="section">
-              <p></p>
+              <p>The <strong>utility</strong> module contains a few variables dealing with naming and basic styling, but its most important feature is its mixins:</p>
+              <ul>
+                <li><code>make-border-generic</code> - generic border</li>
+                <li><code>make-border-radial-style</code> - border radius variants</li>
+                <li><code>make-box-shadow-generic</code> - generic shadow variants</li>
+                <li><code>make-margin-responsive</code> - responsive margins</li>
+                <li><code>make-padding-responsive</code> - responsive paddings</li>
+                <li><code>make-floats</code> - quick floats</li>
+              </ul>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <p>If you would rather use one of the pre-defined flavors, check out our <a href="flavors.html">flavors</a> page for a list of all flavors currently available.</p>
         </div>
       </div>
       <div class="row box-centered">

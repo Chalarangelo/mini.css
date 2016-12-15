@@ -653,3 +653,4 @@
 - Updated table of sized in `index`.
 - Started writing `customization`.
 - Documented `core` in `customization`.
+- `customization` documentation complete (very simplistic, but I think the flavor file is better as a guideline).

@@ -223,7 +223,7 @@ $input-readonly-border-color:	#bdbdbd;										// Border color for readonly inp
 $input-placeholder-fore-color:	#616161;										// Text color for input placeholder
 $button-back-color:				#bdbdbd;										// Back color for button elements
 $button-back-opacity:			0.65;											// Background opacity for button elements
-$button-hover-back-opacity:		0.8;												// Background opacity for button elements
+$button-hover-back-opacity:		0.8;											// Background opacity for button elements
 																				// on hover or focus
 $button-fore-color:				$fore-color;									// Text color for button elements
 $button-border-style:			0;												// Border style for button elements
@@ -358,7 +358,7 @@ $card-section-padding1-name:	'double-padded';								// Class name for card sect
 $card-section-padding1-padding:	10px 12px 10px;									// Padding for card section padding style 1
 //	Notes:
 // [1] - The cards module depends heavily on the grid system module.
-//	Variables for tabs [1]
+//	Variables for tabs
 $tab-container-name:			'tabs';											// Class name for the tabs' container
 $tab-container-box-shadow:														// Box shadow for the tabs' container
 	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);		
@@ -525,8 +525,6 @@ $responsive-padding-large-value:6px 8px;										// Padding value for responsiv
 $float-prefix:					'float';										// Prefix for float classes
 $clearfix-name:					'clearfix';										// Class name for clearfix
 $center-block-name:				'center-block';									// Class name for center block
-//	Notes:
-// [1] - The tabs module is somewhat dependent on the grid system module.
 //	Enable mini.css
 @import '../mini/core';
 //	Use mixins for forms and inputs

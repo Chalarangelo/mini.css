@@ -68,7 +68,7 @@
   </head>
   <body>  
     <header>
-      <img class="logo" src="mini-logo.svg" id="header-logo"><div style="display: inline; overflow: auto;">
+      <a href="index.html"><img class="logo" src="mini-logo.svg" id="header-logo"></a><div style="display: inline; overflow: auto;">
       <a href="index.html" class="button">Introduction</a>
       <a href="modules.html" class="button">Modules</a>
       <a href="flavors.html" class="button">Flavors</a>
@@ -383,37 +383,64 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Header <a href="https://codepen.io/chalarangelo/pen/pNqNJw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <h3>Header <a href="https://codepen.io/chalarangelo/pen/NbewvB" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;header&gt;
+  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt;
+  &lt;button&gt;Home&lt;/button&gt;
+  &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;News&lt;/a&gt;
+  &lt;span&gt;|&lt;/span&gt;
+  &lt;button&gt;About&lt;/button&gt;
+  &lt;button&gt;Contact&lt;/button&gt;
+&lt;/header&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Use the <code>.logo</code> class for the first child (either textual element or image)</li>
+                  <li>The rest of the elements inside the <code>&lt;header&gt;</code> must be <code>&lt;button&gt;</code>, <code>&lt;label class=&quot;button&quot;&gt;</code> or <code>&lt;a class=&quot;button&quot;&gt;</code> elements</li>
+                  <li>Use <code>&lt;span&gt;</code> elements as separators</li>
+                  <li>You can mix buttons, links and labels inside the header, as long as all of them are styled as buttons</li>
+                  <li>The logo element should not be a <code>&lt;button&gt;</code> element or of the <code>.button</code> class</li>
+                  <li>Header is not displayed as fixed by default</li>
                 </ul>
               </div>
             </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Navigation bar <a href="https://codepen.io/chalarangelo/pen/gLZLab" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <h3>Navigation bar <a href="https://codepen.io/chalarangelo/pen/ENGbwa" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;nav&gt;
+  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+  &lt;span&gt;News&lt;/span&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;New Courses&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;Certifications&lt;/a&gt;
+  &lt;span class=&quot;sublink-1&quot;&gt;Events&lt;/span&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-2&quot;&gt;Course Showcase - 12th, Dec&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-2&quot;&gt;Staff AMA - 16th, Dec&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;Policy Update&lt;/a&gt;                
+  &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Use <code>&lt;nav&gt;</code> element, populate it with links</li>
+                  <li>Use <code>.sublink-1</code> and <code>.sublink-2</code> classes to create subcategories in your navigation menu</li>
+                  <li>Combine the navigation bar with grid reordering to display aside from text on larger displays or at the bottom on smaller displays</li>
                 </ul>
               </div>
             </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Footer <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <h3>Footer <a href="https://codepen.io/chalarangelo/pen/dOwZVO" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2001-2016 Web Corporation | &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Terms of use&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Simple syntax and structure, add content as normal</li>
                 </ul>
               </div>
             </div>

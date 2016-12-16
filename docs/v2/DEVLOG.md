@@ -664,3 +664,6 @@
 - Documented `core`'s quick reference with codepens etc.
 - Updated link references to `v2.0.0` instead of `v2.0`.
 - Added documentation for `grid` module in the quick reference guide.
+- Made logo redirect to `index` on all pages.
+- Structured base of the whole `quick reference` page.
+- Written documentation for `navigation` in quick reference.

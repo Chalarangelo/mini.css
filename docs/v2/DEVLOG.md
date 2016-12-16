@@ -667,3 +667,4 @@
 - Made logo redirect to `index` on all pages.
 - Structured base of the whole `quick reference` page.
 - Written documentation for `navigation` in quick reference.
+- Linked to `quick_reference.html` from all page's header.

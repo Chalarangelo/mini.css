@@ -663,3 +663,4 @@
 - Created `quick_reference.html` page for quick reference.
 - Documented `core`'s quick reference with codepens etc.
 - Updated link references to `v2.0.0` instead of `v2.0`.
+- Added documentation for `grid` module in the quick reference guide.

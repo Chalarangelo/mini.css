@@ -58,6 +58,9 @@
       h3 > a{
         font-size: 1rem;
       }
+      pre {
+        max-height: 400px;
+      }
     </style>
   </head>
   <body>  
@@ -94,7 +97,7 @@
         <div class="col-sm">
           <div class="card fluid">
             <div class="section">
-              <h2>Setup and usage</h2>
+              <h2>Setup &amp; usage</h2>
             </div>
             <div class="section">
               <p>You can import the default flavor of <strong>mini.css</strong> in your webpage by simply adding the following reference inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
@@ -148,7 +151,7 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Common textual elements <a href="http://codepen.io/chalarangelo/pen/RoEWwK" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <h3>Common textual elements <a href="https://codepen.io/chalarangelo/pen/RoEWwK" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
                 <pre>&lt;p&gt;This is a paragraph with some &lt;strong&gt;bold text&lt;/strong&gt; and some &lt;em&gt;italics text&lt;/em&gt;.&lt;/p&gt;
 &lt;a href=&quot;#&quot;&gt;This is a link.&lt;/a&gt;
 &lt;small&gt;This is some small text.&lt;/small&gt;
@@ -163,7 +166,7 @@
 &lt;/blockquote&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
-                <h3>Lists &amp; images<a href="http://codepen.io/chalarangelo/pen/woRKay" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <h3>Lists &amp; images<a href="https://codepen.io/chalarangelo/pen/woRKay" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
                 <pre>&lt;ul&gt;
   &lt;li&gt;Apple&lt;/li&gt;
   &lt;li&gt;Orange&lt;/li&gt;
@@ -190,45 +193,179 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Basic layout <a href="https://codepen.io/chalarangelo/pen/ZBVGMq" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <h3>Basic layout <a href="https://codepen.io/chalarangelo/pen/pNqNJw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-1&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-11&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-2&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-3&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-9&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-4&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-8&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-5&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-7&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-6&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-6&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-12&quot;&gt; 
+    &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Based on the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Layout Module</a></li>
+                  <li>Grid structured as follows:
+                    <ol>
+                      <li><code>.container</code> serves as the grid system's wrapper</li>
+                      <li>Multiple <code>.row</code> elements serve as the grid system's rows</li>
+                      <li>Multiple <code>.col-<span class="fore-primary">SCR_SZ</span></code> and/or <code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code> elements specify serve as the grid system's columns (fluid and preset respectively)</li>
+                    </ol>
+                  </li>
+                  <li><code><span class="fore-primary">SCR_SZ</span></code> values: 
+                    <ul>
+                      <li><code><span class="fore-tertiary">sm</span></code> for screens below <code>768px</code> wide</li>
+                      <li><code><span class="fore-tertiary">md</span></code> for screens between <code>768px</code>(inclusive) and <code>1280px</code>(exclusive)</li>
+                      <li><code><span class="fore-tertiary">lg</span></code> for screens wider than <code>1280px</code></li>
+                    </ul>
+                  </li>
+                  <li><code><span class="fore-secondary">COL_WD</span></code> can be any integer value between <code>1</code> and <code>12</code> (both inclusive)</li>
+                  <li>Fluid columns can create irregularly-sized columns in a layout</li>
+                  <li>You can nest rows inside columns, but not columns inside columns or rows inside rows</li>
+                  <li>An element can be a row and column at the same time</li>
+                  <li>You can mix preset and fluid columns</li>
+                  <li>Always wrap content in columns, never leave content unwrapped inside a row</li>
+                  <li>Do not mix rows or columns with unwrapped content on the same level</li>
                 </ul>
               </div>
             </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Screen-specific layouts <a href="http://codepen.io/chalarangelo/pen/RoEWwK" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <h3>Screen-specific layouts <a href="https://codepen.io/chalarangelo/pen/gLZLab" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-12 col-md-3 col-lg-2&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-12 col-md-5 col-lg-7&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-12 col-md-4 col-lg-3&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Apply multiple column classes to the same element, one for each screen size, to define different layouts</li>
+                  <li>Mobile-first approach, styles specified for smaller screen sizes apply to larger screen sizes if no override is specified</li>
+                  <li>Try to make page content vertical for smaller devices, using <code>.col-sm-12</code> and transition to two or three columns on larger screen sizes</li>
+                  <li>Combine with offsets and reordering as shown below</li>
+                  <li>You can omit the style of a screen size if it is the same one as the one applied in the immediately smaller screen size</li>
+                  <li>Always start with a <code>.col-sm</code> or <code>.col-sm-<span class="fore-secondary">COL_WD</span></code> style, otherwise smaller devices will not display your content properly</li>
                 </ul>
               </div>
             </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Column offsets <a href="http://codepen.io/chalarangelo/pen/RoEWwK" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <h3>Column offsets <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-10 col-sm-offset-1&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm col-sm-offset-2&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-6 col-sm-offset-3&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-8 col-sm-offset-4&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-5 col-sm-offset-1&quot;&gt; 
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-5 col-sm-offset-1&quot;&gt; 
+    &lt;/div&gt;
+  &lt;/div&gt; 
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Create offsets using the <code>.col-<span class="fore-primary">SCR_SZ</span>-offset-<span class="fore-secondary">COL_WD</span></code> classes</li>
+                  <li><code><span class="fore-secondary">COL_WD</span></code> can be any integer from <code>0</code> to <code>11</code> (both inclusive)</li>
+                  <li>You can mix offset columns and non-offset columns</li>
+                  <li>Specify offsets in combination with existing column styling, not instead</li>
+                  <li>Mobile-first approach, styles specified for smaller screen sizes apply to larger screen sizes if no override is specified</li>
+                  <li>You can omit offsets whenever not needed, but you will have to override existing offsets for larger screen sizes, using <code>.col-<span class="fore-primary">SCR_SZ</span>-offset-0</code></li>
                 </ul>
               </div>
             </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Column reordering <a href="http://codepen.io/chalarangelo/pen/RoEWwK" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <h3>Column reordering <a href="https://codepen.io/chalarangelo/pen/vyvyNo" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm col-md-last col-lg-normal&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-first col-md-normal&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm col-md-first col-lg-normal&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Create reorders using <code>.col-<span class="fore-primary">SCR_SZ</span>-first</code>, <code>.col-<span class="fore-primary">SCR_SZ</span>-last</code> and <code>.col-<span class="fore-primary">SCR_SZ</span>-normal</code> classes for first, last and normal ordering respectively</li>
+                  <li>Default ordering is based on order of appearance</li>
+                  <li>Specify reorders in combination with existing column styling, not instead</li>
+                  <li>Mobile-first approach, styles specified for smaller screen sizes apply to larger screen sizes if no override is specified</li>
+                  <li>You can use multiple <code>.col-<span class="fore-primary">SCR_SZ</span>-first</code> and <code>.col-<span class="fore-primary">SCR_SZ</span>-last</code> elements to group your elements according to the desired layout</li>
+                  <li>You can omit reorders whenever not needed, but you will have to override existing reorders for larger screen sizes, using <code>.col-<span class="fore-primary">SCR_SZ</span>-normal</code></li>
                 </ul>
               </div>
             </div>

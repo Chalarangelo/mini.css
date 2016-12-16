@@ -657,4 +657,9 @@
 - Updated `bower.json` and `package.json`.
 - Added `.npmignore` and tested to see if it works.
 - Moved docs around, getting ready for release.
-- *TODO* Delete this file eventually.
+
+## 20161216
+
+- Created `quick_reference.html` page for quick reference.
+- Documented `core`'s quick reference with codepens etc.
+- Updated link references to `v2.0.0` instead of `v2.0`.

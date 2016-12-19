@@ -668,3 +668,8 @@
 - Structured base of the whole `quick reference` page.
 - Written documentation for `navigation` in quick reference.
 - Linked to `quick_reference.html` from all page's header.
+
+
+## 20161219
+
+- Added code to `quick reference` from all modules. Codepens not done yet.

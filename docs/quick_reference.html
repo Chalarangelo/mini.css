@@ -457,7 +457,19 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Forms &amp; input <a href="https://codepen.io/chalarangelo/pen/pNqNJw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Simple form&lt;/legend&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+      &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+      &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+      &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt; 
+      &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -469,7 +481,15 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Checkboxes &amp; radio buttons <a href="https://codepen.io/chalarangelo/pen/gLZLab" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt; 
+  &lt;label for=&quot;check1&quot;&gt;Checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt; 
+  &lt;label for=&quot;rad1&quot;&gt;Radio&lt;/label&gt;
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -481,7 +501,22 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Buttons &amp; button groups <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;button&gt;Default button&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;primary&quot; value=&quot;Primary button&quot;&gt;
+&lt;input type=&quot;reset&quot; class=&quot;secondary&quot; value=&quot;Secondary button&quot;&gt;
+&lt;input type=&quot;submit&quot; class=&quot;tertiary&quot; value=&quot;Tertiary button&quot;&gt;
+&lt;button class=&quot;inverse&quot;&gt;Inverse button&lt;/button&gt;
+&lt;button class=&quot;small&quot;&gt;Small button&lt;/button&gt;
+&lt;button class=&quot;large&quot;&gt;Large button&lt;/button&gt;           
+&lt;button disabled&gt;Disabled button&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Link button&lt;/a&gt;
+&lt;label class=&quot;button&quot;&gt;Label button&lt;/label&gt;
+
+&lt;div class=&quot;button-group&quot;&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -493,7 +528,8 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>File upload buttons <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;input type=&quot;file&quot; id=&quot;file-input&quot;&gt;
+&lt;label for=&quot;file-input&quot; class=&quot;button&quot;&gt;Upload file...&lt;/label&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -514,7 +550,33 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Basic syntax &amp; responsiveness <a href="https://codepen.io/chalarangelo/pen/pNqNJw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;table&gt;
+  &lt;caption&gt;People&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Surname&lt;/th&gt;
+      &lt;th&gt;Alias&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Chad&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Wilberts&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;MrOne&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Adam&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Smith&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;TheSmith&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Sophia&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Canderson&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;Candee&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -526,7 +588,33 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Horizontal tables <a href="https://codepen.io/chalarangelo/pen/gLZLab" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;table class=&quot;horizontal&quot;&gt;
+  &lt;caption&gt;People&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Surname&lt;/th&gt;
+      &lt;th&gt;Alias&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Chad&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Wilberts&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;MrOne&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Adam&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Smith&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;TheSmith&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Sophia&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Canderson&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;Candee&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -538,7 +626,48 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Table variants &amp; matrices <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;table class=&quot;preset&quot;&gt;
+  &lt;caption&gt;Star Wars Character Alignment Table&lt;/caption&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Lawful&lt;/td&gt;
+      &lt;th&gt;Neutral&lt;/td&gt;
+      &lt;th&gt;Chaotic&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Good&lt;/th&gt;
+      &lt;td&gt;Yoda&lt;/td&gt;
+      &lt;td&gt;Luke Skywalker&lt;/td&gt;
+      &lt;td&gt;Chewbacca&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Neutral&lt;/th&gt;
+      &lt;td&gt;C-3PO&lt;/td&gt;
+      &lt;td&gt;Boba Fett&lt;/td&gt;
+      &lt;td&gt;Han Solo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Bad&lt;/th&gt;
+      &lt;td&gt;Darth Vader&lt;/td&gt;
+      &lt;td&gt;Emperor Palpatine&lt;/td&gt;
+      &lt;td&gt;Jabba the Hutt&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class=&quot;striped&quot;&gt;
+  &lt;caption&gt;People&lt;/caption&gt;
+  &lt;thead&gt;
+    <span class="fore-primary">&lt;!-- ... --&gt;</span>
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    <span class="fore-primary">&lt;!-- ... --&gt;</span>
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    <span class="fore-primary">&lt;!-- ... --&gt;</span>
+  &lt;/tfoot&gt;
+&lt;/table&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -559,7 +688,20 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Basic syntax <a href="https://codepen.io/chalarangelo/pen/pNqNJw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+      &lt;h3&gt;Card Title&lt;/h3&gt;
+      &lt;p&gt;Card content...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+      &lt;h3&gt;Card Title&lt;/h3&gt;
+      &lt;p&gt;Card content...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -571,7 +713,16 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Sections &amp; media <a href="https://codepen.io/chalarangelo/pen/gLZLab" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;card&quot;&gt;
+  &lt;img src=&quot;...&quot; class=&quot;section media&quot;&gt;
+  &lt;div class=&quot;section double-padded&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;section dark&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;section darker&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;card inverse&quot;&gt;
+  &lt;div class=&quot;section&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -583,7 +734,25 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Card sizing &amp; fluidity <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;card small&quot;&gt;
+  &lt;div class=&quot;section&quot;&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;card large&quot;&gt;
+  &lt;div class=&quot;section&quot;&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;col-sm-12&quot;&gt;
+  &lt;div class=&quot;card fluid&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;
+      &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -604,7 +773,26 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Basic syntax <a href="https://codepen.io/chalarangelo/pen/pNqNJw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;tabs&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tab-group&quot; id=&quot;tab1&quot; checked aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;tab1&quot; aria-hidden=&quot;true&quot;&gt;Tab 1&lt;/label&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Tab 1&lt;/h3&gt;
+    &lt;p&gt;This is the first tab's content.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tab-group&quot; id=&quot;tab2&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;tab2&quot; aria-hidden=&quot;true&quot;&gt;Tab 2&lt;/label&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Tab 2&lt;/h3&gt;
+    &lt;p&gt;This is the second tab's content.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;tab-group&quot; id=&quot;tab3&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;tab3&quot; aria-hidden=&quot;true&quot;&gt;Tab 3&lt;/label&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Tab 3&lt;/h3&gt;
+    &lt;p&gt;This is the third tab's content.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -616,7 +804,33 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Stacked tabs <a href="https://codepen.io/chalarangelo/pen/gLZLab" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;tabs stacked&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;accordion&quot; id=&quot;a1&quot; checked aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;a1&quot; aria-hidden=&quot;true&quot;&gt;Accordion section 1&lt;/label&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Section 1&lt;/h3&gt;
+    &lt;p&gt;This is the first accordion section's content.&lt;/p&gt;
+  &lt;/div&gt;              
+  &lt;input type=&quot;radio&quot; name=&quot;accordion&quot; id=&quot;a2&quot;aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;a2&quot; aria-hidden=&quot;true&quot;&gt;Accordion section 2&lt;/label&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Section 2&lt;/h3&gt;
+    &lt;p&gt;This is the second accordion section's content.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tabs stacked&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;c1&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;c1&quot; aria-hidden=&quot;true&quot;&gt;Collapse section 1&lt;/label&gt;
+  &lt;div&gt;
+    &lt;p&gt;This is the first collapse section's content.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;c2&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;label for=&quot;c2&quot; aria-hidden=&quot;true&quot;&gt;Collapse section 2&lt;/label&gt;
+  &lt;div&gt;
+    &lt;p&gt;This is the second collapse section's content.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -637,7 +851,11 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Text highlighting <a href="https://codepen.io/chalarangelo/pen/pNqNJw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;mark&gt;primary&lt;/mark&gt;
+&lt;mark class=&quot;secondary&quot;&gt;secondary&lt;/mark&gt;
+&lt;mark class=&quot;tertiary&quot;&gt;tertiary&lt;/mark&gt;
+&lt;mark class=&quot;inline-block&quot;&gt;long highlight text...&lt;/mark&gt;
+&lt;mark class=&quot;tag&quot;&gt;tag&lt;/mark&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -649,7 +867,18 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Alerts <a href="https://codepen.io/chalarangelo/pen/gLZLab" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;alert&quot;&gt;
+  &lt;h3&gt;This is an alert&lt;/h3&gt;
+  &lt;p&gt;Make sure you read this!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert urgent&quot;&gt;
+  &lt;h3&gt;This is an urgent alert&lt;/h3&gt;
+  &lt;p&gt;Make absolutely sure you read this!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert critical&quot;&gt;
+  &lt;h3&gt;This is a critical alert&lt;/h3&gt;
+  &lt;p&gt;Make certain you read and actually understand this!&lt;/p&gt;
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -661,7 +890,15 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Animated alerts <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;alert animated&quot;&gt;
+  &lt;h3&gt;Animated alert&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert urgent animated&quot;&gt;
+  &lt;h3&gt;Animated urgent alert&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert critical animated&quot;&gt;
+  &lt;h3&gt;Animated critical alert&lt;/h3&gt;
+&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -682,7 +919,9 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Basic progress bar <a href="https://codepen.io/chalarangelo/pen/pNqNJw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;progress value=&quot;0&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
+&lt;progress value=&quot;450&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
+&lt;progress value=&quot;1000&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -694,7 +933,10 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Progress bar variants <a href="https://codepen.io/chalarangelo/pen/gLZLab" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;progress class=&quot;secondary&quot; value=&quot;600&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;tertiary&quot; value=&quot;300&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;nano&quot; value=&quot;750&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;inline&quot; value=&quot;150&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -706,7 +948,7 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Donut spinner <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;spinner-donut&quot;&gt;&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -718,7 +960,9 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Donut spinner variants <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;spinner-donut secondary&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-donut tertiary&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;spinner-donut large&quot;&gt;&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -739,7 +983,8 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Visibility helpers <a href="https://codepen.io/chalarangelo/pen/pNqNJw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;span class=&quot;hidden&quot;&gt;Hidden text&lt;/span&gt;
+&lt;span class=&quot;visually-hidden&quot;&gt;Screen-reader-only text&lt;/span&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -751,7 +996,10 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Floats, centering &amp; clearfix <a href="https://codepen.io/chalarangelo/pen/gLZLab" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;span class=&quot;float-left&quot;&gt;Float left&lt;/span&gt;
+&lt;span class=&quot;float-right&quot;&gt;Float right&lt;/span&gt;
+&lt;span class=&quot;clearfix&quot;&gt;Clearfix&lt;/span&gt;
+&lt;span class=&quot;center-block&quot;&gt;Center block&lt;/span&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -763,7 +1011,13 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Generic border &amp; shadows <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;span class=&quot;bordered&quot;&gt;Bordered&lt;/span&gt;
+&lt;span class=&quot;rounded&quot;&gt;Rounded&lt;/span&gt;
+&lt;span class=&quot;circular&quot;&gt;Circular&lt;/span&gt;
+&lt;span class=&quot;shadow-none&quot;&gt;No shadow&lt;/span&gt;
+&lt;span class=&quot;shadow-small&quot;&gt;Small shadow&lt;/span&gt;
+&lt;span class=&quot;shadow-medium&quot;&gt;Medium shadow&lt;/span&gt;
+&lt;span class=&quot;shadow-large&quot;&gt;Large shadow&lt;/span&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -775,7 +1029,8 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Responsive sizing &amp; spacing classes <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;div class=&quot;responsive-padding&quot;&gt;Responsive padding&lt;/div&gt;
+&lt;div class=&quot;responsive-margin&quot;&gt;Responsive margin&lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -787,7 +1042,11 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Breadcrumbs <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;ul class=&quot;breadcrumbs&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Root&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Folder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;File&lt;/li&gt;
+&lt;/ul&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
@@ -799,7 +1058,7 @@
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Close icon <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre></pre>
+                <pre>&lt;span class=&quot;close&quot;&gt;&lt;/span&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>

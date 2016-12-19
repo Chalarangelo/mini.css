@@ -677,3 +677,4 @@
 - Created codepens until the end of `contextual`, `progress` and `utility` will be done later today.
 - *TODO* Notes for `quick reference`.
 - *TODO* Readme, demo image etc.
+- Extensive proofreading and fixes.

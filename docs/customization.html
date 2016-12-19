@@ -98,11 +98,11 @@
       <div class="row">
         <div class="col-sm-12 col-md-6">
           <h3>Code optimization</h3>
-          <p>Building <strong>mini.css</strong> was no small task. Making it lightweight and customizable made things even harder, because these two things don't go well together most of the time. What we did was put more of the load on the preprocessor, instead of the final file. In order to accomplish this, we optimized as much of the code was possible, using conditions, flags and other tricks, so that compiling a flavor file might take one second longer, but loading won't. If you add any code to a flavor yourself, remember not only to make it customizable, but also to optimize it as best as possible.</p>
+          <p>Building <strong>mini.css</strong> was no small task. Making it lightweight and customizable made things even harder, because these two things don't go well together most of the time. What we did was put more of the load on the preprocessor, instead of the final file. In order to accomplish this, we optimized as much of the code as possible, using conditions, flags and other tricks, so that compiling a flavor file might take one second longer, but loading won't. If you add any code to a flavor yourself, remember not only to make it customizable, but also to optimize it as best as possible.</p>
         </div>
         <div class="col-sm-12 col-md-6">
           <h3>Mixins</h3>
-          <p>A lot of elements and components can be styled in many ways and a lot of the time we want a few styles to be available, without having to rewrite everything. We utilized the <code>@mixin</code> directive of Sass wherever we could to make it possible for you to easily create styles for pre-existing components and elements without having to tweak the base code for said elements or components. To use a mixin, simply <code>@include</code> it, passing values to at least its mandatory parameters. We recommend you write mixins wherever possible, if you create any new modules for <strong>mini.css</strong></p>
+          <p>A lot of elements and components can be styled in many ways and most of the time we want a few styles to be available, without having to rewrite everything. We utilized the <code>@mixin</code> directive of Sass wherever we could to make it possible for you to easily create styles for pre-existing components and elements without having to tweak the base code for said elements or components. To use a mixin, simply <code>@include</code> it, passing values to at least its mandatory parameters. We recommend you write mixins wherever possible, if you create any new modules for <strong>mini.css</strong>.</p>
         </div>
       </div>
       <div class="row">
@@ -132,7 +132,7 @@
               <h3>Grid</h3>
             </div>
             <div class="section">
-              <p>The <strong>grid</strong> module contains two importan variables, the boolean <code>$use-four-step-grid</code> which determines if the grid has 3 or 4 breakpoints and the <code>$grid-column-count</code> which determines the amount of vertical columns used for the grid's layout. Apart from those, there are a few variables that set the names for the grid system's classes, prefixes and suffixes and the grid's screen size breakpoint definitions.</p>
+              <p>The <strong>grid</strong> module contains two important variables, the boolean <code>$use-four-step-grid</code> which determines if the grid has 3 or 4 breakpoints and the <code>$grid-column-count</code> which determines the amount of vertical columns used for the grid's layout. Apart from those, there are a few variables that set the names for the grid system's classes, prefixes and suffixes and the grid's screen size breakpoint definitions.</p>
             </div>
           </div>
           <div class="card fluid">
@@ -140,7 +140,7 @@
               <h3>Navigation</h3>
             </div>
             <div class="section">
-              <p>The <strong>navigation</strong> module contains a plethora of variables used in the styling of the navigational elements. Most of them concern colors, spacing and sizing and similar things. Bear in mind that the presentation of buttons inside the <code>&lt;header&gt;</code> element will be affected by the styling of all button elements, as defined in the <code>input_control</code> module. The variable stands out in this module is <code>$nav-sublink-depth</code> which determines how deep a navigational hierarchy tree can be.</p>
+              <p>The <strong>navigation</strong> module contains a plethora of variables used in the styling of the navigational elements. Most of them concern colors, spacing and sizing or similar things. Bear in mind that the presentation of buttons inside the <code>&lt;header&gt;</code> element will be affected by the styling of all button elements, as defined in the <code>input_control</code> module. The variable that stands out in this module is <code>$nav-sublink-depth</code> which determines how deep a navigational hierarchy tree can be.</p>
             </div>
           </div>
           <div class="card fluid">
@@ -191,7 +191,7 @@
               <h3>Contextual</h3>
             </div>
             <div class="section">
-              <p>The <strong>contextual</strong> module features, apart from basic naming and styling variables, a few things of note. The boolean variable <code>$alert-include-animated</code> determines if animted alerts will be inluded or not. There are also a handful of mixins, which are the most important part of the contextual module as they are what makes it useful:</p>
+              <p>The <strong>contextual</strong> module features, apart from basic naming and styling variables, a few things of note. The boolean variable <code>$alert-include-animated</code> determines if animated alerts will be inluded or not. There is also a handful of mixins, which are the most important part of the contextual module as they are what makes it useful:</p>
               <ul>
                 <li><code>make-mark-alt-color</code> - mark color variants</li>
                 <li><code>make-mark-alt-style</code> - mark size and spacing variants</li>
@@ -211,7 +211,7 @@
                 <li><code>make-progress-alt-color</code> - progress color variants</li>
                 <li><code>make-progress-alt-style</code> - progress size and spacing variants</li>
                 <li><code>make-spinner-donut-alt-color</code> - spinner donut color variants</li>
-                <li><code>make-spinner-donutt-alt-style</code> - spinner donut size and spacing variants</li>
+                <li><code>make-spinner-donut-alt-style</code> - spinner donut size and spacing variants</li>
               </ul>
             </div>
           </div>

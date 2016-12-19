@@ -673,3 +673,7 @@
 ## 20161219
 
 - Added code to `quick reference` from all modules. Codepens not done yet.
+- Typo fixes and changes in `table`.
+- Created codepens until the end of `contextual`, `progress` and `utility` will be done later today.
+- *TODO* Notes for `quick reference`.
+- *TODO* Readme, demo image etc.

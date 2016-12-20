@@ -690,3 +690,4 @@
 - Documented `progress` in `quick reference`.
 - Documented `utility` in `quick reference`.
 - Updated **README** and OpenGraph in `index`.
+- Added OpenGraph info to all pages.

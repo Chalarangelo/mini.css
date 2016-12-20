@@ -19,7 +19,8 @@
   ],
   "ignore": [ 
     "docs/v1",
-    "docs/v2"
+    "docs/v2",
+    "docs/page_thumb.png"
   ],
   "homepage": "https://chalarangelo.github.io/mini.css/"
 }

@@ -689,3 +689,4 @@
 - Documented `contextual` in `quick reference`.
 - Documented `progress` in `quick reference`.
 - Documented `utility` in `quick reference`.
+- Updated **README** and OpenGraph in `index`.

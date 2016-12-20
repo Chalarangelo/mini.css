@@ -1,32 +1,34 @@
-# mini.css v1.1.0
-## A minimal Sass-y responsive mobile-first style-agnostic CSS framework
+# mini.css v2.0.0
+## A minimal, responsive, style-agnostic CSS toolkit
 
 ![Demo page](/docs/demo.png)
 
-You can learn all about using it, its modules and components, as well as see a live demo [here](https://chalarangelo.github.io/mini.css/).
+**mini.css** is a tiny CSS toolkit (under 7KB gzipped) that works well on most modern browsers and devices and allows you to customize it quickly and easily. It's written in Sass and tries to make use of HTML5 semantics and modern patterns to deal with common web design problems. You can learn all about using it, its modules and components, as well as see a live demo [here](https://chalarangelo.github.io/mini.css/).
 
 ## Setup
 
-**mini.css** is available in both Bower and NPM:
-
-    bower install mini.css
+**mini.css** is available in both NPM and Bower:
 
     npm install mini.css
 
+    bower install mini.css
 
-To give **mini.css** a try using the default flavor, paste the following code inside your HTML page's `<head>` tag:
 
-	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/dist/flavors/mini-default.min.css">
+To try out **mini.css** using the default flavor, copy and paste the following code inside your HTML page's `<head>` tag:
 
-Replace `dist` with a release tag from the [Releases page](https://github.com/Chalarangelo/mini.css/releases).
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/version/dist/mini-default.min.css">
 
-Alternatively, you can use one of the other [flavors](https://github.com/Chalarangelo/mini.css/tree/master/flavors). Simply replace the final part of the URL with the flavor's CSS file (minified or not) and you're good to go!
+Replace `version` with a release tag (`v2.0.0` or later) from the [Releases page](https://github.com/Chalarangelo/mini.css/releases).
+
+Alternatively, you can use one of the other [flavors](https://chalarangelo.github.io/mini.css/flavors.html). Simply replace the final part of the URL with the flavor's CSS file (minified or not) and you're good to go!
 
 ## Customization
 
-If you want to develop your own flavor or tweak an existing one, head over to the [SCSS](https://github.com/Chalarangelo/mini.css/tree/master/scss) folder, grab all the files and duplicate the [mini-default.scss](https://github.com/Chalarangelo/mini.css/blob/master/flavors/mini-default.scss) file from the flavors folder to start building your own flavor. 
+If you want to develop your own flavor or tweak an existing one, head over to the [Customization page](https://chalarangelo.github.io/mini.css/customization.html) to get started. 
 
-If you want to know all about the framework, the mixins and the variables, check the [wiki](https://github.com/Chalarangelo/mini.css/wiki). 
+## Contributing
+
+If you develop a flavor or module, please submit a pull request.
 
 ## License
 

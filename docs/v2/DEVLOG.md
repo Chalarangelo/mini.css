@@ -688,3 +688,4 @@
 - Documented `tab` in `quick reference`.
 - Documented `contextual` in `quick reference`.
 - Documented `progress` in `quick reference`.
+- Documented `utility` in `quick reference`.

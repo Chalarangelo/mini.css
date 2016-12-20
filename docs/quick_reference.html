@@ -926,7 +926,12 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Use the <code>&lt;mark&gt;</code> element for highlighting text</li>
+                  <li><code>.secondary</code> and <code>.tertiary</code> classes offer color variants</li>
+                  <li>Highlighted text is inline by default, us the <code>.inline-block</code> class for longer text highlights</li>
+                  <li>Use the <code>.tag</code> class for highlighted tags</li>
+                  <li>Combine color variants with the <code>.inline-block</code> or <code>.tag</code> class, do not combine color variants or <code>.tag</code> and <code>.inline-block</code> with each other</li>
+                  <li>Do not nest <code>&lt;mark&gt;</code> elements, unless the outer element is an <code>.inline-block</code></li>
                 </ul>
               </div>
             </div>
@@ -949,7 +954,11 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Use the <code>.alert</code> class to create alerts</li>
+                  <li>Color variants available using the <code>.urgent</code> and <code>.critical</code> classes</li>
+                  <li>Alerts have no pre-defined behavior, use Javascript</li>
+                  <li>The <code>.alert</code> class can be applied to <code>&lt;div&gt;</code> elements and textual elements alike</li>
+                  <li>Avoid applying the <code>.alert</code> class to non-textual elements, such as images</li>
                 </ul>
               </div>
             </div>
@@ -969,7 +978,8 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Animated alerts are available using th <code>.animated</code> class</li>
+                  <li>Compatible with modern browsers, but might cause some problems and bluriness in Webkit-based or older browsers</li>
                 </ul>
               </div>
             </div>

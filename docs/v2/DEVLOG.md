@@ -686,3 +686,4 @@
 - Documented `table` in `quick reference`.
 - Documented `card` in `quick reference`.
 - Documented `tab` in `quick reference`.
+- Documented `contextual` in `quick reference`.

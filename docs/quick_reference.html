@@ -473,8 +473,14 @@
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
-                <ul>
-                  <li></li>
+                <ul>     
+                  <li>Link <code>&lt;label&gt;</code> elements to their respective <code>&lt;input&gt;</code> elements for ease-of-use</li>
+                  <li>Use of the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements is highly recommended</li>
+                  <li>Forms are inline by default, use <code>.input-group</code> to align elements inside them</li>
+                  <li>Non-standard input types are not stylized like the rest</li>
+                  <li>Checkboxes and radio buttons are stylized differently, as shown below</li>
+                  <li>You can use the grid module's column classes to align form elements or make them responsive</li>
+                  <li>Avoid using <code>.input-group</code> in aligned forms</li>
                 </ul>
               </div>
             </div>
@@ -494,7 +500,12 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Pre-styled using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, fully accessible</li>
+                  <li>Create a <code>&lt;div <span class="fore-secondary">class</span>=<span class="fore-primary">&quot;input-group&quot;</span>&gt;</code> containing the checkbox or radio button along with its linked label</li>
+                  <li>Add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to the <code>&lt;input&gt;</code> element to make full accessible</li>
+                  <li>Add multiple radio buttons in the same group inside the same <code>.input-group</code> wrapper</li>
+                  <li>Always use <code>.input-group</code> and follow the code structure provided in the examples</li>
+                  <li>Remember to use <code>&lt;label&gt;</code> elements for every single one of your checkbox or radio buttons</li>
                 </ul>
               </div>
             </div>
@@ -521,7 +532,14 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>All button types have been stylized</li>
+                  <li>Button styles are available for other elements, using the <code>.button</code> class</li>
+                  <li><code>.primary</code>, <code>.secondary</code>, <code>.tertiary</code> and <code>.inverse</code> color variants</li>
+                  <li><code>.small</code> and <code>.large</code> size variants</li>
+                  <li>Create responsive button groups by wrapping multiple button elements inside a <code>.button-group</code> wrapper</li>
+                  <li>Button groups are responsive, but might display incorrectly in older browsers</li>
+                  <li>Mix size and color variants, don't mix two variants of the same type</li>
+                  <li>Avoid using different size variants inside a <code>.button-group</code></li>
                 </ul>
               </div>
             </div>
@@ -534,7 +552,9 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Link an <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code> element to a <code>&lt;label&gt;</code></li>
+                  <li>The file button will not change text when uploading a file, Javascript may be required</li>
+                  <li>Compatible with <code>.input-group</code></li>
                 </ul>
               </div>
             </div>

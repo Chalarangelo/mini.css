@@ -679,3 +679,7 @@
 - *TODO* Readme, demo image etc.
 - Extensive proofreading and fixes.
 - Finished Codepens.
+
+## 20161220
+
+- Added notes for `input_control` in `quick reference`.

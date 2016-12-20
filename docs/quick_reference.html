@@ -689,7 +689,18 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Table structure as follows:
+                  <ol>
+                    <li><code>&lt;table&gt;</code> element is the table's root element</li>
+                    <li><code>&lt;caption&gt;</code> (optional) serves as the table's title and must be the first element inside the table</li>
+                    <li><code>&lt;thead&gt;</code> serves as the table's header row, populated with <code>&lt;th&gt;</code></li>
+                    <li><code>&lt;tfoot&gt;</code> (optional) serves as the table's footer and must be immediately after <code>&lt;thead&gt;</code></li>
+                    <li><code>&lt;tbody&gt;</code> is the table's body, populated with <code>&lt;td&gt;</code> elements</li>
+                  </ol>
+                  </li>
+                  <li>Tables are responsive and collapse into cards on mobile devices</li>
+                  <li>Always specify a <code>data-label</code> for each <code>&lt;td&gt;</code> element corresponding to the column's header to properly display table on mobile devices</li>
+                  <li>For horizontal tables or matrices, check the examples below</li>
                 </ul>
               </div>
             </div>
@@ -744,7 +755,9 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Use the <code>.horizontal</code> class to make a <code>&lt;table&gt;</code> horizontal</li>
+                  <li>Does not support the <code>&lt;tfoot&gt;</code> element</li>
+                  <li>Horizontal tables might not be fully compatible with older browsers</li>
                 </ul>
               </div>
             </div>
@@ -774,7 +787,10 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Use the <code>.striped</code> class to make a <code>&lt;table&gt;</code> striped</li>
+                  <li>Use the <code>.preset</code> class to make a <code>&lt;table&gt;</code> to create matrices or otherwise preset tables</li>
+                  <li>Preset matrix tables might require some CSS tweaks to deal with border styling errors</li>
+                  <li>You can combine <code>.striped</code>, <code>.preset</code> and <code>.horizontal</code>, respecting the rules of the combined structures</li>
                 </ul>
               </div>
             </div>

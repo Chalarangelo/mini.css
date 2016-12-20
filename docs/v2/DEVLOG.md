@@ -683,3 +683,4 @@
 ## 20161220
 
 - Added notes for `input_control` in `quick reference`.
+- Documented `table` in `quick reference`.

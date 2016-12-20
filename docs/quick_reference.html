@@ -739,7 +739,7 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li>Require familiarity with the grid module</li>
+                  <li>Requires familiarity with the grid module</li>
                   <li>Card structure as follows:
                   <ol>
                     <li><code>.row</code> element is the outermost wrapper of the cards layout</li>
@@ -850,7 +850,17 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Tabs structure as follows:
+                  <ol>
+                    <li><code>.tabs</code> element is the outermost wrapper of the tabbed layout</li>
+                    <li>Multiple <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;radio&quot;</span>&gt;</code> elements followed by their linked <code>&lt;label&gt;</code> elements are the titles of tabs<li>
+                    <li>Multiple <code>&lt;div&gt;</code> elements, each one after the <code>&lt;label&gt;</code> of the tab it corresponds to, as the content of each tab</li>
+                  </ol>
+                  </li>
+                  <li>Tabs are responsive, might be incompatible with some older browsers</li>
+                  <li>Make a radio button <code><span class="fore-secondary">checked</span></code> to select the tab open by default</li>
+                  <li>Use <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> to input elements to add accessibility</li>
+                  <li>Use the syntax exactly as presented in the examples, do not substitute with checkboxes</li>
                 </ul>
               </div>
             </div>
@@ -888,7 +898,10 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Use the <code>.stacked</code> class to create stacked tabs</li>
+                  <li>Use <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> to input elements to add accessibility</li>
+                  <li>Use either checkboxes or radio buttons as the <code>&lt;input&gt;</code> elements of stacked tabs</li>
+                  <li>Use single checkbox in a <code>.stacked</code> tabs container, but not a single radio button</li>
                 </ul>
               </div>
             </div>

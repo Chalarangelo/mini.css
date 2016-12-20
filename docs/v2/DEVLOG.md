@@ -685,3 +685,4 @@
 - Added notes for `input_control` in `quick reference`.
 - Documented `table` in `quick reference`.
 - Documented `card` in `quick reference`.
+- Documented `tab` in `quick reference`.

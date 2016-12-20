@@ -691,3 +691,5 @@
 - Documented `utility` in `quick reference`.
 - Updated **README** and OpenGraph in `index`.
 - Added OpenGraph info to all pages.
+- Doc page code cleanup.
+- Updated everything, releasing **v2.0.0**.

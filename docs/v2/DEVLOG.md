@@ -687,3 +687,4 @@
 - Documented `card` in `quick reference`.
 - Documented `tab` in `quick reference`.
 - Documented `contextual` in `quick reference`.
+- Documented `progress` in `quick reference`.

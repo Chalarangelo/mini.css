@@ -601,7 +601,18 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Table structure is as follows:
+                  <ol>
+                    <li><code>&lt;table&gt;</code> element is the table's root element</li>
+                    <li><code>&lt;caption&gt;</code> (optional) serves as the table's title and must be the first element inside the table</li>
+                    <li><code>&lt;thead&gt;</code> serves as the table's header row, populated with <code>&lt;th&gt;</code></li>
+                    <li><code>&lt;tfoot&gt;</code> (optional) serves as the table's footer and must be immediately after <code>&lt;thead&gt;</code></li>
+                    <li><code>&lt;tbody&gt;</code> is the table's body, populated with <code>&lt;td&gt;</code> elements</li>
+                  </ol>
+                  </li>
+                  <li>Tables are responsive and collapse into cards on mobile devices</li>
+                  <li>Always specify a <code>data-label</code> for each <code>&lt;td&gt;</code> element corresponding to the column's header to properly display table on mobile devices</li>
+                  <li>For horizontal tables or matrices, check the examples below</li>
                 </ul>
               </div>
             </div>
@@ -639,7 +650,9 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Use the <code>.horizontal</code> class to make a <code>&lt;table&gt;</code> horizontal</li>
+                  <li>Does not support the <code>&lt;tfoot&gt;</code> element</li>
+                  <li>Horizontal tables might not be fully compatible with older browsers</li>
                 </ul>
               </div>
             </div>
@@ -689,18 +702,10 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li>Table structure as follows:
-                  <ol>
-                    <li><code>&lt;table&gt;</code> element is the table's root element</li>
-                    <li><code>&lt;caption&gt;</code> (optional) serves as the table's title and must be the first element inside the table</li>
-                    <li><code>&lt;thead&gt;</code> serves as the table's header row, populated with <code>&lt;th&gt;</code></li>
-                    <li><code>&lt;tfoot&gt;</code> (optional) serves as the table's footer and must be immediately after <code>&lt;thead&gt;</code></li>
-                    <li><code>&lt;tbody&gt;</code> is the table's body, populated with <code>&lt;td&gt;</code> elements</li>
-                  </ol>
-                  </li>
-                  <li>Tables are responsive and collapse into cards on mobile devices</li>
-                  <li>Always specify a <code>data-label</code> for each <code>&lt;td&gt;</code> element corresponding to the column's header to properly display table on mobile devices</li>
-                  <li>For horizontal tables or matrices, check the examples below</li>
+                  <li>Use the <code>.striped</code> class to make a <code>&lt;table&gt;</code> striped</li>
+                  <li>Use the <code>.preset</code> class to make a <code>&lt;table&gt;</code> to create matrices or otherwise preset tables</li>
+                  <li>Preset matrix tables might require some CSS tweaks to deal with border styling errors</li>
+                  <li>You can combine <code>.striped</code>, <code>.preset</code> and <code>.horizontal</code>, respecting the rules of the combined structures</li>
                 </ul>
               </div>
             </div>
@@ -734,7 +739,19 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li></li>
+                  <li>Require familiarity with the grid module</li>
+                  <li>Card structure as follows:
+                  <ol>
+                    <li><code>.row</code> element is the outermost wrapper of the cards layout</li>
+                    <li><code>&lt;div <span class="fore-secondary">class</span>=<span class="fore-primary">&quot;card&quot;</span>&gt;</code> elements are the cards</li>
+                    <li><code>.section</code> elements inside the <code>.card</code> serve as the card's sections</li>
+                  </ol>
+                  </li>
+                  <li>Cards are responsive, might be incompatible with older browsers</li>
+                  <li>A card can have as many sections as needed, sections can be almost any element</li>
+                  <li>Wrap all card content in <code>.section</code> classes</li>
+                  <li>Add multiple <code>.card</code> elements in the same <code>.row</code></li>
+                  <li>Cards cannot be rows or columns at the same time, sections can be rows</li>
                 </ul>
               </div>
             </div>
@@ -755,9 +772,12 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li>Use the <code>.horizontal</code> class to make a <code>&lt;table&gt;</code> horizontal</li>
-                  <li>Does not support the <code>&lt;tfoot&gt;</code> element</li>
-                  <li>Horizontal tables might not be fully compatible with older browsers</li>
+                  <li>Create media sections for images or video, using the <code>.media</code> class</li>
+                  <li>Color variants for sections are available using the <code>.dark</code> and <code>.darker</code> classes</li>
+                  <li>Extra padding section variant available using the <code>.double-padded</code> class</li>
+                  <li>Card color variant is available using the <code>.inverse</code> class</li>
+                  <li><code>.media</code> sections might not be fully supported in older browsers</li>
+                  <li><code>.media</code> sections have a preset height of <code>200px</code></li>
                 </ul>
               </div>
             </div>
@@ -787,10 +807,10 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li>Use the <code>.striped</code> class to make a <code>&lt;table&gt;</code> striped</li>
-                  <li>Use the <code>.preset</code> class to make a <code>&lt;table&gt;</code> to create matrices or otherwise preset tables</li>
-                  <li>Preset matrix tables might require some CSS tweaks to deal with border styling errors</li>
-                  <li>You can combine <code>.striped</code>, <code>.preset</code> and <code>.horizontal</code>, respecting the rules of the combined structures</li>
+                  <li>Card size variants available using the <code>.large</code> and <code>.small</code> classes</li>
+                  <li>Fluid cards available using the <code>.fluid</code> class, require the use of grid columns</li>
+                  <li>Fluid cards might not display properly in older browsers and will sometimes slightly disrespect margins on certain layouts</li>
+                  <li>Always wrap <code>.fluid</code> cards in columns, don't mix with non-fluid cards</li>
                 </ul>
               </div>
             </div>

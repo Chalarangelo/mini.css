@@ -4,7 +4,7 @@
 /*
 	Flavor name: Default (mini-default)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v2.0.0 (Fermion)
+	mini.css version: v2.0.1 (Fermion)
 */
 //	Basic rules for body and typography
 $fore-color:					#212121;										// Text and general foreground color
@@ -525,9 +525,12 @@ $responsive-padding-large-value:6px 8px;										// Padding value for responsiv
 $float-prefix:					'float';										// Prefix for float classes
 $clearfix-name:					'clearfix';										// Class name for clearfix
 $center-block-name:				'center-block';									// Class name for center block
-//	Enable mini.css
+// Load modules. If you do not want to use a module, comment out its `@import` statement, along with any mixin `@include`s that are part of
+// that module and marked as such below it.
 @import '../mini/core';
-//	Use mixins for forms and inputs
+@import '../mini/grid';
+@import '../mini/navigation';
+@import '../mini/input_control';
 /* 
 	Custom elements for forms and input elements. 
 */
@@ -543,7 +546,8 @@ $center-block-name:				'center-block';									// Class name for center block
 	$button-style1-border-radius, $button-style1-padding, $button-style1-margin);
 @include make-button-alt-style ($button-style2-name, $button-style2-border-style,
 	$button-style2-border-radius, $button-style2-padding, $button-style2-margin);
-//	Use mixins for cards
+@import '../mini/table';
+@import '../mini/card';
 /* 
 	Custom elements for cards and containers. 
 */
@@ -557,7 +561,8 @@ $center-block-name:				'center-block';									// Class name for center block
 @include make-card-section-alt-color ($card-section-style2-name, $card-section-style2-back-color, 
 	$card-section-style2-fore-color);
 @include make-card-section-alt-style ($card-section-padding1-name, $card-section-padding1-padding);
-//	Use mixins for contextual background elements and alerts
+@import '../mini/tab';
+@import '../mini/contextual';
 /* 
 	Custom contextual background elements and alerts. 
 */
@@ -571,7 +576,7 @@ $center-block-name:				'center-block';									// Class name for center block
 @include make-alert-alt-color ($alert-variant2-name, $alert-variant2-back-color, $alert-variant2-fore-color);
 @include make-alert-alt-style ($alert-style1-name, $alert-style1-border-style, $alert-style1-border-radius);
 @include make-alert-alt-style ($alert-style2-name, $alert-style2-border-style, $alert-style2-border-radius);
-//	Use mixins for progress elements and spinners
+@import '../mini/progress';
 /* 
 	Custom elements for progress elements and spinners. 
 */
@@ -587,7 +592,7 @@ $center-block-name:				'center-block';									// Class name for center block
 	$spinner-donut-variant2-fore-color);
 @include make-spinner-donut-alt-style ($spinner-donut-style1-name, $spinner-donut-style1-size, 
 	$spinner-donut-style1-border-thickness);
-//	Use mixins for utilities and helper classes
+@import '../mini/utility';
 /* 
 	Custom elements for utilities and helper classes. 
 */

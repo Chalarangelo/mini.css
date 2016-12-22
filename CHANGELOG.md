@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.1
+
+- Updated module structure. `_core.scss` no longer contains all `@import` statements, but they are now included in the flavor files.
+- Updated documentation for customization to reflect said changes.
+
 ## v2.0.0
 
 - New version, rebuilt from scratch.

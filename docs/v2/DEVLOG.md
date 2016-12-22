@@ -693,3 +693,15 @@
 - Added OpenGraph info to all pages.
 - Doc page code cleanup.
 - Updated everything, releasing **v2.0.0**.
+
+# v2.0.1 Development Log
+
+## 20161222
+
+- Merged the pull request from @roryprimrose.
+- Changed the `_typography.scss` file to `_core.scss`.
+- Moved the `@import` statements to the flavor files.
+- Updated `customization.html` to make sure the notes reflect the new structure of the toolkit.
+- Demo pages updated to use the latest version of the toolkit (v2.0.1).
+- Updated `CHANGELOG.md` to reflect new changes.
+- Moved mixin `@include` statements inside the flavor files.

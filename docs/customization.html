@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0.0/dist/mini-default.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0.1/dist/mini-default.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <title>mini.css - Customization</title>
     <meta charset="utf-8">
@@ -86,7 +86,7 @@
       <div class="row">
         <div class="col-sm-12 col-md-6">
           <h3>Modules &amp; file structure</h3>
-          <p>At the heart of <strong>mini.css</strong> are modules - groups of classes and styles that aim to solve one set of needs. There are 10 modules in <strong>mini.css</strong>, which have been already written for you. All of the modules are built using partial files, named <code>_module_name.scss</code> and placed in the <code>src/mini</code> folder. You can edit any of the modules' code and/or add your own modules, following the same structure. The only thing you need to remember to do, in order to add your module to your flavor, is to add an <code>@import</code> statement at the very bottom of <code>_core.scss</code> and it will be compiled along with the rest of <strong>mini.css</strong>. Similarly, to disable a module, just comment out its <code>@import</code> statement from the core module.</p>
+          <p>At the heart of <strong>mini.css</strong> are modules - groups of classes and styles that aim to solve one set of needs. There are 10 modules in <strong>mini.css</strong>, which have been already written for you. All of the modules are built using partial files, named <code>_module_name.scss</code> and placed in the <code>src/mini</code> folder. You can edit any of the modules' code and/or add your own modules, following the same structure. The only thing you need to remember to do, in order to add your module to your flavor, is to add an <code>@import</code> statement after all the required variable declarations towards the bottom of your flavor file and it will be compiled along with the rest of <strong>mini.css</strong>. Similarly, to disable a module, just comment out its <code>@import</code> statement from the flavor file.</p>
         </div>
         <div class="col-sm-12 col-md-6">
           <h3>Variables</h3>
@@ -107,7 +107,7 @@
         <div class="col-sm-12">
         <br>
           <h2>Building a flavor</h2>
-          <p>Creating your own flavor can be as easy or as complicated as your needs. In this section, we will briefly walk you through most of the variables usually present in a flavor, along with some flags and mixins. This section serves as a complementary documentation to the comment column present in our pre-defined flavors, instead of a replacement and should be always viewed alongside it.</p><br>
+          <p>Creating your own flavor can be as easy or as complicated as your needs. Adding and removing modules is as simple as adding an <code>@import</code> statement or commenting it out, after declaring all the required variables. In this section, we will briefly walk you through most of the variables usually present in a flavor, along with some flags and mixins. This section serves as a complementary documentation to the comment column present in our pre-defined flavors, instead of a replacement and should be always viewed alongside it.</p><br>
           <div class="card fluid">
             <div class="section">
               <h3>Core</h3>

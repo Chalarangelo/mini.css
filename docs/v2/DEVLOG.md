@@ -712,3 +712,5 @@
 
 - Tweaked default color palette to deal with red-green colorblindness (see #52). `contextual` and `input_control` are affected by this change.
 - *TODO* Update the live version sheets to use the v2.0.2 sheet, update all the references in live demo, update the flavors page.
+- *TODO* Update the live version local sheets to use the new colors whenever needed.
+- *TODO* New flavor with girlfriend.

@@ -4,7 +4,7 @@
 /*
 	Flavor name: Default (mini-default)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v2.0.1 (Fermion)
+	mini.css version: v2.0.2 (Fermion)
 */
 //	Basic rules for body and typography
 $fore-color:					#212121;										// Text and general foreground color
@@ -256,7 +256,7 @@ $button-variant2-hover-back-opacity:											// Background opacity for button 
 								1;												// on hover or focus
 $button-variant2-fore-color:	#fafafa;										// Text color for button variant 2
 $button-variant3-name:			'tertiary';										// Class name for button variant 3
-$button-variant3-back-color:	#558b2f;										// Background color for button variant 3
+$button-variant3-back-color:	#689f38;										// Background color for button variant 3
 $button-variant3-back-opacity:	0.85;											// Background opacity for button variant 3
 $button-variant3-hover-back-opacity:											// Background opacity for button variant 3
 								1;												// on hover or focus
@@ -390,9 +390,9 @@ $mark-box-shadow:																// Box shadow for <mark>
 	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
 $mark-inline-block-name:		'inline-block';									// Class name for <mark> inline block styling
 $mark-variant1-name:			'secondary';									// Class name for <mark> variant 1
-$mark-variant1-back-color:		#f44336;										// Background color for <mark> variant 1
+$mark-variant1-back-color:		#e53935;										// Background color for <mark> variant 1
 $mark-variant2-name:			'tertiary';										// Class name for <mark> variant 2
-$mark-variant2-back-color:		#558b2f;										// Background color for <mark> variant 2
+$mark-variant2-back-color:		#689f38;										// Background color for <mark> variant 2
 $mark-style1-name:				'tag';											// Class name for <mark> style 1
 $mark-style1-border-style:		0;												// Border style for <mark> style 1
 $mark-style1-border-radius:		200px;											// Border radius for <mark> style 1

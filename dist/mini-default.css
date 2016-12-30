@@ -2,7 +2,7 @@
 /*
 	Flavor name: Default (mini-default)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v2.0.1 (Fermion)
+	mini.css version: v2.0.2 (Fermion)
 */
 /* 
 	Browsers resets and base typography. 
@@ -842,13 +842,13 @@ button.secondary, [type="button"].secondary, [type="submit"].secondary,
 
 button.tertiary, [type="button"].tertiary, [type="submit"].tertiary,
 [type="reset"].tertiary, .button.tertiary {
-  background: rgba(85, 139, 47, 0.85);
+  background: rgba(104, 159, 56, 0.85);
   color: #fafafa; }
   button.tertiary:hover, button.tertiary:active, button.tertiary:focus, [type="button"].tertiary:hover, [type="button"].tertiary:active, [type="button"].tertiary:focus, [type="submit"].tertiary:hover, [type="submit"].tertiary:active, [type="submit"].tertiary:focus,
   [type="reset"].tertiary:hover,
   [type="reset"].tertiary:active,
   [type="reset"].tertiary:focus, .button.tertiary:hover, .button.tertiary:active, .button.tertiary:focus {
-    background: #558b2f; }
+    background: #689f38; }
 
 button.inverse, [type="button"].inverse, [type="submit"].inverse,
 [type="reset"].inverse, .button.inverse {
@@ -1289,10 +1289,10 @@ mark {
 	Custom contextual background elements and alerts. 
 */
 mark.secondary {
-  background: #f44336; }
+  background: #e53935; }
 
 mark.tertiary {
-  background: #558b2f; }
+  background: #689f38; }
 
 mark.tag {
   border-radius: 200px;

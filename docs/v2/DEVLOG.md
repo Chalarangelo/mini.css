@@ -705,3 +705,10 @@
 - Demo pages updated to use the latest version of the toolkit (v2.0.1).
 - Updated `CHANGELOG.md` to reflect new changes.
 - Moved mixin `@include` statements inside the flavor files.
+
+# v2.0.2 Development log
+
+## 20161230
+
+- Tweaked default color palette to deal with red-green colorblindness (see #52). `contextual` and `input_control` are affected by this change.
+- *TODO* Update the live version sheets to use the v2.0.2 sheet, update all the references in live demo, update the flavors page.

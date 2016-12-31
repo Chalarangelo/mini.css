@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Live demo styled as of 20161121 -->
+    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/21ca8d498f0ff51cdeab7c16606fc06502c7de29/dist/mini-default.min.css"> -->
+    <link rel="stylesheet" href="mini-sucroa.min.css">
+    <title>mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="mini.css - A minimal Sass-y responsive mobile-first style-agnostic CSS framework">
+    <meta name="keywords" content="mini, mini.css, CSS, responsive, framework, mobile first, style agnostic, Sass">
+    <meta name="author" content="Angelos Chalaris (chalarangelo)">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">   
+    <style>
+      #header-logo {
+        display: inline; height: 28px; width: 28px; margin-top: 2px; background: #558b2f; border-radius: 1px;
+        margin-left: -3px; padding: 2px;
+      }
+      #top-logo {
+        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
+        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      #top-header {
+        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
+      }
+      #top-version-tag {
+        padding: 3px 5px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      .box-centered { text-align: center; }
+      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
+      .box-colored.red { background: #b71c1c; }
+      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+    </style>
+  </head>
+  <body>  
+    <header>
+      <img class="logo" src="mini-logo.svg" id="header-logo"><div style="display: inline; overflow: auto;">
+      <a href="#" class="button">Introduction</a>
+      <a href="#" class="button">Module Overview</a>
+      <a href="#" class="button">Module Demos</a>
+      <a href="#" class="button">Flavors</a>
+      <a href="#" class="button">Customization</a>
+      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row" style="padding-top: 20px;">
+        <div class="col-sm-12 col-md">
+          <div class="box-centered">
+            <h2>Minimal</h2>      
+            <i class="fa fa-compress fa-4x" aria-hidden="true"></i>
+            <br><br>
+            <p><strong>mini.css</strong> is one of the lightest front-end frameworks on the web: about 5KB gzipped. This helps your websites load faster, while still looking great!</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md">
+          <div class="box-centered">
+            <h2>Reponsive</h2>
+            <i class="fa fa-mobile fa-4x" aria-hidden="true"></i>
+            <br><br>
+            <p><strong>mini.css</strong> is built in such a way that it will look great on most devices and especially phones and tablets. This allows you to easily tailor your websites to different users!</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md">
+          <div class="box-centered">
+            <h2>Style-agnostic</h2>
+            <i class="fa fa-paint-brush fa-4x" aria-hidden="true"></i>
+            <br><br>
+            <p><strong>mini.css</strong> gives you the power of customization, using its fully moddable flavors. This will give you control over how your websites look and allow great designs to stand out!</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div>
+            <br><hr>
+            <p>Below you can see a showcase of the features and styles included in the <strong>default</strong> flavor of <strong>mini.css</strong>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div>
+            <h2>Typography <small>Styles for common textual elements</small></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+        <div><h1>Heading 1 <small>Subheading</small></h1></div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+        <div><h2>Heading 2 <small>Subheading</small></h2></div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+        <div><h3>Heading 3 <small>Subheading</small></h3></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+        <div><h4>Heading 4 <small>Subheading</small></h4></div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+        <div><h5>Heading 5 <small>Subheading</small></h5></div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+        <div><h6>Heading 6 <small>Subheading</small></h6></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <blockquote cite="Mr. Quotalot">This is some quoted text from elsewhere.</blockquote><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div>
+            <br>
+            <p>This is a paragraph with some sample text. Did you know <strong>mini.css</strong> v2.0 is codenamed <strong>Fermion</strong>? No? Well, now you do! Maybe you want to know what our inline elements look like. For example a <a href="https://github.com/Chalarangelo/mini.css">link to the Github repository of mini.css</a> looks like that! Neat, right? Maybe you want to see some <code>inline code</code> or some sample <kbd>input</kbd>. Oh, also <small>small text</small> is cool, along with its siblings: the subscript<sub>hi!</sub> and the superscript<sup>hello!</sup>. We use <mark>highlights</mark> quite a lot as well. Apart from the primary color, you can also try the <mark class="secondary">secondary</mark> and <mark class="tertiary">tertiary</mark> colors. If you wanna be fancy, maybe use a <mark class="tag">tag</mark> or a <mark class="bubble">bubble</mark>. All of these work well inside headings and the like. To finish our typography tour, check out the preformatted code block below.</p><br>
+          </div>
+          <div>
+            <pre>function sum(num1, num2) {
+    var num3 = num1 + num2;
+    console.log('Result: ' + num3);
+}</pre>
+<br>
+          </div>
+          <div class="alert">
+            <h3>This is an alert</h3>
+            <p>Alerts are important</p>
+          </div>
+          <br>
+          <p class="alert urgent">Hi</p>
+          <h2 class="alert critical">Loop</h2>
+          <a class="alert urgent">Hi</a>
+          <h2 class="alert critical">Loop</h2>
+          <br>
+          <div class="alert urgent">
+            <h3>This is an alert</h3>
+            <p>Alerts are important</p>
+          </div>
+          <br>
+          <div class="alert critical">
+            <h3>This is an alert</h3>
+            <p>Alerts are important</p>
+          </div>
+          <br>
+          <div class="alert animated">
+            <h3>This is an alert</h3>
+            <p>Alerts are important</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div>
+            <hr>
+            <h2>Grid system <small>Easy layout using flexbox</small></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div>
+            <p><strong>mini.css</strong> uses the Flexible Layout Module (commonly known as <code>flexbox</code>) to create a grid system for easy page layout. The grid system is not the most feature-rich one, but it contains all the essential components. The <code>container</code> of the grid is fluid by default, meaning it will adjust to fill its parent container. Rows are easily created using the <code>row</code> class and columns can be created using the usual <code>col-SZ-XX</code> syntax where <code>SZ</code> and <code>XX</code> are replaced by a screen size and a number of vertical columns respectively. Columns can also scale themselves automatically if you omit the number of vertical columns in the class name. Similarly, you can use offsets with the <code>col-SZ-offset-XX</code> syntax. The <strong>default</strong> grid is separated into 12 vertical columns. You can see some examples below.</p><br>
+          </p></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-sm-5">
+                <div class="box-colored"></div>
+              </div>
+            </div> 
+            <div class="row">
+              <div class="col-sm-2">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-sm-4">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-2">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-sm-4">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3 col-sm-offset-1">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-sm-2 col-sm-offset-3">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-sm">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm col-md-6 col-lg">
+                <div class="box-colored"></div>
+              </div>
+              <div class="col-sm col-sm-first col-md-normal col-lg-last">
+                <div class="box-colored red"></div>
+              </div>
+              <div class="col-sm col-lg-6">
+                <div class="box-colored"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div>
+            <hr>
+            <h2>Common Elements <small>Styles for common HTML elements</small></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div>
+            <p><strong>mini.css</strong> adds modern styles for many of the HTML elements.</p><br>
+            <h3>Tables</h3>
+            <p>Tables are responsive and use the <code>data-label</code> attribute to specify the header name for each cell, so that they can be displayed as cards on mobile devices. Here's an example (resize to see mobile display if you are on desktop):</p>
+            <table>
+              <caption>Hacker List</caption>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Email</th>
+                  <th>Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <table style="display: flex; flex-direction: row; overflow: auto; border: 0;">
+              <caption style="display: flex; flex-flow: column wrap; flex: 0 1 auto; align-self: center;">Hacker List</caption>
+              <thead style="display: flex; flex-flow: row wrap; flex: 0 0 auto;">
+                <tr style="display: flex; flex-direction: column;">
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Email</th>
+                  <th>Handle</th>
+                </tr>
+              </thead>
+              <tbody style="display: flex; flex-flow: row wrap; flex: 0 0 auto;">
+                <tr style="display: flex; flex-direction: column;">
+                  <td data-label="Name">John</td>
+                  <td data-label="Surname">Smith</td>
+                  <td data-label="Email">johnsmith@mail.com</td>
+                  <td data-label="Handle">SmithereensJohn</td>
+                </tr>
+                <tr style="display: flex; flex-direction: column;">
+                  <td data-label="Name">Lisa</td>
+                  <td data-label="Surname">Cody</td>
+                  <td data-label="Email">codyl@mail.com</td>
+                  <td data-label="Handle">Codyl</td>
+                </tr>
+                <tr style="display: flex; flex-direction: column;">
+                  <td data-label="Name">Max</td>
+                  <td data-label="Surname">Roberts</td>
+                  <td data-label="Email">terminus@mail.com</td>
+                  <td data-label="Handle">T3rm1nu5</td>
+                </tr>
+                <tr style="display: flex; flex-direction: column;">
+                  <td data-label="Name">Adam</td>
+                  <td data-label="Surname">Leeks</td>
+                  <td data-label="Email">leekt@mail.com</td>
+                  <td data-label="Handle">Leekt</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h3>Forms</h3>
+            <p>Forms are inline by default and textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> and <code>&lt;select&gt;</code> elements have been pre-styled. To make inputs take up more space than their default, simply add something like <code>width=&quot;100%&quot;</code>. You can also utilize the grid system to align forms to your liking. Below are some examples:</p>
+            <form>
+              <fieldset>
+                <legend>Inline form (default style):</legend>
+                <div class="input-group"><label for="username">Username</label> <input type="text" value="" id="username" placeholder="username">&nbsp;</div>
+                <div class="input-group"><label for="mail">Email</label> <input type="email" value="" id="mail" placeholder="mail@server.com">&nbsp;</div>
+                <div class="input-group"><label for="pwd">Password</label> <input type="password" value="" id="pwd" placeholder="password"></div>
+              </fieldset><br>
+              <fieldset class="container">
+                <legend>Aligned form (using <code>width</code> and grid):</legend>
+                <div class="row">
+                  <div class="col-sm-2" style="text-align:right;">
+                    <label for="website" style="vertical-align: text-top;">Website</label>
+                  </div>
+                  <div class="col-sm">
+                    <input type="text" value="" id="website" placeholder="website" style="width:85%;">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-2" style="text-align:right;">
+                    <label for="weburl" style="vertical-align: text-top;">URL</label>
+                  </div>
+                  <div class="col-sm">
+                    <input type="url" value="" id="weburl" placeholder="https://www.mywebsite.com" style="width:85%;">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-2" style="text-align:right;">
+                    <label for="desc" style="vertical-align: text-top;">Description</label>
+                  </div>
+                  <div class="col-sm">
+                    <textarea type="url" value="" id="desc" placeholder="description" style="width:85%;"></textarea>
+                  </div>
+                </div>
+              </fieldset><br>
+              <fieldset>
+                <legend>More inputs</legend>
+                <input disabled value="Disabled">
+                <input readonly value="Readonly">
+                <input type="number" value="4">
+                <select>
+                  <option>Test</option>
+                  <option>Demo</option>
+                </select>
+                <input type="search" placeholder="search..." value="">
+              </fieldset>
+            </form>
+            <br>
+            <h3>Navigation</h3>
+            <p>Use the <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code> and <code>&lt;footer&gt;</code> elements to add navigational elements to your page. The <code>&lt;header&gt;</code> element displays as a non-fixed horizontal bar and can contain a logo along with a set of links or buttons. Style any links using the <code>.button</code> class to give them the proper style. it is suggested that you place the <code>&lt;header&gt;</code> element outside of your grid system's <code>.container</code> to avoid styling problems. You can see an example below:</p>
+            <header><a href="#" class="logo">Logo</a><button>Link 1</button><a href="#" class="button">Link 2</a><button>Link 3</button></header><br>
+            <p><code>&lt;nav&gt;</code> implements the traditional navigation sidebar, using simple styling. The sidebar is not fixed by default and it has no specific width set, so you can use the grid system or some Javascript code to show or hide it and decide its size. Use simple links and <code>&lt;span&gt;</code> elements to add links and categories. The <code>.sublink-1</code> and <code>.sublink-2</code> classes can be added to create links in categories and subcategories. Below you can see an example (sidebar is displayed next to text on medium-large displays, but fills the whole display on phones and smaller screens):</p>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-9">
+                  <p>This is some sample content that will show next to the navigation menu. Which means that we'll have to present some more fun facts about <strong>mini.css</strong> to occupy this space. Well, here's a couple:</p>
+                  <ul>
+                  <li><strong>mini.css</strong> was inspired by Bootstrap and Pure.css. Its original goal was to build a framework with the stylistic fluff of Bootstrap, but nearly the size of Pure.css. The first version, codenamed <strong>Neutrino</strong> was well-received and was mostly a tech demo of what <strong>Fermion</strong> now offers.</li>
+                  <li><strong>mini.css</strong> v2.0 has been designed with modern browser compatibility and recent web standards in mind. Part of its aim is to reduce the footprint of websites by providing a customizable base to work with, while cutting down a lot of the fat that comes with premade stylesheets.</li>
+                  </ul>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                  <nav>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <span>Category 1</span>
+                    <a href="#" class="sublink-1">Link 3</a>
+                    <a href="#" class="sublink-1">Link 4</a>
+                    <span class="sublink-1">Category 2</span>
+                    <a href="#" class="sublink-2">Link 5</a>
+                    <a href="#" class="sublink-2">Link 6</a>
+                    <a href="#" class="sublink-1">Link 7</a>
+                    <a href="#" >Link 8</a>
+                  </nav>
+                </div>
+              </div>
+            </div><br>
+            <p>Finally, use the <code>&lt;footer&gt;</code> element to create your footer. Add links, images, credits. This element is not meant for main navigation, but many pages use it for some kind of navigation or other. Try to place the <code>&lt;footer&gt;</code> outside of the grid system for best results. Below is an example:</p>
+            <footer>&copy; 2016 mini.css | <a href="#">About</a> | <a href="#">Terms of use</a></footer>
+            <br>        
+            <h3>Buttons</h3>
+            <p>Buttons are already pre-styled in <strong>mini.css</strong> to allow for consistent presentation. However, there is a lot you can do to customize them, as the pre-applied styles are mostly overrides for the default presentation styles. Pre-styled buttons and other button-like inputs can be seen below:</p>
+            <span style="margin:3px;"></span>
+            <button>Normal button</button>
+            <input type="button" value="Input button">
+            <input type="submit" value="Submit button">
+            <input type="reset" value="Reset button">
+            <a href="#" class="button">Link button</a>
+            <button disabled>Disabled button</button><br>
+            <p>Button groups can also be created, utilising the <code>.button-group</code> class. Simply add a set of buttons in it and you're good to go. Check it out below:</p>
+            <div class="button-group">
+              <input type="button" value="Input button">
+              <input type="submit" value="Submit button">
+              <input type="reset" value="Reset button">
+              <button>Normal button</button>
+              <a href="#" class="button">Link button</a>
+            </div>
+            <p>File inputs are a sore spot in most frameworks, as they cannot be easily stylized using CSS. <strong>mini.css</strong> deals with the problem, using a workaround involving labels that use the <code>button</code> class, which applies the exact same style to those labels. Just link it to the <code>&lt;input type=&quot;file&quot;&gt;</code> element of your choice and you're good to go. For example:</p>
+            <span style="margin:3px;"></span><input type="file" id="file-input-demo"><label for="file-input-demo" class="button"><i class="fa fa-upload" aria-hidden="true"></i>&nbsp;Upload file</label><br>
+            <p>There are also different kinds of buttons, specifically <code>primary</code>, <code>secondary</code> and <code>tertiary</code>, as well as <code>small</code> and <code>large</code> buttons. All of these types can be specified as classes. For example:</p>
+            <span style="margin:3px;"></span>
+            <button class="primary">Primary normal button</button>
+            <input type="button" value="Secondary input button" class="secondary">
+            <input type="reset" value="Tertiary reset button" class="tertiary">
+            <input type="submit" value="Large submit button" class="large">
+            <label disabled class="button small primary">Small primary disabled label button</label>
+            <br><br>  
+            <h3>Checkboxes and Radio buttons</h3>
+            <p>Checkboxes and radio buttons are styled using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, while keeping things simple and adding just the needed consistency for those input types. Place an <code>&lt;input&gt;</code> (checkbox or radio button) and a linked <code>&lt;label&gt;</code> inside an <code>.input-group</code> and the controls will style themselves. To allow accessibility for those controls, you can use <code>tabindex=&quot;0&quot;</code> on the <code>&lt;input&gt;</code> elements only. You can see some examples below:</p>
+            <form>
+              <fieldset>
+                <div class="input-group">
+                  <input type="checkbox" id="c1" tabindex="0"> <label for="c1">Checkbox</label>
+                </div>
+                <div class="input-group">
+                  <input type="checkbox" id="c2" disabled> <label for="c2" disabled>Disabled</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="input-group">
+                  <input type="radio" name="radios" value="r1" checked id="r1" tabindex="0"> <label for="r1">Value 1</label>
+                  <input type="radio" name="radios" value="r2" id="r2" tabindex="0"> <label for="r2">Value 2</label>
+                  <input type="radio" name="radios" value="r3"checked id="r3" tabindex="0"> <label for="r3">Value 3</label>
+                </div>
+              </fieldset>
+            </form>
+            <br>
+            <h3>Progress bars</h3>
+            <p>The <code>&lt;progress&gt;</code> element is used for progress bars. There are three color variants (default, <code>secondary</code> and <code>tertiary</code>), as well as an <code>inline</code> class that displays the progress bar as an inline block, along with a <code>nano</code> variant for tiny progress bars. Below are some examples:</p>
+            <br>
+            <progress value="45" max="100""></progress><br>
+            <progress value="20" max="100" class="secondary"></progress><br>
+            <progress value="60" max="100" class="tertiary"></progress><br>
+            <p>Inline progress: <progress value="85" max="100" class="inline"></progress></p>
+            <p>Nano progress:</p>
+            <progress class="nano" value="35" max="100"></progress>
+            <hr>
+            <h2>Utilities and Helpers <small>Useful classes for common problems</small></h2> 
+            <p>The utilities provided with <strong>mini.css</strong> aim to solve common problems and allow ease of use whenever possible. Some of them are showcased below:</p>
+            <p><span class="bordered">Generic border (using black outline and opacity of 0.25)</span>, <span class="bordered rounded">Radial border style 1</span> &amp; <span class="bordered circular">&nbsp;2 </span>.</p>  
+            <ul class="breadcrumbs"><li><a href="#">These</a></li><li><a href="#">is</a></li><li><a href="#">what</a></li><li><a href="#">breadcrumbs</a></li><li><a href="#">look</a></li><li><span>like</span></li></ul>
+            <p>You can also use the <code>.hidden</code> class to hide any element you want or the <code>.visually-hidden</code> class for elements that need to be invisible to users but exist in the accessibility tree, set <code>float</code>s to left or right using the <code>.float-left</code> and <code>.float-right</code> classes or clear <code>float</code>s using the <code>.clearfix</code> class, which implements the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">micro clearfix</a> by Nicolas Gallagher. Finally, use the <code>.center-block</code> class to make an element center and display as a block.</p><br>
+            <h2>Cards <small>Modern content containers</small></h2>
+            <p>Cards are some of the most modern and stylish content containers and are widely used in many website types. <strong>mini.css</strong> provides you with the <code>.card</code> class, along with a handful of pre-built styles to help you create beatiful cards for your pages. Note that this module is heavily dependent on the grid system module. To use the cards, simply replace the grid's columns with your cards and you're ready to go. Note that in the examples below, we try to showcase as many features as possible, but there might be something we missed. Also, the <code>.row</code> which acts as the contaienr for the cards has the <code>.cards</code> class applied to it, which helps align the cards horizontally, by automatically shrinking or expanding the spaces between them.</p>
+            <div class="container">
+              <div class="row cards">
+                <div class="card">
+                  <img src="catdemo.jpg" class="section media">
+                  <div class="section">
+                  <h2>Chubby cat</h2>
+                  <span>This is a lovely cat!</span>
+                  </div>
+                  <small class="section">03-11-2016, 09:44 PM</small>
+                </div>
+                <div class="card">
+                  <h2 class="section">Chubby cat<small>Uploaded Nov, 3rd, 2016</small></h2>
+                  <img src="catdemo.jpg" class="section media">
+                  <p class="section">This cat is pretty amazing, right? Just look at it!</p>
+                </div>
+                <div class="card">
+                  <p class="section">Cards are pretty awesome, as you can see.</p>
+                  <p class="section">This is a card with three text sections.</p>
+                  <p class="section">By the way, here's a link to the <strong>mini.css</strong> <a href="https://github.com/Chalarangelo/mini.css">project repository on Github</a>, just in case.</p>
+                </div>
+                <div class="card">
+                  <div class="section">You can use <code>&lt;button&gt;</code>s and other similar elements as card sections. Like the button below.</div>
+                  <button class="section">Button section</button>
+                </div>
+                <div class="card primary">
+                  <p>Cards resize automatically to fit any and all content, allowing you to do anything you want with them. They also align the content automatically, so your sections will always look pretty. Nothing to worry about anymore! By the way, this is a <code>.primary</code> card.</p>
+                </div>
+                <div class="card">
+                  <h2 class="section dark"><code>.dark</code> heading</h2>
+                  <p class="section">Totally normal text.</p>
+                  <p class="section primary"><code>.primary</code> section text.</p>
+                </div>
+                <div class="card fluid">
+                  <h1 class="section">Fluid</h1>
+                  <p class="section">Yes, <code>.fluid</code> cards are also available! You might want to use these in combination with the grid system's columns to achieve a better effect. There's an example below, after the other size variants for the cards. Have a look.</p>
+                </div>
+                <div class="card small">
+                  <h2>&nbsp;Small</h2>
+                  <p>There are also <code>.small</code> cards. Tiny, cute, small cards.</p>
+                </div>
+                <div class="card large">
+                  <div class="section">
+                    <h2>&nbsp;Large</h2>
+                    <hr>
+                    <p>And, of course, there are <code>.large</code> cards.</p>
+                    <p>Because you'll need them.</p><br>
+                    </div>
+                  <input class="section" placeholder="Enter some text here...">
+                </div>
+                <div class="card">
+                  <p class="section double-padded">
+                    These cards work quite well together, no matter the size. Well, except the <code>.fluid</code> ones which should be used together, without the other cards. Unless you want a fluid card to act as a separator of sorts, which might be desirable. Just use them in columns, like we show you below, it's the best way. By the way, this was a <code>.double-padded</code> section.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-md-3">
+                  <div class="card fluid">
+                    <h1 class="section double-padded">Card 1</h1>
+                    <p>This is the first card. It is placed inside a column.</p>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md">
+                  <div class="card fluid">
+                    <h1 class="section double-padded">Card 2</h1>
+                    <p>This is the second card. It is placed inside a larger column. On smaller displays these will display like a list of cards.</p>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                  <div class="card fluid">
+                    <h1 class="section double-padded">Card 3</h1>
+                    <p>This is the third card. It is placed inside a column.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2>Tabs &amp; accordions<small>Present content any way you like</small></h2>
+            <p><strong>mini.css</strong> provides you with a very modern tab component, that can easily be used for multiple things, like tabbed navigation, single collapses, accordion collapses and even image carousels. This might sound like a lot to do with one component, but the design behind it allows it to be truly versatile and replace all those components. To use the tab component, simply create a container using a <code>&lt;div&gt;</code> with the <code>.tabs</code> class. Populate it with <code>&lt;input type=&quot;radio&quot;&gt;</code>s, each followed by a linked <code>&lt;label&gt;</code> and another <code>&lt;div&gt;</code> which includes the tab's contents. If you want to create an accordion add the <code>.stacked</code> class to the container. The same thing works for collapses as well. Accordions and collapses can also use <code>&lt;input type=&quot;checkbox&quot;&gt;</code>s instead. Carousels can be created similarly, remember to add images to the inner content <code>&lt;div&gt;</code> and you're good to go. You can see some examples below:</p><br>
+            <div class="tabs stacked">
+              <input type="checkbox" id="collapse" autocomplete="off">
+              <label for="collapse">Single collapse</label>
+              <div>
+                <p>This is some content you can hide and show at will using the above label. Isn't that useful?</p>
+              </div>
+            </div><br>
+            <div class="tabs stacked">
+              <input type="radio" name="accordion" id="a1" autocomplete="off" checked>
+              <label for="a1">Accordion section 1</label>
+              <div>
+                <h3>Section 1 - The amazing versatility of tabs</h3>
+                <p>Yes, this is still based on tabs. Isn't it wonderful how many things you can accomplish using one simple component?</p>
+              </div>              
+              <input type="radio" name="accordion" id="a2" autocomplete="off">
+              <label for="a2">Accordion section 2</label>
+              <div>
+                <h3>Section 2 - How accordions work</h3>
+                <p>Accordions are very similar to collapses. Just add multiple <code>&lt;input type=&quot;radio&quot;&gt;</code>s, along with their content and you are ready to go.</p>
+              </div>
+            </div><br>
+            <div class="tabs">
+              <input type="radio" name="tabdemo" id="tab1" checked>
+              <label for="tab1">Tab 1</label>
+              <div>
+                <h3>Tab 1</h3>
+                <p>This is the first tab's content.</p>
+              </div>
+              <input type="radio" name="tabdemo" id="tab2">
+              <label for="tab2">Tab 2</label>
+              <div>
+                <h3>Tab 2</h3>
+                <p>This is the second tab's content.</p>
+              </div>
+              <input type="radio" name="tabdemo" id="tab3">
+              <label for="tab3">Tab 3</label>
+              <div>
+                <h3>Tab 3</h3>
+                <p>This is the third tab's content.</p>
+              </div>
+              <input type="radio" name="tabdemo" id="tab4">
+              <label for="tab4">Tab 4</label>
+              <div>
+                <h3>Tab 4</h3>
+                <p>This is the fourth tab's content.</p>
+              </div>
+            </div><br>
+            <div class="tabs">
+              <input type="radio" name="carousel" id="car1" checked>
+              <label for="car1">Image 1</label>
+              <div>
+                <img src="catdemo.jpg" style="height: 240px; width: auto;">
+              </div>
+              <input type="radio" name="carousel" id="car2">
+              <label for="car2">Image 2</label>
+              <div>
+                <img src="catdemo.jpg" style="height: 480px; width: auto">
+              </div>
+              <input type="radio" name="carousel" id="car3">
+              <label for="car3">Image 3</label>
+              <div>
+                <img src="catdemo.jpg" style="height: 720px; width: auto">
+              </div>
+            </div><br>
+            <h2>Spinners<small>Loading with style</small></h2>
+            <p>Finally, <strong>mini.css</strong> provides you with a couple of spinner variations, <code>.spinner-dot</code> and <code>.spinner-donut</code>. Simply apply these to a <code>&lt;div&gt;</code> and you are ready to go. Both are showcased below:</p>
+            <p>This is some text with a <code>.spinner-dot</code> spinner. These spinners are designed with normal paragraphs in mind, so some tweaking of the component itself and/or the way it is presented might be requird. Loading looks like this <span class="spinner-dot"></span></p>
+            <p>And this here is a <code>.spinner-donut</code> spinner. It is more versatile and it can also use a couple of variants like <code>.secondary</code> and <code>.tertiary</code>, as shown below:</p>
+            <div class="spinner-donut"></div>
+            <div class="spinner-donut secondary"></div>
+            <div class="spinner-donut tertiary"></div>      
+            <div class="spinner-donut large"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <footer><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

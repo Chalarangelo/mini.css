@@ -158,51 +158,51 @@ $grid-large-prefix:				'lg';											// Large screen class prefix for grid
 // [1] - If the value of $use-four-step-grid is `true`, the grid system will contain 4 breakpoints instead of 3, along with
 //	the needed styles. In this case, values should be specified for $grid-extra-small-prefix and $grid-small-breakpoint.
 //	Variables for navigational elements
-$header-height:					44px;											// Height for <header>
-$header-back-color:				#263238;										// Background color for <header>
-$header-fore-color:				#fafafa;										// Text color for <header>
+$header-height:					48px;											// Height for <header>
+$header-back-color:				#211423;										// Background color for <header>
+$header-fore-color:				#fffddc;										// Text color for <header>
 $header-border-style:			0;												// Border style for <header>
 $header-margin:					0;												// Margin for <header>
-$header-padding:				2px 8px;										// Padding for <header>
+$header-padding:				3px 10px;										// Padding for <header>
 $header-box-shadow:																// Box shadow for <header>
 	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);	
 $header-logo-name:				'logo';											// Class name for <header>'s logo
 $header-logo-font-size:			1.75em;											// Font size for <header>'s logo
-$header-logo-line-height:		1.2;											// Line height for <header>'s logo
-$header-logo-margin:			1px 6px 1px 1px;								// Margin for <header>'s logo
-$header-logo-padding:			3px 0 0;										// Padding for <header>'s logo
-$header-link-hover-color:		#37474f;										// Hover color for <header>'s links
-$header-link-margin:			2px 0 0;										// Margin for <header>'s links
-$nav-back-color:				#eceff1;										// Background for <nav>
+$header-logo-line-height:		1.5;											// Line height for <header>'s logo
+$header-logo-margin:			6px 6px 1px 1px;								// Margin for <header>'s logo
+$header-logo-padding:			6px 0 0;										// Padding for <header>'s logo
+$header-link-hover-color:		#493e4b;										// Hover color for <header>'s links
+$header-link-margin:			3px 0 0;										// Margin for <header>'s links
+$nav-back-color:				#e8deff;										// Background for <nav>
 $nav-fore-color:				$fore-color;									// Text color for <nav>
-$nav-border-style:				1px solid #bdbdbd;								// Border style for <nav>
-$nav-border-radius:				0;												// Border radius for <nav>
-$nav-padding:					8px 8px 16px 20px;								// Padding for <nav>
+$nav-border-style:				1px solid #a9a2ba;								// Border style for <nav>
+$nav-border-radius:				2px;											// Border radius for <nav>
+$nav-padding:					12px 10px 18px 22px;							// Padding for <nav>
 $nav-margin:					2px;											// Margin for <nav>
 $nav-box-shadow: 																// Box shadow for <nav>
 	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);	
-$nav-link-fore-color:			#1565c0;										// Text color for links in <nav>
+$nav-link-fore-color:			#6979c6;										// Text color for links in <nav>
 $nav-sublink-prefix:			'sublink';										// Prefix for the subcategory links in <nav>
 $nav-sublink-depth:				2;												// Amount of subcategory classes to add
-$nav-sublink-padding-left:		12px;											// Left padding to add to subcategories
-$footer-back-color:				#263238;										// Background color for <footer>
-$footer-fore-color:				#fafafa;										// Text color for <footer>
+$nav-sublink-padding-left:		14px;											// Left padding to add to subcategories
+$footer-back-color:				#211423;										// Background color for <footer>
+$footer-fore-color:				#fffddc;										// Text color for <footer>
 $footer-border-style:			0;												// Border stye for <footer>
-$footer-font-size:				85%;											// Font size for <footer>
-$footer-margin:					18px 0 0;										// Margin for <footer>
-$footer-padding:				22px 10px 12px;									// Padding for <footer>
-$footer-link-fore-color:		#039be5;										// Text color for links in <footer>
+$footer-font-size:				90%;											// Font size for <footer>
+$footer-margin:					22px 0 0;										// Margin for <footer>
+$footer-padding:				24px 10px 14px;									// Padding for <footer>
+$footer-link-fore-color:		#7480b3;										// Text color for links in <footer>
 //	Variables for forms and inputs
-$form-back-color:				#eeeeee;										// Background color for forms
+$form-back-color:				#e8deff;										// Background color for forms
 $form-fore-color:				$fore-color;									// Text color for forms
-$form-border-style:				1px solid #bdbdbd;								// Border style for forms
-$form-border-radius:			0;												// Border radius for forms
-$form-margin:					8px;											// Margin for forms
-$form-padding:					12px 10px 18px;									// Padding for forms
+$form-border-style:				1px solid #a9a2ba;								// Border style for forms
+$form-border-radius:			2px;											// Border radius for forms
+$form-margin:					10px;											// Margin for forms
+$form-padding:					14px 10px 20px;									// Padding for forms
 $form-box-shadow:																// Box shadow for forms
 	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);	
 $fieldset-back-color:			$form-back-color;								// Background color for fieldset
-$fieldset-border-style:			1px solid #bdbdbd;								// Border style for fieldset
+$fieldset-border-style:			1px solid #a9a2ba;								// Border style for fieldset
 $fieldset-border-radius:		2px;											// Border radius for fieldset
 $fieldset-margin:				2px;											// Margin for fieldset
 $fieldset-padding:				6px 8px 8px;									// Padding for fieldset
@@ -211,33 +211,33 @@ $legend-font-size:				0.925em;										// Font size for legend
 $legend-fore-color:				$form-fore-color;								// Text color for legend
 $legend-padding:				2px 4px;										// Padding for legend
 $input-group-name:				'input-group';									// Class for input groups
-$input-back-color:				#fafafa;										// Background for input
+$input-back-color:				#f2edff;										// Background for input
 $input-fore-color:				$fore-color;									// Text color for input
-$input-border-style:			1px solid #bdbdbd;								// Border style for input
-$input-border-radius:			1px;											// Border radius for input
+$input-border-style:			1px solid #a9a2ba;								// Border style for input
+$input-border-radius:			2px;											// Border radius for input
 $input-margin:					2px;											// Margin for input
 $input-padding:					8px 12px;										// padding for input
-$input-focus-border-color:		#0288d1;										// Border color for focused input
-$input-invalid-border-color:	#d32f2f;										// Border color for invalid input
-$input-disabled-opacity:		0.75;											// Opacity for disabled input
-$input-readonly-back-color:		#e0e0e0;										// Background color for readonly input
-$input-readonly-border-color:	#bdbdbd;										// Border color for readonly input
-$input-placeholder-fore-color:	#616161;										// Text color for input placeholder
-$button-back-color:				#bdbdbd;										// Back color for button elements
-$button-back-opacity:			0.65;											// Background opacity for button elements
-$button-hover-back-opacity:		0.8;											// Background opacity for button elements
+$input-focus-border-color:		#6979c6;										// Border color for focused input
+$input-invalid-border-color:	#d2405f;										// Border color for invalid input
+$input-disabled-opacity:		0.8;											// Opacity for disabled input
+$input-readonly-back-color:		#eae1ff;										// Background color for readonly input
+$input-readonly-border-color:	#a9a2ba;										// Border color for readonly input
+$input-placeholder-fore-color:	#493e4b;										// Text color for input placeholder
+$button-back-color:				#d3cae8;										// Back color for button elements
+$button-back-opacity:			1;												// Background opacity for button elements
+$button-hover-back-opacity:		0.75;											// Background opacity for button elements
 																				// on hover or focus
 $button-fore-color:				$fore-color;									// Text color for button elements
-$button-border-style:			0;												// Border style for button elements
-$button-border-radius:			2px;											// Border radius for button elements
+$button-border-style:			1px solid #a9a2ba;								// Border style for button elements
+$button-border-radius:			3px;											// Border radius for button elements
 $button-padding:				8px 12px;										// Padding for button elements
-$button-margin:					8px;											// Margin for button elements
+$button-margin:					10px;											// Margin for button elements
 $button-box-shadow:																// Box shadow for buttons
 	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
-$button-disabled-opacity:		0.65;											// Disabled button elements opacity
+$button-disabled-opacity:		0.75;											// Disabled button elements opacity
 $button-class-name:				'button';										// Class for custom button elements
 $button-group-name:				'button-group';									// Class for button groups
-$button-group-border-style:		1px solid #9e9e9e;								// Border style for button groups
+$button-group-border-style:		1px solid #a9a2ba;								// Border style for button groups
 $button-group-margin:			$button-margin;									// Margin for button groups
 $button-group-box-shadow:														// Box shadow for button groups
 	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);			
@@ -246,32 +246,32 @@ $hide-file-inputs:				true;											// Should a style be added that makes all
 																				// <input>s of type `file` hidden?
 																				// (`true`/`false`) [1]
 $button-variant1-name:			'primary';										// Class name for button variant 1
-$button-variant1-back-color:	#0277bd;										// Background color for button variant 1
-$button-variant1-back-opacity:	0.9;											// Background opacity for button variant 1
+$button-variant1-back-color:	#6979c6;										// Background color for button variant 1
+$button-variant1-back-opacity:	1;												// Background opacity for button variant 1
 $button-variant1-hover-back-opacity:											// Background opacity for button variant 1
-								1;												// on hover or focus
-$button-variant1-fore-color:	#fafafa;										// Text color for button variant 1
+								0.75;											// on hover or focus
+$button-variant1-fore-color:	#fffddc;										// Text color for button variant 1
 $button-variant2-name:			'secondary';									// Class name for button variant 2
-$button-variant2-back-color:	#c62828;										// Background color for button variant 2
-$button-variant2-back-opacity:	0.85;											// Background opacity for button variant 2
+$button-variant2-back-color:	#d2405f;										// Background color for button variant 2
+$button-variant2-back-opacity:	1;												// Background opacity for button variant 2
 $button-variant2-hover-back-opacity:											// Background opacity for button variant 2
-								1;												// on hover or focus
-$button-variant2-fore-color:	#fafafa;										// Text color for button variant 2
+								0.75;											// on hover or focus
+$button-variant2-fore-color:	#fffddc;										// Text color for button variant 2
 $button-variant3-name:			'tertiary';										// Class name for button variant 3
-$button-variant3-back-color:	#689f38;										// Background color for button variant 3
-$button-variant3-back-opacity:	0.85;											// Background opacity for button variant 3
+$button-variant3-back-color:	#2b866d;										// Background color for button variant 3
+$button-variant3-back-opacity:	1;												// Background opacity for button variant 3
 $button-variant3-hover-back-opacity:											// Background opacity for button variant 3
-								1;												// on hover or focus
-$button-variant3-fore-color:	#fafafa;										// Text color for button variant 3
+								0.75;											// on hover or focus
+$button-variant3-fore-color:	#fffddc;										// Text color for button variant 3
 $button-variant4-name:			'inverse';										// Class name for button variant 4
-$button-variant4-back-color:	$fore-color;									// Background color for button variant 4
+$button-variant4-back-color:	#331e36;										// Background color for button variant 4
 $button-variant4-back-opacity:	1;												// Background opacity for button variant 4
 $button-variant4-hover-back-opacity:											// Background opacity for button variant 4
-								0.9;											// on hover or focus
-$button-variant4-fore-color:	#fafafa;										// Text color for button variant 4
+								0.75;											// on hover or focus
+$button-variant4-fore-color:	#fffddc;										// Text color for button variant 4
 $button-style1-name:			'small';										// Class name for button style 1
 $button-style1-border-style:	0;												// Border style for button style 1
-$button-style1-border-radius:	1px;											// Border radius for button style 1
+$button-style1-border-radius:	2px;											// Border radius for button style 1
 $button-style1-padding:			4px 6px;										// Padding for button style 1
 $button-style1-margin:			6px 8px;										// Margin for button style 1
 $button-style2-name:			'large';										// Class name for button style 2
@@ -283,7 +283,7 @@ $checkbox-size:					16px;											// Size for checkbox/radio [2]
 $checkbox-back-color:			$input-back-color;								// Background clor for checkbox/radio
 $checkbox-fore-color:			$input-fore-color;								// Text/mark color for checkbox/radio
 $checkbox-border-thickness:		1px;											// Border thickness for checkbox/radio
-$checkbox-border-color:			#bdbdbd;										// Border color for checkbox/radio
+$checkbox-border-color:			#a9a2ba;										// Border color for checkbox/radio
 $checkbox-border-radius:		$input-border-radius;							// Border radius for checkbox/radio
 $checkbox-focus-border-color: 	$input-focus-border-color;						// Border color for checkbox/radio on focus
 $checkbox-bottom-spacing:		3px;											// Bottom spacing for checkbox/radio

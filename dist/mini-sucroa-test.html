@@ -30,7 +30,7 @@
       .box-centered { text-align: center; }
       .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
       .box-colored.red { background: #b71c1c; }
-      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+      /*[class^='col-'] .card.fluid { margin: 2px 0 20px; }*/
     </style>
   </head>
   <body>  
@@ -380,6 +380,7 @@
                   </div>
                   <div class="col-sm">
                     <input type="text" value="" id="website" placeholder="website" style="width:85%;">
+                    <button>Button</button>
                   </div>
                 </div>
                 <div class="row">
@@ -470,6 +471,7 @@
             <input type="reset" value="Tertiary reset button" class="tertiary">
             <input type="submit" value="Large submit button" class="large">
             <label disabled class="button small primary">Small primary disabled label button</label>
+            <button class="inverse">Inverse button</button>
             <br><br>  
             <h3>Checkboxes and Radio buttons</h3>
             <p>Checkboxes and radio buttons are styled using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, while keeping things simple and adding just the needed consistency for those input types. Place an <code>&lt;input&gt;</code> (checkbox or radio button) and a linked <code>&lt;label&gt;</code> inside an <code>.input-group</code> and the controls will style themselves. To allow accessibility for those controls, you can use <code>tabindex=&quot;0&quot;</code> on the <code>&lt;input&gt;</code> elements only. You can see some examples below:</p>

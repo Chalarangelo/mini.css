@@ -714,3 +714,16 @@
 - *TODO* Update the live version sheets to use the v2.0.2 sheet, update all the references in live demo, update the flavors page.
 - *TODO* Update the live version local sheets to use the new colors whenever needed.
 - *TODO* New flavor with girlfriend.
+
+## 20161231
+
+- GF worked on `sucroa` flavor.
+
+## 20170101
+
+- GF finished `sucroa` flavor.
+
+## 20170102
+
+- Merged pull request for `sucroa` flavor.
+- Documented `sucroa` flavor in `flavors.html`.

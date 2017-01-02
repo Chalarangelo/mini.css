@@ -1,6 +1,6 @@
 {
   "name": "mini.css",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A minimal, responsive, style-agnostic CSS toolkit.",
   "main": "flavors/mini-default.min.css",
   "directories": {

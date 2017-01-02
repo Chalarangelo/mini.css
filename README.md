@@ -1,4 +1,4 @@
-# mini.css v2.0.1
+# mini.css v2.0.2
 ## A minimal, responsive, style-agnostic CSS toolkit
 
 ![Logo](/docs/page_thumb.PNG)
@@ -49,6 +49,7 @@ To develop some other part of **mini.css**:
 ## Contributors
 
 - Angelos Chalaris (@chalarangelo)
+- Angeliki Daskalakis (@angiedaskalakis)
 - Rory Primrose (@roryprimrose)
 
 ## License

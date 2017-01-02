@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.2
+
+- Added a new flavor, **sucroa**.
+- Updated color palette for **default** flavor to deal with colorblindness issues.
+- Added hugging cat.
+
 ## v2.0.1
 
 - Updated module structure. `_core.scss` no longer contains all `@import` statements, but they are now included in the flavor files.

@@ -727,3 +727,6 @@
 
 - Merged pull request for `sucroa` flavor.
 - Documented `sucroa` flavor in `flavors.html`.
+- Updated `README` and `CHANGELOG`.
+- Updated `.do` and `.dont` classes for doc pages.
+- Doc pages updated to use v2.0.2.

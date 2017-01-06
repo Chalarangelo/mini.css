@@ -740,3 +740,4 @@
 - Implemented the whole *simple* layout structure for the `grid` module, allowing a `.row` to set the layout of its children, using a `.cols-{SZ}-{WD}` class.
 - Decided to include the new `grid` system in the `mini-default` flavor, as its functionality could be beneficial to a lot of people. The new filesize (gzipped) is `6.47KB` over the previous `6.32KB`. 
 - Added what is basically an *auto-grid* option in `.row.cols-sm` and similar for other sizes, that auto-sizes all columns in a given row. Might come in handy.
+- Updated `index.html` to show *under 10KB* instead of *about 5KB* in the **Minimal** card in order to deal with the controversy surrounding this specific line.

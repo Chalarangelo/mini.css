@@ -730,3 +730,9 @@
 - Updated `README` and `CHANGELOG`.
 - Updated `.do` and `.dont` classes for doc pages.
 - Doc pages updated to use v2.0.2.
+
+# v2.1.0 Development log
+
+## 20170106
+
+- Created a new branch for the development of v2.1.0.

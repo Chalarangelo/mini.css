@@ -135,9 +135,12 @@ $apply-link-hover-fade:			true;											// Should the :hover and :focus state 
 //	Variables for grid elements
 $use-four-step-grid:			false;											// Should the old 4-step grid system be used
 																				// instead of the new (`true`/`false`) [1]
+$include-parent-layout:			true !default;									// Should the classes for rows defining the column
+																				// layout of children be included (`true`/`false`) [2]
 $grid-container-name:			'container';									// Class name for the grid container
 $grid-container-side-padding:	10px;											// Padding for the grid container (left and right only)
 $grid-row-name:					'row';											// Class name for the grid's rows
+$grid-row-parent-layout-prefix:	'cols';											// Class name prefix for the grid's row parents [2]
 $grid-column-prefix:			'col';											// Class name prefix for the grid's columns
 $grid-column-offset-suffix:		'offset';										// Class name suffix for the grid's offsets
 $grid-order-normal-suffix:		'normal';										// Class name suffix for grid columns with normal priority
@@ -155,6 +158,8 @@ $grid-large-prefix:				'lg';											// Large screen class prefix for grid
 //	Notes:
 // [1] - If the value of $use-four-step-grid is `true`, the grid system will contain 4 breakpoints instead of 3, along with
 //	the needed styles. In this case, values should be specified for $grid-extra-small-prefix and $grid-small-breakpoint.
+// [2] - If the value of $include-parent-layout is `true`, the grid system will contain extra classes that will define the column
+//	layout of their children. In this case, a value should be specified for $grid-row-parent-layout-prefix.
 //	Variables for navigational elements
 $header-height:					44px;											// Height for <header>
 $header-back-color:				#263238;										// Background color for <header>

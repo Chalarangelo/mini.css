@@ -736,3 +736,7 @@
 ## 20170106
 
 - Created a new branch for the development of v2.1.0.
+- Added `$include-parent-layout` flag, which will allow rows declaring column layout for children.
+- Implemented the whole *simple* layout structure for the `grid` module, allowing a `.row` to set the layout of its children, using a `.cols-{SZ}-{WD}` class.
+- Decided to include the new `grid` system in the `mini-default` flavor, as its functionality could be beneficial to a lot of people. The new filesize (gzipped) is `6.47KB` over the previous `6.32KB`. 
+- Added what is basically an *auto-grid* option in `.row.cols-sm` and similar for other sizes, that auto-sizes all columns in a given row. Might come in handy.

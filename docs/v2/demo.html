@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0.2/dist/mini-default.min.css"> -->
+    <link rel="stylesheet" href="../../dist/mini-default.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>mini.css - v2.1.0 Test page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
+    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass">
+    <meta name="author" content="Angelos Chalaris (chalarangelo)">
+    <meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="mini.css is a tiny CSS toolkit designed to build quick, modern and responsive websites."/>
+    <meta property="og:image" content="page_thumb.PNG">
+    <meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
+    <link rel="icon" type="image/png" href="favicon.png">    
+    <style>
+      /* Classes and ids used in multiple pages - page top and utilities */
+      #header-logo {
+        display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px;
+         padding: 4px;
+      }
+      #top-logo {
+        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
+        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      #top-heading {
+        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
+      }
+      #top-version-tag {
+        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      .box-centered { text-align: center; }
+      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
+      .box-colored.red { background: #e53935; }
+      .box-centered > .card.fluid {
+        -webkit-box-pack: start;
+        -webkit-box-align: start; 
+        -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+        -webkit-align-self: auto;
+                align-self: auto;
+      }
+      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+      /* Local classes and ids for this page */
+      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
+      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
+      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
+      .col-sm-12.col-sm-last.col-md-4.col-md-normal {
+        box-sizing: border-box;
+        border-right: 1px solid #bdbdbd;
+      }
+      @media (max-width: 767px){
+        .col-sm-12.col-sm-last.col-md-4.col-md-normal {
+          border: 0;
+          border-top: 1px solid #bdbdbd;
+        }
+      }
+      .box-colored.green { background: #689f38; }
+      .do {
+        border-top: 15px solid #689f38;
+        padding-top: 10px;
+      }
+      .dont {
+        border-top: 15px solid #e53935;
+        padding-top: 10px;
+      }
+      .box-colored {
+        color: #f5f5f5;
+      }
+    </style>
+  </head>
+  <body>  
+    <header>
+      <a href="index.html"><img class="logo" src="mini-logo.svg" id="header-logo"></a><div style="display: inline; overflow: auto;">
+      <a href="index.html" class="button">Introduction</a>
+      <a href="modules.html" class="button">Modules</a>
+      <a href="flavors.html" class="button">Flavors</a>
+      <a href="customization.html" class="button">Customization</a>
+      <a href="quick_reference.html" class="button">Quick Reference</a>
+      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
+      </div>
+    </header>
+    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
+      <div class="row">
+        <div class="col-sm">
+          <div class="box-centered">
+            <img src="mini-logo.svg" id="top-logo">
+            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
+            <mark class="tertiary" id="top-version-tag">v2.0</mark>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row cols-sm-12" style="padding-top: 20px">
+        <div><h2>Quick-layout system</h2>
+      </div>
+      <div class="row cols-sm-12 cols-md-6 cols-lg-4">
+        <div><div class="box-colored"></div></div>
+        <div><div class="box-colored"></div></div>
+        <div><div class="box-colored"></div></div>
+        <div><div class="box-colored"></div></div>
+        <div><div class="box-colored"></div></div>
+        <div><div class="box-colored"></div></div>
+      </div>
+      <div class="row cols-sm-12">
+        <div><h2>Classic system</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4"><div class="box-colored"></div></div>
+        <div class="col-sm-12 col-md-6 col-lg-4"><div class="box-colored"></div></div>
+        <div class="col-sm-12 col-md-6 col-lg-4"><div class="box-colored"></div></div>
+        <div class="col-sm-12 col-md-6 col-lg-4"><div class="box-colored"></div></div>
+        <div class="col-sm-12 col-md-6 col-lg-4"><div class="box-colored"></div></div>
+        <div class="col-sm-12 col-md-6 col-lg-4"><div class="box-colored"></div></div>
+      </div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

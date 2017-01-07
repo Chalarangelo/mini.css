@@ -750,3 +750,4 @@
 - Tested a new layout idea in `demo.html`, this is how the new `index.html` should look like in the next update (top part only).
 - Updated `index.html` to use the new `.sticky` `header`, along with other styling changes, such as content sizing.
 - *TODO* Update the rest of the pages, bump everything to `v2.1.0` and use the local stylesheets in the meantime.
+- Content spacing changes in `index.html`.

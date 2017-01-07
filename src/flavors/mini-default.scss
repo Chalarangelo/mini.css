@@ -176,6 +176,9 @@ $header-logo-margin:			1px 6px 1px 1px;								// Margin for <header>'s logo
 $header-logo-padding:			3px 0 0;										// Padding for <header>'s logo
 $header-link-hover-color:		#37474f;										// Hover color for <header>'s links
 $header-link-margin:			2px 0 0;										// Margin for <header>'s links
+$include-header-sticky:			true;											// Should sticky <header> elements be
+																				// included? (`true`/`false`) [1]
+$header-sticky-name:			'sticky';										// Class name for sticky <header>
 $nav-back-color:				#eceff1;										// Background for <nav>
 $nav-fore-color:				$fore-color;									// Text color for <nav>
 $nav-border-style:				1px solid #bdbdbd;								// Border style for <nav>
@@ -195,6 +198,9 @@ $footer-font-size:				85%;											// Font size for <footer>
 $footer-margin:					18px 0 0;										// Margin for <footer>
 $footer-padding:				22px 10px 12px;									// Padding for <footer>
 $footer-link-fore-color:		#039be5;										// Text color for links in <footer>
+//	Notes:
+// [1] - If the value of $include-header-sticky is `true`, a class will be created that will allow for sticky positioning
+//	of <header> elements, using the value of $header-sticky-name for the name of the class.
 //	Variables for forms and inputs
 $form-back-color:				#eeeeee;										// Background color for forms
 $form-fore-color:				$fore-color;									// Text color for forms

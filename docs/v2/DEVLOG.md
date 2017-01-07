@@ -741,3 +741,10 @@
 - Decided to include the new `grid` system in the `mini-default` flavor, as its functionality could be beneficial to a lot of people. The new filesize (gzipped) is `6.47KB` over the previous `6.32KB`. 
 - Added what is basically an *auto-grid* option in `.row.cols-sm` and similar for other sizes, that auto-sizes all columns in a given row. Might come in handy.
 - Updated `index.html` to show *under 10KB* instead of *about 5KB* in the **Minimal** card in order to deal with the controversy surrounding this specific line.
+
+## 20170107
+
+- Thoroughly tested `position: sticky` for `header` elements. It seems to work quite fine. - #24
+- Tested `position: sticky` for breadcrumbs and other elements. Layout seems to get in the way quite a lot. Implementation might only be viable for `header` elements for now.
+- Added `$include-header-sticky` flag and required variables to implement the `.sticky` class.
+- Tested a new layout idea in `demo.html`, this is how the new `index.html` should look like in the next update (top part only).

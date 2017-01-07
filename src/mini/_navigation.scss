@@ -5,6 +5,7 @@
 // Header styling.
 $button-class-name:				'button' !default;								// Class name for the button-like elements
 $header-logo-name:				'logo' !default;								// Class name for <header>'s logo
+$include-header-sticky:			false !default;									// Should the sticky class for <header> elements be included
 header {
 	display: block;		// Correct display for older versions of IE.
 	height: $header-height;
@@ -68,6 +69,14 @@ header {
 		.#{$header-logo-name}, a.#{$button-class-name} {
 			text-decoration: none;
 		}
+	}
+}
+@if $include-header-sticky {
+	header.#{$header-sticky-name} {
+		position: -webkit-sticky;
+		position:		  sticky;
+		top: 0;
+		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
 	}
 }
 // Navigation sidebar styling.

@@ -748,3 +748,4 @@
 - Tested `position: sticky` for breadcrumbs and other elements. Layout seems to get in the way quite a lot. Implementation might only be viable for `header` elements for now.
 - Added `$include-header-sticky` flag and required variables to implement the `.sticky` class.
 - Tested a new layout idea in `demo.html`, this is how the new `index.html` should look like in the next update (top part only).
+

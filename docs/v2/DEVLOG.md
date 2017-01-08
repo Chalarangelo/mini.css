@@ -754,5 +754,5 @@
 
 ## 20170108
 
-- Added `$include-footer-bottom` flag, coded the necessary parts for absolute-bottom-aligned `footer` elements.
-- *TODO* Update all pages to use the new `footer` absolute-alignment. Should solve some issues on different devices.
+- Added `$include-footer-bottom` flag, coded the necessary parts for absolute-bottom-aligned `footer` elements. - Resolved #42
+- Updated all pages to use the new `footer` absolute-alignment. Should solve some issues on different devices.

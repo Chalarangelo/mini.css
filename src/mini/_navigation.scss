@@ -118,7 +118,7 @@ nav {
 	}
 }
 
-$include-footer-bottom:			false !default;									// Should the class that aligns <footer> elements to the 
+$include-footer-sticky:			false !default;									// Should the class that aligns <footer> elements to the 
 																				// bottom of the page be included
 // Footer styling.
 footer {
@@ -143,8 +143,8 @@ footer {
 		color: $footer-link-fore-color;
 	}
 }
-@if $include-footer-bottom {
-	footer.#{$footer-bottom-name}{
+@if $include-footer-sticky {
+	footer.#{$footer-sticky-name}{
 		box-sizing: border-box;
 		position: absolute;
 		bottom: 0;

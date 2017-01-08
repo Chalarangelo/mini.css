@@ -681,7 +681,7 @@ footer {
   footer a, footer a:visited {
     color: #039be5; }
 
-footer.bottom {
+footer.sticky {
   box-sizing: border-box;
   position: absolute;
   bottom: 0;

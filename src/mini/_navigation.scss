@@ -117,6 +117,9 @@ nav {
 		}
 	}
 }
+
+$include-footer-bottom:			false !default;									// Should the class that aligns <footer> elements to the 
+																				// bottom of the page be included
 // Footer styling.
 footer {
 	display: block;		// Correct display for older versions of IE.
@@ -138,5 +141,13 @@ footer {
 	font-size: $footer-font-size;
 	a, a:visited {
 		color: $footer-link-fore-color;
+	}
+}
+@if $include-footer-bottom {
+	footer.#{$footer-bottom-name}{
+		box-sizing: border-box;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
 	}
 }

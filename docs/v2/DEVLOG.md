@@ -751,3 +751,8 @@
 - Updated `index.html` to use the new `.sticky` `header`, along with other styling changes, such as content sizing.
 - *TODO* Update the rest of the pages, bump everything to `v2.1.0` and use the local stylesheets in the meantime.
 - Content spacing changes in `index.html`.
+
+## 20170108
+
+- Added `$include-footer-bottom` flag, coded the necessary parts for absolute-bottom-aligned `footer` elements.
+- *TODO* Update all pages to use the new `footer` absolute-alignment. Should solve some issues on different devices.

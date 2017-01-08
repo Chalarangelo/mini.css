@@ -4,7 +4,7 @@
 /*
 	Flavor name: Default (mini-default)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v2.0.2 (Fermion)
+	mini.css version: v2.1.0 (Fermion)
 */
 //	Basic rules for body and typography
 $fore-color:					#212121;										// Text and general foreground color
@@ -198,9 +198,14 @@ $footer-font-size:				85%;											// Font size for <footer>
 $footer-margin:					18px 0 0;										// Margin for <footer>
 $footer-padding:				22px 10px 12px;									// Padding for <footer>
 $footer-link-fore-color:		#039be5;										// Text color for links in <footer>
+$include-footer-bottom:			true;											// Should the class that aligns <footer> elements to  
+																				// the bottom of the page be included (`true`/`false`) [2]
+$footer-bottom-name:			'bottom';										// Class name for <footer> element with bottom alignment [2]
 //	Notes:
 // [1] - If the value of $include-header-sticky is `true`, a class will be created that will allow for sticky positioning
 //	of <header> elements, using the value of $header-sticky-name for the name of the class.
+// [2] - If the value of $include-footer-bottom is `true`, a class will be created that will allow for absolute positioning
+//	of <footer> elements, using the value of $footer-bottom-name for the name of the class.
 //	Variables for forms and inputs
 $form-back-color:				#eeeeee;										// Background color for forms
 $form-fore-color:				$fore-color;									// Text color for forms

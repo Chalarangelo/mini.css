@@ -2,7 +2,7 @@
 /*
 	Flavor name: Default (mini-default)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v2.0.2 (Fermion)
+	mini.css version: v2.1.0 (Fermion)
 */
 /* 
 	Browsers resets and base typography. 
@@ -680,6 +680,12 @@ footer {
   font-size: 85%; }
   footer a, footer a:visited {
     color: #039be5; }
+
+footer.bottom {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
 
 /* 
 	Definitions for forms and input elements. 

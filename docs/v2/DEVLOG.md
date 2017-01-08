@@ -758,3 +758,4 @@
 - Updated all pages to use the new `footer` absolute-alignment. Should solve some issues on different devices.
 - Changed the implementation of the new `footer` to `sticky`, instead of absolute.
 - Rolled back all pages that were affected. Should work like a charm now!
+- Finalized the `sticky` `footer`.

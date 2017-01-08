@@ -682,10 +682,10 @@ footer {
     color: #039be5; }
 
 footer.sticky {
-  box-sizing: border-box;
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
   bottom: 0;
-  width: 100%; }
+  z-index: 1101; }
 
 /* 
 	Definitions for forms and input elements. 

@@ -621,7 +621,7 @@ a {
     -webkit-order: 999;
     order: 999; } }
 /*
-	Definitions for navigation elements. 
+	Definitions for navigation elements.
 */
 header {
   display: block;
@@ -650,12 +650,6 @@ header {
   header .logo, header a.button {
     text-decoration: none; }
 
-header.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1101; }
-
 nav {
   display: block;
   background: #eceff1;
@@ -681,11 +675,16 @@ footer {
   footer a, footer a:visited {
     color: #039be5; }
 
-footer.sticky {
+header.sticky, footer.sticky {
   position: -webkit-sticky;
   position: sticky;
-  bottom: 0;
   z-index: 1101; }
+
+header.sticky {
+  top: 0; }
+
+footer.sticky {
+  bottom: 0; }
 
 /*
 	Definitions for forms and input elements.
@@ -782,7 +781,7 @@ button {
 
 button, [type="button"], [type="submit"], [type="reset"],
 a.button, label.button, .button,
-a[aria-role="button"], label[aria-role="button"], [aria-role="button"] {
+a[role="button"], label[role="button"], [role="button"] {
   display: inline-block;
   background: rgba(189, 189, 189, 0.65);
   color: #212121;
@@ -799,16 +798,16 @@ a[aria-role="button"], label[aria-role="button"], [aria-role="button"] {
   a.button:hover,
   a.button:active,
   a.button:focus, label.button:hover, label.button:active, label.button:focus, .button:hover, .button:active, .button:focus,
-  a[aria-role="button"]:hover,
-  a[aria-role="button"]:active,
-  a[aria-role="button"]:focus, label[aria-role="button"]:hover, label[aria-role="button"]:active, label[aria-role="button"]:focus, [aria-role="button"]:hover, [aria-role="button"]:active, [aria-role="button"]:focus {
+  a[role="button"]:hover,
+  a[role="button"]:active,
+  a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:active, label[role="button"]:focus, [role="button"]:hover, [role="button"]:active, [role="button"]:focus {
     background: rgba(189, 189, 189, 0.8);
     opacity: 1; }
   button:disabled, button[disabled], [type="button"]:disabled, [type="button"][disabled], [type="submit"]:disabled, [type="submit"][disabled], [type="reset"]:disabled, [type="reset"][disabled],
   a.button:disabled,
   a.button[disabled], label.button:disabled, label.button[disabled], .button:disabled, .button[disabled],
-  a[aria-role="button"]:disabled,
-  a[aria-role="button"][disabled], label[aria-role="button"]:disabled, label[aria-role="button"][disabled], [aria-role="button"]:disabled, [aria-role="button"][disabled] {
+  a[role="button"]:disabled,
+  a[role="button"][disabled], label[role="button"]:disabled, label[role="button"][disabled], [role="button"]:disabled, [role="button"][disabled] {
     cursor: not-allowed;
     opacity: 0.65; }
 
@@ -833,8 +832,7 @@ input[type="file"] {
   margin: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15); }
   .button-group button, .button-group [type="button"], .button-group [type="submit"], .button-group [type="reset"],
-  .button-group a.button, .button-group label.button, .button-group .button,
-  .button-group a[aria-role="button"], .button-group label[aria-role="button"], .button-group [aria-role="button"] {
+  .button-group .button, .button-group [role="button"] {
     margin: 0;
     -webkit-box-flex: 1;
     max-width: 100%;
@@ -847,42 +845,17 @@ input[type="file"] {
     border-radius: 0;
     box-shadow: none; }
     .button-group button + button, .button-group button + [type="button"], .button-group button + [type="submit"], .button-group button + [type="reset"],
-    .button-group button + a.button, .button-group button + label.button, .button-group button + .button,
-    .button-group button + a[aria-role="button"], .button-group button + label[aria-role="button"], .button-group button + [aria-role="button"], .button-group [type="button"] + button, .button-group [type="button"] + [type="button"], .button-group [type="button"] + [type="submit"], .button-group [type="button"] + [type="reset"],
-    .button-group [type="button"] + a.button, .button-group [type="button"] + label.button, .button-group [type="button"] + .button,
-    .button-group [type="button"] + a[aria-role="button"], .button-group [type="button"] + label[aria-role="button"], .button-group [type="button"] + [aria-role="button"], .button-group [type="submit"] + button, .button-group [type="submit"] + [type="button"], .button-group [type="submit"] + [type="submit"], .button-group [type="submit"] + [type="reset"],
-    .button-group [type="submit"] + a.button, .button-group [type="submit"] + label.button, .button-group [type="submit"] + .button,
-    .button-group [type="submit"] + a[aria-role="button"], .button-group [type="submit"] + label[aria-role="button"], .button-group [type="submit"] + [aria-role="button"], .button-group [type="reset"] + button, .button-group [type="reset"] + [type="button"], .button-group [type="reset"] + [type="submit"], .button-group [type="reset"] + [type="reset"],
-    .button-group [type="reset"] + a.button, .button-group [type="reset"] + label.button, .button-group [type="reset"] + .button,
-    .button-group [type="reset"] + a[aria-role="button"], .button-group [type="reset"] + label[aria-role="button"], .button-group [type="reset"] + [aria-role="button"],
-    .button-group a.button + button,
-    .button-group a.button + [type="button"],
-    .button-group a.button + [type="submit"],
-    .button-group a.button + [type="reset"],
-    .button-group a.button + a.button,
-    .button-group a.button + label.button,
-    .button-group a.button + .button,
-    .button-group a.button + a[aria-role="button"],
-    .button-group a.button + label[aria-role="button"],
-    .button-group a.button + [aria-role="button"], .button-group label.button + button, .button-group label.button + [type="button"], .button-group label.button + [type="submit"], .button-group label.button + [type="reset"],
-    .button-group label.button + a.button, .button-group label.button + label.button, .button-group label.button + .button,
-    .button-group label.button + a[aria-role="button"], .button-group label.button + label[aria-role="button"], .button-group label.button + [aria-role="button"], .button-group .button + button, .button-group .button + [type="button"], .button-group .button + [type="submit"], .button-group .button + [type="reset"],
-    .button-group .button + a.button, .button-group .button + label.button, .button-group .button + .button,
-    .button-group .button + a[aria-role="button"], .button-group .button + label[aria-role="button"], .button-group .button + [aria-role="button"],
-    .button-group a[aria-role="button"] + button,
-    .button-group a[aria-role="button"] + [type="button"],
-    .button-group a[aria-role="button"] + [type="submit"],
-    .button-group a[aria-role="button"] + [type="reset"],
-    .button-group a[aria-role="button"] + a.button,
-    .button-group a[aria-role="button"] + label.button,
-    .button-group a[aria-role="button"] + .button,
-    .button-group a[aria-role="button"] + a[aria-role="button"],
-    .button-group a[aria-role="button"] + label[aria-role="button"],
-    .button-group a[aria-role="button"] + [aria-role="button"], .button-group label[aria-role="button"] + button, .button-group label[aria-role="button"] + [type="button"], .button-group label[aria-role="button"] + [type="submit"], .button-group label[aria-role="button"] + [type="reset"],
-    .button-group label[aria-role="button"] + a.button, .button-group label[aria-role="button"] + label.button, .button-group label[aria-role="button"] + .button,
-    .button-group label[aria-role="button"] + a[aria-role="button"], .button-group label[aria-role="button"] + label[aria-role="button"], .button-group label[aria-role="button"] + [aria-role="button"], .button-group [aria-role="button"] + button, .button-group [aria-role="button"] + [type="button"], .button-group [aria-role="button"] + [type="submit"], .button-group [aria-role="button"] + [type="reset"],
-    .button-group [aria-role="button"] + a.button, .button-group [aria-role="button"] + label.button, .button-group [aria-role="button"] + .button,
-    .button-group [aria-role="button"] + a[aria-role="button"], .button-group [aria-role="button"] + label[aria-role="button"], .button-group [aria-role="button"] + [aria-role="button"] {
+    .button-group button + .button, .button-group button + [role="button"], .button-group [type="button"] + button, .button-group [type="button"] + [type="button"], .button-group [type="button"] + [type="submit"], .button-group [type="button"] + [type="reset"],
+    .button-group [type="button"] + .button, .button-group [type="button"] + [role="button"], .button-group [type="submit"] + button, .button-group [type="submit"] + [type="button"], .button-group [type="submit"] + [type="submit"], .button-group [type="submit"] + [type="reset"],
+    .button-group [type="submit"] + .button, .button-group [type="submit"] + [role="button"], .button-group [type="reset"] + button, .button-group [type="reset"] + [type="button"], .button-group [type="reset"] + [type="submit"], .button-group [type="reset"] + [type="reset"],
+    .button-group [type="reset"] + .button, .button-group [type="reset"] + [role="button"],
+    .button-group .button + button,
+    .button-group .button + [type="button"],
+    .button-group .button + [type="submit"],
+    .button-group .button + [type="reset"],
+    .button-group .button + .button,
+    .button-group .button + [role="button"], .button-group [role="button"] + button, .button-group [role="button"] + [type="button"], .button-group [role="button"] + [type="submit"], .button-group [role="button"] + [type="reset"],
+    .button-group [role="button"] + .button, .button-group [role="button"] + [role="button"] {
       border-left: 1px solid #9e9e9e; }
 
 @media (max-width: 767px) {
@@ -891,42 +864,17 @@ input[type="file"] {
     -webkit-flex-direction: column;
     flex-direction: column; }
     .button-group button + button, .button-group button + [type="button"], .button-group button + [type="submit"], .button-group button + [type="reset"],
-    .button-group button + a.button, .button-group button + label.button, .button-group button + .button,
-    .button-group button + a[aria-role="button"], .button-group button + label[aria-role="button"], .button-group button + [aria-role="button"], .button-group [type="button"] + button, .button-group [type="button"] + [type="button"], .button-group [type="button"] + [type="submit"], .button-group [type="button"] + [type="reset"],
-    .button-group [type="button"] + a.button, .button-group [type="button"] + label.button, .button-group [type="button"] + .button,
-    .button-group [type="button"] + a[aria-role="button"], .button-group [type="button"] + label[aria-role="button"], .button-group [type="button"] + [aria-role="button"], .button-group [type="submit"] + button, .button-group [type="submit"] + [type="button"], .button-group [type="submit"] + [type="submit"], .button-group [type="submit"] + [type="reset"],
-    .button-group [type="submit"] + a.button, .button-group [type="submit"] + label.button, .button-group [type="submit"] + .button,
-    .button-group [type="submit"] + a[aria-role="button"], .button-group [type="submit"] + label[aria-role="button"], .button-group [type="submit"] + [aria-role="button"], .button-group [type="reset"] + button, .button-group [type="reset"] + [type="button"], .button-group [type="reset"] + [type="submit"], .button-group [type="reset"] + [type="reset"],
-    .button-group [type="reset"] + a.button, .button-group [type="reset"] + label.button, .button-group [type="reset"] + .button,
-    .button-group [type="reset"] + a[aria-role="button"], .button-group [type="reset"] + label[aria-role="button"], .button-group [type="reset"] + [aria-role="button"],
-    .button-group a.button + button,
-    .button-group a.button + [type="button"],
-    .button-group a.button + [type="submit"],
-    .button-group a.button + [type="reset"],
-    .button-group a.button + a.button,
-    .button-group a.button + label.button,
-    .button-group a.button + .button,
-    .button-group a.button + a[aria-role="button"],
-    .button-group a.button + label[aria-role="button"],
-    .button-group a.button + [aria-role="button"], .button-group label.button + button, .button-group label.button + [type="button"], .button-group label.button + [type="submit"], .button-group label.button + [type="reset"],
-    .button-group label.button + a.button, .button-group label.button + label.button, .button-group label.button + .button,
-    .button-group label.button + a[aria-role="button"], .button-group label.button + label[aria-role="button"], .button-group label.button + [aria-role="button"], .button-group .button + button, .button-group .button + [type="button"], .button-group .button + [type="submit"], .button-group .button + [type="reset"],
-    .button-group .button + a.button, .button-group .button + label.button, .button-group .button + .button,
-    .button-group .button + a[aria-role="button"], .button-group .button + label[aria-role="button"], .button-group .button + [aria-role="button"],
-    .button-group a[aria-role="button"] + button,
-    .button-group a[aria-role="button"] + [type="button"],
-    .button-group a[aria-role="button"] + [type="submit"],
-    .button-group a[aria-role="button"] + [type="reset"],
-    .button-group a[aria-role="button"] + a.button,
-    .button-group a[aria-role="button"] + label.button,
-    .button-group a[aria-role="button"] + .button,
-    .button-group a[aria-role="button"] + a[aria-role="button"],
-    .button-group a[aria-role="button"] + label[aria-role="button"],
-    .button-group a[aria-role="button"] + [aria-role="button"], .button-group label[aria-role="button"] + button, .button-group label[aria-role="button"] + [type="button"], .button-group label[aria-role="button"] + [type="submit"], .button-group label[aria-role="button"] + [type="reset"],
-    .button-group label[aria-role="button"] + a.button, .button-group label[aria-role="button"] + label.button, .button-group label[aria-role="button"] + .button,
-    .button-group label[aria-role="button"] + a[aria-role="button"], .button-group label[aria-role="button"] + label[aria-role="button"], .button-group label[aria-role="button"] + [aria-role="button"], .button-group [aria-role="button"] + button, .button-group [aria-role="button"] + [type="button"], .button-group [aria-role="button"] + [type="submit"], .button-group [aria-role="button"] + [type="reset"],
-    .button-group [aria-role="button"] + a.button, .button-group [aria-role="button"] + label.button, .button-group [aria-role="button"] + .button,
-    .button-group [aria-role="button"] + a[aria-role="button"], .button-group [aria-role="button"] + label[aria-role="button"], .button-group [aria-role="button"] + [aria-role="button"] {
+    .button-group button + .button, .button-group button + [role="button"], .button-group [type="button"] + button, .button-group [type="button"] + [type="button"], .button-group [type="button"] + [type="submit"], .button-group [type="button"] + [type="reset"],
+    .button-group [type="button"] + .button, .button-group [type="button"] + [role="button"], .button-group [type="submit"] + button, .button-group [type="submit"] + [type="button"], .button-group [type="submit"] + [type="submit"], .button-group [type="submit"] + [type="reset"],
+    .button-group [type="submit"] + .button, .button-group [type="submit"] + [role="button"], .button-group [type="reset"] + button, .button-group [type="reset"] + [type="button"], .button-group [type="reset"] + [type="submit"], .button-group [type="reset"] + [type="reset"],
+    .button-group [type="reset"] + .button, .button-group [type="reset"] + [role="button"],
+    .button-group .button + button,
+    .button-group .button + [type="button"],
+    .button-group .button + [type="submit"],
+    .button-group .button + [type="reset"],
+    .button-group .button + .button,
+    .button-group .button + [role="button"], .button-group [role="button"] + button, .button-group [role="button"] + [type="button"], .button-group [role="button"] + [type="submit"], .button-group [role="button"] + [type="reset"],
+    .button-group [role="button"] + .button, .button-group [role="button"] + [role="button"] {
       border: 0;
       border-top: 1px solid #9e9e9e; } }
 [type="checkbox"], [type="radio"] {
@@ -975,57 +923,57 @@ input[type="file"] {
   background: #212121;
   content: ''; }
 
-/* 
-	Custom elements for forms and input elements. 
+/*
+	Custom elements for forms and input elements.
 */
 button.primary, [type="button"].primary, [type="submit"].primary,
-[type="reset"].primary, .button.primary, [aria-role="button"].primary {
+[type="reset"].primary, .button.primary, [role="button"].primary {
   background: rgba(2, 119, 189, 0.9);
   color: #fafafa; }
   button.primary:hover, button.primary:active, button.primary:focus, [type="button"].primary:hover, [type="button"].primary:active, [type="button"].primary:focus, [type="submit"].primary:hover, [type="submit"].primary:active, [type="submit"].primary:focus,
   [type="reset"].primary:hover,
   [type="reset"].primary:active,
-  [type="reset"].primary:focus, .button.primary:hover, .button.primary:active, .button.primary:focus, [aria-role="button"].primary:hover, [aria-role="button"].primary:active, [aria-role="button"].primary:focus {
+  [type="reset"].primary:focus, .button.primary:hover, .button.primary:active, .button.primary:focus, [role="button"].primary:hover, [role="button"].primary:active, [role="button"].primary:focus {
     background: #0277bd; }
 
 button.secondary, [type="button"].secondary, [type="submit"].secondary,
-[type="reset"].secondary, .button.secondary, [aria-role="button"].secondary {
+[type="reset"].secondary, .button.secondary, [role="button"].secondary {
   background: rgba(198, 40, 40, 0.85);
   color: #fafafa; }
   button.secondary:hover, button.secondary:active, button.secondary:focus, [type="button"].secondary:hover, [type="button"].secondary:active, [type="button"].secondary:focus, [type="submit"].secondary:hover, [type="submit"].secondary:active, [type="submit"].secondary:focus,
   [type="reset"].secondary:hover,
   [type="reset"].secondary:active,
-  [type="reset"].secondary:focus, .button.secondary:hover, .button.secondary:active, .button.secondary:focus, [aria-role="button"].secondary:hover, [aria-role="button"].secondary:active, [aria-role="button"].secondary:focus {
+  [type="reset"].secondary:focus, .button.secondary:hover, .button.secondary:active, .button.secondary:focus, [role="button"].secondary:hover, [role="button"].secondary:active, [role="button"].secondary:focus {
     background: #c62828; }
 
 button.tertiary, [type="button"].tertiary, [type="submit"].tertiary,
-[type="reset"].tertiary, .button.tertiary, [aria-role="button"].tertiary {
+[type="reset"].tertiary, .button.tertiary, [role="button"].tertiary {
   background: rgba(104, 159, 56, 0.85);
   color: #fafafa; }
   button.tertiary:hover, button.tertiary:active, button.tertiary:focus, [type="button"].tertiary:hover, [type="button"].tertiary:active, [type="button"].tertiary:focus, [type="submit"].tertiary:hover, [type="submit"].tertiary:active, [type="submit"].tertiary:focus,
   [type="reset"].tertiary:hover,
   [type="reset"].tertiary:active,
-  [type="reset"].tertiary:focus, .button.tertiary:hover, .button.tertiary:active, .button.tertiary:focus, [aria-role="button"].tertiary:hover, [aria-role="button"].tertiary:active, [aria-role="button"].tertiary:focus {
+  [type="reset"].tertiary:focus, .button.tertiary:hover, .button.tertiary:active, .button.tertiary:focus, [role="button"].tertiary:hover, [role="button"].tertiary:active, [role="button"].tertiary:focus {
     background: #689f38; }
 
 button.inverse, [type="button"].inverse, [type="submit"].inverse,
-[type="reset"].inverse, .button.inverse, [aria-role="button"].inverse {
+[type="reset"].inverse, .button.inverse, [role="button"].inverse {
   background: #212121;
   color: #fafafa; }
   button.inverse:hover, button.inverse:active, button.inverse:focus, [type="button"].inverse:hover, [type="button"].inverse:active, [type="button"].inverse:focus, [type="submit"].inverse:hover, [type="submit"].inverse:active, [type="submit"].inverse:focus,
   [type="reset"].inverse:hover,
   [type="reset"].inverse:active,
-  [type="reset"].inverse:focus, .button.inverse:hover, .button.inverse:active, .button.inverse:focus, [aria-role="button"].inverse:hover, [aria-role="button"].inverse:active, [aria-role="button"].inverse:focus {
+  [type="reset"].inverse:focus, .button.inverse:hover, .button.inverse:active, .button.inverse:focus, [role="button"].inverse:hover, [role="button"].inverse:active, [role="button"].inverse:focus {
     background: rgba(33, 33, 33, 0.9); }
 
 button.small, [type="button"].small, [type="submit"].small,
-[type="reset"].small, .button.small, [aria-role="button"].small {
+[type="reset"].small, .button.small, [role="button"].small {
   border-radius: 1px;
   padding: 4px 6px;
   margin: 6px 8px; }
 
 button.large, [type="button"].large, [type="submit"].large,
-[type="reset"].large, .button.large, [aria-role="button"].large {
+[type="reset"].large, .button.large, [role="button"].large {
   border-radius: 4px;
   padding: 12px 18px;
   margin: 10px 8px; }
@@ -1251,8 +1199,8 @@ table.striped tr:nth-of-type(2n) > td {
 @media (min-width: 320px) {
   .card {
     max-width: 320px; } }
-/* 
-	Custom elements for cards and containers. 
+/*
+	Custom elements for cards and containers.
 */
 @media (min-width: 480px) {
   .card.large {
@@ -1443,8 +1391,8 @@ mark {
     -webkit-animation: alert-anim 6s linear infinite;
     animation: alert-anim 6s linear infinite; }
 
-/* 
-	Custom contextual background elements and alerts. 
+/*
+	Custom contextual background elements and alerts.
 */
 mark.secondary {
   background: #e53935; }
@@ -1531,8 +1479,8 @@ progress {
   -webkit-animation: spinner-donut-anim 1.2s linear infinite;
   animation: spinner-donut-anim 1.2s linear infinite; }
 
-/* 
-	Custom elements for progress elements and spinners. 
+/*
+	Custom elements for progress elements and spinners.
 */
 progress.inline {
   display: inline-block;
@@ -1690,8 +1638,8 @@ ul.breadcrumbs {
   margin-left: auto !important;
   margin-right: auto !important; }
 
-/* 
-	Custom elements for utilities and helper classes. 
+/*
+	Custom elements for utilities and helper classes.
 */
 .bordered {
   border: 1px solid rgba(0, 0, 0, 0.25) !important; }

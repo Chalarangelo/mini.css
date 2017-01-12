@@ -142,7 +142,7 @@ button {
 // Default styling
 button, [type="button"], [type="submit"], [type="reset"],
 a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name},
-a[aria-role="button"], label[aria-role="button"], [aria-role="button"] {
+a[role="button"], label[role="button"], [role="button"] {
 	display: inline-block;
 	background: rgba($button-back-color, $button-back-opacity);
 	color: $button-fore-color;
@@ -216,8 +216,7 @@ $hide-file-inputs: true !default;
 			box-shadow: $button-group-box-shadow;
 		}
 	button, [type="button"], [type="submit"], [type="reset"],
-	a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name},
-	a[aria-role="button"], label[aria-role="button"], [aria-role="button"] {
+	.#{$button-class-name}, [role="button"] {
 		margin: 0;
 		// Old syntax
 		-webkit-box-flex: 1;
@@ -234,8 +233,7 @@ $hide-file-inputs: true !default;
 		}
 		@if $button-group-border-style != 0 {
 			+ button, + [type="button"], + [type="submit"], + [type="reset"],
-			+ a.#{$button-class-name}, + label.#{$button-class-name}, + .#{$button-class-name},
-			+ a[aria-role="button"], + label[aria-role="button"], + [aria-role="button"] {
+			+ .#{$button-class-name}, + [role="button"] {
 				border-left: $button-group-border-style;
 			}
 		}
@@ -254,11 +252,9 @@ $hide-file-inputs: true !default;
 				flex-direction: column;
 		@if $button-group-border-style !=0 {
 			button, [type="button"], [type="submit"], [type="reset"],
-			a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name},
-			a[aria-role="button"], label[aria-role="button"], [aria-role="button"] {
+			.#{$button-class-name}, [role="button"] {
 				+ button, + [type="button"], + [type="submit"], + [type="reset"],
-				+ a.#{$button-class-name}, + label.#{$button-class-name}, + .#{$button-class-name},
-				+ a[aria-role="button"], + label[aria-role="button"], + [aria-role="button"] {
+				+ .#{$button-class-name}, + [role="button"] {
 					border: 0;
 					border-top: $button-group-border-style;
 				}
@@ -280,7 +276,7 @@ $hide-file-inputs: true !default;
 @mixin make-button-alt-color ($button-alt-name, $button-alt-back-color, $button-alt-back-opacity,
 	$button-alt-hover-back-opacity, $button-alt-fore-color: $button-fore-color) {
 	button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name},
-	[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name}, [aria-role="button"].#{$button-alt-name} {
+	[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name}, [role="button"].#{$button-alt-name} {
 		background: rgba($button-alt-back-color, $button-alt-back-opacity);
 		@if $button-alt-fore-color != $button-fore-color {
 			color: $button-alt-fore-color;
@@ -304,7 +300,7 @@ $hide-file-inputs: true !default;
 @mixin make-button-alt-style ($button-alt-name, $button-alt-border-style, $button-alt-border-radius,
 	$button-alt-padding, $button-alt-margin) {
 	button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name},
-	[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name}, [aria-role="button"].#{$button-alt-name} {
+	[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name}, [role="button"].#{$button-alt-name} {
 		@if $button-alt-border-style != $button-border-style {
 			border: $button-alt-border-style;
 		}

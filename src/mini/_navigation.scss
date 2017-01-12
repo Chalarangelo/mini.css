@@ -1,11 +1,12 @@
 /*
-	Definitions for navigation elements. 
+	Definitions for navigation elements.
 */
 // Different elements are styled based on the same set of rules.
 // Header styling.
 $button-class-name:				'button' !default;								// Class name for the button-like elements
 $header-logo-name:				'logo' !default;								// Class name for <header>'s logo
 $include-header-sticky:			false !default;									// Should the sticky class for <header> elements be included
+$include-footer-sticky:			false !default;									// Should the sticky class for <footer> elements be included
 header {
 	display: block;		// Correct display for older versions of IE.
 	height: $header-height;
@@ -71,14 +72,6 @@ header {
 		}
 	}
 }
-@if $include-header-sticky {
-	header.#{$header-sticky-name} {
-		position: -webkit-sticky;
-		position:		  sticky;
-		top: 0;
-		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
-	}
-}
 // Navigation sidebar styling.
 nav {
 	display: block;		// Correct display for older versions of IE.
@@ -117,9 +110,6 @@ nav {
 		}
 	}
 }
-
-$include-footer-sticky:			false !default;									// Should the class that aligns <footer> elements to the 
-																				// bottom of the page be included
 // Footer styling.
 footer {
 	display: block;		// Correct display for older versions of IE.
@@ -143,8 +133,31 @@ footer {
 		color: $footer-link-fore-color;
 	}
 }
-@if $include-footer-sticky {
-	footer.#{$footer-sticky-name}{
+
+
+@if $include-header-sticky and $include-footer-sticky {
+	header.#{$header-sticky-name}, footer.#{$footer-sticky-name} {
+		position: -webkit-sticky;
+		position:		  sticky;
+		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
+	}
+	header.#{$header-sticky-name} {
+		top: 0;
+	}
+	footer.#{$footer-sticky-name} {
+		bottom: 0;
+	}
+}
+@else if $include-header-sticky {
+	header.#{$header-sticky-name} {
+		position: -webkit-sticky;
+		position:		  sticky;
+		top: 0;
+		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
+	}
+}
+@else if $include-footer-sticky {
+	footer.#{$footer-sticky-name} {
 		position: -webkit-sticky;
 		position:		  sticky;
 		bottom: 0;

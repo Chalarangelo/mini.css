@@ -186,7 +186,7 @@
 ## 20161025
 
 - Issue maintenance and minor changes to issue structure on Github.
-- Due to implicit labeling (e.g. `<label>Name:<input></label>`) not being correctly handled by some assistive technologies, explicit labels will be used for the `file` `<input>` elements. 
+- Due to implicit labeling (e.g. `<label>Name:<input></label>`) not being correctly handled by some assistive technologies, explicit labels will be used for the `file` `<input>` elements.
 - Added `$hide-file-inputs` flag to decide the styling of `file` `<input>` elements.
 - Softcoded changes and optimized some things in the `button` module.
 - Updated demo page.
@@ -372,7 +372,7 @@
 	- Moved flavors from their directory to the `src` directory. CSS files produced from flavor files will go to the `dist` folder, along with the minified versions.
 	- *TODO* Update the `package.json` and `bower.json` files according to the new framework version.
 	- Updated live demo page reference to use the new structure.
-	
+
 ## 20161110
 
 - Continued module restructure and cleanup as follows:
@@ -380,7 +380,7 @@
 	- Started converting media queries from `only screen and ()` to plain `()`. Changes have been applied to `grid` module.
 	- Code cleanup in `grid`, indentation etc.
 	- Code cleanup in `table`. Media query conversions applied. Optimization.
-	- Code cleanup in `form`. 
+	- Code cleanup in `form`.
 	- Code cleanup in `button`. Updated `file` `input`s to be accessible.
 	- Code cleanup in `checkbox`. Optimizations.
 	- Restructured `form`, `button` and `checkbox` into one module: `input_control`. Made necessary changes for this to work properly.
@@ -738,7 +738,7 @@
 - Created a new branch for the development of v2.1.0.
 - Added `$include-parent-layout` flag, which will allow rows declaring column layout for children.
 - Implemented the whole *simple* layout structure for the `grid` module, allowing a `.row` to set the layout of its children, using a `.cols-{SZ}-{WD}` class.
-- Decided to include the new `grid` system in the `mini-default` flavor, as its functionality could be beneficial to a lot of people. The new filesize (gzipped) is `6.47KB` over the previous `6.32KB`. 
+- Decided to include the new `grid` system in the `mini-default` flavor, as its functionality could be beneficial to a lot of people. The new filesize (gzipped) is `6.47KB` over the previous `6.32KB`.
 - Added what is basically an *auto-grid* option in `.row.cols-sm` and similar for other sizes, that auto-sizes all columns in a given row. Might come in handy.
 - Updated `index.html` to show *under 10KB* instead of *about 5KB* in the **Minimal** card in order to deal with the controversy surrounding this specific line.
 
@@ -759,3 +759,7 @@
 - Changed the implementation of the new `footer` to `sticky`, instead of absolute.
 - Rolled back all pages that were affected. Should work like a charm now!
 - Finalized the `sticky` `footer`.
+
+## 20170113
+
+- Added support for `aria-role="button"` in the `input_control` module by default. Filesize has bloated to a horrifying 6.92KB.

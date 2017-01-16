@@ -1,5 +1,5 @@
-/* 
-	Definitions for utilities and helper classes. 
+/*
+	Definitions for utilities and helper classes.
 */
 // Hidden elements class. ATTENTION: Uses !important.
 .#{$hidden-name}{
@@ -65,7 +65,7 @@ ul.#{$breadcrumbs-name} {
 			width: 0;
 			height: 0;
 			border: 0 solid $breadcrumbs-back-color;
-			border-width: ($breadcrumbs-height/2) ($breadcrumbs-height/4);
+			border-width: ($breadcrumbs-height/2) ceil($breadcrumbs-height/4);
 		}
 		&:before {
 			left: -($breadcrumbs-height/2);
@@ -87,7 +87,7 @@ ul.#{$breadcrumbs-name} {
 				border: 0;
 			}
 		}
-	}	
+	}
 }
 // Close icon
 .#{$close-icon-name}{
@@ -119,11 +119,11 @@ ul.#{$breadcrumbs-name} {
 	}
 	&:before {
 		-webkit-transform: rotateZ(45deg);
-				transform: rotateZ(45deg);		
+				transform: rotateZ(45deg);
 	}
 	&:after {
 		-webkit-transform: rotateZ(-45deg);
-				transform: rotateZ(-45deg);	
+				transform: rotateZ(-45deg);
 	}
 }
 // Clearfix. ATTENTION: Uses !important.
@@ -155,7 +155,7 @@ ul.#{$breadcrumbs-name} {
 @mixin make-border-radial-style ($border-radial-name, $border-radial-radius) {
 	.#{$border-radial-name} {
 		border-radius: $border-radial-radius !important;
-	}	
+	}
 }
 // Generic box shadow mixin. ATTENTION: Uses !important.
 // Variables:
@@ -174,8 +174,8 @@ ul.#{$breadcrumbs-name} {
 // - $margin-small-value : Responsive margin value for smaller screens.
 // - $margin-medium-value : Responsive margin value for medium screens.
 // - $margin-large-value : Responsive margin value for large screens.
-@mixin make-margin-responsive ($margin-name, $margin-medium-breakpoint, 
-	$margin-large-breakpoint, $margin-small-value, $margin-medium-value, 
+@mixin make-margin-responsive ($margin-name, $margin-medium-breakpoint,
+	$margin-large-breakpoint, $margin-small-value, $margin-medium-value,
 	$margin-large-value) {
 	.#{$margin-name} {
 		margin: $margin-small-value !important;
@@ -199,8 +199,8 @@ ul.#{$breadcrumbs-name} {
 // - $padding-small-value : Responsive padding value for smaller screens.
 // - $padding-medium-value : Responsive padding value for medium screens.
 // - $padding-large-value : Responsive padding value for large screens.
-@mixin make-padding-responsive ($padding-name, $padding-medium-breakpoint, 
-	$padding-large-breakpoint, $padding-small-value, $padding-medium-value, 
+@mixin make-padding-responsive ($padding-name, $padding-medium-breakpoint,
+	$padding-large-breakpoint, $padding-small-value, $padding-medium-value,
 	$padding-large-value) {
 	.#{$padding-name} {
 		padding: $padding-small-value !important;

@@ -13,8 +13,9 @@
 	margin: -1px !important;
 	border: 0 !important;
 	padding: 0 !important;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
+	clip: rect(0 0 0 0) !important;
+	-webkit-clip-path: inset(100%) !important;
+			clip-path: inset(100%) !important;
 	overflow: hidden !important;
 }
 // Breadcrumbs

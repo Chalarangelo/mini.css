@@ -4,8 +4,8 @@
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
 	mini.css version: v2.1.0 (Fermion)
 */
-/* 
-	Browsers resets and base typography. 
+/*
+	Browsers resets and base typography.
 */
 html {
   font-size: 16px; }
@@ -158,7 +158,7 @@ a {
   color: #0277bd;
   text-decoration: underline;
   opacity: 1;
-  -webkit-transition: all 0.3 ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s; }
   a:visited {
     color: #01579b; }
@@ -1548,8 +1548,9 @@ progress.nano {
   margin: -1px !important;
   border: 0 !important;
   padding: 0 !important;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(100%) !important;
+  clip-path: inset(100%) !important;
   overflow: hidden !important; }
 
 ul.breadcrumbs {

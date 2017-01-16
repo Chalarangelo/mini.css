@@ -978,8 +978,8 @@ button.large, [type="button"].large, [type="submit"].large,
   padding: 12px 18px;
   margin: 10px 8px; }
 
-/* 
-	Definitions for the responsive table component. 
+/*
+	Definitions for the responsive table component.
 */
 table {
   border-collapse: separate;

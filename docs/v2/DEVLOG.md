@@ -765,3 +765,7 @@
 - Added support for ARIA `role="button"` in the `input_control` module by default. Filesize has bloated to a horrifying 6.92KB.
 - Highly optimized `input_control` module's buttons and button groups, by removing redundant selectors, based on specificity, bringing down the filesize to a managable 6.59KB again.
 - Optimized `sticky` `footer`s and `header`s a little bit. Should have no effect on filesize.
+
+## 20170116
+
+- Added `$include-horizontal-table` flag in `table` module to conditionally enable/disable the `horizontal` `table`s.

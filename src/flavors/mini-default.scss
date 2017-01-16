@@ -327,6 +327,8 @@ $table-mobile-card-spacing:		10px;											// Space between <tr> cards - mobil
 $table-mobile-card-label:		'data-label';									// Attribute used to replace column headers
 																				// in mobile view [1]
 $table-mobile-label-font-weight:$bold-font-weight;								// Font weight for mobile headers
+$include-horizontal-table:		true;											// Should horizontal <table> elements be
+																				// included? (`true`/`false`) [2]
 $table-horizontal-breakpoint:	768px;											// Breakpoint for <table> horizontal view
 $table-horizontal-name:			'horizontal';									// Class name for <table> horizontal view
 $table-not-responsive-name:		'preset';										// Class name for <table> non-responsive view
@@ -336,6 +338,8 @@ $table-striped-alt-body-back-color:												// Alternate background color for
 //	Notes:
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly.
+// [2] - If $include-horizontal-table is `true`, then the <table> horizontal biew will be included in a class defined by
+//	$table-horizontal-name and a breakpoint defined in $table-horizontal-breakpoint.
 //	Variables for cards [1]
 $card-name:						'card';											// Class name for cards
 $card-back-color:				#fafafa;										// Background color for cards

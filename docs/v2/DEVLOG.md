@@ -282,7 +282,7 @@
 - Explained utilities in demo page.
 - Deployed demo page with utilities docs.
 - Started developing `shell`. Added `shell` file and `mini-shell/card` file for the `card` module.
-- Actually deleted `shell` file, moved everything to `core` file, renamed to `_mini.scss`.
+- Actually deleted `shell` file, moved everything to `core` file, renamed to `mini.scss`.
 - Played around with `card`s a little bit, got a few basic ideas down, tested centering in `row`, not worthwhile.
 - Some minor styling for cards has been done, lots of work needed still.
 
@@ -353,7 +353,7 @@
 - Refactored code of `tabs` to work with the above decision, removed obsolete artifacts from the `accordion` module.
 - Made a few minor tweaks, decided not to add `accordion`-specific styling, as the current styling is just enough.
 - Edited the demo page to include most of the new functionality.
-- *TODO* Move `_accordion.scss` to the `legacy` folder etc.
+- *TODO* Move `accordion.scss` to the `legacy` folder etc.
 - Deployed live demo.
 - Tested on mobile, found some presentational problems.
 - Minor change to the way `transition`s work for `tabs`, they will now all utilize the `transform` implementation.
@@ -366,7 +366,7 @@
 	- Restructured folders. `mini-shell` removed, `mini-core` renamed to `mini`. `mini` is the core folder now.
 	- Created branch `v1-neutrino` both locally and on Github to support legacy versions in the future. `master` is now the branch for **Fermion** only.
 	- Aggressive deletion of older files. The following folder are now gone: `scss/mini`, `scss/mini-extra`, `flavors` except for the contents of the `v2` folder and the folder itself.
-	- Renamed `_mini.scss` to `_core.scss`, moved to the `scss/v2/mini` directory.
+	- Renamed `mini.scss` to `core.scss`, moved to the `scss/v2/mini` directory.
 	- Deleted `accordion` module file as it was obsolete.
 	- Renamed `scss` directory to `src`. Renamed `flavors` directory to `dist`.
 	- Moved flavors from their directory to the `src` directory. CSS files produced from flavor files will go to the `dist` folder, along with the minified versions.
@@ -699,7 +699,7 @@
 ## 20161222
 
 - Merged the pull request from @roryprimrose.
-- Changed the `_typography.scss` file to `_core.scss`.
+- Changed the `typography.scss` file to `core.scss`.
 - Moved the `@import` statements to the flavor files.
 - Updated `customization.html` to make sure the notes reflect the new structure of the toolkit.
 - Demo pages updated to use the latest version of the toolkit (v2.0.1).
@@ -778,4 +778,6 @@
 - `tooltip` added to `contextual` module, minor changes to it, allows both top and `bottom` versions at the same time.
 - Updated `tooltip` component to use variables.
 - Added mixins for `tooltip`. Tested them.
-- Added proper `tooltip` in the `default` flavor. Size now is `6.81`. Implementation of issue #41 is now completed.
+- Added proper `tooltip` in the `default` flavor. Size now is `6.81KB`. Implementation of issue #41 is now completed.
+- `DEVLOG.md` cleanup to make Markdown great again...
+- Played with **hugging cat** to prepare it for the update.

@@ -214,40 +214,111 @@ $tooltip-bottom-name:		'bottom' !default;					// Bottom tooltip class name
 			top: 100%;
 			left: 50%;
 		}
-		&:hover:before, &:hover:after {
+		&:hover, &:active, &:focus {
+			&:before, &:after {
 			opacity: 1;
 			clip: auto;
 			-webkit-clip-path: inset(0%);
 					clip-path: inset(0%);
+			}
 		}
 		&:before {	// This is the little tooltip triangle
 			content: '';
 			background: transparent;
-			border: 6px solid transparent;
-			left: calc(50% - 6px);
+			border: $tooltip-tail-size solid transparent;
+			left: calc(50% - $tooltip-tail-size);
 		}
 		&:not(.#{$tooltip-bottom-name}):before { // Top (default) tooltip styling
-			border-top-color: #383838;
+			border-top-color: $tooltip-back-color;
 		}
 		&.#{$tooltip-bottom-name}:before { // Bottom tooltip styling
-			border-bottom-color: #383838;
+			border-bottom-color: $tooltip-back-color;
 		}
 		&:after {	// This is the actual tooltip's text block
 			content: attr(aria-label);
-			background: #383838;
-			color: white;
-			padding: 8px 10px;
+			background: $tooltip-back-color;
+			@if $tooltip-border-radius != 0 {
+				border-radius: $tooltip-border-radius;
+			}
+			@if $tooltip-fore-color != $fore-color {
+				color: $tooltip-fore-color;
+			}
+			@if $tooltip-padding != 0 {
+				padding: $tooltip-padding;
+			}
+			@if $tooltip-box-shadow != none {
+				box-shadow: $tooltip-box-shadow;
+			}
 			white-space: nowrap;
 			-webkit-transform: translateX(-50%);
 					transform: translateX(-50%);
-			border-radius: 2px;
-			box-shadow: 0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
 		}
 		&:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
-			margin-bottom: 12px;
+			margin-bottom: 2 * $tooltip-tail-size;
 		}
 		&.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
-			margin-top: 12px;
+			margin-top: 2 * $tooltip-tail-size;
+		}
+	}
+}
+// Mixin for alternate tooltip (tooltip color variants).
+// Variables:
+// - $tooltip-alt-name : The name of the class used for the alternate tooltip.
+// - $tooltip-alt-back-color : The background color of the alternate tooltip.
+// - $tooltip-alt-fore-color : (Optional) The text color of the alternate mark. Defaults to the text color of the tooltip.
+@mixin make-tooltip-alt-color ($tooltip-alt-name, $tooltip-alt-back-color, $tooltip-alt-fore-color: $tooltip-fore-color) {
+	.#{$tooltip-name}.#{$tooltip-alt-name} {
+		@if $tooltip-alt-back-color != $tooltip-back-color {
+			&:not(.#{$tooltip-bottom-name}):before { // Top (default) tooltip styling
+				border-top-color: $tooltip-alt-back-color;
+			}
+			&.#{$tooltip-bottom-name}:before { // Bottom tooltip styling
+				border-bottom-color: $tooltip-alt-back-color;
+			}
+		}
+		&:after {
+			@if $tooltip-alt-back-color != $tooltip-back-color {
+				background: $tooltip-alt-back-color;
+			}
+			@if $tooltip-alt-fore-color != $tooltip-fore-color {
+				color: $tooltip-alt-fore-color;
+			}
+		}
+	}
+}
+// Mixin for alternate tooltip styles (tooltip style variants).
+// Variables:
+// - $tooltip-alt-name : The name of the class used for the alternate tooltip style.
+// - $tooltip-alt-tail-size : The border style of the alternate tooltip style.
+// - $tooltip-alt-border-radius : Border radius of the alternate tooltip style.
+// - $tooltip-alt-padding : (Optional) Padding of the alternate tooltip style. Defaults to the tooltip's padding.
+// - $tooltip-alt-box-shadow : (Optional) Box shadow of the alretnate tooltip style. Defaults to the tooltip's box shadow.
+@mixin make-tooltip-alt-style ($tooltip-alt-name, $tooltip-alt-tail-size, $tooltip-alt-border-radius,
+	$tooltip-alt-padding : $tooltip-padding, $tooltip-alt-box-shadow : $tooltip-box-shadow) {
+	.#{$tooltip-name}.#{$tooltip-alt-name} {
+		@if $tooltip-alt-tail-size != $tooltip-tail-size {
+			&:before {
+				border-width: $tooltip-tail-size;
+				left: calc(50% - $tooltip-alt-tail-size);
+			}
+			&:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
+				margin-bottom: 2 * $tooltip-alt-tail-size;
+			}
+			&.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
+				margin-top: 2 * $tooltip-alt-tail-size;
+			}
+		}
+
+		&:after {
+			@if $tooltip-alt-border-radius != $tooltip-border-radius {
+				border-radius: $tooltip-alt-border-radius;
+			}
+			@if $tooltip-alt-padding != $tooltip-padding {
+				padding: $tooltip-alt-padding;
+			}
+			@if $tooltip-alt-box-shadow != $tooltip-box-shadow {
+				box-shadow: $tooltip-alt-box-shadow;
+			}
 		}
 	}
 }

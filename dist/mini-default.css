@@ -1409,7 +1409,7 @@ mark {
   .tooltip.bottom:before, .tooltip.bottom:after {
     top: 100%;
     left: 50%; }
-  .tooltip:hover:before, .tooltip:hover:after {
+  .tooltip:hover:before, .tooltip:hover:after, .tooltip:active:before, .tooltip:active:after, .tooltip:focus:before, .tooltip:focus:after {
     opacity: 1;
     clip: auto;
     -webkit-clip-path: inset(0%);
@@ -1418,21 +1418,21 @@ mark {
     content: '';
     background: transparent;
     border: 6px solid transparent;
-    left: calc(50% - 6px); }
+    left: calc(50% - $tooltip-tail-size); }
   .tooltip:not(.bottom):before {
-    border-top-color: #383838; }
+    border-top-color: #212121; }
   .tooltip.bottom:before {
-    border-bottom-color: #383838; }
+    border-bottom-color: #212121; }
   .tooltip:after {
     content: attr(aria-label);
-    background: #383838;
-    color: white;
-    padding: 8px 10px;
+    background: #212121;
+    border-radius: 2px;
+    color: #fafafa;
+    padding: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
     white-space: nowrap;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    border-radius: 2px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15); }
+    transform: translateX(-50%); }
   .tooltip:not(.bottom):after {
     margin-bottom: 12px; }
   .tooltip.bottom:after {

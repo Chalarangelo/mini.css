@@ -446,9 +446,23 @@ $alert-style1-border-radius:	$alert-border-radius;							// Border radius for al
 $alert-style2-name:				'critical';										// Class name for alert style 2
 $alert-style2-border-style:		1px solid #d50000;								// Border style for alert style 2
 $alert-style2-border-radius:	$alert-border-radius;							// Border radius for alert style 2
+$include-tooltip:				true;											// Should tooltips be included?
+																				// (`true`/`false`) [2]
+$tooltip-name:					'tooltip';										// Class name for the tooltip component
+$tooltip-back-color:			$fore-color;									// Background color for tooltips
+$tooltip-fore-color:			#fafafa;										// Text color for tooltips
+$tooltip-border-radius:			2px;											// Border radius for tooltips
+$tooltip-tail-size:				6px;											// The size of the tooltip's tail
+$tooltip-padding:				6px;											// Padding for tooltips
+$tooltip-box-shadow:															// Box shadow for tooltip-box-shadow
+	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
+$tooltip-bottom-name:			'bottom';										// Class name for bottom tooltip
 // 	Notes:
 // [1] - If the value of $alert-include-animated is `true`, an animation will be created and the value of $alert-animated-class
 //	will be used to determine the class that will be used for animated alerts.
+// [2] - If the value of $include-tooltip is `true`, a tooltip component will be creatd based on the values of the variables
+//	for the tooltip, as explained in their descriptions. Tooltip mixins will only work properly if the tooltip component is
+//	included.
 //	Variables for progress elements and spinners
 $progress-back-color:			#eeeeee;										// Background color for <progress>
 $progress-fore-color:			#01579b;										// Progress bar color for <progress>

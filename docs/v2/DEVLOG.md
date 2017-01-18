@@ -776,3 +776,6 @@
 ## 20170118
 
 - `tooltip` added to `contextual` module, minor changes to it, allows both top and `bottom` versions at the same time.
+- Updated `tooltip` component to use variables.
+- Added mixins for `tooltip`. Tested them.
+- Added proper `tooltip` in the `default` flavor. Size now is `6.81`. Implementation of issue #41 is now completed.

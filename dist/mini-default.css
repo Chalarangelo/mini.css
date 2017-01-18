@@ -1340,8 +1340,8 @@ table.striped tr:nth-of-type(2n) > td {
       .tabs > [type="radio"] + label + div + [type="radio"] + label {
         border: 1px solid #9e9e9e;
         border-top: 0; } }
-/* 
-	Definitions for contextual background elements and alerts. 
+/*
+	Definitions for contextual background elements and alerts.
 */
 mark {
   background: #0277bd;
@@ -1390,6 +1390,53 @@ mark {
     transform: translateZ(0);
     -webkit-animation: alert-anim 6s linear infinite;
     animation: alert-anim 6s linear infinite; }
+
+.tooltip {
+  position: relative;
+  display: inline-block; }
+  .tooltip:before, .tooltip:after {
+    position: absolute;
+    opacity: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    z-index: 1010; }
+  .tooltip:not(.bottom):before, .tooltip:not(.bottom):after {
+    bottom: 100%;
+    left: 50%; }
+  .tooltip.bottom:before, .tooltip.bottom:after {
+    top: 100%;
+    left: 50%; }
+  .tooltip:hover:before, .tooltip:hover:after {
+    opacity: 1;
+    clip: auto;
+    -webkit-clip-path: inset(0%);
+    clip-path: inset(0%); }
+  .tooltip:before {
+    content: '';
+    background: transparent;
+    border: 6px solid transparent;
+    left: calc(50% - 6px); }
+  .tooltip:not(.bottom):before {
+    border-top-color: #383838; }
+  .tooltip.bottom:before {
+    border-bottom-color: #383838; }
+  .tooltip:after {
+    content: attr(aria-label);
+    background: #383838;
+    color: white;
+    padding: 8px 10px;
+    white-space: nowrap;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15); }
+  .tooltip:not(.bottom):after {
+    margin-bottom: 12px; }
+  .tooltip.bottom:after {
+    margin-top: 12px; }
 
 /*
 	Custom contextual background elements and alerts.

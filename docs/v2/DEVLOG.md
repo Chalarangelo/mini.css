@@ -772,3 +772,7 @@
 - Updated `breadcrumbs` component in the `utility` module to properly utilize the `ceil()` Sass function, so that no white line errors are shown, effectively fixing the only bug I managed to find with the component's presentation.
 - Updated `utility` module's `visually-hidden` to properly do its job.
 - First demo of the `tooltip` component. Works properly. Needs some tweaks to display a top and bottom variant, based on user choice.
+
+## 20170118
+
+- `tooltip` added to `contextual` module, minor changes to it, allows both top and `bottom` versions at the same time.

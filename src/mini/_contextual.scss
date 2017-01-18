@@ -1,5 +1,5 @@
-/* 
-	Definitions for contextual background elements and alerts. 
+/*
+	Definitions for contextual background elements and alerts.
 */
 // Contextual background elements use the mark element as their base.
 // Default styling for mark. Use mixins for alternate styles.
@@ -61,7 +61,7 @@ mark {
 // - $mark-alt-line-height : (Optional) The line height of the alternate mark style. Defaults to the line height of the mark.
 // - $mark-alt-box-shadow : (Optional) The box shadow of the alternate mark style. Defaults to the box shadow of the mark.
 @mixin make-mark-alt-style ($mark-alt-name, $mark-alt-border-style, $mark-alt-border-radius,
-	$mark-alt-padding : $mark-padding, $mark-alt-font-size : $mark-font-size, $mark-alt-line-height : $mark-line-height, 
+	$mark-alt-padding : $mark-padding, $mark-alt-font-size : $mark-font-size, $mark-alt-line-height : $mark-line-height,
 	$mark-alt-box-shadow : $mark-box-shadow ) {
 	mark.#{$mark-alt-name} {
 		@if $mark-alt-font-size != $mark-font-size {
@@ -90,19 +90,19 @@ $alert-include-animated:   	true !default;               	// Should animated ale
 $alert-animated-name:		'animated' !default;			// Class name for animated alerts
 // Animation definition for animated alerts (included if wanted)
 @if $alert-include-animated {
-	@-webkit-keyframes alert-anim { 
-		0% 		{ 	-webkit-transform: scale(1); 	} 
+	@-webkit-keyframes alert-anim {
+		0% 		{ 	-webkit-transform: scale(1); 	}
 		45% 	{	-webkit-transform: scale(1);	}
 		50% 	{	-webkit-transform: scale(1.005);}
 		55% 	{	-webkit-transform: scale(1);	}
-		100% 	{	-webkit-transform: scale(1);	} 
+		100% 	{	-webkit-transform: scale(1);	}
 	}
-			@keyframes alert-anim { 
-		0% 		{ 			transform: scale(1); 	} 
+			@keyframes alert-anim {
+		0% 		{ 			transform: scale(1); 	}
 		45% 	{			transform: scale(1);	}
 		50% 	{			transform: scale(1.005);}
 		55% 	{			transform: scale(1);	}
-		100% 	{			transform: scale(1);	} 
+		100% 	{			transform: scale(1);	}
 	}
 }
 // Default styling for alerts. Use mixins for alternate styles
@@ -166,7 +166,7 @@ $alert-animated-name:		'animated' !default;			// Class name for animated alerts
 // - $alert-alt-margin : (Optional) Margin of the alternate alert style. Defaults to the alert's margin.
 // - $alert-alt-box-shadow : (Optional) Box shadow of the alretnate alert style. Defaults to the alert's box shadow.
 @mixin make-alert-alt-style ($alert-alt-name, $alert-alt-border-style, $alert-alt-border-radius,
-	$alert-alt-padding : $alert-padding, $alert-alt-margin : $alert-margin, 
+	$alert-alt-padding : $alert-padding, $alert-alt-margin : $alert-margin,
 	$alert-alt-box-shadow : $alert-box-shadow) {
 	.#{$alert-name}.#{$alert-alt-name} {
 		@if $alert-alt-border-style != $alert-border-style {
@@ -183,6 +183,71 @@ $alert-animated-name:		'animated' !default;			// Class name for animated alerts
 		}
 		@if $alert-alt-box-shadow != $alert-box-shadow {
 			box-shadow: $alert-alt-box-shadowbox-shadow;
+		}
+	}
+}
+// Tooltip variables
+$include-tooltip:			true !default;						// Should tooltips be included?
+$tooltip-name:              'tooltip' !default;               	// Class name for the tooltips
+$tooltip-bottom-name:		'bottom' !default;					// Bottom tooltip class name
+// Default styling for alerts. Use mixins for alternate styles
+@if $include-tooltip {
+	.#{$tooltip-name} {
+		position: relative;
+		display: inline-block;
+		&:before, &:after {
+			position: absolute;
+			opacity: 0;
+			clip: rect(0 0 0 0);
+			-webkit-clip-path: inset(100%);
+					clip-path: inset(100%);
+			-webkit-transition: all 0.3s ease 0s;
+					transition: all 0.3s ease 0s;
+			// Remember to keep this index a lower value than the one used for stickies.
+			z-index: 1010;	// Deals with certain problems when combined with cards and tables.
+		}
+		&:not(.#{$tooltip-bottom-name}):before, &:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
+			bottom: 100%;
+			left: 50%;
+		}
+		&.#{$tooltip-bottom-name}:before, &.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
+			top: 100%;
+			left: 50%;
+		}
+		&:hover:before, &:hover:after {
+			opacity: 1;
+			clip: auto;
+			-webkit-clip-path: inset(0%);
+					clip-path: inset(0%);
+		}
+		&:before {	// This is the little tooltip triangle
+			content: '';
+			background: transparent;
+			border: 6px solid transparent;
+			left: calc(50% - 6px);
+		}
+		&:not(.#{$tooltip-bottom-name}):before { // Top (default) tooltip styling
+			border-top-color: #383838;
+		}
+		&.#{$tooltip-bottom-name}:before { // Bottom tooltip styling
+			border-bottom-color: #383838;
+		}
+		&:after {	// This is the actual tooltip's text block
+			content: attr(aria-label);
+			background: #383838;
+			color: white;
+			padding: 8px 10px;
+			white-space: nowrap;
+			-webkit-transform: translateX(-50%);
+					transform: translateX(-50%);
+			border-radius: 2px;
+			box-shadow: 0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
+		}
+		&:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
+			margin-bottom: 12px;
+		}
+		&.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
+			margin-top: 12px;
 		}
 	}
 }

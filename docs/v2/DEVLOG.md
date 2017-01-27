@@ -787,3 +787,5 @@
 - `tooltip` updated, dealing with a small misalignment bug in alternate styles.
 - Added `$nav-include-sublink-bar` flag for `nav` element's subcategories to add a sidebar to them. Styled them as necessary and used proper variables. Tested reasonably extensively, no bugs should be present.
 - With the addition of the new `nav` sidebar to the main flavor, the file size is now `6.86KB`. This is very close to the final size for the *v2.1.0* release, as most of the new features have been added already.
+- Added `label` element `padding` via variables to address certain issues. Tweaked `checkbox` and `radio` components to match changes.
+- Added flag for `fluid` `input-group`s and created the related component. `fluid` `input-group`s will now be part of the default flavor, taking the file size up to `6.93KB`, which is probably the final size of the next release. - Deals with #50.

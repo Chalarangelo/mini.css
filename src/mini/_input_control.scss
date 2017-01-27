@@ -54,9 +54,55 @@ legend {
 		padding: $legend-padding;
 	}
 }
+// Label syling.
+@if $label-padding != 0 {
+	label {
+		padding: $label-padding;	// Padding is all that seems to be needed for now, but more stuff could be added later.
+	}
+}
+$include-fluid-input-group:		true !default;				// Should fluid input groups be included?
 // Input group base naming.
 .#{$input-group-name} {
 	display: inline-block;
+	// Fluid input groups
+	@if $include-fluid-input-group {
+		&.#{$input-group-fluid-name} {
+			// Old syntax
+			display: -webkit-box;
+			-webkit-box-pack: justify;
+			// New syntax
+			display: -webkit-flex;
+			display: 		 flex;
+			-webkit-align-items: center;
+					align-items: center;
+			-webkit-justify-content: center;
+					justify-content: center;
+			& > input {
+				// Old syntax
+				-webkit-box-flex: 1;
+				max-width: 100%;
+				// New syntax
+				-webkit-flex-grow: 1;
+						flex-grow: 1;
+				-webkit-flex-basis: 0;
+						flex-basis: 0;
+			}
+		}
+	}
+}
+// Responsiveness for fluid input groups
+@if $include-fluid-input-group {
+	@media (max-width: #{$input-group-mobile-breakpoint}) {
+		.#{$input-group-name}.#{$input-group-fluid-name} {
+			// Old syntax
+			-webkit-box-orient: vertical;
+			// New syntax
+			-webkit-align-items: stretch;
+					align-items: stretch;
+			-webkit-flex-direction: column;
+					flex-direction: column;
+		}
+	}
 }
 // Correct the cursor style of increment and decrement buttons in Chrome.
 [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
@@ -213,8 +259,8 @@ $hide-file-inputs: true !default;
 		margin: $button-group-margin;
 	}
 	@if $button-group-box-shadow != none {
-			box-shadow: $button-group-box-shadow;
-		}
+		box-shadow: $button-group-box-shadow;
+	}
 	button, [type="button"], [type="submit"], [type="reset"],
 	.#{$button-class-name}, [role="button"] {
 		margin: 0;

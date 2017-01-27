@@ -152,8 +152,16 @@
 			  <li>File</li>
 			</ul>
 		</div>
+		<style>
+		.tooltip:before, .tooltip:after {
+			opacity: 1 !important;
+			clip: auto !important;
+			-webkit-clip-path: inset(0%) !important;
+					clip-path: inset(0%) !important;
+			}
+			}</style>
 		<div class="col-md-offset-1">
-			<mark class="tooltip test" aria-label="This is some sample tooltip text">Show a tooltip while hovering</mark><br /><br /><br />
+			<mark class="tooltip large" aria-label="This is some sample tooltip text">Show a tooltip while hovering</mark><br /><br /><br />
 		</div>
 	  </div>
 

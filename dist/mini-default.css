@@ -1418,7 +1418,7 @@ mark {
     content: '';
     background: transparent;
     border: 6px solid transparent;
-    left: calc(50% - $tooltip-tail-size); }
+    left: calc(50% - 6px); }
   .tooltip:not(.bottom):before {
     border-top-color: #212121; }
   .tooltip.bottom:before {

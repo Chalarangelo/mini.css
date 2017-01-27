@@ -781,3 +781,7 @@
 - Added proper `tooltip` in the `default` flavor. Size now is `6.81KB`. Implementation of issue #41 is now completed.
 - `DEVLOG.md` cleanup to make Markdown great again...
 - Played with **hugging cat** to prepare it for the update.
+
+## 20170127
+
+- `tooltip` updated, dealing with a small misalignment bug in alterante styles.

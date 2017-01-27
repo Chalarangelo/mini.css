@@ -226,7 +226,7 @@ $tooltip-bottom-name:		'bottom' !default;					// Bottom tooltip class name
 			content: '';
 			background: transparent;
 			border: $tooltip-tail-size solid transparent;
-			left: calc(50% - $tooltip-tail-size);
+			left: calc(50% - #{$tooltip-tail-size});
 		}
 		&:not(.#{$tooltip-bottom-name}):before { // Top (default) tooltip styling
 			border-top-color: $tooltip-back-color;
@@ -298,8 +298,8 @@ $tooltip-bottom-name:		'bottom' !default;					// Bottom tooltip class name
 	.#{$tooltip-name}.#{$tooltip-alt-name} {
 		@if $tooltip-alt-tail-size != $tooltip-tail-size {
 			&:before {
-				border-width: $tooltip-tail-size;
-				left: calc(50% - $tooltip-alt-tail-size);
+				border-width: $tooltip-alt-tail-size;
+				left: calc(50% - #{$tooltip-alt-tail-size});
 			}
 			&:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
 				margin-bottom: 2 * $tooltip-alt-tail-size;

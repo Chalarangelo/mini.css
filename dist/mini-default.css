@@ -661,9 +661,27 @@ nav {
     display: block;
     color: #1565c0; }
   nav .sublink-1 {
-    padding-left: 12px; }
+    padding-left: 12px;
+    position: relative; }
+    nav .sublink-1:before {
+      position: absolute;
+      left: 3px;
+      top: -1px;
+      content: '';
+      height: 100%;
+      border: 1px solid #78909c;
+      border-left: 0; }
   nav .sublink-2 {
-    padding-left: 24px; }
+    padding-left: 24px;
+    position: relative; }
+    nav .sublink-2:before {
+      position: absolute;
+      left: 3px;
+      top: -1px;
+      content: '';
+      height: 100%;
+      border: 1px solid #78909c;
+      border-left: 0; }
 
 footer {
   display: block;

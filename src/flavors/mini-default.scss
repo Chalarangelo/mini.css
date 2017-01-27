@@ -191,6 +191,11 @@ $nav-link-fore-color:			#1565c0;										// Text color for links in <nav>
 $nav-sublink-prefix:			'sublink';										// Prefix for the subcategory links in <nav>
 $nav-sublink-depth:				2;												// Amount of subcategory classes to add
 $nav-sublink-padding-left:		12px;											// Left padding to add to subcategories
+$nav-include-sublink-bar:		true;											// Should a left border bar be added to
+																				// subcategories (`true`/`false`) [2]
+$nav-sublink-bar-left-position: 3px;											// Left position of subcategory bar
+$nav-sublink-bar-width:			1px;											// Width of the subcategory bar
+$nav-sublink-bar-color:			#78909c;										// Subcategory bar color	
 $footer-back-color:				#263238;										// Background color for <footer>
 $footer-fore-color:				#fafafa;										// Text color for <footer>
 $footer-border-style:			0;												// Border stye for <footer>
@@ -199,12 +204,14 @@ $footer-margin:					18px 0 0;										// Margin for <footer>
 $footer-padding:				22px 10px 12px;									// Padding for <footer>
 $footer-link-fore-color:		#039be5;										// Text color for links in <footer>
 $include-footer-sticky:			true;											// Should sticky <footer> elements be
-																				// included (`true`/`false`) [2]
+																				// included (`true`/`false`) [3]
 $footer-sticky-name:			'sticky';										// Class name for sticky <footer> elements
 //	Notes:
 // [1] - If the value of $include-header-sticky is `true`, a class will be created that will allow for sticky positioning
 //	of <header> elements, using the value of $header-sticky-name for the name of the class.
-// [2] - If the value of $include-footer-bottom is `true`, a class will be created that will allow for sticky positioning
+// [2] - If the value of $nav-include-sublink-bar is `true`, a left-side border bar will appear next to the navigation
+//	subcategories, using the values specified.
+// [3] - If the value of $include-footer-bottom is `true`, a class will be created that will allow for sticky positioning
 //	of <footer> elements, using the value of $footer-sticky-name for the name of the class.
 //	Variables for forms and inputs
 $form-back-color:				#eeeeee;										// Background color for forms

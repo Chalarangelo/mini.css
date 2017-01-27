@@ -784,4 +784,6 @@
 
 ## 20170127
 
-- `tooltip` updated, dealing with a small misalignment bug in alterante styles.
+- `tooltip` updated, dealing with a small misalignment bug in alternate styles.
+- Added `$nav-include-sublink-bar` flag for `nav` element's subcategories to add a sidebar to them. Styled them as necessary and used proper variables. Tested reasonably extensively, no bugs should be present.
+- With the addition of the new `nav` sidebar to the main flavor, the file size is now `6.86KB`. This is very close to the final size for the *v2.1.0* release, as most of the new features have been added already.

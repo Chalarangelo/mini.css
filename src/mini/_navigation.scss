@@ -101,12 +101,25 @@ nav {
 		color: $nav-link-fore-color;	// Apply regardless to de-stylize visited links.
 	}
 	// Subcategories in navigation.
-	$nav-sublink-prefix:		'sublink' !default;		// Prefix for the subcategory tabs in nav
-	$nav-sublink-depth:			2 !default;			// Amount of subcategory classes to add
-	$nav-sublink-padding-left:	12px !default;		// Left padding to add to subcategories
+	$nav-sublink-prefix:			'sublink' !default;				// Prefix for the subcategory tabs in nav
+	$nav-sublink-depth:				2 !default;						// Amount of subcategory classes to add
+	$nav-sublink-padding-left:		12px !default;					// Left padding to add to subcategories
+	$nav-include-sublink-bar: 		false !default;					// Should a border be added to the subcategories?
 	@for $i from 1 through $nav-sublink-depth {
 		.#{$nav-sublink-prefix}-#{$i} {
 			padding-left: $i * $nav-sublink-padding-left;
+			position: relative;
+			@if $nav-include-sublink-bar {
+				&:before {
+					position: absolute;
+					left: $nav-sublink-bar-left-position;
+					top: -$nav-sublink-bar-width;
+					content: '';
+					height: 100%;
+					border: $nav-sublink-bar-width solid $nav-sublink-bar-color;
+					border-left: 0;
+				}
+			}
 		}
 	}
 }

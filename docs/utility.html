@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0.2/dist/mini-default.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>mini.css - Utility</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
     <meta property="og:description" content="mini.css is a tiny CSS toolkit designed to build quick, modern and responsive websites."/>
     <meta property="og:image" content="page_thumb.PNG">
     <meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
-    <link rel="icon" type="image/png" href="favicon.png">    
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
       /* Classes and ids used in multiple pages - page top and utilities */
       #header-logo {
@@ -36,7 +36,7 @@
       .box-colored.red { background: #b71c1c; }
       .box-centered > .card.fluid {
         -webkit-box-pack: start;
-        -webkit-box-align: start; 
+        -webkit-box-align: start;
         -webkit-justify-content: flex-start;
                 justify-content: flex-start;
         -webkit-align-self: auto;
@@ -71,7 +71,7 @@
       }
     </style>
   </head>
-  <body>  
+  <body>
     <header>
       <a href="index.html"><img class="logo" src="mini-logo.svg" id="header-logo"></a><div style="display: inline; overflow: auto;">
       <a href="index.html" class="button">Introduction</a>
@@ -142,38 +142,6 @@
                 <div class="col-sm-12">
                   <pre>&lt;span class=&quot;hidden visually-hidden&quot;&gt;Not a good idea&lt;/span&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using both classes at the same time. Instead, use <code>.hidden</code> to hide content for all users, <code>.visually-hidden</code> to hide it for non-screen-reader users or <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> to hide it for screen-reader-only users.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm">
-          <div class="card fluid">
-            <div class="section">
-              <h2>Floats, centering &amp; clearfix</h2>
-            </div>
-            <div class="section row">
-              <div class="col-sm-12 col-sm-first">
-                <p>You can easily make content float left or right, using the <code>.float-left</code> and <code>.float-right</code> classes. Clear all floats, using the <code>.clearfix</code> class, based on the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">micro clearfix</a> by Nicolas Gallagher. Finally, use the <code>.center-block</code> class to make an element center and display as a block.</p>
-                <h3>Sample code</h3>
-                <pre>&lt;span class=&quot;float-left&quot;&gt;Float left&lt;/span&gt;
-&lt;span class=&quot;float-right&quot;&gt;Float right&lt;/span&gt;
-&lt;span class=&quot;clearfix&quot;&gt;Clearfix&lt;/span&gt;
-&lt;span class=&quot;center-block&quot;&gt;Center block&lt;/span&gt;</pre>
-              </div>
-            </div>
-            <div class="section">
-            <h3>Notes</h3>
-              <ul>
-                <li>All of these classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
-              </ul>
-              <hr>
-              <div class="row">
-                <div class="col-sm-12">
-                  <pre>&lt;span class=&quot;float-left float-right&quot;&gt;Avoid this&lt;/span&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining any two of the above classes (except if you use <code>.clearfix</code> to temporarily clear a float or something similar), as they might overwrite each other and cause unexpected behavior.</p>
                 </div>
               </div>
             </div>

@@ -572,12 +572,14 @@ $responsive-padding-medium-value:												// Padding value for responsive pad
 $responsive-padding-large-value:6px 8px;										// Padding value for responsive padding on large screens
 $include-floats:				false;											// Should floats be included? (`true`/`false`) [1]
 $include-clearfix:				false;											// Should clearfix be included? (`true`/`false`) [2]
-$center-block-name:				'center-block';									// Class name for center block
+$include-center-block-name:		false;											// Should center block be included? (`true`/`false`) [3]
 // 	Notes:
 // [1] - If the value of $include-floats is `true`, float classes will be created using the value of $float-prefix to determine the class
 //	names that will be used.
 // [2] - If the value of $include-clearfix is true, a clearfix class will be created using the value of $clearfix-name to determine the
 //	class name of the clearfix component.
+// [3] - If the value of $include-center-block is true, a center block class will be created using the value of $center-block-name to
+//	determine the class name of the center block class.
 // Load modules. If you do not want to use a module, comment out its `@import` statement, along with any mixin `@include`s that are part of
 // that module and marked as such below it.
 @import '../mini/core';

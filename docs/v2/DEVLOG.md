@@ -794,3 +794,6 @@
 
 - Added flags for `floats` and `clearfix`, turned both utilites of by default, as they are mostly useless.
 - After removing the two components mentioned above, size is now `6.89KB`.
+- `center-block` turned off using a flag by default. File size is now `6.87KB`. All legacy utilites have been disabled by default.
+- Updated `utility.html` page to reflect the fact that these utilities are no longer present by default.
+- Updated `quick_reference.html` to reflect the fact that these utilities are no longer present by default.

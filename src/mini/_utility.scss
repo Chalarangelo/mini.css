@@ -203,8 +203,9 @@ ul.#{$breadcrumbs-name} {
 		}
 	}
 }
-$include-floats:	false !default;				// Should floats be included?
-$include-clearfix:	false !default;				// Should clearfix be included?
+$include-floats:		false !default;				// Should floats be included?
+$include-clearfix:		false !default;				// Should clearfix be included?
+$include-center-block:	false !default;				// Should center block be included?
 // Floats. ATTENTION: Uses !important.
 // NOTE: Might be obsolete and not play well with others.
 @if $include-floats {
@@ -227,8 +228,10 @@ $include-clearfix:	false !default;				// Should clearfix be included?
 	}
 }
 // Center block. ATTENTION: Uses !important.
-.#{$center-block-name} {
-	display: block !important;
-	margin-left: auto !important;
-	margin-right: auto !important;
+@if $include-center-block {
+	.#{$center-block-name} {
+		display: block !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
 }

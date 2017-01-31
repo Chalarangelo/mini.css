@@ -1720,11 +1720,6 @@ ul.breadcrumbs {
     -webkit-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg); }
 
-.clearfix:before, .clearfix:after {
-  content: ' ' !important;
-  display: table !important;
-  clear: both !important; }
-
 .center-block {
   display: block !important;
   margin-left: auto !important;
@@ -1771,9 +1766,3 @@ ul.breadcrumbs {
 
 .shadow-large {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15) !important; }
-
-.float-left {
-  float: left !important; }
-
-.float-right {
-  float: right !important; }

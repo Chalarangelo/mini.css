@@ -570,9 +570,14 @@ $responsive-padding-small-value:2px 4px;										// Padding value for responsiv
 $responsive-padding-medium-value:												// Padding value for responsive padding on medium screens
 								4px 6px;
 $responsive-padding-large-value:6px 8px;										// Padding value for responsive padding on large screens
-$float-prefix:					'float';										// Prefix for float classes
-$clearfix-name:					'clearfix';										// Class name for clearfix
+$include-floats:				false;											// Should floats be included? (`true`/`false`) [1]
+$include-clearfix:				false;											// Should clearfix be included? (`true`/`false`) [2]
 $center-block-name:				'center-block';									// Class name for center block
+// 	Notes:
+// [1] - If the value of $include-floats is `true`, float classes will be created using the value of $float-prefix to determine the class
+//	names that will be used.
+// [2] - If the value of $include-clearfix is true, a clearfix class will be created using the value of $clearfix-name to determine the
+//	class name of the clearfix component.
 // Load modules. If you do not want to use a module, comment out its `@import` statement, along with any mixin `@include`s that are part of
 // that module and marked as such below it.
 @import '../mini/core';
@@ -657,4 +662,3 @@ $center-block-name:				'center-block';									// Class name for center block
 @include make-box-shadow-generic ($box-shadow-style2-name, $box-shadow-style2-value);
 @include make-box-shadow-generic ($box-shadow-style3-name, $box-shadow-style3-value);
 @include make-box-shadow-generic ($box-shadow-style4-name, $box-shadow-style4-value);
-@include make-floats ($float-prefix);

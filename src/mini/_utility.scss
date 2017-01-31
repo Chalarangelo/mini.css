@@ -127,20 +127,6 @@ ul.#{$breadcrumbs-name} {
 				transform: rotateZ(-45deg);
 	}
 }
-// Clearfix. ATTENTION: Uses !important.
-.#{$clearfix-name} {
-	&:before, &:after {
-		content: ' ' !important;
-		display: table !important;
-		clear: both !important;
-	}
-}
-// Center block. ATTENTION: Uses !important.
-.#{$center-block-name} {
-	display: block !important;
-	margin-left: auto !important;
-	margin-right: auto !important;
-}
 // Generic border mixin. ATTENTION: Uses !important.
 // Variables:
 // - $border-generic-name : The name of the class used for the generic border.
@@ -217,15 +203,32 @@ ul.#{$breadcrumbs-name} {
 		}
 	}
 }
-// Floats mixin. ATTENTION: Uses !important.
-// NOTE: This mixin might be obsolete and not play well with others.
-// Variables:
-// - $float-prefix : Prefix for the class names of floats.
-@mixin make-floats ($float-prefix) {
+$include-floats:	false !default;				// Should floats be included?
+$include-clearfix:	false !default;				// Should clearfix be included?
+// Floats. ATTENTION: Uses !important.
+// NOTE: Might be obsolete and not play well with others.
+@if $include-floats {
 	.#{$float-prefix}-left {
 		float: left !important;
 	}
 	.#{$float-prefix}-right {
 		float: right !important;
 	}
+}
+// Clearfix mixin. ATTENTION: Uses !important.
+// NOTE: Might be obsolete and not play well with others.
+@if $include-clearfix {
+	.#{$clearfix-name} {
+		&:before, &:after {
+			content: ' ' !important;
+			display: table !important;
+			clear: both !important;
+		}
+	}
+}
+// Center block. ATTENTION: Uses !important.
+.#{$center-block-name} {
+	display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
 }

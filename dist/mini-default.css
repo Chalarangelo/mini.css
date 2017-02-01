@@ -781,24 +781,19 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
   border-radius: 1px;
   margin: 2px;
   padding: 8px 12px; }
-  input:not([type]):focus, [type="text"]:focus, [type="email"]:focus, [type="number"]:focus, [type="search"]:focus,
-  [type="password"]:focus, [type="url"]:focus, [type="tel"]:focus, textarea:focus, select:focus {
-    border-color: #0288d1;
-    box-shadow: none; }
-  input:not([type])[disabled], [type="text"][disabled], [type="email"][disabled], [type="number"][disabled], [type="search"][disabled],
-  [type="password"][disabled], [type="url"][disabled], [type="tel"][disabled], textarea[disabled], select[disabled] {
-    cursor: not-allowed;
-    opacity: 0.75; }
-  input:not([type]):invalid, input:not([type]):focus:invalid, input:not([type]):focus:invalid:focus, [type="text"]:invalid, [type="text"]:focus:invalid, [type="text"]:focus:invalid:focus, [type="email"]:invalid, [type="email"]:focus:invalid, [type="email"]:focus:invalid:focus, [type="number"]:invalid, [type="number"]:focus:invalid, [type="number"]:focus:invalid:focus, [type="search"]:invalid, [type="search"]:focus:invalid, [type="search"]:focus:invalid:focus,
-  [type="password"]:invalid,
-  [type="password"]:focus:invalid,
-  [type="password"]:focus:invalid:focus, [type="url"]:invalid, [type="url"]:focus:invalid, [type="url"]:focus:invalid:focus, [type="tel"]:invalid, [type="tel"]:focus:invalid, [type="tel"]:focus:invalid:focus, textarea:invalid, textarea:focus:invalid, textarea:focus:invalid:focus, select:invalid, select:focus:invalid, select:focus:invalid:focus {
-    border-color: #d32f2f;
-    box-shadow: none; }
-  input:not([type])[readonly], [type="text"][readonly], [type="email"][readonly], [type="number"][readonly], [type="search"][readonly],
-  [type="password"][readonly], [type="url"][readonly], [type="tel"][readonly], textarea[readonly], select[readonly] {
-    background: #e0e0e0;
-    border-color: #bdbdbd; }
+
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):hover, input:not([type="button"]):not([type="submit"]):not([type="reset"]):focus, textarea:hover, textarea:focus, select:hover, select:focus {
+  border-color: #0288d1;
+  box-shadow: none; }
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):disabled, input:not([type="button"]):not([type="submit"]):not([type="reset"])[disabled], textarea:disabled, textarea[disabled], select:disabled, select[disabled] {
+  cursor: not-allowed;
+  opacity: 0.75; }
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):invalid, input:not([type="button"]):not([type="submit"]):not([type="reset"]):focus:invalid, textarea:invalid, textarea:focus:invalid, select:invalid, select:focus:invalid {
+  border-color: #d32f2f;
+  box-shadow: none; }
+input:not([type="button"]):not([type="submit"]):not([type="reset"])[readonly], textarea[readonly], select[readonly] {
+  background: #e0e0e0;
+  border-color: #bdbdbd; }
 
 ::-webkit-input-placeholder {
   opacity: 1;

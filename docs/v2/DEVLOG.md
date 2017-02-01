@@ -797,3 +797,12 @@
 - `center-block` turned off using a flag by default. File size is now `6.87KB`. All legacy utilites have been disabled by default.
 - Updated `utility.html` page to reflect the fact that these utilities are no longer present by default.
 - Updated `quick_reference.html` to reflect the fact that these utilities are no longer present by default.
+
+## 20170201
+
+- Changed **hugging cat**'s clothes. It's February now!
+- Added hidden flag `$input-high-specificity-selectors` to `input_control` to deal with high specificity selectors for `input` elements.
+- Tested the new `input` styling, does not seem to cause any trouble with `button`-type `input`s, thus it will probably be the default choice from now on. File size dropped to an astonishing `6.72KB`, which seems like a pretty great tradeoff. Some more tweaks might be required, but this should be mostly fine!
+- Tweaked the `input` styling to make sure all `button`-type `input`s are properly styled.
+- Added `:hover` and `:disabled` selectors to `input` elements, making sure as many states as possible are covered now.
+- Cleaned `:focus:invalid:focus` selector, as I could not find any test cases for it. Size is now `6.75KB`.

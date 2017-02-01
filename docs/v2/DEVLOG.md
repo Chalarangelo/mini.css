@@ -806,3 +806,6 @@
 - Tweaked the `input` styling to make sure all `button`-type `input`s are properly styled.
 - Added `:hover` and `:disabled` selectors to `input` elements, making sure as many states as possible are covered now.
 - Cleaned `:focus:invalid:focus` selector, as I could not find any test cases for it. Size is now `6.75KB`.
+- Added safeguard for the `progress` element's `.nano` variant's case with `margin` of `0`. Should now behave properly.
+- Added `@supports` statement to help `tooltip` component place itself whenever possible. Changed a few of the selectors in `tooltip` to be as specific as needed and work as required.
+- Updated `tooltip` mixin to reflect the above changes.

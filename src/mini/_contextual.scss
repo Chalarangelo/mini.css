@@ -206,13 +206,14 @@ $tooltip-bottom-name:		'bottom' !default;					// Bottom tooltip class name
 			// Remember to keep this index a lower value than the one used for stickies.
 			z-index: 1010;	// Deals with certain problems when combined with cards and tables.
 		}
+		&:before, &:after {
+			left: 50%;
+		}
 		&:not(.#{$tooltip-bottom-name}):before, &:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
 			bottom: 100%;
-			left: 50%;
 		}
 		&.#{$tooltip-bottom-name}:before, &.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
 			top: 100%;
-			left: 50%;
 		}
 		&:hover, &:active, &:focus {
 			&:before, &:after {
@@ -226,7 +227,6 @@ $tooltip-bottom-name:		'bottom' !default;					// Bottom tooltip class name
 			content: '';
 			background: transparent;
 			border: $tooltip-tail-size solid transparent;
-			left: calc(50% - #{$tooltip-tail-size});
 		}
 		&:not(.#{$tooltip-bottom-name}):before { // Top (default) tooltip styling
 			border-top-color: $tooltip-back-color;
@@ -258,6 +258,12 @@ $tooltip-bottom-name:		'bottom' !default;					// Bottom tooltip class name
 		}
 		&.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
 			margin-top: 2 * $tooltip-tail-size;
+		}
+	}
+	@supports (left: calc(50% - #{$tooltip-tail-size})) or (left: -webkit-calc(50% - #{$tooltip-tail-size})){
+		.#{$tooltip-name}:before {
+			left: 	-webkit-calc(50% - #{$tooltip-tail-size});
+			left: 			calc(50% - #{$tooltip-tail-size});
 		}
 	}
 }
@@ -299,7 +305,6 @@ $tooltip-bottom-name:		'bottom' !default;					// Bottom tooltip class name
 		@if $tooltip-alt-tail-size != $tooltip-tail-size {
 			&:before {
 				border-width: $tooltip-alt-tail-size;
-				left: calc(50% - #{$tooltip-alt-tail-size});
 			}
 			&:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
 				margin-bottom: 2 * $tooltip-alt-tail-size;
@@ -318,6 +323,14 @@ $tooltip-bottom-name:		'bottom' !default;					// Bottom tooltip class name
 			}
 			@if $tooltip-alt-box-shadow != $tooltip-box-shadow {
 				box-shadow: $tooltip-alt-box-shadow;
+			}
+		}
+	}
+	@if $tooltip-alt-tail-size != $tooltip-tail-size {
+		@supports (left: calc(50% - #{$tooltip-tail-size})) or (left: -webkit-calc(50% - #{$tooltip-tail-size})){
+			.#{$tooltip-name}.#{$tooltip-alt-name}:before {
+				left: 	-webkit-calc(50% - #{$tooltip-alt-tail-size});
+				left: 			calc(50% - #{$tooltip-alt-tail-size});
 			}
 		}
 	}

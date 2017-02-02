@@ -1205,8 +1205,8 @@ table.striped tr:nth-of-type(2n) > td {
 @media (max-width: 767px) {
   table.striped:not(.preset) tr:nth-of-type(2n) {
     background: #eeeeee; } }
-/* 
-	Definitions for cards and containers. 
+/*
+	Definitions for cards and containers.
 */
 .card {
   display: -webkit-box;
@@ -1238,7 +1238,7 @@ table.striped tr:nth-of-type(2n) > td {
       padding: 0;
       -o-object-fit: cover;
       object-fit: cover; }
-  .card > button.section, .card .button.section, .card input.section {
+  .card > button.section, .card .button.section, .card [role="button"].section, .card input.section {
     border-radius: 0; }
   .card > .section:last-child {
     border-bottom: 0; }

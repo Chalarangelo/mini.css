@@ -813,3 +813,4 @@
 ## 20170202
 
 - Added `[role="button"]` selector for elements inside `header`, did not remove any other selectors from component as specifity would be too low if changed.
+- Updated `.card.section` to work properly with `[role="button"]` elements.

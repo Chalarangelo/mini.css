@@ -49,7 +49,9 @@ header {
 		}
 	}
 	// Link styling.
-	button, [type="button"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
+	button, [type="button"],
+	a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name},
+	a[role="button"], label[role="button"], [role="button"] {
 		background: $header-back-color;		// Apply color regardless to override styling from other things.
 		color: $header-fore-color;
 		vertical-align: top;		// Alignemt, really important to make this work well.
@@ -67,7 +69,7 @@ header {
 		}
 	}
 	@if $apply-link-underline {		// Override for links if underline is enabled.
-		.#{$header-logo-name}, a.#{$button-class-name} {
+		.#{$header-logo-name}, a.#{$button-class-name}, a[role="button"] {
 			text-decoration: none;
 		}
 	}

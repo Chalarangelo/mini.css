@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0.2/dist/mini-default.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <title>mini.css - Input Control</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
-    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass, module, input, control, form, button">
-    <meta name="author" content="Angelos Chalaris (chalarangelo)">
-    <meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
-    <meta property="og:type" content="website"/>
-    <meta property="og:description" content="mini.css is a tiny CSS toolkit designed to build quick, modern and responsive websites."/>
-    <meta property="og:image" content="page_thumb.PNG">
-    <meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
-    <link rel="icon" type="image/png" href="favicon.png">    
+	  <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <title>mini.css - Input Control</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+  	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, input, control, form, button ">
+  	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+  	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+  	<meta property="og:type" content="website"/>
+  	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+  	<meta property="og:image" content="page_thumb.PNG">
+  	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
+  	<link rel="icon" type="image/png" href="favicon.png">
     <style>
       /* Classes and ids used in multiple pages - page top and utilities */
       #header-logo {
@@ -36,7 +36,7 @@
       .box-colored.red { background: #e53935; }
       .box-centered > .card.fluid {
         -webkit-box-pack: start;
-        -webkit-box-align: start; 
+        -webkit-box-align: start;
         -webkit-justify-content: flex-start;
                 justify-content: flex-start;
         -webkit-align-self: auto;
@@ -69,30 +69,35 @@
       .box-colored {
         color: #f5f5f5;
       }
+	  header.sticky a.button {
+		padding: 4px 6px; font-size: 0.95em;
+	  }
     </style>
   </head>
-  <body>  
-    <header>
-      <a href="index.html"><img class="logo" src="mini-logo.svg" id="header-logo"></a><div style="display: inline; overflow: auto;">
-      <a href="index.html" class="button">Introduction</a>
-      <a href="modules.html" class="button">Modules</a>
-      <a href="flavors.html" class="button">Flavors</a>
-      <a href="customization.html" class="button">Customization</a>
-      <a href="quick_reference.html" class="button">Quick Reference</a>
-      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
-      </div>
-    </header>
-    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
-      <div class="row">
-        <div class="col-sm">
-          <div class="box-centered">
-            <img src="mini-logo.svg" id="top-logo">
-            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
-            <mark class="tertiary" id="top-version-tag">v2.0</mark>
-        </div>
-      </div>
-      </div>
-    </div>
+  <body>
+	  <header>
+	    <a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="vertical-align: top; position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a><div style="display: inline; overflow: auto;">
+	    <a href="index.html" class="button">Introduction</a>
+	    <a href="modules.html" class="button">Modules</a>
+	    <a href="flavors.html" class="button">Flavors</a>
+	    <a href="customization.html" class="button">Customization</a>
+	    <a href="quick_reference.html" class="button">Quick Reference</a>
+	    <a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+	    </div>
+	  </header>
+	<header class="sticky" style="box-shadow:  0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26); height: 36px;">
+		  <a href="core.html" class="button">Core</a>
+		  <a href="grid.html" class="button">Grid</a>
+		  <a href="navigation.html" class="button">Navigation</a>
+		  <a href="input_control.html" class="button">Input Control</a>
+		  <a href="table.html" class="button">Table</a>
+		  <a href="card.html" class="button">Card</a>
+		  <a href="tab.html" class="button">Tab</a>
+		  <a href="contextual.html" class="button">Contextual</a>
+		  <a href="progress.html" class="button">Progress</a>
+		  <a href="utility.html" class="button">Utility</a>
+		  </div>
+	</header>
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">
@@ -137,7 +142,7 @@
                 .responsive-label {
                   align-items: center;
                 }
-                @media (min-width: 768px) { 
+                @media (min-width: 768px) {
                   .responsive-label .col-md-3 {
                     text-align: right;
                   }
@@ -192,11 +197,11 @@
   &lt;fieldset&gt;
     &lt;legend&gt;Simple form&lt;/legend&gt;
     &lt;div class=&quot;input-group&quot;&gt;
-      &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+      &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
       &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;input-group&quot;&gt;
-      &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt; 
+      &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt;
       &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
     &lt;/div&gt;
   &lt;/fieldset&gt;
@@ -218,7 +223,7 @@
     &lt;legend&gt;Responsive form&lt;/legend&gt;
     &lt;div class=&quot;row&quot;&gt;
       &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
-        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
       &lt;/div&gt;
       &lt;div class=&quot;col-sm-12 col-md&quot;&gt;
         &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
@@ -226,7 +231,7 @@
     &lt;/div&gt;
     &lt;div class=&quot;row&quot;&gt;
       &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
-        &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt; 
+        &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt;
       &lt;/div&gt;
       &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
         &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
@@ -242,13 +247,13 @@
     &lt;legend&gt;Responsive form&lt;/legend&gt;
     &lt;div class=&quot;row&quot;&gt;
       &lt;div class=&quot;col-sm-12 col-md-10 col-md-offset-1&quot;&gt;
-        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
         &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
       &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;row&quot;&gt;
       &lt;div class=&quot;col-sm-12 col-md-10 col-md-offset-1&quot;&gt;
-        &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt; 
+        &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt;
         &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -267,7 +272,7 @@
     &lt;legend&gt;Responsive form&lt;/legend&gt;
     &lt;div class=&quot;row label-aligned&quot;&gt;
       &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
-        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
       &lt;/div&gt;
       &lt;div class=&quot;col-sm-12 col-md&quot;&gt;
         &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
@@ -283,7 +288,7 @@
     &lt;legend&gt;Responsive form&lt;/legend&gt;
     &lt;div class=&quot;row input-group&quot;&gt;
       &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
-        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
       &lt;/div&gt;
       &lt;div class=&quot;col-sm-12 col-md&quot;&gt;
         &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
@@ -324,12 +329,12 @@
                 <p>Checkboxes and radio buttons come pre-styled, using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, while remaining fully accessible. To create a checkbox or radio button, start using a <code>&lt;div&gt;</code> that implements the <code>.input-group</code> class, and then add an <code>&lt;input&gt;</code> of the proper <code><span class="secondary">type</span></code> inside it (<code><span class="fore-primary">&quot;checkbox&quot;</span></code> or <code><span class="fore-primary">&quot;radio&quot;</span></code>), followed immediately by a <code>&lt;label&gt;</code> linking to it. Remember to add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to your <code>&lt;input&gt;</code>, so that it will register properly for screen readers.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;input-group&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt; 
+  &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt;
   &lt;label for=&quot;check1&quot;&gt;Checkbox&lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;input-group&quot;&gt;
-  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt; 
+  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
   &lt;label for=&quot;rad1&quot;&gt;Radio&lt;/label&gt;
 &lt;/div&gt;</pre>
               </div>
@@ -343,15 +348,15 @@
               <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre>&lt;div class=&quot;input-group&quot;&gt;
-  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt; 
+  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
   &lt;label for=&quot;rad1&quot;&gt;Value 1&lt;/label&gt;
-  &lt;input type=&quot;radio&quot; id=&quot;rad2&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt; 
+  &lt;input type=&quot;radio&quot; id=&quot;rad2&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
   &lt;label for=&quot;rad2&quot;&gt;Value 2&lt;/label&gt;
 &lt;/div&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can add multiple <code>radio</code> buttons inside one <code>.input-group</code>, as long as they follow the syntax shown above. In fact, we strongly recommend grouping controls that are relevant to each other in this manner.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre>&lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt; 
+                  <pre>&lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt;
 &lt;label for=&quot;check1&quot;&gt;Checkbox&lt;/label&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Always use an <code>.input-group</code> for your checkboxes and radio buttons. Not doing so will cause the checkbox or radio button to not display properly.</p>
                 </div>
@@ -363,7 +368,7 @@
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Remember to add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to all your checkboxes and radio buttons to make them accessible.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre>&lt;div class=&quot;input-group&quot;&gt; 
+                  <pre>&lt;div class=&quot;input-group&quot;&gt;
   &lt;label for=&quot;check1&quot;&gt;Checkbox&lt;/label&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt;
 &lt;/div&gt;</pre>
@@ -371,8 +376,8 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;input-group&quot;&gt;
-  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt; 
-  &lt;input type=&quot;radio&quot; id=&quot;rad2&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt; 
+  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;rad2&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
   &lt;label for=&quot;rad2&quot;&gt;Value 2&lt;/label&gt;
   &lt;label for=&quot;rad1&quot;&gt;Value 1&lt;/label&gt;
 &lt;/div&gt;</pre>
@@ -388,7 +393,7 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
       <div class="row">
         <div class="col-sm">
           <div class="card fluid">
@@ -403,7 +408,7 @@
                 <button class="tertiary">Tertiary button</button>
                 <button class="inverse">Inverse button</button>
                 <button class="small">Small button</button>
-                <button class="large">Large button</button>           
+                <button class="large">Large button</button>
                 <button disabled>Disabled button</button>
                 <h4>Button group</h4>
                 <div class="button-group">
@@ -423,7 +428,7 @@
 &lt;input type=&quot;submit&quot; class=&quot;tertiary&quot; value=&quot;Tertiary button&quot;&gt;
 &lt;button class=&quot;inverse&quot;&gt;Inverse button&lt;/button&gt;
 &lt;button class=&quot;small&quot;&gt;Small button&lt;/button&gt;
-&lt;button class=&quot;large&quot;&gt;Large button&lt;/button&gt;           
+&lt;button class=&quot;large&quot;&gt;Large button&lt;/button&gt;
 &lt;button disabled&gt;Disabled button&lt;/button&gt;
 &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Link button&lt;/a&gt;
 &lt;label class=&quot;button&quot;&gt;Label button&lt;/label&gt;

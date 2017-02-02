@@ -816,3 +816,6 @@
 - Updated `.card.section` to work properly with `[role="button"]` elements.
 - #22: Spent a lot of time testing possible implementation of *Media Object*. See related issue for what I ended up with.
 - Updated `index.html`. It's now ready for v2.1.0.
+- Created the module `header` navigation bar to help make navigation easier.
+- Updated all `head` elements for all pages.
+- Updated top navigation for all pages.

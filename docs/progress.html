@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0.2/dist/mini-default.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <title>mini.css - Progress</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
-    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass, module, progress">
-    <meta name="author" content="Angelos Chalaris (chalarangelo)">
-    <meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
-    <meta property="og:type" content="website"/>
-    <meta property="og:description" content="mini.css is a tiny CSS toolkit designed to build quick, modern and responsive websites."/>
-    <meta property="og:image" content="page_thumb.PNG">
-    <meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
-    <link rel="icon" type="image/png" href="favicon.png">    
+	  <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <title>mini.css - Progress</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+  	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, progress ">
+  	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+  	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+  	<meta property="og:type" content="website"/>
+  	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+  	<meta property="og:image" content="page_thumb.PNG">
+  	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
+  	<link rel="icon" type="image/png" href="favicon.png">
     <style>
       /* Classes and ids used in multiple pages - page top and utilities */
       #header-logo {
@@ -36,7 +36,7 @@
       .box-colored.red { background: #e53935; }
       .box-centered > .card.fluid {
         -webkit-box-pack: start;
-        -webkit-box-align: start; 
+        -webkit-box-align: start;
         -webkit-justify-content: flex-start;
                 justify-content: flex-start;
         -webkit-align-self: auto;
@@ -69,30 +69,35 @@
       .box-colored {
         color: #f5f5f5;
       }
+	  header.sticky a.button {
+		padding: 4px 6px; font-size: 0.95em;
+	  }
     </style>
   </head>
-  <body>  
-    <header>
-      <a href="index.html"><img class="logo" src="mini-logo.svg" id="header-logo"></a><div style="display: inline; overflow: auto;">
-      <a href="index.html" class="button">Introduction</a>
-      <a href="modules.html" class="button">Modules</a>
-      <a href="flavors.html" class="button">Flavors</a>
-      <a href="customization.html" class="button">Customization</a>
-      <a href="quick_reference.html" class="button">Quick Reference</a>
-      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
-      </div>
-    </header>
-    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
-      <div class="row">
-        <div class="col-sm">
-          <div class="box-centered">
-            <img src="mini-logo.svg" id="top-logo">
-            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
-            <mark class="tertiary" id="top-version-tag">v2.0</mark>
-        </div>
-      </div>
-      </div>
-    </div>
+  <body>
+	  <header>
+	    <a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="vertical-align: top; position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a><div style="display: inline; overflow: auto;">
+	    <a href="index.html" class="button">Introduction</a>
+	    <a href="modules.html" class="button">Modules</a>
+	    <a href="flavors.html" class="button">Flavors</a>
+	    <a href="customization.html" class="button">Customization</a>
+	    <a href="quick_reference.html" class="button">Quick Reference</a>
+	    <a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+	    </div>
+	  </header>
+	<header class="sticky" style="box-shadow:  0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26); height: 36px;">
+		  <a href="core.html" class="button">Core</a>
+		  <a href="grid.html" class="button">Grid</a>
+		  <a href="navigation.html" class="button">Navigation</a>
+		  <a href="input_control.html" class="button">Input Control</a>
+		  <a href="table.html" class="button">Table</a>
+		  <a href="card.html" class="button">Card</a>
+		  <a href="tab.html" class="button">Tab</a>
+		  <a href="contextual.html" class="button">Contextual</a>
+		  <a href="progress.html" class="button">Progress</a>
+		  <a href="utility.html" class="button">Utility</a>
+		  </div>
+	</header>
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">

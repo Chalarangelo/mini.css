@@ -841,3 +841,4 @@
 - Updated `#header-logo` styling in order to make the framework's logo display properly in Chrome.
 - Updated `header`s `logo` element styling to make sure that it does not *jump* in Chrome.
 - Documented predefined layouts in `grid.html`.
+- Fixed the `pre` segments in `grid.html`.

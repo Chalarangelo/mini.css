@@ -351,43 +351,41 @@
               <h2>Column offsets</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-                <div class="container">
-                  <br>
-                  <div class="row"><div class="col-sm-10 col-sm-offset-1"><div class="box-colored">size = 10, offset = 1</div></div></div>
-                  <div class="row"><div class="col-sm col-sm-offset-2"><div class="box-colored">fluid, offset = 2</div></div></div>
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
+                <div class="container"><br>
+                  <div class="row"><div class="col-sm-8 col-sm-offset-2"><div class="box-colored">size = 8, offset = 2</div></div></div>
                   <div class="row"><div class="col-sm-6 col-sm-offset-3"><div class="box-colored">size = 6, offset = 3</div></div></div>
-                  <div class="row"><div class="col-sm-8 col-sm-offset-4"><div class="box-colored">size = 8, offset = 4</div></div></div>
+                  <div class="row"><div class="col-sm-4 col-sm-offset-4"><div class="box-colored">size = 4, offset = 4</div></div></div>
                   <div class="row">
-                    <div class="col-sm-5 col-sm-offset-1"><div class="box-colored">size = 5, offset = 1</div></div>
-                    <div class="col-sm-5 col-sm-offset-1"><div class="box-colored">size = 5, offset = 1</div></div>
+                    <div class="col-sm-4 col-sm-offset-1"><div class="box-colored">size = 4, offset = 1</div></div>
+                    <div class="col-sm-4 col-sm-offset-2"><div class="box-colored">size = 4, offset = 2</div></div>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12">
                 <p>If you want to move columns to the right, you can use the offset classes on your columns. Offset classes use the <code>.col-<span class="fore-primary">SCR_SZ</span>-offset-<span class="fore-secondary">COL_WD</span></code> syntax, where <code><span class="fore-primary">SCR_SZ</span></code> is one of the available screen size names (<code><span class="fore-tertiary">sm</span></code>, <code><span class="fore-tertiary">md</span></code> or <code><span class="fore-tertiary">lg</span></code>) and <code><span class="fore-secondary">COL_WD</span></code> a number from <code>0</code> to <code>11</code> specifying the width of the column's offset. Offsets can also be used in combination with screen-specific layouts and column sizes, providing you with greater flexibility when spacing out your content.</p>
                 <h3>Sample code</h3>
                 <p>The example presented below showcases the grid system's offsetting syntax for smaller screens, but you can do the same thing for any screen size.</p>
                 <pre>&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-sm-10 col-sm-offset-1&quot;&gt;
+    &lt;div class=&quot;col-sm-8 col-sm-offset-2&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-sm col-sm-offset-2&quot;&gt;
+    &lt;div class=&quot;col-sm-6 col-sm-offset-3&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-sm-6 col-sm-offset-3&quot;&gt;
+    &lt;div class=&quot;col-sm-4 col-sm-offset-4&quot;&gt;
     &lt;/div&gt;
 &lt;/div&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-sm-8 col-sm-offset-4&quot;&gt;
+    &lt;div class=&quot;col-sm col-sm-offset-1&quot;&gt;
     &lt;/div&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-sm-5 col-sm-offset-1&quot;&gt;
+    &lt;div class=&quot;col-sm-4 col-sm-offset-1&quot;&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;col-sm-5 col-sm-offset-1&quot;&gt;
+    &lt;div class=&quot;col-sm-4 col-sm-offset-2&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre><br>
@@ -431,18 +429,18 @@
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
                 <div class="container">
-                <div class="row"><div class="col-sm"><h4>Small screen layout</h4><hr></div></div>
-                  <div class="row">
+                <div class="row"><div class="col-sm"><br><br></div></div>
+				<div class="row">
+			      <div class="col-sm col-sm"><div class="box-colored red">first</div></div>
+			      <div class="col-sm col-sm"><div class="box-colored">&nbsp;</div></div>
+			      <div class="col-sm col-sm"><div class="box-colored">&nbsp;</div></div>
+			    </div><div class="row"><div class="col-sm"><br><br></div></div>
+				  <div class="row">
                     <div class="col-sm col-sm"><div class="box-colored">&nbsp;</div></div>
                     <div class="col-sm col-sm"><div class="box-colored red">normal</div></div>
                     <div class="col-sm col-sm"><div class="box-colored">&nbsp;</div></div>
                   </div>
-                  <div class="row"><div class="col-sm"><h4>Medium screen layout</h4><hr></div></div>
-                  <div class="row">
-                    <div class="col-sm col-sm"><div class="box-colored red">first</div></div>
-                    <div class="col-sm col-sm"><div class="box-colored">&nbsp;</div></div>
-                    <div class="col-sm col-sm"><div class="box-colored">&nbsp;</div></div>
-                  </div><div class="row"><div class="col-sm"><h4>Large screen layout</h4><hr></div></div>
+                  <div class="row"><div class="col-sm"><br><br></div></div>             
                   <div class="row">
                     <div class="col-sm col-sm"><div class="box-colored">&nbsp;</div></div>
                     <div class="col-sm col-sm"><div class="box-colored">&nbsp;</div></div>

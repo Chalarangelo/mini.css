@@ -832,3 +832,4 @@
 - Minimized the internal CSS of all the pages.
 - Shrinked page sizes a little bit across all pages, except `quick_reference.html`.
 - Minor updates to `quick_reference.html` to get size a bit lower.
+- Updated existing documentation for `grid` module.

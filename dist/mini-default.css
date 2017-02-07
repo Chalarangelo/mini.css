@@ -638,7 +638,9 @@ header {
     font-size: 1.75em;
     line-height: 1.2;
     margin: 1px 6px 1px 1px;
-    padding: 3px 0 0; }
+    padding: 3px 0 0;
+    -webkit-transition: 0s opacity;
+    transition: 0s opacity; }
   header button, header [type="button"],
   header a.button, header label.button, header .button,
   header a[role="button"], header label[role="button"], header [role="button"] {

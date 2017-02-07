@@ -839,3 +839,4 @@
 - Updated `LICENSE`.
 - Updated `package.json` and `bower.json`.
 - Updated `#header-logo` styling in order to make the framework's logo display properly in Chrome.
+- Updated `header`s `logo` element styling to make sure that it does not *jump* in Chrome.

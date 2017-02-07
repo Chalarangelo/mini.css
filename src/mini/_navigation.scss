@@ -47,6 +47,8 @@ header {
 		@if $header-logo-padding != 0 {
 			padding: $header-logo-padding;
 		}
+		-webkit-transition: 0s opacity;
+				transition: 0s opacity;
 	}
 	// Link styling.
 	button, [type="button"],

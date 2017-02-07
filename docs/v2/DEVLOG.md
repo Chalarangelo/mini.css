@@ -835,3 +835,6 @@
 - Updated existing documentation for `grid` module.
 - Setup the `media object` section of `grid.html`, just the basic demo for now.
 - Documented `media object`. Resolves #22.
+- Rebranded as a **CSS framework** instead of a **UI toolkit**.
+- Updated `LICENSE`.
+- Updated `package.json` and `bower.json`.

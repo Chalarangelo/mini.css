@@ -831,3 +831,4 @@
 - Shrinked the size of `core.html`, minimized the internal CSS of the page.
 - Minimized the internal CSS of all the pages.
 - Shrinked page sizes a little bit across all pages, except `quick_reference.html`.
+- Minor updates to `quick_reference.html` to get size a bit lower.

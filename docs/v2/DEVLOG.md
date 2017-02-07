@@ -825,3 +825,9 @@
 
 - `index.html` and `core.html` are complete. Moving on to `grid.html`.
 - Altered `grid.html` to better present the `basic layout` and `screen-specific layouts` cards.
+- Spent a few minutes dealing with tabs and spaces and html page optimizations etc.
+- Shrinked the size of `index.html`, minimized the internal CSS of the page.
+- Dealt a little bit with other pages' `header` elements and some styling.
+- Shrinked the size of `core.html`, minimized the internal CSS of the page.
+- Minimized the internal CSS of all the pages.
+- Shrinked page sizes a little bit across all pages, except `quick_reference.html`.

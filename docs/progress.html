@@ -1,103 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-	  <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <title>mini.css - Progress</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-  	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
-  	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, progress ">
-  	<meta name="author" content="Angelos Chalaris (chalarangelo)">
-  	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
-  	<meta property="og:type" content="website"/>
-  	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
-  	<meta property="og:image" content="page_thumb.PNG">
-  	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
-  	<link rel="icon" type="image/png" href="favicon.png">
-    <style>
-      /* Classes and ids used in multiple pages - page top and utilities */
-      #header-logo {
-        display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px;
-         padding: 4px;
-      }
-      #top-logo {
-        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
-        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      #top-heading {
-        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
-      }
-      #top-version-tag {
-        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      .box-centered { text-align: center; }
-      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
-      .box-colored.red { background: #e53935; }
-      .box-centered > .card.fluid {
-        -webkit-box-pack: start;
-        -webkit-box-align: start;
-        -webkit-justify-content: flex-start;
-                justify-content: flex-start;
-        -webkit-align-self: auto;
-                align-self: auto;
-      }
-      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
-      /* Local classes and ids for this page */
-      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
-      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
-      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
-      .col-sm-12.col-sm-last.col-md-4.col-md-normal {
-        box-sizing: border-box;
-        border-right: 1px solid #bdbdbd;
-      }
-      @media (max-width: 767px){
-        .col-sm-12.col-sm-last.col-md-4.col-md-normal {
-          border: 0;
-          border-top: 1px solid #bdbdbd;
-        }
-      }
-      .box-colored.green { background: #689f38; }
-      .do {
-        border-top: 15px solid #689f38;
-        padding-top: 10px;
-      }
-      .dont {
-        border-top: 15px solid #e53935;
-        padding-top: 10px;
-      }
-      .box-colored {
-        color: #f5f5f5;
-      }
-	  header.sticky a.button {
-		padding: 4px 6px; font-size: 0.95em;
-	  }
-    </style>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>mini.css - Progress</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, progress ">
+	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.PNG">
+	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
+	<style>
+	/* Classes and ids used in multiple pages - page top and utilities */
+	#header-logo { display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px; padding: 4px; }
+	.box-centered { text-align: center; }
+	.box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
+	.box-colored.red { background: #e53935; }
+	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	.col-sm-12.col-sm-last.col-md-4.col-md-normal {box-sizing: border-box;border-right: 1px solid #bdbdbd;}
+	@media (max-width: 767px){.col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0;border-top: 1px solid #bdbdbd;}}
+	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
+	.box-colored {color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	</style>
   </head>
   <body>
 	  <header>
-	    <a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="vertical-align: top; position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a><div style="display: inline; overflow: auto;">
-	    <a href="index.html" class="button">Introduction</a>
-	    <a href="modules.html" class="button">Modules</a>
-	    <a href="flavors.html" class="button">Flavors</a>
-	    <a href="customization.html" class="button">Customization</a>
-	    <a href="quick_reference.html" class="button">Quick Reference</a>
-	    <a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
-	    </div>
-	  </header>
-	<header class="sticky" style="box-shadow:  0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26); height: 36px;">
-		  <a href="core.html" class="button">Core</a>
-		  <a href="grid.html" class="button">Grid</a>
-		  <a href="navigation.html" class="button">Navigation</a>
-		  <a href="input_control.html" class="button">Input Control</a>
-		  <a href="table.html" class="button">Table</a>
-		  <a href="card.html" class="button">Card</a>
-		  <a href="tab.html" class="button">Tab</a>
-		  <a href="contextual.html" class="button">Contextual</a>
-		  <a href="progress.html" class="button">Progress</a>
-		  <a href="utility.html" class="button">Utility</a>
-		  </div>
-	</header>
+      	<a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="vertical-align: top; position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a>
+      	<div style="display: inline; overflow: auto;">
+      		<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
+      		<a href="flavors.html" class="button">Flavors</a> <a href="customization.html" class="button">Customization</a>
+      		<a href="quick_reference.html" class="button">Quick Reference</a>
+      		<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+      	</div>
+      </header>
+	  <header class="sticky" style="height:36px;">
+  		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
+  		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
+  		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
+  		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
+  		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
+  	</header>
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">
@@ -126,17 +71,12 @@
       <div class="row">
         <div class="col-sm">
           <div class="card fluid">
-            <div class="section">
-              <h2>Basic progress bar</h2>
-            </div>
+            <div class="section"><h2>Basic progress bar</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-                <p>Process is 0% complete!</p>
-                <progress value="0" max="1000"></progress>
-                <p>Process is 45% complete!</p>
-                <progress value="450" max="1000"></progress>
-                <p>Process is 100% complete!</p>
-                <progress value="1000" max="1000"></progress>
+                <p>Process is 0% complete!</p> <progress value="0" max="1000"></progress>
+                <p>Process is 45% complete!</p> <progress value="450" max="1000"></progress>
+                <p>Process is 100% complete!</p> <progress value="1000" max="1000"></progress>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
                 <p>To create a progress bar, use the <code>&lt;progress&gt;</code> HTML element, specify the preset maximum of <code><span class="fore-secondary">max</span>=<span class="fore-primary">&quot;1000&quot;</span></code> and set a <code>value</code> between <code>0</code> and <code>1000</code>. Update your <code>&lt;progress&gt;</code> element using some Javascript code, by changing its <code>value</code> to any integer in the same range.</p>
@@ -151,8 +91,7 @@
               <ul>
                 <li>We made sure that the <code>&lt;progress&gt;</code> element displays properly on all modern browsers, using browser-specific rules. However, there might be some irregularities with older browsers, especially legacy versions of Internet Explorer.</li>
                 <li>If the preset <code>max="1000"</code> does not suit your needs, you should check the <a href="customization.html">customization page</a> for instructions on how to set your own maximum value for the <code>&lt;progress&gt;</code> element.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;progress value=&quot;80&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</pre>
@@ -170,17 +109,12 @@
       <div class="row">
         <div class="col-sm">
           <div class="card fluid">
-            <div class="section">
-              <h2>Progress bar variants</h2>
-            </div>
+            <div class="section"><h2>Progress bar variants</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-                <p>Secondary process is 60% complete!</p>
-                <progress class="secondary" value="600" max="1000"></progress>
-                <p>Tertiary process is 30% complete!</p>
-                <progress class="tertiary" value="300" max="1000"></progress>
-                <p>Nano progress bar is 75% filled!</p>
-                <progress class="nano" value="750" max="1000"></progress>
+                <p>Secondary process is 60% complete!</p> <progress class="secondary" value="600" max="1000"></progress>
+                <p>Tertiary process is 30% complete!</p> <progress class="tertiary" value="300" max="1000"></progress>
+                <p>Nano progress bar is 75% filled!</p> <progress class="nano" value="750" max="1000"></progress>
                 <p>Inline progress bar:<progress class="inline" value="150" max="1000"></progress></p>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
@@ -196,8 +130,7 @@
             <h3>Notes</h3>
               <ul>
                 <li>If you want to add your own custom size classes for <code>&lt;progress&gt;</code> elements, check the <a href="customization.html">customization page</a> for instructions.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;progress class=&quot;nano secondary&quot; value=&quot;800&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
@@ -219,15 +152,11 @@
       <div class="row">
         <div class="col-sm">
           <div class="card fluid">
-            <div class="section">
-              <h2>Donut spinner</h2>
-            </div>
+            <div class="section"><h2>Donut spinner</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-              <div class="box-centered">
-              <br>
-              <div class="spinner-donut"></div>
-              <br>
+              <div class="box-centered"><br>
+                <div class="spinner-donut"></div><br>
               </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
@@ -240,8 +169,7 @@
             <h3>Notes</h3>
               <ul>
                 <li>The <code>.spinner-donut</code> is an animated component, meaning that if a browsers does not support animation, this element might display incorrectly.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;p&gt;Loading... &lt;span class=&quot;spinner-donut&quot;&gt;&lt;/span&gt;&lt;/p&gt;</pre>
@@ -259,17 +187,11 @@
       <div class="row">
         <div class="col-sm">
           <div class="card fluid">
-            <div class="section">
-              <h2>Donut spinner variants</h2>
-            </div>
+            <div class="section"><h2>Donut spinner variants</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-                <div class="box-centered">
-                  <br>
-                  <div class="spinner-donut secondary"></div><br>
-                  <div class="spinner-donut tertiary"></div><br>
-                  <div class="spinner-donut large"></div>
-                  <br>
+                <div class="box-centered"><br>
+                  <div class="spinner-donut secondary"></div><br> <div class="spinner-donut tertiary"></div><br> <div class="spinner-donut large"></div><br>
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">

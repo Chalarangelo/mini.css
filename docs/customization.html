@@ -1,66 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-	  <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <title>mini.css - Customization</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-  	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
-  	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, customization, flavor ">
-  	<meta name="author" content="Angelos Chalaris (chalarangelo)">
-  	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
-  	<meta property="og:type" content="website"/>
-  	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
-  	<meta property="og:image" content="page_thumb.PNG">
-  	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
-  	<link rel="icon" type="image/png" href="favicon.png">
-    <style>
-      /* Classes and ids used in multiple pages - page top and utilities */
-      #header-logo {
-        display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px;
-         padding: 4px;
-      }
-      #top-logo {
-        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
-        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      #top-heading {
-        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
-      }
-      #top-version-tag {
-        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      .box-centered { text-align: center; }
-      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
-      .box-colored.red { background: #e53935; }
-      .box-centered > .card.fluid {
-        -webkit-box-pack: start;
-        -webkit-box-align: start;
-        -webkit-justify-content: flex-start;
-                justify-content: flex-start;
-        -webkit-align-self: auto;
-                align-self: auto;
-      }
-      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
-      /* Local classes and ids for this page */
-      .box-left { text-align: left; }
-      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
-      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
-      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
-    </style>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>mini.css - Customization</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, customization, flavor ">
+	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.PNG">
+	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
+	<style>
+	#header-logo { display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px; padding: 4px; }
+	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
+	.box-colored.red { background: #e53935; } .box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; } .box-left { text-align: left; }
+	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	</style>
   </head>
   <body>
-	  <header class="sticky" style="box-shadow:  0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26); ">
-        <a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="vertical-align: top; position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a><div style="display: inline; overflow: auto;">
-        <a href="index.html" class="button">Introduction</a>
-        <a href="modules.html" class="button">Modules</a>
-        <a href="flavors.html" class="button">Flavors</a>
-        <a href="customization.html" class="button">Customization</a>
-        <a href="quick_reference.html" class="button">Quick Reference</a>
-        <a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
-        </div>
-      </header>
+	<header class="sticky">
+  		<a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="vertical-align: top; position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a>
+  		<div style="display: inline; overflow: auto;">
+  			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
+  			<a href="flavors.html" class="button">Flavors</a> <a href="customization.html" class="button">Customization</a>
+  			<a href="quick_reference.html" class="button">Quick Reference</a>
+  			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+  		</div>
+  	</header>
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">
@@ -103,9 +71,7 @@
           <h2>Building a flavor</h2>
           <p>Creating your own flavor can be as easy or as complicated as your needs. Adding and removing modules is as simple as adding an <code>@import</code> statement or commenting it out, after declaring all the required variables. In this section, we will briefly walk you through most of the variables usually present in a flavor, along with some flags and mixins. This section serves as a complementary documentation to the comment column present in our pre-defined flavors, instead of a replacement and should be always viewed alongside it.</p><br>
           <div class="card fluid">
-            <div class="section">
-              <h3>Core</h3>
-            </div>
+            <div class="section"><h3>Core</h3></div>
             <div class="section">
               <p>The <strong>core</strong> module uses a lot of variables, most of which are pretty straightforward. Some of the most important ones are as follows:</p>
               <ul>
@@ -120,25 +86,19 @@
             </div>
           </div>
           <div class="card fluid">
-            <div class="section">
-              <h3>Grid</h3>
-            </div>
+            <div class="section"><h3>Grid</h3></div>
             <div class="section">
               <p>The <strong>grid</strong> module contains two important variables, the boolean <code>$use-four-step-grid</code> which determines if the grid has 3 or 4 breakpoints and the <code>$grid-column-count</code> which determines the amount of vertical columns used for the grid's layout. Apart from those, there are a few variables that set the names for the grid system's classes, prefixes and suffixes and the grid's screen size breakpoint definitions.</p>
             </div>
           </div>
           <div class="card fluid">
-            <div class="section">
-              <h3>Navigation</h3>
-            </div>
+            <div class="section"><h3>Navigation</h3></div>
             <div class="section">
               <p>The <strong>navigation</strong> module contains a plethora of variables used in the styling of the navigational elements. Most of them concern colors, spacing and sizing or similar things. Bear in mind that the presentation of buttons inside the <code>&lt;header&gt;</code> element will be affected by the styling of all button elements, as defined in the <code>input_control</code> module. The variable that stands out in this module is <code>$nav-sublink-depth</code> which determines how deep a navigational hierarchy tree can be.</p>
             </div>
           </div>
           <div class="card fluid">
-            <div class="section">
-              <h3>Input Control</h3>
-            </div>
+            <div class="section"><h3>Input Control</h3></div>
             <div class="section">
               <p>The <strong>input_control</strong> module is one of the larger modules, containg a lot of variables to style a multitude of elements. Forms and textual <code>&lt;input&gt;</code> elements utilize variables that concern color, spacing, sizing etc. Button variables are more interesting, especially the ones concerning the opacity of button elements (<code>$button-back-opacity</code> and <code>$button-hover-back-opacity</code>). The <code>$hide-file-inputs</code> boolean variable determines how <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code> elements will be handled. Checkboxes and radio buttons also use a few variables concerning basic styling, but special attention needs to be paid to the <code>$checkbox-size</code> variable, as it determines a few attributes of both elements.</p>
               <p>There are two mixins in the <strong>input_control</strong> module, specifically:</p>
@@ -149,17 +109,13 @@
             </div>
           </div>
           <div class="card fluid">
-            <div class="section">
-              <h3>Table</h3>
-            </div>
+            <div class="section"><h3>Table</h3></div>
             <div class="section">
               <p>The <strong>table</strong> module's variables deal mostly with basic table styling. The <code>$table-mobile-breakpoint</code> is very important as it determines the breakpoint for responsive tables' mobile view, along with <code>$table-mobile-card-label</code> which determines the attribute that will be used to display the table headings on mobile devices.</p>
             </div>
           </div>
           <div class="card fluid">
-            <div class="section">
-              <h3>Card</h3>
-            </div>
+            <div class="section"><h3>Card</h3></div>
             <div class="section">
               <p>The <strong>card</strong> modules' variables mostly deal with things like class names, spacing, sizing and colors. Cards offer a handful of mixins, specifically:</p>
               <ul>
@@ -171,17 +127,13 @@
             </div>
           </div>
           <div class="card fluid">
-            <div class="section">
-              <h3>Tab</h3>
-            </div>
+            <div class="section"><h3>Tab</h3></div>
             <div class="section">
               <p>The <strong>tab</strong> module utilizes a few naming and color variables, along with some sizing and spacing variables to deal with presentation and functionality. Many of the sizing variables are very dependent on each other's values. The <code>$tab-stacked-breakpoint</code> variable is especially important, as it determines the mobile view breakpoint for the tabs component.</p>
             </div>
           </div>
           <div class="card fluid">
-            <div class="section">
-              <h3>Contextual</h3>
-            </div>
+            <div class="section"><h3>Contextual</h3></div>
             <div class="section">
               <p>The <strong>contextual</strong> module features, apart from basic naming and styling variables, a few things of note. The boolean variable <code>$alert-include-animated</code> determines if animated alerts will be inluded or not. There is also a handful of mixins, which are the most important part of the contextual module as they are what makes it useful:</p>
               <ul>
@@ -193,9 +145,7 @@
             </div>
           </div>
           <div class="card fluid">
-            <div class="section">
-              <h3>Progress</h3>
-            </div>
+            <div class="section"><h3>Progress</h3></div>
             <div class="section">
               <p>The <strong>progress</strong> module contains lots of variables that affect basic styling, but it also features a few interesting mixins:</p>
               <ul>
@@ -208,9 +158,7 @@
             </div>
           </div>
           <div class="card fluid">
-            <div class="section">
-              <h3>Utility</h3>
-            </div>
+            <div class="section"><h3>Utility</h3></div>
             <div class="section">
               <p>The <strong>utility</strong> module contains a few variables dealing with naming and basic styling, but its most important feature is its mixins:</p>
               <ul>
@@ -230,10 +178,7 @@
           <p>If you would rather use one of the pre-defined flavors, check out our <a href="flavors.html">flavors</a> page for a list of all flavors currently available.</p>
         </div>
       </div>
-      <div class="row box-centered">
-        <div class="col-sm-12">
-        </div>
-      </div>
+      <div class="row box-centered"><div class="col-sm-12"></div></div>
     </div></main>
     <!-- End of page content-->
     <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>

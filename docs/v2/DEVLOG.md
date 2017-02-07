@@ -843,3 +843,4 @@
 - Documented predefined layouts in `grid.html`.
 - Fixed the `pre` segments in `grid.html`.
 - Made `header` `logo` element un`transition` conditional.
+- Updated `utility.html` to display as required on larger displays.

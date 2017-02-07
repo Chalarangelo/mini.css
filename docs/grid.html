@@ -521,24 +521,69 @@
 			<div class="section">
 			  <h3>Notes</h3>
 			  <ul>
-				<li></li>
+				<li>The media object is not a different component, but rather a popular pattern that can be implemented using the standard grid system classes.</li>
+				<li>You can use many different elements for your media object. For example, you can make the right side of the media object contain a form or an input field.</li>
 			  </ul><hr>
 			  <div class="row">
 				<div class="col-sm-12 col-md-6">
-				  <pre>...</pre>
-				  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Responsive - screen-specific...</p>
+				  <pre>&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-1 col-md-2 col-lg-3&quot;&gt;
+      &lt;img src=&quot;...&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-11 col-md-10 col-lg-9&quot;&gt;
+      &lt;h2&gt;Media object heading&lt;/h2&gt;
+      &lt;p&gt;Media object content...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</pre>
+				  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can make your media object responsive, by adding screen-specific layout classes to its columns.</p>
 				</div>
 				<div class="col-sm-12 col-md-6">
-				  <pre>...</pre>
-				  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Nesting and the use of rows...</p>
+				  <pre>&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-1 col-sm-last&quot;&gt;
+      &lt;img src=&quot;...&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+      &lt;h2&gt;Media object heading&lt;/h2&gt;
+      &lt;p&gt;Media object content...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</pre>
+				  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can align the media object's content to the left of the image (instead of the other way round), using the <code>.col-<span class="fore-primary">SCR_SZ</span>-normal</code> class, replacing <code><span class="fore-primary">SCR_SZ</span></code> with the desired screen size.</p>
 				</div>
 				<div class="col-sm-12 col-md-6">
-				  <pre>...</pre>
-				  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Align right using last...</p>
+				  <pre>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-2&quot;&gt;
+    &lt;img src=&quot;...&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm&quot;&gt;
+        &lt;h2&gt;Parent media object&lt;/h2&gt;
+        &lt;p&gt;Parent media object content...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;img src=&quot;...&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm&quot;&gt;
+        &lt;h2&gt;Child media object&lt;/h2&gt;
+        &lt;p&gt;Child media object content...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+				  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Media objects can be easily nested. You can use <code>.row</code> elements in the content column of the media object to make everything align perfectly.</p>
 				</div>
 				<div class="col-sm-12 col-md-6">
-				  <pre>...</pre>
-				  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Use of image or content as its own column...</p>
+				  <pre>&lt;div class=&quot;row&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;col-sm-1&quot;&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;
+      &lt;h2&gt;Media object heading&lt;/h2&gt;
+      &lt;p&gt;Media object content...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</pre>
+				  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Do not apply a column class directly to the media element (e.g.<code>&lt;img&gt;</code>) or the content of the media object, as this can cause problems with certain elements. Wrap your media objects columns in <code>&lt;div&gt;</code> elements and apply the grid classes to them, instead.</p>
 				</div>
 			  </div>
 			</div>

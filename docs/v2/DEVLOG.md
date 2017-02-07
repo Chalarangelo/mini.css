@@ -834,3 +834,4 @@
 - Minor updates to `quick_reference.html` to get size a bit lower.
 - Updated existing documentation for `grid` module.
 - Setup the `media object` section of `grid.html`, just the basic demo for now.
+- Documented `media object`. Resolves #22.

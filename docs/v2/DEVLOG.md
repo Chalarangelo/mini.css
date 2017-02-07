@@ -819,3 +819,9 @@
 - Created the module `header` navigation bar to help make navigation easier.
 - Updated all `head` elements for all pages.
 - Updated top navigation for all pages.
+
+
+## 20170207
+
+- `index.html` and `core.html` are complete. Moving on to `grid.html`.
+- Altered `grid.html` to better present the `basic layout` and `screen-specific layouts` cards.

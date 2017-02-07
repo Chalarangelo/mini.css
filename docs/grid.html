@@ -72,6 +72,19 @@
 	  header.sticky a.button {
 		padding: 4px 6px; font-size: 0.95em;
 	  }
+	  .col-sm-12.col-sm-last.col-md-12.col-md-normal {
+		box-sizing: border-box;
+		border-bottom: 1px solid #bdbdbd;
+		margin-bottom: 16px;
+		padding-bottom: 12px;
+	  }
+	  @media (max-width: 767px){
+		.col-sm-12.col-sm-last.col-md-12.col-md-normal {
+		  border: 0;
+		  border-top: 1px solid #bdbdbd;
+		  margin-bottom: 0;
+		}
+	  }
     </style>
   </head>
   <body>
@@ -101,7 +114,7 @@
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <h1>Grid</h1>
           <p>The <strong>grid</strong> module provides you with a modern, responsive grid system based on the Flexible Layout Module (commonly known as <em>flexbox</em>). The structure of the grid is simple and logical, allowing you to quickly build your pages from scratch. Setting the layout for a page is easy and will behave the way you want them to on mobile devices and smaller screens.</p>
           <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
@@ -109,7 +122,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
@@ -124,13 +137,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section">
               <h2>Basic layout</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
                 <div class="container"><br>
                   <div class="row"><div class="col-sm-1"><div class="box-colored">1</div></div><div class="col-sm-11"><div class="box-colored">11</div></div></div>
                   <div class="row"><div class="col-sm-2"><div class="box-colored">2</div></div><div class="col-sm-10"><div class="box-colored">10</div></div></div>
@@ -142,7 +155,7 @@
                   <div class="row"><div class="col-sm"><div class="box-colored">fluid</div></div><div class="col-sm"><div class="box-colored">fluid</div></div></div>
                 </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12">
                 <p>The grid system's basic layout is composed of three components, presented below in the order they should be added to the DOM tree:</p>
                 <ol>
                   <li>The grid's <code>.container</code> is the outermost layer of your grid system. It is a fluid container that wraps the flexible grid system inside it.</li>
@@ -156,7 +169,7 @@
                 </ol>
                 <h3>Sample code</h3>
                 <p>The sample code is a bit lengthy, so we hid it by default to make it easier for mobile device users to read this page. Click or tap on <strong>Show sample code</strong> below to see the code sample for this example. Also, the example presented showcases the grid system's syntax for smaller screens, but you can do the same thing for any screen size.</p><br>
-                <div class="container"><div class="row"><div class="tabs stacked"">
+                <div class="container"><div class="row"><div class="tabs stacked">
                   <input type="checkbox" id="grid-base-sample" autocomplete="off">
                   <label for="grid-base-sample">Show sample code</label>
                   <div>
@@ -301,25 +314,32 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section">
               <h2>Screen-specific layouts</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
                 <div class="container">
-                <div class="row"><div class="col-sm"><h4>Small screen layout</h4><hr></div></div>
-                  <div class="row"><div class="col-sm"><div class="box-colored"></div></div></div>
-                  <div class="row"><div class="col-sm-12"><div class="box-colored red" style="height: 40px;"></div></div><div class="col-sm-12"><div class="box-colored green" style="height: 60px;"></div></div><div class="col-sm-12"><div class="box-colored red" style="height: 40px;"></div></div></div>
-                  <div class="row"><div class="col-sm"><div class="box-colored"></div></div></div>
-                  <div class="row"><div class="col-sm"><h4>Medium/Large screen layout</h4><hr></div></div>
-                  <div class="row"><div class="col-sm"><div class="box-colored"></div></div></div>
-                  <div class="row"><div class="col-sm-3"><div class="box-colored red" style="height: 100px;"></div></div><div class="col-sm-5"><div class="box-colored green" style="height: 100px;"></div></div><div class="col-sm-4"><div class="box-colored red" style="height: 100px;"></div></div></div>
-                  <div class="row"><div class="col-sm"><div class="box-colored"></div></div></div>
-                </div>
+
+				<div class="row">
+					<div class="col-sm-12 col-md">
+						<div class="row"><div class="col-sm"><h4 style="text-align:center">Small screen layout</h4><hr></div></div>
+	                  	<div class="row"><div class="col-sm"><div class="box-colored"></div></div></div>
+	                  	<div class="row"><div class="col-sm-12"><div class="box-colored red" style="height: 45px;"></div></div><div class="col-sm-12"><div class="box-colored green" style="height: 120px;"></div></div><div class="col-sm-12"><div class="box-colored red" style="height: 45px;"></div></div></div>
+	                  	<div class="row"><div class="col-sm"><div class="box-colored"></div></div></div>
+					</div>
+					<div class="col-sm-12 col-md">
+						<div class="row"><div class="col-sm"><h4 style="text-align:center">Medium/Large screen layout</h4><hr></div></div>
+						<div class="row"><div class="col-sm"><div class="box-colored"></div></div></div>
+						<div class="row"><div class="col-sm-3"><div class="box-colored red" style="height: 282px;"></div></div><div class="col-sm-5"><div class="box-colored green" style="height: 282px;"></div></div><div class="col-sm-4"><div class="box-colored red" style="height: 282px;"></div></div></div>
+						<div class="row"><div class="col-sm"><div class="box-colored"></div></div></div>
+					</div>
+				</div>
+				</div>
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12">
                 <p>You can specify different layouts for your pages and web apps, using the grid system's columns. To do this add classes to your columns for different screen sizes, using either the fluid column syntax (<code>.col-<span class="fore-primary">SCR_SZ</span></code>) or the fixed width column syntax (<code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code>) or even both.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;container&quot;&gt;
@@ -394,7 +414,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section">
               <h2>Column offsets</h2>
@@ -472,7 +492,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section">
               <h2>Column reordering</h2>
@@ -549,7 +569,7 @@
         </div>
       </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>

@@ -838,3 +838,4 @@
 - Rebranded as a **CSS framework** instead of a **UI toolkit**.
 - Updated `LICENSE`.
 - Updated `package.json` and `bower.json`.
+- Updated `#header-logo` styling in order to make the framework's logo display properly in Chrome.

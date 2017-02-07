@@ -842,3 +842,4 @@
 - Updated `header`s `logo` element styling to make sure that it does not *jump* in Chrome.
 - Documented predefined layouts in `grid.html`.
 - Fixed the `pre` segments in `grid.html`.
+- Made `header` `logo` element un`transition` conditional.

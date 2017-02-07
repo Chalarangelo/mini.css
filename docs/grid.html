@@ -70,9 +70,7 @@
       <div class="row">
         <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Basic layout</h2>
-            </div>
+            <div class="section"><h2>Basic layout</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
                 <div class="container"><br>
@@ -168,8 +166,7 @@
                   </ul>
                 </li>
                 <li>Fluid columns can be used for sizes that are not of the form <code>100%/12&times;<span class="fore-tertiary">X</span></code> where <code><span class="fore-tertiary">X</span></code> an integer value between <code>1</code> and <code>12</code>. For example, if you have 7 <code>.col-sm</code> elements in one row, each of the elements will have a width of 1/7th the width of the row.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre>&lt;div class=&quot;col-sm&quot;&gt;
@@ -247,13 +244,10 @@
       <div class="row">
         <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Screen-specific layouts</h2>
-            </div>
+            <div class="section"><h2>Screen-specific layouts</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
                 <div class="container">
-
 				<div class="row">
 					<div class="col-sm-12 col-md">
 						<div class="row"><div class="col-sm"><h4 style="text-align:center">Small screen layout</h4><hr></div></div>
@@ -298,8 +292,7 @@
               <ul>
                 <li>Leaving a column's size unspecified for a resolution will use the style applied for the previous largest resolution recursively.</li>
                 <li>Changing the layout for different screen sizes can sometimes require complex content realignment, offsetting and reordering. For these features, check the sections below.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;div class=&quot;row&quot;&gt;
@@ -347,9 +340,7 @@
       <div class="row">
         <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Column offsets</h2>
-            </div>
+            <div class="section"><h2>Column offsets</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
                 <div class="container"><br>
@@ -396,8 +387,7 @@
               <ul>
                 <li>Columns with offsets and columns without offsets can be mixed for better results. In fact, we strongly suggest you try that.</li>
                 <li>Remember to specify a basic layout and/or screen specific layouts in addition to the offset classes.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;div class=&quot;row&quot;&gt;
@@ -423,9 +413,7 @@
       <div class="row">
         <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Column reordering</h2>
-            </div>
+            <div class="section"><h2>Column reordering</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
                 <div class="container">
@@ -440,7 +428,7 @@
                     <div class="col-sm col-sm"><div class="box-colored red">normal</div></div>
                     <div class="col-sm col-sm"><div class="box-colored">&nbsp;</div></div>
                   </div>
-                  <div class="row"><div class="col-sm"><br><br></div></div>             
+                  <div class="row"><div class="col-sm"><br><br></div></div>
                   <div class="row">
                     <div class="col-sm col-sm"><div class="box-colored">&nbsp;</div></div>
                     <div class="col-sm col-sm"><div class="box-colored">&nbsp;</div></div>
@@ -449,7 +437,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>Finally, if you want to reorder your columns, you can do that to some extent using the <code>.col-<span class="fore-primary">SCR_SZ</span>-first</code>, <code>.col-<span class="fore-primary">SCR_SZ</span>-last</code> and <code>.col-<span class="fore-primary">SCR_SZ</span>-normal</code> classes to your columns, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names (<code><span class="fore-tertiary">sm</span></code>, <code><span class="fore-tertiary">md</span></code> or <code><span class="fore-tertiary">lg</span></code>). These classes will change the ordering of your columns appropriately to allow you to move content around any way you want (e.g. moving a navigation sidebar from the left of the content on larger displays to the end of the content on smaller displays).</p>
+                <p>Additionally, if you want to reorder your columns, you can do that to some extent using the <code>.col-<span class="fore-primary">SCR_SZ</span>-first</code>, <code>.col-<span class="fore-primary">SCR_SZ</span>-last</code> and <code>.col-<span class="fore-primary">SCR_SZ</span>-normal</code> classes to your columns, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names (<code><span class="fore-tertiary">sm</span></code>, <code><span class="fore-tertiary">md</span></code> or <code><span class="fore-tertiary">lg</span></code>). These classes will change the ordering of your columns appropriately to allow you to move content around any way you want (e.g. moving a navigation sidebar from the left of the content on larger displays to the end of the content on smaller displays).</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
@@ -469,8 +457,7 @@
                 <li>Columns are ordered by default in order of appearance. You should only apply column reordering classes to the columns you want to reorder on the screen-specific layouts you need them.</li>
                 <li>Remember to specify a basic layout and/or screen specific layouts in addition to the column reordering classes.</li>
                 <li>Column reordering is applied from smaller to larger screens, similar to how column layout and offsetting work.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;div class=&quot;row&quot;&gt;
@@ -497,6 +484,68 @@
           </div>
         </div>
       </div>
+
+	  <div class="row">
+		<div class="col-sm col-lg-10 col-lg-offset-1">
+		  <div class="card fluid">
+			<div class="section"><h2>Media object pattern</h2></div>
+			<div class="section row">
+			  <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
+				<div class="container">
+				<div class="row"><div class="col-sm"><br></div></div>
+			  <div class="row">
+				<div class="col-sm col-sm-2"><img src="https://placehold.it/800x600"></div>
+				<div class="col-sm col-sm row">
+					<div class="col-sm">
+						<h3>Media object heading</h3>
+						<p>This is an example implementation of the popular media object pattern, using simple grid rules.</p>
+					</div>
+				</div>
+			  </div>
+			  </div>
+		    </div>
+			  <div class="col-sm-12">
+				<p>Last, but not least, you can use the grid system's classes to create a <a href="https://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">media object</a> in one of many ways, based on your needs. The simplest way to implement a media object is using two columns, one for the media (i.e. <code>&lt;img&gt;</code>) and one for the textual content next to the media.</p>
+				<h3>Sample code</h3>
+				<pre>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-1&quot;&gt;
+    &lt;img src=&quot;...&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;h2&gt;Media object heading&lt;/h2&gt;
+    &lt;p&gt;Media object content...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre><br>
+			  </div>
+			</div>
+			<div class="section">
+			  <h3>Notes</h3>
+			  <ul>
+				<li></li>
+			  </ul><hr>
+			  <div class="row">
+				<div class="col-sm-12 col-md-6">
+				  <pre>...</pre>
+				  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Responsive - screen-specific...</p>
+				</div>
+				<div class="col-sm-12 col-md-6">
+				  <pre>...</pre>
+				  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Nesting and the use of rows...</p>
+				</div>
+				<div class="col-sm-12 col-md-6">
+				  <pre>...</pre>
+				  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Align right using last...</p>
+				</div>
+				<div class="col-sm-12 col-md-6">
+				  <pre>...</pre>
+				  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Use of image or content as its own column...</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm col-lg-10 col-lg-offset-1">
           <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>

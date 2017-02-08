@@ -849,3 +849,4 @@
 
 - Fed **hugging cat**, it's even happier now.
 - Updated `tab.html` with some minor accessibility guidelines and new layout.
+- Updated `progress.html` with an accessibility guideline and new layout.

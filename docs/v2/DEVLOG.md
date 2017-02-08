@@ -844,3 +844,8 @@
 - Fixed the `pre` segments in `grid.html`.
 - Made `header` `logo` element un`transition` conditional.
 - Updated `utility.html` to display as required on larger displays.
+
+## 20170208
+
+- Fed **hugging cat**, it's even happier now.
+- Updated `tab.html` with some minor accessibility guidelines and new layout.

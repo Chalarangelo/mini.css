@@ -852,3 +852,9 @@
 - Updated `progress.html` with an accessibility guideline and new layout.
 - Updated `card.html` with new layout.
 - Updated `table.html` with new layout.
+
+## 20170212
+
+- Added accessibility guidelines for `breadcrumbs`.
+- Added accessibility guidelines for `alert`s.
+- Documented `tooltip`. No *dos* and *don'ts* seem to be required, as the use cases are really really simple.

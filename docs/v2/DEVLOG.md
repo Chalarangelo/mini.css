@@ -862,3 +862,6 @@
 - Added `sticky` documentation in `navigation`. No *dos* and *dont's* either, I'm afraid, can't find any troublesome things with this.
 - Added a quick fix for `table`s' irregular styling of mutliline headers. Resolves #54.
 - Updated `input_control` documentation for accessibility and `fluid` `input-group`s. Finally resolved #40, accessibility is now properly explained everywhere.
+- Removed `demo.html` once again.
+- Updated `v2/index.html` to take up less space.
+- Updated `customization.html` page with latest information.

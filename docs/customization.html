@@ -32,7 +32,7 @@
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <h1>Customization</h1>
           <p><strong>mini.css</strong> is built in such a way that customizing it is really simple. You can try out one of the <a href="flavors.html">pre-defined flavors</a>, if you want to start learning and build something quickly. We strongly suggest, however, that you customize an existing flavor or build your own, by tweaking variables and using mixins, in order to create your own, unique style. In this page, we will try to give you some guidelines and tips on how to do so and explain a few more things about the inner workings of <strong>mini.css</strong>.</p><br>
           <h2>Introduction &amp; basics</h2>
@@ -46,27 +46,27 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
           <h3>Modules &amp; file structure</h3>
           <p>At the heart of <strong>mini.css</strong> are modules - groups of classes and styles that aim to solve one set of needs. There are 10 modules in <strong>mini.css</strong>, which have been already written for you. All of the modules are built using partial files, named <code>_module_name.scss</code> and placed in the <code>src/mini</code> folder. You can edit any of the modules' code and/or add your own modules, following the same structure. The only thing you need to remember to do, in order to add your module to your flavor, is to add an <code>@import</code> statement after all the required variable declarations towards the bottom of your flavor file and it will be compiled along with the rest of <strong>mini.css</strong>. Similarly, to disable a module, just comment out its <code>@import</code> statement from the flavor file.</p>
         </div>
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12 col-md-6 col-lg-5">
           <h3>Variables</h3>
           <p>Everything in <strong>mini.css</strong> is based on Sass variables. We try to make our variable names as descriptive as possible, usually using names like <code>$block-element-property-name</code>, but some things might vary a little bit. Changing the values of variables should be reasonably easy, simply navigate to the <code>src/flavors/flavor-name.scss</code> file for a pre-defined flavor and you will see a list of variables that you can tweak. Change the values as you see fit and your finalized stylesheet will reflect the changes you have made. We did our best to make everything as customizable as possible, so that different people can build entirely different flavors using the same building blocks.</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
           <h3>Code optimization</h3>
           <p>Building <strong>mini.css</strong> was no small task. Making it lightweight and customizable made things even harder, because these two things don't go well together most of the time. What we did was put more of the load on the preprocessor, instead of the final file. In order to accomplish this, we optimized as much of the code as possible, using conditions, flags and other tricks, so that compiling a flavor file might take one second longer, but loading won't. If you add any code to a flavor yourself, remember not only to make it customizable, but also to optimize it as best as possible.</p>
         </div>
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12 col-md-6 col-lg-5">
           <h3>Mixins</h3>
           <p>A lot of elements and components can be styled in many ways and most of the time we want a few styles to be available, without having to rewrite everything. We utilized the <code>@mixin</code> directive of Sass wherever we could to make it possible for you to easily create styles for pre-existing components and elements without having to tweak the base code for said elements or components. To use a mixin, simply <code>@include</code> it, passing values to at least its mandatory parameters. We recommend you write mixins wherever possible, if you create any new modules for <strong>mini.css</strong>.</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
         <br>
           <h2>Building a flavor</h2>
           <p>Creating your own flavor can be as easy or as complicated as your needs. Adding and removing modules is as simple as adding an <code>@import</code> statement or commenting it out, after declaring all the required variables. In this section, we will briefly walk you through most of the variables usually present in a flavor, along with some flags and mixins. This section serves as a complementary documentation to the comment column present in our pre-defined flavors, instead of a replacement and should be always viewed alongside it.</p><br>
@@ -88,19 +88,19 @@
           <div class="card fluid">
             <div class="section"><h3>Grid</h3></div>
             <div class="section">
-              <p>The <strong>grid</strong> module contains two important variables, the boolean <code>$use-four-step-grid</code> which determines if the grid has 3 or 4 breakpoints and the <code>$grid-column-count</code> which determines the amount of vertical columns used for the grid's layout. Apart from those, there are a few variables that set the names for the grid system's classes, prefixes and suffixes and the grid's screen size breakpoint definitions.</p>
+              <p>The <strong>grid</strong> module contains three important variables, the booleans <code>$use-four-step-grid</code> which determines if the grid has 3 or 4 breakpoints and <code>$include-parent-layout</code> which determines if predefined layouts should be included and the integer <code>$grid-column-count</code> which determines the amount of vertical columns used for the grid's layout. Apart from those, there are a few variables that set the names for the grid system's classes, prefixes and suffixes and the grid's screen size breakpoint definitions.</p>
             </div>
           </div>
           <div class="card fluid">
             <div class="section"><h3>Navigation</h3></div>
             <div class="section">
-              <p>The <strong>navigation</strong> module contains a plethora of variables used in the styling of the navigational elements. Most of them concern colors, spacing and sizing or similar things. Bear in mind that the presentation of buttons inside the <code>&lt;header&gt;</code> element will be affected by the styling of all button elements, as defined in the <code>input_control</code> module. The variable that stands out in this module is <code>$nav-sublink-depth</code> which determines how deep a navigational hierarchy tree can be.</p>
+              <p>The <strong>navigation</strong> module contains a plethora of variables used in the styling of the navigational elements. Most of them concern colors, spacing and sizing or similar things. Bear in mind that the presentation of buttons inside the <code>&lt;header&gt;</code> element will be affected by the styling of all button elements, as defined in the <code>input_control</code> module. The variables that stand out in this module are <code>$nav-sublink-depth</code> which determines how deep a navigational hierarchy tree can be, along with the <code>$include-header-sticky</code> and <code>$include-footer-sticky</code> booleans that determine if sticky elements should be included for headers and footers respectively.</p>
             </div>
           </div>
           <div class="card fluid">
             <div class="section"><h3>Input Control</h3></div>
             <div class="section">
-              <p>The <strong>input_control</strong> module is one of the larger modules, containg a lot of variables to style a multitude of elements. Forms and textual <code>&lt;input&gt;</code> elements utilize variables that concern color, spacing, sizing etc. Button variables are more interesting, especially the ones concerning the opacity of button elements (<code>$button-back-opacity</code> and <code>$button-hover-back-opacity</code>). The <code>$hide-file-inputs</code> boolean variable determines how <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code> elements will be handled. Checkboxes and radio buttons also use a few variables concerning basic styling, but special attention needs to be paid to the <code>$checkbox-size</code> variable, as it determines a few attributes of both elements.</p>
+              <p>The <strong>input_control</strong> module is one of the larger modules, containg a lot of variables to style a multitude of elements. Forms and textual <code>&lt;input&gt;</code> elements utilize variables that concern color, spacing, sizing etc. One important variable concerning forms is the boolean <code>$include-fluid-input-group</code>, whose value determines if fluid input groups will be available. Button variables are more interesting, especially the ones concerning the opacity of button elements (<code>$button-back-opacity</code> and <code>$button-hover-back-opacity</code>). The <code>$hide-file-inputs</code> boolean variable determines how <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code> elements will be handled. Checkboxes and radio buttons also use a few variables concerning basic styling, but special attention needs to be paid to the <code>$checkbox-size</code> variable, as it determines a few attributes of both elements.</p>
               <p>There are two mixins in the <strong>input_control</strong> module, specifically:</p>
               <ul>
                 <li><code>make-button-alt-color</code> - button color variants</li>
@@ -111,7 +111,7 @@
           <div class="card fluid">
             <div class="section"><h3>Table</h3></div>
             <div class="section">
-              <p>The <strong>table</strong> module's variables deal mostly with basic table styling. The <code>$table-mobile-breakpoint</code> is very important as it determines the breakpoint for responsive tables' mobile view, along with <code>$table-mobile-card-label</code> which determines the attribute that will be used to display the table headings on mobile devices.</p>
+              <p>The <strong>table</strong> module's variables deal mostly with basic table styling. The <code>$table-mobile-breakpoint</code> is very important as it determines the breakpoint for responsive tables' mobile view, along with <code>$table-mobile-card-label</code> which determines the attribute that will be used to display the table headings on mobile devices. Finally, <code>$include-horizontal-table</code> determines if horizontal tables will be included.</p>
             </div>
           </div>
           <div class="card fluid">
@@ -135,12 +135,14 @@
           <div class="card fluid">
             <div class="section"><h3>Contextual</h3></div>
             <div class="section">
-              <p>The <strong>contextual</strong> module features, apart from basic naming and styling variables, a few things of note. The boolean variable <code>$alert-include-animated</code> determines if animated alerts will be inluded or not. There is also a handful of mixins, which are the most important part of the contextual module as they are what makes it useful:</p>
+              <p>The <strong>contextual</strong> module features, apart from basic naming and styling variables, a few things of note. The boolean variable <code>$alert-include-animated</code> determines if animated alerts will be inluded or not. Likewise, the boolean variable <code>$include-tooltip</code> determines if tooltips shoud be included. There is also a handful of mixins, which are the most important part of the contextual module as they are what makes it useful:</p>
               <ul>
                 <li><code>make-mark-alt-color</code> - mark color variants</li>
                 <li><code>make-mark-alt-style</code> - mark size and spacing variants</li>
                 <li><code>make-alert-alt-color</code> - alert color variants</li>
                 <li><code>make-alert-alt-style</code> - alert size and spacing variants</li>
+				<li><code>make-tooltip-alt-color</code> - tooltip color variants</li>
+                <li><code>make-tooltip-alt-style</code> - tooltip size and spacing variants</li>
               </ul>
             </div>
           </div>
@@ -160,25 +162,24 @@
           <div class="card fluid">
             <div class="section"><h3>Utility</h3></div>
             <div class="section">
-              <p>The <strong>utility</strong> module contains a few variables dealing with naming and basic styling, but its most important feature is its mixins:</p>
+              <p>The <strong>utility</strong> module contains a few variables dealing with naming and basic styling, while some boolean variables like <code>$include-floats</code>, <code>$include-clearfix</code> and <code>$include-center-block</code> can be toggled on or off to enable or disable legacy features. The most important feature of this module, however, are its mixins:</p>
               <ul>
                 <li><code>make-border-generic</code> - generic border</li>
                 <li><code>make-border-radial-style</code> - border radius variants</li>
                 <li><code>make-box-shadow-generic</code> - generic shadow variants</li>
                 <li><code>make-margin-responsive</code> - responsive margins</li>
                 <li><code>make-padding-responsive</code> - responsive paddings</li>
-                <li><code>make-floats</code> - quick floats</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <p>If you would rather use one of the pre-defined flavors, check out our <a href="flavors.html">flavors</a> page for a list of all flavors currently available.</p>
         </div>
       </div>
-      <div class="row box-centered"><div class="col-sm-12"></div></div>
+      <div class="row box-centered"><div class="col-sm-12 col-lg-10 col-lg-offset-1"></div></div>
     </div></main>
     <!-- End of page content-->
     <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>

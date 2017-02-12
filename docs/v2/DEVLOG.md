@@ -865,3 +865,5 @@
 - Removed `demo.html` once again.
 - Updated `v2/index.html` to take up less space.
 - Updated `customization.html` page with latest information.
+- Updated references everywhere to `v2.1.0`.
+- Updated `customization.html` layout.

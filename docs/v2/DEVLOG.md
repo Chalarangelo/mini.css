@@ -858,3 +858,5 @@
 - Added accessibility guidelines for `breadcrumbs`.
 - Added accessibility guidelines for `alert`s.
 - Documented `tooltip`. No *dos* and *don'ts* seem to be required, as the use cases are really really simple.
+- Added accessibility guidelines for using `role="button"` in `navigation`.
+- Added `sticky` documentation in `navigation`. No *dos* and *dont's* either, I'm afraid, can't find any troublesome things with this.

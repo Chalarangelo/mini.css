@@ -3,7 +3,7 @@
   <head>
 	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>mini.css - navigation</title>
+	<title>mini.css - Navigation</title>
 	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
 	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, navigation ">
@@ -43,7 +43,7 @@
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <h1>Navigation</h1>
           <p>The <strong>navigation</strong> module seeks to remedy the problems of vertical and horizontal navigation design paradigms, by combining the two for a better presentational effect. HTML5 navigational elements are at the heart of the module, allowing you to quickly build your navigation without complicated structures and hacks.</p>
           <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
@@ -66,7 +66,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section"><h2>Header</h2></div>
             <div class="section row">
@@ -80,7 +80,7 @@
             </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>The <code>&lt;header&gt;</code> HTML element is used for a page's top horizontal navigation menu. It can contain a unique <code>.logo</code> element as its first child (this structure is not mandatory, but still recommended as a best practice), which can be either text (with or without a link) or an image. The rest of the elements inside the <code>&lt;header&gt;</code> must be <code>&lt;button&gt;</code>, <code>&lt;label class=&quot;button&quot;&gt;</code> or <code>&lt;a class=&quot;button&quot;&gt;</code> elements in order to be styled properly. Textual separators between those can be added using <code>&lt;span&gt;</code> elements.</p>
+                <p>The <code>&lt;header&gt;</code> HTML element is used for a page's top horizontal navigation menu. It can contain a unique <code>.logo</code> element as its first child (this structure is not mandatory, but still recommended as a best practice), which can be either text (with or without a link) or an image. The rest of the elements inside the <code>&lt;header&gt;</code> must be button elements (i.e. <code>&lt;button&gt;</code>, <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;button&quot;</span>&gt;</code>, <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> or <code>.button</code>) in order to be styled properly. Textual separators between those can be added using <code>&lt;span&gt;</code> elements.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;header&gt;
   &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt;
@@ -88,7 +88,7 @@
   &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;News&lt;/a&gt;
   &lt;span&gt;|&lt;/span&gt;
   &lt;button&gt;About&lt;/button&gt;
-  &lt;button&gt;Contact&lt;/button&gt;
+  &lt;a href=&quot;#&quot; role=&quot;button&quot;&gt;Contact&lt;/a&gt;
 &lt;/header&gt;</pre>
               </div>
             </div>
@@ -115,9 +115,9 @@
 <span class="fore-secondary">&lt;!-- or --&gt;</span>
 &lt;header&gt;
   &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt;
-    &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
 &lt;/header&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;The <code>.logo</code> element should not be a <code>&lt;button&gt;</code> or a <code>.button</code> element. On the other hand, links and labels in the <code>&lt;header&gt;</code> should not be without a <code>.button</code> class. Ignoring this rule might cause unexpected behavior.</p>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;The <code>.logo</code> element should neither be a <code>&lt;button&gt;</code> or a <code>.button</code> element nor have the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> attribute. On the other hand, links and labels in the <code>&lt;header&gt;</code> should not be without a <code>.button</code> class or a <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> attribute. Ignoring this rule might cause unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -125,7 +125,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section"><h2>Navigation bar</h2></div>
             <div class="section row">
@@ -178,7 +178,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section"><h2>Footer</h2></div>
             <div class="section row">
@@ -198,8 +198,34 @@
           </div>
         </div>
       </div>
+	  <div class="row">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <div class="card fluid">
+            <div class="section"><h2>Sticky headers and footers</h2></div>
+            <div class="section row">
+              <div class="col-sm-12">
+                <p>You can create sticky headers and footers, using the <code>.sticky</code> class on either of these elements.</p>
+                <h3>Sample code</h3>
+                <pre>&lt;header class=&quot;sticky&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt; &lt;button&gt;Home&lt;/button&gt; &lt;button&gt;About&lt;/button&gt;
+&lt;/header&gt;
+
+&lt;footer class=&quot;sticky&quot;&gt;
+  &lt;p&gt;&amp;copy; 2001-2016 Web Corporation | &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Terms of use&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;</pre>
+              </div>
+            </div>
+			<div class="section">
+			<h3>Notes</h3>
+			  <ul>
+				<li>Sticky headers and footers are compatible with modern browsers, but might not display properly in older browsers. Support is being added over time, so be sure to check out if your target platforms support <a href="http://caniuse.com/#feat=css-sticky"><code>position:sticky</code></a>.</li>
+			  </ul>
+			</div>
+          </div>
+        </div>
+      </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>

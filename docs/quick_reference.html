@@ -950,6 +950,7 @@
                   <li>Alerts have no pre-defined behavior, use Javascript</li>
                   <li>The <code>.alert</code> class can be applied to <code>&lt;div&gt;</code> elements and textual elements alike</li>
                   <li>Avoid applying the <code>.alert</code> class to non-textual elements, such as images</li>
+				  <li>Use either the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role">alert</a>&quot;</span></code> attribute or the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role">alertdialog</a>&quot;</span></code> attribute for accessible alerts</li>
                 </ul>
               </div>
             </div>
@@ -969,8 +970,23 @@
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li>Animated alerts are available using th <code>.animated</code> class</li>
+                  <li>Animated alerts are available using the <code>.animated</code> class</li>
                   <li>Compatible with modern browsers, but might cause some problems and bluriness in Webkit-based or older browsers</li>
+                </ul>
+              </div>
+            </div>
+			<div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Tooltips <a href="https://codepen.io/chalarangelo/pen/MJZPrM" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;span class=&quot;tooltip&quot; aria-label=&quot;This is a tooltip&quot;&gt;Hover over this text to see a tooltip!&lt;/span&gt;
+&lt;span class=&quot;tooltip bottom&quot; aria-label=&quot;This is a tooltip&quot;&gt;Hover over this text to see a reverse tooltip!&lt;/span&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Create using the <code>.tooltip</code> class</li>
+                  <li>Put tooltip text in the <code><span class="fore-secondary">aria-label</span></code> attribute's value</li>
+				  <li>Use the <code>.bottom</code> class to make a tooltip display at the bottom of its context</li>
                 </ul>
               </div>
             </div>
@@ -1026,6 +1042,7 @@
                   <li>Apply class to a <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> element</li>
                   <li>Do not insert text inside the <code>.spinner-donut</code> element</li>
                   <li>Donut spinners can be displayed inline</li>
+				  <li>Use the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role">progressbar</a>&quot;</span></code>   attribute to make donut spinner accessible</li>
                 </ul>
               </div>
             </div>
@@ -1121,6 +1138,7 @@
                   <li>To create breadcrumbs, create a <code>&lt;ul&gt;</code> element implementing the <code>.breadcrumbs</code> class</li>
                   <li>Do not use <code>&lt;ol&gt;</code> for breadcrumbs</li>
                   <li>Do not nest lists inside the <code>.breadcrumbs</code></li>
+				  <li>Use the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://www.w3.org/TR/wai-aria/roles#navigation">navigation</a>&quot;</span></code> attribute to make breadcrumbs accessible</li>
                 </ul>
               </div>
             </div>

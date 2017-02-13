@@ -241,6 +241,27 @@
                 </ul>
               </div>
             </div>
+			<div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Predefined layouts <a href="http://codepen.io/chalarangelo/pen/ygGqQg" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;div class=&quot;row cols-sm-6&quot;&gt;
+  &lt;div&gt;
+    &lt;p&gt;col-sm-6&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;p&gt;col-sm-6&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Available both as fluid column layouts, using <code>.cols-<span class="fore-primary">SCR_SZ</span></code>, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names and fixed width column layouts, using <code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code>, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names and <code><span class="fore-secondary">COL_WD</span></code> with a number from <code>1</code> to <code>12</code> specifying the width of the columns</li>
+				  <li>Can define screen-specific predefined layouts</li>
+				  <li>Can be combined with offsets and reordering, but not normal grid layout classes</li>
+                </ul>
+              </div>
+            </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Column offsets <a href="https://codepen.io/chalarangelo/pen/pNqNjw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
@@ -303,6 +324,30 @@
                   <li>Mobile-first approach, styles specified for smaller screen sizes apply to larger screen sizes if no override is specified</li>
                   <li>You can use multiple <code>.col-<span class="fore-primary">SCR_SZ</span>-first</code> and <code>.col-<span class="fore-primary">SCR_SZ</span>-last</code> elements to group your elements according to the desired layout</li>
                   <li>You can omit reorders whenever not needed, but you will have to override existing reorders for larger screen sizes, using <code>.col-<span class="fore-primary">SCR_SZ</span>-normal</code></li>
+                </ul>
+              </div>
+            </div>
+			<div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Media object pattern<a href="http://codepen.io/chalarangelo/pen/oBdvPX" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-1&quot;&gt;
+    &lt;img src=&quot;...&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm&quot;&gt;
+    &lt;h2&gt;Media object heading&lt;/h2&gt;
+    &lt;p&gt;Media object content...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Not a new component, rather a <a href="https://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">popular pattern</a></li>
+				  <li>Use two columns, one for the media (i.e. <code>&lt;img&gt;</code>) and one for the textual content</li>
+				  <li>Compatible with most elements</li>
+				  <li>Can use screen-specific layouts, reordering and offsets</li>
+				  <li>Media objects can easily be nested inside each other</li>
                 </ul>
               </div>
             </div>

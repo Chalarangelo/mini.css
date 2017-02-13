@@ -867,3 +867,7 @@
 - Updated `customization.html` page with latest information.
 - Updated references everywhere to `v2.1.0`.
 - Updated `customization.html` layout.
+
+## 20170213
+
+- Updated the `quick_reference.html` page with the new guidelines for `grid` module.

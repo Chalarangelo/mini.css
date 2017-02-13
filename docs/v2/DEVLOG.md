@@ -874,3 +874,4 @@
 - Updated the `quick_reference.html` page with new guidelines for `navigation`, `input_control` and `table`.
 - Updated the `quick_reference.html` page with new guidelines for `contextual`, `progress` and `utility`.
 - Updated the descriptions of modules wherever necessary.
+- Updated `README.md` and `CHANGELOG.md` to be ready for release. Flavor updates and changes still pending before release.

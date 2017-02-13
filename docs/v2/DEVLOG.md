@@ -873,4 +873,4 @@
 - Updated the `quick_reference.html` page with the new guidelines for `grid` module.
 - Updated the `quick_reference.html` page with new guidelines for `navigation`, `input_control` and `table`.
 - Updated the `quick_reference.html` page with new guidelines for `contextual`, `progress` and `utility`.
-- *TODO* Update module descriptions where needed.
+- Updated the descriptions of modules wherever necessary.

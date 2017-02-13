@@ -871,3 +871,4 @@
 ## 20170213
 
 - Updated the `quick_reference.html` page with the new guidelines for `grid` module.
+- Updated the `quick_reference.html` page with new guidelines for `navigation`, `input_control` and `table`.

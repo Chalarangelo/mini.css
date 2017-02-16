@@ -880,3 +880,4 @@
 
 - Updated `mini-sucroa`: Removed `horizontal` tables, added `sticky` for `header` and `footer`, added `tooltip`, disabled legacy support in `utility`. Updated the rest of the components as required (minor changes).
 - Updated `mini-sucroa` flavor description.
+- Decided to drop `mini-classic`, not worth it in the long run. See #57 for details.

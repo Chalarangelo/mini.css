@@ -1,102 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0.2/dist/mini-default.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <title>mini.css - Contextual</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
-    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass, module, contextual">
-    <meta name="author" content="Angelos Chalaris (chalarangelo)">
-    <meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
-    <meta property="og:type" content="website"/>
-    <meta property="og:description" content="mini.css is a tiny CSS toolkit designed to build quick, modern and responsive websites."/>
-    <meta property="og:image" content="page_thumb.PNG">
-    <meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
-    <link rel="icon" type="image/png" href="favicon.png">    
-    <style>
-      /* Classes and ids used in multiple pages - page top and utilities */
-      #header-logo {
-        display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px;
-         padding: 4px;
-      }
-      #top-logo {
-        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
-        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      #top-heading {
-        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
-      }
-      #top-version-tag {
-        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      .box-centered { text-align: center; }
-      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
-      .box-colored.red { background: #e53935; }
-      .box-centered > .card.fluid {
-        -webkit-box-pack: start;
-        -webkit-box-align: start; 
-        -webkit-justify-content: flex-start;
-                justify-content: flex-start;
-        -webkit-align-self: auto;
-                align-self: auto;
-      }
-      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
-      /* Local classes and ids for this page */
-      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
-      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
-      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
-      .col-sm-12.col-sm-last.col-md-4.col-md-normal {
-        box-sizing: border-box;
-        border-right: 1px solid #bdbdbd;
-      }
-      @media (max-width: 767px){
-        .col-sm-12.col-sm-last.col-md-4.col-md-normal {
-          border: 0;
-          border-top: 1px solid #bdbdbd;
-        }
-      }
-      .box-colored.green { background: #689f38; }
-      .do {
-        border-top: 15px solid #689f38;
-        padding-top: 10px;
-      }
-      .dont {
-        border-top: 15px solid #e53935;
-        padding-top: 10px;
-      }
-      .box-colored {
-        color: #f5f5f5;
-      }
-    </style>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>mini.css - Contextual</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, contextual ">
+	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.PNG">
+	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
+	<style>
+	#header-logo { position:relative; top: -4px; display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px; padding: 4px; }
+	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
+	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	.col-sm-12.col-sm-last.col-md-4.col-md-normal { box-sizing: border-box; border-right: 1px solid #bdbdbd; }
+	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd;}}
+	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
+	.box-colored {color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	</style>
   </head>
-  <body>  
-    <header>
-      <a href="index.html"><img class="logo" src="mini-logo.svg" id="header-logo"></a><div style="display: inline; overflow: auto;">
-      <a href="index.html" class="button">Introduction</a>
-      <a href="modules.html" class="button">Modules</a>
-      <a href="flavors.html" class="button">Flavors</a>
-      <a href="customization.html" class="button">Customization</a>
-      <a href="quick_reference.html" class="button">Quick Reference</a>
-      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
-      </div>
-    </header>
-    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
-      <div class="row">
-        <div class="col-sm">
-          <div class="box-centered">
-            <img src="mini-logo.svg" id="top-logo">
-            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
-            <mark class="tertiary" id="top-version-tag">v2.0</mark>
-        </div>
-      </div>
-      </div>
-    </div>
+  <body>
+	  <header>
+      	<a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a>
+      	<div style="display: inline; overflow: auto;">
+      		<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
+      		<a href="flavors.html" class="button">Flavors</a> <a href="customization.html" class="button">Customization</a>
+      		<a href="quick_reference.html" class="button">Quick Reference</a>
+      		<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+      	</div>
+      </header>
+	  <header class="sticky" style="height:36px;">
+  		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
+  		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
+  		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
+  		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
+  		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
+  	</header>
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <h1>Contextual</h1>
           <p>The <strong>contextual</strong> module provides you with simple tags, marks and highlights for your pages, allowing you to easily emphasize parts of your text. The contextual alerts aim to replace the commonly used modal dialog design paradigm with a more modern one. HTML5 elements and simple rules are used in order to make important messages and pieces of content stand out easily.</p>
           <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
@@ -104,11 +51,11 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Almost every piece of content present on the web has some sort of content that needs highlighting in one way or another. The <strong>contextual</strong> module provides you with simple semantic text highlighting that utilises the <code>&lt;mark&gt;</code> HTML element. Apart from that, this module contains styles and definitions for a simple <code>.alert</code> container, that you can use to show alerts on your websites and web apps. Alerts replace the traditional design paradigms of modals, messages and alerts by defining a simple, usable container that is also mobile friendly. All components in this module are fully accessible, so that's another thing not to worry about.</p><br>
+              <p>Almost every piece of content present on the web has some sort of content that needs highlighting in one way or another. The <strong>contextual</strong> module provides you with simple semantic text highlighting that utilises the <code>&lt;mark&gt;</code> HTML element. Apart from that, this module contains styles and definitions for a simple <code>.alert</code> container, that you can use to show alerts on your websites and web apps. Alerts replace the traditional design paradigms of modals, messages and alerts by defining a simple, usable container that is also mobile friendly. Finally, a simple accessible <code>.tooltip</code> implementation is included. All components in this module are fully accessible, so that's another thing not to worry about.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
@@ -119,11 +66,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Text highlighting</h2>
-            </div>
+            <div class="section"><h2>Text highlighting</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
                 <div>
@@ -148,8 +93,7 @@
               <ul>
                 <li>Try to use elements with the <code>.inline-block</code> class only when absolutely necessary, as they break the normal text flow of the document. Avoid using this class on shorter pieces of text that span a few words and contain no line breaks.</li>
                 <li><code>&lt;mark&gt;</code> elements, along with their supporting classes (except for <code>.inline-block</code>) can be easily used in paragraphs, headings and other elements, as they scale according to their parent element.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;mark class=&quot;tag tertiary&quot;&gt;green tag&lt;/mark&gt;
@@ -164,13 +108,13 @@
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining two contextual color classes or a <code>.tag</code> and an <code>.inline-block</code>, as these combinations might result in unexpected behavior.</p>
                 </div>
                 <div class="col-sm-12 col-md-6">
-                  <pre>&lt;mark class=&quot;inline-block&quot;&gt;some 
+                  <pre>&lt;mark class=&quot;inline-block&quot;&gt;some
   &lt;mark class=&quot;secondary&quot;&gt;text&lt;/mark&gt;
 &lt;/mark&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can only nest a <code>&lt;mark&gt;</code> inside another if the outer one is of the <code>.inline-block</code> class. You can color the inner <code>&lt;mark&gt;</code> using any of the contextual color classes or even make it a <code>.tag</code>. Be careful, however, to not make the inner <code>&lt;mark&gt;</code> an <code>.inline-block</code> as well.</p>
-                </div>          
+                </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
-                  <pre>&lt;mark&gt;some 
+                  <pre>&lt;mark&gt;some
   &lt;mark class=&quot;secondary&quot;&gt;text&lt;/mark&gt;
 &lt;/mark&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using nested <code>&lt;mark&gt;</code> elements, unless the outer <code>&lt;mark&gt;</code> element is an <code>.inline-block</code>.</p>
@@ -181,11 +125,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Alerts</h2>
-            </div>
+            <div class="section"><h2>Alerts</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
               <div>
@@ -215,8 +157,8 @@
             <h3>Notes</h3>
               <ul>
                 <li>Alert elements do not have any pre-defined behavior. You should use your own Javascript code and interactive HTML elements to deal with showing and hiding them as necessary.</li>
-              </ul>
-              <hr>
+				<li>If you want to make your alerts more accessible, we suggest you add either the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role">alert</a>&quot;</span></code> attribute or the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role">alertdialog</a>&quot;</span></code> attribute, depending on the behavior you are planning to implement for your alerts.</li>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;p class=&quot;alert&quot;&gt;Short and to the point&lt;/p&gt;
@@ -232,13 +174,11 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Animated alerts</h2>
-            </div>
+            <div class="section"><h2>Animated alerts</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
               <div>
@@ -270,9 +210,38 @@
             </div>
           </div>
         </div>
-      </div> 
+      </div>
+	  <div class="row">
+		<div class="col-sm col-lg-10 col-lg-offset-1">
+		  <div class="card fluid">
+			<div class="section"><h2>Tooltips</h2></div>
+			<div class="section row">
+			  <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+			  <div>
+				<br /><p class="tooltip" aria-label="This is a tooltip">Hover over this text to see a tooltip!</p><br />
+				<p class="tooltip bottom" aria-label="This is a tooltip">Hover over this text to see a reverse tooltip!</p><br />
+			  </div>
+			  </div>
+			  <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+				<p>Tooltips can be used to convey context-sensitive information when the user hovers over some text. To create a tooltip, simply wrap the text you want users to hover over in an element with the <code>.tooltip</code> class (our choice is usually a <code>&lt;span&gt;</code> element, but your needs may differ) and add an <code><span class="fore-secondary">aria-label</span></code> in that element, setting its value to the content of your tooltip. Tooltips display at the top of the hovered text by default, so if you want to show them below the text, add the <code>.bottom</code> class to them.</p>
+				<h3>Sample code</h3>
+				<pre>&lt;span class=&quot;tooltip&quot; aria-label=&quot;This is a tooltip&quot;&gt;Hover over this text to see a tooltip!&lt;/span&gt;
+&lt;span class=&quot;tooltip bottom&quot; aria-label=&quot;This is a tooltip&quot;&gt;Hover over this text to see a reverse tooltip!&lt;/span&gt;</pre>
+			  </div>
+			</div>
+			<div class="section">
+			<h3>Notes</h3>
+			  <ul>
+				<li>Tooltips are built to be accessible and should display properly on screenreaders.</li>
+				<li>If you are not satisfied with the default tooltip colors, please check out the <a href="customization.html">customization page</a> for instuctions on how to create your own tooltip variants.</li>
+				<li>Rembmer to always add the <code><span class="fore-secondary">aria-label</span></code> attribute, otherwise your tooltip will not have any text to show.</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>

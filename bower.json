@@ -1,6 +1,6 @@
 {
   "name": "mini.css",
-  "description": "A minimal, responsive, style-agnostic CSS toolkit.",
+  "description": "A minimal, responsive, style-agnostic CSS framework.",
   "main": "flavors/mini-default.min.css",
   "authors": [
     "Angelos Chalaris (Chalarangelo)"
@@ -17,7 +17,7 @@
     "style-agnostic",
     "Sass"
   ],
-  "ignore": [ 
+  "ignore": [
     "docs/v1",
     "docs/v2",
     "docs/page_thumb.png"

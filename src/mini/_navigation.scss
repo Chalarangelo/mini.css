@@ -1,10 +1,12 @@
 /*
-	Definitions for navigation elements. 
+	Definitions for navigation elements.
 */
 // Different elements are styled based on the same set of rules.
 // Header styling.
 $button-class-name:				'button' !default;								// Class name for the button-like elements
 $header-logo-name:				'logo' !default;								// Class name for <header>'s logo
+$include-header-sticky:			false !default;									// Should the sticky class for <header> elements be included
+$include-footer-sticky:			false !default;									// Should the sticky class for <footer> elements be included
 header {
 	display: block;		// Correct display for older versions of IE.
 	height: $header-height;
@@ -45,9 +47,15 @@ header {
 		@if $header-logo-padding != 0 {
 			padding: $header-logo-padding;
 		}
+		@if $apply-link-hover-fade {
+			-webkit-transition: 0s opacity;
+					transition: 0s opacity;
+		}
 	}
 	// Link styling.
-	button, [type="button"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
+	button, [type="button"],
+	a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name},
+	a[role="button"], label[role="button"], [role="button"] {
 		background: $header-back-color;		// Apply color regardless to override styling from other things.
 		color: $header-fore-color;
 		vertical-align: top;		// Alignemt, really important to make this work well.
@@ -65,7 +73,7 @@ header {
 		}
 	}
 	@if $apply-link-underline {		// Override for links if underline is enabled.
-		.#{$header-logo-name}, a.#{$button-class-name} {
+		.#{$header-logo-name}, a.#{$button-class-name}, a[role="button"] {
 			text-decoration: none;
 		}
 	}
@@ -99,12 +107,25 @@ nav {
 		color: $nav-link-fore-color;	// Apply regardless to de-stylize visited links.
 	}
 	// Subcategories in navigation.
-	$nav-sublink-prefix:		'sublink' !default;		// Prefix for the subcategory tabs in nav
-	$nav-sublink-depth:			2 !default;			// Amount of subcategory classes to add
-	$nav-sublink-padding-left:	12px !default;		// Left padding to add to subcategories
+	$nav-sublink-prefix:			'sublink' !default;				// Prefix for the subcategory tabs in nav
+	$nav-sublink-depth:				2 !default;						// Amount of subcategory classes to add
+	$nav-sublink-padding-left:		12px !default;					// Left padding to add to subcategories
+	$nav-include-sublink-bar: 		false !default;					// Should a border be added to the subcategories?
 	@for $i from 1 through $nav-sublink-depth {
 		.#{$nav-sublink-prefix}-#{$i} {
 			padding-left: $i * $nav-sublink-padding-left;
+			position: relative;
+			@if $nav-include-sublink-bar {
+				&:before {
+					position: absolute;
+					left: $nav-sublink-bar-left-position;
+					top: -$nav-sublink-bar-width;
+					content: '';
+					height: 100%;
+					border: $nav-sublink-bar-width solid $nav-sublink-bar-color;
+					border-left: 0;
+				}
+			}
 		}
 	}
 }
@@ -129,5 +150,36 @@ footer {
 	font-size: $footer-font-size;
 	a, a:visited {
 		color: $footer-link-fore-color;
+	}
+}
+
+
+@if $include-header-sticky and $include-footer-sticky {
+	header.#{$header-sticky-name}, footer.#{$footer-sticky-name} {
+		position: -webkit-sticky;
+		position:		  sticky;
+		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
+	}
+	header.#{$header-sticky-name} {
+		top: 0;
+	}
+	footer.#{$footer-sticky-name} {
+		bottom: 0;
+	}
+}
+@else if $include-header-sticky {
+	header.#{$header-sticky-name} {
+		position: -webkit-sticky;
+		position:		  sticky;
+		top: 0;
+		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
+	}
+}
+@else if $include-footer-sticky {
+	footer.#{$footer-sticky-name} {
+		position: -webkit-sticky;
+		position:		  sticky;
+		bottom: 0;
+		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
 	}
 }

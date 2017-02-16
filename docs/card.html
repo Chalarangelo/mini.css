@@ -1,102 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0.2/dist/mini-default.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <title>mini.css - Card</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
-    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass, module, card">
-    <meta name="author" content="Angelos Chalaris (chalarangelo)">
-    <meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
-    <meta property="og:type" content="website"/>
-    <meta property="og:description" content="mini.css is a tiny CSS toolkit designed to build quick, modern and responsive websites."/>
-    <meta property="og:image" content="page_thumb.PNG">
-    <meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
-    <link rel="icon" type="image/png" href="favicon.png">    
-    <style>
-      /* Classes and ids used in multiple pages - page top and utilities */
-      #header-logo {
-        display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px;
-         padding: 4px;
-      }
-      #top-logo {
-        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
-        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      #top-heading {
-        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
-      }
-      #top-version-tag {
-        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      .box-centered { text-align: center; }
-      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
-      .box-colored.red { background: #e53935; }
-      .box-centered > .card.fluid {
-        -webkit-box-pack: start;
-        -webkit-box-align: start; 
-        -webkit-justify-content: flex-start;
-                justify-content: flex-start;
-        -webkit-align-self: auto;
-                align-self: auto;
-      }
-      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
-      /* Local classes and ids for this page */
-      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
-      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
-      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
-      .col-sm-12.col-sm-last.col-md-12.col-md-normal {
-        box-sizing: border-box;
-        border-bottom: 1px solid #bdbdbd;
-      }
-      @media (max-width: 767px){
-        .col-sm-12.col-sm-last.col-md-12.col-md-normal {
-          border: 0;
-          border-top: 1px solid #bdbdbd;
-        }
-      }
-      .box-colored.green { background: #689f38; }
-      .do {
-        border-top: 15px solid #689f38;
-        padding-top: 10px;
-      }
-      .dont {
-        border-top: 15px solid #e53935;
-        padding-top: 10px;
-      }
-      .box-colored {
-        color: #f5f5f5;
-      }
-    </style>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>mini.css - Card</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, card ">
+	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.PNG">
+	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
+	<style>
+	#header-logo { position:relative; top: -4px; display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px; padding: 4px; }
+	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
+	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto;} [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	.col-sm-12.col-sm-last.col-md-12.col-md-normal {box-sizing: border-box;border-bottom: 1px solid #bdbdbd;}
+	@media (max-width: 767px){.col-sm-12.col-sm-last.col-md-12.col-md-normal {border: 0;border-top: 1px solid #bdbdbd;}}
+	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
+	.box-colored {color: #f5f5f5;}header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	</style>
   </head>
-  <body>  
+  <body>
     <header>
-      <a href="index.html"><img class="logo" src="mini-logo.svg" id="header-logo"></a><div style="display: inline; overflow: auto;">
-      <a href="index.html" class="button">Introduction</a>
-      <a href="modules.html" class="button">Modules</a>
-      <a href="flavors.html" class="button">Flavors</a>
-      <a href="customization.html" class="button">Customization</a>
-      <a href="quick_reference.html" class="button">Quick Reference</a>
-      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
-      </div>
+    	<a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a>
+    	<div style="display: inline; overflow: auto;">
+    		<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
+    		<a href="flavors.html" class="button">Flavors</a> <a href="customization.html" class="button">Customization</a>
+    		<a href="quick_reference.html" class="button">Quick Reference</a>
+    		<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+    	</div>
     </header>
-    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
-      <div class="row">
-        <div class="col-sm">
-          <div class="box-centered">
-            <img src="mini-logo.svg" id="top-logo">
-            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
-            <mark class="tertiary" id="top-version-tag">v2.0</mark>
-        </div>
-      </div>
-      </div>
-    </div>
+    <header class="sticky" style="height:36px;">
+		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
+		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
+		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
+		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
+		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
+	</header>
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <h1>Card</h1>
           <p>The <strong>card</strong> module provides you with modern, responsive, general-purpose containers for your page's contents. They are very easy to use and their structure is really simple and versatile. Layouts will respond to smaller screens, realigning the cards in a manner that makes your page mobile-friendly.</p>
           <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
@@ -104,7 +51,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
@@ -119,14 +66,12 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Basic syntax</h2>
-            </div>
+            <div class="section"> <h2>Basic syntax</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
-              <div class="container">  
+              <div class="container">
                   <br>
                   <div class="row">
                     <div class="card"><div class="section"><h3>Card 1</h3><p>This is a basic card with some sample content.</p></div></div>
@@ -166,8 +111,7 @@
               <ul>
                 <li>The <strong>card</strong> module is compatible with modern browsers, but might not display properly in older browsers.</li>
                 <li>If you want to further customize your <code>.section</code>s, check the section below.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre>&lt;div class=&quot;card&quot;&gt;
@@ -238,23 +182,19 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Sections &amp; media</h2>
-            </div>
+            <div class="section"><h2>Sections &amp; media</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
-              <div class="container">  
-                  <br>
+              <div class="container"><br>
                   <div class="row">
                     <div class="card"><div class="section"><h3>Card with image</h3></div><img class="section media" src="http://placehold.it/800x600"><div class="section"><p>Content</p></div></div>
                     <div class="card"><iframe class="section media" width="1280" height="720" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0"></iframe><div class="section"><h3>Card with video</h3></div></div>
                     <div class="card"><div class="section"><h3>Normal section</h3></div><div class="section double-padded"><h3>Double-padded section</h3></div></div>
                     <div class="card"><div class="section"><h3>Normal section</h3></div><div class="section dark"><h3>Dark section</h3></div><div class="section darker"><h3>Darker section</h3></div></div>
-                    <div class="card inverse"><div class="section"><h3>Inverse card</h3></div><img class="section media" src="http://placehold.it/800x600"><div class="section"><p>Content</p></div><div class="section"><p>More content</p></div></div>         
-                  </div>
-                  <br>
+                    <div class="card inverse"><div class="section"><h3>Inverse card</h3></div><img class="section media" src="http://placehold.it/800x600"><div class="section"><p>Content</p></div><div class="section"><p>More content</p></div></div>
+                  </div><br>
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
@@ -283,17 +223,14 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Card sizing &amp; fluidity</h2>
-            </div>
+            <div class="section"><h2>Card sizing &amp; fluidity</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
-              <div class="container">  
-                  <br>
+              <div class="container"><br>
                   <div class="row">
                     <div class="card small"><div class="section"><h3>Small Card</h3><p>Small cards are <code>240px</code> wide.</p></div></div>
                     <div class="card large"><div class="section"><h3>Large Card</h3><p>Large cards are <code>480px</code> wide.</p></div></div>
@@ -333,8 +270,7 @@
               <ul>
                 <li><code>.fluid</code> cards might not display properly in older browsers, especially legacy versions of Internet Explorer.</li>
                 <li>Due to the fact that <code>.fluid</code> cards stretch to fill their parent container, they might not fully respect their margins, like the rest of the cards. However, this should not cause any noticable problems with layout, except maybe the odd pixel here and there.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;div class=&quot;card&quot;&gt;
@@ -365,7 +301,7 @@
         </div>
       </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>

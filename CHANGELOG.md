@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.1.0
+
+- Added a `.tooltip` component in the `contextual` module (#41).
+- Added a predefined layouts in the `grid` module (#53).
+- Added `.sticky` functionality to `navigation` module's headers and footers (#26).
+- Added `.fluid` input group component to `input_control` module (#50).
+- Added proper documentation for a media object in the `grid` module (#22).
+- Updated a lot of the documentation to include ARIA guidelines. Updated button elements, so that `role="button"` creates buttons same as the class (#40).
+- Updated **mini-default** and **mini-sucroa** flavors to the latest version of the framework.
+- Added **mini-classic** flavor.
+- Changed the styling of `<nav>` to include a left border sidebar for subcategories.
+- Updated selectors in many places and optimized parts of the codebase.
+- Added conditional flags to enable or disable several components.
+- Added documentation and workarounds for certain table issues (#54).
+- Redesigned parts of the documentation to make it display better on certain devices (#58).
+
 ## v2.0.2
 
 - Added a new flavor, **sucroa**.

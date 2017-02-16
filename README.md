@@ -1,4 +1,4 @@
-# mini.css v2.0.2
+# mini.css v2.1.0
 ## A minimal, responsive, style-agnostic CSS toolkit
 
 ![Logo](/docs/page_thumb.PNG)
@@ -24,7 +24,7 @@ Alternatively, you can use one of the other [flavors](https://chalarangelo.githu
 
 ## Customization
 
-If you want to develop your own flavor or tweak an existing one, head over to the [Customization page](https://chalarangelo.github.io/mini.css/customization.html) to get started. 
+If you want to develop your own flavor or tweak an existing one, head over to the [Customization page](https://chalarangelo.github.io/mini.css/customization.html) to get started.
 
 ## Contributing
 
@@ -33,13 +33,13 @@ If you want to develop your own flavor or tweak an existing one, head over to th
 To develop your own flavor:
 
 - Fork into your own repository.
-- Add a flavor file in the `src/flavors` folder by duplicating an existing file and renaming it to whatever you want to name it. **Make sure there are no naming conflicts between your flavor and any of the existing flavors**. 
+- Add a flavor file in the `src/flavors` folder by duplicating an existing file and renaming it to whatever you want to name it. **Make sure there are no naming conflicts between your flavor and any of the existing flavors**.
 - Edit the flavor file as you desire.
 - Submit a pull request. Please provide a brief description of your flavor and, if possible, a Codepen or some screenshots showcasing some of the styles in it.
 
 To develop a module:
 
-- Module contribution guidelines are very strict at the moment. New module will only be created upon request and **should always be in a new repository**, unless they are part of a Roadmap of a later version. Please submit an issue before developing a module or asking for new modules, as the discussion of said implementations is key to deciding the direction **mini.css** will follow in the future.
+- Module contribution guidelines are very strict at the moment. New modules will only be created upon request and **should always be in a new repository**, unless they are part of a Roadmap of a later version. Please submit an issue before developing a module or asking for new modules, as the discussion of said implementations is key to deciding the direction **mini.css** will follow in the future.
 
 To develop some other part of **mini.css**:
 
@@ -51,6 +51,7 @@ To develop some other part of **mini.css**:
 - Angelos Chalaris (@chalarangelo)
 - Angeliki Daskalakis (@angiedaskalakis)
 - Rory Primrose (@roryprimrose)
+- Sandro Magi (@naasking)
 
 ## License
 

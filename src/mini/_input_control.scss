@@ -1,5 +1,5 @@
-/* 
-	Definitions for forms and input elements. 
+/*
+	Definitions for forms and input elements.
 */
 // Different elements are styled based on the same set of rules.
 // Base form styling.
@@ -32,7 +32,7 @@ fieldset {
 		background: $fieldset-back-color;
 	}
 	// Apply always to overwrite defaults for all of the below.
-	border: $fieldset-border-style;			
+	border: $fieldset-border-style;
 	border-radius: $fieldset-border-radius;
 	margin: $fieldset-margin;
   	padding: $fieldset-padding;
@@ -54,28 +54,78 @@ legend {
 		padding: $legend-padding;
 	}
 }
+// Label syling.
+@if $label-padding != 0 {
+	label {
+		padding: $label-padding;	// Padding is all that seems to be needed for now, but more stuff could be added later.
+	}
+}
+$include-fluid-input-group:		true !default;				// Should fluid input groups be included?
 // Input group base naming.
 .#{$input-group-name} {
 	display: inline-block;
+	// Fluid input groups
+	@if $include-fluid-input-group {
+		&.#{$input-group-fluid-name} {
+			// Old syntax
+			display: -webkit-box;
+			-webkit-box-pack: justify;
+			// New syntax
+			display: -webkit-flex;
+			display: 		 flex;
+			-webkit-align-items: center;
+					align-items: center;
+			-webkit-justify-content: center;
+					justify-content: center;
+			& > input {
+				// Old syntax
+				-webkit-box-flex: 1;
+				max-width: 100%;
+				// New syntax
+				-webkit-flex-grow: 1;
+						flex-grow: 1;
+				-webkit-flex-basis: 0;
+						flex-basis: 0;
+			}
+		}
+	}
+}
+// Responsiveness for fluid input groups
+@if $include-fluid-input-group {
+	@media (max-width: #{$input-group-mobile-breakpoint}) {
+		.#{$input-group-name}.#{$input-group-fluid-name} {
+			// Old syntax
+			-webkit-box-orient: vertical;
+			// New syntax
+			-webkit-align-items: stretch;
+					align-items: stretch;
+			-webkit-flex-direction: column;
+					flex-direction: column;
+		}
+	}
 }
 // Correct the cursor style of increment and decrement buttons in Chrome.
 [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
-	height: auto; 
+	height: auto;
 }
 // Remove the default vertical scrollbar in IE.
 textarea {
-	overflow: auto;	
+	overflow: auto;
 }
 // Correct style in Chrome and Safari.
 [type="search"] {
-	-webkit-appearance: textfield; 
-	outline-offset: -2px; 
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
 }
 // Correct style in Chrome and Safari.
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
+// The belo option will use the legacy high specificity selectors for <input> element styling instead
+// of the less specific, yet less complicated and less bloated input selector. This only applies to
+// the pseudo-classes and states of the <input> controls and not the default styling of them.
+$input-high-specificity-selectors:	false !default;			// Hidden option: `false` by default!
 // Common textual input styling.
 input:not([type]), [type="text"], [type="email"], [type="number"], [type="search"],
 [type="password"], [type="url"], [type="tel"], textarea, select {
@@ -86,28 +136,53 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 	border: $input-border-style;
 	@if $input-border-radius != 0 {
 		border-radius: $input-border-radius;
-	}		
+	}
 	@if $input-margin != 0 {
 		margin: $input-margin;
 	}
 	@if $input-padding != 0 {
 		padding: $input-padding;
 	}
-	&:focus {
-		border-color: $input-focus-border-color;
-		box-shadow: none;
+	@if $input-high-specificity-selectors {
+		&:hover, &:focus {
+			border-color: $input-focus-border-color;
+			box-shadow: none;
+		}
+		&:disabled, &[disabled] {
+			cursor: not-allowed;
+			opacity: $input-disabled-opacity;
+		}
+		&:invalid, &:focus:invalid{
+			border-color: $input-invalid-border-color;
+			box-shadow: none;
+		}
+		&[readonly]{
+			background: $input-readonly-back-color;
+			border-color: $input-readonly-border-color;
+		}
 	}
-	&[disabled] {
-		cursor: not-allowed;
-		opacity: $input-disabled-opacity;
-	}
-	&:invalid, &:focus:invalid, &:focus:invalid:focus{
-		border-color: $input-invalid-border-color;
-		box-shadow: none;
-	}
-	&[readonly]{
-		background: $input-readonly-back-color;
-		border-color: $input-readonly-border-color;
+}
+@if not $input-high-specificity-selectors {
+	input:not([type="button"]):not([type="submit"]):not([type="reset"]), textarea, select {
+		&:hover, &:focus {
+			border-color: $input-focus-border-color;
+			box-shadow: none;
+		}
+		&:disabled, &[disabled] {
+			cursor: not-allowed;
+			opacity: $input-disabled-opacity;
+		}
+		&:invalid, &:focus:invalid{
+			border-color: $input-invalid-border-color;
+			box-shadow: none;
+		}
+		//&:focus:invalid:focus {
+		//	border-color: brown;
+		//}
+		&[readonly]{
+			background: $input-readonly-back-color;
+			border-color: $input-readonly-border-color;
+		}
 	}
 }
 // Placeholder styling.
@@ -140,7 +215,9 @@ button {
 	text-transform: none;	// Remove inheritance of text-transform in Edge, Firefox, and IE.
 }
 // Default styling
-button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
+button, [type="button"], [type="submit"], [type="reset"],
+a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name},
+a[role="button"], label[role="button"], [role="button"] {
 	display: inline-block;
 	background: rgba($button-back-color, $button-back-opacity);
 	color: $button-fore-color;
@@ -184,10 +261,10 @@ $hide-file-inputs: true !default;
 		margin: -1px;
 		overflow: hidden;
 		padding: 0;
-		position: absolute;	
+		position: absolute;
 		clip: rect(0 0 0 0);
 		-webkit-clip-path: inset(100%);
-				clip-path: inset(100%);	
+				clip-path: inset(100%);
 	}
 }
 @else {
@@ -211,9 +288,10 @@ $hide-file-inputs: true !default;
 		margin: $button-group-margin;
 	}
 	@if $button-group-box-shadow != none {
-			box-shadow: $button-group-box-shadow;
-		}
-	button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
+		box-shadow: $button-group-box-shadow;
+	}
+	button, [type="button"], [type="submit"], [type="reset"],
+	.#{$button-class-name}, [role="button"] {
 		margin: 0;
 		// Old syntax
 		-webkit-box-flex: 1;
@@ -229,7 +307,8 @@ $hide-file-inputs: true !default;
 			border-radius: 0;
 		}
 		@if $button-group-border-style != 0 {
-			+ button, + [type="button"], + [type="submit"], + [type="reset"], + a.#{$button-class-name}, + label.#{$button-class-name}, + .#{$button-class-name} {
+			+ button, + [type="button"], + [type="submit"], + [type="reset"],
+			+ .#{$button-class-name}, + [role="button"] {
 				border-left: $button-group-border-style;
 			}
 		}
@@ -247,8 +326,10 @@ $hide-file-inputs: true !default;
 		-webkit-flex-direction: column;
 				flex-direction: column;
 		@if $button-group-border-style !=0 {
-			button, [type="button"], [type="submit"], [type="reset"], a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name} {
-				+ button, + [type="button"], + [type="submit"], + [type="reset"], + a.#{$button-class-name}, + label.#{$button-class-name}, + .#{$button-class-name} {
+			button, [type="button"], [type="submit"], [type="reset"],
+			.#{$button-class-name}, [role="button"] {
+				+ button, + [type="button"], + [type="submit"], + [type="reset"],
+				+ .#{$button-class-name}, + [role="button"] {
 					border: 0;
 					border-top: $button-group-border-style;
 				}
@@ -269,8 +350,8 @@ $hide-file-inputs: true !default;
 // base class for the button styles.
 @mixin make-button-alt-color ($button-alt-name, $button-alt-back-color, $button-alt-back-opacity,
 	$button-alt-hover-back-opacity, $button-alt-fore-color: $button-fore-color) {
-	button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name}, 
-	[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name} {
+	button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name},
+	[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name}, [role="button"].#{$button-alt-name} {
 		background: rgba($button-alt-back-color, $button-alt-back-opacity);
 		@if $button-alt-fore-color != $button-fore-color {
 			color: $button-alt-fore-color;
@@ -293,8 +374,8 @@ $hide-file-inputs: true !default;
 // base class for the button styles.
 @mixin make-button-alt-style ($button-alt-name, $button-alt-border-style, $button-alt-border-radius,
 	$button-alt-padding, $button-alt-margin) {
-	button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name}, 
-	[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name} {
+	button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name},
+	[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name}, [role="button"].#{$button-alt-name} {
 		@if $button-alt-border-style != $button-border-style {
 			border: $button-alt-border-style;
 		}
@@ -320,7 +401,7 @@ $hide-file-inputs: true !default;
 	position: absolute;
 	clip: rect(0 0 0 0);
 	-webkit-clip-path: inset(100%);
-			clip-path: inset(100%);	
+			clip-path: inset(100%);
 }
 // Use input-group to setup the style for labels.
 .#{$input-group-name} {
@@ -330,7 +411,7 @@ $hide-file-inputs: true !default;
 		margin-left: floor($checkbox-size + floor($checkbox-size * 0.25));
 		// Styling for checkbox/radio box part.
 		&:before {
-			//box-sizing: border-box;	
+			//box-sizing: border-box;
 			display: inline-block;
 			position: absolute;
 			bottom: $checkbox-bottom-spacing;
@@ -351,7 +432,7 @@ $hide-file-inputs: true !default;
 			&:before {
 				border-color: $checkbox-focus-border-color;
 			}
-		}	
+		}
 	}
 	[type="checkbox"]:focus + label:before, [type="radio"]:focus + label:before {
 		border-color: $checkbox-focus-border-color;

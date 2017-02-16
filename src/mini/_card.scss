@@ -1,5 +1,5 @@
-/* 
-	Definitions for cards and containers. 
+/*
+	Definitions for cards and containers.
 */
 // Dependency: This module depends heavily on the grid system module.
 // Card styling
@@ -60,7 +60,7 @@ $card-normal-width:				320px !default;									// Width for normal cards
 		}
 	}
 	// Card input and button sections
-	& > button, .#{$button-class-name}, input {
+	& > button, .#{$button-class-name}, [role="button"], input {
 		&.#{$card-section-name} {
 			border-radius: 0;	// Clean button and input gaps from border-radius
 		}
@@ -106,7 +106,7 @@ $card-normal-width:				320px !default;									// Width for normal cards
 //	of $card-border-radius.
 // - $card-alt-section-border-style : (Optional) The border style of the alternate card's sections. Defaults to
 //	the value of $card-section-border-style.
-@mixin make-card-alt-color ($card-alt-name, $card-alt-back-color, $card-alt-fore-color, 
+@mixin make-card-alt-color ($card-alt-name, $card-alt-back-color, $card-alt-fore-color,
 	$card-alt-border-style : $card-border-style, $card-alt-border-radius : $card-border-radius,
 	$card-alt-section-border-style : $card-section-border-style) {
 	.#{$card-name}.#{$card-alt-name} {
@@ -139,7 +139,7 @@ $card-normal-width:				320px !default;									// Width for normal cards
 // - $card-section-alt-fore-color : The text color of the alternate card section.
 // - $card-section-alt-border-style : (Optional) The border style of the alternate card section. Defaults to
 //	the value of $card-section-border-style.
-@mixin make-card-section-alt-color ($card-section-alt-name, $card-section-alt-back-color, 
+@mixin make-card-section-alt-color ($card-section-alt-name, $card-section-alt-back-color,
 	$card-section-alt-fore-color, $card-section-alt-border-style : $card-section-border-style) {
 	.#{$card-name} > .#{$card-section-name}.#{$card-section-alt-name} {
 		@if $card-section-alt-back-color != $card-back-color {

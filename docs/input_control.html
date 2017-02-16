@@ -1,102 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0.2/dist/mini-default.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <title>mini.css - Input Control</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
-    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass, module, input, control, form, button">
-    <meta name="author" content="Angelos Chalaris (chalarangelo)">
-    <meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
-    <meta property="og:type" content="website"/>
-    <meta property="og:description" content="mini.css is a tiny CSS toolkit designed to build quick, modern and responsive websites."/>
-    <meta property="og:image" content="page_thumb.PNG">
-    <meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
-    <link rel="icon" type="image/png" href="favicon.png">    
-    <style>
-      /* Classes and ids used in multiple pages - page top and utilities */
-      #header-logo {
-        display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px;
-         padding: 4px;
-      }
-      #top-logo {
-        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
-        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      #top-heading {
-        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
-      }
-      #top-version-tag {
-        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      .box-centered { text-align: center; }
-      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
-      .box-colored.red { background: #e53935; }
-      .box-centered > .card.fluid {
-        -webkit-box-pack: start;
-        -webkit-box-align: start; 
-        -webkit-justify-content: flex-start;
-                justify-content: flex-start;
-        -webkit-align-self: auto;
-                align-self: auto;
-      }
-      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
-      /* Local classes and ids for this page */
-      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
-      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
-      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
-      .col-sm-12.col-sm-last.col-lg-4.col-lg-normal {
-        box-sizing: border-box;
-        border-right: 1px solid #bdbdbd;
-      }
-      @media (max-width: 767px){
-        .col-sm-12.col-sm-last.col-lg-4.col-lg-normal {
-          border: 0;
-          border-top: 1px solid #bdbdbd;
-        }
-      }
-      .box-colored.green { background: #689f38; }
-      .do {
-        border-top: 15px solid #689f38;
-        padding-top: 10px;
-      }
-      .dont {
-        border-top: 15px solid #e53935;
-        padding-top: 10px;
-      }
-      .box-colored {
-        color: #f5f5f5;
-      }
-    </style>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>mini.css - Input Control</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, input, control, form, button ">
+	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.PNG">
+	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
+	<style>
+	#header-logo { position:relative; top: -4px; display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px; padding: 4px; }
+	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
+	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	.col-sm-12.col-sm-last.col-lg-4.col-lg-normal { box-sizing: border-box; border-right: 1px solid #bdbdbd;}
+	@media (max-width: 767px){.col-sm-12.col-sm-last.col-lg-4.col-lg-normal {border: 0;border-top: 1px solid #bdbdbd;}}
+	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
+	.box-colored {color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	.responsive-label {align-items: center;} @media (min-width: 768px) { .responsive-label .col-md-3 {text-align: right;}}
+	</style>
   </head>
-  <body>  
-    <header>
-      <a href="index.html"><img class="logo" src="mini-logo.svg" id="header-logo"></a><div style="display: inline; overflow: auto;">
-      <a href="index.html" class="button">Introduction</a>
-      <a href="modules.html" class="button">Modules</a>
-      <a href="flavors.html" class="button">Flavors</a>
-      <a href="customization.html" class="button">Customization</a>
-      <a href="quick_reference.html" class="button">Quick Reference</a>
-      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
-      </div>
-    </header>
-    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
-      <div class="row">
-        <div class="col-sm">
-          <div class="box-centered">
-            <img src="mini-logo.svg" id="top-logo">
-            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
-            <mark class="tertiary" id="top-version-tag">v2.0</mark>
-        </div>
-      </div>
-      </div>
-    </div>
+  <body>
+	  <header>
+      	<a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a>
+      	<div style="display: inline; overflow: auto;">
+      		<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
+      		<a href="flavors.html" class="button">Flavors</a> <a href="customization.html" class="button">Customization</a>
+      		<a href="quick_reference.html" class="button">Quick Reference</a>
+      		<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+      	</div>
+      </header>
+	  <header class="sticky" style="height:36px;">
+  		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
+  		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
+  		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
+  		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
+  		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
+  	</header>
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <h1>Input Control</h1>
           <p>The <strong>input_control</strong> module contains rules that affect forms, input elements, buttons, checkboxes and radio buttons. All of these elements' styles are predefined, allowing you to create modern, responsive forms quickly. Layout alternatives are also provided if you want your forms to look a certain way.</p>
           <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
@@ -104,7 +52,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
@@ -119,11 +67,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Forms &amp; input</h2>
-            </div>
+            <div class="section"><h2>Forms &amp; input</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
               <form>
@@ -133,16 +79,13 @@
                 <div class="input-group"><label for="pwd">password</label> <input type="password" value="" id="pwd" placeholder="password"></div>
               </fieldset>
               </form>
-              <style>
-                .responsive-label {
-                  align-items: center;
-                }
-                @media (min-width: 768px) { 
-                  .responsive-label .col-md-3 {
-                    text-align: right;
-                  }
-                }
-              </style>
+			  <form>
+              <fieldset>
+                <legend>Fluid form</legend>
+                <div class="input-group fluid"><label for="username">username</label> <input type="email" value="" id="username" placeholder="username"></div>
+                <div class="input-group fluid"><label for="pwd">password</label> <input type="password" value="" id="pwd" placeholder="password"></div>
+              </fieldset>
+              </form>
               <form>
               <fieldset>
                 <legend>Aligned form (using grid)</legend>
@@ -175,10 +118,7 @@
                     <label for="select">Select</label>
                   </div>
                   <div class="col-sm-12 col-md">
-                    <select id="select">
-                      <option>Apples</option>
-                      <option>Oranges</option>
-                    </select>
+                    <select id="select"> <option>Apples</option> <option>Oranges</option> </select>
                   </div>
                 </div>
               </fieldset>
@@ -186,17 +126,17 @@
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
                 <p>Forms are structured the same way you would structure a normal form in HTML5. Simply create a root <code>&lt;form&gt;</code> element and add your <code>&lt;input&gt;</code> elements inside. Link them to <code>&lt;label&gt;</code> elements for ease of acces and you are pretty much set. We highly recommend using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements to annotate your forms as well, but you can skip them if you wish.</p>
-                <p>Forms are inline by default. Use the <code>.input-group</code> class on a <code>&lt;div&gt;</code> wrapping inside it an <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> pair to make sure they always display together in one line. If you want to create aligned forms with a preset layout, you can utilize the <a href="grid.html"><strong>grid</strong></a> module's rows and columns.</p>
+                <p>Forms are inline by default. Use the <code>.input-group</code> class on a <code>&lt;div&gt;</code> wrapping inside it an <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> pair to make sure they always display together in one line. You can make your <code>.input-group</code>s respond to viewport changes, by adding the <code>.fluid</code> class to them. Finally, if you want to create aligned forms with a preset layout, you can utilize the <a href="grid.html"><strong>grid</strong></a> module's rows and columns.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;form&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Simple form&lt;/legend&gt;
-    &lt;div class=&quot;input-group&quot;&gt;
-      &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+    &lt;div class=&quot;input-group fluid&quot;&gt;
+      &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
       &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;input-group&quot;&gt;
-      &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt; 
+    &lt;div class=&quot;input-group fluid&quot;&gt;
+      &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt;
       &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
     &lt;/div&gt;
   &lt;/fieldset&gt;
@@ -209,8 +149,8 @@
                 <li>Using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements is highly recommended for a better presentational effect. Using these elements is a matter of personal preference, however try to keep your forms consistent (i.e. either use them in all forms or no forms as to not confuse users).</li>
                 <li>Some <code>&lt;input&gt;</code> elements, such as date &amp; time, color and range types, are not supported and, as a result, do not have a default style defined for them. You can define said styles manually if you need to use them in your website or app.</li>
                 <li>Checkboxes and radio buttons are not stylized the same way as most of the other elements, nor do they follow the exact same stucture for layout. Please refer to the next section for information on how to use those.</li>
-              </ul>
-              <hr>
+				<li>Try not to combine the <strong>grid</strong> module's classes with <code>.fluid</code><code>.input-group</code>s, as this might cause certain styles to overlap and not display exactly like you want them to.</li>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;form&gt;
@@ -218,7 +158,7 @@
     &lt;legend&gt;Responsive form&lt;/legend&gt;
     &lt;div class=&quot;row&quot;&gt;
       &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
-        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
       &lt;/div&gt;
       &lt;div class=&quot;col-sm-12 col-md&quot;&gt;
         &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
@@ -226,7 +166,7 @@
     &lt;/div&gt;
     &lt;div class=&quot;row&quot;&gt;
       &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
-        &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt; 
+        &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt;
       &lt;/div&gt;
       &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
         &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
@@ -242,13 +182,13 @@
     &lt;legend&gt;Responsive form&lt;/legend&gt;
     &lt;div class=&quot;row&quot;&gt;
       &lt;div class=&quot;col-sm-12 col-md-10 col-md-offset-1&quot;&gt;
-        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
         &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
       &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;row&quot;&gt;
       &lt;div class=&quot;col-sm-12 col-md-10 col-md-offset-1&quot;&gt;
-        &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt; 
+        &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt;
         &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -267,7 +207,7 @@
     &lt;legend&gt;Responsive form&lt;/legend&gt;
     &lt;div class=&quot;row label-aligned&quot;&gt;
       &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
-        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
       &lt;/div&gt;
       &lt;div class=&quot;col-sm-12 col-md&quot;&gt;
         &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
@@ -283,7 +223,7 @@
     &lt;legend&gt;Responsive form&lt;/legend&gt;
     &lt;div class=&quot;row input-group&quot;&gt;
       &lt;div class=&quot;col-sm-12 col-md-4&quot;&gt;
-        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt; 
+        &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
       &lt;/div&gt;
       &lt;div class=&quot;col-sm-12 col-md&quot;&gt;
         &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
@@ -299,11 +239,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Checkboxes &amp; radio buttons</h2>
-            </div>
+            <div class="section"><h2>Checkboxes &amp; radio buttons</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
                 <div class="box-centered">
@@ -324,12 +262,12 @@
                 <p>Checkboxes and radio buttons come pre-styled, using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, while remaining fully accessible. To create a checkbox or radio button, start using a <code>&lt;div&gt;</code> that implements the <code>.input-group</code> class, and then add an <code>&lt;input&gt;</code> of the proper <code><span class="secondary">type</span></code> inside it (<code><span class="fore-primary">&quot;checkbox&quot;</span></code> or <code><span class="fore-primary">&quot;radio&quot;</span></code>), followed immediately by a <code>&lt;label&gt;</code> linking to it. Remember to add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to your <code>&lt;input&gt;</code>, so that it will register properly for screen readers.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;input-group&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt; 
+  &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt;
   &lt;label for=&quot;check1&quot;&gt;Checkbox&lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;input-group&quot;&gt;
-  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt; 
+  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
   &lt;label for=&quot;rad1&quot;&gt;Radio&lt;/label&gt;
 &lt;/div&gt;</pre>
               </div>
@@ -338,20 +276,19 @@
             <h3>Notes</h3>
               <ul>
                 <li>Checkboxes and radio buttons are fully accessible. However, if not provided with a label, they are not visible to users, but only to screen readers.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-4">
                   <pre>&lt;div class=&quot;input-group&quot;&gt;
-  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt; 
+  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
   &lt;label for=&quot;rad1&quot;&gt;Value 1&lt;/label&gt;
-  &lt;input type=&quot;radio&quot; id=&quot;rad2&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt; 
+  &lt;input type=&quot;radio&quot; id=&quot;rad2&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
   &lt;label for=&quot;rad2&quot;&gt;Value 2&lt;/label&gt;
 &lt;/div&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can add multiple <code>radio</code> buttons inside one <code>.input-group</code>, as long as they follow the syntax shown above. In fact, we strongly recommend grouping controls that are relevant to each other in this manner.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre>&lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt; 
+                  <pre>&lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt;
 &lt;label for=&quot;check1&quot;&gt;Checkbox&lt;/label&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Always use an <code>.input-group</code> for your checkboxes and radio buttons. Not doing so will cause the checkbox or radio button to not display properly.</p>
                 </div>
@@ -363,7 +300,7 @@
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Remember to add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to all your checkboxes and radio buttons to make them accessible.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
-                  <pre>&lt;div class=&quot;input-group&quot;&gt; 
+                  <pre>&lt;div class=&quot;input-group&quot;&gt;
   &lt;label for=&quot;check1&quot;&gt;Checkbox&lt;/label&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt;
 &lt;/div&gt;</pre>
@@ -371,8 +308,8 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;input-group&quot;&gt;
-  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt; 
-  &lt;input type=&quot;radio&quot; id=&quot;rad2&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt; 
+  &lt;input type=&quot;radio&quot; id=&quot;rad1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;rad2&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
   &lt;label for=&quot;rad2&quot;&gt;Value 2&lt;/label&gt;
   &lt;label for=&quot;rad1&quot;&gt;Value 1&lt;/label&gt;
 &lt;/div&gt;</pre>
@@ -388,13 +325,11 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Buttons &amp; button groups</h2>
-            </div>
+            <div class="section"><h2>Buttons &amp; button groups</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
                 <button>Default button</button>
@@ -403,17 +338,13 @@
                 <button class="tertiary">Tertiary button</button>
                 <button class="inverse">Inverse button</button>
                 <button class="small">Small button</button>
-                <button class="large">Large button</button>           
+                <button class="large">Large button</button>
                 <button disabled>Disabled button</button>
                 <h4>Button group</h4>
-                <div class="button-group">
-                  <button>Button</button>
-                  <button>Button</button>
-                  <button>Button</button>
-                </div>
+                <div class="button-group"> <button>Button</button> <button>Button</button> <button>Button</button> </div>
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
-                <p>All button types have been stylized by default, while maintaining accessiblity. Simply add any <code>&lt;button&gt;</code> or an <code>&lt;input&gt;</code> with a button <code><span class="secondary">type</span></code> (i.e. <code><span class="fore-primary">&quot;button&quot;</span></code>, <code><span class="fore-primary">&quot;submit&quot;</span></code> or <code><span class="fore-primary">&quot;reset&quot;</span></code>) and they will be styled accordingly. You can also use the <code>.button</code> class for links, labels and other elements of your choice to make them look like buttons.</p>
+                <p>All button types have been stylized by default, while maintaining accessiblity. Simply add any <code>&lt;button&gt;</code> or an <code>&lt;input&gt;</code> with a button <code><span class="secondary">type</span></code> (i.e. <code><span class="fore-primary">&quot;button&quot;</span></code>, <code><span class="fore-primary">&quot;submit&quot;</span></code> or <code><span class="fore-primary">&quot;reset&quot;</span></code>) and they will be styled accordingly. You can also use the <code>.button</code> class or the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> attribute for links, labels and other elements of your choice to make them look like buttons.</p>
                 <p>Color variants are available in the form of the <code>.primary</code>, <code>.secondary</code>, <code>.tertiary</code> and <code>.inverse</code> classes. Size variants are available as well in the form of <code>.small</code> and <code>.large</code> classes.</p>
                 <p>Finally, you can create responsive groups of buttons by wrapping them inside a <code>&lt;div&gt;</code> with the <code>.button-group</code> class.</p>
                 <h3>Sample code</h3>
@@ -423,10 +354,12 @@
 &lt;input type=&quot;submit&quot; class=&quot;tertiary&quot; value=&quot;Tertiary button&quot;&gt;
 &lt;button class=&quot;inverse&quot;&gt;Inverse button&lt;/button&gt;
 &lt;button class=&quot;small&quot;&gt;Small button&lt;/button&gt;
-&lt;button class=&quot;large&quot;&gt;Large button&lt;/button&gt;           
+&lt;button class=&quot;large&quot;&gt;Large button&lt;/button&gt;
 &lt;button disabled&gt;Disabled button&lt;/button&gt;
 &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Link button&lt;/a&gt;
+&lt;a href=&quot;#&quot; role=&quot;button&quot;&gt;Link button&lt;/a&gt;
 &lt;label class=&quot;button&quot;&gt;Label button&lt;/label&gt;
+&lt;label role=&quot;button&quot;&gt;Label button&lt;/label&gt;
 
 &lt;div class=&quot;button-group&quot;&gt;
   &lt;button&gt;Button&lt;/button&gt;
@@ -441,8 +374,7 @@
                 <li>If you want more color or size variants for your buttons, check out the <a href="customization.html">customization</a> page.</li>
                 <li>The <code>.button-group</code> component is compatible with modern browsers, but might not display properly in older browsers.</li>
                 <li><code>.button-group</code>s will display as a horizontal container with all their buttons in one row on medium-sized and larger displays, however they will collapse into a column view for smaller displays.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;button class=&quot;inverse small&quot;&gt;Small inverse button&lt;/button&gt;</pre>
@@ -476,11 +408,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>File upload buttons</h2>
-            </div>
+            <div class="section"><h2>File upload buttons</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
                 <div class="input-group">
@@ -491,7 +421,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
-                <p>File upload buttons are commonly a sore spot in UI toolkits. We try to remedy this problem by hiding the <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code>, while maintaining accessiblity and using a linked <code>&lt;label&gt;</code> of the <code>.button</code> class to display it in a modern way.</p>
+                <p>File upload buttons are commonly a sore spot in CSS frameworks. We try to remedy this problem by hiding the <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code>, while maintaining accessiblity and using a linked <code>&lt;label&gt;</code> of the <code>.button</code> class to display it in a modern way.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;input type=&quot;file&quot; id=&quot;file-input&quot;&gt;
 &lt;label for=&quot;file-input&quot; class=&quot;button&quot;&gt;Upload file...&lt;/label&gt;</pre>
@@ -502,8 +432,7 @@
               <ul>
                 <li>The icon displayed in the example above is not part of the button styling.</li>
                 <li>File upload buttons do not change their text to the name of the file after the user has selected a file to upload. You can, however, add this functionality using a few lines of Javascript.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12">
                   <pre>&lt;div class=&quot;input-group&quot;&gt;
@@ -518,7 +447,7 @@
         </div>
       </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>

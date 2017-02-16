@@ -1,21 +1,21 @@
 /*
-	Definitions for progress elements and spinners. 
+	Definitions for progress elements and spinners.
 */
 // Progress elements use the progress element as their base.
 // Default styling for progress. Use mixins for alternate styles.
 $progress-max-value:			100 !default;									// Arithmetic max value of <progress>
 progress {
 	display: block;
-	vertical-align: baseline;	// Correct vertical alignment in certain browsers.	
+	vertical-align: baseline;	// Correct vertical alignment in certain browsers.
 	-webkit-appearance: none;
 	   -moz-appearance: none;
-			appearance: none;	
+			appearance: none;
 	height: $progress-height;
 	width: 100%;
 	border: $progress-border-style;
 	@if $progress-border-radius != 0 {
 		border-radius: $progress-border-radius;
-	}	
+	}
 	@if $progress-top-bottom-margin != 0 {
 		margin: $progress-top-bottom-margin auto;
 		// Check somewhere below for the feature query that allows left and right margins to display properly on newer browsers.
@@ -111,9 +111,9 @@ progress {
 // - $progress-alt-border-style : (Optional) The border style of the alternate progress style. Defaults to the border style of the progress.
 // - $progress-alt-border-radius : (Optional) The border radius of the alternate progress style. Defaults to the border radius of the progress.
 // - $progress-alt-box-shadow : (Optional) The box shadow of the alternate progress style. Defaults to the box shadow of the progress.
-@mixin make-progress-alt-style ($progress-alt-name, $progress-alt-height, 
-	$progress-alt-top-bottom-margin : $progress-top-bottom-margin, $progress-alt-left-right-margin : $progress-left-right-margin, 
-	$progress-alt-border-style : $progress-border-style, $progress-alt-border-radius : $progress-border-radius, 
+@mixin make-progress-alt-style ($progress-alt-name, $progress-alt-height,
+	$progress-alt-top-bottom-margin : $progress-top-bottom-margin, $progress-alt-left-right-margin : $progress-left-right-margin,
+	$progress-alt-border-style : $progress-border-style, $progress-alt-border-radius : $progress-border-radius,
 	$progress-alt-box-shadow : $progress-box-shadow) {
 	progress.#{$progress-alt-name} {
 		@if $progress-alt-height != $progress-height {
@@ -150,7 +150,7 @@ progress {
 		}
 	}
 // Feature query that checks if the left and right margins can be applied properly.
-	@if $progress-alt-left-right-margin != $progress-left-right-margin and $progress-alt-left-right-margin != auto {
+	@if $progress-alt-left-right-margin != $progress-left-right-margin and $progress-alt-left-right-margin != auto and $progress-alt-left-right-margin != 0 {
 		@supports (width: calc(100% - 2*#{$progress-alt-left-right-margin})) or (width: -webkit-calc(100% - 2*#{$progress-alt-left-right-margin})) {
 			progress.#{$progress-alt-name} {
 				width: 	-webkit-calc(100% - 2*#{$progress-alt-left-right-margin});
@@ -191,7 +191,7 @@ progress {
 // - $spinner-donut-alt-size : The size of the alternate donut spinner style.
 // - $spinner-donut-alt-border-thickness : (Optional) The border thickness of the alternate donut spinner style.
 //	Defaults to the value of $spinner-donut-alt-border-thickness.
-@mixin make-spinner-donut-alt-style ($spinner-donut-alt-name, $spinner-donut-alt-size, 
+@mixin make-spinner-donut-alt-style ($spinner-donut-alt-name, $spinner-donut-alt-size,
 	$spinner-donut-alt-border-thickness : $spinner-donut-border-thickness) {
 	.#{$spinner-donut-name}.#{$spinner-donut-alt-name} {
 		@if $spinner-donut-alt-border-thickness != $spinner-donut-border-thickness {

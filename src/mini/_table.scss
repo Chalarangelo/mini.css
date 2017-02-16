@@ -1,9 +1,9 @@
-/* 
-	Definitions for the responsive table component. 
+/*
+	Definitions for the responsive table component.
 */
 // The tables use the common table elements and syntax.
 // Desktop view.
-table {	
+table {
 	border-collapse: separate;
 	border-spacing: 0;
 	// Apply border style by default always. Otherwise, browser default will be applied.
@@ -38,7 +38,7 @@ table {
 		}
 	}
 	thead th {
-		border-top: 0;	
+		border-top: 0;
 	}
 	th {
 		@if $table-head-back-color != $back-color {
@@ -58,7 +58,7 @@ $table-not-responsive-name:		'preset' !default;								// Class name for table n
 @media (max-width: #{$table-mobile-breakpoint}) {
 	table:not(.#{$table-not-responsive-name}) {
 		border-collapse: collapse;
-		border: 0;	
+		border: 0;
 		width: 100%;
 		@if $table-box-shadow != none {
 			box-shadow: none;
@@ -71,20 +71,20 @@ $table-not-responsive-name:		'preset' !default;								// Class name for table n
 			margin: -1px;
 			overflow: hidden;
 			padding: 0;
-			position: absolute;	
+			position: absolute;
 			clip: rect(0 0 0 0);
 			-webkit-clip-path: inset(100%);
-					clip-path: inset(100%);	
+					clip-path: inset(100%);
 		}
 		tr {
 			display: block;
 			border: $table-border-style;
 			@if $table-border-radius != 0 {
 				border-radius: $table-border-radius;
-			}  
+			}
 			@if $table-box-shadow != none {
 				box-shadow: $table-box-shadow;
-			}	
+			}
 			@if $table-body-back-color != $back-color {
 				background: $table-body-back-color;
 			}
@@ -94,7 +94,7 @@ $table-not-responsive-name:		'preset' !default;								// Class name for table n
 			display: block;
 			border: 0;
 			@if $table-border-style != 0 {
-				border-bottom: $table-border-style;	
+				border-bottom: $table-border-style;
 			}
 			text-align: right;
 		}
@@ -111,32 +111,12 @@ $table-not-responsive-name:		'preset' !default;								// Class name for table n
 	}
 }
 // Horizontal table view.
+$include-horizontal-table:		true !default;									// Should horizontal tables be included?
 $table-horizontal-name:			'horizontal' !default;							// Class name for table horizontal view
-@media (min-width: #{$table-horizontal-breakpoint}) {
-	table.#{$table-horizontal-name} {
-		// Old syntax
-		display: -webkit-box;
-		-webkit-box-flex: 0;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		// New syntax
-		display: -webkit-flex;
-		display: 		 flex;
-		-webkit-flex: 0 1 auto;
-				flex: 0 1 auto;
-		-webkit-flex-flow: row wrap;
-	    		flex-flow: row wrap;
-	    padding: $table-row-padding;
-	   	caption {
-	   		// Old syntax
-			-webkit-box-flex: 1;
-			max-width: 100%;
-			// New syntax
-			-webkit-flex: 0 0 100%;
-	   				flex: 0 0 100%;
-	   	}
-	   	thead, tbody {
-	   		// Old syntax
+@if $include-horizontal-table {
+	@media (min-width: #{$table-horizontal-breakpoint}) {
+		table.#{$table-horizontal-name} {
+			// Old syntax
 			display: -webkit-box;
 			-webkit-box-flex: 0;
 			-webkit-box-orient: horizontal;
@@ -144,86 +124,87 @@ $table-horizontal-name:			'horizontal' !default;							// Class name for table h
 			// New syntax
 			display: -webkit-flex;
 			display: 		 flex;
-			-webkit-flex-flow: row nowrap;
-    				flex-flow: row nowrap;
-	   	}
-	   	thead {
-	   		z-index: 999;	// Fixes the visibility of the element.
-	   	}
-	   	tbody {
-	   		overflow: auto;	// Allows content scrolling.
-	   		// Old syntax
-	   		-webkit-box-pack: justify;
-	   		// New syntax
-	   		-webkit-justify-content: space-between;
-					justify-content: space-between;
-			-webkit-flex: 1 0 0;
-					flex: 1 0 0;
-	   	}
-	   	tr {
-	   		// Old syntax
-			display: -webkit-box;
-			-webkit-box-flex: 1;
-			-webkit-box-orient: vertical;
-			-webkit-box-direction: normal;
-			// New syntax
-			display: -webkit-flex;
-			display: 		 flex;
-			-webkit-flex-direction: column;
-					flex-direction: column;
-			-webkit-flex: 1 0 auto;
-	   				flex: 1 0 auto;
-	   	}
-	   	th, td {
-	   		width: 100%;
-	   		border: $table-border-style;	// Apply to overwrite.
-	   		@if $table-border-style != 0 {
-		   		& + th, & + td {
-		   			border-top: 0;
+			-webkit-flex: 0 1 auto;
+					flex: 0 1 auto;
+			-webkit-flex-flow: row wrap;
+		    		flex-flow: row wrap;
+		    padding: $table-row-padding;
+		   	caption {
+		   		// Old syntax
+				-webkit-box-flex: 1;
+				max-width: 100%;
+				// New syntax
+				-webkit-flex: 0 0 100%;
+		   				flex: 0 0 100%;
+		   	}
+		   	thead, tbody {
+		   		// Old syntax
+				display: -webkit-box;
+				-webkit-box-flex: 0;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				// New syntax
+				display: -webkit-flex;
+				display: 		 flex;
+				-webkit-flex-flow: row nowrap;
+	    				flex-flow: row nowrap;
+		   	}
+		   	thead {
+		   		z-index: 999;	// Fixes the visibility of the element.
+		   	}
+		   	tbody {
+		   		overflow: auto;	// Allows content scrolling.
+		   		// Old syntax
+		   		-webkit-box-pack: justify;
+		   		// New syntax
+		   		-webkit-justify-content: space-between;
+						justify-content: space-between;
+				-webkit-flex: 1 0 0;
+						flex: 1 0 0;
+		   	}
+		   	tr {
+		   		// Old syntax
+				display: -webkit-box;
+				-webkit-box-flex: 1;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				// New syntax
+				display: -webkit-flex;
+				display: 		 flex;
+				-webkit-flex-direction: column;
+						flex-direction: column;
+				-webkit-flex: 1 0 auto;
+		   				flex: 1 0 auto;
+		   	}
+		   	th, td {
+		   		width: 100%;
+		   		border: $table-border-style;	// Apply to overwrite.
+		   		@if $table-border-style != 0 {
+			   		& + th, & + td {
+			   			border-top: 0;
+			   		}
 		   		}
-	   		}
-	   	}
-	   	th {
-	   		text-align: right;
-	   	}
-	   	thead {
-	   		tr:first-child {
-	   			padding-left: 0;
-	   		}
-	   	}
-	   	tbody {
-	   		tr:first-child > td {
-	   			padding-left: 2 * $table-column-padding;	// Fixes padding for the first column of data.
-	   		}
-	   	}
-	   	
+		   	}
+		   	th {
+		   		text-align: right;
+		   	}
+		   	thead {
+		   		tr:first-child {
+		   			padding-left: 0;
+		   		}
+		   	}
+		   	tbody {
+		   		tr:first-child > td {
+		   			padding-left: 2 * $table-column-padding;	// Fixes padding for the first column of data.
+		   		}
+		   	}
+
+		}
 	}
-}
-// Horizontal table view for non-responsive tables. - Apply over breakpoint when non-responsive.
-@media (max-width: #{$table-mobile-breakpoint}) {
-	table.#{$table-horizontal-name}.#{$table-not-responsive-name} {
-		// Old syntax
-		display: -webkit-box;
-		-webkit-box-flex: 0;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		// New syntax
-		display: -webkit-flex;
-		display: 		 flex;
-		-webkit-flex: 0 1 auto;
-				flex: 0 1 auto;
-		-webkit-flex-flow: row wrap;
-	    		flex-flow: row wrap;
-	   	caption {
-	   		// Old syntax
-			-webkit-box-flex: 1;
-			max-width: 100%;
-			// New syntax
-			-webkit-flex: 0 0 100%;
-	   				flex: 0 0 100%;
-	   	}
-	   	thead, tbody {
-	   		// Old syntax
+	// Horizontal table view for non-responsive tables. - Apply over breakpoint when non-responsive.
+	@media (max-width: #{$table-mobile-breakpoint}) {
+		table.#{$table-horizontal-name}.#{$table-not-responsive-name} {
+			// Old syntax
 			display: -webkit-box;
 			-webkit-box-flex: 0;
 			-webkit-box-orient: horizontal;
@@ -231,54 +212,76 @@ $table-horizontal-name:			'horizontal' !default;							// Class name for table h
 			// New syntax
 			display: -webkit-flex;
 			display: 		 flex;
-			-webkit-flex-flow: row nowrap;
-					flex-flow: row nowrap;
-	   	}
-	   	thead {
-	   		z-index: 999;	// Fixes the visibility of the element.
-	   	}
-	   	tbody {
-	   		overflow: auto;
-	   		// Old syntax
-	   		-webkit-box-pack: justify;
-	   		// New syntax
-	   		-webkit-justify-content: space-between;
-					justify-content: space-between;
-			-webkit-flex: 1 0 0;
-					flex: 1 0 0;
-	   	}
-	   	tr {
-	   		// Old syntax
-			display: -webkit-box;
-			-webkit-box-flex: 1;
-			-webkit-box-orient: vertical;
-			-webkit-box-direction: normal;
-			// New syntax
-			display: -webkit-flex;
-			display: 		 flex;
-			-webkit-flex-direction: column;
-					flex-direction: column;
-			-webkit-flex: 1 0 auto;
-	   				flex: 1 0 auto;
-	   	}
-	   	th, td {
-	   		width: 100%;
-	   		border: $table-border-style;	// Apply to overwrite.
-	   		@if $table-border-style != 0 {
-		   		& + th, & + td {
-		   			border-top: 0;
+			-webkit-flex: 0 1 auto;
+					flex: 0 1 auto;
+			-webkit-flex-flow: row wrap;
+		    		flex-flow: row wrap;
+		   	caption {
+		   		// Old syntax
+				-webkit-box-flex: 1;
+				max-width: 100%;
+				// New syntax
+				-webkit-flex: 0 0 100%;
+		   				flex: 0 0 100%;
+		   	}
+		   	thead, tbody {
+		   		// Old syntax
+				display: -webkit-box;
+				-webkit-box-flex: 0;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				// New syntax
+				display: -webkit-flex;
+				display: 		 flex;
+				-webkit-flex-flow: row nowrap;
+						flex-flow: row nowrap;
+		   	}
+		   	thead {
+		   		z-index: 999;	// Fixes the visibility of the element.
+		   	}
+		   	tbody {
+		   		overflow: auto;
+		   		// Old syntax
+		   		-webkit-box-pack: justify;
+		   		// New syntax
+		   		-webkit-justify-content: space-between;
+						justify-content: space-between;
+				-webkit-flex: 1 0 0;
+						flex: 1 0 0;
+		   	}
+		   	tr {
+		   		// Old syntax
+				display: -webkit-box;
+				-webkit-box-flex: 1;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				// New syntax
+				display: -webkit-flex;
+				display: 		 flex;
+				-webkit-flex-direction: column;
+						flex-direction: column;
+				-webkit-flex: 1 0 auto;
+		   				flex: 1 0 auto;
+		   	}
+		   	th, td {
+		   		width: 100%;
+		   		border: $table-border-style;	// Apply to overwrite.
+		   		@if $table-border-style != 0 {
+			   		& + th, & + td {
+			   			border-top: 0;
+			   		}
 		   		}
-	   		}
-	   	}
-	   	th {
-	   		text-align: right;
-	   	}
-	   	tbody {
-	   		tr:first-child > td {
-	   			padding-left: 2 * $table-column-padding;	// Fixes padding for the first column of data.
-	   		}
-	   	}
-	   	
+		   	}
+		   	th {
+		   		text-align: right;
+		   	}
+		   	tbody {
+		   		tr:first-child > td {
+		   			padding-left: 2 * $table-column-padding;	// Fixes padding for the first column of data.
+		   		}
+		   	}
+
+		}
 	}
 }
 // Striped tables.

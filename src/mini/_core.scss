@@ -1,5 +1,5 @@
-/* 
-	Browsers resets and base typography. 
+/*
+	Browsers resets and base typography.
 */
 $apply-defaults-to-all: 		true !default;									// Should default values be applied to all elements? (`true` or `false`).
 $base-root-font-size:			16px !default;									// Root font sizing for all elements - In `px` only!
@@ -11,7 +11,7 @@ html {
 		font-family: #{$base-font-family};
 		line-height: $base-line-height;
 		// Prevent adjustments of font size after orientation changes in mobile.
-		-webkit-text-size-adjust: 100%; 
+		-webkit-text-size-adjust: 100%;
 	}
 	* {
 		font-size: $base-font-size;
@@ -22,7 +22,7 @@ html {
 		font-family: #{$base-font-family};
 		line-height: $base-line-height;
 		// Prevent adjustments of font size after orientation changes in mobile.
-		-webkit-text-size-adjust: 100%; 
+		-webkit-text-size-adjust: 100%;
 	}
 }
 
@@ -58,7 +58,7 @@ svg:not(:root) {
 }
 
 // Show overflow in IE.
-input { 
+input {
 	overflow: visible;
 }
 
@@ -139,11 +139,11 @@ hr {
 	@if $horizontal-rule-fancy-style {
 		height: 1px;
 		background: -webkit-linear-gradient(#{$horizontal-rule-fancy-gradient});
-		background:         linear-gradient(#{$horizontal-rule-fancy-gradient});  
+		background:         linear-gradient(#{$horizontal-rule-fancy-gradient});
 	}
-	@else {   
+	@else {
 		height: 0;
-		border-top: $horizontal-rule-border-style;   
+		border-top: $horizontal-rule-border-style;
 	}
 }
 
@@ -390,7 +390,7 @@ a{
 	}
 	@if $apply-link-hover-fade {
 		opacity: 1;
-		-webkit-transition: all 0.3 ease 0s;
+		-webkit-transition: all 0.3s ease 0s;
 				transition: all 0.3s ease 0s;
 	}
 	&:visited {

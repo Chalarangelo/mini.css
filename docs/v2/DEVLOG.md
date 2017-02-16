@@ -186,7 +186,7 @@
 ## 20161025
 
 - Issue maintenance and minor changes to issue structure on Github.
-- Due to implicit labeling (e.g. `<label>Name:<input></label>`) not being correctly handled by some assistive technologies, explicit labels will be used for the `file` `<input>` elements. 
+- Due to implicit labeling (e.g. `<label>Name:<input></label>`) not being correctly handled by some assistive technologies, explicit labels will be used for the `file` `<input>` elements.
 - Added `$hide-file-inputs` flag to decide the styling of `file` `<input>` elements.
 - Softcoded changes and optimized some things in the `button` module.
 - Updated demo page.
@@ -282,7 +282,7 @@
 - Explained utilities in demo page.
 - Deployed demo page with utilities docs.
 - Started developing `shell`. Added `shell` file and `mini-shell/card` file for the `card` module.
-- Actually deleted `shell` file, moved everything to `core` file, renamed to `_mini.scss`.
+- Actually deleted `shell` file, moved everything to `core` file, renamed to `mini.scss`.
 - Played around with `card`s a little bit, got a few basic ideas down, tested centering in `row`, not worthwhile.
 - Some minor styling for cards has been done, lots of work needed still.
 
@@ -353,7 +353,7 @@
 - Refactored code of `tabs` to work with the above decision, removed obsolete artifacts from the `accordion` module.
 - Made a few minor tweaks, decided not to add `accordion`-specific styling, as the current styling is just enough.
 - Edited the demo page to include most of the new functionality.
-- *TODO* Move `_accordion.scss` to the `legacy` folder etc.
+- *TODO* Move `accordion.scss` to the `legacy` folder etc.
 - Deployed live demo.
 - Tested on mobile, found some presentational problems.
 - Minor change to the way `transition`s work for `tabs`, they will now all utilize the `transform` implementation.
@@ -366,13 +366,13 @@
 	- Restructured folders. `mini-shell` removed, `mini-core` renamed to `mini`. `mini` is the core folder now.
 	- Created branch `v1-neutrino` both locally and on Github to support legacy versions in the future. `master` is now the branch for **Fermion** only.
 	- Aggressive deletion of older files. The following folder are now gone: `scss/mini`, `scss/mini-extra`, `flavors` except for the contents of the `v2` folder and the folder itself.
-	- Renamed `_mini.scss` to `_core.scss`, moved to the `scss/v2/mini` directory.
+	- Renamed `mini.scss` to `core.scss`, moved to the `scss/v2/mini` directory.
 	- Deleted `accordion` module file as it was obsolete.
 	- Renamed `scss` directory to `src`. Renamed `flavors` directory to `dist`.
 	- Moved flavors from their directory to the `src` directory. CSS files produced from flavor files will go to the `dist` folder, along with the minified versions.
 	- *TODO* Update the `package.json` and `bower.json` files according to the new framework version.
 	- Updated live demo page reference to use the new structure.
-	
+
 ## 20161110
 
 - Continued module restructure and cleanup as follows:
@@ -380,7 +380,7 @@
 	- Started converting media queries from `only screen and ()` to plain `()`. Changes have been applied to `grid` module.
 	- Code cleanup in `grid`, indentation etc.
 	- Code cleanup in `table`. Media query conversions applied. Optimization.
-	- Code cleanup in `form`. 
+	- Code cleanup in `form`.
 	- Code cleanup in `button`. Updated `file` `input`s to be accessible.
 	- Code cleanup in `checkbox`. Optimizations.
 	- Restructured `form`, `button` and `checkbox` into one module: `input_control`. Made necessary changes for this to work properly.
@@ -699,7 +699,7 @@
 ## 20161222
 
 - Merged the pull request from @roryprimrose.
-- Changed the `_typography.scss` file to `_core.scss`.
+- Changed the `typography.scss` file to `core.scss`.
 - Moved the `@import` statements to the flavor files.
 - Updated `customization.html` to make sure the notes reflect the new structure of the toolkit.
 - Demo pages updated to use the latest version of the toolkit (v2.0.1).
@@ -730,3 +730,154 @@
 - Updated `README` and `CHANGELOG`.
 - Updated `.do` and `.dont` classes for doc pages.
 - Doc pages updated to use v2.0.2.
+
+# v2.1.0 Development log
+
+## 20170106
+
+- Created a new branch for the development of v2.1.0.
+- Added `$include-parent-layout` flag, which will allow rows declaring column layout for children.
+- Implemented the whole *simple* layout structure for the `grid` module, allowing a `.row` to set the layout of its children, using a `.cols-{SZ}-{WD}` class.
+- Decided to include the new `grid` system in the `mini-default` flavor, as its functionality could be beneficial to a lot of people. The new filesize (gzipped) is `6.47KB` over the previous `6.32KB`.
+- Added what is basically an *auto-grid* option in `.row.cols-sm` and similar for other sizes, that auto-sizes all columns in a given row. Might come in handy.
+- Updated `index.html` to show *under 10KB* instead of *about 5KB* in the **Minimal** card in order to deal with the controversy surrounding this specific line.
+
+## 20170107
+
+- Thoroughly tested `position: sticky` for `header` elements. It seems to work quite fine. - #24
+- Tested `position: sticky` for breadcrumbs and other elements. Layout seems to get in the way quite a lot. Implementation might only be viable for `header` elements for now.
+- Added `$include-header-sticky` flag and required variables to implement the `.sticky` class.
+- Tested a new layout idea in `demo.html`, this is how the new `index.html` should look like in the next update (top part only).
+- Updated `index.html` to use the new `.sticky` `header`, along with other styling changes, such as content sizing.
+- *TODO* Update the rest of the pages, bump everything to `v2.1.0` and use the local stylesheets in the meantime.
+- Content spacing changes in `index.html`.
+
+## 20170108
+
+- Added `$include-footer-bottom` flag, coded the necessary parts for absolute-bottom-aligned `footer` elements. - Resolved #42
+- Updated all pages to use the new `footer` absolute-alignment. Should solve some issues on different devices.
+- Changed the implementation of the new `footer` to `sticky`, instead of absolute.
+- Rolled back all pages that were affected. Should work like a charm now!
+- Finalized the `sticky` `footer`.
+
+## 20170113
+
+- Added support for ARIA `role="button"` in the `input_control` module by default. Filesize has bloated to a horrifying 6.92KB.
+- Highly optimized `input_control` module's buttons and button groups, by removing redundant selectors, based on specificity, bringing down the filesize to a managable 6.59KB again.
+- Optimized `sticky` `footer`s and `header`s a little bit. Should have no effect on filesize.
+
+## 20170116
+
+- Added `$include-horizontal-table` flag in `table` module to conditionally enable/disable the `horizontal` `table`s.
+- Updated `breadcrumbs` component in the `utility` module to properly utilize the `ceil()` Sass function, so that no white line errors are shown, effectively fixing the only bug I managed to find with the component's presentation.
+- Updated `utility` module's `visually-hidden` to properly do its job.
+- First demo of the `tooltip` component. Works properly. Needs some tweaks to display a top and bottom variant, based on user choice.
+
+## 20170118
+
+- `tooltip` added to `contextual` module, minor changes to it, allows both top and `bottom` versions at the same time.
+- Updated `tooltip` component to use variables.
+- Added mixins for `tooltip`. Tested them.
+- Added proper `tooltip` in the `default` flavor. Size now is `6.81KB`. Implementation of issue #41 is now completed.
+- `DEVLOG.md` cleanup to make Markdown great again...
+- Played with **hugging cat** to prepare it for the update.
+
+## 20170127
+
+- `tooltip` updated, dealing with a small misalignment bug in alternate styles.
+- Added `$nav-include-sublink-bar` flag for `nav` element's subcategories to add a sidebar to them. Styled them as necessary and used proper variables. Tested reasonably extensively, no bugs should be present.
+- With the addition of the new `nav` sidebar to the main flavor, the file size is now `6.86KB`. This is very close to the final size for the *v2.1.0* release, as most of the new features have been added already.
+- Added `label` element `padding` via variables to address certain issues. Tweaked `checkbox` and `radio` components to match changes.
+- Added flag for `fluid` `input-group`s and created the related component. `fluid` `input-group`s will now be part of the default flavor, taking the file size up to `6.93KB`, which is probably the final size of the next release. - Deals with #50.
+
+## 20170131
+
+- Added flags for `floats` and `clearfix`, turned both utilites of by default, as they are mostly useless.
+- After removing the two components mentioned above, size is now `6.89KB`.
+- `center-block` turned off using a flag by default. File size is now `6.87KB`. All legacy utilites have been disabled by default.
+- Updated `utility.html` page to reflect the fact that these utilities are no longer present by default.
+- Updated `quick_reference.html` to reflect the fact that these utilities are no longer present by default.
+
+## 20170201
+
+- Changed **hugging cat**'s clothes. It's February now!
+- Added hidden flag `$input-high-specificity-selectors` to `input_control` to deal with high specificity selectors for `input` elements.
+- Tested the new `input` styling, does not seem to cause any trouble with `button`-type `input`s, thus it will probably be the default choice from now on. File size dropped to an astonishing `6.72KB`, which seems like a pretty great tradeoff. Some more tweaks might be required, but this should be mostly fine!
+- Tweaked the `input` styling to make sure all `button`-type `input`s are properly styled.
+- Added `:hover` and `:disabled` selectors to `input` elements, making sure as many states as possible are covered now.
+- Cleaned `:focus:invalid:focus` selector, as I could not find any test cases for it. Size is now `6.75KB`.
+- Added safeguard for the `progress` element's `.nano` variant's case with `margin` of `0`. Should now behave properly.
+- Added `@supports` statement to help `tooltip` component place itself whenever possible. Changed a few of the selectors in `tooltip` to be as specific as needed and work as required.
+- Updated `tooltip` mixin to reflect the above changes.
+
+## 20170202
+
+- Added `[role="button"]` selector for elements inside `header`, did not remove any other selectors from component as specifity would be too low if changed.
+- Updated `.card.section` to work properly with `[role="button"]` elements.
+- #22: Spent a lot of time testing possible implementation of *Media Object*. See related issue for what I ended up with.
+- Updated `index.html`. It's now ready for v2.1.0.
+- Created the module `header` navigation bar to help make navigation easier.
+- Updated all `head` elements for all pages.
+- Updated top navigation for all pages.
+
+
+## 20170207
+
+- `index.html` and `core.html` are complete. Moving on to `grid.html`.
+- Altered `grid.html` to better present the `basic layout` and `screen-specific layouts` cards.
+- Spent a few minutes dealing with tabs and spaces and html page optimizations etc.
+- Shrinked the size of `index.html`, minimized the internal CSS of the page.
+- Dealt a little bit with other pages' `header` elements and some styling.
+- Shrinked the size of `core.html`, minimized the internal CSS of the page.
+- Minimized the internal CSS of all the pages.
+- Shrinked page sizes a little bit across all pages, except `quick_reference.html`.
+- Minor updates to `quick_reference.html` to get size a bit lower.
+- Updated existing documentation for `grid` module.
+- Setup the `media object` section of `grid.html`, just the basic demo for now.
+- Documented `media object`. Resolves #22.
+- Rebranded as a **CSS framework** instead of a **UI toolkit**.
+- Updated `LICENSE`.
+- Updated `package.json` and `bower.json`.
+- Updated `#header-logo` styling in order to make the framework's logo display properly in Chrome.
+- Updated `header`s `logo` element styling to make sure that it does not *jump* in Chrome.
+- Documented predefined layouts in `grid.html`.
+- Fixed the `pre` segments in `grid.html`.
+- Made `header` `logo` element un`transition` conditional.
+- Updated `utility.html` to display as required on larger displays.
+
+## 20170208
+
+- Fed **hugging cat**, it's even happier now.
+- Updated `tab.html` with some minor accessibility guidelines and new layout.
+- Updated `progress.html` with an accessibility guideline and new layout.
+- Updated `card.html` with new layout.
+- Updated `table.html` with new layout.
+
+## 20170212
+
+- Added accessibility guidelines for `breadcrumbs`.
+- Added accessibility guidelines for `alert`s.
+- Documented `tooltip`. No *dos* and *don'ts* seem to be required, as the use cases are really really simple.
+- Added accessibility guidelines for using `role="button"` in `navigation`.
+- Added `sticky` documentation in `navigation`. No *dos* and *dont's* either, I'm afraid, can't find any troublesome things with this.
+- Added a quick fix for `table`s' irregular styling of mutliline headers. Resolves #54.
+- Updated `input_control` documentation for accessibility and `fluid` `input-group`s. Finally resolved #40, accessibility is now properly explained everywhere.
+- Removed `demo.html` once again.
+- Updated `v2/index.html` to take up less space.
+- Updated `customization.html` page with latest information.
+- Updated references everywhere to `v2.1.0`.
+- Updated `customization.html` layout.
+
+## 20170213
+
+- Updated the `quick_reference.html` page with the new guidelines for `grid` module.
+- Updated the `quick_reference.html` page with new guidelines for `navigation`, `input_control` and `table`.
+- Updated the `quick_reference.html` page with new guidelines for `contextual`, `progress` and `utility`.
+- Updated the descriptions of modules wherever necessary.
+- Updated `README.md` and `CHANGELOG.md` to be ready for release. Flavor updates and changes still pending before release.
+
+## 20170216
+
+- Updated `mini-sucroa`: Removed `horizontal` tables, added `sticky` for `header` and `footer`, added `tooltip`, disabled legacy support in `utility`. Updated the rest of the components as required (minor changes).
+- Updated `mini-sucroa` flavor description.
+- Decided to drop `mini-classic`, not worth it in the long run. See #57 for details.

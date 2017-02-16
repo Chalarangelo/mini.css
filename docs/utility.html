@@ -1,102 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.0.2/dist/mini-default.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <title>mini.css - Utility</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
-    <meta name="keywords" content="mini, mini.css, CSS, framework, toolkit, minimal, responsive, style-agnostic, Sass, module, utility, helper, classes, utilities">
-    <meta name="author" content="Angelos Chalaris (chalarangelo)">
-    <meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS toolkit">
-    <meta property="og:type" content="website"/>
-    <meta property="og:description" content="mini.css is a tiny CSS toolkit designed to build quick, modern and responsive websites."/>
-    <meta property="og:image" content="page_thumb.PNG">
-    <meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
-    <link rel="icon" type="image/png" href="favicon.png">    
-    <style>
-      /* Classes and ids used in multiple pages - page top and utilities */
-      #header-logo {
-        display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px;
-         padding: 4px;
-      }
-      #top-logo {
-        display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px;
-        background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      #top-heading {
-        color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;
-      }
-      #top-version-tag {
-        padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      .box-centered { text-align: center; }
-      .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
-      .box-colored.red { background: #b71c1c; }
-      .box-centered > .card.fluid {
-        -webkit-box-pack: start;
-        -webkit-box-align: start; 
-        -webkit-justify-content: flex-start;
-                justify-content: flex-start;
-        -webkit-align-self: auto;
-                align-self: auto;
-      }
-      [class^='col-'] .card.fluid { margin: 2px 0 20px; }
-      /* Local classes and ids for this page */
-      .fore-primary { color: #0d47a1; font-family: monospace, monospace; }
-      .fore-secondary { color: #b71c1c; font-family: monospace, monospace; }
-      .fore-tertiary { color: #1b5e20; font-family: monospace, monospace; }
-      .col-sm-12.col-sm-last.col-md-4.col-md-normal {
-        box-sizing: border-box;
-        border-right: 1px solid #bdbdbd;
-      }
-      @media (max-width: 767px){
-        .col-sm-12.col-sm-last.col-md-4.col-md-normal {
-          border: 0;
-          border-top: 1px solid #bdbdbd;
-        }
-      }
-      .box-colored.green { background: #1b5e20; }
-      .do {
-        border-top: 15px solid #689f38;
-        padding-top: 10px;
-      }
-      .dont {
-        border-top: 15px solid #e53935;
-        padding-top: 10px;
-      }
-      .box-colored {
-        color: #f5f5f5;
-      }
-    </style>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>mini.css - Utility</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, utility, helper, classes, utilities ">
+	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.PNG">
+	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
+	<style>
+	#header-logo { position:relative; top: -4px; display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px; padding: 4px; }
+	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #b71c1c; }
+	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	.col-sm-12.col-sm-last.col-md-4.col-md-normal { box-sizing: border-box; border-right: 1px solid #bdbdbd; }
+	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd;}}
+	.box-colored.green { background: #1b5e20; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
+	.box-colored { color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	</style>
   </head>
-  <body>  
-    <header>
-      <a href="index.html"><img class="logo" src="mini-logo.svg" id="header-logo"></a><div style="display: inline; overflow: auto;">
-      <a href="index.html" class="button">Introduction</a>
-      <a href="modules.html" class="button">Modules</a>
-      <a href="flavors.html" class="button">Flavors</a>
-      <a href="customization.html" class="button">Customization</a>
-      <a href="quick_reference.html" class="button">Quick Reference</a>
-      <a href="https://github.com/Chalarangelo/mini.css" class="button">Github</a>
-      </div>
-    </header>
-    <div class="container" style="height: 320px; background: -webkit-linear-gradient(#455a64,#263238); background: linear-gradient(#455a64,#263238); box-shadow: 0 3px 9px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.35);">
-      <div class="row">
-        <div class="col-sm">
-          <div class="box-centered">
-            <img src="mini-logo.svg" id="top-logo">
-            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
-            <mark class="tertiary" id="top-version-tag">v2.0</mark>
-        </div>
-      </div>
-      </div>
-    </div>
+  <body>
+	  <header>
+      	<a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a>
+      	<div style="display: inline; overflow: auto;">
+      		<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
+      		<a href="flavors.html" class="button">Flavors</a> <a href="customization.html" class="button">Customization</a>
+      		<a href="quick_reference.html" class="button">Quick Reference</a>
+      		<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+      	</div>
+      </header>
+	  <header class="sticky" style="height:36px;">
+  		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
+  		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
+  		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
+  		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
+  		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
+  	</header>
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <h1>Utility</h1>
           <p>The <strong>utility</strong> module contains all the utilities and helper classes that you might want when designing a website or application. They solve common design problems efficiently and provide you with generic rules you can easily apply everywhere.</p>
           <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
@@ -104,11 +51,11 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Every website or app has different needs and no UI toolkit can predict them all. The <strong>utility</strong> module addresses this issue by providing you with a handful of utility and helper classes to make common, repetitive declarations easier. These classes include, but are not limited to, generic border styling and shadows, floats, centering and clearfix classes, some responsive sizing and spacing utilities and a few other things, like a close icon, breadcrumbs styling and visiblity helpers for screen readers.</p><br>
+              <p>Every website or app has different needs and no CSS framework can predict them all. The <strong>utility</strong> module addresses this issue by providing you with a handful of utility and helper classes to make common, repetitive declarations easier. These classes include, but are not limited to, generic border styling and shadows, some responsive sizing and spacing utilities and a few other things, like a close icon, breadcrumbs styling and visiblity helpers for screen readers.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
@@ -119,11 +66,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Visibility helpers</h2>
-            </div>
+            <div class="section"><h2>Visibility helpers</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-first">
                 <p>You can hide content for all your users, using the default <code><span class="fore-secondary">hidden</span></code> attribute. However, we provide you with the <code>.hidden</code> class for the same purpose, as well as the <code>.visually-hidden</code> class which will make your content hidden, except for screen readers.</p>
@@ -136,8 +81,7 @@
             <h3>Notes</h3>
               <ul>
                 <li>Both classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12">
                   <pre>&lt;span class=&quot;hidden visually-hidden&quot;&gt;Not a good idea&lt;/span&gt;</pre>
@@ -149,43 +93,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Floats, centering &amp; clearfix</h2>
-            </div>
-            <div class="section row">
-              <div class="col-sm-12 col-sm-first">
-                <p>You can easily make content float left or right, using the <code>.float-left</code> and <code>.float-right</code> classes. Clear all floats, using the <code>.clearfix</code> class, based on the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">micro clearfix</a> by Nicolas Gallagher. Finally, use the <code>.center-block</code> class to make an element center and display as a block.</p>
-                <h3>Sample code</h3>
-                <pre>&lt;span class=&quot;float-left&quot;&gt;Float left&lt;/span&gt;
-&lt;span class=&quot;float-right&quot;&gt;Float right&lt;/span&gt;
-&lt;span class=&quot;clearfix&quot;&gt;Clearfix&lt;/span&gt;
-&lt;span class=&quot;center-block&quot;&gt;Center block&lt;/span&gt;</pre>
-              </div>
-            </div>
-            <div class="section">
-            <h3>Notes</h3>
-              <ul>
-                <li>All of these classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
-              </ul>
-              <hr>
-              <div class="row">
-                <div class="col-sm-12">
-                  <pre>&lt;span class=&quot;float-left float-right&quot;&gt;Avoid this&lt;/span&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining any two of the above classes (except if you use <code>.clearfix</code> to temporarily clear a float or something similar), as they might overwrite each other and cause unexpected behavior.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm">
-          <div class="card fluid">
-            <div class="section">
-              <h2>Generic borders &amp; shadows</h2>
-            </div>
+            <div class="section"><h2>Generic borders &amp; shadows</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
                 <div>
@@ -214,8 +124,7 @@
                 <li>All of these classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
                 <li>The <code>.bordered</code> class was originally created with elements such as buttons in mind, to allow users highlighting certain elements in their designs, without having to change any default styles.</li>
                 <li>All of the above classes can be used with most modern HTML elements.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;span class=&quot;bordered rounded shadow-small&quot;&gt;Stylized element&lt;/span&gt;</pre>
@@ -233,11 +142,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Responsive sizing &amp; spacing classes</h2>
-            </div>
+            <div class="section"><h2>Responsive sizing &amp; spacing classes</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-first">
                 <p>Helper classes for the <code>padding</code> and <code>margin</code> attributes are provided in the form of <code>.responsive-margin</code> and <code>.responsive-padding</code> classes. Both of these classes are responsive, allowing you to collapse the spacing and size of elements on different displays to make better use of the device's viewport.</p>
@@ -251,8 +158,7 @@
               <ul>
                 <li>If the default values of these classes are not suited to your needs, check out the <a href="customization.html">customization</a> page.</li>
                 <li>Both classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12">
                   <pre>&lt;div class=&quot;responsive-padding responsive-margin&quot;&gt;Responsive padding and margin&lt;/div&gt;</pre>
@@ -264,21 +170,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Breadcrumbs</h2>
-            </div>
+            <div class="section"><h2>Breadcrumbs</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-                <div>
-                  <br>
-                  <ul class="breadcrumbs">
-                    <li><a href="#">Root</a></li>
-                    <li><a href="#">Folder</a></li>
-                    <li>File</li>
-                  </ul>
-                  <br>
+                <div><br>
+                  <ul class="breadcrumbs"> <li><a href="#">Root</a></li> <li><a href="#">Folder</a></li> <li>File</li> </ul><br>
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
@@ -296,8 +194,8 @@
               <ul>
                 <li>The separators between breadcrumbs are added using some tricky CSS rules. Due to that, there might be a few browser versions or devices where you can see part of the seams between the element separators.</li>
                 <li>Breadcrumbs show a hierarchy, an ordered list. However, we do not use the <code>&lt;ol&gt;</code> element, as it might conflict with some custom styles we've seen people use.</li>
-              </ul>
-              <hr>
+				<li>If you want to add some accesibility to your breadcrumbs, you can add the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://www.w3.org/TR/wai-aria/roles#navigation">navigation</a>&quot;</span></code> attribute, although it is not required.</li>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;ol class=&quot;breadcrumbs&quot;&gt;
@@ -324,11 +222,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section">
-              <h2>Close icon</h2>
-            </div>
+            <div class="section"><h2>Close icon</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
                 <div>
@@ -347,8 +243,7 @@
             <h3>Notes</h3>
               <ul>
                 <li>The close icon behaves similar to a button when hovering over it or otherwise focusing or selecting it.</li>
-              </ul>
-              <hr>
+              </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;div class=&quot;close&quot;&gt;&lt;/div&gt;</pre>
@@ -364,7 +259,7 @@
         </div>
       </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
-        <div class="col-sm">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
           <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>

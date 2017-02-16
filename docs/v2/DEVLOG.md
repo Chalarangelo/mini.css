@@ -875,3 +875,8 @@
 - Updated the `quick_reference.html` page with new guidelines for `contextual`, `progress` and `utility`.
 - Updated the descriptions of modules wherever necessary.
 - Updated `README.md` and `CHANGELOG.md` to be ready for release. Flavor updates and changes still pending before release.
+
+## 20170216
+
+- Updated `mini-sucroa`: Removed `horizontal` tables, added `sticky` for `header` and `footer`, added `tooltip`, disabled legacy support in `utility`. Updated the rest of the components as required (minor changes).
+- Updated `mini-sucroa` flavor description.

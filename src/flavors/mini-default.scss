@@ -7,107 +7,106 @@
 	mini.css version: v2.1.0 (Fermion)
 */
 //	Basic rules for body and typography
-$fore-color:					#212121;										// Text and general foreground color
-$back-color:					#f5f5f5;										// Body background color
+$fore-color:						#212121;									// Text and general foreground color
+$back-color:						#f5f5f5;									// Body background color
 $base-font-family:																// Default font stack for all elements:
 	'-apple-system, BlinkMacSystemFont,\"Segoe UI\",\"Roboto\", \"Droid Sans\",\"Helvetica Neue\", Helvetica, Arial, sans-serif';
 // OS X and iOS system fonts (San Francisco) -> Windows system fonts -> Android system fonts (newer and older) -> Fallback fonts
-$base-root-font-size:			16px;											// Root font sizing for all elements [1]
+$base-root-font-size:		16px;											// Root font sizing for all elements [1]
 $base-font-size:				1em;											// Default font sizing for all elements [2]
-$base-line-height:				1.5;											// Default line height for all elements.
-$body-margin:					0;												// Margin for the body
-$apply-defaults-to-all:			true;											// Should default values be applied to all
-																				// elements? (`true` or `false`) [3]
+$base-line-height:			1.5;											// Default line height for all elements.
+$body-margin:						0;												// Margin for the body
+$apply-defaults-to-all:	true;											// Should default values be applied to all
+																									// elements? (`true` or `false`) [3]
 $h1-font-size:					2em;											// Font size of h1
-$h2-font-size:					1.5em;											// Font size for h2
-$h3-font-size:					1.25em;											// Font size for h3
-$h4-font-size:					1.1em;											// Font size for h4
+$h2-font-size:					1.5em;										// Font size for h2
+$h3-font-size:					1.25em;										// Font size for h3
+$h4-font-size:					1.1em;										// Font size for h4
 $h5-font-size:					1em;											// Font size for h5
-$h6-font-size:					0.85em;											// Font size for h6
-$heading-line-height:			1.2em;											// Line height for all headings
-$heading-margin:				12px 8px;										// Margin for all headings
-$heading-font-weight:			500;											// Font weight for all headings
-$heading-smalltext-fore-color:	#424242;										// <small> color in headings
-$make-heading-smalltext-block:	true;											// Should <small> elements in headings
-																				// be displayed as blocks (`true`/`false`) [4]
-$heading-smalltext-b-font-size:	75%;											// Font size of block <small> elements in headings
-$heading-smalltext-b-top-margin:-4px;											// Top margin of block <small> elements in headings
-$paragraph-margin:				1px 8px;										// Margin for <p> elements
-$list-margin:					1px 8px 10px;									// Margin for <ol> and <ul> elements
-$list-left-padding:				28px;											// Left padding for <ol> and <ul> elements
-$bold-font-weight:				700;											// Font weight for <b> and <strong>
-$horizontal-rule-line-height:	1.25em;											// <hr> line height
-$horizontal-rule-margin:		8px;											// <hr> margin
-$horizontal-rule-border-style:	1px solid #757575;								// Border style for horizontal rules (used
-																				// in the <hr> element's border-top)
-$horizontal-rule-fancy-style:	true;											// Should a fancy styling be applied for the
-																				// <hr> element (`true`/`false`) [5]
-$horizontal-rule-fancy-gradient:"to right, #bdbdbd, #616161, #bdbdbd";			// Gradient style for fancy horizontal rule
-$blockquote-back-color:			#eeeeee;										// Background color for <blockquote>
-$blockquote-fore-color:			$fore-color;									// Text color for <blockquote>
-$blockquote-margin:				8px 10px;										// Margin for <blockquote>
-$blockquote-padding:			6px 10px 24px;									// Padding for <blockquote>
-$blockquote-sidebar-style:		3px solid #616161;								// Style for the sidebar of <blockquote>
-$blockquote-cite-font-size:		0.85em;											// Font size for citation of <blockquote>
-$blockquote-cite-fore-color:	#616161;										// Text color for citation of <blockquote>
-$blockquote-cite-left-position:	10px;											// Left padding for citation of <blockquote>
-$blockquote-cite-bottom-position:												// Bottom padding for citation of <blockquote>
-								0;
-$blockquote-border-style:		0;												// Border style for <blockquote>
-$blockquote-border-radius:		0 2px 2px 0;									// Border radius for <blockquote>
-$blockquote-box-shadow:															// Box shadow for <blockquote>
+$h6-font-size:					0.85em;										// Font size for h6
+$heading-line-height:		1.2em;										// Line height for all headings
+$heading-margin:				12px 8px;									// Margin for all headings
+$heading-font-weight:		500;											// Font weight for all headings
+$heading-smalltext-fore-color:	#424242;					// <small> color in headings
+$make-heading-smalltext-block:	true;							// Should <small> elements in headings
+																									// be displayed as blocks (`true`/`false`) [4]
+$heading-smalltext-b-font-size:	75%;							// Font size of block <small> elements in headings
+$heading-smalltext-b-top-margin:-4px;							// Top margin of block <small> elements in headings
+$paragraph-margin:			1px 8px;									// Margin for <p> elements
+$list-margin:						1px 8px 10px;							// Margin for <ol> and <ul> elements
+$list-left-padding:			28px;											// Left padding for <ol> and <ul> elements
+$bold-font-weight:			700;											// Font weight for <b> and <strong>
+$horizontal-rule-line-height:	1.25em;							// <hr> line height
+$horizontal-rule-margin:	8px;										// <hr> margin
+$horizontal-rule-border-style:	1px solid #757575;// Border style for horizontal rules (used
+																									// in the <hr> element's border-top)
+$horizontal-rule-fancy-style:	true;								// Should a fancy styling be applied for the
+																									// <hr> element (`true`/`false`) [5]
+$horizontal-rule-fancy-gradient:"to right, #bdbdbd, #616161, #bdbdbd";					// Gradient style for fancy horizontal rule
+$blockquote-back-color:			#eeeeee;							// Background color for <blockquote>
+$blockquote-fore-color:			$fore-color;					// Text color for <blockquote>
+$blockquote-margin:					8px 10px;							// Margin for <blockquote>
+$blockquote-padding:				6px 10px 24px;				// Padding for <blockquote>
+$blockquote-sidebar-style:	3px solid #616161;		// Style for the sidebar of <blockquote>
+$blockquote-cite-font-size:	0.85em;								// Font size for citation of <blockquote>
+$blockquote-cite-fore-color:			#616161;				// Text color for citation of <blockquote>
+$blockquote-cite-left-position:		10px;						// Left padding for citation of <blockquote>
+$blockquote-cite-bottom-position:	0;							// Bottom padding for citation of <blockquote>
+$blockquote-border-style:					0;							// Border style for <blockquote>
+$blockquote-border-radius:				0 2px 2px 0;		// Border radius for <blockquote>
+$blockquote-box-shadow:														// Box shadow for <blockquote>
 	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
-$use-default-code-fonts:		true;											// Should default font choice (monospace) be
-																				// used for code elements? (`true`/`false`) [6]
-//$code-font-family:			monospace, monospace;							// Fonts for code elements if not default
-$code-element-padding:			2px 4px;										// Padding for <code>
-$code-element-fore-color:		$fore-color;									// Text color for <code>
-$code-element-back-color:		#e0e0e0;										// Background color for <code>
-$code-element-border-style:		0;												// Border style for <code>
-$code-element-border-radius:	2px;											// Border radius for <code>
+$use-default-code-fonts:			true;									// Should default font choice (monospace) be
+																										// used for code elements? (`true`/`false`) [6]
+//$code-font-family:					monospace, monospace;	// Fonts for code elements if not default
+$code-element-padding:				2px 4px;							// Padding for <code>
+$code-element-fore-color:			$fore-color;					// Text color for <code>
+$code-element-back-color:			#e0e0e0;							// Background color for <code>
+$code-element-border-style:		0;										// Border style for <code>
+$code-element-border-radius:	2px;									// Border radius for <code>
 $code-element-box-shadow:														// Box shadow for <code>
 	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
-$pre-element-padding:			12px;											// Padding for <pre>
-$pre-element-fore-color:		$code-element-fore-color;						// Text color for <pre>
-$pre-element-back-color:		$code-element-back-color;						// Background color for <pre>
-$pre-element-border-style:		0;												// Border style for <pre>
-$pre-element-border-radius:		0 2px 2px 0;									// Border radius for <pre>
-$pre-element-margin:			8px 10px;										// Margin for <pre>
+$pre-element-padding:					12px;									// Padding for <pre>
+$pre-element-fore-color:	$code-element-fore-color;	// Text color for <pre>
+$pre-element-back-color:	$code-element-back-color;	// Background color for <pre>
+$pre-element-border-style:		0;										// Border style for <pre>
+$pre-element-border-radius:		0 2px 2px 0;					// Border radius for <pre>
+$pre-element-margin:					8px 10px;							// Margin for <pre>
 $pre-element-box-shadow:														// Box shadow for <pre>
 	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
-$add-pre-element-sidebar:		true;											// Should a fancy sidebar be added to the
-																				// left side of <pre> (`true`/`false`) [7]
-$pre-element-sidebar-style:		3px solid #1565c0;								// Style of the sidebar of <pre>
-$kbd-element-padding:			2px 4px;										// Padding for <kbd>
-$kbd-element-fore-color:		#fafafa;										// Text color for <kbd>
-$kbd-element-back-color:		$fore-color;									// Background color for <kbd>
-$kbd-element-border-style:		0;												// Border style for <kbd>
-$kbd-element-border-radius:		2px;											// Border radius for <kbd>
+$add-pre-element-sidebar:		true;										// Should a fancy sidebar be added to the
+																										// left side of <pre> (`true`/`false`) [7]
+$pre-element-sidebar-style:		3px solid #1565c0;		// Style of the sidebar of <pre>
+$kbd-element-padding:					2px 4px;							// Padding for <kbd>
+$kbd-element-fore-color:			#fafafa;							// Text color for <kbd>
+$kbd-element-back-color:			$fore-color;					// Background color for <kbd>
+$kbd-element-border-style:		0;										// Border style for <kbd>
+$kbd-element-border-radius:		2px;									// Border radius for <kbd>
 $kbd-element-box-shadow:														// Box shadow for <kbd>
 	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
-$style-samp-element:			false;											// Should styles for <samp> be included?
-																				// (`true`/`false`) [8]
-//$samp-element-padding:		2px 4px;										// Padding for <samp>
-//$samp-element-fore-color:		$fore-color;									// Text color for <samp>
-//$samp-element-back-color:		#2196f3;										// Background color for <samp>
-//$samp-element-border-style:	0;												// Border style for <samp>
-//$samp-element-border-radius:	2px;											// Border radius for <samp>
-$include-dfn-fix:				true;											// Should the fix for Android 4.3 concerning <dfn>
-																				// be included (`true`/`false`) [9]
-$small-font-size:				75%;											// Font size for <small> elements
-$sup-font-size:					75%;											// Font size for <sup> elements
-$sub-font-size:					75%;											// Font size for <sub> elements
-$sup-top:						-8px;											// <sup> top
-$sub-bottom:					-4px;											// <sub> bottom
-$link-fore-color:				#0277bd;										// Text color for <a>
-$link-visited-fore-color:		#01579b;										// Text color for visited <a>
+$style-samp-element:			false;										// Should styles for <samp> be included?
+																										// (`true`/`false`) [8]
+//$samp-element-padding:			2px 4px;							// Padding for <samp>
+//$samp-element-fore-color:		$fore-color;					// Text color for <samp>
+//$samp-element-back-color:		#2196f3;							// Background color for <samp>
+//$samp-element-border-style:	0;										// Border style for <samp>
+//$samp-element-border-radius:2px;									// Border radius for <samp>
+$include-dfn-fix:			true;													// Should the fix for Android 4.3 concerning <dfn>
+																										// be included (`true`/`false`) [9]
+$small-font-size:			75%;													// Font size for <small> elements
+$sup-font-size:				75%;													// Font size for <sup> elements
+$sub-font-size:				75%;													// Font size for <sub> elements
+$sup-top:							-8px;													// <sup> top
+$sub-bottom:					-4px;													// <sub> bottom
+$link-fore-color:					#0277bd;									// Text color for <a>
+$link-visited-fore-color:	#01579b;									// Text color for visited <a>
 $link-font-weight:				500;											// Font weight for <a>
-$apply-link-underline:			true;											// Should an underline be applied to all <a>
-																				// elements? (`true`/`false`) [10]
-$apply-link-hover-fade:			true;											// Should the :hover and :focus state of <a>
-																				// elements use fade-out instead of a different
-																				// color (`true`/`false`) [11]
-//$link-hover-fore-color:		#0288d1;										// Text color for <a> when hovered or focused
+$apply-link-underline:		true;											// Should an underline be applied to all <a>
+																										// elements? (`true`/`false`) [10]
+$apply-link-hover-fade:		true;											// Should the :hover and :focus state of <a>
+																										// elements use fade-out instead of a different
+																										// color (`true`/`false`) [11]
+//$link-hover-fore-color:		#0288d1;								// Text color for <a> when hovered or focused
 //	Notes:
 // [1] - The value $base-root-font-size should be in `px` only! This rule is very important, as it will determine the root
 //	element's font sizing.

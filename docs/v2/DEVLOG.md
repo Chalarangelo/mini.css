@@ -881,3 +881,11 @@
 - Updated `mini-sucroa`: Removed `horizontal` tables, added `sticky` for `header` and `footer`, added `tooltip`, disabled legacy support in `utility`. Updated the rest of the components as required (minor changes).
 - Updated `mini-sucroa` flavor description.
 - Decided to drop `mini-classic`, not worth it in the long run. See #57 for details.
+
+# v2.1.1 Development log
+
+## 20170329
+
+- Started code cleanup and updating.
+- Updated `core` by moving all of the variable definitions and defaults at the top of the module's file.
+- Updated both flavor files to deal with the indentation and column problems (only for the `core` module so far). Readability is a lot better, but consistency is a little bit worse. For all intents and purposes, this is the way to go for this release, as the previous styling was impossible to read for the most part in many setups.

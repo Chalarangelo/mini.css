@@ -1,6 +1,14 @@
 /*
 	Definitions for utilities and helper classes.
 */
+// Check the `_utility_mixins.scss` file to find this module's mixins.
+@import 'utility_mixins';
+// The floats, clearfix and center-block flags are for legacy features.
+$include-floats:				false !default;							// Should floats be included? (`true`/`false`)
+$include-clearfix:			false !default;							// Should clearfix be included? (`true`/`false`)
+$include-center-block:	false !default;							// Should center block be included? (`true`/`false`)
+$include-breadcrumbs:		true !default;							// [Hidden flag] Should breadcrumbs be included? (`true`/`false`)
+$include-close-icon:		true !default;							// [Hidden flag] Should the close icon be included? (`true`/`false`)
 // Hidden elements class. ATTENTION: Uses !important.
 .#{$hidden-name}{
 	display: none !important;
@@ -15,197 +23,122 @@
 	padding: 0 !important;
 	clip: rect(0 0 0 0) !important;
 	-webkit-clip-path: inset(100%) !important;
-			clip-path: inset(100%) !important;
+					clip-path: inset(100%) !important;
 	overflow: hidden !important;
 }
-// Breadcrumbs
-ul.#{$breadcrumbs-name} {
-	// Old syntax
-	display: -webkit-box;
-	// New syntax
-	display: -webkit-flex;
-	display: 		 flex;
-	list-style: none;
-	// Apply margin from styling
-	@if $breadcrumbs-margin != 0 {
-		margin: $breadcrumbs-margin;
-	}
-	@else {	// Reset margins from list styling
-		margin-left: 0;
-		margin-right: 0;
-	}
-	padding: 0;				// Remove unnecessary left and right empty space
-	@if $breadcrumbs-border-style !=0 {
-		border: $breadcrumbs-border-style;
-	}
-	@if $breadcrumbs-border-radius != 0 {
-		border-radius: $breadcrumbs-border-radius;
-	}
-	@if $breadcrumbs-box-shadow != none {
-		box-shadow: $breadcrumbs-box-shadow;
-	}
-	li {
+@if $include-breadcrumbs {	// Turn off if you do not want breadcrumbs to be included.
+	// Breadcrumbs
+	ul.#{$breadcrumbs-name} {
 		// Old syntax
-		-webkit-box-flex: 1;
-		max-width: 100%;
+		display: -webkit-box;
 		// New syntax
-		-webkit-flex-grow: 1;
-				flex-grow: 1;
-		-webkit-flex-basis: 0;
-				flex-basis: 0;
+		display: 	-webkit-flex;
+		display: 		 			flex;
+		list-style: none;
+		// Apply margin from styling
+		@if $breadcrumbs-margin != 0 {
+			margin: $breadcrumbs-margin;
+		}
+		@else {	// Reset margins from list styling
+			margin-left: 0;
+			margin-right: 0;
+		}
+		padding: 0;				// Remove unnecessary left and right empty space
+		@if $breadcrumbs-border-style !=0 {
+			border: $breadcrumbs-border-style;
+		}
+		@if $breadcrumbs-border-radius != 0 {
+			border-radius: $breadcrumbs-border-radius;
+		}
+		@if $breadcrumbs-box-shadow != none {
+			box-shadow: $breadcrumbs-box-shadow;
+		}
+		li {
+			// Old syntax
+			-webkit-box-flex: 1;
+			max-width: 100%;
+			// New syntax
+			-webkit-flex-grow: 1;
+							flex-grow: 1;
+			-webkit-flex-basis: 0;
+							flex-basis: 0;
+			position: relative;
+			text-align: center;
+			background: $breadcrumbs-back-color;
+			height: $breadcrumbs-height;
+			line-height: $breadcrumbs-height;
+			margin-right: ($breadcrumbs-height/2) + $breadcrumbs-separator-width;
+			&:before, &:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				width: 0;
+				height: 0;
+				border: 0 solid $breadcrumbs-back-color;
+				border-width: ($breadcrumbs-height/2) ceil($breadcrumbs-height/4);
+			}
+			&:before {
+				left: -($breadcrumbs-height/2);
+				border-left-color: transparent;
+			}
+			&:after {
+				left: 100%;
+				border-color: transparent;
+				border-left-color: $breadcrumbs-back-color;
+			}
+			&:first-child {
+				&:before {
+					border: 0;
+				}
+			}
+			&:last-child {
+				margin-right: 0;
+				&:after {
+					border: 0;
+				}
+			}
+		}
+	}
+}
+@if $include-close-icon { // Turn off if you do not want to include the close icon
+	// Close icon
+	.#{$close-icon-name}{
+		display: inline-block;
+		width: 0.75em;
+		height: 0.75em;
 		position: relative;
-		text-align: center;
-		background: $breadcrumbs-back-color;
-		height: $breadcrumbs-height;
-		line-height: $breadcrumbs-height;
-		margin-right: ($breadcrumbs-height/2) + $breadcrumbs-separator-width;
+		border-radius: 1em;
+		font-size: $close-icon-size;
+		text-overflow: clip;
+		background: rgba($close-icon-back-color,0);
+		vertical-align: top;
+		cursor: pointer;
+		-webkit-transition: all 0.3s ease 0s;
+						transition: all 0.3s ease 0s;
+		&:hover, &:active, &:focus {
+			background: rgba($close-icon-back-color,1);
+		}
 		&:before, &:after {
-			content: "";
+			display: inline-block;
+			width: 0.45em;
+			height: 0.1em;
 			position: absolute;
-			top: 0;
-			width: 0;
-			height: 0;
-			border: 0 solid $breadcrumbs-back-color;
-			border-width: ($breadcrumbs-height/2) ceil($breadcrumbs-height/4);
+			content: "";
+			top: 0.33em;
+			left: 0.155em;
+			text-overflow: clip;
+			background: $close-icon-fore-color;
 		}
 		&:before {
-			left: -($breadcrumbs-height/2);
-			border-left-color: transparent;
+			-webkit-transform: rotateZ(45deg);
+							transform: rotateZ(45deg);
 		}
 		&:after {
-			left: 100%;
-			border-color: transparent;
-			border-left-color: $breadcrumbs-back-color;
-		}
-		&:first-child {
-			&:before {
-				border: 0;
-			}
-		}
-		&:last-child {
-			margin-right: 0;
-			&:after {
-				border: 0;
-			}
+			-webkit-transform: rotateZ(-45deg);
+							transform: rotateZ(-45deg);
 		}
 	}
 }
-// Close icon
-.#{$close-icon-name}{
-	display: inline-block;
-	width: 0.75em;
-	height: 0.75em;
-	position: relative;
-	border-radius: 1em;
-	font-size: $close-icon-size;
-	text-overflow: clip;
-	background: rgba($close-icon-back-color,0);
-	vertical-align: top;
-	cursor: pointer;
-	-webkit-transition: all 0.3s ease 0s;
-			transition: all 0.3s ease 0s;
-	&:hover, &:active, &:focus {
-		background: rgba($close-icon-back-color,1);
-	}
-	&:before, &:after {
-		display: inline-block;
-		width: 0.45em;
-		height: 0.1em;
-		position: absolute;
-		content: "";
-		top: 0.33em;
-		left: 0.155em;
-		text-overflow: clip;
-		background: $close-icon-fore-color;
-	}
-	&:before {
-		-webkit-transform: rotateZ(45deg);
-				transform: rotateZ(45deg);
-	}
-	&:after {
-		-webkit-transform: rotateZ(-45deg);
-				transform: rotateZ(-45deg);
-	}
-}
-// Generic border mixin. ATTENTION: Uses !important.
-// Variables:
-// - $border-generic-name : The name of the class used for the generic border.
-@mixin make-border-generic ($border-generic-name) {
-	.#{$border-generic-name} {
-		border: 1px solid rgba(0,0,0, 0.25) !important;
-	}
-}
-// Generic radial border mixin. ATTENTION: Uses !important.
-// Variables:
-// - $border-radial-name : The name of the class used for the radial border.
-// - $border-radial-radius : The border radius used for the radial border.
-@mixin make-border-radial-style ($border-radial-name, $border-radial-radius) {
-	.#{$border-radial-name} {
-		border-radius: $border-radial-radius !important;
-	}
-}
-// Generic box shadow mixin. ATTENTION: Uses !important.
-// Variables:
-// - $box-shadow-name : The name of the class used for the generic box shadow.
-// - $box-shadow-value : The box shadow value of the generic box shadow.
-@mixin make-box-shadow-generic ($box-shadow-name, $box-shadow-value) {
-	.#{$box-shadow-name} {
-		box-shadow: $box-shadow-value !important;
-	}
-}
-// Responsive margin mixin. ATTENTION: Uses !important.
-// Variables:
-// - $margin-name : The name of the class used for the responsive margin.
-// - $margin-medium-breakpoint : Medium screen breakpoint for the responsive margin.
-// - $margin-large-breakpoint : Large screen breakpoint for the responsive margin.
-// - $margin-small-value : Responsive margin value for smaller screens.
-// - $margin-medium-value : Responsive margin value for medium screens.
-// - $margin-large-value : Responsive margin value for large screens.
-@mixin make-margin-responsive ($margin-name, $margin-medium-breakpoint,
-	$margin-large-breakpoint, $margin-small-value, $margin-medium-value,
-	$margin-large-value) {
-	.#{$margin-name} {
-		margin: $margin-small-value !important;
-	}
-	@media (min-width: #{$margin-medium-breakpoint}) {
-		.#{$margin-name} {
-			margin: $margin-medium-value !important;
-		}
-	}
-	@media (min-width: #{$margin-large-breakpoint}) {
-		.#{$margin-name} {
-			margin: $margin-large-value !important;
-		}
-	}
-}
-// Responsive padding mixin. ATTENTION: Uses !important.
-// Variables:
-// - $padding-name : The name of the class used for the responsive padding.
-// - $padding-medium-breakpoint : Medium screen breakpoint for the responsive padding.
-// - $padding-large-breakpoint : Large screen breakpoint for the responsive padding.
-// - $padding-small-value : Responsive padding value for smaller screens.
-// - $padding-medium-value : Responsive padding value for medium screens.
-// - $padding-large-value : Responsive padding value for large screens.
-@mixin make-padding-responsive ($padding-name, $padding-medium-breakpoint,
-	$padding-large-breakpoint, $padding-small-value, $padding-medium-value,
-	$padding-large-value) {
-	.#{$padding-name} {
-		padding: $padding-small-value !important;
-	}
-	@media (min-width: #{$padding-medium-breakpoint}) {
-		.#{$padding-name} {
-			padding: $padding-medium-value !important;
-		}
-	}
-	@media (min-width: #{$padding-large-breakpoint}) {
-		.#{$padding-name} {
-			padding: $padding-large-value !important;
-		}
-	}
-}
-$include-floats:		false !default;				// Should floats be included?
-$include-clearfix:		false !default;				// Should clearfix be included?
-$include-center-block:	false !default;				// Should center block be included?
 // Floats. ATTENTION: Uses !important.
 // NOTE: Might be obsolete and not play well with others.
 @if $include-floats {

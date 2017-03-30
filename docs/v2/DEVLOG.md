@@ -908,3 +908,5 @@
 - Flavor cleanup for `contextual` module.
 - Updated `progress`, splitting file and adding **hidden flag** `$include-spinner-donut` for toggling spinning donuts on and off. Added `@error` messages accordingly.
 - Flavor cleanup for `progress` module's updates.
+- Updated `utility` module, added proper **hidden flags** to `$include-breadcrumbs` and `$include-close-icon` to make it easier to disable those components.
+- Cleanup in both flavor files is now complete, added maintainers to the `mini-sucroa` file to meake it easier for people to reach the team behind it.

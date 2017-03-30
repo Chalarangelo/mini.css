@@ -4,7 +4,8 @@
 /*
 	Flavor name: Sucroa (mini-sucroa)
 	Author: Angeliki Daskalakis
-	mini.css version: v2.1.0 (Fermion)
+	Maintainers: Angeliki Daskalakis, Angelos Chalaris (chalarangelo@gmail.com)
+	mini.css version: v2.1.1 (Fermion)
 */
 // Google Fonts imports and usage
 @import url('https://fonts.googleapis.com/css?family=Cousine:400,400i,700|Libre+Baskerville:400,400i,700&subset=latin-ext');
@@ -479,57 +480,52 @@ $spinner-donut-style1-name:						'large';			// Class name for donut spinner styl
 $spinner-donut-style1-size:						32px;					// Size for donut spinner style 1
 $spinner-donut-style1-border-thickness:	6px;				// Border thickness for donut spinner style 1
 //	Variables for utilities and helper classes
-$hidden-name:					'hidden';										// Class name for hidden elements
-$visually-hidden-name:			'visually-hidden';								// Class name for visually hidden elements
-$breadcrumbs-name:				'breadcrumbs';									// Class name for breadcrumbs
-$breadcrumbs-back-color:		#e8deff;										// Background color for breadcrumbs
-$breadcrumbs-margin:			12px 10px;										// Margin for breadcrumbs
-$breadcrumbs-height:			32px;											// Height of the breadcrumbs
-$breadcrumbs-separator-width:	3px;											// Width of the breadcrumbs' separator
-$breadcrumbs-border-style:		1px solid #a9a2ba;								// Border style for breadcrumbs
-$breadcrumbs-border-radius:		4px;											// Border radius for breadcrumbs
+$hidden-name:									'hidden';							// Class name for hidden elements
+$visually-hidden-name:				'visually-hidden';		// Class name for visually hidden elements
+$breadcrumbs-name:						'breadcrumbs';				// Class name for breadcrumbs
+$breadcrumbs-back-color:			#e8deff;							// Background color for breadcrumbs
+$breadcrumbs-margin:					12px 10px;						// Margin for breadcrumbs
+$breadcrumbs-height:					32px;									// Height of the breadcrumbs
+$breadcrumbs-separator-width:	3px;									// Width of the breadcrumbs' separator
+$breadcrumbs-border-style:		1px solid #a9a2ba;		// Border style for breadcrumbs
+$breadcrumbs-border-radius:		4px;									// Border radius for breadcrumbs
 $breadcrumbs-box-shadow:														// Box shadow for breadcrumbs
 	0 1px 3px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.15);
-$close-icon-name:				'close';										// Class name for close icon
-$close-icon-size:				32px;											// Size of the close icon
-$close-icon-back-color:			#e8deff;										// Background color for the close icon
-$close-icon-fore-color:			#211423;										// Foreground color for the close icon
-$border-generic-name:			'bordered';										// Class name for generic border style
-$border-radial-style1-name:		'rounded';										// Class name for radial border style 1
-$border-radial-style1-radius:	4px;											// Border radius for radial border style 1
-$border-radial-style2-name:		'circular';										// Class name for radial border style 2
-$border-radial-style2-radius:	50%;											// Border radius for radial border style 2
-$box-shadow-style1-name:		'shadow-none';									// Class name for generic box-shadow style 1
-$box-shadow-style1-value:		none;											// Box shadow value for generic box-shadow style 1
-$box-shadow-style2-name:		'shadow-small';									// Class name for generic box-shadow style 2
+$close-icon-name:							'close';							// Class name for close icon
+$close-icon-size:							32px;									// Size of the close icon
+$close-icon-back-color:				#e8deff;							// Background color for the close icon
+$close-icon-fore-color:				#211423;							// Foreground color for the close icon
+$border-generic-name:					'bordered';						// Class name for generic border style
+$border-radial-style1-name:		'rounded';						// Class name for radial border style 1
+$border-radial-style1-radius:	4px;									// Border radius for radial border style 1
+$border-radial-style2-name:		'circular';						// Class name for radial border style 2
+$border-radial-style2-radius:	50%;									// Border radius for radial border style 2
+$box-shadow-style1-name:			'shadow-none';				// Class name for generic box-shadow style 1
+$box-shadow-style1-value:			none;									// Box shadow value for generic box-shadow style 1
+$box-shadow-style2-name:			'shadow-small';				// Class name for generic box-shadow style 2
 $box-shadow-style2-value:														// Box shadow value for generic box-shadow style 2
 	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
-$box-shadow-style3-name:		'shadow-medium';								// Class name for generic box-shadow style 3
+$box-shadow-style3-name:			'shadow-medium';			// Class name for generic box-shadow style 3
 $box-shadow-style3-value:														// Box shadow value for generic box-shadow style 3
 	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
-$box-shadow-style4-name:		'shadow-large';									// Class name for generic box-shadow style 4
+$box-shadow-style4-name:			'shadow-large';				// Class name for generic box-shadow style 4
 $box-shadow-style4-value:														// Box shadow value for generic box-shadow style 4
 	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
-$responsive-margin-name:		'responsive-margin';							// Class name for responsive margin
-$responsive-margin-medium-breakpoint:											// Medium screen breakpoint for responsive margin
-								$grid-medium-breakpoint;
-$responsive-margin-large-breakpoint:											// Large screen breakpoint for responsive margin
-								$grid-large-breakpoint;
-$responsive-margin-small-value:	3px;											// Margin value for responsive margin on small screens
-$responsive-margin-medium-value:6px;											// Margin value for responsive margin on medium screens
-$responsive-margin-large-value:	10px;											// Margin value for responsive margin on large screens
-$responsive-padding-name:		'responsive-padding';							// Class name for responsive padding
-$responsive-padding-medium-breakpoint:											// Medium screen breakpoint for responsive padding
-								$grid-medium-breakpoint;
-$responsive-padding-large-breakpoint:											// Large screen breakpoint for responsive padding
-								$grid-large-breakpoint;
-$responsive-padding-small-value:2px 3px;										// Padding value for responsive padding on small screens
-$responsive-padding-medium-value:												// Padding value for responsive padding on medium screens
-								4px 6px;
-$responsive-padding-large-value:8px 10px;										// Padding value for responsive padding on large screens
-$include-floats:				false;											// Should floats be included? (`true`/`false`) [1]
-$include-clearfix:				false;											// Should clearfix be included? (`true`/`false`) [2]
-$include-center-block-name:		false;											// Should center block be included? (`true`/`false`) [3]
+$responsive-margin-name:			'responsive-margin';	// Class name for responsive margin
+$responsive-margin-medium-breakpoint:	$grid-medium-breakpoint;	// Medium screen breakpoint for responsive margin
+$responsive-margin-large-breakpoint:	$grid-large-breakpoint;		// Large screen breakpoint for responsive margin
+$responsive-margin-small-value:		3px;							// Margin value for responsive margin on small screens
+$responsive-margin-medium-value:	6px;							// Margin value for responsive margin on medium screens
+$responsive-margin-large-value:		10px;							// Margin value for responsive margin on large screens
+$responsive-padding-name:	'responsive-padding';			// Class name for responsive padding
+$responsive-padding-medium-breakpoint:	$grid-medium-breakpoint;	// Medium screen breakpoint for responsive padding
+$responsive-padding-large-breakpoint:		$grid-large-breakpoint;		// Large screen breakpoint for responsive padding
+$responsive-padding-small-value:	2px 3px;					// Padding value for responsive padding on small screens
+$responsive-padding-medium-value:	4px 6px;					// Padding value for responsive padding on medium screens
+$responsive-padding-large-value:	8px 10px;					// Padding value for responsive padding on large screens
+$include-floats:							false;								// Should floats be included? (`true`/`false`) [1]
+$include-clearfix:						false;								// Should clearfix be included? (`true`/`false`) [2]
+$include-center-block-name:		false;								// Should center block be included? (`true`/`false`) [3]
 // 	Notes:
 // [1] - If the value of $include-floats is `true`, float classes will be created using the value of $float-prefix to determine the class
 //	names that will be used.

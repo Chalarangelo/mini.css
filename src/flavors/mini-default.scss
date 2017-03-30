@@ -447,49 +447,42 @@ $tooltip-bottom-name:				'bottom';								// Class name for bottom tooltip
 //	for the tooltip, as explained in their descriptions. Tooltip mixins will only work properly if the tooltip component is
 //	included.
 //	Variables for progress elements and spinners
-$progress-back-color:			#eeeeee;										// Background color for <progress>
-$progress-fore-color:			#01579b;										// Progress bar color for <progress>
-$progress-height:				14px;											// Height of <progress>
-$progress-max-value:			1000;											// Arithmetic max value of <progress>
-$progress-border-style:			0;												// Border style for <progress>
-$progress-border-radius:		1px;											// Border radius for the <progress> container
-$progress-top-bottom-margin:	2px;											// Top and bottom margin for <progress>
-$progress-left-right-margin:	8px;											// Left and right margin for <progress>
-$progress-box-shadow:															// Box shadow for <progress>
+$progress-back-color:					#eeeeee;							// Background color for <progress>
+$progress-fore-color:					#01579b;							// Progress bar color for <progress>
+$progress-height:							14px;									// Height of <progress>
+$progress-max-value:					1000;									// Arithmetic max value of <progress>
+$progress-border-style:				0;										// Border style for <progress>
+$progress-border-radius:			1px;									// Border radius for the <progress> container
+$progress-top-bottom-margin:	2px;									// Top and bottom margin for <progress>
+$progress-left-right-margin:	8px;									// Left and right margin for <progress>
+$progress-box-shadow:																// Box shadow for <progress>
 	0 0.5px 1px rgba(0,0,0, 0.1), 0 0.5px 0.5px rgba(0, 0, 0, 0.15);
-$progress-inline-name:			'inline';										// Class name for inline <progress>
-$progress-inline-width:			60%;											// Width for inline <progress>
-$progress-variant1-name:		'secondary';									// Class name for <progress> variant 1
-$progress-variant1-fore-color:	#e53935;										// Progress bar color for <progress> variant 1
-$progress-variant2-name:		'tertiary';										// Class name for <progress> variant 2
-$progress-variant2-fore-color:	#689f38;										// Progress bar color for <progress> variant 2
-$progress-style1-name:			'nano';											// Class name for <progress> style 1
-$progress-style1-height:		2px;											// Height for <progress> style 1
-$progress-style1-top-bottom-margin:												// Top and bottom margin for <progress> style 1
-								0;
-$progress-style1-left-right-margin:												// Left and right margin for <progress> style 1
-								0;
-$progress-style1-border-style:	0;												// Border style for <progress> style 1
-$progress-style1-border-radius:	0;												// Border radius for <progress> style 1
-$spinner-donut-name:			'spinner-donut';								// Class name for donut spinner
-$spinner-donut-border-thickness:4px;											// Border thickness for donut spinner
-$spinner-donut-back-color:		#e3f2fd;										// Background color for donut spinner
-$spinner-donut-fore-color:		#1565c0;										// Foreground color for donut spinner
-$spinner-donut-size:			20px;											// Size for donut spinner
-$spinner-donut-variant1-name:	'secondary';									// Class name for donut spinner variant 1
-$spinner-donut-variant1-back-color:												// Background color for donut spinner variant 1
-								#ffebee;
-$spinner-donut-variant1-fore-color:												// Foreground color for donut spinner variant 1
-								#c62828;
-$spinner-donut-variant2-name:	'tertiary';										// Class name for donut spinner variant 2
-$spinner-donut-variant2-back-color:												// Background color for donut spinner variant 2
-								#e8f5e9;
-$spinner-donut-variant2-fore-color:												// Foreground color for donut spinner variant 2
-								#2e7d32;
-$spinner-donut-style1-name:		'large';										// Class name for donut spinner style 1
-$spinner-donut-style1-size:		32px;											// Size for donut spinner style 1
-$spinner-donut-style1-border-thickness:											// Border thickness for donut spinner style 1
-								6px;
+$progress-inline-name:				'inline';							// Class name for inline <progress>
+$progress-inline-width:				60%;									// Width for inline <progress>
+$progress-variant1-name:			'secondary';					// Class name for <progress> variant 1
+$progress-variant1-fore-color:#e53935;							// Progress bar color for <progress> variant 1
+$progress-variant2-name:			'tertiary';						// Class name for <progress> variant 2
+$progress-variant2-fore-color:#689f38;							// Progress bar color for <progress> variant 2
+$progress-style1-name:				'nano';								// Class name for <progress> style 1
+$progress-style1-height:			2px;									// Height for <progress> style 1
+$progress-style1-top-bottom-margin:	0;							// Top and bottom margin for <progress> style 1
+$progress-style1-left-right-margin:	0;							// Left and right margin for <progress> style 1
+$progress-style1-border-style:			0;							// Border style for <progress> style 1
+$progress-style1-border-radius:			0;							// Border radius for <progress> style 1
+$spinner-donut-name:			'spinner-donut';					// Class name for donut spinner
+$spinner-donut-border-thickness:		4px;						// Border thickness for donut spinner
+$spinner-donut-back-color:					#e3f2fd;				// Background color for donut spinner
+$spinner-donut-fore-color:					#1565c0;				// Foreground color for donut spinner
+$spinner-donut-size:								20px;						// Size for donut spinner
+$spinner-donut-variant1-name:				'secondary';		// Class name for donut spinner variant 1
+$spinner-donut-variant1-back-color:	#ffebee;				// Background color for donut spinner variant 1
+$spinner-donut-variant1-fore-color:	#c62828;				// Foreground color for donut spinner variant 1
+$spinner-donut-variant2-name:				'tertiary';			// Class name for donut spinner variant 2
+$spinner-donut-variant2-back-color:	#e8f5e9;				// Background color for donut spinner variant 2
+$spinner-donut-variant2-fore-color:	#2e7d32;				// Foreground color for donut spinner variant 2
+$spinner-donut-style1-name:					'large';				// Class name for donut spinner style 1
+$spinner-donut-style1-size:					32px;						// Size for donut spinner style 1
+$spinner-donut-style1-border-thickness:	6px;				// Border thickness for donut spinner style 1
 //	Variables for utilities and helper classes
 $hidden-name:					'hidden';										// Class name for hidden elements
 $visually-hidden-name:			'visually-hidden';								// Class name for visually hidden elements

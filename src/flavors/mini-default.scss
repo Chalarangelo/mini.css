@@ -327,41 +327,40 @@ $table-striped-alt-body-back-color:		#eeeeee;			// Alternate background color fo
 // [2] - If $include-horizontal-table is `true`, then the <table> horizontal biew will be included in a class defined by
 //	$table-horizontal-name and a breakpoint defined in $table-horizontal-breakpoint.
 //	Variables for cards [1]
-$card-name:						'card';											// Class name for cards
+$card-name:							'card';											// Class name for cards
 $card-back-color:				#fafafa;										// Background color for cards
-$card-fore-color:				$fore-color;									// Text color for cards
-$card-border-style:				1px solid #9e9e9e;								// Border style for cards
-$card-border-radius:			0;												// Border radius for cards
-$card-margin:					2px 10px 20px;									// Margin for cards
-$card-box-shadow:																// Box shadow for cards
+$card-fore-color:				$fore-color;								// Text color for cards
+$card-border-style:			1px solid #9e9e9e;					// Border style for cards
+$card-border-radius:		0;													// Border radius for cards
+$card-margin:						2px 10px 20px;							// Margin for cards
+$card-box-shadow:																		// Box shadow for cards
 	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
-$card-section-name:				'section';										// Class name for card sections
-$card-section-border-style:		1px solid #bdbdbd;								// Border style for card sections
-$card-section-padding:			6px 8px 6px;									// Padding for card sections
-$card-section-media-name:		'media';										// Class name for card media sections
-$card-section-media-height:		200px;											// Height for card media setions
-$card-normal-width:				320px;											// Width for normal cards
-$card-size1-name:				'large';										// Class name for large cards
-$card-size1-width:				480px;											// Width for large cards
-$card-size2-name:				'small';										// Class name for small cards
-$card-size2-width:				240px;											// Width for small cards
-$card-size3-name:				'fluid';										// Class name for fluid cards
-$card-size3-width:				100%;											// Width for fluid cards
-$card-style1-name:				'inverse';										// Class name for card style 1
-$card-style1-back-color:		$fore-color;									// Background color for card style 1
-$card-style1-fore-color:		#fafafa;										// Text color for card style 1
-$card-style1-border-style:		1px solid #424242;								// Border style for card style 1
-$card-style1-border-radius:		0;												// Border radius for card style 1
-$card-style1-section-border-style:												// Border style for card style 1 sections
-								1px solid #616161;
-$card-section-style1-name:		'dark';											// Class name for card section style 1
-$card-section-style1-back-color:#e0e0e0;										// Background color for card section style 1
-$card-section-style1-fore-color:$fore-color;									// Text color for card section style 1
-$card-section-style2-name:		'darker';										// Class name for card section style 2
-$card-section-style2-back-color:#bdbdbd;										// Background color for card section style 2
-$card-section-style2-fore-color:$fore-color;									// Text color for card section style 2
-$card-section-padding1-name:	'double-padded';								// Class name for card section padding style 1
-$card-section-padding1-padding:	10px 12px 10px;									// Padding for card section padding style 1
+$card-section-name:						'section';						// Class name for card sections
+$card-section-border-style:		1px solid #bdbdbd;		// Border style for card sections
+$card-section-padding:				6px 8px 6px;					// Padding for card sections
+$card-section-media-name:			'media';							// Class name for card media sections
+$card-section-media-height:		200px;								// Height for card media setions
+$card-normal-width:						320px;								// Width for normal cards
+$card-size1-name:							'large';							// Class name for large cards
+$card-size1-width:						480px;								// Width for large cards
+$card-size2-name:							'small';							// Class name for small cards
+$card-size2-width:						240px;								// Width for small cards
+$card-size3-name:							'fluid';							// Class name for fluid cards
+$card-size3-width:						100%;									// Width for fluid cards
+$card-style1-name:						'inverse';						// Class name for card style 1
+$card-style1-back-color:			$fore-color;					// Background color for card style 1
+$card-style1-fore-color:			#fafafa;							// Text color for card style 1
+$card-style1-border-style:		1px solid #424242;		// Border style for card style 1
+$card-style1-border-radius:		0;										// Border radius for card style 1
+$card-style1-section-border-style:1px solid #616161;// Border style for card style 1 sections
+$card-section-style1-name:				'dark';						// Class name for card section style 1
+$card-section-style1-back-color:	#e0e0e0;					// Background color for card section style 1
+$card-section-style1-fore-color:	$fore-color;			// Text color for card section style 1
+$card-section-style2-name:			'darker';						// Class name for card section style 2
+$card-section-style2-back-color:#bdbdbd;						// Background color for card section style 2
+$card-section-style2-fore-color:$fore-color;				// Text color for card section style 2
+$card-section-padding1-name:		'double-padded';		// Class name for card section padding style 1
+$card-section-padding1-padding:	10px 12px 10px;			// Padding for card section padding style 1
 //	Notes:
 // [1] - The cards module depends heavily on the grid system module.
 //	Variables for tabs

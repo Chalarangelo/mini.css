@@ -902,3 +902,4 @@
 - *TODO* Make class naming rules more consistent in module defaults - meaning add all class naming defaults to the very top of all modules, saving time and space when simplified flavors kick in.
 - Updated `table` module's definitions and variables, added **hidden flag** `$include-striped-table` in order to make sure `.striped` `table`s can be turned on and off.
 - Cleanup of relevant variables and comments in flavor files.
+- Updated `card` module, splitting into main file and mixins, cleanup in flavor files for the module.

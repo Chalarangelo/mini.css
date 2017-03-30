@@ -99,6 +99,8 @@ $link-font-weight:				500;											// Font weight for <a>
 $apply-link-underline:		true;											// Should an underline be applied to all <a> elements? (`true`/`false`) [10]
 $apply-link-hover-fade:		true;											// Should the :hover and :focus state of <a> elements use fade-out instead of a different color (`true`/`false`) [11]
 //$link-hover-fore-color:	#0288d1;									// Text color for <a> when hovered or focused
+$figcaption-font-size:		80%;											// Font size of <figcaption> elements
+$figcaption-fore-color:		#424242;									// Text color for <figcaption> elements
 //	Notes:
 // [1] - The value $base-root-font-size should be in `px` only! This rule is very important, as it will determine the root
 //	element's font sizing.

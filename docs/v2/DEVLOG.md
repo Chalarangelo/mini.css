@@ -910,3 +910,4 @@
 - Flavor cleanup for `progress` module's updates.
 - Updated `utility` module, added proper **hidden flags** to `$include-breadcrumbs` and `$include-close-icon` to make it easier to disable those components.
 - Cleanup in both flavor files is now complete, added maintainers to the `mini-sucroa` file to meake it easier for people to reach the team behind it.
+- Added simple styling for `figcaption` element in `core`, updated both flavors with the required variables to make it usable.

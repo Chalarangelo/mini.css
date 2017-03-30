@@ -58,9 +58,10 @@ summary {
 	display: list-item;
 }
 
+// Abbreviations
 abbr[title] {
-	border-bottom: none; // Remove bottom border in Firefox 39-.
-	text-decoration: underline; // Opinionated style-fix for all browsers.
+	border-bottom: none; 					// Remove bottom border in Firefox 39-.
+	text-decoration: underline; 	// Opinionated style-fix for all browsers.
 }
 
 // Correct display for older versions of IE.
@@ -387,6 +388,7 @@ $style-samp-element: false !default;
 	}
 }
 
+// Link styling
 a{
 	color: $link-fore-color;
 	@if $apply-link-underline {
@@ -415,5 +417,15 @@ a{
 		&:hover, &:focus, &:active {
 			color: $link-hover-fore-color;
 		}
+	}
+}
+
+// Captions for figures
+figcaption {
+	@if $figcaption-font-size != 100% {
+		font-size: $figcaption-font-size;
+	}
+	@if $figcaption-fore-color != $fore-color {
+		color: $figcaption-fore-color;
 	}
 }

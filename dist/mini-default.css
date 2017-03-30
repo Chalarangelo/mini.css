@@ -165,6 +165,10 @@ a {
   a:hover, a:focus, a:active {
     opacity: 0.75; }
 
+figcaption {
+  font-size: 80%;
+  color: #424242; }
+
 /*
 	Definitions for the grid system.
 */

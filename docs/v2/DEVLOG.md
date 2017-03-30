@@ -889,3 +889,8 @@
 - Started code cleanup and updating.
 - Updated `core` by moving all of the variable definitions and defaults at the top of the module's file.
 - Updated both flavor files to deal with the indentation and column problems (only for the `core` module so far). Readability is a lot better, but consistency is a little bit worse. For all intents and purposes, this is the way to go for this release, as the previous styling was impossible to read for the most part in many setups.
+
+## 20170330
+
+- Updated `grid` by moving variable definitions and defaults to the top of the module.
+- Updated flavor files, dealing with indentation and readability.

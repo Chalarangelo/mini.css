@@ -134,28 +134,26 @@ $apply-link-hover-fade:		true;											// Should the :hover and :focus state o
 // [11] - If `$apply-link-hover-fade` is set to `true`, a fading transition will be used for the link when hovered over or
 //	focused. Otherwise, the color specified in $link-hover-fore-color will be used.
 //	Variables for grid elements
-$use-four-step-grid:			false;											// Should the old 4-step grid system be used
-																				// instead of the new (`true`/`false`) [1]
-$include-parent-layout:			true !default;									// Should the classes for rows defining the column
-																				// layout of children be included (`true`/`false`) [2]
-$grid-container-name:			'container';									// Class name for the grid container
-$grid-container-side-padding:	10px;											// Padding for the grid container (left and right only)
-$grid-row-name:					'row';											// Class name for the grid's rows
-$grid-row-parent-layout-prefix:	'cols';											// Class name prefix for the grid's row parents [2]
-$grid-column-prefix:			'col';											// Class name prefix for the grid's columns
-$grid-column-offset-suffix:		'offset';										// Class name suffix for the grid's offsets
-$grid-order-normal-suffix:		'normal';										// Class name suffix for grid columns with normal priority
-$grid-order-first-suffix:		'first';										// Class name suffix for grid columns with highest priority
-$grid-order-last-suffix:		'last';											// Class name suffix for grid columns with lowest priorty
-$grid-column-count:				12;												// Number of columns in the grid (integer value only)
-$grid-column-padding:			0 4px;											// Padding for the columns of the grid
-//$grid-extra-small-prefix:		'xs';											// Extra small screen class prefix for grid
-//$grid-small-breakpoint:		480px;											// Small screen breakpoint for grid
-$grid-small-prefix:				'sm';											// Small screen class prefix for grid
-$grid-medium-breakpoint:		768px;											// Medium screen breakpoint for grid
-$grid-medium-prefix:			'md';											// Medium screen class prefix for grid
-$grid-large-breakpoint:			1280px;											// Large screen breakpoint for grid
-$grid-large-prefix:				'lg';											// Large screen class prefix for grid
+$use-four-step-grid:			false;										// Should the old 4-step grid system be used
+																										// instead of the new (`true`/`false`) [1]
+$include-parent-layout:		true;											// Should the classes for rows defining the column
+																										// layout of children be included (`true`/`false`) [2]
+$grid-container-name:			'container';							// Class name for the grid container
+$grid-container-side-padding:	10px;									// Padding for the grid container (left and right only)
+$grid-row-name:								'row';								// Class name for the grid's rows
+$grid-row-parent-layout-prefix:	'cols';							// Class name prefix for the grid's row parents [2]
+$grid-column-prefix:					'col';								// Class name prefix for the grid's columns
+$grid-column-offset-suffix:		'offset';							// Class name suffix for the grid's offsets
+$grid-order-normal-suffix:		'normal';							// Class name suffix for grid columns with normal priority
+$grid-order-first-suffix:			'first';							// Class name suffix for grid columns with highest priority
+$grid-order-last-suffix:			'last';								// Class name suffix for grid columns with lowest priorty
+$grid-column-count:						12;										// Number of columns in the grid (integer value only)
+$grid-column-padding:					0 4px;								// Padding for the columns of the grid
+$grid-small-prefix:						'sm';									// Small screen class prefix for grid
+$grid-medium-breakpoint:			768px;								// Medium screen breakpoint for grid
+$grid-medium-prefix:					'md';									// Medium screen class prefix for grid
+$grid-large-breakpoint:				1280px;								// Large screen breakpoint for grid
+$grid-large-prefix:						'lg';									// Large screen class prefix for grid
 //	Notes:
 // [1] - If the value of $use-four-step-grid is `true`, the grid system will contain 4 breakpoints instead of 3, along with
 //	the needed styles. In this case, values should be specified for $grid-extra-small-prefix and $grid-small-breakpoint.

@@ -903,3 +903,4 @@
 - Updated `table` module's definitions and variables, added **hidden flag** `$include-striped-table` in order to make sure `.striped` `table`s can be turned on and off.
 - Cleanup of relevant variables and comments in flavor files.
 - Updated `card` module, splitting into main file and mixins, cleanup in flavor files for the module.
+- Updated `tab` module, adding an extra **hidden flag** `$include-stacked-tabs` for toggling `.stacked` tabs on and off, cleanup of flavor files.

@@ -364,24 +364,24 @@ $card-section-padding1-padding:	10px 12px 10px;			// Padding for card section pa
 //	Notes:
 // [1] - The cards module depends heavily on the grid system module.
 //	Variables for tabs
-$tab-container-name:			'tabs';											// Class name for the tabs' container
-$tab-container-box-shadow:														// Box shadow for the tabs' container
+$tab-container-name:						'tabs';							// Class name for the tabs' container
+$tab-container-box-shadow:													// Box shadow for the tabs' container
 	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
-$tab-label-back-color:			#e0e0e0;										// Background color for tabs' labels
-$tab-label-fore-color:			$fore-color;									// Text color for tabs' labels
-$tab-label-selected-back-color:	#eeeeee;										// Background color for open tab's label
-$tab-label-selected-fore-color:	$fore-color;									// Text color for open tab's label
-$tab-label-hover-opacity:		0.8;											// Opacity of the tab's label on hover
-$tab-label-padding:				8px 12px;										// Padding for tabs' labels
-$tab-label-height:				26px;											// Height for tabs' labels
-$tab-border-style:				1px solid #9e9e9e;								// Border style for tabs
-$tab-border-radius:				0;												// Border radius for tabs
-$tab-panel-back-color:			#fafafa;										// Background color for tabs' panels
-$tab-panel-fore-color:			$fore-color;									// Text color for tabs' panels
-$tab-panel-padding:				8px;											// Padding for tabs' panels
-$tab-panel-height:				400px;											// Height for tabs' panels
-$tab-stacked-breakpoint:		767px;											// Breakpoint for tabs layout (stacked/horizontal)
-$tab-stacked-name:				'stacked';										// Class name for stacked tabs
+$tab-label-back-color:					#e0e0e0;						// Background color for tabs' labels
+$tab-label-fore-color:					$fore-color;				// Text color for tabs' labels
+$tab-label-selected-back-color:	#eeeeee;						// Background color for open tab's label
+$tab-label-selected-fore-color:	$fore-color;				// Text color for open tab's label
+$tab-label-hover-opacity:				0.8;								// Opacity of the tab's label on hover
+$tab-label-padding:							8px 12px;						// Padding for tabs' labels
+$tab-label-height:							26px;								// Height for tabs' labels
+$tab-border-style:							1px solid #9e9e9e;	// Border style for tabs
+$tab-border-radius:							0;									// Border radius for tabs
+$tab-panel-back-color:					#fafafa;						// Background color for tabs' panels
+$tab-panel-fore-color:					$fore-color;				// Text color for tabs' panels
+$tab-panel-padding:							8px;								// Padding for tabs' panels
+$tab-panel-height:							400px;							// Height for tabs' panels
+$tab-stacked-breakpoint:				767px;							// Breakpoint for tabs layout (stacked/horizontal)
+$tab-stacked-name:							'stacked';					// Class name for stacked tabs
 //	Variables for contextual background elements and alerts
 $mark-back-color:				#0277bd;										// Background color for <mark>
 $mark-fore-color:				#fafafa;										// Text color for <mark>

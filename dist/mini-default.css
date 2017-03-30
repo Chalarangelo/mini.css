@@ -1243,8 +1243,8 @@ table.striped tr:nth-of-type(2n) > td {
 .card > .section.double-padded {
   padding: 10px 12px 10px; }
 
-/* 
-	Definitions for tabs/horizontal accordions. 
+/*
+	Definitions for tabs/horizontal accordions.
 */
 .tabs {
   width: 100%;
@@ -1294,8 +1294,8 @@ table.striped tr:nth-of-type(2n) > td {
     transform: scaleY(0);
     -webkit-transform-origin: top;
     transform-origin: top;
-    -webkit-transition: -webkit-transform 0.3s ease 0s,  transform 0.3s ease 0s;
-    transition: -webkit-transform 0.3s ease 0s,  transform 0.3s ease 0s; }
+    -webkit-transition: -webkit-transform 0.3s ease 0s, transform 0.3s ease 0s;
+    transition: -webkit-transform 0.3s ease 0s, transform 0.3s ease 0s; }
     .tabs > [type="radio"] + label + div + [type="radio"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="radio"] + label {
       border-left: 0; }
   .tabs.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {

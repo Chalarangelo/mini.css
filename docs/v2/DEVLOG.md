@@ -900,3 +900,5 @@
 - Updated `input_control`, splitting into main file and mixins file. Added **hidden flag** `$hide-check-and-radio` and standardized existing one (`$input-high-specificity-selectors`).
 - Cleanup and housekeeping for readability in flavor files for updated `input_control`.
 - *TODO* Make class naming rules more consistent in module defaults - meaning add all class naming defaults to the very top of all modules, saving time and space when simplified flavors kick in.
+- Updated `table` module's definitions and variables, added **hidden flag** `$include-striped-table` in order to make sure `.striped` `table`s can be turned on and off.
+- Cleanup of relevant variables and comments in flavor files.

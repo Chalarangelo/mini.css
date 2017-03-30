@@ -266,25 +266,25 @@ $button-variant4-name:								'inverse';		// Class name for button variant 4
 $button-variant4-back-color:					#331e36;			// Background color for button variant 4
 $button-variant4-back-opacity:				1;						// Background opacity for button variant 4
 $button-variant4-hover-back-opacity:	0.75;					// Background opacity for button variant 4 on hover or focus
-$button-variant4-fore-color:					#fffddc;		// Text color for button variant 4
-$button-style1-name:						'small';					// Class name for button style 1
-$button-style1-border-style:		0;								// Border style for button style 1
-$button-style1-border-radius:		2px;							// Border radius for button style 1
-$button-style1-padding:					4px 6px;					// Padding for button style 1
-$button-style1-margin:					6px 8px;					// Margin for button style 1
-$button-style2-name:						'large';					// Class name for button style 2
-$button-style2-border-style:		0;								// Border style for button style 2
-$button-style2-border-radius:		4px;							// Border radius for button style 2
-$button-style2-padding:					12px 18px;				// Padding for button style 2
-$button-style2-margin:					10px 8px;					// Margin for button style 2
-$checkbox-size:									16px;							// Size for checkbox/radio [2]
-$checkbox-back-color:						$input-back-color;// Background clor for checkbox/radio
-$checkbox-fore-color:						$input-fore-color;// Text/mark color for checkbox/radio
-$checkbox-border-thickness:			1px;							// Border thickness for checkbox/radio
-$checkbox-border-color:					#a9a2ba;					// Border color for checkbox/radio
-$checkbox-border-radius:		$input-border-radius;	// Border radius for checkbox/radio
+$button-variant4-fore-color:					#fffddc;			// Text color for button variant 4
+$button-style1-name:						'small';						// Class name for button style 1
+$button-style1-border-style:		0;									// Border style for button style 1
+$button-style1-border-radius:		2px;								// Border radius for button style 1
+$button-style1-padding:					4px 6px;						// Padding for button style 1
+$button-style1-margin:					6px 8px;						// Margin for button style 1
+$button-style2-name:						'large';						// Class name for button style 2
+$button-style2-border-style:		0;									// Border style for button style 2
+$button-style2-border-radius:		4px;								// Border radius for button style 2
+$button-style2-padding:					12px 18px;					// Padding for button style 2
+$button-style2-margin:					10px 8px;						// Margin for button style 2
+$checkbox-size:									16px;								// Size for checkbox/radio [2]
+$checkbox-back-color:						$input-back-color;	// Background clor for checkbox/radio
+$checkbox-fore-color:						$input-fore-color;	// Text/mark color for checkbox/radio
+$checkbox-border-thickness:			1px;								// Border thickness for checkbox/radio
+$checkbox-border-color:					#a9a2ba;						// Border color for checkbox/radio
+$checkbox-border-radius:		$input-border-radius;		// Border radius for checkbox/radio
 $checkbox-focus-border-color: 	$input-focus-border-color;	// Border color for checkbox/radio on focus
-$checkbox-bottom-spacing:				3px;							// Bottom spacing for checkbox/radio
+$checkbox-bottom-spacing:				3px;								// Bottom spacing for checkbox/radio
 $checkbox-disabled-opacity:			$input-disabled-opacity;		// Opacity for disabled checkbox/radio
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values
@@ -295,34 +295,31 @@ $checkbox-disabled-opacity:			$input-disabled-opacity;		// Opacity for disabled 
 //	If the value is `false`, some fixes will be applied to the <input type="file"> element.
 // [3] - The value of $checkbox-size will determine a few variables like some `margin` values, `height`, `width` etc.
 //	Variables for responsive tables
-$table-border-style:			1px solid #a9a2ba;								// Border style for <table> and children
+$table-border-style:			1px solid #a9a2ba;				// Border style for <table> and children
 $table-border-radius:			2px;											// Border radius for <table> and children
-$table-margin:					0 auto;											// Margin for <table>
-$table-box-shadow:																// Box shadow for <table>
+$table-margin:						0 auto;										// Margin for <table>
+$table-box-shadow:																	// Box shadow for <table>
 	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
-$table-caption-font-size:		1.5em;											// Font size for <caption>
-$table-caption-margin:			6px 10px 12px;									// Margin for <caption>
-$table-row-padding:				10x;											// Padding for <tr> - both views
-$table-column-padding:			10px;											// Padding for <td> and <th> - desktop view
-$table-head-back-color:			#d3cae8;										// Background color for <th>
-$table-head-fore-color:			$fore-color;									// Tex color for <th>
-$table-body-back-color:			#f2edff;										// Background color for <td>
-$table-body-fore-color:			$fore-color;									// Text color for <td>
-$table-mobile-breakpoint:		767px;											// Breakpoint for <table> mobile view
-$table-mobile-card-spacing:		12px;											// Space between <tr> cards - mobile view
-$table-mobile-card-label:		'data-label';									// Attribute used to replace column headers
-																				// in mobile view [1]
-$table-mobile-label-font-weight:$bold-font-weight;								// Font weight for mobile headers
-$include-horizontal-table:		false;											// Should horizontal <table> elements be
-																				// included? (`true`/`false`) [2]
-$table-not-responsive-name:		'preset';										// Class name for <table> non-responsive view
-$table-striped-name:			'striped';										// Class name for striped <table>
-$table-striped-alt-body-back-color:												// Alternate background color for <td> in
-								#ece4ff;										// striped <table>
+$table-caption-font-size:		1.5em;									// Font size for <caption>
+$table-caption-margin:			6px 10px 12px;					// Margin for <caption>
+$table-row-padding:					10x;										// Padding for <tr> - both views
+$table-column-padding:			10px;										// Padding for <td> and <th> - desktop view
+$table-head-back-color:			#d3cae8;								// Background color for <th>
+$table-head-fore-color:			$fore-color;						// Tex color for <th>
+$table-body-back-color:			#f2edff;								// Background color for <td>
+$table-body-fore-color:			$fore-color;						// Text color for <td>
+$table-mobile-breakpoint:		767px;									// Breakpoint for <table> mobile view
+$table-mobile-card-spacing:	12px;										// Space between <tr> cards - mobile view
+$table-mobile-card-label:		'data-label';						// Attribute used to replace column headers in mobile view [1]
+$table-mobile-label-font-weight:$bold-font-weight;	// Font weight for mobile headers
+$include-horizontal-table:	false;									// Should horizontal <table> elements be included? (`true`/`false`) [2]
+$table-not-responsive-name:	'preset';								// Class name for <table> non-responsive view
+$table-striped-name:				'striped';							// Class name for striped <table>
+$table-striped-alt-body-back-color:	#ece4ff;				// Alternate background color for <td> in striped <table>
 //	Notes:
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly.
-// [2] - If $include-horizontal-table is `true`, then the <table> horizontal biew will be included in a class defined by
+// [2] - If $include-horizontal-table is `true`, then the <table> horizontal view will be included in a class defined by
 //	$table-horizontal-name and a breakpoint defined in $table-horizontal-breakpoint.
 //	Variables for cards [1]
 $card-name:						'card';											// Class name for cards

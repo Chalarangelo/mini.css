@@ -380,63 +380,61 @@ $tab-stacked-name:							'stacked';					// Class name for stacked tabs
 //	Variables for contextual background elements and alerts
 $mark-back-color:				#6979c6;										// Background color for <mark>
 $mark-fore-color:				#fffddc;										// Text color for <mark>
-$mark-font-size:				95%;											// Font size for <mark>
-$mark-line-height:				1;												// Line height for <mark>
-$mark-border-style:				0;												// Border style for <mark>
-$mark-border-radius:			2px;											// Border radius for <mark>
+$mark-font-size:				95%;												// Font size for <mark>
+$mark-line-height:			1;													// Line height for <mark>
+$mark-border-style:			0;													// Border style for <mark>
+$mark-border-radius:		2px;												// Border radius for <mark>
 $mark-padding:					3px 5px;										// Padding for <mark>
-$mark-margin:					0;												// Margin for <mark>
-$mark-box-shadow:																// Box shadow for <mark>
+$mark-margin:						0;													// Margin for <mark>
+$mark-box-shadow:																		// Box shadow for <mark>
 	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
-$mark-inline-block-name:		'inline-block';									// Class name for <mark> inline block styling
-$mark-variant1-name:			'secondary';									// Class name for <mark> variant 1
-$mark-variant1-back-color:		#d2405f;										// Background color for <mark> variant 1
-$mark-variant2-name:			'tertiary';										// Class name for <mark> variant 2
-$mark-variant2-back-color:		#2b866d;										// Background color for <mark> variant 2
-$mark-style1-name:				'tag';											// Class name for <mark> style 1
-$mark-style1-border-style:		0;												// Border style for <mark> style 1
-$mark-style1-border-radius:		200px;											// Border radius for <mark> style 1
-$mark-style1-padding:			4px 8px;										// Padding for <mark> style 1
-$mark-style2-name:				'inline-block';									// Class name for <mark> style 2
-$mark-style2-border-style:		0;												// Border style for <mark> style 2
-$mark-style2-border-radius:		2px;											// Border radius for <mark> style 2
-$mark-style2-padding:			5px;											// Padding for <mark> style 2
-$mark-style2-font-size:			100%;											// Font size for <mark> style 2
-$mark-style2-line-height:		1.35;											// Line height for <mark> style 2
-$alert-name:					'alert';										// Class name for alerts
-$alert-back-color:				#e8deff;										// Background color for alerts
-$alert-fore-color:				$fore-color;									// Text color for alerts
-$alert-border-style:			1px solid #a9a2ba;								// Border style for alerts
-$alert-border-radius:			2px;											// Border radius for alerts
-$alert-padding:					12px 16px;										// Padding for alerts
-$alert-margin:					4px 10px;										// Margin for alerts
-$alert-box-shadow:																// Box shadow for alerts
+$mark-inline-block-name:		'inline-block';					// Class name for <mark> inline block styling
+$mark-variant1-name:				'secondary';						// Class name for <mark> variant 1
+$mark-variant1-back-color:	#d2405f;								// Background color for <mark> variant 1
+$mark-variant2-name:				'tertiary';							// Class name for <mark> variant 2
+$mark-variant2-back-color:	#2b866d;								// Background color for <mark> variant 2
+$mark-style1-name:					'tag';									// Class name for <mark> style 1
+$mark-style1-border-style:	0;											// Border style for <mark> style 1
+$mark-style1-border-radius:	200px;									// Border radius for <mark> style 1
+$mark-style1-padding:				4px 8px;								// Padding for <mark> style 1
+$mark-style2-name:					'inline-block';					// Class name for <mark> style 2
+$mark-style2-border-style:	0;											// Border style for <mark> style 2
+$mark-style2-border-radius:	2px;										// Border radius for <mark> style 2
+$mark-style2-padding:				5px;										// Padding for <mark> style 2
+$mark-style2-font-size:			100%;										// Font size for <mark> style 2
+$mark-style2-line-height:		1.35;										// Line height for <mark> style 2
+$alert-name:								'alert';								// Class name for alerts
+$alert-back-color:					#e8deff;								// Background color for alerts
+$alert-fore-color:					$fore-color;						// Text color for alerts
+$alert-border-style:				1px solid #a9a2ba;			// Border style for alerts
+$alert-border-radius:				2px;										// Border radius for alerts
+$alert-padding:							12px 16px;							// Padding for alerts
+$alert-margin:							4px 10px;								// Margin for alerts
+$alert-box-shadow:																	// Box shadow for alerts
 	0 1px 3px rgba(0,0,0, 0.18), 0 1px 2px rgba(0, 0, 0, 0.26);
-$alert-include-animated:		false;											// Should animated alerts be included?
-																				// (`true`/`false`) [1]
-$alert-animated-class:			'animated';										// Class name for animated alerts
-$alert-variant1-name:			'urgent';										// Class name for alert variant 1
-$alert-variant1-back-color:		 #fe9992;										// Background color for alert variant 1
-$alert-variant2-name:			'critical';										// Class name for alert variant 2
-$alert-variant2-back-color:		 #ac354e;										// Background color for alert variant 2
-$alert-variant2-fore-color:		 #fffddc;										// Text color for alert variant 2
-$alert-style1-name:				'urgent';										// Class name for alert style 1
-$alert-style1-border-style:		1px solid #fe6d64;								// Border style for alert style 1
-$alert-style1-border-radius:	$alert-border-radius;							// Border radius for alert style 1
-$alert-style2-name:				'critical';										// Class name for alert style 2
-$alert-style2-border-style:		1px solid #86293d;								// Border style for alert style 2
-$alert-style2-border-radius:	$alert-border-radius;							// Border radius for alert style 2
-$include-tooltip:				true;											// Should tooltips be included?
-																				// (`true`/`false`) [2]
-$tooltip-name:					'tooltip';										// Class name for the tooltip component
-$tooltip-back-color:			$fore-color;									// Background color for tooltips
-$tooltip-fore-color:			#fffddc;										// Text color for tooltips
-$tooltip-border-radius:			3px;											// Border radius for tooltips
-$tooltip-tail-size:				8px;											// The size of the tooltip's tail
-$tooltip-padding:				10px;											// Padding for tooltips
-$tooltip-box-shadow:															// Box shadow for tooltip-box-shadow
+$alert-include-animated:		false;									// Should animated alerts be included? (`true`/`false`) [1]
+$alert-animated-class:			'animated';							// Class name for animated alerts
+$alert-variant1-name:				'urgent';								// Class name for alert variant 1
+$alert-variant1-back-color:	#fe9992;								// Background color for alert variant 1
+$alert-variant2-name:				'critical';							// Class name for alert variant 2
+$alert-variant2-back-color:	#ac354e;								// Background color for alert variant 2
+$alert-variant2-fore-color:	#fffddc;								// Text color for alert variant 2
+$alert-style1-name:					'urgent';								// Class name for alert style 1
+$alert-style1-border-style:	1px solid #fe6d64;			// Border style for alert style 1
+$alert-style1-border-radius:$alert-border-radius;		// Border radius for alert style 1
+$alert-style2-name:					'critical';							// Class name for alert style 2
+$alert-style2-border-style:	1px solid #86293d;			// Border style for alert style 2
+$alert-style2-border-radius:$alert-border-radius;		// Border radius for alert style 2
+$include-tooltip:						true;										// Should tooltips be included? (`true`/`false`) [2]
+$tooltip-name:							'tooltip';							// Class name for the tooltip component
+$tooltip-back-color:				$fore-color;						// Background color for tooltips
+$tooltip-fore-color:				#fffddc;								// Text color for tooltips
+$tooltip-border-radius:			3px;										// Border radius for tooltips
+$tooltip-tail-size:					8px;										// The size of the tooltip's tail
+$tooltip-padding:						10px;										// Padding for tooltips
+$tooltip-box-shadow:																// Box shadow for tooltip-box-shadow
 	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
-$tooltip-bottom-name:			'bottom';										// Class name for bottom tooltip
+$tooltip-bottom-name:				'bottom';								// Class name for bottom tooltip
 // 	Notes:
 // [1] - If the value of $alert-include-animated is `true`, an animation will be created and the value of $alert-animated-class
 //	will be used to determine the class that will be used for animated alerts.

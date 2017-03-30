@@ -904,3 +904,5 @@
 - Cleanup of relevant variables and comments in flavor files.
 - Updated `card` module, splitting into main file and mixins, cleanup in flavor files for the module.
 - Updated `tab` module, adding an extra **hidden flag** `$include-stacked-tabs` for toggling `.stacked` tabs on and off, cleanup of flavor files.
+- Updated `contextual` module, splitting file and adding **hidden flag** `$include-alerts` for toggling `.alert`s on and off. Added `@error` messages in mixins in case the mixins are called without the corresponding components enabled. Should be a welcome change during compilation.
+- Flavor cleanup for `contextual` module.

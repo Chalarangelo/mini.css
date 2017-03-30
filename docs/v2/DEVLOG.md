@@ -894,3 +894,5 @@
 
 - Updated `grid` by moving variable definitions and defaults to the top of the module.
 - Updated flavor files, dealing with indentation and readability.
+- Updated `navigation` by moving variable definitions and defaults. Added **hidden flag** `$header-colorize-svgs` for a hacky fix that was there before (just in case).
+- Updated flavor files, made most multiline comments up to `navigation` into single line comments in order to make the flavor files shorter while maintining readability.

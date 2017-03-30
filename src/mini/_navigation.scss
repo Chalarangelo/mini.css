@@ -2,11 +2,16 @@
 	Definitions for navigation elements.
 */
 // Different elements are styled based on the same set of rules.
+$button-class-name:				'button' !default;				// Class name for the button-like elements.
+$header-logo-name:				'logo' !default;					// Class name for <header>'s logo.
+$header-colorize-svgs:		true !default;						// [Hidden flag] Colorizes SVGs in the <header> element's logo (`true`/`false`).
+$include-header-sticky:		false !default;						// Should the sticky class for <header> elements be included (`true`/`false`).
+$include-footer-sticky:		false !default;						// Should the sticky class for <footer> elements be included (`true`/`false`).
+$nav-sublink-prefix:			'sublink' !default;				// Prefix for the subcategory tabs in nav.
+$nav-sublink-depth:				2 !default;								// Amount of subcategory classes to add.
+$nav-sublink-padding-left:12px !default;						// Left padding to add to subcategories.
+$nav-include-sublink-bar: false !default;						// Should a border be added to the subcategories? (`true`/`false`)
 // Header styling.
-$button-class-name:				'button' !default;								// Class name for the button-like elements
-$header-logo-name:				'logo' !default;								// Class name for <header>'s logo
-$include-header-sticky:			false !default;									// Should the sticky class for <header> elements be included
-$include-footer-sticky:			false !default;									// Should the sticky class for <footer> elements be included
 header {
 	display: block;		// Correct display for older versions of IE.
 	height: $header-height;
@@ -34,7 +39,9 @@ header {
 	overflow-y: hidden;
 	// Header logo styling.
 	.#{$header-logo-name} {
-		color: $header-fore-color;		// Keep this in case people use SVGs? Is it necessary?
+		@if $header-colorize-svgs { 		// Deals with SVG colorization in case people use SVGs.
+			color: $header-fore-color;		// Only toggle off if you know what you're doing.
+		}
 		@if $header-logo-font-size != $base-font-size {
 			font-size: $header-logo-font-size;
 		}
@@ -49,16 +56,16 @@ header {
 		}
 		@if $apply-link-hover-fade {
 			-webkit-transition: 0s opacity;
-					transition: 0s opacity;
+							transition: 0s opacity;
 		}
 	}
 	// Link styling.
 	button, [type="button"],
 	a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name},
 	a[role="button"], label[role="button"], [role="button"] {
-		background: $header-back-color;		// Apply color regardless to override styling from other things.
+		background: $header-back-color;				// Apply color regardless to override styling from other things.
 		color: $header-fore-color;
-		vertical-align: top;		// Alignemt, really important to make this work well.
+		vertical-align: top;									// Alignemt, really important to make this work well.
 		@if $header-link-margin != 0 {
 			margin: $header-link-margin;
 		}
@@ -72,7 +79,7 @@ header {
 			border: 0;
 		}
 	}
-	@if $apply-link-underline {		// Override for links if underline is enabled.
+	@if $apply-link-underline {				// Override for links if underline is enabled.
 		.#{$header-logo-name}, a.#{$button-class-name}, a[role="button"] {
 			text-decoration: none;
 		}
@@ -80,7 +87,7 @@ header {
 }
 // Navigation sidebar styling.
 nav {
-	display: block;		// Correct display for older versions of IE.
+	display: block;										// Correct display for older versions of IE.
 	@if $nav-back-color != $back-color {
 		background: $nav-back-color;
 	}
@@ -104,13 +111,9 @@ nav {
 	}
 	a, a:visited {
 		display: block;
-		color: $nav-link-fore-color;	// Apply regardless to de-stylize visited links.
+		color: $nav-link-fore-color;		// Apply regardless to de-stylize visited links.
 	}
 	// Subcategories in navigation.
-	$nav-sublink-prefix:			'sublink' !default;				// Prefix for the subcategory tabs in nav
-	$nav-sublink-depth:				2 !default;						// Amount of subcategory classes to add
-	$nav-sublink-padding-left:		12px !default;					// Left padding to add to subcategories
-	$nav-include-sublink-bar: 		false !default;					// Should a border be added to the subcategories?
 	@for $i from 1 through $nav-sublink-depth {
 		.#{$nav-sublink-prefix}-#{$i} {
 			padding-left: $i * $nav-sublink-padding-left;
@@ -152,12 +155,11 @@ footer {
 		color: $footer-link-fore-color;
 	}
 }
-
-
+// Sticky headers and footers.
 @if $include-header-sticky and $include-footer-sticky {
 	header.#{$header-sticky-name}, footer.#{$footer-sticky-name} {
 		position: -webkit-sticky;
-		position:		  sticky;
+		position:		  		sticky;
 		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
 	}
 	header.#{$header-sticky-name} {
@@ -170,7 +172,7 @@ footer {
 @else if $include-header-sticky {
 	header.#{$header-sticky-name} {
 		position: -webkit-sticky;
-		position:		  sticky;
+		position:		  		sticky;
 		top: 0;
 		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
 	}
@@ -178,7 +180,7 @@ footer {
 @else if $include-footer-sticky {
 	footer.#{$footer-sticky-name} {
 		position: -webkit-sticky;
-		position:		  sticky;
+		position:		  		sticky;
 		bottom: 0;
 		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
 	}

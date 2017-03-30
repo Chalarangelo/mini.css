@@ -16,8 +16,7 @@ $base-root-font-size:		16px;											// Root font sizing for all elements [1]
 $base-font-size:				1em;											// Default font sizing for all elements [2]
 $base-line-height:			1.5;											// Default line height for all elements.
 $body-margin:						0;												// Margin for the body
-$apply-defaults-to-all:	true;											// Should default values be applied to all
-																									// elements? (`true` or `false`) [3]
+$apply-defaults-to-all:	true;											// Should default values be applied to all elements? (`true` or `false`) [3]
 $h1-font-size:					2em;											// Font size of h1
 $h2-font-size:					1.5em;										// Font size for h2
 $h3-font-size:					1.25em;										// Font size for h3
@@ -28,8 +27,7 @@ $heading-line-height:		1.2em;										// Line height for all headings
 $heading-margin:				12px 8px;									// Margin for all headings
 $heading-font-weight:		500;											// Font weight for all headings
 $heading-smalltext-fore-color:	#424242;					// <small> color in headings
-$make-heading-smalltext-block:	true;							// Should <small> elements in headings
-																									// be displayed as blocks (`true`/`false`) [4]
+$make-heading-smalltext-block:	true;							// Should <small> elements in headings be displayed as blocks (`true`/`false`) [4]
 $heading-smalltext-b-font-size:	75%;							// Font size of block <small> elements in headings
 $heading-smalltext-b-top-margin:-4px;							// Top margin of block <small> elements in headings
 $paragraph-margin:			1px 8px;									// Margin for <p> elements
@@ -38,10 +36,8 @@ $list-left-padding:			28px;											// Left padding for <ol> and <ul> elements
 $bold-font-weight:			700;											// Font weight for <b> and <strong>
 $horizontal-rule-line-height:	1.25em;							// <hr> line height
 $horizontal-rule-margin:	8px;										// <hr> margin
-$horizontal-rule-border-style:	1px solid #757575;// Border style for horizontal rules (used
-																									// in the <hr> element's border-top)
-$horizontal-rule-fancy-style:	true;								// Should a fancy styling be applied for the
-																									// <hr> element (`true`/`false`) [5]
+$horizontal-rule-border-style:	1px solid #757575;// Border style for horizontal rules (used in the <hr> element's border-top)
+$horizontal-rule-fancy-style:	true;								// Should a fancy styling be applied for the <hr> element (`true`/`false`) [5]
 $horizontal-rule-fancy-gradient:"to right, #bdbdbd, #616161, #bdbdbd";					// Gradient style for fancy horizontal rule
 $blockquote-back-color:			#eeeeee;							// Background color for <blockquote>
 $blockquote-fore-color:			$fore-color;					// Text color for <blockquote>
@@ -56,8 +52,7 @@ $blockquote-border-style:					0;							// Border style for <blockquote>
 $blockquote-border-radius:				0 2px 2px 0;		// Border radius for <blockquote>
 $blockquote-box-shadow:														// Box shadow for <blockquote>
 	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
-$use-default-code-fonts:			true;									// Should default font choice (monospace) be
-																										// used for code elements? (`true`/`false`) [6]
+$use-default-code-fonts:			true;									// Should default font choice (monospace) be used for code elements? (`true`/`false`) [6]
 //$code-font-family:					monospace, monospace;	// Fonts for code elements if not default
 $code-element-padding:				2px 4px;							// Padding for <code>
 $code-element-fore-color:			$fore-color;					// Text color for <code>
@@ -74,8 +69,7 @@ $pre-element-border-radius:		0 2px 2px 0;					// Border radius for <pre>
 $pre-element-margin:					8px 10px;							// Margin for <pre>
 $pre-element-box-shadow:														// Box shadow for <pre>
 	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
-$add-pre-element-sidebar:		true;										// Should a fancy sidebar be added to the
-																										// left side of <pre> (`true`/`false`) [7]
+$add-pre-element-sidebar:		true;										// Should a fancy sidebar be added to the left side of <pre> (`true`/`false`) [7]
 $pre-element-sidebar-style:		3px solid #1565c0;		// Style of the sidebar of <pre>
 $kbd-element-padding:					2px 4px;							// Padding for <kbd>
 $kbd-element-fore-color:			#fafafa;							// Text color for <kbd>
@@ -84,15 +78,13 @@ $kbd-element-border-style:		0;										// Border style for <kbd>
 $kbd-element-border-radius:		2px;									// Border radius for <kbd>
 $kbd-element-box-shadow:														// Box shadow for <kbd>
 	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
-$style-samp-element:			false;										// Should styles for <samp> be included?
-																										// (`true`/`false`) [8]
+$style-samp-element:			false;										// Should styles for <samp> be included? (`true`/`false`) [8]
 //$samp-element-padding:			2px 4px;							// Padding for <samp>
 //$samp-element-fore-color:		$fore-color;					// Text color for <samp>
 //$samp-element-back-color:		#2196f3;							// Background color for <samp>
 //$samp-element-border-style:	0;										// Border style for <samp>
 //$samp-element-border-radius:2px;									// Border radius for <samp>
-$include-dfn-fix:			true;													// Should the fix for Android 4.3 concerning <dfn>
-																										// be included (`true`/`false`) [9]
+$include-dfn-fix:			true;													// Should the fix for Android 4.3 concerning <dfn> be included (`true`/`false`) [9]
 $small-font-size:			75%;													// Font size for <small> elements
 $sup-font-size:				75%;													// Font size for <sup> elements
 $sub-font-size:				75%;													// Font size for <sub> elements
@@ -101,11 +93,8 @@ $sub-bottom:					-4px;													// <sub> bottom
 $link-fore-color:					#0277bd;									// Text color for <a>
 $link-visited-fore-color:	#01579b;									// Text color for visited <a>
 $link-font-weight:				500;											// Font weight for <a>
-$apply-link-underline:		true;											// Should an underline be applied to all <a>
-																										// elements? (`true`/`false`) [10]
-$apply-link-hover-fade:		true;											// Should the :hover and :focus state of <a>
-																										// elements use fade-out instead of a different
-																										// color (`true`/`false`) [11]
+$apply-link-underline:		true;											// Should an underline be applied to all <a> elements? (`true`/`false`) [10]
+$apply-link-hover-fade:		true;											// Should the :hover and :focus state of <a> elements use fade-out instead of a different color (`true`/`false`) [11]
 //$link-hover-fore-color:	#0288d1;									// Text color for <a> when hovered or focused
 //	Notes:
 // [1] - The value $base-root-font-size should be in `px` only! This rule is very important, as it will determine the root
@@ -132,10 +121,8 @@ $apply-link-hover-fade:		true;											// Should the :hover and :focus state o
 // [11] - If `$apply-link-hover-fade` is set to `true`, a fading transition will be used for the link when hovered over or
 //	focused. Otherwise, the color specified in $link-hover-fore-color will be used.
 //	Variables for grid elements
-$use-four-step-grid:			false;										// Should the old 4-step grid system be used
-																										// instead of the new (`true`/`false`) [1]
-$include-parent-layout:		true;											// Should the classes for rows defining the column
-																										// layout of children be included (`true`/`false`) [2]
+$use-four-step-grid:			false;										// Should the old 4-step grid system be used instead of the new (`true`/`false`) [1]
+$include-parent-layout:		true;											// Should the classes for rows defining the column layout of children be included (`true`/`false`) [2]
 $grid-container-name:			'container';							// Class name for the grid container
 $grid-container-side-padding:	10px;									// Padding for the grid container (left and right only)
 $grid-row-name:								'row';								// Class name for the grid's rows
@@ -160,51 +147,48 @@ $grid-large-prefix:						'lg';									// Large screen class prefix for grid
 // [2] - If the value of $include-parent-layout is `true`, the grid system will contain extra classes that will define the column
 //	layout of their children. In this case, a value should be specified for $grid-row-parent-layout-prefix.
 //	Variables for navigational elements
-$header-height:					44px;											// Height for <header>
-$header-back-color:				#263238;										// Background color for <header>
-$header-fore-color:				#fafafa;										// Text color for <header>
+$header-height:						44px;											// Height for <header>
+$header-back-color:				#263238;									// Background color for <header>
+$header-fore-color:				#fafafa;									// Text color for <header>
 $header-border-style:			0;												// Border style for <header>
-$header-margin:					0;												// Margin for <header>
-$header-padding:				2px 8px;										// Padding for <header>
-$header-box-shadow:																// Box shadow for <header>
+$header-margin:						0;												// Margin for <header>
+$header-padding:					2px 8px;									// Padding for <header>
+$header-box-shadow:																	// Box shadow for <header>
 	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
-$header-logo-name:				'logo';											// Class name for <header>'s logo
-$header-logo-font-size:			1.75em;											// Font size for <header>'s logo
-$header-logo-line-height:		1.2;											// Line height for <header>'s logo
-$header-logo-margin:			1px 6px 1px 1px;								// Margin for <header>'s logo
-$header-logo-padding:			3px 0 0;										// Padding for <header>'s logo
-$header-link-hover-color:		#37474f;										// Hover color for <header>'s links
-$header-link-margin:			2px 0 0;										// Margin for <header>'s links
-$include-header-sticky:			true;											// Should sticky <header> elements be
-																				// included? (`true`/`false`) [1]
-$header-sticky-name:			'sticky';										// Class name for sticky <header>
-$nav-back-color:				#eceff1;										// Background for <nav>
-$nav-fore-color:				$fore-color;									// Text color for <nav>
-$nav-border-style:				1px solid #bdbdbd;								// Border style for <nav>
+$header-logo-name:				'logo';										// Class name for <header>'s logo
+$header-logo-font-size:		1.75em;										// Font size for <header>'s logo
+$header-logo-line-height:	1.2;											// Line height for <header>'s logo
+$header-logo-margin:			1px 6px 1px 1px;					// Margin for <header>'s logo
+$header-logo-padding:			3px 0 0;									// Padding for <header>'s logo
+$header-link-hover-color:	#37474f;									// Hover color for <header>'s links
+$header-link-margin:			2px 0 0;									// Margin for <header>'s links
+$include-header-sticky:		true;											// Should sticky <header> elements be included? (`true`/`false`) [1]
+$header-sticky-name:			'sticky';									// Class name for sticky <header>
+$nav-back-color:					#eceff1;									// Background for <nav>
+$nav-fore-color:					$fore-color;							// Text color for <nav>
+$nav-border-style:				1px solid #bdbdbd;				// Border style for <nav>
 $nav-border-radius:				0;												// Border radius for <nav>
-$nav-padding:					8px 8px 16px 20px;								// Padding for <nav>
-$nav-margin:					2px;											// Margin for <nav>
-$nav-box-shadow: 																// Box shadow for <nav>
+$nav-padding:							8px 8px 16px 20px;				// Padding for <nav>
+$nav-margin:							2px;											// Margin for <nav>
+$nav-box-shadow: 																		// Box shadow for <nav>
 	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
-$nav-link-fore-color:			#1565c0;										// Text color for links in <nav>
-$nav-sublink-prefix:			'sublink';										// Prefix for the subcategory links in <nav>
+$nav-link-fore-color:			#1565c0;									// Text color for links in <nav>
+$nav-sublink-prefix:			'sublink';								// Prefix for the subcategory links in <nav>
 $nav-sublink-depth:				2;												// Amount of subcategory classes to add
-$nav-sublink-padding-left:		12px;											// Left padding to add to subcategories
-$nav-include-sublink-bar:		true;											// Should a left border bar be added to
-																				// subcategories (`true`/`false`) [2]
-$nav-sublink-bar-left-position: 3px;											// Left position of subcategory bar
-$nav-sublink-bar-width:			1px;											// Width of the subcategory bar
-$nav-sublink-bar-color:			#78909c;										// Subcategory bar color
-$footer-back-color:				#263238;										// Background color for <footer>
-$footer-fore-color:				#fafafa;										// Text color for <footer>
+$nav-sublink-padding-left:12px;											// Left padding to add to subcategories
+$nav-include-sublink-bar:	true;											// Should a left border bar be added to subcategories (`true`/`false`) [2]
+$nav-sublink-bar-left-position: 3px;								// Left position of subcategory bar
+$nav-sublink-bar-width:		1px;											// Width of the subcategory bar
+$nav-sublink-bar-color:		#78909c;									// Subcategory bar color
+$footer-back-color:				#263238;									// Background color for <footer>
+$footer-fore-color:				#fafafa;									// Text color for <footer>
 $footer-border-style:			0;												// Border stye for <footer>
 $footer-font-size:				85%;											// Font size for <footer>
-$footer-margin:					18px 0 0;										// Margin for <footer>
-$footer-padding:				22px 10px 12px;									// Padding for <footer>
-$footer-link-fore-color:		#039be5;										// Text color for links in <footer>
-$include-footer-sticky:			true;											// Should sticky <footer> elements be
-																				// included (`true`/`false`) [3]
-$footer-sticky-name:			'sticky';										// Class name for sticky <footer> elements
+$footer-margin:						18px 0 0;									// Margin for <footer>
+$footer-padding:					22px 10px 12px;						// Padding for <footer>
+$footer-link-fore-color:	#039be5;									// Text color for links in <footer>
+$include-footer-sticky:		true;											// Should sticky <footer> elements be included (`true`/`false`) [3]
+$footer-sticky-name:			'sticky';									// Class name for sticky <footer> elements
 //	Notes:
 // [1] - If the value of $include-header-sticky is `true`, a class will be created that will allow for sticky positioning
 //	of <header> elements, using the value of $header-sticky-name for the name of the class.

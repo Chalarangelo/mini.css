@@ -896,3 +896,7 @@
 - Updated flavor files, dealing with indentation and readability.
 - Updated `navigation` by moving variable definitions and defaults. Added **hidden flag** `$header-colorize-svgs` for a hacky fix that was there before (just in case).
 - Updated flavor files, made most multiline comments up to `navigation` into single line comments in order to make the flavor files shorter while maintining readability.
+- Added an extra **hidden flag** in `navigation` under `$include-nav-styles` to make sure that `nav` elements can be removed from flavors (possibly not present in the `barebones` flavor).
+- Updated `input_control`, splitting into main file and mixins file. Added **hidden flag** `$hide-check-and-radio` and standardized existing one (`$input-high-specificity-selectors`).
+- Cleanup and housekeeping for readability in flavor files for updated `input_control`.
+- *TODO* Make class naming rules more consistent in module defaults - meaning add all class naming defaults to the very top of all modules, saving time and space when simplified flavors kick in.

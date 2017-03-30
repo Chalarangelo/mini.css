@@ -1,7 +1,16 @@
 /*
 	Definitions for forms and input elements.
 */
+// Check the `_input_control_mixins.scss` file to find this module's mixins.
+@import 'input_control_mixins';
 // Different elements are styled based on the same set of rules.
+$include-fluid-input-group:		true !default;				// Should fluid input groups be included? (`true`/`false`)
+// The below option will use the legacy high specificity selectors for <input> element styling instead
+// of the less specific, yet less complicated and less bloated input selector. This only applies to
+// the pseudo-classes and states of the <input> controls and not the default styling of them.
+$input-high-specificity-selectors:	false !default;	// [Hidden flag] Use legacy selectors for <input> element styling (`true`/`false`).
+$hide-file-inputs: 						true !default;				// Should `file` <input> elements be hidden? (`true`/`false`)
+$hide-check-and-radio:				true !default;				// [Hidden flag] Should checkboxes and radios be hidden? (`true`/`false`)
 // Base form styling.
 form {
 	@if $form-back-color != $back-color {
@@ -35,7 +44,7 @@ fieldset {
 	border: $fieldset-border-style;
 	border-radius: $fieldset-border-radius;
 	margin: $fieldset-margin;
-  	padding: $fieldset-padding;
+  padding: $fieldset-padding;
 }
 // Legend styling.
 legend {
@@ -60,7 +69,6 @@ legend {
 		padding: $label-padding;	// Padding is all that seems to be needed for now, but more stuff could be added later.
 	}
 }
-$include-fluid-input-group:		true !default;				// Should fluid input groups be included?
 // Input group base naming.
 .#{$input-group-name} {
 	display: inline-block;
@@ -71,21 +79,21 @@ $include-fluid-input-group:		true !default;				// Should fluid input groups be i
 			display: -webkit-box;
 			-webkit-box-pack: justify;
 			// New syntax
-			display: -webkit-flex;
-			display: 		 flex;
+			display: 	-webkit-flex;
+			display: 		 			flex;
 			-webkit-align-items: center;
-					align-items: center;
+							align-items: center;
 			-webkit-justify-content: center;
-					justify-content: center;
+							justify-content: center;
 			& > input {
 				// Old syntax
 				-webkit-box-flex: 1;
 				max-width: 100%;
 				// New syntax
 				-webkit-flex-grow: 1;
-						flex-grow: 1;
+								flex-grow: 1;
 				-webkit-flex-basis: 0;
-						flex-basis: 0;
+								flex-basis: 0;
 			}
 		}
 	}
@@ -98,9 +106,9 @@ $include-fluid-input-group:		true !default;				// Should fluid input groups be i
 			-webkit-box-orient: vertical;
 			// New syntax
 			-webkit-align-items: stretch;
-					align-items: stretch;
+							align-items: stretch;
 			-webkit-flex-direction: column;
-					flex-direction: column;
+							flex-direction: column;
 		}
 	}
 }
@@ -122,10 +130,6 @@ textarea {
 [type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
-// The belo option will use the legacy high specificity selectors for <input> element styling instead
-// of the less specific, yet less complicated and less bloated input selector. This only applies to
-// the pseudo-classes and states of the <input> controls and not the default styling of them.
-$input-high-specificity-selectors:	false !default;			// Hidden option: `false` by default!
 // Common textual input styling.
 input:not([type]), [type="text"], [type="email"], [type="number"], [type="search"],
 [type="password"], [type="url"], [type="tel"], textarea, select {
@@ -176,16 +180,13 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 			border-color: $input-invalid-border-color;
 			box-shadow: none;
 		}
-		//&:focus:invalid:focus {
-		//	border-color: brown;
-		//}
 		&[readonly]{
 			background: $input-readonly-back-color;
 			border-color: $input-readonly-border-color;
 		}
 	}
 }
-// Placeholder styling.
+// Placeholder styling (keep browser-specific definitions separated, they do not play well together).
 ::-webkit-input-placeholder {
 	opacity: 1;
 	color: $input-placeholder-fore-color;
@@ -211,8 +212,8 @@ button, html [type="button"], [type="reset"], [type="submit"] {
 }
 // Other fixes.
 button {
-	overflow: visible;	// Show the overflow in IE.
-	text-transform: none;	// Remove inheritance of text-transform in Edge, Firefox, and IE.
+	overflow: visible;			// Show the overflow in IE.
+	text-transform: none;		// Remove inheritance of text-transform in Edge, Firefox, and IE.
 }
 // Default styling
 button, [type="button"], [type="submit"], [type="reset"],
@@ -238,7 +239,7 @@ a[role="button"], label[role="button"], [role="button"] {
 		text-decoration: none;
 	}
 	-webkit-transition: all 0.3s ease 0s;
-			transition: all 0.3s ease 0s;
+					transition: all 0.3s ease 0s;
 	cursor: pointer;
 	&:hover, &:active, &:focus {
 		background: rgba($button-back-color, $button-hover-back-opacity);
@@ -252,7 +253,6 @@ a[role="button"], label[role="button"], [role="button"] {
 	}
 }
 // Styling for file inputs
-$hide-file-inputs: true !default;
 @if $hide-file-inputs {
 	input[type="file"] { // Hide, use labels instead. Hidden inputs like this are still accessible.
 		border: 0;
@@ -264,13 +264,13 @@ $hide-file-inputs: true !default;
 		position: absolute;
 		clip: rect(0 0 0 0);
 		-webkit-clip-path: inset(100%);
-				clip-path: inset(100%);
+						clip-path: inset(100%);
 	}
 }
 @else {
 	::-webkit-file-upload-button {
 		-webkit-appearance: button; 	// Correct inability to style in iOS and Safari.
-		font: inherit; 					// Change font propery to `inherit` in Safari.
+		font: inherit; 								// Change font propery to `inherit` in Safari.
 	}
 }
 // Button group definition
@@ -278,8 +278,8 @@ $hide-file-inputs: true !default;
 	// Old syntax
 	display: -webkit-box;
 	// New syntax
-	display: -webkit-flex;
-	display: 		 flex;
+	display: 	-webkit-flex;
+	display: 		 			flex;
 	border: $button-group-border-style;
 	@if $button-border-radius != 0 {
 		border-radius: $button-border-radius;
@@ -298,9 +298,9 @@ $hide-file-inputs: true !default;
 		max-width: 100%;
 		// New syntax
 		-webkit-flex-grow: 1;
-				flex-grow: 1;
+						flex-grow: 1;
 		-webkit-flex-basis: 0;
-				flex-basis: 0;
+						flex-basis: 0;
 		text-align: center;
 		border: 0;
 		@if $button-border-radius != 0 {
@@ -324,7 +324,7 @@ $hide-file-inputs: true !default;
 		-webkit-box-orient: vertical;
 		// New syntax
 		-webkit-flex-direction: column;
-				flex-direction: column;
+						flex-direction: column;
 		@if $button-group-border-style !=0 {
 			button, [type="button"], [type="submit"], [type="reset"],
 			.#{$button-class-name}, [role="button"] {
@@ -337,71 +337,20 @@ $hide-file-inputs: true !default;
 		}
 	}
 }
-// Mixin for alternate buttons (button color variants).
-// Variables:
-// - $button-alt-name : The name of the class used for the alternate button.
-// - $button-alt-back-color : The background color of the alternate button.
-// - $button-alt-back-opacity : Opacity of the background color of the alternate button.
-// - $button-alt-hover-back-opacity : Opacity of the background color of the alternate button on hover.
-// - $button-alt-fore-color : (Optional) The text color of the alternate button. Defaults to the text color of the button.
-// Notes:
-// Due to something like `.button.secondary` being a higher specificity than `a.button` or `a`, no extra rules are
-// required for such elements. However rules for the normal button elements are applied in order to not require the
-// base class for the button styles.
-@mixin make-button-alt-color ($button-alt-name, $button-alt-back-color, $button-alt-back-opacity,
-	$button-alt-hover-back-opacity, $button-alt-fore-color: $button-fore-color) {
-	button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name},
-	[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name}, [role="button"].#{$button-alt-name} {
-		background: rgba($button-alt-back-color, $button-alt-back-opacity);
-		@if $button-alt-fore-color != $button-fore-color {
-			color: $button-alt-fore-color;
-		}
-		&:hover, &:active, &:focus {
-			background: rgba($button-alt-back-color, $button-alt-hover-back-opacity);
-		}
-	}
-}
-// Mixin for alternate button styles (button style variants).
-// Variables:
-// - $button-alt-name : The name of the class used for the alternate button style.
-// - $button-alt-border-style : The border style of the alternate button style.
-// - $button-alt-border-radius : Border radius of the alternate button style.
-// - $button-alt-padding : Padding of the alternate button style.
-// - $button-alt-margin : Margin of the alternate button style.
-// Notes:
-// Due to something like `.button.small` being a higher specificity than `a.small` or `a`, no extra rules are
-// required for such elements. However rules for the normal button elements are applied in order to not require the
-// base class for the button styles.
-@mixin make-button-alt-style ($button-alt-name, $button-alt-border-style, $button-alt-border-radius,
-	$button-alt-padding, $button-alt-margin) {
-	button.#{$button-alt-name}, [type="button"].#{$button-alt-name}, [type="submit"].#{$button-alt-name},
-	[type="reset"].#{$button-alt-name}, .#{$button-class-name}.#{$button-alt-name}, [role="button"].#{$button-alt-name} {
-		@if $button-alt-border-style != $button-border-style {
-			border: $button-alt-border-style;
-		}
-		@if $button-alt-border-radius != $button-border-radius {
-			border-radius: $button-alt-border-radius;
-		}
-		@if $button-alt-padding != $button-padding {
-			padding: $button-alt-padding;
-		}
-		@if $button-alt-margin != $button-margin {
-			margin: $button-alt-margin;
-		}
-	}
-}
 // Definitions for checkboxes and radio button elements.
 // Note: both elements are hidden by default and use labels to show their input state.
 // Hide both input types - accessible (element is not visible, but screen readers read it normally).
-[type="checkbox"], [type="radio"] {
-	height: 1px;
-	width: 1px;
-	margin: -1px;
-	overflow: hidden;
-	position: absolute;
-	clip: rect(0 0 0 0);
-	-webkit-clip-path: inset(100%);
-			clip-path: inset(100%);
+@if $hide-check-and-radio {		// If you want to make these two <input>s visible by default, turn this on.
+	[type="checkbox"], [type="radio"] {
+		height: 1px;
+		width: 1px;
+		margin: -1px;
+		overflow: hidden;
+		position: absolute;
+		clip: rect(0 0 0 0);
+		-webkit-clip-path: inset(100%);
+						clip-path: inset(100%);
+	}
 }
 // Use input-group to setup the style for labels.
 .#{$input-group-name} {

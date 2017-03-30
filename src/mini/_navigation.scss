@@ -7,6 +7,7 @@ $header-logo-name:				'logo' !default;					// Class name for <header>'s logo.
 $header-colorize-svgs:		true !default;						// [Hidden flag] Colorizes SVGs in the <header> element's logo (`true`/`false`).
 $include-header-sticky:		false !default;						// Should the sticky class for <header> elements be included (`true`/`false`).
 $include-footer-sticky:		false !default;						// Should the sticky class for <footer> elements be included (`true`/`false`).
+$include-nav-styles:			true !default;						// [Hidden flag] Should <nav> elements by stylized? (`true`/`false`)
 $nav-sublink-prefix:			'sublink' !default;				// Prefix for the subcategory tabs in nav.
 $nav-sublink-depth:				2 !default;								// Amount of subcategory classes to add.
 $nav-sublink-padding-left:12px !default;						// Left padding to add to subcategories.
@@ -86,47 +87,49 @@ header {
 	}
 }
 // Navigation sidebar styling.
-nav {
-	display: block;										// Correct display for older versions of IE.
-	@if $nav-back-color != $back-color {
-		background: $nav-back-color;
-	}
-	@if $nav-fore-color != $fore-color {
-		color: $nav-fore-color;
-	}
-	@if $nav-border-style != 0 {
-		border: $nav-border-style;
-	}
-	@if $nav-border-radius != 0 {
-		border-radius: $nav-border-radius;
-	}
-	@if $nav-margin != 0 {
-		margin: $nav-margin;
-	}
-	@if $nav-padding != 0 {
-		padding: $nav-padding;
-	}
-	@if $nav-box-shadow != none {
-		box-shadow: $nav-box-shadow;
-	}
-	a, a:visited {
-		display: block;
-		color: $nav-link-fore-color;		// Apply regardless to de-stylize visited links.
-	}
-	// Subcategories in navigation.
-	@for $i from 1 through $nav-sublink-depth {
-		.#{$nav-sublink-prefix}-#{$i} {
-			padding-left: $i * $nav-sublink-padding-left;
-			position: relative;
-			@if $nav-include-sublink-bar {
-				&:before {
-					position: absolute;
-					left: $nav-sublink-bar-left-position;
-					top: -$nav-sublink-bar-width;
-					content: '';
-					height: 100%;
-					border: $nav-sublink-bar-width solid $nav-sublink-bar-color;
-					border-left: 0;
+@if $include-nav-styles {						// Unless you want unstylized <nav> elements, keep this flag on.
+	nav {
+		display: block;									// Correct display for older versions of IE.
+		@if $nav-back-color != $back-color {
+			background: $nav-back-color;
+		}
+		@if $nav-fore-color != $fore-color {
+			color: $nav-fore-color;
+		}
+		@if $nav-border-style != 0 {
+			border: $nav-border-style;
+		}
+		@if $nav-border-radius != 0 {
+			border-radius: $nav-border-radius;
+		}
+		@if $nav-margin != 0 {
+			margin: $nav-margin;
+		}
+		@if $nav-padding != 0 {
+			padding: $nav-padding;
+		}
+		@if $nav-box-shadow != none {
+			box-shadow: $nav-box-shadow;
+		}
+		a, a:visited {
+			display: block;
+			color: $nav-link-fore-color;		// Apply regardless to de-stylize visited links.
+		}
+		// Subcategories in navigation.
+		@for $i from 1 through $nav-sublink-depth {
+			.#{$nav-sublink-prefix}-#{$i} {
+				padding-left: $i * $nav-sublink-padding-left;
+				position: relative;
+				@if $nav-include-sublink-bar {
+					&:before {
+						position: absolute;
+						left: $nav-sublink-bar-left-position;
+						top: -$nav-sublink-bar-width;
+						content: '';
+						height: 100%;
+						border: $nav-sublink-bar-width solid $nav-sublink-bar-color;
+						border-left: 0;
+					}
 				}
 			}
 		}

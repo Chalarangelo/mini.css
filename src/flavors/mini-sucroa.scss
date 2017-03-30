@@ -195,105 +195,97 @@ $footer-sticky-name:			'sticky';									// Class name for sticky <footer> eleme
 //	of <footer> elements, using the value of $footer-sticky-name for the name of the class.
 //	Variables for forms and inputs
 $form-back-color:				#e8deff;										// Background color for forms
-$form-fore-color:				$fore-color;									// Text color for forms
-$form-border-style:				1px solid #a9a2ba;								// Border style for forms
-$form-border-radius:			2px;											// Border radius for forms
-$form-margin:					10px;											// Margin for forms
-$form-padding:					14px 10px 20px;									// Padding for forms
-$form-box-shadow:																// Box shadow for forms
+$form-fore-color:				$fore-color;								// Text color for forms
+$form-border-style:			1px solid #a9a2ba;					// Border style for forms
+$form-border-radius:		2px;												// Border radius for forms
+$form-margin:						10px;												// Margin for forms
+$form-padding:					14px 10px 20px;							// Padding for forms
+$form-box-shadow:																		// Box shadow for forms
 	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
-$fieldset-back-color:			$form-back-color;								// Background color for fieldset
-$fieldset-border-style:			1px solid #a9a2ba;								// Border style for fieldset
-$fieldset-border-radius:		2px;											// Border radius for fieldset
-$fieldset-margin:				2px;											// Margin for fieldset
-$fieldset-padding:				6px 8px 8px;									// Padding for fieldset
-$legend-font-weight:			$bold-font-weight;								// Font weight for legend
-$legend-font-size:				0.925em;										// Font size for legend
-$legend-fore-color:				$form-fore-color;								// Text color for legend
-$legend-padding:				2px 4px;										// Padding for legend
-$label-padding:					6px;											// Padding for label
-$input-group-name:				'input-group';									// Class for input groups
-$include-fluid-input-group:		true;											// Should fluid input grooups be
-																				// included? (`true`/`false`) [1]
-$input-group-fluid-name:		'fluid';										// Class name for fluid input groups
-$input-group-mobile-breakpoint:	767px;											// Breakpoint for fluid input group mobile view
-$input-back-color:				#f2edff;										// Background for input
-$input-fore-color:				$fore-color;									// Text color for input
-$input-border-style:			1px solid #a9a2ba;								// Border style for input
+$fieldset-back-color:			$form-back-color;					// Background color for fieldset
+$fieldset-border-style:		1px solid #a9a2ba;				// Border style for fieldset
+$fieldset-border-radius:	2px;											// Border radius for fieldset
+$fieldset-margin:					2px;											// Margin for fieldset
+$fieldset-padding:				6px 8px 8px;							// Padding for fieldset
+$legend-font-weight:			$bold-font-weight;				// Font weight for legend
+$legend-font-size:				0.925em;									// Font size for legend
+$legend-fore-color:				$form-fore-color;					// Text color for legend
+$legend-padding:					2px 4px;									// Padding for legend
+$label-padding:						6px;											// Padding for label
+$input-group-name:				'input-group';						// Class for input groups
+$include-fluid-input-group:		true;									// Should fluid input grooups be included? (`true`/`false`) [1]
+$input-group-fluid-name:			'fluid';							// Class name for fluid input groups
+$input-group-mobile-breakpoint:	767px;							// Breakpoint for fluid input group mobile view
+$input-back-color:				#f2edff;									// Background for input
+$input-fore-color:				$fore-color;							// Text color for input
+$input-border-style:			1px solid #a9a2ba;				// Border style for input
 $input-border-radius:			2px;											// Border radius for input
-$input-margin:					2px;											// Margin for input
-$input-padding:					8px 12px;										// padding for input
-$input-focus-border-color:		#6979c6;										// Border color for focused input
-$input-invalid-border-color:	#d2405f;										// Border color for invalid input
-$input-disabled-opacity:		0.8;											// Opacity for disabled input
-$input-readonly-back-color:		#eae1ff;										// Background color for readonly input
-$input-readonly-border-color:	#a9a2ba;										// Border color for readonly input
-$input-placeholder-fore-color:	#493e4b;										// Text color for input placeholder
-$button-back-color:				#d3cae8;										// Back color for button elements
-$button-back-opacity:			1;												// Background opacity for button elements
-$button-hover-back-opacity:		0.75;											// Background opacity for button elements
-																				// on hover or focus
-$button-fore-color:				$fore-color;									// Text color for button elements
-$button-border-style:			1px solid #a9a2ba;								// Border style for button elements
-$button-border-radius:			3px;											// Border radius for button elements
-$button-padding:				8px 12px;										// Padding for button elements
-$button-margin:					10px;											// Margin for button elements
-$button-box-shadow:																// Box shadow for buttons
+$input-margin:						2px;											// Margin for input
+$input-padding:						8px 12px;									// Padding for input
+$input-focus-border-color:		#6979c6;							// Border color for focused input
+$input-invalid-border-color:	#d2405f;							// Border color for invalid input
+$input-disabled-opacity:			0.8;									// Opacity for disabled input
+$input-readonly-back-color:		#eae1ff;							// Background color for readonly input
+$input-readonly-border-color:	#a9a2ba;							// Border color for readonly input
+$input-placeholder-fore-color:#493e4b;							// Text color for input placeholder
+$button-back-color:						#d3cae8;							// Back color for button elements
+$button-back-opacity:					1;										// Background opacity for button elements
+$button-hover-back-opacity:		0.75;									// Background opacity for button elements on hover or focus
+$button-fore-color:						$fore-color;					// Text color for button elements
+$button-border-style:					1px solid #a9a2ba;		// Border style for button elements
+$button-border-radius:				3px;									// Border radius for button elements
+$button-padding:							8px 12px;							// Padding for button elements
+$button-margin:								10px;									// Margin for button elements
+$button-box-shadow:																	// Box shadow for buttons
 	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
-$button-disabled-opacity:		0.75;											// Disabled button elements opacity
-$button-class-name:				'button';										// Class for custom button elements
-$button-group-name:				'button-group';									// Class for button groups
-$button-group-border-style:		1px solid #a9a2ba;								// Border style for button groups
-$button-group-margin:			$button-margin;									// Margin for button groups
+$button-disabled-opacity:		0.75;										// Disabled button elements opacity
+$button-class-name:					'button';								// Class for custom button elements
+$button-group-name:					'button-group';					// Class for button groups
+$button-group-border-style:	1px solid #a9a2ba;			// Border style for button groups
+$button-group-margin:				$button-margin;					// Margin for button groups
 $button-group-box-shadow:														// Box shadow for button groups
 	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
-$button-group-mobile-breakpoint:767px;											// Breakpoint for button group mobile view
-$hide-file-inputs:				true;											// Should a style be added that makes all
-																				// <input>s of type `file` hidden?
-																				// (`true`/`false`) [1]
-$button-variant1-name:			'primary';										// Class name for button variant 1
-$button-variant1-back-color:	#6979c6;										// Background color for button variant 1
-$button-variant1-back-opacity:	1;												// Background opacity for button variant 1
-$button-variant1-hover-back-opacity:											// Background opacity for button variant 1
-								0.75;											// on hover or focus
-$button-variant1-fore-color:	#fffddc;										// Text color for button variant 1
-$button-variant2-name:			'secondary';									// Class name for button variant 2
-$button-variant2-back-color:	#d2405f;										// Background color for button variant 2
-$button-variant2-back-opacity:	1;												// Background opacity for button variant 2
-$button-variant2-hover-back-opacity:											// Background opacity for button variant 2
-								0.75;											// on hover or focus
-$button-variant2-fore-color:	#fffddc;										// Text color for button variant 2
-$button-variant3-name:			'tertiary';										// Class name for button variant 3
-$button-variant3-back-color:	#2b866d;										// Background color for button variant 3
-$button-variant3-back-opacity:	1;												// Background opacity for button variant 3
-$button-variant3-hover-back-opacity:											// Background opacity for button variant 3
-								0.75;											// on hover or focus
-$button-variant3-fore-color:	#fffddc;										// Text color for button variant 3
-$button-variant4-name:			'inverse';										// Class name for button variant 4
-$button-variant4-back-color:	#331e36;										// Background color for button variant 4
-$button-variant4-back-opacity:	1;												// Background opacity for button variant 4
-$button-variant4-hover-back-opacity:											// Background opacity for button variant 4
-								0.75;											// on hover or focus
-$button-variant4-fore-color:	#fffddc;										// Text color for button variant 4
-$button-style1-name:			'small';										// Class name for button style 1
-$button-style1-border-style:	0;												// Border style for button style 1
-$button-style1-border-radius:	2px;											// Border radius for button style 1
-$button-style1-padding:			4px 6px;										// Padding for button style 1
-$button-style1-margin:			6px 8px;										// Margin for button style 1
-$button-style2-name:			'large';										// Class name for button style 2
-$button-style2-border-style:	0;												// Border style for button style 2
-$button-style2-border-radius:	4px;											// Border radius for button style 2
-$button-style2-padding:			12px 18px;										// Padding for button style 2
-$button-style2-margin:			10px 8px;										// Margin for button style 2
-$checkbox-size:					16px;											// Size for checkbox/radio [2]
-$checkbox-back-color:			$input-back-color;								// Background clor for checkbox/radio
-$checkbox-fore-color:			$input-fore-color;								// Text/mark color for checkbox/radio
-$checkbox-border-thickness:		1px;											// Border thickness for checkbox/radio
-$checkbox-border-color:			#a9a2ba;										// Border color for checkbox/radio
-$checkbox-border-radius:		$input-border-radius;							// Border radius for checkbox/radio
-$checkbox-focus-border-color: 	$input-focus-border-color;						// Border color for checkbox/radio on focus
-$checkbox-bottom-spacing:		3px;											// Bottom spacing for checkbox/radio
-$checkbox-disabled-opacity:		$input-disabled-opacity;						// Opacity for disabled checkbox/radio
+$button-group-mobile-breakpoint:		767px;					// Breakpoint for button group mobile view
+$hide-file-inputs:				true;											// Should a style be added that makes all <input>s of type `file` hidden? (`true`/`false`) [1]
+$button-variant1-name:								'primary';		// Class name for button variant 1
+$button-variant1-back-color:					#6979c6;			// Background color for button variant 1
+$button-variant1-back-opacity:				1;						// Background opacity for button variant 1
+$button-variant1-hover-back-opacity:	0.75;					// Background opacity for button variant 1 on hover or focus
+$button-variant1-fore-color:					#fffddc;			// Text color for button variant 1
+$button-variant2-name:								'secondary';	// Class name for button variant 2
+$button-variant2-back-color:					#d2405f;			// Background color for button variant 2
+$button-variant2-back-opacity:				1;						// Background opacity for button variant 2
+$button-variant2-hover-back-opacity:	0.75;					// Background opacity for button variant 2 on hover or focus
+$button-variant2-fore-color:					#fffddc;			// Text color for button variant 2
+$button-variant3-name:								'tertiary';		// Class name for button variant 3
+$button-variant3-back-color:					#2b866d;			// Background color for button variant 3
+$button-variant3-back-opacity:				1;						// Background opacity for button variant 3
+$button-variant3-hover-back-opacity:	0.75;					// Background opacity for button variant 3 on hover or focus
+$button-variant3-fore-color:					#fffddc;			// Text color for button variant 3
+$button-variant4-name:								'inverse';		// Class name for button variant 4
+$button-variant4-back-color:					#331e36;			// Background color for button variant 4
+$button-variant4-back-opacity:				1;						// Background opacity for button variant 4
+$button-variant4-hover-back-opacity:	0.75;					// Background opacity for button variant 4 on hover or focus
+$button-variant4-fore-color:					#fffddc;		// Text color for button variant 4
+$button-style1-name:						'small';					// Class name for button style 1
+$button-style1-border-style:		0;								// Border style for button style 1
+$button-style1-border-radius:		2px;							// Border radius for button style 1
+$button-style1-padding:					4px 6px;					// Padding for button style 1
+$button-style1-margin:					6px 8px;					// Margin for button style 1
+$button-style2-name:						'large';					// Class name for button style 2
+$button-style2-border-style:		0;								// Border style for button style 2
+$button-style2-border-radius:		4px;							// Border radius for button style 2
+$button-style2-padding:					12px 18px;				// Padding for button style 2
+$button-style2-margin:					10px 8px;					// Margin for button style 2
+$checkbox-size:									16px;							// Size for checkbox/radio [2]
+$checkbox-back-color:						$input-back-color;// Background clor for checkbox/radio
+$checkbox-fore-color:						$input-fore-color;// Text/mark color for checkbox/radio
+$checkbox-border-thickness:			1px;							// Border thickness for checkbox/radio
+$checkbox-border-color:					#a9a2ba;					// Border color for checkbox/radio
+$checkbox-border-radius:		$input-border-radius;	// Border radius for checkbox/radio
+$checkbox-focus-border-color: 	$input-focus-border-color;	// Border color for checkbox/radio on focus
+$checkbox-bottom-spacing:				3px;							// Bottom spacing for checkbox/radio
+$checkbox-disabled-opacity:			$input-disabled-opacity;		// Opacity for disabled checkbox/radio
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values
 //	specified in the corresponding variables.

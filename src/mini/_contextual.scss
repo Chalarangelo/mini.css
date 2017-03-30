@@ -12,6 +12,10 @@ $alert-animated-name:			'animated' !default;			// Class name for animated alerts
 $include-tooltip:					true !default;						// Should tooltips be included? (`true`/`false`)
 $tooltip-name:						'tooltip' !default;				// Class name for the tooltips.
 $tooltip-bottom-name:			'bottom' !default;				// Bottom tooltip class name.
+// External variables' defaults are used only if you import this module on its own, without the rest of the framework.
+$back-color:							white !default;						// [External variable - core] Background color for everything.
+$fore-color:							black !default;						// [External variable - core] Foreground color for everything.
+$base-line-height:				1 !default;								// [External variable - core] Line height for everything.
 // Default styling for mark. Use mixins for alternate styles.
 mark {
 	@if $mark-back-color != $back-color {

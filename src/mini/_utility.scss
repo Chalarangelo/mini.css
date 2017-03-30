@@ -3,12 +3,16 @@
 */
 // Check the `_utility_mixins.scss` file to find this module's mixins.
 @import 'utility_mixins';
+$hidden-name:						'hidden' !default;					// Class name for hidden elements.
+$visually-hidden-name:	'visually-hidden' !default;	// Class name for visually hidden elements.
+$include-breadcrumbs:		true !default;							// [Hidden flag] Should breadcrumbs be included? (`true`/`false`)
+$breadcrumbs-name:			'breadcrumbs' !default;			// Class name for breadcrumbs.
+$include-close-icon:		true !default;							// [Hidden flag] Should the close icon be included? (`true`/`false`)
+$close-icon-name:				'close'!default;						// Class name for close icon.
 // The floats, clearfix and center-block flags are for legacy features.
 $include-floats:				false !default;							// Should floats be included? (`true`/`false`)
 $include-clearfix:			false !default;							// Should clearfix be included? (`true`/`false`)
 $include-center-block:	false !default;							// Should center block be included? (`true`/`false`)
-$include-breadcrumbs:		true !default;							// [Hidden flag] Should breadcrumbs be included? (`true`/`false`)
-$include-close-icon:		true !default;							// [Hidden flag] Should the close icon be included? (`true`/`false`)
 // Hidden elements class. ATTENTION: Uses !important.
 .#{$hidden-name}{
 	display: none !important;

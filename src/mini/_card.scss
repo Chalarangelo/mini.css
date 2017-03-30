@@ -8,6 +8,9 @@ $card-name:								'card' !default;					// Class name for the cards
 $card-section-name:				'section' !default;				// Class name for the cards' sections
 $card-section-media-name:	'media' !default;					// Class name for the cards' sections (media cotent)
 $card-normal-width:				320px !default;						// Width for normal cards
+// External variables' defaults are used only if you import this module on its own, without the rest of the framework.
+$back-color:							white !default;						// [External variable - core] Background color for everything.
+$fore-color:							black !default;						// [External variable - core] Foreground color for everything.
 // Card styling
 .#{$card-name} {
 	// Old syntax

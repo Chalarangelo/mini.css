@@ -5,7 +5,9 @@
 @import 'progress_mixins';
 // Progress elements use the progress element as their base.
 $progress-max-value:			100 !default;							// Arithmetic max value of <progress> - use integer values.
+$progress-height:					14px !default;						// Height of <progress>.
 $include-spinner-donut:		true !default;						// [Hidden flag] Should spinner donuts be enabled? (`true`/`false`)
+$spinner-donut-name:	'spinner-donut' !default;			// Class name for donut spinner.
 // Default styling for progress. Use mixins for alternate styles.
 progress {
 	display: block;
@@ -63,7 +65,7 @@ progress {
 	@supports (width: calc(100% - 2*#{$progress-left-right-margin})) or (width: -webkit-calc(100% - 2*#{$progress-left-right-margin})) {
 		progress {
 			width: 	-webkit-calc(100% - 2*#{$progress-left-right-margin});
-			width: 			calc(100% - 2*#{$progress-left-right-margin});
+			width: 					calc(100% - 2*#{$progress-left-right-margin});
 			margin: $progress-top-bottom-margin $progress-left-right-margin;
 		}
 	}
@@ -89,6 +91,6 @@ progress {
 		width: $spinner-donut-size;
 		height: $spinner-donut-size;
 		-webkit-animation: spinner-donut-anim 1.2s linear infinite;
-				animation: spinner-donut-anim 1.2s linear infinite;
+						animation: spinner-donut-anim 1.2s linear infinite;
 	}
 }

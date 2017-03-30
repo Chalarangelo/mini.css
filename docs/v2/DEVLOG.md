@@ -917,3 +917,8 @@
 - Updated `navigation`'s defaults to include class name defaults. Added *external variables* in `navigation` to remedy the problems that stem from single module usage.
 - Updated `input_control` with new **hidden flag** `$include-button-group` just in case and external variables, plus all the needed class names at the very top.
 - Updated `table` module with the required external variables and required names.
+- Added external variables to `card`.
+- Updated `tab` module with default breakpoint and added external variables as required.
+- Added external variables to `contextual`.
+- Updated defaults for `progress` module, no externals were needed.
+- Added more default values to `utility`. Default and external adding seems complete, I might have missed something, but good enough for now.

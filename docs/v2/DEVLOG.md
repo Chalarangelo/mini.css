@@ -911,3 +911,9 @@
 - Updated `utility` module, added proper **hidden flags** to `$include-breadcrumbs` and `$include-close-icon` to make it easier to disable those components.
 - Cleanup in both flavor files is now complete, added maintainers to the `mini-sucroa` file to meake it easier for people to reach the team behind it.
 - Added simple styling for `figcaption` element in `core`, updated both flavors with the required variables to make it usable.
+- After inspecting `grid`, it is clear that no changes will be required at all in terms of variables.
+- Minor restructure in `core`'s modules. More might be coming (more defaults - possibly in their own file).
+- Updated defaults for `grid` just to be more in line with everything else.
+- Updated `navigation`'s defaults to include class name defaults. Added *external variables* in `navigation` to remedy the problems that stem from single module usage.
+- Updated `input_control` with new **hidden flag** `$include-button-group` just in case and external variables, plus all the needed class names at the very top.
+- Updated `table` module with the required external variables and required names.

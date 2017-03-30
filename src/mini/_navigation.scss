@@ -6,12 +6,22 @@ $button-class-name:				'button' !default;				// Class name for the button-like e
 $header-logo-name:				'logo' !default;					// Class name for <header>'s logo.
 $header-colorize-svgs:		true !default;						// [Hidden flag] Colorizes SVGs in the <header> element's logo (`true`/`false`).
 $include-header-sticky:		false !default;						// Should the sticky class for <header> elements be included (`true`/`false`).
+$header-sticky-name:			'sticky' !default;				// Class name for sticky <header>.
 $include-footer-sticky:		false !default;						// Should the sticky class for <footer> elements be included (`true`/`false`).
+$footer-sticky-name:			'sticky' !default;				// Class name for sticky <footer>.
 $include-nav-styles:			true !default;						// [Hidden flag] Should <nav> elements by stylized? (`true`/`false`)
 $nav-sublink-prefix:			'sublink' !default;				// Prefix for the subcategory tabs in nav.
 $nav-sublink-depth:				2 !default;								// Amount of subcategory classes to add.
 $nav-sublink-padding-left:12px !default;						// Left padding to add to subcategories.
 $nav-include-sublink-bar: false !default;						// Should a border be added to the subcategories? (`true`/`false`)
+// External variables' defaults are used only if you import this module on its own, without the rest of the framework.
+$back-color:							white !default;						// [External variable - core] Background color for everything.
+$fore-color:							black !default;						// [External variable - core] Foreground color for everything.
+// Policy for below external flag is `ALWAYS_TRUE`. This is done due to links being underlined by default and as a safeguard from ugly branding.
+$apply-link-underline:		true !default;						// [External flag - core] Should underlining be applied to <a> elements? (`true`/`false`)
+$button-class-name:				'button' !default;				// [External variable - input_control] Name of the button-like element styling class.
+$button-box-shadow:0 1px 3px rgba(0,0,0, 0.1) !default;// [External variable - input_control] Value of button's box-shadow.
+$button-border-style: 1px solid transparent !default;	// [External variable - input_control] Value of button's border-style.
 // Header styling.
 header {
 	display: block;		// Correct display for older versions of IE.
@@ -34,7 +44,7 @@ header {
 	@if $header-box-shadow != none {
 		box-shadow: $header-box-shadow;
 	}
-	// Resposniveness for smaller displays, scrolls horizontally.
+	// Responsiveness for smaller displays, scrolls horizontally.
 	white-space: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;

@@ -4,13 +4,23 @@
 // Check the `_input_control_mixins.scss` file to find this module's mixins.
 @import 'input_control_mixins';
 // Different elements are styled based on the same set of rules.
-$include-fluid-input-group:		true !default;				// Should fluid input groups be included? (`true`/`false`)
+$input-group-name:		'input-group' !default;				// Class name for input groups.
+$include-fluid-input-group:	true !default;					// Should fluid input groups be included? (`true`/`false`)
+$input-group-fluid-name: 		'fluid' !default;				// Class name for fluid input groups.
+$button-class-name:					'button' !default;			// Class for custom button elements.
+$include-button-group:			true !default;					// [Hidden flag] Should button groups be enabled? (`true`/`false`)
+$button-group-name:					'button-group' !default;// Class for button groups.
 // The below option will use the legacy high specificity selectors for <input> element styling instead
 // of the less specific, yet less complicated and less bloated input selector. This only applies to
 // the pseudo-classes and states of the <input> controls and not the default styling of them.
 $input-high-specificity-selectors:	false !default;	// [Hidden flag] Use legacy selectors for <input> element styling (`true`/`false`).
-$hide-file-inputs: 						true !default;				// Should `file` <input> elements be hidden? (`true`/`false`)
-$hide-check-and-radio:				true !default;				// [Hidden flag] Should checkboxes and radios be hidden? (`true`/`false`)
+$hide-file-inputs: 					true !default;					// Should `file` <input> elements be hidden? (`true`/`false`)
+$hide-check-and-radio:			true !default;					// [Hidden flag] Should checkboxes and radios be hidden? (`true`/`false`)
+// External variables' defaults are used only if you import this module on its own, without the rest of the framework.
+$back-color:							white !default;						// [External variable - core] Background color for everything.
+$fore-color:							black !default;						// [External variable - core] Foreground color for everything.
+// Policy for below external flag is `ALWAYS_TRUE`. This is done due to links being underlined by default.
+$apply-link-underline:		true !default;						// [External flag - core] Should underlining be applied to <a> elements? (`true`/`false`)
 // Base form styling.
 form {
 	@if $form-back-color != $back-color {
@@ -273,47 +283,49 @@ a[role="button"], label[role="button"], [role="button"] {
 		font: inherit; 								// Change font propery to `inherit` in Safari.
 	}
 }
-// Button group definition
-.#{$button-group-name} {
-	// Old syntax
-	display: -webkit-box;
-	// New syntax
-	display: 	-webkit-flex;
-	display: 		 			flex;
-	border: $button-group-border-style;
-	@if $button-border-radius != 0 {
-		border-radius: $button-border-radius;
-	}
-	@if $button-group-margin != 0 {
-		margin: $button-group-margin;
-	}
-	@if $button-group-box-shadow != none {
-		box-shadow: $button-group-box-shadow;
-	}
-	button, [type="button"], [type="submit"], [type="reset"],
-	.#{$button-class-name}, [role="button"] {
-		margin: 0;
+@if $include-button-group {
+	// Button group definition
+	.#{$button-group-name} {
 		// Old syntax
-		-webkit-box-flex: 1;
-		max-width: 100%;
+		display: -webkit-box;
 		// New syntax
-		-webkit-flex-grow: 1;
-						flex-grow: 1;
-		-webkit-flex-basis: 0;
-						flex-basis: 0;
-		text-align: center;
-		border: 0;
+		display: 	-webkit-flex;
+		display: 		 			flex;
+		border: $button-group-border-style;
 		@if $button-border-radius != 0 {
-			border-radius: 0;
+			border-radius: $button-border-radius;
 		}
-		@if $button-group-border-style != 0 {
-			+ button, + [type="button"], + [type="submit"], + [type="reset"],
-			+ .#{$button-class-name}, + [role="button"] {
-				border-left: $button-group-border-style;
+		@if $button-group-margin != 0 {
+			margin: $button-group-margin;
+		}
+		@if $button-group-box-shadow != none {
+			box-shadow: $button-group-box-shadow;
+		}
+		button, [type="button"], [type="submit"], [type="reset"],
+		.#{$button-class-name}, [role="button"] {
+			margin: 0;
+			// Old syntax
+			-webkit-box-flex: 1;
+			max-width: 100%;
+			// New syntax
+			-webkit-flex-grow: 1;
+							flex-grow: 1;
+			-webkit-flex-basis: 0;
+							flex-basis: 0;
+			text-align: center;
+			border: 0;
+			@if $button-border-radius != 0 {
+				border-radius: 0;
 			}
-		}
-		@if $button-box-shadow != none {
-			box-shadow: none;
+			@if $button-group-border-style != 0 {
+				+ button, + [type="button"], + [type="submit"], + [type="reset"],
+				+ .#{$button-class-name}, + [role="button"] {
+					border-left: $button-group-border-style;
+				}
+			}
+			@if $button-box-shadow != none {
+				box-shadow: none;
+			}
 		}
 	}
 }

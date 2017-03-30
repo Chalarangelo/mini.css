@@ -3,7 +3,7 @@
 */
 // The grid system uses the flexbox module, meaning it might be incompatible with certain browsers.
 $use-four-step-grid:					false !default;				// Flag for the grid system choice (`true`/`false`).
-$include-parent-layout:				false !default;				// Flag for rows defining column layouts (`true`/`false`).
+$include-parent-layout:				true !default;				// Flag for rows defining column layouts (`true`/`false`).
 $grid-container-name:					'container' !default;	// Class name for the grid system container.
 $grid-container-side-padding:	20px !default;				// Padding for the grid container (left and right only).
 $grid-row-name:								'row' !default;				// Class name for the grid system rows.
@@ -16,9 +16,9 @@ $grid-order-normal-suffix:		'normal' !default;		// Class name suffix for grid co
 $grid-order-first-suffix:			'first' !default;			// Class name suffix for grid columns with highest priority.
 $grid-order-last-suffix:			'last' !default;			// Class name suffix for grid columns with lowest priorty.
 $grid-extra-small-prefix:			'xs' !default;				// Extra small screen class prefix for grid (four-step-grid-only).
-$grid-small-breakpoint:				768px !default;				// Small screen breakpoint for grid (four-step-grid-only).
+$grid-small-breakpoint:				480px !default;				// Small screen breakpoint for grid (four-step-grid-only).
 $grid-small-prefix:						'sm' !default;				// Small screen class prefix for grid.
-$grid-medium-breakpoint:			1024px !default;			// Medium screen breakpoint for grid.
+$grid-medium-breakpoint:			768px !default;				// Medium screen breakpoint for grid.
 $grid-medium-prefix:					'md' !default;				// Medium screen class prefix for grid.
 $grid-large-breakpoint:				1280px !default;			// Large screen breakpoint for grid.
 $grid-large-prefix:						'lg' !default;				// Large screen class prefix for grid.

@@ -1626,3 +1626,54 @@ ul.breadcrumbs {
 
 .shadow-large {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15) !important; }
+
+@media screen and (max-width: 767px) {
+  .hidden-sm {
+    display: none; } }
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hidden-md {
+    display: none; } }
+
+@media screen and (min-width: 1280px) {
+  .hidden-lg {
+    display: none; } }
+
+@media screen and (max-width: 767px) {
+  .visually-hidden-sm {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    overflow: hidden !important; } }
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .visually-hidden-md {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    overflow: hidden !important; } }
+
+@media screen and (min-width: 1280px) {
+  .visually-hidden-lg {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    overflow: hidden !important; } }

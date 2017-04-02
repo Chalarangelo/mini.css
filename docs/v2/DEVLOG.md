@@ -926,3 +926,7 @@
 ## 20170402
 
 - Updated `@media` queries in all modules to utilize `screen`, so that layout changes will only apply to screens (irrelevant in print). `print` stylesheets are coming later down the line and all layouts will print as if in *small* screens (basically `col-sm-...` layouts), to simplifiy everything. Size increased from `6.79KB` to `6.82KB`, worthwhile cost.
+- Added resposnive hiding (both normal and accessible) in `utility_mixins` via the `make-hidden-responsive` and `make-visually-hidden-responsive` `mixin`s. Both have as many defaults as possible to make things easier.
+- Updated `make-margin-responsive` and `make-padding-responsive` `mixin`s to make sure they are now compatible with four-step grid (legacy).
+- Added `.hidden-` and `.visually-hidden-` elements to both flavors via new `mixin`s. Current size for `default` is `6.88KB` gzipped, reasonable tradeoff for a much requested and needed feature.
+- *TODO* update documentation pages to showcase the new responsive hiding, add codepen etc.

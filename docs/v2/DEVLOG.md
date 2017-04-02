@@ -922,3 +922,7 @@
 - Added external variables to `contextual`.
 - Updated defaults for `progress` module, no externals were needed.
 - Added more default values to `utility`. Default and external adding seems complete, I might have missed something, but good enough for now.
+
+## 20170402
+
+- Updated `@media` queries in all modules to utilize `screen`, so that layout changes will only apply to screens (irrelevant in print). `print` stylesheets are coming later down the line and all layouts will print as if in *small* screens (basically `col-sm-...` layouts), to simplifiy everything. Size increased from `6.79KB` to `6.82KB`, worthwhile cost.

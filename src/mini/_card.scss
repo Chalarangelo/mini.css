@@ -76,7 +76,7 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 	}
 }
 // Responsiveness (if the screen is larger than card, set max-width)
-@media (min-width: #{$card-normal-width}) {
+@media screen and (min-width: #{$card-normal-width}) {
 	.#{$card-name} {
 		max-width: $card-normal-width;
 	}

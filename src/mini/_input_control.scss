@@ -110,7 +110,7 @@ legend {
 }
 // Responsiveness for fluid input groups
 @if $include-fluid-input-group {
-	@media (max-width: #{$input-group-mobile-breakpoint}) {
+	@media screen and (max-width: #{$input-group-mobile-breakpoint}) {
 		.#{$input-group-name}.#{$input-group-fluid-name} {
 			// Old syntax
 			-webkit-box-orient: vertical;
@@ -330,7 +330,7 @@ a[role="button"], label[role="button"], [role="button"] {
 	}
 }
 // Responsiveness for button groups
-@media (max-width: #{$button-group-mobile-breakpoint}) {
+@media screen and (max-width: #{$button-group-mobile-breakpoint}) {
 	.#{$button-group-name} {
 		// Old syntax
 		-webkit-box-orient: vertical;

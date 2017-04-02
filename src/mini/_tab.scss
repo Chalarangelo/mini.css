@@ -212,7 +212,7 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 	}
 }
 // Responsiveness
-@media (max-width: #{$tab-stacked-breakpoint}) {
+@media screen and (max-width: #{$tab-stacked-breakpoint}) {
 	.#{$tab-container-name} {
 		// Old syntax
 		-webkit-box-orient: vertical;

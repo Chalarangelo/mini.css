@@ -199,7 +199,7 @@ figcaption {
   flex: 0 0 auto;
   padding: 0 4px; }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .row[class*='cols-md-'] > * {
     box-sizing: border-box;
     -webkit-box-flex: 0;
@@ -207,7 +207,7 @@ figcaption {
     flex: 0 0 auto;
     padding: 0 4px; } }
 
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .row[class*='cols-lg-'] > * {
     box-sizing: border-box;
     -webkit-box-flex: 0;
@@ -353,7 +353,7 @@ figcaption {
   -webkit-order: 999;
   order: 999; }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .col-md,
   [class^='col-md-'],
   [class^='col-md-offset-'] {
@@ -464,7 +464,7 @@ figcaption {
     -webkit-order: 999;
     order: 999; } }
 
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .col-lg,
   [class^='col-lg-'],
   [class^='col-lg-offset-'] {
@@ -703,7 +703,7 @@ label {
       -webkit-flex-basis: 0;
       flex-basis: 0; }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .input-group.fluid {
     -webkit-box-orient: vertical;
     -webkit-align-items: stretch;
@@ -853,7 +853,7 @@ input[type="file"] {
     .button-group [role="button"] + .button, .button-group [role="button"] + [role="button"] {
       border-left: 1px solid #a9a2ba; }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .button-group {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
@@ -1008,7 +1008,7 @@ table {
   table th:first-child, table td:first-child {
     border-left: 0; }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   table:not(.preset) {
     border-collapse: collapse;
     border: 0;
@@ -1047,7 +1047,7 @@ table {
 table.striped tr:nth-of-type(2n) > td {
   background: #ece4ff; }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   table.striped:not(.preset) tr:nth-of-type(2n) {
     background: #ece4ff; } }
 
@@ -1090,18 +1090,18 @@ table.striped tr:nth-of-type(2n) > td {
   .card > .section:last-child {
     border-bottom: 0; }
 
-@media (min-width: 320px) {
+@media screen and (min-width: 320px) {
   .card {
     max-width: 320px; } }
 
 /*
 	Custom elements for cards and containers.
 */
-@media (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .card.large {
     max-width: 480px; } }
 
-@media (min-width: 240px) {
+@media screen and (min-width: 240px) {
   .card.small {
     max-width: 240px; } }
 
@@ -1242,7 +1242,7 @@ table.striped tr:nth-of-type(2n) > td {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px; }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .tabs {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
@@ -1596,22 +1596,22 @@ ul.breadcrumbs {
 .responsive-margin {
   margin: 3px !important; }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .responsive-margin {
     margin: 6px !important; } }
 
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .responsive-margin {
     margin: 10px !important; } }
 
 .responsive-padding {
   padding: 2px 3px !important; }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .responsive-padding {
     padding: 4px 6px !important; } }
 
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .responsive-padding {
     padding: 8px 10px !important; } }
 

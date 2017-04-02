@@ -40,12 +40,12 @@
 	.#{$margin-name} {
 		margin: $margin-small-value !important;
 	}
-	@media (min-width: #{$margin-medium-breakpoint}) {
+	@media screen and (min-width: #{$margin-medium-breakpoint}) {
 		.#{$margin-name} {
 			margin: $margin-medium-value !important;
 		}
 	}
-	@media (min-width: #{$margin-large-breakpoint}) {
+	@media screen and (min-width: #{$margin-large-breakpoint}) {
 		.#{$margin-name} {
 			margin: $margin-large-value !important;
 		}
@@ -65,12 +65,12 @@
 	.#{$padding-name} {
 		padding: $padding-small-value !important;
 	}
-	@media (min-width: #{$padding-medium-breakpoint}) {
+	@media screen and (min-width: #{$padding-medium-breakpoint}) {
 		.#{$padding-name} {
 			padding: $padding-medium-value !important;
 		}
 	}
-	@media (min-width: #{$padding-large-breakpoint}) {
+	@media screen and (min-width: #{$padding-large-breakpoint}) {
 		.#{$padding-name} {
 			padding: $padding-large-value !important;
 		}

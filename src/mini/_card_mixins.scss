@@ -12,7 +12,7 @@
 		}
 	}
 	@else {
-		@media (min-width: #{$card-alt-size-width}) {
+		@media screen and (min-width: #{$card-alt-size-width}) {
 			.#{$card-name}.#{$card-alt-size-name} {
 				max-width: $card-alt-size-width;
 			}

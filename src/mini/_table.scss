@@ -64,7 +64,7 @@ table {
 	}
 }
 // Mobile view for responsive tables.
-@media (max-width: #{$table-mobile-breakpoint}) {
+@media screen and (max-width: #{$table-mobile-breakpoint}) {
 	table:not(.#{$table-not-responsive-name}) {
 		border-collapse: collapse;
 		border: 0;
@@ -121,7 +121,7 @@ table {
 }
 // Horizontal table view.
 @if $include-horizontal-table {
-	@media (min-width: #{$table-horizontal-breakpoint}) {
+	@media screen and (min-width: #{$table-horizontal-breakpoint}) {
 		table.#{$table-horizontal-name} {
 			// Old syntax
 			display: -webkit-box;
@@ -209,7 +209,7 @@ table {
 		}
 	}
 	// Horizontal table view for non-responsive tables. - Apply over breakpoint when non-responsive.
-	@media (max-width: #{$table-mobile-breakpoint}) {
+	@media screen and (max-width: #{$table-mobile-breakpoint}) {
 		table.#{$table-horizontal-name}.#{$table-not-responsive-name} {
 			// Old syntax
 			display: -webkit-box;
@@ -299,7 +299,7 @@ table {
 		}
 	}
 	// Responsiveness for striped tables.
-	@media (max-width: #{$table-mobile-breakpoint}) {
+	@media screen and (max-width: #{$table-mobile-breakpoint}) {
 		table.#{$table-striped-name}:not(.#{$table-not-responsive-name}) {
 			tr:nth-of-type(2n) {
 				background: $table-striped-alt-body-back-color;

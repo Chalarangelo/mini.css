@@ -937,3 +937,6 @@
 - Started developing `mini-lite` flavor (`lite`) as a very lightweight barebones base for the framework, using the default style for the most part. Size is under `5KB` for starters.
 - Updated `lite`, removed extra stuff, made it as simple as possible, still under `5KB`.
 - Tested `lite` using a quick demo in `Codepen` (*TODO* actually make a demo of it in a Codepen), no problems found, runs great.
+- Started documenting the `customization` pages which will serve as a replacement for the old *wiki*. Created `index.html` in the new `customization` folder and added most of the basic info.
+- Updated all old navigation links for `Customization` to point to the new folder and its `index.html` page.
+- Removed content from old `customization.html` page and added a redirection directive to take visitors to the new page.

@@ -328,22 +328,22 @@ a[role="button"], label[role="button"], [role="button"] {
 			}
 		}
 	}
-}
-// Responsiveness for button groups
-@media screen and (max-width: #{$button-group-mobile-breakpoint}) {
-	.#{$button-group-name} {
-		// Old syntax
-		-webkit-box-orient: vertical;
-		// New syntax
-		-webkit-flex-direction: column;
-						flex-direction: column;
-		@if $button-group-border-style !=0 {
-			button, [type="button"], [type="submit"], [type="reset"],
-			.#{$button-class-name}, [role="button"] {
-				+ button, + [type="button"], + [type="submit"], + [type="reset"],
-				+ .#{$button-class-name}, + [role="button"] {
-					border: 0;
-					border-top: $button-group-border-style;
+	// Responsiveness for button groups
+	@media screen and (max-width: #{$button-group-mobile-breakpoint}) {
+		.#{$button-group-name} {
+			// Old syntax
+			-webkit-box-orient: vertical;
+			// New syntax
+			-webkit-flex-direction: column;
+							flex-direction: column;
+			@if $button-group-border-style !=0 {
+				button, [type="button"], [type="submit"], [type="reset"],
+				.#{$button-class-name}, [role="button"] {
+					+ button, + [type="button"], + [type="submit"], + [type="reset"],
+					+ .#{$button-class-name}, + [role="button"] {
+						border: 0;
+						border-top: $button-group-border-style;
+					}
 				}
 			}
 		}

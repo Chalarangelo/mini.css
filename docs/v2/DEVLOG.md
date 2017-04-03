@@ -930,3 +930,8 @@
 - Updated `make-margin-responsive` and `make-padding-responsive` `mixin`s to make sure they are now compatible with four-step grid (legacy).
 - Added `.hidden-` and `.visually-hidden-` elements to both flavors via new `mixin`s. Current size for `default` is `6.88KB` gzipped, reasonable tradeoff for a much requested and needed feature.
 - *TODO* update documentation pages to showcase the new responsive hiding, add codepen etc.
+
+## 20170403
+
+- Minor update to `input_control`'s code to fix a small problem with it.
+- Started developing `mini-lite` flavor (`lite`) as a very lightweight barebones base for the framework, using the default style for the most part. Size is under `5KB` for starters.

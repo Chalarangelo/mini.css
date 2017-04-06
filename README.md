@@ -13,9 +13,9 @@ A minimal, responsive, style-agnostic CSS framework
 
 You have 3 options when it comes to setting up **mini.css**:
 
-1. [Use a package manager](#method-1-use-a-package-manager-recommended-) (recommended)
+1. [Use a package manager](#method-1-use-a-package-manager-recommended) (recommended)
 2. [Use GitCDN](#method-2-use-gitcdn)
-3. [Use cdnjs](#method-3-use-cdnjs-preferred-for-older-releases-) (preferred for older releases)
+3. [Use cdnjs](#method-3-use-cdnjs-preferred-for-older-releases) (preferred for older releases)
 
 For instructions on how to use, best practices, templates and other usage information, please visit the framework's [documentation](https://chalarangelo.github.io/mini.css/modules.html).
 

@@ -3,6 +3,7 @@
   <head>
 	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
 	<title>mini.css - Minimal, responsive, style-agnostic CSS framework</title>
 	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
@@ -10,15 +11,39 @@
 	<meta name="author" content="Angelos Chalaris (chalarangelo)">
 	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
 	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
-	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.PNG">
+	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.png">
 	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
 	<style>
-	#header-logo { position:relative; top: -4px; display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px; padding: 4px; }
-	#top-area { height: 320px; background: -webkit-linear-gradient(#455a64,#192024); background: linear-gradient(#455a64,#192024);}
-	#top-logo {display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px; background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);}
-	#top-heading { color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;}
-	@media (min-width: 768px) { #top-area {height: 440px;} #top-logo {margin: 88px auto -24px;} #top-heading {margin-bottom: -6px;} }
-	#top-version-tag { padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35); }
+	#logo-body { position: relative; background: -webkit-linear-gradient(#07020d 25%, #150627 45%, #220a40 75%, #300d5a); background: linear-gradient(#07020d 25%, #150627 45%, #220a40 75%, #300d5a); height: -webkit-calc(100vh - 48px); height: calc(100vh - 48px); overflow: hidden; text-align: center; }
+	#description { color: #f5f5f5; font-family: 'Noto Sans', sans-serif; position: absolute; top: 49vh; width: 100%; margin: 0; }
+	#top-heading { color: #f5f5f5; font-size: 2.8em; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); position: absolute; margin: 0; top: 35vh; width: 100%; height: 20vh; min-height: 42px; font-family: 'Noto Sans', sans-serif; }
+	#top-vtag-cont { width: 100%; text-align: center; }
+	#top-version-tag { padding: 8px 8px; font-size: 1.2em; font-weight: 700; font-family: 'Noto Sans', sans-serif; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); position: absolute; top: 55vh; width: 40px; background: #4527a0; border-radius: 6px; margin: 0; margin-left: -30px; }
+	@media screen and (max-height:480px) { #top-version-tag { top: 70vh; } #description { top: 55vh;}}
+	#mt1 { position: absolute; bottom: 0; left: -7vw; width: 0; height: 0; border-left: 12vw solid transparent; border-right: 11vw solid transparent; border-bottom: 8.5vw solid #07020d; }
+	#mt1:after { content: ""; position: absolute; left: -1.4vw; border-left: 1.4vw solid transparent; border-right: 11vw solid transparent; border-bottom: 8.5vw solid #150627; z-index: 2; }
+	#mt2 { position: absolute; bottom: -0.4vw; left: 10vw; width: 0; height: 0; border-left: 7vw solid transparent; border-right: 10vw solid transparent; border-bottom: 7vw solid #120520; z-index: 3; }
+	#mt2:after { content: ""; position: absolute; left: -1.3vw; border-left: 1.3vw solid transparent; border-right: 10vw solid transparent; border-bottom: 7vw solid #1b0833; z-index: 4; }
+	#mt3 { position: absolute; bottom: 0; right: 17.75vw; width: 0; height: 0; border-left: 7vw solid transparent; border-right: 8vw solid transparent; border-bottom: 5vw solid #1b0833; z-index: 3; }
+	#mt3:after { content: ""; position: absolute; left: -7vw; border-left: 7vw solid transparent; border-right: 1.7vw solid transparent; border-bottom: 5vw solid #220a40; z-index: 4; }
+	#mt4 { position: absolute; bottom: -0.25vw; right: 9.25vw; width: 0; height: 0; border-left: 6.25vw solid transparent; border-right: 8vw solid transparent; border-bottom: 5.75vw solid #150627; }
+	#mt4:after { content: ""; position: absolute; left: -6.25vw; border-left: 6.25vw solid transparent; border-right: 2.15vw solid transparent; border-bottom: 5.75vw solid #1f0a3b; z-index: 2;}
+	#mt5 { position: absolute; bottom: 0; right: -7vw; width: 0; height: 0; border-left: 6vw solid transparent; border-right: 11vw solid transparent; border-bottom: 8vw solid #0e041a; }
+	#mt5:after { content: ""; position: absolute; left: -6vw; border-left: 6vw solid transparent; border-right: 2vw solid transparent; border-bottom: 8vw solid #1b0833; z-index: 2; }
+	@media screen and (max-width: 767px) {
+  	#mt1 { left: -10.5vw; border-left: 18vw solid transparent; border-right: 16.5vw solid transparent; border-bottom: 12.75vw solid #07020d; }
+  	#mt1:after { left: -2.1vw; border-left: 2.1vw solid transparent; border-right: 16.5vw solid transparent; border-bottom: 12.75vw solid #150627; }
+		#mt2 { bottom: -0.6vw; left: 15vw; border-left: 10.5vw solid transparent; border-right: 15vw solid transparent; border-bottom: 10.5vw solid #120520; }
+  	#mt2:after { left: -1.95vw; border-left: 1.95vw solid transparent; border-right: 15vw solid transparent; border-bottom: 10.5vw solid #1b0833; }
+  	#mt3 { right: 26.625vw; border-left: 10.5vw solid transparent; border-right: 12vw solid transparent; border-bottom: 7.5vw solid #1b0833; }
+  	#mt3:after { left: -10.5vw; border-left: 10.5vw solid transparent; border-right: 2.55vw solid transparent; border-bottom: 7.5vw solid #220a40; }
+  	#mt4 { bottom: -0.375vw; right: 13.875vw; border-left: 9.375vw solid transparent; border-right: 12vw solid transparent; border-bottom: 8.625vw solid #150627; }
+  	#mt4:after { left: -9.375vw; border-left: 9.375vw solid transparent; border-right: 3.225vw solid transparent; border-bottom: 8.625vw solid #1f0a3b; }
+  	#mt5 { right: -10.5vw; border-left: 9vw solid transparent; border-right: 16.5vw solid transparent; border-bottom: 12vw solid #0e041a; }
+  	#mt5:after { left: -9vw; border-left: 9vw solid transparent; border-right: 3vw solid transparent; border-bottom: 12vw solid #1b0833;}
+	}
+	#codename { position: absolute; bottom: 2px; right: 3px; color: #616161; z-index: 5; font-size: 0.55em; font-family: 'Noto Sans', sans-serif; }
+	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
 	.box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
 	.box-colored.red { background: #e53935; } .box-centered { text-align: center; }
 	.box-centered > .card.fluid { -webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start;
@@ -28,20 +53,19 @@
 	</style>
   </head>
   <body>
-    <div class="container" id="top-area"><div class="row">
-        <div class="col-sm"><div class="box-centered"> <img src="mini-logo.svg" id="top-logo">
-            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
-            <mark class="tertiary" id="top-version-tag">v2.1</mark>
-        </div></div>
-    </div></div>
-	<header class="sticky">
-		<a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a>
-		<div style="display: inline; overflow: auto;">
-			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
-			<a href="flavors.html" class="button">Flavors</a> <a href="customization/index.html" class="button">Customization</a>
-			<a href="quick_reference.html" class="button">Quick Reference</a>
-			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+		<div id="logo-body">
+  		<p id="description">minimal, responsive, style-agnostic CSS framework</p>
+    	<h1 id="top-heading"><span style="font-size: 1.45em; font-family: 'Noto Sans', sans-serif;">m</span>ini<span style="font-size:0.65em; color: #4527a0; font-family: 'Noto Sans', sans-serif;">.css</span></h1>
+  		<p id="top-vtag-cont"><mark id="top-version-tag">v2.1</mark></p>
+  		<div id="mt1"></div><div id="mt2"></div><div id="mt3"></div><div id="mt4"></div><div id="mt5"></div>
+  		<small id="codename">Fermion</small>
 		</div>
+	<header class="sticky">
+		<a href="index.html" class="logo"><span id="header-logo">m</span></a>
+		<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
+		<a href="flavors.html" class="button">Flavors</a> <a href="customization/index.html" class="button">Customization</a>
+		<a href="quick_reference.html" class="button">Quick Reference</a>
+		<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 	</header>
     <!-- Insert your page content here-->
     <main><div class="container">

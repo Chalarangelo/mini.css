@@ -1,7 +1,7 @@
 # mini.css v2.1.0
 ## A minimal, responsive, style-agnostic CSS toolkit
 
-![Logo](/docs/page_thumb.PNG)
+![Logo](/docs/page_thumb.png)
 
 **mini.css** is a tiny CSS toolkit (under 7KB gzipped) that works well on most modern browsers and devices and allows you to customize it quickly and easily. It's written in Sass and tries to make use of HTML5 semantics and modern patterns to deal with common web design problems. You can learn all about using it, its modules and components, as well as see a live demo [here](https://chalarangelo.github.io/mini.css/).
 

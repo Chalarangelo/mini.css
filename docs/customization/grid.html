@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+	<title>mini.css - Grid</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, grid ">
+	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+	<meta property="og:type" content="website"/><meta property="og:image" content="../page_thumb.png">
+	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="../favicon.png">
+	<style>
+	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
+	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
+	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	.col-sm-12.col-sm-last.col-md-4.col-md-normal {box-sizing: border-box;border-right: 1px solid #bdbdbd;}
+	@media (max-width: 767px){.col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd;} }
+	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
+	.box-colored {color: #f5f5f5; } header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	.col-sm-12.col-sm-last.col-md-12.col-md-normal {box-sizing: border-box;border-bottom: 1px solid #bdbdbd;margin-bottom: 16px;padding-bottom: 12px;}
+	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-12.col-md-normal { border: 0; border-top: 1px solid #bdbdbd; margin-bottom: 0;}}
+	</style>
+  </head>
+  <body>
+		<header>
+			<a href="../index.html" class="logo"><span id="header-logo">m</span></a>
+			<a href="../index.html" class="button">Introduction</a> <a href="../modules.html" class="button">Modules</a>
+			<a href="../flavors.html" class="button">Flavors</a> <a href="index.html" class="button">Customization</a>
+			<a href="../quick_reference.html" class="button">Quick Reference</a>
+			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+		</header>
+	  <header class="sticky" style="height:36px;">
+  		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
+  		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
+  		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
+  		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
+  		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
+  	</header>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <h1>Grid</h1>
+          <p>The <strong>grid</strong> module provides you with a modern, responsive grid system based on the Flexible Layout Module (commonly known as <em>flexbox</em>). The structure of the grid is simple and logical, allowing you to quickly build your pages from scratch. Setting the layout for a page is easy and will behave the way you want them to on mobile devices and smaller screens.</p>
+          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
+          <ul class="breadcrumbs"><li><a href="../index.html">Home</a></li><li><a href="index.html">Customization</a></li><li>Grid</li></ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Quick overview</h2>
+              <p>Easy page layout is one of the main advantages of using a CSS framework over writing your own styles. The <strong>grid</strong> module utilizes the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Layout</a> to provide you with a modern and responsive layout grid system for all your needs. Rules in the <strong>grid</strong> module help you create basic fluid containers for your grid and allow you to design layouts that work well on all screen sizes using a simple row and column structure. The grid system contains definitions for both fluid columns that resize according to their siblings and columns with preset sizes on different screen sizes, as well as rules that allow you to offset or move certain columns to the first or last place on the grid's row on different devices, helping you present the page in a different layout without duplicating any content. All of the rules in the module are built around accessibility, so screen readers can easily read you pages.</p><br>
+            </div>
+            <div class="section">
+              <h2>Quick start</h2>
+              <p>To use the <strong>grid</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
+              <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+			<div class="row" style="padding-bottom: 20px; padding-top:20px;">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<p>If you want to learn more about customizing <strong>mini.css</strong>, go back to the <a href="index.html">customization page</a> or choose a module from the top menu to see its documentation.</p>
+				</div>
+			</div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

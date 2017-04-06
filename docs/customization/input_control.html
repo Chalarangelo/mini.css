@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+	<title>mini.css - Input Control</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, input, control, form, button ">
+	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+	<meta property="og:type" content="website"/><meta property="og:image" content="../page_thumb.png">
+	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="../favicon.png">
+	<style>
+	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
+	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
+	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	.col-sm-12.col-sm-last.col-lg-4.col-lg-normal { box-sizing: border-box; border-right: 1px solid #bdbdbd;}
+	@media (max-width: 767px){.col-sm-12.col-sm-last.col-lg-4.col-lg-normal {border: 0;border-top: 1px solid #bdbdbd;}}
+	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
+	.box-colored {color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	.responsive-label {align-items: center;} @media (min-width: 768px) { .responsive-label .col-md-3 {text-align: right;}}
+	</style>
+  </head>
+  <body>
+		<header>
+			<a href="../index.html" class="logo"><span id="header-logo">m</span></a>
+			<a href="../index.html" class="button">Introduction</a> <a href="../modules.html" class="button">Modules</a>
+			<a href="../flavors.html" class="button">Flavors</a> <a href="index.html" class="button">Customization</a>
+			<a href="../quick_reference.html" class="button">Quick Reference</a>
+			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+		</header>
+	  <header class="sticky" style="height:36px;">
+  		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
+  		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
+  		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
+  		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
+  		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
+  	</header>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <h1>Input Control</h1>
+          <p>The <strong>input_control</strong> module contains rules that affect forms, input elements, buttons, checkboxes and radio buttons. All of these elements' styles are predefined, allowing you to create modern, responsive forms quickly. Layout alternatives are also provided if you want your forms to look a certain way.</p>
+          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
+          <ul class="breadcrumbs"><li><a href="../index.html">Home</a></li><li><a href="index.html">Customization</a></li><li>Input Control</li></ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Quick overview</h2>
+              <p>The presentation of forms, input fields, buttons and other interactive elements is always very important for any website or app. The <strong>input_control</strong> module provides you with much needed styling improvements for all of these elements, while keeping everything simple to use and understand, as well as combine with the other modules. Forms and input elements have a clean, modern design, while some elements like checkoxes and radio buttons get a much needed facelift. Buttons have also been stylized to look the same in all browsers, while keeping their design clean and allowing for a few color and size variants. Grouping inputs and labels or buttons is also part of this module and, as always, responsiveness is an important feature. Finally, all of the components are accessible, with a few minor caveats, that are discussed in their respective section in this page.</p><br>
+            </div>
+            <div class="section">
+              <h2>Quick start</h2>
+              <p>To use the <strong>input_control</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
+              <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+			<div class="row" style="padding-bottom: 20px; padding-top:20px;">
+        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+          <p>If you want to learn more about customizing <strong>mini.css</strong>, go back to the <a href="index.html">customization page</a> or choose a module from the top menu to see its documentation.</p>
+        </div>
+      </div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

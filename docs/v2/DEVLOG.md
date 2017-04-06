@@ -940,3 +940,15 @@
 - Started documenting the `customization` pages which will serve as a replacement for the old *wiki*. Created `index.html` in the new `customization` folder and added most of the basic info.
 - Updated all old navigation links for `Customization` to point to the new folder and its `index.html` page.
 - Removed content from old `customization.html` page and added a redirection directive to take visitors to the new page.
+
+## 20170405
+
+- Worked on rebranding quite a lot, set up a mockup of the new logo.
+
+## 20170406
+
+- Updated `index.html` with new logo, all other pages with new brand etc.
+- Updated `README.md` and added shields to it.
+- Decided to change preferred CDN from `rawgit` to `gitCDN` as it seems more stable and easier to use.
+- Opened issue in `cdnjs`'s repo for the library not auto-updating.
+- Created mostly empty pages for all modules under `/customization`.

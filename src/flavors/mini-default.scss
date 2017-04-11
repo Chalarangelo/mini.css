@@ -84,6 +84,8 @@ $style-samp-element:			false;										// Should styles for <samp> be included? 
 //$samp-element-back-color:		#2196f3;							// Background color for <samp>
 //$samp-element-border-style:	0;										// Border style for <samp>
 //$samp-element-border-radius:2px;									// Border radius for <samp>
+//$samp-element-box-shadow:													// Box shadow for <samp>
+//0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
 $include-dfn-fix:			true;													// Should the fix for Android 4.3 concerning <dfn> be included (`true`/`false`) [9]
 $small-font-size:			75%;													// Font size for <small> elements
 $sup-font-size:				75%;													// Font size for <sup> elements

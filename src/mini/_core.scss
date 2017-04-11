@@ -165,11 +165,11 @@ blockquote {
 	// Overwrite defaults
 	margin: $blockquote-margin;
 	padding: $blockquote-padding;
-	@if $blockquote-sidebar-style != 0 {
-		border-left: $blockquote-sidebar-style;
-	}
 	@if $blockquote-border-style != 0 {
 		border: $blockquote-border-style;
+	}
+	@if $blockquote-sidebar-style != 0 {
+		border-left: $blockquote-sidebar-style;
 	}
 	@if $blockquote-border-radius != 0 {
 		border-radius: $blockquote-border-radius;
@@ -289,6 +289,9 @@ $style-samp-element: false !default;
 		}
 		@if $samp-element-padding != 0 {
 			padding: $samp-element-padding;
+		}
+		@if $samp-element-box-shadow != none {
+			box-shadow: $samp-element-box-shadow;
 		}
 	}
 }

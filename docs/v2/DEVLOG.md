@@ -956,3 +956,6 @@
 ## 20170411
 
 - *TODO* Actually explain what the deal with Pull requests is, using a `dev` branch OR use `cdnjs`, provided the fact that it is now updated to the latest release (will it stay that way?).
+- Tweaked the way `border` was used inside `blockquote`, ordering wasn't doing me any favors. Should not cause any problems now. Random catch, thank you **hugging cat**!
+- Added `$samp-element-box-shadow` for consistency, mostly.
+- Fully documented customization page for `core` module.

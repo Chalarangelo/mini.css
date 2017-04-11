@@ -22,6 +22,8 @@
 	.col-sm-12.col-sm-last.col-md-4.col-md-normal { box-sizing: border-box; border-right: 1px solid #bdbdbd; }
 	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd; } }
 	header.sticky a.button { padding: 4px 6px; font-size: 0.95em; }
+	td:first-child, td:last-child { font-family: monospace, monospace; }
+	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;}
 	</style>
   </head>
   <body>
@@ -68,17 +70,104 @@
       <div class="row">
         <div class="col-sm-12 col-lg-10 col-lg-offset-1">
           <div class="card fluid">
-            <div class="section"><h2>Image responsiveness</h2></div>
-            <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-                <div><img src="https://placehold.it/800x600"></div>
-              </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>Image elements (<code>&lt;img&gt;</code>) are responsive by default, without the need for any special classes or anything else. We made sure they will scale down as necessary to display properly on smaller devices, while keeping their original aspect ratio, but they will never scale up above their original size.</p>
-                <h3>Sample code</h3>
-                <pre>&lt;img src=&quot;...&quot;&gt;</pre><br>
-              </div>
+            <div class="section"><h2>Typography &amp; headings</h2></div>
+            <div class="section">
+							<p>The <strong>core</strong> module's typography rules are quite extensive and deal with background &amp; foreground colors, used fonts, sizing and line height, along with heading and paragraph styling.</p><br/>
+							<table width="100%" class="striped">
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text and foregound color</td><td data-label="Sample value">#212121</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Body background color</td><td data-label="Sample value">#f5f5f5</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$base-font-family</td><td data-label="Type">Font family</td>
+										<td data-label="Description">Default font stack for all elements</td><td data-label="Sample value">sans-serif</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$base-root-font-size</td><td data-label="Type">Font size (<code>px</code> only)</td>
+										<td data-label="Description">Root font size</td><td data-label="Sample value">16px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$apply-defaults-to-all</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Applies default font sizing be to all elements<sup><a href="#typo-note-one">1</a></sup></td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$base-font-size</td><td data-label="Type">Font size (<code>em</code> or <code>rem</code> only)</td>
+										<td data-label="Description">Default font sizing for all elements<sup><a href="#typo-note-one">1</a></sup></td><td data-label="Sample value">sans-serif</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$base-line-height</td><td data-label="Type">Line height</td>
+										<td data-label="Description">Default line height for all elements</td><td data-label="Sample value">1.5</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$body-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for the body</td><td data-label="Sample value">4px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$h1-font-size</td><td data-label="Type">Font size (<code>em</code> preferred)</td>
+										<td data-label="Description">Font size for <code>&lt;h1&gt;</code> elements</td><td data-label="Sample value">2em</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$h2-font-size</td><td data-label="Type">Font size (<code>em</code> preferred)</td>
+										<td data-label="Description">Font size for <code>&lt;h2&gt;</code> elements</td><td data-label="Sample value">1.5em</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$h3-font-size</td><td data-label="Type">Font size (<code>em</code> preferred)</td>
+										<td data-label="Description">Font size for <code>&lt;h3&gt;</code> elements</td><td data-label="Sample value">1.25em</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$h4-font-size</td><td data-label="Type">Font size (<code>em</code> preferred)</td>
+										<td data-label="Description">Font size for <code>&lt;h4&gt;</code> elements</td><td data-label="Sample value">1.1em</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$h5-font-size</td><td data-label="Type">Font size (<code>em</code> preferred)</td>
+										<td data-label="Description">Font size for <code>&lt;h5&gt;</code> elements</td><td data-label="Sample value">1em</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$h6-font-size</td><td data-label="Type">Font size (<code>em</code> preferred)</td>
+										<td data-label="Description">Font size for <code>&lt;h6&gt;</code> elements</td><td data-label="Sample value">0.85em</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$heading-line-height</td><td data-label="Type">Line height</td>
+										<td data-label="Description">Default line height for heading elements</td><td data-label="Sample value">1.2</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$heading-font-weight</td><td data-label="Type">Font weight</td>
+										<td data-label="Description">Default font weight for heading elements</td><td data-label="Sample value">500</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$heading-smalltext-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Font color for <code>&lt;small&gt;</code> elements inside headings</td><td data-label="Sample value">#424242</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$make-heading-smalltext-block</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Makes <code>&lt;small&gt;</code> elements inside headings display below them<sup><a href="#typo-note-two">2</a></sup></td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$heading-smalltext-b-font-size</td><td data-label="Type">Font size (percentage preferred)</td>
+										<td data-label="Description">Font size for <code>&lt;small&gt;</code> elements inside headings<sup><a href="#typo-note-two">2</a></sup></td><td data-label="Sample value">75%</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$heading-smalltext-b-top-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Top margin for <code>&lt;small&gt;</code> elements inside headings<sup><a href="#typo-note-two">2</a></sup></td><td data-label="Sample value">-4px</td>
+									</tr>
+								</tbody>
+							</table><br/>
             </div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="typo-note-one">The value of <code>$base-font-size</code> will only be applied if <code>$apply-defaults-to-all</code> is set to <code class="fore-tertiary">true</code>.</li>
+								<li id="typo-note-two">The values of <code>$heading-smalltext-b-font-size</code> and <code>$heading-smalltext-b-top-margin</code> will only be applied if <code>$make-heading-smalltext-block</code> is set to <code class="fore-tertiary">true</code>.</li>
+							</ol>
+						</div>
           </div>
         </div>
       </div>

@@ -952,3 +952,7 @@
 - Decided to change preferred CDN from `rawgit` to `gitCDN` as it seems more stable and easier to use.
 - Opened issue in `cdnjs`'s repo for the library not auto-updating.
 - Created mostly empty pages for all modules under `/customization`.
+
+## 20170411
+
+- *TODO* Actually explain what the deal with Pull requests is, using a `dev` branch OR use `cdnjs`, provided the fact that it is now updated to the latest release (will it stay that way?).

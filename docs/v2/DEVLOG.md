@@ -959,3 +959,4 @@
 - Tweaked the way `border` was used inside `blockquote`, ordering wasn't doing me any favors. Should not cause any problems now. Random catch, thank you **hugging cat**!
 - Added `$samp-element-box-shadow` for consistency, mostly.
 - Fully documented customization page for `core` module.
+- Fully documented customization page for `grid` module.

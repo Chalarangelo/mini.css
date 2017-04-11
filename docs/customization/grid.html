@@ -24,6 +24,8 @@
 	.box-colored {color: #f5f5f5; } header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
 	.col-sm-12.col-sm-last.col-md-12.col-md-normal {box-sizing: border-box;border-bottom: 1px solid #bdbdbd;margin-bottom: 16px;padding-bottom: 12px;}
 	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-12.col-md-normal { border: 0; border-top: 1px solid #bdbdbd; margin-bottom: 0;}}
+	td:first-child, td:last-child { font-family: monospace, monospace; }
+	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;}
 	</style>
   </head>
   <body>
@@ -59,10 +61,114 @@
               <p>Easy page layout is one of the main advantages of using a CSS framework over writing your own styles. The <strong>grid</strong> module utilizes the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Layout</a> to provide you with a modern and responsive layout grid system for all your needs. Rules in the <strong>grid</strong> module help you create basic fluid containers for your grid and allow you to design layouts that work well on all screen sizes using a simple row and column structure. The grid system contains definitions for both fluid columns that resize according to their siblings and columns with preset sizes on different screen sizes, as well as rules that allow you to offset or move certain columns to the first or last place on the grid's row on different devices, helping you present the page in a different layout without duplicating any content. All of the rules in the module are built around accessibility, so screen readers can easily read you pages.</p><br>
             </div>
             <div class="section">
-              <h2>Quick start</h2>
-              <p>To use the <strong>grid</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
-              <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
+							<h2>Quick start</h2>
+              <p>To customize the <strong>grid</strong> module, duplicate an existing flavor file (we suggest you use the <code>mini-default.scss</code> flavor file) and use this page's variable tables and mixins as a reference to change only the values you need. Remember to compile your flavor file (not the module's partial file) using a Sass preprocessor (we highly recommend using <a href="https://atom.io/packages/sass-autocompile">sass-autocompile</a> if you are working with <a href="https://atom.io/">Atom</a>).</p><br>
             </div>
+          </div>
+        </div>
+      </div>
+
+			<div class="row">
+        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+          <div class="card fluid">
+            <div class="section"><h2>Classes &amp; breakpoints</h2></div>
+            <div class="section">
+							<p>The <strong>grid</strong> module's systems are based on custom-named classes for containers, rows and columns, as well as reordering and ofsetting classes, breakpoints and padding.</p><br/>
+							<table width="100%" class="striped">
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$grid-container-name</td><td data-label="Type">String</td>
+										<td data-label="Description">The class name for the grid system's container</td><td data-label="Sample value">'container'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-container-side-padding</td><td data-label="Type">Padding (single value)</td>
+										<td data-label="Description">Left and right padding for the grid system's container</td><td data-label="Sample value">10px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-container-column-count</td><td data-label="Type">Integer</td>
+										<td data-label="Description">Number of columns in the grid</td><td data-label="Sample value">12</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-column-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for the grid system's columns</td><td data-label="Sample value">0 4px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-row-name</td><td data-label="Type">String</td>
+										<td data-label="Description">The class name for the grid system's rows</td><td data-label="Sample value">'row'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-column-prefix</td><td data-label="Type">String</td>
+										<td data-label="Description">The class prefix for the grid sytem's columns</td><td data-label="Sample value">'col'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$use-four-step-grid</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Toggles the 4-step grid on or off<sup><a href="#grid-note-one">1</a></sup></td><td data-label="Sample value">false</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-extra-small-prefix</td><td data-label="Type">String</td>
+										<td data-label="Description">The class prefix for extra small screen columns<sup><a href="#grid-note-one">1</a></sup></td><td data-label="Sample value">'xs'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-small-breakpoint</td><td data-label="Type">Breakpoint</td>
+										<td data-label="Description">The grid system's breakpoint for small screens<sup><a href="#grid-note-one">1</a></sup></td><td data-label="Sample value">480px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-small-prefix</td><td data-label="Type">String</td>
+										<td data-label="Description">The class prefix for small screen columns</td><td data-label="Sample value">'sm'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-medium-breakpoint</td><td data-label="Type">Breakpoint</td>
+										<td data-label="Description">The grid system's breakpoint for medium-sized screens</td><td data-label="Sample value">768px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-medium-prefix</td><td data-label="Type">String</td>
+										<td data-label="Description">The class prefix for medium-sized screen columns</td><td data-label="Sample value">'md'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-large-breakpoint</td><td data-label="Type">Breakpoint</td>
+										<td data-label="Description">The grid system's breakpoint for large screens</td><td data-label="Sample value">1280px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-large-prefix</td><td data-label="Type">String</td>
+										<td data-label="Description">The class prefix for large screen columns</td><td data-label="Sample value">'lg'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$include-parent-layout</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Enables rows defining the column layout of their children<sup><a href="#grid-note-two">2</a></sup></td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-rows-parent-layout-prefix</td><td data-label="Type">String</td>
+										<td data-label="Description">The class prefix for the grid's row parents<sup><a href="#grid-note-two">2</a></sup></td><td data-label="Sample value">'cols'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-column-offset-suffix</td><td data-label="Type">String</td>
+										<td data-label="Description">The class suffix for the grid system's offset columns</td><td data-label="Sample value">'offset'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-column-normal-suffix</td><td data-label="Type">String</td>
+										<td data-label="Description">The class suffix for the grid system's normal order columns</td><td data-label="Sample value">'normal'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-column-first-suffix</td><td data-label="Type">String</td>
+										<td data-label="Description">The class suffix for the grid system's first order columns</td><td data-label="Sample value">'first'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$grid-column-last-suffix</td><td data-label="Type">String</td>
+										<td data-label="Description">The class suffix for the grid system's last order columns</td><td data-label="Sample value">'last'</td>
+									</tr>
+								</tbody>
+							</table><br/>
+            </div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="grid-note-one">The values of <code>$grid-extra-small-prefix</code> and <code>$grid-small-breakpoint</code> will only be used if <code>$use-four-step-grid</code> is set to <code class="fore-tertiary">true</code>.</li>
+								<li id="grid-note-two">The value of <code>$grid-row-parent-layout-prefix</code> will only be used if <code>$include-parent-layout</code> is set to <code class="fore-tertiary">true</code>.</li>
+							</ol>
+						</div>
           </div>
         </div>
       </div>

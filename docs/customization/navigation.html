@@ -57,14 +57,101 @@
               <p>Menus and navigation are some of the most important elements for any website or web app and their design and ease-of-use are key factors that can determine a page's bounce rates. The <strong>navigation</strong> module takes a step back from all the complicated menu and navigation design paradigms of the modern web, like dropdown menus and hamburger buttons, and tries to reinvent the basics for page navigation using HTML5 elements (i.e. <code>header</code>, <code>nav</code> and <code>footer</code>) and make navigation fully accessible for screen readers. Instead of sticking to either horizontal navigation menus (headers) or vertical menus (sidebars), we opted to allow the use of both for different things. Header menus are designed to stand out and contain links to help users find new content, whereas vertical navigation aims to provide a more traditional navigation menu that maps out your website's structure. Finally, footers are also part of the <strong>navigation</strong> module, as they can often provide the user with useful information and/or links that are very important to enhancing their experience.</p><br>
             </div>
             <div class="section">
-              <h2>Quick start</h2>
-              <p>To use the <strong>navigation</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
-              <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
+							<h2>Quick start</h2>
+              <p>To customize the <strong>navigation</strong> module, duplicate an existing flavor file (we suggest you use the <code>mini-default.scss</code> flavor file) and use this page's variable tables and mixins as a reference to change only the values you need. Remember to compile your flavor file (not the module's partial file) using a Sass preprocessor (we highly recommend using <a href="https://atom.io/packages/sass-autocompile">sass-autocompile</a> if you are working with <a href="https://atom.io/">Atom</a>).</p><br>
             </div>
           </div>
         </div>
       </div>
-      
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Header</h2></div>
+						<div class="section">
+							<p>The <strong>navigation</strong> module contains definitions for styling the <code>&lt;header&gt;</code> element, along with its contents (logo and links).</p><br/>
+							<table width="100%" class="striped">
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$header-height</td><td data-label="Type">Height</td>
+										<td data-label="Description">The height of the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">44px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">#263238</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">#fafafa</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">1px solid #424242</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">2px 8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-logo-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the <code>&lt;header&gt;</code> element's logo</td><td data-label="Sample value">'logo'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-logo-font-size</td><td data-label="Type">Font size</td>
+										<td data-label="Description">Font size for the <code>&lt;header&gt;</code> element's logo</td><td data-label="Sample value">1.75em</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-logo-line-height</td><td data-label="Type">Line height</td>
+										<td data-label="Description">Line height for the <code>&lt;header&gt;</code> element's logo</td><td data-label="Sample value">1.2</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-logo-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for the <code>&lt;header&gt;</code> element's logo</td><td data-label="Sample value">1px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-logo-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for the <code>&lt;header&gt;</code> element's logo</td><td data-label="Sample value">3px 0 0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-link-hover-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Hover color for the <code>&lt;header&gt;</code> element's links</td><td data-label="Sample value">#37474f</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-link-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for the <code>&lt;header&gt;</code> element's links</td><td data-label="Sample value">2px 0 0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$include-header-sticky</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Enables sticky <code>&lt;header&gt;</code> elements<sup><a href="#header-note-one">1</a></sup></td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-sticky-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the sticky <code>&lt;header&gt;</code> element<sup><a href="#header-note-one">1</a></sup></td><td data-label="Sample value">'sticky'</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="header-note-one">The value of <code>$header-sticky-name</code> will only be used if <code>$include-header-sticky</code> is set to <code class="fore-tertiary">true</code>.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12 col-lg-10 col-lg-offset-1">
           <p>If you want to learn more about customizing <strong>mini.css</strong>, go back to the <a href="index.html">customization page</a> or choose a module from the top menu to see its documentation.</p>

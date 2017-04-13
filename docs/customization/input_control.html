@@ -23,6 +23,8 @@
 	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
 	.box-colored {color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
 	.responsive-label {align-items: center;} @media (min-width: 768px) { .responsive-label .col-md-3 {text-align: right;}}
+	td:first-child, td:last-child { font-family: monospace, monospace; }
+	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;}
 	</style>
   </head>
   <body>
@@ -58,13 +60,232 @@
               <p>The presentation of forms, input fields, buttons and other interactive elements is always very important for any website or app. The <strong>input_control</strong> module provides you with much needed styling improvements for all of these elements, while keeping everything simple to use and understand, as well as combine with the other modules. Forms and input elements have a clean, modern design, while some elements like checkoxes and radio buttons get a much needed facelift. Buttons have also been stylized to look the same in all browsers, while keeping their design clean and allowing for a few color and size variants. Grouping inputs and labels or buttons is also part of this module and, as always, responsiveness is an important feature. Finally, all of the components are accessible, with a few minor caveats, that are discussed in their respective section in this page.</p><br>
             </div>
             <div class="section">
-              <h2>Quick start</h2>
-              <p>To use the <strong>input_control</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
-              <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
+							<h2>Quick start</h2>
+              <p>To customize the <strong>input_control</strong> module, duplicate an existing flavor file (we suggest you use the <code>mini-default.scss</code> flavor file) and use this page's variable tables and mixins as a reference to change only the values you need. Remember to compile your flavor file (not the module's partial file) using a Sass preprocessor (we highly recommend using <a href="https://atom.io/packages/sass-autocompile">sass-autocompile</a> if you are working with <a href="https://atom.io/">Atom</a>).</p><br>
             </div>
           </div>
         </div>
       </div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Forms &amp; input</h2></div>
+						<div class="section">
+							<p>The <strong>input_control</strong> module's forms and input fields can be easily customized to use different sizes and colors, as well as different class names for groupping.</p><br/>
+							<table width="100%" class="striped">
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$form-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">#eeeeee</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$form-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">$fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$form-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">1px solid #bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$form-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$form-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$form-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">12px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$form-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fieldset-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;fieldset&gt;</code> elements</td><td data-label="Sample value">$form-back-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fieldset-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for <code>&lt;fieldset&gt;</code> elements</td><td data-label="Sample value">1px solid #bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fieldset-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for <code>&lt;fieldset&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fieldset-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for <code>&lt;fieldset&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fieldset-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;fieldset&gt;</code> elements</td><td data-label="Sample value">8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$legend-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for <code>&lt;legend&gt;</code> elements</td><td data-label="Sample value">$form-fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$legend-font-size</td><td data-label="Type">Font size</td>
+										<td data-label="Description">Font size for <code>&lt;legend&gt;</code> elements</td><td data-label="Sample value">0.925em</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$legend-font-weight</td><td data-label="Type">Font weight</td>
+										<td data-label="Description">Font weight for <code>&lt;legend&gt;</code> elements</td><td data-label="Sample value">700</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$legend-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;legend&gt;</code> elements</td><td data-label="Sample value">2px 4px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$label-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;label&gt;</code> elements</td><td data-label="Sample value">4px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">#fafafa</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">$fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">1px solid #bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">1px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">8px 12px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-focus-border-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Border color for <code>&lt;input&gt;</code> elements (focused)</td><td data-label="Sample value">#0288d1</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-invalid-border-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Border color for <code>&lt;input&gt;</code> elements (invalid)</td><td data-label="Sample value">#d32f2f</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-readonly-border-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Border color for <code>&lt;input&gt;</code> elements (readonly)</td><td data-label="Sample value">#bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-readonly-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;input&gt;</code> elements (readonly)</td><td data-label="Sample value">#e0e0e0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-placeholder-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for placeholder text of <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">#616161</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-disabled-opacity</td><td data-label="Type">Opacity</td>
+										<td data-label="Description">Opacity of <code>&lt;input&gt;</code> elements (disabled)</td><td data-label="Sample value">0.75</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-group-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for input groups</td><td data-label="Sample value">'input-group'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$include-fluid-input-group</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Enables fluid input groups<sup><a href="#forms-note-one">1</a></sup></td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-group-fluid-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for fluid input groups<sup><a href="#forms-note-one">1</a></sup></td><td data-label="Sample value">'fluid'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-group-mobile-breakpoint</td><td data-label="Type">Breakpoint</td>
+										<td data-label="Description">Breakpoint for fluid input groups on mobile devices<sup><a href="#forms-note-one">1</a></sup></td><td data-label="Sample value">767px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$hide-file-inputs</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Hides all <code>&lt;input <span class="fore-secondary">type</span>=&quot;<span class="fore-primary">file</span>&quot;&gt;</code> elements, allowing access only via the use of labels</td><td data-label="Sample value">true</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="forms-note-one">The values of <code>$input-group-fluid-name</code> and <code>$input-group-mobile-breakpoint</code> will only be used if <code>$include-fluid-input-group</code> is set to <code class="fore-tertiary">true</code>.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Checkboxes &amp; radio buttons</h2></div>
+						<div class="section">
+							<p>The <strong>navigation</strong> module's checkbox and radio button elements are based on custom rules and depend on the use of <code>&lt;label&gt;</code> elements and input groups to be stylized and properly displayed.</p><br/>
+							<table width="100%" class="striped">
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$checkbox-size</td><td data-label="Type">Size (single value, <code>px</code> preferred)</td>
+										<td data-label="Description">The size of checkbox/radio elements (determines multiple values of the elements)</td><td data-label="Sample value">16px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for checkbox/radio elements</td><td data-label="Sample value">$input-back-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for checkbox/radio elements</td><td data-label="Sample value">$input-fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-border-thickness</td><td data-label="Type">Border width</td>
+										<td data-label="Description">Border width for checkbox/radio elements</td><td data-label="Sample value">1px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-border-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Border color for checkbox/radio elements</td><td data-label="Sample value">#bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for checkbox/radio elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-focus-border-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Border color for checkbox/radio elements (focused)</td><td data-label="Sample value">#0288d1</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-bottom-spacing</td><td data-label="Type">Position bottom (<code>px</code> preferred)</td>
+										<td data-label="Description">Position bottom spacing for checkbox/radio elements</td><td data-label="Sample value">6px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-disabled-opacity</td><td data-label="Type">Opacity</td>
+										<td data-label="Description">Opacity for checkbox/radio elements (disabled)</td><td data-label="Sample value">0.75</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="checkbox-note-one">It is highly recommended to stick to one unit type for the definitions of checkbox/radio elements (our suggestion is <code>px</code>).</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12 col-lg-10 col-lg-offset-1">

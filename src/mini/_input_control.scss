@@ -308,10 +308,8 @@ a[role="button"], label[role="button"], [role="button"] {
 			-webkit-box-flex: 1;
 			max-width: 100%;
 			// New syntax
-			-webkit-flex-grow: 1;
-							flex-grow: 1;
-			-webkit-flex-basis: 0;
-							flex-basis: 0;
+			-webkit-flex: 1 1 auto;
+							flex: 1 1 auto;
 			text-align: center;
 			border: 0;
 			@if $button-border-radius != 0 {

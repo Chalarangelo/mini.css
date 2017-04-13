@@ -965,3 +965,4 @@
 
 - Documented `navigation` module's customization page.
 - Resolved #63, replacing the `flex-grow` and `flex-shrink` properties with the `flex` shorthand. Everything should display properly across browsers now.
+- Fully documented `input_control` and `table` modules in terms of customization.

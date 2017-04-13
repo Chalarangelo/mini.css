@@ -28,6 +28,8 @@
 	table#carded td {display: block;border: 0; border-bottom: 1px solid #bdbdbd; text-align: right; }
 	table#carded td:before { content: attr(data-label); float: left; font-weight: 700; }
 	table#carded td:last-child { border-bottom: 0; } .border-fix > td, .border-fix > th { border-top: 0; }
+	td:first-child, td:last-child { font-family: monospace, monospace; }
+	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;}
 	</style>
   </head>
   <body>
@@ -63,14 +65,126 @@
               <p>Presenting information the right way is very important, especially so when dealing with large amounts of data. The <strong>table</strong> module reinvents tabular data presentation, using modern styling and responsiveness to help make tables fun again for all users no matter the device size. Tables can be either vertical or horizontal, both collapsing to a card view on smaller devices, so that they are easier to view properly. Horizontal tables are also flexible, allowing you to take as little space as possible, while still providing your users with a pleasant way to view their data. Finally, like in most CSS frameworks nowadays, you can stripe your tables to make reading them slightly less tiresome for your users' eyes. Note that all of the table variants are fully accessible.</p><br>
             </div>
             <div class="section">
-              <h2>Quick start</h2>
-              <p>To use the <strong>table</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
-              <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
+							<h2>Quick start</h2>
+              <p>To customize the <strong>table</strong> module, duplicate an existing flavor file (we suggest you use the <code>mini-default.scss</code> flavor file) and use this page's variable tables and mixins as a reference to change only the values you need. Remember to compile your flavor file (not the module's partial file) using a Sass preprocessor (we highly recommend using <a href="https://atom.io/packages/sass-autocompile">sass-autocompile</a> if you are working with <a href="https://atom.io/">Atom</a>).</p><br>
             </div>
           </div>
         </div>
       </div>
-      
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Table styling</h2></div>
+						<div class="section">
+							<p>The <strong>table</strong> module contains definitions for tables and table variants.</p><br/>
+							<table width="100%" class="striped">
+								<caption>Variables</caption>
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$table-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for <code>&lt;table&gt;</code> elements</td><td data-label="Sample value">1px solid #bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for <code>&lt;table&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for <code>&lt;table&gt;</code> elements</td><td data-label="Sample value">0 auto</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for <code>&lt;table&gt;</code> elements</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-caption-font-size</td><td data-label="Type">Font sizer</td>
+										<td data-label="Description">Font size for <code>&lt;caption&gt;</code> elements</td><td data-label="Sample value">1.5em</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-caption-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for <code>&lt;caption&gt;</code> elements</td><td data-label="Sample value">8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-row-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;tr&gt;</code> elements</td><td data-label="Sample value">8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-column-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;td&gt;</code> and <code>&lt;th&gt;</code> elements</td><td data-label="Sample value">10px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-head-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;th&gt;</code> elements</td><td data-label="Sample value">#e0e0e0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-head-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for <code>&lt;th&gt;</code> elements</td><td data-label="Sample value">$fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-body-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;td&gt;</code> elements</td><td data-label="Sample value">#fafafa</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-body-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for <code>&lt;td&gt;</code> elements</td><td data-label="Sample value">$fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-mobile-breakpoint</td><td data-label="Type">Breakpoint</td>
+										<td data-label="Description">Breakpoint for <code>&lt;table&gt;</code> elements' mobile view</td><td data-label="Sample value">767px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-mobile-card-spacing</td><td data-label="Type">Margin bottom</td>
+										<td data-label="Description">Bottom margin for <code>&lt;table&gt;</code> elements' cards in mobile view</td><td data-label="Sample value">10px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-mobile-card-label</td><td data-label="Type">String</td>
+										<td data-label="Description">Attribute used to replace headers for <code>&lt;table&gt;</code> elements in mobile view</td><td data-label="Sample value">'data-label'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-mobile-label-font-weight</td><td data-label="Type">Font weight</td>
+										<td data-label="Description">Font weight for the labels of <code>&lt;table&gt;</code> elements' cards in mobile view</td><td data-label="Sample value">700</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$include-horizontal-table</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Enables horizontal <code>&lt;table&gt;</code> elements<sup><a href="#table-note-one">1</a></sup></td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-horizontal-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for horizontal <code>&lt;table&gt;</code> elements<sup><a href="#table-note-one">1</a></sup></td><td data-label="Sample value">'horizontal'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-horizontal-breakpoint</td><td data-label="Type">Breakpoint</td>
+										<td data-label="Description">Breakpoint for horizontal <code>&lt;table&gt;</code> elements' mobile view<sup><a href="#table-note-one">1</a></sup></td><td data-label="Sample value">768px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-not-responsive-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for preset <code>&lt;table&gt;</code> elements</td><td data-label="Sample value">'preset'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-striped-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for striped <code>&lt;table&gt;</code> elements</td><td data-label="Sample value">'striped'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$table-striped-alt-body-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Secondary background color for striped <code>&lt;table&gt;</code> elements</td><td data-label="Sample value">#eeeeee</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="table-note-one">The values of <code>$table-horizontal-name</code> and <code>$table-horizontal-breakpoint</code> will only be used if <code>$include-horizontal-table</code> is set to <code class="fore-tertiary">true</code>.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12 col-lg-10 col-lg-offset-1">
           <p>If you want to learn more about customizing <strong>mini.css</strong>, go back to the <a href="index.html">customization page</a> or choose a module from the top menu to see its documentation.</p>

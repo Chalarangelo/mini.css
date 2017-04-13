@@ -960,3 +960,7 @@
 - Added `$samp-element-box-shadow` for consistency, mostly.
 - Fully documented customization page for `core` module.
 - Fully documented customization page for `grid` module.
+
+## 20170412
+
+- Documented `navigation` module's customization page.

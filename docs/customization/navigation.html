@@ -22,6 +22,8 @@
 	@media (max-width: 1279px){.col-sm-12.col-sm-last.col-lg-4.col-lg-normal {border: 0;border-top: 1px solid #bdbdbd;}}
 	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
 	.box-colored { color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	td:first-child, td:last-child { font-family: monospace, monospace; }
+	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;}
 	</style>
   </head>
   <body>
@@ -146,6 +148,90 @@
 							<h3>Notes:</h3>
 							<ol>
 								<li id="header-note-one">The value of <code>$header-sticky-name</code> will only be used if <code>$include-header-sticky</code> is set to <code class="fore-tertiary">true</code>.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Navigation bar</h2></div>
+						<div class="section">
+							<p>The <strong>navigation</strong> module contains definitions for styling <code>&lt;nav&gt;</code> elements, along with the links they contain.</p><br/>
+							<table width="100%" class="striped">
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$nav-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">#eceff1</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">$fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">1px solid #bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-link-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for <code>&lt;nav&gt;</code> elements' links</td><td data-label="Sample value">#1565c0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-sublink-prefix</td><td data-label="Type">String</td>
+										<td data-label="Description">Class prefix for <code>&lt;nav&gt;</code> elements' subcategories</td><td data-label="Sample value">'sublink'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-sublink-depth</td><td data-label="Type">Integer</td>
+										<td data-label="Description">Amount of <code>&lt;nav&gt;</code> elements' subcategories</td><td data-label="Sample value">2</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-sublink-padding-left</td><td data-label="Type">Padding left</td>
+										<td data-label="Description">Left padding for <code>&lt;nav&gt;</code> elements' subcategories</td><td data-label="Sample value">12px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-include-sublink-bar</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Enables the sidebar for <code>&lt;nav&gt;</code> elements' subcategories<sup><a href="#nav-note-one">1</a></sup</td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-sublink-bar-left-position</td><td data-label="Type">Position left</td>
+										<td data-label="Description">Left position of the sidebar for <code>&lt;nav&gt;</code> elements' subcategories<sup><a href="#nav-note-one">1</a></sup</td><td data-label="Sample value">3px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-sublink-bar-width</td><td data-label="Type">Width</td>
+										<td data-label="Description">Width of the sidebar for <code>&lt;nav&gt;</code> elements' subcategories<sup><a href="#nav-note-one">1</a></sup</td><td data-label="Sample value">1px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-sublink-bar-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Color of the sidebar for <code>&lt;nav&gt;</code> elements' subcategories<sup><a href="#nav-note-one">1</a></sup</td><td data-label="Sample value">#263238</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="nav-note-one">The values of <code>$nav-sublink-bar-left-position</code>, <code>$nav-sublink-bar-width</code> and <code>$nav-sublink-bar-color</code> will only be used if <code>$nav-include-sublink-bar</code> is set to <code class="fore-tertiary">true</code>.</li>
 							</ol>
 						</div>
 					</div>

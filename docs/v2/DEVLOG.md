@@ -974,3 +974,4 @@
 - Documented `card` module's customization.
 - Added base text and styles for all customization pages not yet finished.
 - Documented `tab` module's customization.
+- Documented `contextual` module's customization.

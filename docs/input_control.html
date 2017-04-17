@@ -420,7 +420,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
-                <p>File upload buttons are commonly a sore spot in CSS frameworks. We try to remedy this problem by hiding the <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code>, while maintaining accessiblity and using a linked <code>&lt;label&gt;</code> of the <code>.button</code> class to display it in a modern way.</p>
+                <p>File upload buttons are commonly a sore spot in CSS frameworks. We try to remedy this problem by hiding the <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code>, while maintaining accessibility and using a linked <code>&lt;label&gt;</code> of the <code>.button</code> class to display it in a modern way.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;input type=&quot;file&quot; id=&quot;file-input&quot;&gt;
 &lt;label for=&quot;file-input&quot; class=&quot;button&quot;&gt;Upload file...&lt;/label&gt;</pre>
@@ -431,6 +431,7 @@
               <ul>
                 <li>The icon displayed in the example above is not part of the button styling.</li>
                 <li>File upload buttons do not change their text to the name of the file after the user has selected a file to upload. You can, however, add this functionality using a few lines of Javascript.</li>
+								<li>File upload buttons cannot be focused (i.e. have a <code>:focus</code> state) using the keyboard and this applies to linked labels, too. You can use Javascript to add this functionality, if you wish.</li>
               </ul><hr>
               <div class="row">
                 <div class="col-sm-12">

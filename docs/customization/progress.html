@@ -68,6 +68,285 @@
         </div>
       </div>
 
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Progress bar</h2></div>
+						<div class="section">
+							<p>The <strong>progress</strong> module's styling of <code>&lt;progress&gt;</code> elements is highly customizable.</p><br/>
+							<table width="100%" class="striped">
+								<caption>Variables</caption>
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$progress-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;progress&gt;</code> elements</td><td data-label="Sample value">#eeeeee</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Progress bar color for <code>&lt;progress&gt;</code> elements</td><td data-label="Sample value">#01579b</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-height</td><td data-label="Type">Height</td>
+										<td data-label="Description">Height for <code>&lt;progress&gt;</code> elements</td><td data-label="Sample value">14px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-max-value</td><td data-label="Type">integer</td>
+										<td data-label="Description">Arithmetic max value for <code>&lt;progress&gt;</code> elements</td><td data-label="Sample value">1000</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for <code>&lt;progress&gt;</code> elements</td><td data-label="Sample value">1px solid #bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for <code>&lt;progress&gt;</code> elements</td><td data-label="Sample value">1px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-top-bottom-margin</td><td data-label="Type">Margin (single value)</td>
+										<td data-label="Description">Top and bottom margin for <code>&lt;progress&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-left-right-margin</td><td data-label="Type">Margin (single value)</td>
+										<td data-label="Description">Left and right margin for <code>&lt;progress&gt;</code> elements</td><td data-label="Sample value">8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for <code>&lt;progress&gt;</code> elements</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Donut spinner</h2></div>
+						<div class="section">
+							<p>The <strong>progress</strong> module's donut spinner uses a custom class and a few variables for custmization.</p><br/>
+							<table width="100%" class="striped">
+								<caption>Variables</caption>
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$spinner-donut-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for donut spinner components</td><td data-label="Sample value">'spinner-donut'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$spinner-donut-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for donut spinner components</td><td data-label="Sample value">#e3f2fd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$spinner-donut-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Foreground color for donut spinner components</td><td data-label="Sample value">#1565c0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$spinner-donut-border-thickness</td><td data-label="Type">Border width</td>
+										<td data-label="Description">Border width for donut spinner components</td><td data-label="Sample value">4px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$spinner-donut-size</td><td data-label="Type">Size (single value, <code>px</code> preferred)</td>
+										<td data-label="Description">The size of donut spinner components (determines multiple values of the elements)</td><td data-label="Sample value">20px</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Progress bar mixins</h2></div>
+						<div class="section">
+							<p>The <strong>progress</strong> module contains a couple of mixins for adding custom styles to <code>&lt;progress&gt;</code> elements (color and style variants), as well as a mixin for creating inline progress bars.</p><br/>
+							<table width="100%" class="striped">
+								<caption>Mixin definitions</caption>
+								<thead>
+									<tr><th>Mixin</th><th>Description</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Mixin">make-progress-alt-color (<span class="fore-primary">$progress-alt-name</span>, <span class="fore-primary">$progress-alt-fore-color</span>. <span class="fore-tertiary">$progress-alt-back-color</span>)</td>
+										<td data-label="Description">Creates a new <code>&lt;progress&gt;</code> color variant using the specified values.</td>
+									</tr>
+									<tr>
+										<td data-label="Mixin">make-progress-alt-style (<span class="fore-primary">$progress-alt-name</span>, <span class="fore-primary">$progress-alt-height</span>,<span class="fore-tertiary">$progress-alt-top-bottom-margin</span>,<span class="fore-tertiary">$progress-alt-left-right-margin</span>, <span class="fore-tertiary">$progress-alt-border-style</span>, <span class="fore-tertiary">$progress-alt-border-radius</span>, <span class="fore-tertiary">$progress-alt-box-shadow</span>)</td>
+										<td data-label="Description">Creates a new <code>&lt;progress&gt;</code> style variant using the specified values.</td>
+									</tr>
+									<tr>
+										<td data-label="Mixin">make-progress-inline (<span class="fore-primary">$progress-inline-name</span>, <span class="fore-primary">$progress-inline-width</span>)</td>
+										<td data-label="Description">Creates a new <code>&lt;progress&gt;</code> style variant using the specified values.</td>
+									</tr>
+								</tbody>
+							</table><br/>
+							<table width="100%" class="striped">
+								<caption style="font-family: monospace, monospace">make-progress-alt-color</caption>
+								<thead>
+									<tr><th>Parameter</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Parameter">$progress-alt-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the <code>&lt;progress&gt;</code> color variant</td><td data-label="Sample value">'secondary'</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$progress-alt-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Foreground color for the <code>&lt;progress&gt;</code> color variant</td><td data-label="Sample value">#e53935</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$progress-alt-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">(Optional) Background color for the <code>&lt;progress&gt;</code> color variant</td><td data-label="Sample value">#eeeeee</td>
+									</tr>
+								</tbody>
+							</table><br/>
+							<h3>Sample usage</h3>
+							<pre><span class="fore-secondary">@include</span> <span class="fore-primary">make-progress-alt-color</span> ('secondary', #e53935, #eeeeee);</pre>
+							<br/>
+							<table width="100%" class="striped">
+								<caption style="font-family: monospace, monospace">make-progress-alt-style</caption>
+								<thead>
+									<tr><th>Parameter</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Parameter">$progress-alt-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the <code>&lt;progress&gt;</code> style variant</td><td data-label="Sample value">'nano'</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$progress-alt-height</td><td data-label="Type">Height</td>
+										<td data-label="Description">Height for the <code>&lt;progress&gt;</code> style variant</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-alt-top-bottom-margin</td><td data-label="Type">Margin (single value)</td>
+										<td data-label="Description">(Optional) Top and bottom margin for the <code>&lt;progress&gt;</code> style variant</td><td data-label="Sample value">1px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-alt-left-right-margin</td><td data-label="Type">Margin (single value)</td>
+										<td data-label="Description">(Optional) Left and right margin for the <code>&lt;progress&gt;</code> elements</td><td data-label="Sample value">1px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-alt-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">(Optional) Border stylefor the <code>&lt;progress&gt;</code> style variant</td><td data-label="Sample value">1px solid #bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-alt-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">(Optional) Border radius for the <code>&lt;progress&gt;</code> style variant</td><td data-label="Sample value">1px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$progress-alt-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">(Optional) Box shadow for the <code>&lt;progress&gt;</code> style variant</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+								</tbody>
+							</table><br/>
+							<h3>Sample usage</h3>
+							<pre><span class="fore-secondary">@include</span> <span class="fore-primary">make-progress-alt-style</span> ('nano', 2px, 1px, 1px, 1px solid #bdbdbd, 1px, 0 1px 3px rgba(0,0,0, 0.1));</pre>
+							<br/>
+							<table width="100%" class="striped">
+								<caption style="font-family: monospace, monospace">make-progress-inline</caption>
+								<thead>
+									<tr><th>Parameter</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Parameter">$progress-inline-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the <code>&lt;progress&gt;</code> inline variant</td><td data-label="Sample value">'inline'</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$progress-inline-width</td><td data-label="Type">Width (percentage preferred)</td>
+										<td data-label="Description">Width of the <code>&lt;progress&gt;</code> inline variant</td><td data-label="Sample value">60%</td>
+									</tr>
+								</tbody>
+							</table><br/>
+							<h3>Sample usage</h3>
+							<pre><span class="fore-secondary">@include</span> <span class="fore-primary">make-progress-inline</span> ('inline', 60%);</pre>
+							<br/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Donut spinner mixins</h2></div>
+						<div class="section">
+							<p>The <strong>progress</strong> module contains a couple of mixins for adding custom styles to donut spinners (color and style variants).</p><br/>
+							<table width="100%" class="striped">
+								<caption>Mixin definitions</caption>
+								<thead>
+									<tr><th>Mixin</th><th>Description</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Mixin">make-spinner-donut-alt-color (<span class="fore-primary">$spinner-donut-alt-name</span>, <span class="fore-primary">$spinner-donut-alt-back-color</span>. <span class="fore-primary">$spinner-donut-alt-fore-color</span>)</td>
+										<td data-label="Description">Creates a new donut spinner color variant using the specified values.</td>
+									</tr>
+									<tr>
+										<td data-label="Mixin">make-spinner-donut-alt-style (<span class="fore-primary">$spinner-donut-alt-name</span>, <span class="fore-primary">$spinner-donut-alt-size</span>, <span class="fore-tertiary">$spinner-donut-alt-border-thickness</span>)</td>
+										<td data-label="Description">Creates a new donut spinner style variant using the specified values.</td>
+									</tr>
+								</tbody>
+							</table><br/>
+							<table width="100%" class="striped">
+								<caption style="font-family: monospace, monospace">make-spinner-donut-alt-color</caption>
+								<thead>
+									<tr><th>Parameter</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Parameter">$spinner-donut-alt-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the donut spinner color variant</td><td data-label="Sample value">'secondary'</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$spinner-donut-alt-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for the donut spinner color variant</td><td data-label="Sample value">#ffebee</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$spinner-donut-alt-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">(Optional) Text color for the donut spinner color variant</td><td data-label="Sample value">#c62828</td>
+									</tr>
+								</tbody>
+							</table><br/>
+							<h3>Sample usage</h3>
+							<pre><span class="fore-secondary">@include</span> <span class="fore-primary">make-spinner-donut-alt-color</span> ('secondary', #ffebee, #c62828);</pre>
+							<br/>
+							<table width="100%" class="striped">
+								<caption style="font-family: monospace, monospace">make-spinner-donut-alt-style</caption>
+								<thead>
+									<tr><th>Parameter</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Parameter">$spinner-donut-alt-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the donut spinner style variant</td><td data-label="Sample value">'large'</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$spinner-donut-alt-size</td><td data-label="Type">Size (single value, <code>px</code> preferred)</td>
+										<td data-label="Description">Size of the donut spinner style variant</td><td data-label="Sample value">32px</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$spinner-donut-alt-border-thickness</td><td data-label="Type">Border width</td>
+										<td data-label="Description">(Optional) Border thickness for the donut spinner style variant</td><td data-label="Sample value">6px</td>
+									</tr>
+								</tbody>
+							</table><br/>
+							<h3>Sample usage</h3>
+							<pre><span class="fore-secondary">@include</span> <span class="fore-primary">make-alert-alt-style</span> ('large', 32px, 6px);</pre>
+							<br/>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12 col-lg-10 col-lg-offset-1">
           <p>If you want to learn more about customizing <strong>mini.css</strong>, go back to the <a href="index.html">customization page</a> or choose a module from the top menu to see its documentation.</p>

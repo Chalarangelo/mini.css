@@ -973,3 +973,4 @@
 - Dealt with a couple of minor mistakes in existing modules.
 - Documented `card` module's customization.
 - Added base text and styles for all customization pages not yet finished.
+- Documented `tab` module's customization.

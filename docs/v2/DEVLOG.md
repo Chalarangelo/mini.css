@@ -976,3 +976,4 @@
 - Documented `tab` module's customization.
 - Documented `contextual` module's customization.
 - Documented `progress` module's customization.
+- Documented customization for `utility` module, finishing developer docs (maybe a proofreading is required, but later).

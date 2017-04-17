@@ -966,3 +966,10 @@
 - Documented `navigation` module's customization page.
 - Resolved #63, replacing the `flex-grow` and `flex-shrink` properties with the `flex` shorthand. Everything should display properly across browsers now.
 - Fully documented `input_control` and `table` modules in terms of customization.
+
+## 20170417
+
+- Merged couple of PRs into `master`, updated `dev211` with the new changes to make sure everything is up to date.
+- Dealt with a couple of minor mistakes in existing modules.
+- Documented `card` module's customization.
+- Added base text and styles for all customization pages not yet finished.

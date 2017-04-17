@@ -22,6 +22,8 @@
 	@media (max-width: 767px){.col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd;}}
 	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
 	.box-colored {color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	td:first-child, td:last-child { font-family: monospace, monospace; }
+	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;}
 	</style>
   </head>
   <body>
@@ -57,14 +59,13 @@
               <p>Spoilers, collapses, accordions, tabs, carousels have been a staple of modern design for quite a long time. All of these elements are implemented using the <strong>tab</strong> module's single generic container. The tab container replaces all of these design paradigms with one component that is very flexible and responsive in order to let you present your website or app's content any way you like. Tabbed navigation is very easy to implement, while collapse, accordion and carousel components use the stacked architecture of tabs. As usual, the tab container is responsive and accessible, allowing you to deliver your content properly to all devices and users.</p><br>
             </div>
             <div class="section">
-              <h2>Quick start</h2>
-              <p>To use the <strong>tab</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
-              <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
+							<h2>Quick start</h2>
+              <p>To customize the <strong>tab</strong> module, duplicate an existing flavor file (we suggest you use the <code>mini-default.scss</code> flavor file) and use this page's variable tables and mixins as a reference to change only the values you need. Remember to compile your flavor file (not the module's partial file) using a Sass preprocessor (we highly recommend using <a href="https://atom.io/packages/sass-autocompile">sass-autocompile</a> if you are working with <a href="https://atom.io/">Atom</a>).</p><br>
             </div>
           </div>
         </div>
       </div>
-      
+
 			<div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12 col-lg-10 col-lg-offset-1">
           <p>If you want to learn more about customizing <strong>mini.css</strong>, go back to the <a href="index.html">customization page</a> or choose a module from the top menu to see its documentation.</p>

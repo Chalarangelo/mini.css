@@ -987,3 +987,4 @@
 - Documented responsive visibility helpers in `utility`.
 - Documented `figcaption` element under image responsiveness in `core` module's docs.
 - Added codepens and documentation in `quick_reference` for all that was missing.
+- Flavor documentation and a couple of minor fixes in `lite`.

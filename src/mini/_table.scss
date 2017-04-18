@@ -41,9 +41,7 @@ table {
 		border-top: $table-border-style;
 	}
 	td {
-		@if $table-body-back-color != $back-color {
-			background: $table-body-back-color;
-		}
+			background: $table-body-back-color;	// Do not put inside condition, causes problems if not present.
 		@if $table-body-fore-color != $fore-color {
 			color: $table-body-fore-color;
 		}

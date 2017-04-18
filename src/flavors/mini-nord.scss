@@ -4,7 +4,7 @@
 /*
 Flavor name: Nord (mini-nord)
 	Author: tphecca (https://github.com/tphecca)
-	mini.css version: v2.1.0 (Fermion)
+	mini.css version: v2.1.1 (Fermion)
 */
 //	Basic rules for body and typography
 $fore-color:					#2E3440;										// Text and general foreground color
@@ -108,6 +108,8 @@ $apply-link-hover-fade:			true;											// Should the :hover and :focus state 
 																				// elements use fade-out instead of a different
 																				// color (`true`/`false`) [11]
 //$link-hover-fore-color:		#8FBCBB;										// Text color for <a> when hovered or focused
+$figcaption-font-size:		80%;											// Font size of <figcaption> elements
+$figcaption-fore-color:		#424242;									// Text color for <figcaption> elements
 //	Notes:
 // [1] - The value $base-root-font-size should be in `px` only! This rule is very important, as it will determine the root
 //	element's font sizing.

@@ -977,3 +977,8 @@
 - Documented `contextual` module's customization.
 - Documented `progress` module's customization.
 - Documented customization for `utility` module, finishing developer docs (maybe a proofreading is required, but later).
+
+## 20170418
+
+- Added `nord` flavor from PR, updated `table` module to deal with a minor problem that stemmed from a conditional in it.
+- Compiled `nord` flavor and recompiled to make sure everything works properly after the changes.

@@ -982,3 +982,4 @@
 
 - Added `nord` flavor from PR, updated `table` module to deal with a minor problem that stemmed from a conditional in it.
 - Compiled `nord` flavor and recompiled to make sure everything works properly after the changes.
+- Finalized logo and thumbnail.

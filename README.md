@@ -11,11 +11,12 @@ A minimal, responsive, style-agnostic CSS framework
 
 ## Setup & usage
 
-You have 3 options when it comes to setting up **mini.css**:
+You have 4 options when it comes to setting up **mini.css**:
 
 1. [Use a package manager](#method-1-use-a-package-manager-recommended) (recommended)
 2. [Use GitCDN](#method-2-use-gitcdn)
-3. [Use cdnjs](#method-3-use-cdnjs-preferred-for-older-releases) (preferred for older releases)
+3. [Use Rawgit](#method-3-use-rawgit)
+4. [Use cdnjs](#method-4-use-cdnjs-preferred-for-older-releases) (preferred for older releases)
 
 For instructions on how to use, best practices, templates and other usage information, please visit the framework's [documentation](https://chalarangelo.github.io/mini.css/modules.html).
 
@@ -39,7 +40,16 @@ bower install mini.css
 
 Remember to replace `{mini-flavor}` with the flavor's name (e.g. `mini-default` or `mini-default.min` for the default flavor).
 
-#### Method 3: Use cdnjs (preferred for older releases)
+#### Method 3: Use RawGit
+
+**mini.css** is also hosted on [RawGit](https://rawgit.com/), another open-source service, so you can easily grab a specific release's distributables. Simply link to a release and your preferred flavor inside your HTML page's `<head>` tag:
+```html
+<link rel="stylesheet" href="cdn.rawgit.com/Chalarangelo/mini.css/{release-tag}/dist/{mini-flavor}.css" />
+```
+
+Remember to replace ` {release-tag}` with a release from the [Releases page](https://github.com/Chalarangelo/mini.css/releases) and `{mini-flavor}` with the flavor's name (e.g. `mini-default` or `mini-default.min` for the default flavor).
+
+#### Method 4: Use cdnjs (preferred for older releases)
 
 If you would rather use an older version of the framework, you should head over to [cdnjs](https://cdnjs.com/libraries/mini.css) for a list of releases and flavor files supplied with them.
 

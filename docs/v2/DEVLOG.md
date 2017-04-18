@@ -988,3 +988,6 @@
 - Documented `figcaption` element under image responsiveness in `core` module's docs.
 - Added codepens and documentation in `quick_reference` for all that was missing.
 - Flavor documentation and a couple of minor fixes in `lite`.
+- Updated documentation with new cdn options.
+- Updated all doc pages to use a `mini-default.min.css` copy placed inside the `docs` folder.
+- Added secondary `header` in `modules` page, based on my use-case (I spent a lot of time scrolling while browsing the pages).

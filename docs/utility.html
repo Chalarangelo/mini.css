@@ -168,6 +168,54 @@
           </div>
         </div>
       </div>
+			<div class="row">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <div class="card fluid">
+            <div class="section"><h2>Responsive visibility helpers</h2></div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-first">
+                <p>You can hide content (either fully or only visually) for certain screens, using the responsive visibility helpers. To hide elements completely use the <code>.hidden-<span class="fore-primary">SCR_SZ</span></code> syntax, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names (<code><span class="fore-tertiary">sm</span></code> for smaller screens, <code><span class="fore-tertiary">md</span></code> for medium-sized screens or <code><span class="fore-tertiary">lg</span></code> for larger screens). If you want to hide certains elements for all users, except screen readers, replace <code>.hidden</code> with <code>.visually-hidden</code>, followed by the screen size name.</p>
+                <h3>Sample code</h3>
+                <pre>&lt;span class=&quot;hidden-sm&quot;&gt;Hidden in smaller screens&lt;/span&gt;
+&lt;span class=&quot;hidden-md&quot;&gt;Hidden in medium-sized screens&lt;/span&gt;
+&lt;span class=&quot;hidden-lg&quot;&gt;Hidden in larger screens&lt;/span&gt;
+
+&lt;span class=&quot;visually-hidden-sm&quot;&gt;Visually hidden in smaller screens&lt;/span&gt;
+&lt;span class=&quot;visually-hidden-md&quot;&gt;Visually hidden in medium-sized screens&lt;/span&gt;
+&lt;span class=&quot;visually-hidden-lg&quot;&gt;Visually hidden in larger screens&lt;/span&gt;</pre>
+              </div>
+            </div>
+            <div class="section">
+            <h3>Notes</h3>
+              <ul>
+                <li>Responsive visibility helper classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
+								<li>The specific breakpoints for small, medium and large screen sizes are as follows:
+                  <ul>
+                    <li><strong>small</strong>: less than <code>768px</code> wide</li>
+                    <li><strong>medium</strong>: more than or equal to <code>768px</code> wide but less than <code>1280px</code> wide</li>
+                    <li><strong>large</strong>: <code>1280px</code> wide or more</li>
+                  </ul>
+                </li>
+								<li>Responsive visibility helper classes are independent, meaning that hiding an element in one screen size will not affect it visibility in any other screen size.</li>
+              </ul><hr>
+							<div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;span class=&quot;hidden-sm hidden-md&quot;&gt;Hidden in smaller and medium-sized screens, visible in larger screens&lt;/span&gt;
+<span class="fore-tertiary">&lt;!-- or --&gt;</span>
+&lt;span class=&quot;visually-hidden-md visually-hidden-lg&quot;&gt;Visually hidden in medium-sized and larger screens, visible in smaller screens&lt;/span&gt;
+<span class="fore-tertiary">&lt;!-- or --&gt;</span>
+&lt;span class=&quot;hidden-sm visually-hidden-lg&quot;&gt;Hidden in smaller screens, visually hidden in larger screens, visible in medium-sized screens&lt;/span&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can combine responsive visibility helpers for different sizes, based on your needs.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;span class=&quot;hidden-sm visually-hidden-sm&quot;&gt;Not a good idea&lt;/span&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining responsive visibility helpers for the same screen size. Combining both of them might cause unexpected behavior.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">

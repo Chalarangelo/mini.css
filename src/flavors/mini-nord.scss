@@ -572,6 +572,8 @@ $responsive-padding-small-value:2px 4px;										// Padding value for responsiv
 $responsive-padding-medium-value:												// Padding value for responsive padding on medium screens
 								4px 6px;
 $responsive-padding-large-value:6px 8px;										// Padding value for responsive padding on large screens
+$responsive-hidden-prefix:					'hidden';				// Class name prefix for responsive hidden elements
+$responsive-visually-hidden-prefix:	'visually-hidden'; // Class name prefix for responsive visually hidden elements
 $include-floats:				false;											// Should floats be included? (`true`/`false`) [1]
 $include-clearfix:				false;											// Should clearfix be included? (`true`/`false`) [2]
 $include-center-block-name:		false;											// Should center block be included? (`true`/`false`) [3]
@@ -666,3 +668,5 @@ $include-center-block-name:		false;											// Should center block be included
 @include make-box-shadow-generic ($box-shadow-style2-name, $box-shadow-style2-value);
 @include make-box-shadow-generic ($box-shadow-style3-name, $box-shadow-style3-value);
 @include make-box-shadow-generic ($box-shadow-style4-name, $box-shadow-style4-value);
+@include make-hidden-responsive ($responsive-hidden-prefix);
+@include make-visually-hidden-responsive ($responsive-visually-hidden-prefix);

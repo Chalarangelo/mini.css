@@ -117,7 +117,10 @@
   &lt;li&gt;Go to work&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;img src=&quot;...&quot;&gt;</pre>
+&lt;figure&gt;
+  &lt;img src=&quot;...&quot;&gt;
+  &lt;figcaption&gt;Image caption&lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
               </div>
             </div>
           </div>
@@ -1122,6 +1125,33 @@
                 </ul>
               </div>
             </div>
+						<div class="section row">
+							<div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+								<h3>Responsive visibility helpers <a href="https://codepen.io/chalarangelo/pen/EmVvWz" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+								<pre>&lt;span class=&quot;hidden-sm&quot;&gt;Hidden in smaller screens&lt;/span&gt;
+&lt;span class=&quot;hidden-md&quot;&gt;Hidden in medium-sized screens&lt;/span&gt;
+&lt;span class=&quot;hidden-lg&quot;&gt;Hidden in larger screens&lt;/span&gt;
+
+&lt;span class=&quot;visually-hidden-sm&quot;&gt;Visually hidden in smaller screens&lt;/span&gt;
+&lt;span class=&quot;visually-hidden-md&quot;&gt;Visually hidden in medium-sized screens&lt;/span&gt;
+&lt;span class=&quot;visually-hidden-lg&quot;&gt;Visually hidden in larger screens&lt;/span&gt;</pre>
+							</div>
+							<div class="col-sm-12 col-md-6">
+								<h3>Notes</h3>
+								<ul>
+									<li>Use the <code>.hidden-<span class="fore-primary">SCR_SZ</span></code> or <code>.visually-hidden-<span class="fore-primary">SCR_SZ</span></code> syntax, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names</li>
+									<li><code><span class="fore-primary">SCR_SZ</span></code> values:
+                    <ul>
+                      <li><code><span class="fore-tertiary">sm</span></code> for screens below <code>768px</code> wide</li>
+                      <li><code><span class="fore-tertiary">md</span></code> for screens between <code>768px</code>(inclusive) and <code>1280px</code>(exclusive)</li>
+                      <li><code><span class="fore-tertiary">lg</span></code> for screens wider than <code>1280px</code></li>
+                    </ul>
+                  </li>
+									<li>Responsive visibility helper classes can be combined for different screen sizes, avoid using both for the same size</li>
+									<li>Responsive visibility helper classes use <code><span class="fore-secondary">!important</span></code> declarations</li>
+								</ul>
+							</div>
+						</div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Breadcrumbs <a href="https://codepen.io/chalarangelo/pen/bBzzEN" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>

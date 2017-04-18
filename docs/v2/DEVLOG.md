@@ -983,3 +983,7 @@
 - Added `nord` flavor from PR, updated `table` module to deal with a minor problem that stemmed from a conditional in it.
 - Compiled `nord` flavor and recompiled to make sure everything works properly after the changes.
 - Finalized logo and thumbnail.
+- Added responsive-hiding classes to `nord`.
+- Documented responsive visibility helpers in `utility`.
+- Documented `figcaption` element under image responsiveness in `core` module's docs.
+- Added codepens and documentation in `quick_reference` for all that was missing.

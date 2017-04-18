@@ -991,3 +991,4 @@
 - Updated documentation with new cdn options.
 - Updated all doc pages to use a `mini-default.min.css` copy placed inside the `docs` folder.
 - Added secondary `header` in `modules` page, based on my use-case (I spent a lot of time scrolling while browsing the pages).
+- Updated framework sizes and version for front page.

@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /*
-Flavor name: Nord (mini-nord)
+	Flavor name: Nord (mini-nord)
 	Author: tphecca (https://github.com/tphecca)
+	Maintainers: tphecca
 	mini.css version: v2.1.1 (Fermion)
 */
 /*
@@ -2158,34 +2159,34 @@ ul.breadcrumbs li:last-child:after {
 }
 
 .responsive-margin {
-  margin: 768px !important;
+  margin: 4px !important;
 }
 
-@media screen and (min-width: 6px) {
+@media screen and (min-width: 768px) {
   .responsive-margin {
-    margin: 1280px !important;
+    margin: 6px !important;
   }
 }
 
-@media screen and (min-width: 8px) {
+@media screen and (min-width: 1280px) {
   .responsive-margin {
-    margin: 4px !important;
+    margin: 8px !important;
   }
 }
 
 .responsive-padding {
-  padding: 768px !important;
+  padding: 2px 4px !important;
 }
 
-@media screen and (min-width: 4px 6px) {
+@media screen and (min-width: 768px) {
   .responsive-padding {
-    padding: 1280px !important;
+    padding: 4px 6px !important;
   }
 }
 
-@media screen and (min-width: 6px 8px) {
+@media screen and (min-width: 1280px) {
   .responsive-padding {
-    padding: 2px 4px !important;
+    padding: 6px 8px !important;
   }
 }
 

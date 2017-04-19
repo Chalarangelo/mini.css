@@ -1000,3 +1000,5 @@
 - Have **hugging cat** a hug, seemed excited.
 - Created templates (6 of them), built `templates` page for showcasing them and added links to it from everywhere.
 - Added a list bullet in the `index` page to help people get to the templates more easily.
+- Updated `nord` flavor to be fully up-to-date with the latest version of **mini.css**.
+- Added maintainers to all flavors.

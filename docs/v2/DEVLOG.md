@@ -881,3 +881,125 @@
 - Updated `mini-sucroa`: Removed `horizontal` tables, added `sticky` for `header` and `footer`, added `tooltip`, disabled legacy support in `utility`. Updated the rest of the components as required (minor changes).
 - Updated `mini-sucroa` flavor description.
 - Decided to drop `mini-classic`, not worth it in the long run. See #57 for details.
+
+# v2.1.1 Development log
+
+## 20170329
+
+- Started code cleanup and updating.
+- Updated `core` by moving all of the variable definitions and defaults at the top of the module's file.
+- Updated both flavor files to deal with the indentation and column problems (only for the `core` module so far). Readability is a lot better, but consistency is a little bit worse. For all intents and purposes, this is the way to go for this release, as the previous styling was impossible to read for the most part in many setups.
+
+## 20170330
+
+- Updated `grid` by moving variable definitions and defaults to the top of the module.
+- Updated flavor files, dealing with indentation and readability.
+- Updated `navigation` by moving variable definitions and defaults. Added **hidden flag** `$header-colorize-svgs` for a hacky fix that was there before (just in case).
+- Updated flavor files, made most multiline comments up to `navigation` into single line comments in order to make the flavor files shorter while maintining readability.
+- Added an extra **hidden flag** in `navigation` under `$include-nav-styles` to make sure that `nav` elements can be removed from flavors (possibly not present in the `barebones` flavor).
+- Updated `input_control`, splitting into main file and mixins file. Added **hidden flag** `$hide-check-and-radio` and standardized existing one (`$input-high-specificity-selectors`).
+- Cleanup and housekeeping for readability in flavor files for updated `input_control`.
+- *TODO* Make class naming rules more consistent in module defaults - meaning add all class naming defaults to the very top of all modules, saving time and space when simplified flavors kick in.
+- Updated `table` module's definitions and variables, added **hidden flag** `$include-striped-table` in order to make sure `.striped` `table`s can be turned on and off.
+- Cleanup of relevant variables and comments in flavor files.
+- Updated `card` module, splitting into main file and mixins, cleanup in flavor files for the module.
+- Updated `tab` module, adding an extra **hidden flag** `$include-stacked-tabs` for toggling `.stacked` tabs on and off, cleanup of flavor files.
+- Updated `contextual` module, splitting file and adding **hidden flag** `$include-alerts` for toggling `.alert`s on and off. Added `@error` messages in mixins in case the mixins are called without the corresponding components enabled. Should be a welcome change during compilation.
+- Flavor cleanup for `contextual` module.
+- Updated `progress`, splitting file and adding **hidden flag** `$include-spinner-donut` for toggling spinning donuts on and off. Added `@error` messages accordingly.
+- Flavor cleanup for `progress` module's updates.
+- Updated `utility` module, added proper **hidden flags** to `$include-breadcrumbs` and `$include-close-icon` to make it easier to disable those components.
+- Cleanup in both flavor files is now complete, added maintainers to the `mini-sucroa` file to meake it easier for people to reach the team behind it.
+- Added simple styling for `figcaption` element in `core`, updated both flavors with the required variables to make it usable.
+- After inspecting `grid`, it is clear that no changes will be required at all in terms of variables.
+- Minor restructure in `core`'s modules. More might be coming (more defaults - possibly in their own file).
+- Updated defaults for `grid` just to be more in line with everything else.
+- Updated `navigation`'s defaults to include class name defaults. Added *external variables* in `navigation` to remedy the problems that stem from single module usage.
+- Updated `input_control` with new **hidden flag** `$include-button-group` just in case and external variables, plus all the needed class names at the very top.
+- Updated `table` module with the required external variables and required names.
+- Added external variables to `card`.
+- Updated `tab` module with default breakpoint and added external variables as required.
+- Added external variables to `contextual`.
+- Updated defaults for `progress` module, no externals were needed.
+- Added more default values to `utility`. Default and external adding seems complete, I might have missed something, but good enough for now.
+
+## 20170402
+
+- Updated `@media` queries in all modules to utilize `screen`, so that layout changes will only apply to screens (irrelevant in print). `print` stylesheets are coming later down the line and all layouts will print as if in *small* screens (basically `col-sm-...` layouts), to simplifiy everything. Size increased from `6.79KB` to `6.82KB`, worthwhile cost.
+- Added resposnive hiding (both normal and accessible) in `utility_mixins` via the `make-hidden-responsive` and `make-visually-hidden-responsive` `mixin`s. Both have as many defaults as possible to make things easier.
+- Updated `make-margin-responsive` and `make-padding-responsive` `mixin`s to make sure they are now compatible with four-step grid (legacy).
+- Added `.hidden-` and `.visually-hidden-` elements to both flavors via new `mixin`s. Current size for `default` is `6.88KB` gzipped, reasonable tradeoff for a much requested and needed feature.
+- *TODO* update documentation pages to showcase the new responsive hiding, add codepen etc.
+
+## 20170403
+
+- Minor update to `input_control`'s code to fix a small problem with it.
+- Started developing `mini-lite` flavor (`lite`) as a very lightweight barebones base for the framework, using the default style for the most part. Size is under `5KB` for starters.
+- Updated `lite`, removed extra stuff, made it as simple as possible, still under `5KB`.
+- Tested `lite` using a quick demo in `Codepen` (*TODO* actually make a demo of it in a Codepen), no problems found, runs great.
+- Started documenting the `customization` pages which will serve as a replacement for the old *wiki*. Created `index.html` in the new `customization` folder and added most of the basic info.
+- Updated all old navigation links for `Customization` to point to the new folder and its `index.html` page.
+- Removed content from old `customization.html` page and added a redirection directive to take visitors to the new page.
+
+## 20170405
+
+- Worked on rebranding quite a lot, set up a mockup of the new logo.
+
+## 20170406
+
+- Updated `index.html` with new logo, all other pages with new brand etc.
+- Updated `README.md` and added shields to it.
+- Decided to change preferred CDN from `rawgit` to `gitCDN` as it seems more stable and easier to use.
+- Opened issue in `cdnjs`'s repo for the library not auto-updating.
+- Created mostly empty pages for all modules under `/customization`.
+
+## 20170411
+
+- *TODO* Actually explain what the deal with Pull requests is, using a `dev` branch OR use `cdnjs`, provided the fact that it is now updated to the latest release (will it stay that way?).
+- Tweaked the way `border` was used inside `blockquote`, ordering wasn't doing me any favors. Should not cause any problems now. Random catch, thank you **hugging cat**!
+- Added `$samp-element-box-shadow` for consistency, mostly.
+- Fully documented customization page for `core` module.
+- Fully documented customization page for `grid` module.
+
+## 20170412
+
+- Documented `navigation` module's customization page.
+- Resolved #63, replacing the `flex-grow` and `flex-shrink` properties with the `flex` shorthand. Everything should display properly across browsers now.
+- Fully documented `input_control` and `table` modules in terms of customization.
+
+## 20170417
+
+- Merged couple of PRs into `master`, updated `dev211` with the new changes to make sure everything is up to date.
+- Dealt with a couple of minor mistakes in existing modules.
+- Documented `card` module's customization.
+- Added base text and styles for all customization pages not yet finished.
+- Documented `tab` module's customization.
+- Documented `contextual` module's customization.
+- Documented `progress` module's customization.
+- Documented customization for `utility` module, finishing developer docs (maybe a proofreading is required, but later).
+
+## 20170418
+
+- Added `nord` flavor from PR, updated `table` module to deal with a minor problem that stemmed from a conditional in it.
+- Compiled `nord` flavor and recompiled to make sure everything works properly after the changes.
+- Finalized logo and thumbnail.
+- Added responsive-hiding classes to `nord`.
+- Documented responsive visibility helpers in `utility`.
+- Documented `figcaption` element under image responsiveness in `core` module's docs.
+- Added codepens and documentation in `quick_reference` for all that was missing.
+- Flavor documentation and a couple of minor fixes in `lite`.
+- Updated documentation with new cdn options.
+- Updated all doc pages to use a `mini-default.min.css` copy placed inside the `docs` folder.
+- Added secondary `header` in `modules` page, based on my use-case (I spent a lot of time scrolling while browsing the pages).
+- Updated framework sizes and version for front page.
+
+
+## 20170419
+
+- Added new contributor to README.
+- Have **hugging cat** a hug, seemed excited.
+- Created templates (6 of them), built `templates` page for showcasing them and added links to it from everywhere.
+- Added a list bullet in the `index` page to help people get to the templates more easily.
+- Updated `nord` flavor to be fully up-to-date with the latest version of **mini.css**.
+- Added maintainers to all flavors.
+- Updated CHANGELOG to reflect latest changes for **v2.1.1**.

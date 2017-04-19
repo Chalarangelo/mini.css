@@ -2,11 +2,27 @@
 	Definitions for navigation elements.
 */
 // Different elements are styled based on the same set of rules.
+$button-class-name:				'button' !default;				// Class name for the button-like elements.
+$header-logo-name:				'logo' !default;					// Class name for <header>'s logo.
+$header-colorize-svgs:		true !default;						// [Hidden flag] Colorizes SVGs in the <header> element's logo (`true`/`false`).
+$include-header-sticky:		false !default;						// Should the sticky class for <header> elements be included (`true`/`false`).
+$header-sticky-name:			'sticky' !default;				// Class name for sticky <header>.
+$include-footer-sticky:		false !default;						// Should the sticky class for <footer> elements be included (`true`/`false`).
+$footer-sticky-name:			'sticky' !default;				// Class name for sticky <footer>.
+$include-nav-styles:			true !default;						// [Hidden flag] Should <nav> elements by stylized? (`true`/`false`)
+$nav-sublink-prefix:			'sublink' !default;				// Prefix for the subcategory tabs in nav.
+$nav-sublink-depth:				2 !default;								// Amount of subcategory classes to add.
+$nav-sublink-padding-left:12px !default;						// Left padding to add to subcategories.
+$nav-include-sublink-bar: false !default;						// Should a border be added to the subcategories? (`true`/`false`)
+// External variables' defaults are used only if you import this module on its own, without the rest of the framework.
+$back-color:							white !default;						// [External variable - core] Background color for everything.
+$fore-color:							black !default;						// [External variable - core] Foreground color for everything.
+// Policy for below external flag is `ALWAYS_TRUE`. This is done due to links being underlined by default and as a safeguard from ugly branding.
+$apply-link-underline:		true !default;						// [External flag - core] Should underlining be applied to <a> elements? (`true`/`false`)
+$button-class-name:				'button' !default;				// [External variable - input_control] Name of the button-like element styling class.
+$button-box-shadow:0 1px 3px rgba(0,0,0, 0.1) !default;// [External variable - input_control] Value of button's box-shadow.
+$button-border-style: 1px solid transparent !default;	// [External variable - input_control] Value of button's border-style.
 // Header styling.
-$button-class-name:				'button' !default;								// Class name for the button-like elements
-$header-logo-name:				'logo' !default;								// Class name for <header>'s logo
-$include-header-sticky:			false !default;									// Should the sticky class for <header> elements be included
-$include-footer-sticky:			false !default;									// Should the sticky class for <footer> elements be included
 header {
 	display: block;		// Correct display for older versions of IE.
 	height: $header-height;
@@ -28,13 +44,15 @@ header {
 	@if $header-box-shadow != none {
 		box-shadow: $header-box-shadow;
 	}
-	// Resposniveness for smaller displays, scrolls horizontally.
+	// Responsiveness for smaller displays, scrolls horizontally.
 	white-space: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;
 	// Header logo styling.
 	.#{$header-logo-name} {
-		color: $header-fore-color;		// Keep this in case people use SVGs? Is it necessary?
+		@if $header-colorize-svgs { 		// Deals with SVG colorization in case people use SVGs.
+			color: $header-fore-color;		// Only toggle off if you know what you're doing.
+		}
 		@if $header-logo-font-size != $base-font-size {
 			font-size: $header-logo-font-size;
 		}
@@ -49,16 +67,16 @@ header {
 		}
 		@if $apply-link-hover-fade {
 			-webkit-transition: 0s opacity;
-					transition: 0s opacity;
+							transition: 0s opacity;
 		}
 	}
 	// Link styling.
 	button, [type="button"],
 	a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name},
 	a[role="button"], label[role="button"], [role="button"] {
-		background: $header-back-color;		// Apply color regardless to override styling from other things.
+		background: $header-back-color;				// Apply color regardless to override styling from other things.
 		color: $header-fore-color;
-		vertical-align: top;		// Alignemt, really important to make this work well.
+		vertical-align: top;									// Alignemt, really important to make this work well.
 		@if $header-link-margin != 0 {
 			margin: $header-link-margin;
 		}
@@ -72,58 +90,56 @@ header {
 			border: 0;
 		}
 	}
-	@if $apply-link-underline {		// Override for links if underline is enabled.
+	@if $apply-link-underline {				// Override for links if underline is enabled.
 		.#{$header-logo-name}, a.#{$button-class-name}, a[role="button"] {
 			text-decoration: none;
 		}
 	}
 }
 // Navigation sidebar styling.
-nav {
-	display: block;		// Correct display for older versions of IE.
-	@if $nav-back-color != $back-color {
-		background: $nav-back-color;
-	}
-	@if $nav-fore-color != $fore-color {
-		color: $nav-fore-color;
-	}
-	@if $nav-border-style != 0 {
-		border: $nav-border-style;
-	}
-	@if $nav-border-radius != 0 {
-		border-radius: $nav-border-radius;
-	}
-	@if $nav-margin != 0 {
-		margin: $nav-margin;
-	}
-	@if $nav-padding != 0 {
-		padding: $nav-padding;
-	}
-	@if $nav-box-shadow != none {
-		box-shadow: $nav-box-shadow;
-	}
-	a, a:visited {
-		display: block;
-		color: $nav-link-fore-color;	// Apply regardless to de-stylize visited links.
-	}
-	// Subcategories in navigation.
-	$nav-sublink-prefix:			'sublink' !default;				// Prefix for the subcategory tabs in nav
-	$nav-sublink-depth:				2 !default;						// Amount of subcategory classes to add
-	$nav-sublink-padding-left:		12px !default;					// Left padding to add to subcategories
-	$nav-include-sublink-bar: 		false !default;					// Should a border be added to the subcategories?
-	@for $i from 1 through $nav-sublink-depth {
-		.#{$nav-sublink-prefix}-#{$i} {
-			padding-left: $i * $nav-sublink-padding-left;
-			position: relative;
-			@if $nav-include-sublink-bar {
-				&:before {
-					position: absolute;
-					left: $nav-sublink-bar-left-position;
-					top: -$nav-sublink-bar-width;
-					content: '';
-					height: 100%;
-					border: $nav-sublink-bar-width solid $nav-sublink-bar-color;
-					border-left: 0;
+@if $include-nav-styles {						// Unless you want unstylized <nav> elements, keep this flag on.
+	nav {
+		display: block;									// Correct display for older versions of IE.
+		@if $nav-back-color != $back-color {
+			background: $nav-back-color;
+		}
+		@if $nav-fore-color != $fore-color {
+			color: $nav-fore-color;
+		}
+		@if $nav-border-style != 0 {
+			border: $nav-border-style;
+		}
+		@if $nav-border-radius != 0 {
+			border-radius: $nav-border-radius;
+		}
+		@if $nav-margin != 0 {
+			margin: $nav-margin;
+		}
+		@if $nav-padding != 0 {
+			padding: $nav-padding;
+		}
+		@if $nav-box-shadow != none {
+			box-shadow: $nav-box-shadow;
+		}
+		a, a:visited {
+			display: block;
+			color: $nav-link-fore-color;		// Apply regardless to de-stylize visited links.
+		}
+		// Subcategories in navigation.
+		@for $i from 1 through $nav-sublink-depth {
+			.#{$nav-sublink-prefix}-#{$i} {
+				padding-left: $i * $nav-sublink-padding-left;
+				position: relative;
+				@if $nav-include-sublink-bar {
+					&:before {
+						position: absolute;
+						left: $nav-sublink-bar-left-position;
+						top: -$nav-sublink-bar-width;
+						content: '';
+						height: 100%;
+						border: $nav-sublink-bar-width solid $nav-sublink-bar-color;
+						border-left: 0;
+					}
 				}
 			}
 		}
@@ -152,12 +168,11 @@ footer {
 		color: $footer-link-fore-color;
 	}
 }
-
-
+// Sticky headers and footers.
 @if $include-header-sticky and $include-footer-sticky {
 	header.#{$header-sticky-name}, footer.#{$footer-sticky-name} {
 		position: -webkit-sticky;
-		position:		  sticky;
+		position:		  		sticky;
 		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
 	}
 	header.#{$header-sticky-name} {
@@ -170,7 +185,7 @@ footer {
 @else if $include-header-sticky {
 	header.#{$header-sticky-name} {
 		position: -webkit-sticky;
-		position:		  sticky;
+		position:		  		sticky;
 		top: 0;
 		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
 	}
@@ -178,7 +193,7 @@ footer {
 @else if $include-footer-sticky {
 	footer.#{$footer-sticky-name} {
 		position: -webkit-sticky;
-		position:		  sticky;
+		position:		  		sticky;
 		bottom: 0;
 		z-index: 1101;	// Deals with certain problems when combined with cards and tables.
 	}

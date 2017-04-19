@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="stylesheet" href="../mini-default.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+	<title>mini.css - Input Control</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, input, control, form, button ">
+	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+	<meta property="og:type" content="website"/><meta property="og:image" content="../page_thumb.png">
+	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="../favicon.png">
+	<style>
+	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
+	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
+	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	.col-sm-12.col-sm-last.col-lg-4.col-lg-normal { box-sizing: border-box; border-right: 1px solid #bdbdbd;}
+	@media (max-width: 767px){.col-sm-12.col-sm-last.col-lg-4.col-lg-normal {border: 0;border-top: 1px solid #bdbdbd;}}
+	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
+	.box-colored {color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	.responsive-label {align-items: center;} @media (min-width: 768px) { .responsive-label .col-md-3 {text-align: right;}}
+	td:first-child, td:last-child { font-family: monospace, monospace; }
+	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;}
+	</style>
+  </head>
+  <body>
+		<header>
+			<a href="../index.html" class="logo"><span id="header-logo">m</span></a>
+			<a href="../index.html" class="button">Introduction</a> <a href="../modules.html" class="button">Modules</a>
+			<a href="../flavors.html" class="button">Flavors</a> <a href="../templates.html" class="button">Templates</a> <a href="index.html" class="button">Customization</a>
+			<a href="../quick_reference.html" class="button">Quick Reference</a>
+			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+		</header>
+	  <header class="sticky" style="height:36px;">
+  		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
+  		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
+  		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
+  		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
+  		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
+  	</header>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <h1>Input Control</h1>
+          <p>The <strong>input_control</strong> module contains rules that affect forms, input elements, buttons, checkboxes and radio buttons. All of these elements' styles are predefined, allowing you to create modern, responsive forms quickly. Layout alternatives are also provided if you want your forms to look a certain way.</p>
+          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
+          <ul class="breadcrumbs"><li><a href="../index.html">Home</a></li><li><a href="index.html">Customization</a></li><li>Input Control</li></ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Quick overview</h2>
+              <p>The presentation of forms, input fields, buttons and other interactive elements is always very important for any website or app. The <strong>input_control</strong> module provides you with much needed styling improvements for all of these elements, while keeping everything simple to use and understand, as well as combine with the other modules. Forms and input elements have a clean, modern design, while some elements like checkoxes and radio buttons get a much needed facelift. Buttons have also been stylized to look the same in all browsers, while keeping their design clean and allowing for a few color and size variants. Grouping inputs and labels or buttons is also part of this module and, as always, responsiveness is an important feature. Finally, all of the components are accessible, with a few minor caveats, that are discussed in their respective section in this page.</p><br>
+            </div>
+            <div class="section">
+							<h2>Quick start</h2>
+              <p>To customize the <strong>input_control</strong> module, duplicate an existing flavor file (we suggest you use the <code>mini-default.scss</code> flavor file) and use this page's variable tables and mixins as a reference to change only the values you need. Remember to compile your flavor file (not the module's partial file) using a Sass preprocessor (we highly recommend using <a href="https://atom.io/packages/sass-autocompile">sass-autocompile</a> if you are working with <a href="https://atom.io/">Atom</a>).</p><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Forms &amp; input</h2></div>
+						<div class="section">
+							<p>The <strong>input_control</strong> module's forms and input fields can be easily customized to use different sizes and colors, as well as different class names for groupping.</p><br/>
+							<table width="100%" class="striped">
+								<caption>Variables</caption>
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$form-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">#eeeeee</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$form-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">$fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$form-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">1px solid #bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$form-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$form-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$form-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">12px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$form-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for <code>&lt;form&gt;</code> elements</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fieldset-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;fieldset&gt;</code> elements</td><td data-label="Sample value">$form-back-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fieldset-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for <code>&lt;fieldset&gt;</code> elements</td><td data-label="Sample value">1px solid #bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fieldset-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for <code>&lt;fieldset&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fieldset-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for <code>&lt;fieldset&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fieldset-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;fieldset&gt;</code> elements</td><td data-label="Sample value">8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$legend-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for <code>&lt;legend&gt;</code> elements</td><td data-label="Sample value">$form-fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$legend-font-size</td><td data-label="Type">Font size</td>
+										<td data-label="Description">Font size for <code>&lt;legend&gt;</code> elements</td><td data-label="Sample value">0.925em</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$legend-font-weight</td><td data-label="Type">Font weight</td>
+										<td data-label="Description">Font weight for <code>&lt;legend&gt;</code> elements</td><td data-label="Sample value">700</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$legend-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;legend&gt;</code> elements</td><td data-label="Sample value">2px 4px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$label-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;label&gt;</code> elements</td><td data-label="Sample value">4px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">#fafafa</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">$fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">1px solid #bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">1px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">8px 12px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-focus-border-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Border color for <code>&lt;input&gt;</code> elements (focused)</td><td data-label="Sample value">#0288d1</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-invalid-border-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Border color for <code>&lt;input&gt;</code> elements (invalid)</td><td data-label="Sample value">#d32f2f</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-readonly-border-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Border color for <code>&lt;input&gt;</code> elements (readonly)</td><td data-label="Sample value">#bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-readonly-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;input&gt;</code> elements (readonly)</td><td data-label="Sample value">#e0e0e0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-placeholder-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for placeholder text of <code>&lt;input&gt;</code> elements</td><td data-label="Sample value">#616161</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-disabled-opacity</td><td data-label="Type">Opacity</td>
+										<td data-label="Description">Opacity of <code>&lt;input&gt;</code> elements (disabled)</td><td data-label="Sample value">0.75</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-group-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for input groups</td><td data-label="Sample value">'input-group'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$include-fluid-input-group</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Enables fluid input groups<sup><a href="#forms-note-one">1</a></sup></td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-group-fluid-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for fluid input groups<sup><a href="#forms-note-one">1</a></sup></td><td data-label="Sample value">'fluid'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-group-mobile-breakpoint</td><td data-label="Type">Breakpoint</td>
+										<td data-label="Description">Breakpoint for fluid input groups on mobile devices<sup><a href="#forms-note-one">1</a></sup></td><td data-label="Sample value">767px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$hide-file-inputs</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Hides all <code>&lt;input <span class="fore-secondary">type</span>=&quot;<span class="fore-primary">file</span>&quot;&gt;</code> elements, allowing access only via the use of labels</td><td data-label="Sample value">true</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="forms-note-one">The values of <code>$input-group-fluid-name</code> and <code>$input-group-mobile-breakpoint</code> will only be used if <code>$include-fluid-input-group</code> is set to <code class="fore-tertiary">true</code>.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Checkboxes &amp; radio buttons</h2></div>
+						<div class="section">
+							<p>The <strong>input_control</strong> module's checkbox and radio button elements are based on custom rules and depend on the use of <code>&lt;label&gt;</code> elements and input groups to be stylized and properly displayed.</p><br/>
+							<table width="100%" class="striped">
+								<caption>Variables</caption>
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$checkbox-size</td><td data-label="Type">Size (single value, <code>px</code> preferred)</td>
+										<td data-label="Description">The size of checkbox/radio elements (determines multiple values of the elements)</td><td data-label="Sample value">16px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for checkbox/radio elements</td><td data-label="Sample value">$input-back-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for checkbox/radio elements</td><td data-label="Sample value">$input-fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-border-thickness</td><td data-label="Type">Border width</td>
+										<td data-label="Description">Border width for checkbox/radio elements</td><td data-label="Sample value">1px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-border-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Border color for checkbox/radio elements</td><td data-label="Sample value">#bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for checkbox/radio elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-focus-border-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Border color for checkbox/radio elements (focused)</td><td data-label="Sample value">#0288d1</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-bottom-spacing</td><td data-label="Type">Position bottom (<code>px</code> preferred)</td>
+										<td data-label="Description">Position bottom spacing for checkbox/radio elements</td><td data-label="Sample value">6px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$checkbox-disabled-opacity</td><td data-label="Type">Opacity</td>
+										<td data-label="Description">Opacity for checkbox/radio elements (disabled)</td><td data-label="Sample value">0.75</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="checkbox-note-one">It is highly recommended to stick to one unit type for the definitions of checkbox/radio elements (our suggestion is <code>px</code>).</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Button &amp; button groups</h2></div>
+						<div class="section">
+							<p>The <strong>input_control</strong> module's button elements are highly customizable, along with the button groups that can be used in combination with them.</p><br/>
+							<table width="100%" class="striped">
+								<caption>Variables</caption>
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$button-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for button elements</td><td data-label="Sample value">#bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for button elements</td><td data-label="Sample value">$fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for button elements</td><td data-label="Sample value">1px solid #9e9e9e</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for button elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for button elements</td><td data-label="Sample value">8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for button elements</td><td data-label="Sample value">8px 12px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for button elements</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-back-opacity</td><td data-label="Type">Opacity</td>
+										<td data-label="Description">Background opacity for button elements (default)</td><td data-label="Sample value">0.65</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-hover-back-opacity</td><td data-label="Type">Opacity</td>
+										<td data-label="Description">Background opacity for button elements (focused)</td><td data-label="Sample value">0.8</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-disabled-opacity</td><td data-label="Type">Opacity</td>
+										<td data-label="Description">Opacity for button elements (focused)</td><td data-label="Sample value">0.65</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-class-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for button elements</td><td data-label="Sample value">'button'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-group-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for button groups</td><td data-label="Sample value">'button-group'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-group-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for button groups</td><td data-label="Sample value">1px solid #9e9e9e</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-group-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for button groups</td><td data-label="Sample value">8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-group-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for button groups</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$button-group-mobile-breakpoint</td><td data-label="Type">Breakpoint</td>
+										<td data-label="Description">Breakpoint for button groups on mobile devices</td><td data-label="Sample value">767px</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Button mixins</h2></div>
+						<div class="section">
+							<p>The <strong>input_control</strong> module contains a couple of mixins for adding custom styles to button elements (color and style variants).</p><br/>
+							<table width="100%" class="striped">
+								<caption>Mixin definitions</caption>
+								<thead>
+									<tr><th>Mixin</th><th>Description</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Mixin">make-button-alt-color (<span class="fore-primary">$button-alt-name</span>, <span class="fore-primary">$button-alt-back-color</span>, <span class="fore-primary">$button-alt-back-opacity</span>, <span class="fore-primary">$button-alt-hover-back-opacity</span>, <span class="fore-tertiary">$button-alt-fore-color</span>)</td>
+										<td data-label="Description">Creates a new button color variant using the specified values.</td>
+									</tr>
+									<tr>
+										<td data-label="Mixin">make-button-alt-style (<span class="fore-primary">$button-alt-name</span>, <span class="fore-primary">$button-alt-border-style</span>, <span class="fore-primary">$button-alt-border-radius</span>, <span class="fore-primary">$button-alt-padding</span>, <span class="fore-primary">$button-alt-margin</span>)</td>
+										<td data-label="Description">Creates a new button style variant using the specified values.</td>
+									</tr>
+								</tbody>
+							</table><br/>
+							<table width="100%" class="striped">
+								<caption style="font-family: monospace, monospace">make-button-alt-color</caption>
+								<thead>
+									<tr><th>Parameter</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Parameter">$button-alt-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the button color variant</td><td data-label="Sample value">'primary'</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$button-alt-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for the button color variant</td><td data-label="Sample value">#0277bd</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$button-alt-back-opacity</td><td data-label="Type">Opacity</td>
+										<td data-label="Description">Background opacity for the button color variant (default)</td><td data-label="Sample value">0.9</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$button-alt-hover-back-opacity</td><td data-label="Type">Opacity</td>
+										<td data-label="Description">Background opacity for the button color variant (focused)</td><td data-label="Sample value">1</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$button-alt-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">(Optional) Text color for the button color variant</td><td data-label="Sample value">#fafafa</td>
+									</tr>
+								</tbody>
+							</table><br/>
+							<h3>Sample usage</h3>
+							<pre><span class="fore-secondary">@include</span> <span class="fore-primary">make-button-alt-color</span> ('primary', #0277bd, 0.9, 1, #fafafa);</pre>
+							<br/>
+							<table width="100%" class="striped">
+								<caption style="font-family: monospace, monospace">make-button-alt-style</caption>
+								<thead>
+									<tr><th>Parameter</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Parameter">$button-alt-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the button style variant</td><td data-label="Sample value">'large'</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$button-alt-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for the button style variant</td><td data-label="Sample value">2px solid #9e9e9e</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$button-alt-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for the button style variant</td><td data-label="Sample value">4px</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$button-alt-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for the button style variant</td><td data-label="Sample value">12px 18px</td>
+									</tr>
+									<tr>
+										<td data-label="Parameter">$button-alt-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for the button style variant</td><td data-label="Sample value">10px</td>
+									</tr>
+								</tbody>
+							</table><br/>
+							<h3>Sample usage</h3>
+							<pre><span class="fore-secondary">@include</span> <span class="fore-primary">make-button-alt-style</span> ('large', 2px solid #9e9e9e, 4px, 18px, 10px);</pre>
+							<br/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" style="padding-bottom: 20px; padding-top:20px;">
+        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+          <p>If you want to learn more about customizing <strong>mini.css</strong>, go back to the <a href="index.html">customization page</a> or choose a module from the top menu to see its documentation.</p>
+        </div>
+      </div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

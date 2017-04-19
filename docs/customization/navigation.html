@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="stylesheet" href="../mini-default.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+	<title>mini.css - Navigation</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, navigation ">
+	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+	<meta property="og:type" content="website"/><meta property="og:image" content="../page_thumb.png">
+	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="../favicon.png">
+	<style>
+	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
+	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
+	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	.col-sm-12.col-sm-last.col-lg-4.col-lg-normal {box-sizing: border-box; border-right: 1px solid #bdbdbd;}
+	@media (max-width: 1279px){.col-sm-12.col-sm-last.col-lg-4.col-lg-normal {border: 0;border-top: 1px solid #bdbdbd;}}
+	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
+	.box-colored { color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	td:first-child, td:last-child { font-family: monospace, monospace; }
+	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;}
+	</style>
+  </head>
+  <body>
+		<header>
+			<a href="../index.html" class="logo"><span id="header-logo">m</span></a>
+			<a href="../index.html" class="button">Introduction</a> <a href="../modules.html" class="button">Modules</a>
+			<a href="../flavors.html" class="button">Flavors</a> <a href="../templates.html" class="button">Templates</a> <a href="index.html" class="button">Customization</a>
+			<a href="../quick_reference.html" class="button">Quick Reference</a>
+			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+		</header>
+	  <header class="sticky" style="height:36px;">
+  		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
+  		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
+  		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
+  		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
+  		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
+  	</header>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <h1>Navigation</h1>
+          <p>The <strong>navigation</strong> module seeks to remedy the problems of vertical and horizontal navigation design paradigms, by combining the two for a better presentational effect. HTML5 navigational elements are at the heart of the module, allowing you to quickly build your navigation without complicated structures and hacks.</p>
+          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
+          <ul class="breadcrumbs"><li><a href="../index.html">Home</a></li><li><a href="index.html">Customization</a></li><li>Navigation</li></ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Quick overview</h2>
+              <p>Menus and navigation are some of the most important elements for any website or web app and their design and ease-of-use are key factors that can determine a page's bounce rates. The <strong>navigation</strong> module takes a step back from all the complicated menu and navigation design paradigms of the modern web, like dropdown menus and hamburger buttons, and tries to reinvent the basics for page navigation using HTML5 elements (i.e. <code>header</code>, <code>nav</code> and <code>footer</code>) and make navigation fully accessible for screen readers. Instead of sticking to either horizontal navigation menus (headers) or vertical menus (sidebars), we opted to allow the use of both for different things. Header menus are designed to stand out and contain links to help users find new content, whereas vertical navigation aims to provide a more traditional navigation menu that maps out your website's structure. Finally, footers are also part of the <strong>navigation</strong> module, as they can often provide the user with useful information and/or links that are very important to enhancing their experience.</p><br>
+            </div>
+            <div class="section">
+							<h2>Quick start</h2>
+              <p>To customize the <strong>navigation</strong> module, duplicate an existing flavor file (we suggest you use the <code>mini-default.scss</code> flavor file) and use this page's variable tables and mixins as a reference to change only the values you need. Remember to compile your flavor file (not the module's partial file) using a Sass preprocessor (we highly recommend using <a href="https://atom.io/packages/sass-autocompile">sass-autocompile</a> if you are working with <a href="https://atom.io/">Atom</a>).</p><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Header</h2></div>
+						<div class="section">
+							<p>The <strong>navigation</strong> module contains definitions for styling the <code>&lt;header&gt;</code> element, along with its contents (logo and links).</p><br/>
+							<table width="100%" class="striped">
+								<caption>Variables</caption>
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$header-height</td><td data-label="Type">Height</td>
+										<td data-label="Description">The height of the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">44px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">#263238</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">#fafafa</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">1px solid #424242</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">2px 8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for the <code>&lt;header&gt;</code> element</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-logo-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the <code>&lt;header&gt;</code> element's logo</td><td data-label="Sample value">'logo'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-logo-font-size</td><td data-label="Type">Font size</td>
+										<td data-label="Description">Font size for the <code>&lt;header&gt;</code> element's logo</td><td data-label="Sample value">1.75em</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-logo-line-height</td><td data-label="Type">Line height</td>
+										<td data-label="Description">Line height for the <code>&lt;header&gt;</code> element's logo</td><td data-label="Sample value">1.2</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-logo-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for the <code>&lt;header&gt;</code> element's logo</td><td data-label="Sample value">1px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-logo-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for the <code>&lt;header&gt;</code> element's logo</td><td data-label="Sample value">3px 0 0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-link-hover-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Hover color for the <code>&lt;header&gt;</code> element's links</td><td data-label="Sample value">#37474f</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-link-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for the <code>&lt;header&gt;</code> element's links</td><td data-label="Sample value">2px 0 0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$include-header-sticky</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Enables sticky <code>&lt;header&gt;</code> elements<sup><a href="#header-note-one">1</a></sup></td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$header-sticky-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the sticky <code>&lt;header&gt;</code> element<sup><a href="#header-note-one">1</a></sup></td><td data-label="Sample value">'sticky'</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="header-note-one">The value of <code>$header-sticky-name</code> will only be used if <code>$include-header-sticky</code> is set to <code class="fore-tertiary">true</code>.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Navigation bar</h2></div>
+						<div class="section">
+							<p>The <strong>navigation</strong> module contains definitions for styling <code>&lt;nav&gt;</code> elements, along with the links they contain.</p><br/>
+							<table width="100%" class="striped">
+								<caption>Variables</caption>
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$nav-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">#eceff1</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">$fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">1px solid #bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for <code>&lt;nav&gt;</code> elements</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-link-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for <code>&lt;nav&gt;</code> elements' links</td><td data-label="Sample value">#1565c0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-sublink-prefix</td><td data-label="Type">String</td>
+										<td data-label="Description">Class prefix for <code>&lt;nav&gt;</code> elements' subcategories</td><td data-label="Sample value">'sublink'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-sublink-depth</td><td data-label="Type">Integer</td>
+										<td data-label="Description">Amount of <code>&lt;nav&gt;</code> elements' subcategories</td><td data-label="Sample value">2</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-sublink-padding-left</td><td data-label="Type">Padding left</td>
+										<td data-label="Description">Left padding for <code>&lt;nav&gt;</code> elements' subcategories</td><td data-label="Sample value">12px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-include-sublink-bar</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Enables the sidebar for <code>&lt;nav&gt;</code> elements' subcategories<sup><a href="#nav-note-one">1</a></sup</td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-sublink-bar-left-position</td><td data-label="Type">Position left</td>
+										<td data-label="Description">Left position of the sidebar for <code>&lt;nav&gt;</code> elements' subcategories<sup><a href="#nav-note-one">1</a></sup</td><td data-label="Sample value">3px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-sublink-bar-width</td><td data-label="Type">Border width</td>
+										<td data-label="Description">Width of the sidebar for <code>&lt;nav&gt;</code> elements' subcategories<sup><a href="#nav-note-one">1</a></sup</td><td data-label="Sample value">1px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$nav-sublink-bar-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Color of the sidebar for <code>&lt;nav&gt;</code> elements' subcategories<sup><a href="#nav-note-one">1</a></sup</td><td data-label="Sample value">#263238</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="nav-note-one">The values of <code>$nav-sublink-bar-left-position</code>, <code>$nav-sublink-bar-width</code> and <code>$nav-sublink-bar-color</code> will only be used if <code>$nav-include-sublink-bar</code> is set to <code class="fore-tertiary">true</code>.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Footer</h2></div>
+						<div class="section">
+							<p>The <strong>navigation</strong> module contains various definitions for customizing the appearance of the <code>&lt;footer&gt;</code> element.</p><br/>
+							<table width="100%" class="striped">
+								<caption>Variables</caption>
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$footer-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for the <code>&lt;footer&gt;</code> element</td><td data-label="Sample value">#263238</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$footer-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for the <code>&lt;footer&gt;</code> element</td><td data-label="Sample value">#fafafa</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$footer-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for the <code>&lt;footer&gt;</code> element</td><td data-label="Sample value">1px solid #424242</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$footer-font-size</td><td data-label="Type">Font size</td>
+										<td data-label="Description">Font size for the <code>&lt;footer&gt;</code> element</td><td data-label="Sample value">85%</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$footer-margin</td><td data-label="Type">Margin</td>
+										<td data-label="Description">Margin for the <code>&lt;footer&gt;</code> element</td><td data-label="Sample value">18px 0 0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$footer-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for the <code>&lt;footer&gt;</code> element</td><td data-label="Sample value">10px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$footer-link-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for the <code>&lt;footer&gt;</code> element's links</td><td data-label="Sample value">#039be5</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$include-footer-sticky</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Enables sticky <code>&lt;footer&gt;</code> elements<sup><a href="#footer-note-one">1</a></sup></td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$footer-sticky-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the sticky <code>&lt;footer&gt;</code> element<sup><a href="#footer-note-one">1</a></sup></td><td data-label="Sample value">'sticky'</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="footer-note-one">The value of <code>$footer-sticky-name</code> will only be used if <code>$include-footer-sticky</code> is set to <code class="fore-tertiary">true</code>.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" style="padding-bottom: 20px; padding-top:20px;">
+        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+          <p>If you want to learn more about customizing <strong>mini.css</strong>, go back to the <a href="index.html">customization page</a> or choose a module from the top menu to see its documentation.</p>
+        </div>
+      </div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

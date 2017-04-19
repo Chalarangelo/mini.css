@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="mini-default.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
 	<title>mini.css - Flavors</title>
 	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
@@ -10,10 +11,10 @@
 	<meta name="author" content="Angelos Chalaris (chalarangelo)">
 	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
 	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
-	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.PNG">
+	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.png">
 	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
 	<style>
-	#header-logo { position:relative; top: -4px; display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px; padding: 4px; }
+	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
 	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
 	.box-colored.red { background: #e53935; } .box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto;} [class^='col-'] .card.fluid { margin: 2px 0 20px; }
 	h2 > a{ font-size: 1rem; float: right;} .box-left { text-align: left; }
@@ -21,43 +22,64 @@
 	</style>
   </head>
   <body>
-	<header class="sticky">
-  		<a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a>
-  		<div style="display: inline; overflow: auto;">
-  			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
-  			<a href="flavors.html" class="button">Flavors</a> <a href="customization.html" class="button">Customization</a>
-  			<a href="quick_reference.html" class="button">Quick Reference</a>
-  			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
-  		</div>
-  	</header>
+		<header class="sticky">
+			<a href="index.html" class="logo"><span id="header-logo">m</span></a>
+			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
+			<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
+			<a href="quick_reference.html" class="button">Quick Reference</a>
+			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+		</header>
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">
         <div class="col-sm col-lg-10 col-lg-offset-1">
           <h1>Flavors</h1>
-          <p>One of the core ideas behind <strong>mini.css</strong> is its flavor system. A flavor is the final compiled stylesheet a website or web app uses. When you start using <strong>mini.css</strong>, you usually try out the default flavor, using the following reference inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
-        <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
+          <p>One of the core ideas behind <strong>mini.css</strong> is its flavor system. A flavor is the final compiled stylesheet a website or web app uses. When you start using <strong>mini.css</strong>, you usually try out the default flavor, using one of the following references inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
+					<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css&quot;</span>&gt;</pre>
+        <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.1/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
         <p>There are, however a handful of other flavors included with <strong>mini.css</strong>. Below, you can see a full list of them:</p><br>
         <ul style="margin-left:0px; padding-left: 10px">
           <li class="card fluid">
             <h2 class="section double-padded">Default <small>mini-default</small></h2>
-            <pre class="section double-padded" style="border-left:0; box-shadow: none;">&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css&quot;</span>&gt;</pre>
+            <pre class="section double-padded" style="border-left:0; box-shadow: none;">&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css&quot;</span>&gt;</pre>
             <p class="section double-padded">The default flavor for <strong>mini.css</strong> uses a light gray background and gray-black foreground color. Certain containers, such as cards and tabs use white-gray backgrounds. The grid system has 12 columns and most of the components and modules use sharp corners with blurred shadows to give it a material-like design. All of the colors used in this flavor are based on <a href="https://material.google.com/style/color.html">Google's Material design color palette</a>.</p>
             <div class="section double-padded">
               <p><strong>Author:</strong> <a href="https://github.com/Chalarangelo">Chalarangelo</a></p>
-              <p><strong>Latest version:</strong> v2.1.0</p>
+              <p><strong>Latest version:</strong> v2.1.1</p>
               <p><strong>Size:</strong> 7 KB</p>
               </p>
             </div>
           </li>
+					<li class="card fluid">
+						<h2 class="section double-padded">Lite <a href="http://codepen.io/chalarangelo/pen/bWVrMv" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a><small>mini-lite</small></h2>
+						<pre class="section double-padded" style="border-left:0; box-shadow: none;">&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-lite.min.css&quot;</span>&gt;</pre>
+						<p class="section double-padded">Lite is a light flavor that uses a the default palette (light gray background and gray-black foreground color). It uses the default naming conventions (<code>.primary</code>, <code>.secondary</code> etc.). The grid system has 12 columns and most components use sharp corners without shadows. To make the flavor lighter, button groups, horizontal tables, certain card and progress styles, along with spinner donuts, tooltips, navigation bars and alerts are not included.</p>
+						<div class="section double-padded">
+							<p><strong>Author:</strong> <a href="https://github.com/Chalarangelo">Chalarangelo</a></p>
+							<p><strong>Latest version:</strong> v2.1.1</p>
+							<p><strong>Size:</strong> 5 KB</p>
+							</p>
+						</div>
+					</li>
           <li class="card fluid">
             <h2 class="section double-padded">Sucroa <a href="http://codepen.io/chalarangelo/pen/YNKYgz" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a><small>mini-sucroa</small></h2>
-            <pre class="section double-padded" style="border-left:0; box-shadow: none;">&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-sucroa.min.css&quot;</span>&gt;</pre>
+            <pre class="section double-padded" style="border-left:0; box-shadow: none;">&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-sucroa.min.css&quot;</span>&gt;</pre>
             <p class="section double-padded">Sucroa is a full flavor that uses a yellow-pink-lilac background color palette with dark purple-black foreground colors. It uses the default naming conventions (<code>.primary</code>, <code>.secondary</code> etc.). The grid system has 12 columns and most components use soft shadows combined with rounded corners. The card module's <code>.dark</code> and <code>.darker</code> classes have been replaced by the <code>.light</code> and <code>.lighter</code> classes respectively. Finally, <code>.animated</code> alerts and <code>.horizontal</code> tables are not available.</p>
             <div class="section double-padded">
               <p><strong>Author:</strong> <a href="https://github.com/AngieDaskalakis">Angeliki Daskalakis</a></p>
-              <p><strong>Latest version:</strong> v2.1.0</p>
+              <p><strong>Latest version:</strong> v2.1.1</p>
               <p><strong>Size:</strong> 7 KB (loads external fonts)</p>
+              </p>
+            </div>
+          </li>
+          <li class="card fluid">
+            <h2 class="section double-padded">Nord <a href="http://codepen.io/chalarangelo/pen/gWaxZX" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a><small>mini-nord</small></h2>
+            <pre class="section double-padded" style="border-left:0; box-shadow: none;">&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-nord.min.css&quot;</span>&gt;</pre>
+            <p class="section double-padded">Nord is a full flavor that uses the <a href="https://github.com/arcticicestudio/nord">Nord color palette</a> (arctic, north-bluish color palette). It uses the default naming conventions (<code>.primary</code>, <code>.secondary</code> etc.). The grid system has 12 columns and most components use soft shadows combined with rounded corners. All modules and components that are available in the default flavor are also available in Nord.</p>
+            <div class="section double-padded">
+              <p><strong>Author:</strong> <a href="https://github.com/tphecca">tphecca</a></p>
+              <p><strong>Latest version:</strong> v2.1.1</p>
+              <p><strong>Size:</strong> 7 KB</p>
               </p>
             </div>
           </li>

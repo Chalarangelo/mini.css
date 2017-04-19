@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="stylesheet" href="../mini-default.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+	<title>mini.css - Customization</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, customization, flavor ">
+	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+	<meta property="og:type" content="website"/><meta property="og:image" content="../page_thumb.png">
+	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="../favicon.png">
+	<style>
+	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
+	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
+	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	.col-sm-12.col-sm-last.col-lg-4.col-lg-normal {box-sizing: border-box; border-right: 1px solid #bdbdbd;}
+	@media (max-width: 1279px){.col-sm-12.col-sm-last.col-lg-4.col-lg-normal {border: 0;border-top: 1px solid #bdbdbd;}}
+	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
+	.box-colored { color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	</style>
+  </head>
+  <body>
+		<header>
+			<a href="../index.html" class="logo"><span id="header-logo">m</span></a>
+			<a href="../index.html" class="button">Introduction</a> <a href="../modules.html" class="button">Modules</a>
+			<a href="../flavors.html" class="button">Flavors</a> <a href="../templates.html" class="button">Templates</a> <a href="/index.html" class="button">Customization</a>
+			<a href="../quick_reference.html" class="button">Quick Reference</a>
+			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+		</header>
+	  <header class="sticky" style="height:36px;">
+  		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
+  		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
+  		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
+  		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
+  		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
+  	</header>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+			<div class="row" style="padding-top: 40px;">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <h1>Customization</h1>
+					<p><strong>mini.css</strong> is built in such a way that customization is really simple. You could try out one of the <a href="../flavors.html">pre-defined flavors</a>, if you want, in order to get used to the framework and build something quickly and easily. However, many projects require custom styles and color palettes, which is when you need to get your hands dirty and start creating your own flavor by customizing an existing one and using mixins and variables to create your own, unique style for your brand or product. This page, along with the rest of the <strong>Customization</strong> section is aimed at developers who want to tweak the code provided with <strong>mini.css</strong> to create their own flavors for their projects, as well as active maintainers of the framework and people who just want to understand the inner workings of the codebase.</p><br/>
+					<p>Use the menu at the top to quickly jump to the documentation of any module that you want to check out. We strongly recommend, however, that you read the general information provided below before you start exploring the modules' code, especially if you are not familiar with the way <strong>mini.css</strong> is structured.</p><br>
+					<h2></h2>
+					<p></p>
+          <h2>Introduction &amp; basics</h2>
+          <p><strong>mini.css</strong> is written using <a href="http://sass-lang.com/">Sass</a>, a very popular CSS preprocessor. We use Sass to do four things:</p>
+          <ul>
+            <li>Make the code modular</li>
+            <li>Create variables that can be changed on the fly</li>
+            <li>Optimize the code</li>
+            <li>Create reusable mixins</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
+          <h3>Modules &amp; file structure</h3>
+          <p>At the heart of <strong>mini.css</strong> are modules - groups of classes and styles that aim to solve one set of needs. There are 10 modules in <strong>mini.css</strong>, which have been already written for you. All of the modules are built using partial files, named <code>_module_name.scss</code> and placed in the <code>src/mini</code> folder. You can edit any of the modules' code and/or add your own modules, following the same structure. The only thing you need to remember to do, in order to add your module to your flavor, is to add an <code>@import</code> statement after all the required variable declarations towards the bottom of your flavor file and it will be compiled along with the rest of <strong>mini.css</strong>. Similarly, to disable a module, just comment out its <code>@import</code> statement from the flavor file.</p><br/>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-5">
+          <h3>Variables</h3>
+          <p>Everything in <strong>mini.css</strong> is based on Sass variables. We try to make our variable names as descriptive as possible, usually using names like <code>$block-element-property-name</code>, but some things might vary a little bit. Changing the values of variables should be reasonably easy, simply navigate to the <code>src/flavors/flavor-name.scss</code> file for a pre-defined flavor and you will see a list of variables that you can tweak. Change the values as you see fit and your finalized stylesheet will reflect the changes you have made. We did our best to make everything as customizable as possible, so that different people can build entirely different flavors using the same building blocks.</p><br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
+          <h3>Code optimization</h3>
+          <p>Building <strong>mini.css</strong> was no small task. Making it lightweight and customizable made things even harder, because these two things don't go well together most of the time. What we did was put more of the load on the preprocessor, instead of the final file. In order to accomplish this, we optimized as much of the code as possible, using conditions, flags and other tricks, so that compiling a flavor file might take one second longer, but loading won't. If you add any code to a flavor yourself, remember not only to make it customizable, but also to optimize it as best as possible.</p><br/>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-5">
+          <h3>Mixins</h3>
+          <p>A lot of elements and components can be styled in many ways and most of the time we want a few styles to be available, without having to rewrite everything. We utilized the <code>@mixin</code> directive of Sass wherever we could to make it possible for you to easily create styles for pre-existing components and elements without having to tweak the base code for said elements or components. Each module's mixins can be found in the corresponding <code>_module_name_mixins.scss</code> file in the <code>src/mini</code> folder. To use a mixin, simply <code>@import</code> its file and then <code>@include</code> the mixin itself, passing values to at least its mandatory parameters. We recommend you write mixins wherever possible, if you create any new modules for <strong>mini.css</strong>.</p><br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <p>To read more about the inner workings of <strong>mini.css</strong>, please choose a module from the top navigation bar to view its documentation.</p>
+        </div>
+      </div>
+      <div class="row box-centered"><div class="col-sm-12 col-lg-10 col-lg-offset-1"></div></div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

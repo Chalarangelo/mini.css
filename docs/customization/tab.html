@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="stylesheet" href="../mini-default.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+	<title>mini.css - Tab</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, module, tab, tabs ">
+	<meta name="author" content="Angelos Chalaris (chalarangelo)">
+	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+	<meta property="og:type" content="website"/><meta property="og:image" content="../page_thumb.png">
+	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="../favicon.png">
+	<style>
+	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
+	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
+	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
+	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	.col-sm-12.col-sm-last.col-md-4.col-md-normal {box-sizing: border-box;border-right: 1px solid #bdbdbd;}
+	@media (max-width: 767px){.col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd;}}
+	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
+	.box-colored {color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	td:first-child, td:last-child { font-family: monospace, monospace; }
+	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;}
+	</style>
+  </head>
+  <body>
+		<header>
+			<a href="../index.html" class="logo"><span id="header-logo">m</span></a>
+			<a href="../index.html" class="button">Introduction</a> <a href="../modules.html" class="button">Modules</a>
+			<a href="../flavors.html" class="button">Flavors</a> <a href="../templates.html" class="button">Templates</a> <a href="index.html" class="button">Customization</a>
+			<a href="../quick_reference.html" class="button">Quick Reference</a>
+			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+		</header>
+	  <header class="sticky" style="height:36px;">
+  		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
+  		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
+  		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
+  		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
+  		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
+  	</header>
+    <!-- Insert your page content here-->
+    <main><div class="container">
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <h1>Tab</h1>
+          <p>The <strong>tab</strong> module aims to combine multiple components and design paradigms, like collapses, accordions, carousels and tabs, into one general-purpose component. Tabs are very simple in structure, responsive on mobile and they allow for layout customization so that you can turn them into accordions or collapses whenever you want.</p>
+          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
+          <ul class="breadcrumbs"><li><a href="../index.html">Home</a></li><li><a href="index.html">Customization</a></li><li>Tab</li></ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Quick overview</h2>
+              <p>Spoilers, collapses, accordions, tabs, carousels have been a staple of modern design for quite a long time. All of these elements are implemented using the <strong>tab</strong> module's single generic container. The tab container replaces all of these design paradigms with one component that is very flexible and responsive in order to let you present your website or app's content any way you like. Tabbed navigation is very easy to implement, while collapse, accordion and carousel components use the stacked architecture of tabs. As usual, the tab container is responsive and accessible, allowing you to deliver your content properly to all devices and users.</p><br>
+            </div>
+            <div class="section">
+							<h2>Quick start</h2>
+              <p>To customize the <strong>tab</strong> module, duplicate an existing flavor file (we suggest you use the <code>mini-default.scss</code> flavor file) and use this page's variable tables and mixins as a reference to change only the values you need. Remember to compile your flavor file (not the module's partial file) using a Sass preprocessor (we highly recommend using <a href="https://atom.io/packages/sass-autocompile">sass-autocompile</a> if you are working with <a href="https://atom.io/">Atom</a>).</p><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<div class="card fluid">
+						<div class="section"><h2>Tab styling</h2></div>
+						<div class="section">
+							<p>The <strong>tab</strong> module contains definitions for tab styling, using custom classes and structures.</p><br/>
+							<table width="100%" class="striped">
+								<caption>Variables</caption>
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$tab-container-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for tab components' containers</td><td data-label="Sample value">'tabs'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-container-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for tab components' containers</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for tab components</td><td data-label="Sample value">1px solid #9e9e9e</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for tab components</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-label-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for tab components' labels (default)</td><td data-label="Sample value">#e0e0e0</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-label-selected-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for tab components' labels (selected)</td><td data-label="Sample value">#eeeeee</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-label-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for tab components' labels (default)</td><td data-label="Sample value">$fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-label-selected-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for tab components' labels (selected)</td><td data-label="Sample value">$fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-label-hover-opacity</td><td data-label="Type">Opaciy</td>
+										<td data-label="Description">Opacity for tab components' labels (hover)</td><td data-label="Sample value">0.8</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-label-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for tab components' labels</td><td data-label="Sample value">10px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-label-height</td><td data-label="Type">Height</td>
+										<td data-label="Description">Height for tab components' labels</td><td data-label="Sample value">26px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-panel-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for tab components' panels</td><td data-label="Sample value">#fafafa</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-panel-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for tab components' panels</td><td data-label="Sample value">$fore-color</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-panel-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for tab components' panels</td><td data-label="Sample value">8px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-panel-height</td><td data-label="Type">Height</td>
+										<td data-label="Description">Height for tab components' panels</td><td data-label="Sample value">400px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-stacked-breakpoint</td><td data-label="Type">Breakpoint</td>
+										<td data-label="Description">Breakpoint for tabs components' mobile view</td><td data-label="Sample value">767px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$tab-stacked-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for stacked tab components</td><td data-label="Sample value">'stacked'</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" style="padding-bottom: 20px; padding-top:20px;">
+        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+          <p>If you want to learn more about customizing <strong>mini.css</strong>, go back to the <a href="index.html">customization page</a> or choose a module from the top menu to see its documentation.</p>
+        </div>
+      </div>
+    </div></main>
+    <!-- End of page content-->
+    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+  </body>
+</html>

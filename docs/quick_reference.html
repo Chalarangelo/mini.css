@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="mini-default.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
 	<title>mini.css - Quick Reference</title>
 	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
@@ -10,10 +11,10 @@
 	<meta name="author" content="Angelos Chalaris (chalarangelo)">
 	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
 	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
-	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.PNG">
+	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.png">
 	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
 	<style>
-	#header-logo { position:relative; top: -4px; display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px; padding: 4px; }
+	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
 	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
 	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; } .box-left { text-align: left; }
 	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
@@ -23,15 +24,13 @@
 	</style>
   </head>
   <body>
-	<header class="sticky">
-		<a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a>
-		<div style="display: inline; overflow: auto;">
+		<header class="sticky">
+			<a href="index.html" class="logo"><span id="header-logo">m</span></a>
 			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
-			<a href="flavors.html" class="button">Flavors</a> <a href="customization.html" class="button">Customization</a>
+			<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
 			<a href="quick_reference.html" class="button">Quick Reference</a>
-			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
-		</div>
-	</header>
+			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+		</header>
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">
@@ -46,13 +45,15 @@
           <div class="card fluid">
             <div class="section"><h2>Setup &amp; usage</h2></div>
             <div class="section">
-              <p>You can import the default flavor of <strong>mini.css</strong> in your webpage by simply adding the following reference inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
-              <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
-              <p>If you want to download the package using your favorite package manager, you can use either <strong>Bower</strong> or <strong>NPM</strong>:</p>
+							<p>You can download <strong>mini.css</strong> using either <strong>NPM</strong> or <strong>Bower</strong>:</p>
               <div class="row">
+								<div class="col-sm-12 col-md-6"><pre><span class="fore-tertiary">npm install</span> <span class="fore-primary">mini.css</span></pre></div>
                 <div class="col-sm-12 col-md-6"><pre><span class="fore-tertiary">bower install</span> <span class="fore-primary">mini.css</span></pre></div>
-                <div class="col-sm-12 col-md-6"><pre><span class="fore-tertiary">npm install</span> <span class="fore-primary">mini.css</span></pre></div>
               </div><br>
+              <p>You can import the default flavor of <strong>mini.css</strong> in your webpage by simply adding one of the following references inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
+							<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css&quot;</span>&gt;</pre>
+              <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
+							<p>You can also find <strong>mini.css</strong> on <a href="https://cdnjs.com/libraries/mini.css">cdnjs</a>, which you can use to include it in your projects.</p><br/>
               <p>We strongly suggest you add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre>
             </div>
@@ -118,7 +119,10 @@
   &lt;li&gt;Go to work&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;img src=&quot;...&quot;&gt;</pre>
+&lt;figure&gt;
+  &lt;img src=&quot;...&quot;&gt;
+  &lt;figcaption&gt;Image caption&lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
               </div>
             </div>
           </div>
@@ -1123,6 +1127,33 @@
                 </ul>
               </div>
             </div>
+						<div class="section row">
+							<div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+								<h3>Responsive visibility helpers <a href="https://codepen.io/chalarangelo/pen/EmVvWz" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+								<pre>&lt;span class=&quot;hidden-sm&quot;&gt;Hidden in smaller screens&lt;/span&gt;
+&lt;span class=&quot;hidden-md&quot;&gt;Hidden in medium-sized screens&lt;/span&gt;
+&lt;span class=&quot;hidden-lg&quot;&gt;Hidden in larger screens&lt;/span&gt;
+
+&lt;span class=&quot;visually-hidden-sm&quot;&gt;Visually hidden in smaller screens&lt;/span&gt;
+&lt;span class=&quot;visually-hidden-md&quot;&gt;Visually hidden in medium-sized screens&lt;/span&gt;
+&lt;span class=&quot;visually-hidden-lg&quot;&gt;Visually hidden in larger screens&lt;/span&gt;</pre>
+							</div>
+							<div class="col-sm-12 col-md-6">
+								<h3>Notes</h3>
+								<ul>
+									<li>Use the <code>.hidden-<span class="fore-primary">SCR_SZ</span></code> or <code>.visually-hidden-<span class="fore-primary">SCR_SZ</span></code> syntax, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names</li>
+									<li><code><span class="fore-primary">SCR_SZ</span></code> values:
+                    <ul>
+                      <li><code><span class="fore-tertiary">sm</span></code> for screens below <code>768px</code> wide</li>
+                      <li><code><span class="fore-tertiary">md</span></code> for screens between <code>768px</code>(inclusive) and <code>1280px</code>(exclusive)</li>
+                      <li><code><span class="fore-tertiary">lg</span></code> for screens wider than <code>1280px</code></li>
+                    </ul>
+                  </li>
+									<li>Responsive visibility helper classes can be combined for different screen sizes, avoid using both for the same size</li>
+									<li>Responsive visibility helper classes use <code><span class="fore-secondary">!important</span></code> declarations</li>
+								</ul>
+							</div>
+						</div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Breadcrumbs <a href="https://codepen.io/chalarangelo/pen/bBzzEN" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>

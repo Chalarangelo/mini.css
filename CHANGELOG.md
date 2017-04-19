@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.1.1
+
+- Added responsive hiding classes in the `utility` module (#61).
+- Fixed a bug with `.button-group` on Chrome (#63).
+- Fixed a bug with `.horizontal` tables (#69).
+- Added **mini-lite** flavor (a lightweight version of **mini-default**).
+- Added **mini-nord** flavor (#69).
+- Updated flavors to latest version of the framework.
+- Documented flavor customization in more detail.
+- Added templates to help newcomers use the framework more effectively.
+- Restructured parts of the codebase for consistency and clarity. Mixins are now housed in their own files and many modules have introduced hidden and external variables.
+- Updated all `@media` queries to be screen-specific.
+- Added and updated CDN and general download options (#64).
+- Added styling for `<figcaption>` elements.
+
 ## v2.1.0
 
 - Added a `.tooltip` component in the `contextual` module (#41).
@@ -9,7 +24,6 @@
 - Added proper documentation for a media object in the `grid` module (#22).
 - Updated a lot of the documentation to include ARIA guidelines. Updated button elements, so that `role="button"` creates buttons same as the class (#40).
 - Updated **mini-default** and **mini-sucroa** flavors to the latest version of the framework.
-- Added **mini-classic** flavor.
 - Changed the styling of `<nav>` to include a left border sidebar for subcategories.
 - Updated selectors in many places and optimized parts of the codebase.
 - Added conditional flags to enable or disable several components.

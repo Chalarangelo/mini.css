@@ -1,8 +1,15 @@
 /*
 	Browsers resets and base typography.
 */
-$apply-defaults-to-all: 		true !default;									// Should default values be applied to all elements? (`true` or `false`).
-$base-root-font-size:			16px !default;									// Root font sizing for all elements - In `px` only!
+$apply-defaults-to-all: 			true !default;				// Should default values be applied to all elements? (`true`/`false`).
+$base-root-font-size:					16px !default;				// Root font sizing for all elements - Should only be specified in `px` units!
+$include-dfn-fix: 						true !default;				// Fix display of <dfn> element in older versions of Android.
+$make-heading-smalltext-block:false !default;				// Should <small> elements in headings be displayed as blocks (`true`/`false`).
+$horizontal-rule-fancy-style: false !default;				// Should a fancy styling be applied for the <hr> element (`true`/`false`).
+$add-pre-element-sidebar: 		false !default;				// Should a fancy sidebar be added to the left side of <pre> (`true`/`false`).
+$apply-link-underline: 				true !default;				// Should an underline be applied to all <a> elements? (`true`/`false`).
+$apply-link-hover-fade: 			true !default;				// Should the :hover and :focus state of <a> elements use fade-out instead of a different color (`true`/`false`).
+
 html {
 	font-size: $base-root-font-size;	// Set root's font sizing.
 }
@@ -42,9 +49,10 @@ summary {
 	display: list-item;
 }
 
+// Abbreviations
 abbr[title] {
-	border-bottom: none; // Remove bottom border in Firefox 39-.
-	text-decoration: underline; // Opinionated style-fix for all browsers.
+	border-bottom: none; 					// Remove bottom border in Firefox 39-.
+	text-decoration: underline; 	// Opinionated style-fix for all browsers.
 }
 
 // Correct display for older versions of IE.
@@ -68,8 +76,7 @@ img {
  	height: auto;
 }
 
-// Fix display in older versions of Android.
-$include-dfn-fix: true !default;
+// Fix display of <dfn> element in older versions of Android.
 @if $include-dfn-fix {
 	dfn {
 		font-style: italic;
@@ -82,7 +89,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: $heading-font-weight;
 	small {
 		color: $heading-smalltext-fore-color;
-		$make-heading-smalltext-block: false !default;
 		@if $make-heading-smalltext-block {
 			display: block;
 			@if $heading-smalltext-b-top-margin != 0 {
@@ -135,7 +141,6 @@ hr {
 	// Actual styling using variables
 	line-height: $horizontal-rule-line-height;
 	margin: $horizontal-rule-margin;
-	$horizontal-rule-fancy-style: false !default;
 	@if $horizontal-rule-fancy-style {
 		height: 1px;
 		background: -webkit-linear-gradient(#{$horizontal-rule-fancy-gradient});
@@ -160,11 +165,11 @@ blockquote {
 	// Overwrite defaults
 	margin: $blockquote-margin;
 	padding: $blockquote-padding;
-	@if $blockquote-sidebar-style != 0 {
-		border-left: $blockquote-sidebar-style;
-	}
 	@if $blockquote-border-style != 0 {
 		border: $blockquote-border-style;
+	}
+	@if $blockquote-sidebar-style != 0 {
+		border-left: $blockquote-sidebar-style;
 	}
 	@if $blockquote-border-radius != 0 {
 		border-radius: $blockquote-border-radius;
@@ -238,7 +243,6 @@ pre {
 	@if pre-element-margin != 0 {
 		margin: $pre-element-margin;
 	}
-	$add-pre-element-sidebar: false !default;
 	@if $add-pre-element-sidebar {
 		border-left: $pre-element-sidebar-style;
 	}
@@ -285,6 +289,9 @@ $style-samp-element: false !default;
 		}
 		@if $samp-element-padding != 0 {
 			padding: $samp-element-padding;
+		}
+		@if $samp-element-box-shadow != none {
+			box-shadow: $samp-element-box-shadow;
 		}
 	}
 }
@@ -375,8 +382,7 @@ $style-samp-element: false !default;
 	}
 }
 
-$apply-link-underline: true !default;
-$apply-link-hover-fade: true !default;
+// Link styling
 a{
 	color: $link-fore-color;
 	@if $apply-link-underline {
@@ -405,5 +411,15 @@ a{
 		&:hover, &:focus, &:active {
 			color: $link-hover-fore-color;
 		}
+	}
+}
+
+// Captions for figures
+figcaption {
+	@if $figcaption-font-size != 100% {
+		font-size: $figcaption-font-size;
+	}
+	@if $figcaption-fore-color != $fore-color {
+		color: $figcaption-fore-color;
 	}
 }

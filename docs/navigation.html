@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="mini-default.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
 	<title>mini.css - Navigation</title>
 	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
@@ -10,10 +11,10 @@
 	<meta name="author" content="Angelos Chalaris (chalarangelo)">
 	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
 	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
-	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.PNG">
+	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.png">
 	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
 	<style>
-	#header-logo { position:relative; top: -4px; display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px; padding: 4px; }
+	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
 	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
 	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
 	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
@@ -24,15 +25,13 @@
 	</style>
   </head>
   <body>
-	  <header>
-      	<a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a>
-      	<div style="display: inline; overflow: auto;">
-      		<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
-      		<a href="flavors.html" class="button">Flavors</a> <a href="customization.html" class="button">Customization</a>
-      		<a href="quick_reference.html" class="button">Quick Reference</a>
-      		<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
-      	</div>
-      </header>
+		<header>
+			<a href="index.html" class="logo"><span id="header-logo">m</span></a>
+			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
+			<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
+			<a href="quick_reference.html" class="button">Quick Reference</a>
+			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+		</header>
 	  <header class="sticky" style="height:36px;">
   		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
   		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="mini-default.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
 	<title>mini.css - Minimal, responsive, style-agnostic CSS framework</title>
 	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
@@ -10,15 +11,39 @@
 	<meta name="author" content="Angelos Chalaris (chalarangelo)">
 	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
 	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
-	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.PNG">
+	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.png">
 	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
 	<style>
-	#header-logo { position:relative; top: -4px; display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px; padding: 4px; }
-	#top-area { height: 320px; background: -webkit-linear-gradient(#455a64,#192024); background: linear-gradient(#455a64,#192024);}
-	#top-logo {display: inline-block;  height: 66px; width: 70px;  margin: 64px auto -30px; border-radius: 1px; background: #558b2f;  padding: 8px; padding-top: 12px;  box-shadow: 0 1px 3px rgba(0,0,0,0.35);}
-	#top-heading { color: #f5f5f5; font-size: 2.4em; text-shadow: 0 1px 2px rgba(0,0,0,0.35);  margin-bottom: -8px;}
-	@media (min-width: 768px) { #top-area {height: 440px;} #top-logo {margin: 88px auto -24px;} #top-heading {margin-bottom: -6px;} }
-	#top-version-tag { padding: 4px 6px; font-size: 0.85em; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.35); }
+	#logo-body { position: relative; background: -webkit-linear-gradient(#07020d 25%, #150627 45%, #220a40 75%, #300d5a); background: linear-gradient(#07020d 25%, #150627 45%, #220a40 75%, #300d5a); height: -webkit-calc(100vh - 48px); height: calc(100vh - 48px); overflow: hidden; text-align: center; }
+	#description { color: #f5f5f5; font-family: 'Noto Sans', sans-serif; position: absolute; top: 49vh; width: 100%; margin: 0; }
+	#top-heading { color: #f5f5f5; font-size: 2.8em; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); position: absolute; margin: 0; top: 35vh; width: 100%; height: 20vh; min-height: 42px; font-family: 'Noto Sans', sans-serif; }
+	#top-vtag-cont { width: 100%; text-align: center; }
+	#top-version-tag { padding: 8px 8px; font-size: 1.2em; font-weight: 700; font-family: 'Noto Sans', sans-serif; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); position: absolute; top: 55vh; width: 40px; background: #4527a0; border-radius: 6px; margin: 0; margin-left: -30px; }
+	@media screen and (max-height:480px) { #top-version-tag { top: 70vh; } #description { top: 55vh;}}
+	#mt1 { position: absolute; bottom: 0; left: -7vw; width: 0; height: 0; border-left: 12vw solid transparent; border-right: 11vw solid transparent; border-bottom: 8.5vw solid #07020d; }
+	#mt1:after { content: ""; position: absolute; left: -1.4vw; border-left: 1.4vw solid transparent; border-right: 11vw solid transparent; border-bottom: 8.5vw solid #150627; z-index: 2; }
+	#mt2 { position: absolute; bottom: -0.4vw; left: 10vw; width: 0; height: 0; border-left: 7vw solid transparent; border-right: 10vw solid transparent; border-bottom: 7vw solid #120520; z-index: 3; }
+	#mt2:after { content: ""; position: absolute; left: -1.3vw; border-left: 1.3vw solid transparent; border-right: 10vw solid transparent; border-bottom: 7vw solid #1b0833; z-index: 4; }
+	#mt3 { position: absolute; bottom: 0; right: 17.75vw; width: 0; height: 0; border-left: 8vw solid transparent; border-right: 7vw solid transparent; border-bottom: 6vw solid #1b0833; z-index: 5; }
+	#mt3:after { content: ""; position: absolute; left: -8vw; border-left: 8vw solid transparent; border-right: 1.4vw solid transparent; border-bottom: 6vw solid #220a40; z-index: 6; }
+	#mt4 { position: absolute; bottom: -0.25vw; right: 8vw; width: 0; height: 0; border-left: 7.5vw solid transparent; border-right: 7.25vw solid transparent; border-bottom: 6.5vw solid #150627; z-index: 3;}
+	#mt4:after { content: ""; position: absolute; left: -7.5vw; border-left: 7.5vw solid transparent; border-right: 1.7vw solid transparent; border-bottom: 6.5vw solid #1f0a3b; z-index: 2;}
+	#mt5 { position: absolute; bottom: 0; right: -6.5vw; width: 0; height: 0; border-left: 9vw solid transparent; border-right: 10.5vw solid transparent; border-bottom: 8vw solid #0e041a; }
+	#mt5:after { content: ""; position: absolute; left: -9vw; border-left: 9vw solid transparent; border-right: 2vw solid transparent; border-bottom: 8vw solid #1b0833; z-index: 2; }
+	@media screen and (max-width: 767px) {
+  	#mt1 { left: -10.5vw; border-left: 18vw solid transparent; border-right: 16.5vw solid transparent; border-bottom: 12.75vw solid #07020d; }
+  	#mt1:after { left: -2.1vw; border-left: 2.1vw solid transparent; border-right: 16.5vw solid transparent; border-bottom: 12.75vw solid #150627; }
+		#mt2 { bottom: -0.6vw; left: 15vw; border-left: 10.5vw solid transparent; border-right: 15vw solid transparent; border-bottom: 10.5vw solid #120520; }
+  	#mt2:after { left: -1.95vw; border-left: 1.95vw solid transparent; border-right: 15vw solid transparent; border-bottom: 10.5vw solid #1b0833; }
+  	#mt3 { right: 26.625vw; border-left: 12vw solid transparent; border-right: 10.5vw solid transparent; border-bottom: 9vw solid #1b0833; }
+  	#mt3:after { left: -12vw; border-left: 12vw solid transparent; border-right: 2.1vw solid transparent; border-bottom: 9vw solid #220a40; }
+  	#mt4 { bottom: -0.375vw; right: 12vw; border-left: 11.25vw solid transparent; border-right: 10.875vw solid transparent; border-bottom: 9.75vw solid #150627; }
+  	#mt4:after { left: -11.25vw; border-left: 11.25vw solid transparent; border-right: 2.55vw solid transparent; border-bottom: 9.75vw solid #1f0a3b; }
+  	#mt5 { right: -9.75vw; border-left: 13.5vw solid transparent; border-right: 15.75vw solid transparent; border-bottom: 12vw solid #0e041a; }
+  	#mt5:after { left: -13.5vw; border-left: 13.5vw solid transparent; border-right: 3vw solid transparent; border-bottom: 12vw solid #1b0833;}
+	}
+	#codename { position: absolute; bottom: 2px; right: 3px; color: #616161; z-index: 5; font-size: 0.55em; font-family: 'Noto Sans', sans-serif; }
+	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
 	.box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;}
 	.box-colored.red { background: #e53935; } .box-centered { text-align: center; }
 	.box-centered > .card.fluid { -webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start;
@@ -28,20 +53,19 @@
 	</style>
   </head>
   <body>
-    <div class="container" id="top-area"><div class="row">
-        <div class="col-sm"><div class="box-centered"> <img src="mini-logo.svg" id="top-logo">
-            <h1 id="top-heading"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></h1>
-            <mark class="tertiary" id="top-version-tag">v2.1</mark>
-        </div></div>
-    </div></div>
-	<header class="sticky">
-		<a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a>
-		<div style="display: inline; overflow: auto;">
-			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
-			<a href="flavors.html" class="button">Flavors</a> <a href="customization.html" class="button">Customization</a>
-			<a href="quick_reference.html" class="button">Quick Reference</a>
-			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+		<div id="logo-body">
+  		<p id="description">minimal, responsive, style-agnostic CSS framework</p>
+    	<h1 id="top-heading"><span style="font-size: 1.45em; font-family: 'Noto Sans', sans-serif;">m</span>ini<span style="font-size:0.65em; color: #4527a0; font-family: 'Noto Sans', sans-serif;">.css</span></h1>
+  		<p id="top-vtag-cont"><mark id="top-version-tag">v2.1</mark></p>
+  		<div id="mt1"></div><div id="mt2"></div><div id="mt3"></div><div id="mt4"></div><div id="mt5"></div>
+  		<small id="codename">Fermion</small>
 		</div>
+	<header class="sticky">
+		<a href="index.html" class="logo"><span id="header-logo">m</span></a>
+		<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
+		<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
+		<a href="quick_reference.html" class="button">Quick Reference</a>
+		<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 	</header>
     <!-- Insert your page content here-->
     <main><div class="container">
@@ -76,14 +100,18 @@
       <div class="row">
         <div class="col-sm col-lg-10 col-lg-offset-1">
         <h2>Setup &amp; usage</h2>
-        <p>You can import the default flavor of <strong>mini.css</strong> in your webpage by simply adding the following reference inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
-        <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
-        <p>If you want to download the package using your favorite package manager, you can use either <strong>Bower</strong> or <strong>NPM</strong>:</p>
-        <div class="row">
-          <div class="col-sm-12 col-md-6"><pre><span class="fore-tertiary">bower install</span> <span class="fore-primary">mini.css</span></pre></div>
-          <div class="col-sm-12 col-md-6"><pre><span class="fore-tertiary">npm install</span> <span class="fore-primary">mini.css</span></pre></div>
-        </div><br>
-        <p>If you are interested in tinkering with the flavor files and cooking your own flavor, check out the <a href="customization.html">Customization</a> page for information, tips on how to get started and general guidelines.</p><br><hr>
+				<p><strong>mini.css</strong> is published in <strong>NPM</strong> and <strong>bower</strong>, so you can easily download it, using your preferred package manager:</p>
+				<div class="row">
+					<div class="col-sm-12 col-md-6"><pre><span class="fore-tertiary">npm install</span> <span class="fore-primary">mini.css</span></pre></div>
+					<div class="col-sm-12 col-md-6"><pre><span class="fore-tertiary">bower install</span> <span class="fore-primary">mini.css</span></pre></div>
+				</div>
+				<p>After donwloading <strong>mini.css</strong>, pick a <a href="flavors.html">Flavor</a> and use it for your project.</p>
+				<br/>
+				<p>Alternatively, you can use either <strong>GitCDN</strong> or <strong>RawGit</strong> to import the default flavor of <strong>mini.css</strong>. Simply add one of the following references inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
+				<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css&quot;</span>&gt;</pre>
+				<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.1/dist/mini-default.min.css&quot;</span>&gt;</pre><br/>
+				<p>Finally, you can find <strong>mini.css</strong> on <a href="https://cdnjs.com/libraries/mini.css">cdnjs</a>, which you can use to include it in your projects.</p><br/>
+				<hr>
         </div>
       </div>
       <div class="row">
@@ -105,18 +133,18 @@
 					</tr>
 					<tr>
 						<td data-label="Name">mini.css</td>
-						<td data-label="Version"><a href="https://github.com/chalarangelo/mini.css/blob/v2.1.0/dist/css/mini-default.css">v2.1</a></td>
-						<td data-label="Size (uncompressed)">47 KB</td><td data-label="Size (minified)">36 KB</td><td data-label="Size (gzipped)">7 KB</td>
+						<td data-label="Version"><a href="https://github.com/Chalarangelo/mini.css/blob/master/dist/mini-default.css">v2.1.1</a></td>
+						<td data-label="Size (uncompressed)">50 KB</td><td data-label="Size (minified)">40 KB</td><td data-label="Size (gzipped)">7 KB</td>
 					</tr>
 					<tr>
 						<td data-label="Name">Semantic UI</td>
-						<td data-label="Version"><a href="https://github.com/Semantic-Org/Semantic-UI/blob/0b1b59b0e1c780e842820df5c1904a162034812c/dist/semantic.css">v2.2.6</a></td>
-						<td data-label="Size (uncompressed)">730 KB</td><td data-label="Size (minified)">550 KB</td><td data-label="Size (gzipped)">95 KB</td>
+						<td data-label="Version"><a href="https://github.com/Semantic-Org/Semantic-UI/blob/dfc323e608ff15e36a336c17ef925ffc27b5bb2e/dist/semantic.css">v2.2.10</a></td>
+						<td data-label="Size (uncompressed)">752 KB</td><td data-label="Size (minified)">553 KB</td><td data-label="Size (gzipped)">95 KB</td>
 					</tr>
 					<tr>
 						<td data-label="Name">Zurb Foundation</td>
-						<td data-label="Version"><a href="https://github.com/zurb/foundation-sites/blob/ab172838d6de406204956015c9fd393c5a526e0e/dist/foundation.css">v3.0</a></td>
-						<td data-label="Size (uncompressed)">90 KB</td><td data-label="Size (minified)">64 KB</td><td data-label="Size (gzipped)">12 KB</td>
+						<td data-label="Version"><a href="https://github.com/zurb/foundation-sites/blob/fc578179ab1718c18216f88b2ff5b04c70532d53/dist/css/foundation.css">v6.3.1</a></td>
+						<td data-label="Size (uncompressed)">103 KB</td><td data-label="Size (minified)">73 KB</td><td data-label="Size (gzipped)">13 KB</td>
 					</tr>
 				</tbody>
 			</table><br>
@@ -186,6 +214,7 @@
           <p>If you are still here after reading this far, we will assume you are interested or at least curious. Based on that assumption, here are a few links to help get you started:</p>
             <ul>
             <li>For a quick guide on getting started, you might wanna take a look at the available <a href="modules.html">modules</a> list and the tutorials provided for each one!</li>
+						<li>To get you started even faster, we have created a handful of <a href="templates.html">templates</a> that might fit your needs!</li>
             <li>If you are familiar with <strong>mini.css</strong> and want a cheat sheet or quick reference guide, check the <a href="quick_reference.html">quick reference</a> page!</li>
             <li><strong>mini.css</strong> comes with a few nice pre-built customizable <a href="flavors.html">flavors</a>. See which one of them better suits your needs!</li>
             <li>If you are more experienced or demanding, you can always take a look at the <a href="customization.html">customization</a> section to cook up a flavor of your own custom-tailored to your needs!</li>

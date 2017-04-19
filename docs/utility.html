@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css">
+	<link rel="stylesheet" href="mini-default.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
 	<title>mini.css - Utility</title>
 	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
@@ -10,10 +11,10 @@
 	<meta name="author" content="Angelos Chalaris (chalarangelo)">
 	<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
 	<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
-	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.PNG">
+	<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.png">
 	<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
 	<style>
-	#header-logo { position:relative; top: -4px; display: inline; height: 28px; width: 28px; margin-top: 4px; background: #558b2f; border-radius: 1px; padding: 4px; }
+	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
 	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #b71c1c; }
 	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
 	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
@@ -24,15 +25,13 @@
 	</style>
   </head>
   <body>
-	  <header>
-      	<a href="index.html" class="logo"><img src="mini-logo.svg" id="header-logo">&nbsp;<span style="position: relative; top:-12px;"><span style="font-size: 1.35em;">m</span>ini<span style="font-size:0.65em; color: #558b2f;">.css</span></span></a>
-      	<div style="display: inline; overflow: auto;">
-      		<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
-      		<a href="flavors.html" class="button">Flavors</a> <a href="customization.html" class="button">Customization</a>
-      		<a href="quick_reference.html" class="button">Quick Reference</a>
-      		<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.4em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
-      	</div>
-      </header>
+		<header>
+			<a href="index.html" class="logo"><span id="header-logo">m</span></a>
+			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
+			<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
+			<a href="quick_reference.html" class="button">Quick Reference</a>
+			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
+		</header>
 	  <header class="sticky" style="height:36px;">
   		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
   		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
@@ -163,6 +162,54 @@
                 <div class="col-sm-12">
                   <pre>&lt;div class=&quot;responsive-padding responsive-margin&quot;&gt;Responsive padding and margin&lt;/div&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use both of these classes to make certain element adapt to changes. This could be especially useful for certain grid layouts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+			<div class="row">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <div class="card fluid">
+            <div class="section"><h2>Responsive visibility helpers</h2></div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-first">
+                <p>You can hide content (either fully or only visually) for certain screens, using the responsive visibility helpers. To hide elements completely use the <code>.hidden-<span class="fore-primary">SCR_SZ</span></code> syntax, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names (<code><span class="fore-tertiary">sm</span></code> for smaller screens, <code><span class="fore-tertiary">md</span></code> for medium-sized screens or <code><span class="fore-tertiary">lg</span></code> for larger screens). If you want to hide certains elements for all users, except screen readers, replace <code>.hidden</code> with <code>.visually-hidden</code>, followed by the screen size name.</p>
+                <h3>Sample code</h3>
+                <pre>&lt;span class=&quot;hidden-sm&quot;&gt;Hidden in smaller screens&lt;/span&gt;
+&lt;span class=&quot;hidden-md&quot;&gt;Hidden in medium-sized screens&lt;/span&gt;
+&lt;span class=&quot;hidden-lg&quot;&gt;Hidden in larger screens&lt;/span&gt;
+
+&lt;span class=&quot;visually-hidden-sm&quot;&gt;Visually hidden in smaller screens&lt;/span&gt;
+&lt;span class=&quot;visually-hidden-md&quot;&gt;Visually hidden in medium-sized screens&lt;/span&gt;
+&lt;span class=&quot;visually-hidden-lg&quot;&gt;Visually hidden in larger screens&lt;/span&gt;</pre>
+              </div>
+            </div>
+            <div class="section">
+            <h3>Notes</h3>
+              <ul>
+                <li>Responsive visibility helper classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
+								<li>The specific breakpoints for small, medium and large screen sizes are as follows:
+                  <ul>
+                    <li><strong>small</strong>: less than <code>768px</code> wide</li>
+                    <li><strong>medium</strong>: more than or equal to <code>768px</code> wide but less than <code>1280px</code> wide</li>
+                    <li><strong>large</strong>: <code>1280px</code> wide or more</li>
+                  </ul>
+                </li>
+								<li>Responsive visibility helper classes are independent, meaning that hiding an element in one screen size will not affect it visibility in any other screen size.</li>
+              </ul><hr>
+							<div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;span class=&quot;hidden-sm hidden-md&quot;&gt;Hidden in smaller and medium-sized screens, visible in larger screens&lt;/span&gt;
+<span class="fore-tertiary">&lt;!-- or --&gt;</span>
+&lt;span class=&quot;visually-hidden-md visually-hidden-lg&quot;&gt;Visually hidden in medium-sized and larger screens, visible in smaller screens&lt;/span&gt;
+<span class="fore-tertiary">&lt;!-- or --&gt;</span>
+&lt;span class=&quot;hidden-sm visually-hidden-lg&quot;&gt;Hidden in smaller screens, visually hidden in larger screens, visible in medium-sized screens&lt;/span&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can combine responsive visibility helpers for different sizes, based on your needs.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;span class=&quot;hidden-sm visually-hidden-sm&quot;&gt;Not a good idea&lt;/span&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining responsive visibility helpers for the same screen size. Combining both of them might cause unexpected behavior.</p>
                 </div>
               </div>
             </div>

@@ -1002,3 +1002,4 @@
 - Added a list bullet in the `index` page to help people get to the templates more easily.
 - Updated `nord` flavor to be fully up-to-date with the latest version of **mini.css**.
 - Added maintainers to all flavors.
+- Updated CHANGELOG to reflect latest changes for **v2.1.1**.

@@ -76,6 +76,7 @@ The team behind **mini.css** is as follows:
 
 Special thanks to these fine folks for helping in the development of **mini.css**:
 - Angeliki Daskalakis ([@angiedaskalakis](https://github.com/AngieDaskalakis)) - Author of the [Sucroa](https://github.com/Chalarangelo/mini.css/blob/master/dist/mini-sucroa.css) flavor
+- [@tphecca](https://github.com/tphecca) - Author of the [Nord](https://github.com/Chalarangelo/mini.css/blob/master/dist/mini-nord.css) flavor
 - Rory Primrose ([@roryprimrose](https://github.com/roryprimrose)) - Code restructure
 - Sandro Magi ([@naasking](https://github.com/naasking)) - [Multiple](https://github.com/Chalarangelo/mini.css/issues?q=is%3Aissue+author%3Anaasking) suggestions, ideas, bug reports
 

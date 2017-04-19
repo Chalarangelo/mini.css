@@ -992,3 +992,11 @@
 - Updated all doc pages to use a `mini-default.min.css` copy placed inside the `docs` folder.
 - Added secondary `header` in `modules` page, based on my use-case (I spent a lot of time scrolling while browsing the pages).
 - Updated framework sizes and version for front page.
+
+
+## 20170419
+
+- Added new contributor to README.
+- Have **hugging cat** a hug, seemed excited.
+- Created templates (6 of them), built `templates` page for showcasing them and added links to it from everywhere.
+- Added a list bullet in the `index` page to help people get to the templates more easily.

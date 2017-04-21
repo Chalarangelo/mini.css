@@ -1012,3 +1012,5 @@
 - Updated `package.json` with proper `homepage` link, changed order of keywords, added `node-sass` in `devDependencies`.
 - Added `::placeholder` styling (no-prefix), dealing with #36.
 - Bumped all flavor files to include updated `::placeholder` definitions.
+- Updated `.animated` `.alert`s to deal with the way `webkit` renders them (#35).
+- Bumped flavors again.

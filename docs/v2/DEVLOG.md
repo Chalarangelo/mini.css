@@ -1019,3 +1019,4 @@
 - Updated flavor files with latest version tag.
 - Checked `yarn`'s packaging, all systems nominal, added to download options.
 - Updated CHANGELOG and README.
+- Fixed a couple of problems in doc pages post-release, added secondary navigation to `quick_reference`.

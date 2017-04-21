@@ -209,6 +209,10 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 	opacity: 1;
 	color: $input-placeholder-fore-color;
 }
+::placeholder {
+	opacity: 1;
+	color: $input-placeholder-fore-color;	
+}
 // Definitions for the button and button-like elements.
 // Different elements are styled based on the same set of rules.
 // Reset for Firefox focusing on button elements.

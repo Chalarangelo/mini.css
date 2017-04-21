@@ -13,21 +13,24 @@
     "type": "git",
     "url": "git+https://github.com/Chalarangelo/mini.css.git"
   },
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+  },
   "keywords": [
-    "mini.css",
-    "mini",
-    "CSS",
-    "framework",
-    "toolkit",
+    "css",
+    "sass",
     "minimal",
     "responsive",
     "style-agnostic",
-    "Sass"
+    "framework",
+    "toolkit",
+    "mini",
+    "mini.css"
   ],
   "author": "Angelos Chalaris (Chalarangelo)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Chalarangelo/mini.css/issues"
   },
-  "homepage": "https://github.com/Chalarangelo/mini.css#readme"
+  "homepage": "https://chalarangelo.github.io/mini.css/"
 }

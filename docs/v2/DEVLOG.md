@@ -1003,3 +1003,12 @@
 - Updated `nord` flavor to be fully up-to-date with the latest version of **mini.css**.
 - Added maintainers to all flavors.
 - Updated CHANGELOG to reflect latest changes for **v2.1.1**.
+
+# v2.1.2 Development Log
+
+## 20170421
+
+- Updated `.npmignore` to not include the `prepros-6.config` file.
+- Updated `package.json` with proper `homepage` link, changed order of keywords, added `node-sass` in `devDependencies`.
+- Added `::placeholder` styling (no-prefix), dealing with #36.
+- Bumped all flavor files to include updated `::placeholder` definitions.

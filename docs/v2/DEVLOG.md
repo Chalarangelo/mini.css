@@ -1014,3 +1014,8 @@
 - Bumped all flavor files to include updated `::placeholder` definitions.
 - Updated `.animated` `.alert`s to deal with the way `webkit` renders them (#35).
 - Bumped flavors again.
+- Updated the way the version tag of the homepage displays (or not) on mobile devices.
+- Fixed capitalization for `npm` in all pages, updated version tag everywhere (hopefully), getting ready for **v2.1.2**.
+- Updated flavor files with latest version tag.
+- Checked `yarn`'s packaging, all systems nominal, added to download options.
+- Updated CHANGELOG and README.

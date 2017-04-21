@@ -14,7 +14,7 @@
     "url": "git+https://github.com/Chalarangelo/mini.css.git"
   },
   "devDependencies": {
-    "node-sass": "^4.5.2",
+    "node-sass": "^4.5.2"
   },
   "keywords": [
     "css",

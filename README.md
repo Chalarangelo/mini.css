@@ -1,4 +1,4 @@
-# mini.css v2.1.1
+# mini.css v2.1.2
 A minimal, responsive, style-agnostic CSS framework
 
 [![npm](https://img.shields.io/npm/v/mini.css.svg)](https://www.npmjs.com/package/mini.css)
@@ -22,9 +22,10 @@ For instructions on how to use, best practices, templates and other usage inform
 
 #### Method 1: Use a package manager (recommended)
 
-1. Install **mini.css** either from `npm` or `bower`.
+1. Install **mini.css** using `npm`, `yarn` or `bower`.
 ```
 npm install mini.css
+yarn add mini.css
 bower install mini.css
 ```
 2. Pick one of the available [flavors](https://chalarangelo.github.io/mini.css/flavors.html) and use its CSS file.

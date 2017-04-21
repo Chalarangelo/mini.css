@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.1.2
+
+- Updated `::placeholder` definitions (#36).
+- Updated the animations on `.animated` alerts, blurriness should be less noticeable now (#35).
+- Added `yarn` support.
+
 ## v2.1.1
 
 - Added responsive hiding classes in the `utility` module (#61).

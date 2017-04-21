@@ -19,7 +19,7 @@
 	#top-heading { color: #f5f5f5; font-size: 2.8em; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); position: absolute; margin: 0; top: 35vh; width: 100%; height: 20vh; min-height: 42px; font-family: 'Noto Sans', sans-serif; }
 	#top-vtag-cont { width: 100%; text-align: center; }
 	#top-version-tag { padding: 8px 8px; font-size: 1.2em; font-weight: 700; font-family: 'Noto Sans', sans-serif; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); position: absolute; top: 55vh; width: 40px; background: #4527a0; border-radius: 6px; margin: 0; margin-left: -30px; }
-	@media screen and (max-height:480px) { #top-version-tag { top: 70vh; } #description { top: 55vh;}}
+	@media screen and (max-height:480px), screen and (max-width: 480px) { #top-version-tag { display: none; } #description { top: 60vh;}}
 	#mt1 { position: absolute; bottom: 0; left: -7vw; width: 0; height: 0; border-left: 12vw solid transparent; border-right: 11vw solid transparent; border-bottom: 8.5vw solid #07020d; }
 	#mt1:after { content: ""; position: absolute; left: -1.4vw; border-left: 1.4vw solid transparent; border-right: 11vw solid transparent; border-bottom: 8.5vw solid #150627; z-index: 2; }
 	#mt2 { position: absolute; bottom: -0.4vw; left: 10vw; width: 0; height: 0; border-left: 7vw solid transparent; border-right: 10vw solid transparent; border-bottom: 7vw solid #120520; z-index: 3; }
@@ -100,16 +100,17 @@
       <div class="row">
         <div class="col-sm col-lg-10 col-lg-offset-1">
         <h2>Setup &amp; usage</h2>
-				<p><strong>mini.css</strong> is published in <strong>NPM</strong> and <strong>bower</strong>, so you can easily download it, using your preferred package manager:</p>
+				<p><strong>mini.css</strong> is published in <strong>npm</strong>, <strong>yarn</strong> and <strong>bower</strong>, so you can easily download it, using your preferred package manager:</p>
 				<div class="row">
-					<div class="col-sm-12 col-md-6"><pre><span class="fore-tertiary">npm install</span> <span class="fore-primary">mini.css</span></pre></div>
-					<div class="col-sm-12 col-md-6"><pre><span class="fore-tertiary">bower install</span> <span class="fore-primary">mini.css</span></pre></div>
+					<div class="col-sm-12 col-md-12 col-lg-4"><pre><span class="fore-tertiary">npm install</span> <span class="fore-primary">mini.css</span></pre></div>
+					<div class="col-sm-12 col-md-6 col-lg-4"><pre><span class="fore-tertiary">yarn add</span> <span class="fore-primary">mini.css</span></pre></div>
+					<div class="col-sm-12 col-md-6 col-lg-4"><pre><span class="fore-tertiary">bower install</span> <span class="fore-primary">mini.css</span></pre></div>
 				</div>
 				<p>After donwloading <strong>mini.css</strong>, pick a <a href="flavors.html">Flavor</a> and use it for your project.</p>
 				<br/>
 				<p>Alternatively, you can use either <strong>GitCDN</strong> or <strong>RawGit</strong> to import the default flavor of <strong>mini.css</strong>. Simply add one of the following references inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
 				<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css&quot;</span>&gt;</pre>
-				<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.1/dist/mini-default.min.css&quot;</span>&gt;</pre><br/>
+				<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.2/dist/mini-default.min.css&quot;</span>&gt;</pre><br/>
 				<p>Finally, you can find <strong>mini.css</strong> on <a href="https://cdnjs.com/libraries/mini.css">cdnjs</a>, which you can use to include it in your projects.</p><br/>
 				<hr>
         </div>
@@ -133,7 +134,7 @@
 					</tr>
 					<tr>
 						<td data-label="Name">mini.css</td>
-						<td data-label="Version"><a href="https://github.com/Chalarangelo/mini.css/blob/master/dist/mini-default.css">v2.1.1</a></td>
+						<td data-label="Version"><a href="https://github.com/Chalarangelo/mini.css/blob/master/dist/mini-default.css">v2.1.2</a></td>
 						<td data-label="Size (uncompressed)">50 KB</td><td data-label="Size (minified)">40 KB</td><td data-label="Size (gzipped)">7 KB</td>
 					</tr>
 					<tr>

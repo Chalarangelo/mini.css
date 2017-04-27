@@ -117,8 +117,7 @@ $include-center-block:	false !default;							// Should center block be included?
 		background: rgba($close-icon-back-color,0);
 		vertical-align: top;
 		cursor: pointer;
-		-webkit-transition: all 0.3s ease 0s;
-						transition: all 0.3s ease 0s;
+		transition: background 0.3s;
 		&:hover, &:active, &:focus {
 			background: rgba($close-icon-back-color,1);
 		}

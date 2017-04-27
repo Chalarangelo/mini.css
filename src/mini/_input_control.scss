@@ -211,7 +211,7 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 }
 ::placeholder {
 	opacity: 1;
-	color: $input-placeholder-fore-color;	
+	color: $input-placeholder-fore-color;
 }
 // Definitions for the button and button-like elements.
 // Different elements are styled based on the same set of rules.
@@ -252,8 +252,7 @@ a[role="button"], label[role="button"], [role="button"] {
 	@if $apply-link-underline {		// Override for links if underline is enabled.
 		text-decoration: none;
 	}
-	-webkit-transition: all 0.3s ease 0s;
-					transition: all 0.3s ease 0s;
+	transition: background 0.3s;
 	cursor: pointer;
 	&:hover, &:active, &:focus {
 		background: rgba($button-back-color, $button-hover-back-opacity);

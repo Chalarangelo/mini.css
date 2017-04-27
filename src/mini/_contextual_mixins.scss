@@ -142,6 +142,7 @@
 		@if $tooltip-alt-tail-size != $tooltip-tail-size {
 			&:before {
 				border-width: $tooltip-alt-tail-size;
+				left: calc(50% - #{$tooltip-alt-tail-size});
 			}
 			&:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
 				margin-bottom: 2 * $tooltip-alt-tail-size;
@@ -160,14 +161,6 @@
 			}
 			@if $tooltip-alt-box-shadow != $tooltip-box-shadow {
 				box-shadow: $tooltip-alt-box-shadow;
-			}
-		}
-	}
-	@if $tooltip-alt-tail-size != $tooltip-tail-size {
-		@supports (left: calc(50% - #{$tooltip-tail-size})) or (left: -webkit-calc(50% - #{$tooltip-tail-size})){
-			.#{$tooltip-name}.#{$tooltip-alt-name}:before {
-				left: 	-webkit-calc(50% - #{$tooltip-alt-tail-size});
-				left: 					calc(50% - #{$tooltip-alt-tail-size});
 			}
 		}
 	}

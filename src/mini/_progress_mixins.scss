@@ -54,7 +54,12 @@
 		@if $progress-alt-height != $progress-height {
 			height: $progress-alt-height;
 		}
-		width: 100%;
+		@if $progress-alt-left-right-margin != $progress-left-right-margin {
+			width: calc(100% - #{$progress-alt-left-right-margin*2});
+		}
+		@if $progress-alt-left-right-margin != $progress-left-right-margin or $progress-alt-top-bottom-margin != $progress-top-bottom-margin {
+			margin: $progress-alt-top-bottom-margin $progress-alt-left-right-margin;
+		}
 		@if $progress-alt-top-bottom-margin != $progress-top-bottom-margin {
 			margin: $progress-alt-top-bottom-margin auto;
 		}
@@ -82,16 +87,6 @@
 		}
 		@if $progress-alt-box-shadow != $progress-box-shadow {
 			box-shadow: $progress-alt-box-shadow;
-		}
-	}
-	// Feature query that checks if the left and right margins can be applied properly.
-	@if $progress-alt-left-right-margin != $progress-left-right-margin and $progress-alt-left-right-margin != auto and $progress-alt-left-right-margin != 0 {
-		@supports (width: calc(100% - 2*#{$progress-alt-left-right-margin})) or (width: -webkit-calc(100% - 2*#{$progress-alt-left-right-margin})) {
-			progress.#{$progress-alt-name} {
-				width: 	-webkit-calc(100% - 2*#{$progress-alt-left-right-margin});
-				width: 			calc(100% - 2*#{$progress-alt-left-right-margin});
-				margin: $progress-alt-top-bottom-margin $progress-alt-left-right-margin;
-			}
 		}
 	}
 }

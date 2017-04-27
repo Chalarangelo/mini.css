@@ -66,8 +66,7 @@ header {
 			padding: $header-logo-padding;
 		}
 		@if $apply-link-hover-fade {
-			-webkit-transition: 0s opacity;
-							transition: 0s opacity;
+			transition: opacity 0.3s ;
 		}
 	}
 	// Link styling.

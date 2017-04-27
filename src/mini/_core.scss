@@ -143,8 +143,7 @@ hr {
 	margin: $horizontal-rule-margin;
 	@if $horizontal-rule-fancy-style {
 		height: 1px;
-		background: -webkit-linear-gradient(#{$horizontal-rule-fancy-gradient});
-		background:         linear-gradient(#{$horizontal-rule-fancy-gradient});
+		background: linear-gradient(#{$horizontal-rule-fancy-gradient});
 	}
 	@else {
 		height: 0;
@@ -396,8 +395,7 @@ a{
 	}
 	@if $apply-link-hover-fade {
 		opacity: 1;
-		-webkit-transition: all 0.3s ease 0s;
-				transition: all 0.3s ease 0s;
+		transition: opacity 0.3s;
 	}
 	&:visited {
 		color: $link-visited-fore-color;

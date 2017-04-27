@@ -114,8 +114,7 @@ mark {
 			clip: rect(0 0 0 0);
 			-webkit-clip-path: inset(100%);
 							clip-path: inset(100%);
-			-webkit-transition: all 0.3s ease 0s;
-							transition: all 0.3s ease 0s;
+			transition: all 0.3s;
 			// Remember to keep this index a lower value than the one used for stickies.
 			z-index: 1010;	// Deals with certain problems when combined with cards and tables.
 		}
@@ -140,6 +139,10 @@ mark {
 			content: '';
 			background: transparent;
 			border: $tooltip-tail-size solid transparent;
+			// Older browsers will almost center the tooltip's tail
+			left: 50%;
+			// Newer browsers will center the tail properly
+			left: calc(50% - #{$tooltip-tail-size});
 		}
 		&:not(.#{$tooltip-bottom-name}):before { // Top (default) tooltip styling
 			border-top-color: $tooltip-back-color;
@@ -171,12 +174,6 @@ mark {
 		}
 		&.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
 			margin-top: 2 * $tooltip-tail-size;
-		}
-	}
-	@supports (left: calc(50% - #{$tooltip-tail-size})) or (left: -webkit-calc(50% - #{$tooltip-tail-size})){
-		.#{$tooltip-name}:before {
-			left: 	-webkit-calc(50% - #{$tooltip-tail-size});
-			left: 					calc(50% - #{$tooltip-tail-size});
 		}
 	}
 }

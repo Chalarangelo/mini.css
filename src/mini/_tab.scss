@@ -40,8 +40,7 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 		display: inline-block;
 		height: $tab-label-height;
 		cursor: pointer;
-		-webkit-transition: background 0.3s ease 0s;
-						transition: background 0.3s ease 0s;
+		transition: background 0.3s;
 		@if $tab-label-back-color != $back-color {
 			background: $tab-label-back-color;
 		}
@@ -94,10 +93,8 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 						transform: scaleY(0);
 		-webkit-transform-origin: top;
 						transform-origin: top;
-		-webkit-transition:	-webkit-transform 0.3s ease 0s,
-																transform 0.3s ease 0s;
-						transition: -webkit-transform 0.3s ease 0s,
-																transform 0.3s ease 0s;
+		transition: -webkit-transform 0.3s,
+												transform 0.3s;
 		// Style for tab labels except the first
 		@if $tab-border-style != 0 {
 			& + [type="radio"] + label {

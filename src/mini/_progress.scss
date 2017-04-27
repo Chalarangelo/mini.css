@@ -16,14 +16,14 @@ progress {
 	   -moz-appearance: none;
 			appearance: none;
 	height: $progress-height;
-	width: 100%;
+	// Older browsers will sort not display progress properly, but that's ok
+	width: 90%;
+	// Newer browsers will calculate the proper width
+	width: calc(100% - #{$progress-left-right-margin*2});
+	margin: $progress-top-bottom-margin $progress-left-right-margin;
 	border: $progress-border-style;
 	@if $progress-border-radius != 0 {
 		border-radius: $progress-border-radius;
-	}
-	@if $progress-top-bottom-margin != 0 {
-		margin: $progress-top-bottom-margin auto;
-		// Check somewhere below for the feature query that allows left and right margins to display properly on newer browsers.
 	}
 	@if $progress-box-shadow != none {
 		box-shadow: $progress-box-shadow;
@@ -60,16 +60,6 @@ progress {
 		}
 	}
 }
-// Feature query that checks if the left and right margins can be applied properly.
-@if $progress-left-right-margin != 0 and $progress-left-right-margin != auto {
-	@supports (width: calc(100% - 2*#{$progress-left-right-margin})) or (width: -webkit-calc(100% - 2*#{$progress-left-right-margin})) {
-		progress {
-			width: 	-webkit-calc(100% - 2*#{$progress-left-right-margin});
-			width: 					calc(100% - 2*#{$progress-left-right-margin});
-			margin: $progress-top-bottom-margin $progress-left-right-margin;
-		}
-	}
-}
 @if $include-spinner-donut {	// Turn off to disable spinner donuts.
 // Animation definition for donut spinner
 	@-webkit-keyframes spinner-donut-anim {
@@ -77,7 +67,7 @@ progress {
 		100% { 	-webkit-transform: rotate(360deg);}
 	}
 					@keyframes spinner-donut-anim {
-			0% {					transform: rotate(0deg);}
+			0% {					transform: rotate(0deg);	}
 		100% {					transform: rotate(360deg);}
 	}
 }

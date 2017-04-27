@@ -1036,3 +1036,9 @@
 - Changed `.tooltip` `top` and `bottom` to `75%` from `100%`, in order to bring it closer to the text.
 - After full internal testing, removed the `demo.html` file.
 - Developed `mini-dark`, some tweaks might be required, but overall color palette seems good.
+- Updated `.tooltip`, effectively breaking support for certain older browsers (some old version of Chrome mostly) and removing the `@supports` query, saving a little bit of space, as most browsers now do in fact support the `calc` directive. Also, added `left: 50%` for older browsers, allowing tooltips to work a little bit better on legacy systems.
+- Did pretty much the same for `progress`'s `width` property, cleaning up some space. The `width` will now default to `90%` so hopefully no trouble for older browsers as well.
+- Broke support of `hr` for older browsers, as the `-webkit` prefix is now representative of a tiny fraction of users.
+- Changed `transition` properties to not use `-webkit` prefix anymore. Also changed them, removing `ease` and `0s` for `transition-timing-function` and `transition-delay` repsectively, allowing the browser defaults to apply (which are the same, so nothing lost there).
+- Changed `transition` of `a` and `buttton` elements to `opacity` from `all` for higher specificity.
+- Tested aforementioned changes, everything seems to work ok. Size of `default` flavor is now `6.71KB` compared to a `6.89KB` in previous release. Pretty sweet reduction.

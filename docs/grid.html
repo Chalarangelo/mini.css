@@ -21,38 +21,65 @@
 	.col-sm-12.col-sm-last.col-md-4.col-md-normal {box-sizing: border-box;border-right: 1px solid #bdbdbd;}
 	@media (max-width: 767px){.col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd;} }
 	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
-	.box-colored {color: #f5f5f5; } header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	.box-colored {color: #f5f5f5; }
 	.col-sm-12.col-sm-last.col-md-12.col-md-normal {box-sizing: border-box;border-bottom: 1px solid #bdbdbd;margin-bottom: 16px;padding-bottom: 12px;}
 	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-12.col-md-normal { border: 0; border-top: 1px solid #bdbdbd; margin-bottom: 0;}}
 	</style>
   </head>
   <body>
-		<header>
+		<header class="sticky">
 			<a href="index.html" class="logo"><span id="header-logo">m</span></a>
 			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
 			<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
 			<a href="quick_reference.html" class="button">Quick Reference</a>
 			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 		</header>
-	  <header class="sticky" style="height:36px;">
-  		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
-  		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
-  		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
-  		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
-  		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
-  	</header>
-    <!-- Insert your page content here-->
-    <main><div class="container">
+		<div class="container" style="padding-left: 0.25rem;">
+			<div class="row"> <div class="col-sm-12 col-md-4 col-lg-2 hidden-sm" style="padding: 0;"> <nav>
+				<h4 style="text-align: center">Modules</h4> <a href="core.html#core-title">Core</a>
+				<a href="core.html#typography" class="sublink-1">Typography</a> <a href="core.html#headings" class="sublink-1">Headings</a>
+				<a href="core.html#common-textual-elements" class="sublink-1">Common textual elements</a>
+				<a href="core.html#lists" class="sublink-1">Lists</a> <a href="core.html#images-captions" class="sublink-1">Image responsiveness &amp; captions</a>
+				<br/> <a href="grid.html#grid-title">Grid</a>
+				<a href="grid.html#basic-layout" class="sublink-1">Basic layout</a> <a href="grid.html#screen-specific-layout" class="sublink-1">Screen specific layouts</a>
+				<a href="grid.html#predefined-layout" class="sublink-1">Predefined layouts</a> <a href="grid.html#column-offset" class="sublink-1">Column offsets</a>
+				<a href="grid.html#column-reorder" class="sublink-1">Column reordering</a> <a href="grid.html#media-object" class="sublink-1">Media object pattern</a>
+				<br/> <a href="navigation.html#navigation-title">Navigation</a>
+				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a>
+				<a href="navigation.html#footer" class="sublink-1">Footer</a> <a href="navigation.html#sticky" class="sublink-1">Sticky headers &amp; footers</a>
+				<br/> <a href="input_control.html#input-control-title">Input Control</a>
+				<a href="input_control.html#forms-input" class="sublink-1">Forms &amp; input</a> <a href="input_control.html#checkbox-radio" class="sublink-1">Checkboxes &amp; radio buttons</a>
+				<a href="input_control.html#buttons" class="sublink-1">Buttons &amp; button groups</a> <a href="input_control.html#file-upload" class="sublink-1">File upload buttons</a>
+				<br/> <a href="table.html#table-title">Table</a>
+				<a href="table.html#syntax-responsiveness" class="sublink-1">Basic syntax &amp; responsiveness</a>
+				<a href="table.html#horizontal-tables" class="sublink-1">Horizontal tables</a> <a href="table.html#variants-matrices" class="sublink-1">Table variants &amp; matrices</a>
+				<br/> <a href="card.html#card-title">Card</a>
+				<a href="card.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="card.html#sections-media" class="sublink-1">Sections &amp; media</a>
+				<a href="card.html#sizing-fluidity" class="sublink-1">Card sizing &amp; fluidity</a>
+				<br/> <a href="tab.html#tab-title">Tab</a>
+				<a href="tab.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="tab.html#stacked-tabs" class="sublink-1">Stacked tabs</a>
+				<br/> <a href="contextual.html#contextual-title">Contextual</a>
+				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#alerts" class="sublink-1">Alerts</a>
+				<a href="contextual.html#animated-alerts" class="sublink-1">Animated alerts</a> <a href="contextual.html#tooltips" class="sublink-1">Tooltips</a>
+				<br/> <a href="progress.html#progress-title">Progress</a>
+				<a href="progress.html#basic-progress-bar" class="sublink-1">Basic progress bar</a> <a href="progress.html#progress-variants" class="sublink-1">Progress bar variants</a>
+				<a href="progress.html#donut-spinner" class="sublink-1">Donut spinner</a> <a href="progress.html#spinner-variants" class="sublink-1">Donut spinner variants</a>
+				<br/> <a href="utility.html#utility-title">Utility</a>
+				<a href="utility.html#visibility-helpers" class="sublink-1">Visibility helpers</a> <a href="utility.html#borders-shadows" class="sublink-1">Generic borders &amp; shadows</a>
+				<a href="utility.html#responsive-sizing" class="sublink-1">Responsive sizing &amp; spacing classes</a>
+				<a href="utility.html#responsive-visibility" class="sublink-1">Responsive visibility helpers</a> <a href="utility.html#breadcrumbs" class="sublink-1">Breadcrumbs</a>
+				<a href="utility.html#close-icon" class="sublink-1">Close icon</a> <br/>
+			</nav> </div>
+			<div class="col-sm-12 col-md-8 col-lg-10"><main>
       <div class="row" style="padding-top: 40px;" id="grid-title">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <h1>Grid</h1>
           <p>The <strong>grid</strong> module provides you with a modern, responsive grid system based on the Flexible Layout Module (commonly known as <em>flexbox</em>). The structure of the grid is simple and logical, allowing you to quickly build your pages from scratch. Setting the layout for a page is easy and will behave the way you want them to on mobile devices and smaller screens.</p>
-          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
-          <ul class="breadcrumbs"><li><a href="index.html">Home</a></li><li><a href="modules.html">Modules</a></li><li>Grid</li></ul>
+          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
@@ -67,7 +94,7 @@
         </div>
       </div>
       <div class="row" id="basic-layout">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2>Basic layout</h2></div>
             <div class="section row">
@@ -241,7 +268,7 @@
         </div>
       </div>
       <div class="row" id="screen-specific-layout">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2>Screen-specific layouts</h2></div>
             <div class="section row">
@@ -337,7 +364,7 @@
         </div>
       </div>
 	  <div class="row" id="predefined-layout">
-	    <div class="col-sm col-lg-10 col-lg-offset-1">
+	    <div class="col-sm-12">
 	  	<div class="card fluid">
 	  	  <div class="section"><h2>Predefined layouts</h2></div>
 	  	  <div class="section row">
@@ -394,7 +421,7 @@
 	    </div>
 	  </div>
       <div class="row" id="column-offset">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2>Column offsets</h2></div>
             <div class="section row">
@@ -467,7 +494,7 @@
         </div>
       </div>
       <div class="row" id="column-reorder">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2>Column reordering</h2></div>
             <div class="section row">
@@ -541,7 +568,7 @@
         </div>
       </div>
 	  <div class="row" id="media-object">
-		<div class="col-sm col-lg-10 col-lg-offset-1">
+		<div class="col-sm-12">
 		  <div class="card fluid">
 			<div class="section"><h2>Media object pattern</h2></div>
 			<div class="section row">
@@ -646,12 +673,11 @@
 		</div>
 	  </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>
-    </div></main>
-    <!-- End of page content-->
+  	</main></div></div></div>
     <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>
 </html>

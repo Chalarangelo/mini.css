@@ -1042,3 +1042,5 @@
 - Changed `transition` properties to not use `-webkit` prefix anymore. Also changed them, removing `ease` and `0s` for `transition-timing-function` and `transition-delay` repsectively, allowing the browser defaults to apply (which are the same, so nothing lost there).
 - Changed `transition` of `a` and `buttton` elements to `opacity` from `all` for higher specificity.
 - Tested aforementioned changes, everything seems to work ok. Size of `default` flavor is now `6.71KB` compared to a `6.89KB` in previous release. Pretty sweet reduction.
+- Built sidebar navigation into modules pages.
+- Tweaked color of `button` elements slightly to look less terrible.

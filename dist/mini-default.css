@@ -973,7 +973,7 @@ button, [type="button"], [type="submit"], [type="reset"],
 a.button, label.button, .button,
 a[role="button"], label[role="button"], [role="button"] {
   display: inline-block;
-  background: rgba(172, 172, 172, 0.75);
+  background: rgba(208, 208, 208, 0.75);
   color: #212121;
   border: 0;
   border-radius: 2px;
@@ -991,7 +991,7 @@ a.button:focus, label.button:hover, label.button:active, label.button:focus, .bu
 a[role="button"]:hover,
 a[role="button"]:active,
 a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:active, label[role="button"]:focus, [role="button"]:hover, [role="button"]:active, [role="button"]:focus {
-  background: #acacac;
+  background: #d0d0d0;
   opacity: 1;
 }
 
@@ -1021,7 +1021,7 @@ input[type="file"] {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  border: 1px solid #9e9e9e;
+  border: 1px solid #bdbdbd;
   border-radius: 2px;
   margin: 0.5rem;
 }
@@ -1050,7 +1050,7 @@ input[type="file"] {
 .button-group .button + .button,
 .button-group .button + [role="button"], .button-group [role="button"] + button, .button-group [role="button"] + [type="button"], .button-group [role="button"] + [type="submit"], .button-group [role="button"] + [type="reset"],
 .button-group [role="button"] + .button, .button-group [role="button"] + [role="button"] {
-  border-left: 1px solid #9e9e9e;
+  border-left: 1px solid #bdbdbd;
 }
 
 @media screen and (max-width: 767px) {
@@ -1072,7 +1072,7 @@ input[type="file"] {
   .button-group .button + [role="button"], .button-group [role="button"] + button, .button-group [role="button"] + [type="button"], .button-group [role="button"] + [type="submit"], .button-group [role="button"] + [type="reset"],
   .button-group [role="button"] + .button, .button-group [role="button"] + [role="button"] {
     border: 0;
-    border-top: 1px solid #9e9e9e;
+    border-top: 1px solid #bdbdbd;
   }
 }
 

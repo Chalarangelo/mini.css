@@ -5,80 +5,76 @@
 	Flavor name: Default (mini-default)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
 	Maintainers: Angelos Chalaris
-	mini.css version: v2.1.2 (Fermion)
+	mini.css version: v2.1.3 (Fermion)
 */
 //	Basic rules for body and typography
 $fore-color:						#212121;									// Text and general foreground color
-$back-color:						#f5f5f5;									// Body background color
+$back-color:						#f8f8f8;									// Body background color
 $base-font-family:																// Default font stack for all elements:
 	'-apple-system, BlinkMacSystemFont,\"Segoe UI\",\"Roboto\", \"Droid Sans\",\"Helvetica Neue\", Helvetica, Arial, sans-serif';
 // OS X and iOS system fonts (San Francisco) -> Windows system fonts -> Android system fonts (newer and older) -> Fallback fonts
 $base-root-font-size:		16px;											// Root font sizing for all elements [1]
-$base-font-size:				1em;											// Default font sizing for all elements [2]
+$base-font-size:				1rem;											// Default font sizing for all elements [2]
 $base-line-height:			1.5;											// Default line height for all elements.
 $body-margin:						0;												// Margin for the body
 $apply-defaults-to-all:	true;											// Should default values be applied to all elements? (`true` or `false`) [3]
-$h1-font-size:					2em;											// Font size of h1
-$h2-font-size:					1.5em;										// Font size for h2
-$h3-font-size:					1.25em;										// Font size for h3
-$h4-font-size:					1.1em;										// Font size for h4
-$h5-font-size:					1em;											// Font size for h5
-$h6-font-size:					0.85em;										// Font size for h6
+$h1-font-size:					2rem;											// Font size of h1
+$h2-font-size:					1.6875rem;								// Font size for h2
+$h3-font-size:					1.4375rem;								// Font size for h3
+$h4-font-size:					1.1875rem;								// Font size for h4
+$h5-font-size:					1rem;											// Font size for h5
+$h6-font-size:					0.8125rem;								// Font size for h6
 $heading-line-height:		1.2em;										// Line height for all headings
-$heading-margin:				12px 8px;									// Margin for all headings
+$heading-margin:				0.75rem 0.5rem;						// Margin for all headings
 $heading-font-weight:		500;											// Font weight for all headings
 $heading-smalltext-fore-color:	#424242;					// <small> color in headings
 $make-heading-smalltext-block:	true;							// Should <small> elements in headings be displayed as blocks (`true`/`false`) [4]
-$heading-smalltext-b-font-size:	75%;							// Font size of block <small> elements in headings
-$heading-smalltext-b-top-margin:-4px;							// Top margin of block <small> elements in headings
-$paragraph-margin:			1px 8px;									// Margin for <p> elements
-$list-margin:						1px 8px 10px;							// Margin for <ol> and <ul> elements
-$list-left-padding:			28px;											// Left padding for <ol> and <ul> elements
+$heading-smalltext-b-font-size:	0.75em;						// Font size of block <small> elements in headings
+$heading-smalltext-b-top-margin:-0.25rem;					// Top margin of block <small> elements in headings
+$paragraph-margin:			0.5rem;										// Margin for <p> elements
+$list-margin:						0.5rem;										// Margin for <ol> and <ul> elements
+$list-left-padding:			1rem;											// Left padding for <ol> and <ul> elements
 $bold-font-weight:			700;											// Font weight for <b> and <strong>
 $horizontal-rule-line-height:	1.25em;							// <hr> line height
-$horizontal-rule-margin:	8px;										// <hr> margin
-$horizontal-rule-border-style:	1px solid #757575;// Border style for horizontal rules (used in the <hr> element's border-top)
+$horizontal-rule-margin:	0.5rem;									// <hr> margin
+$horizontal-rule-border-style:	1px solid #8c8c8c;// Border style for horizontal rules (used in the <hr> element's border-top)
 $horizontal-rule-fancy-style:	true;								// Should a fancy styling be applied for the <hr> element (`true`/`false`) [5]
-$horizontal-rule-fancy-gradient:"to right, #bdbdbd, #616161, #bdbdbd";					// Gradient style for fancy horizontal rule
+$horizontal-rule-fancy-gradient:"to right, #bdbdbd, #8c8c8c, #bdbdbd";					// Gradient style for fancy horizontal rule
 $blockquote-back-color:			#eeeeee;							// Background color for <blockquote>
 $blockquote-fore-color:			$fore-color;					// Text color for <blockquote>
-$blockquote-margin:					8px 10px;							// Margin for <blockquote>
-$blockquote-padding:				6px 10px 24px;				// Padding for <blockquote>
-$blockquote-sidebar-style:	3px solid #616161;		// Style for the sidebar of <blockquote>
-$blockquote-cite-font-size:	0.85em;								// Font size for citation of <blockquote>
-$blockquote-cite-fore-color:			#616161;				// Text color for citation of <blockquote>
-$blockquote-cite-left-position:		10px;						// Left padding for citation of <blockquote>
+$blockquote-margin:					0.5rem;								// Margin for <blockquote>
+$blockquote-padding:				0.5rem 0.5rem 1.5rem;	// Padding for <blockquote>
+$blockquote-sidebar-style:	4px solid #505050;		// Style for the sidebar of <blockquote>
+$blockquote-cite-font-size:	0.875rem;						// Font size for citation of <blockquote>
+$blockquote-cite-fore-color:			#505050;				// Text color for citation of <blockquote>
+$blockquote-cite-left-position:		0.625rem;				// Left padding for citation of <blockquote>
 $blockquote-cite-bottom-position:	0;							// Bottom padding for citation of <blockquote>
 $blockquote-border-style:					0;							// Border style for <blockquote>
 $blockquote-border-radius:				0 2px 2px 0;		// Border radius for <blockquote>
-$blockquote-box-shadow:														// Box shadow for <blockquote>
-	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
-$use-default-code-fonts:			true;									// Should default font choice (monospace) be used for code elements? (`true`/`false`) [6]
+$blockquote-box-shadow:						none;						// Box shadow for <blockquote>
+$use-default-code-fonts:			true;								// Should default font choice (monospace) be used for code elements? (`true`/`false`) [6]
 //$code-font-family:					monospace, monospace;	// Fonts for code elements if not default
-$code-element-padding:				2px 4px;							// Padding for <code>
+$code-element-padding:				0.125rem 0.25rem;			// Padding for <code>
 $code-element-fore-color:			$fore-color;					// Text color for <code>
 $code-element-back-color:			#e0e0e0;							// Background color for <code>
 $code-element-border-style:		0;										// Border style for <code>
 $code-element-border-radius:	2px;									// Border radius for <code>
-$code-element-box-shadow:														// Box shadow for <code>
-	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
-$pre-element-padding:					12px;									// Padding for <pre>
+$code-element-box-shadow:			none;									// Box shadow for <code>
+$pre-element-padding:					0.75rem;							// Padding for <pre>
 $pre-element-fore-color:	$code-element-fore-color;	// Text color for <pre>
 $pre-element-back-color:	$code-element-back-color;	// Background color for <pre>
 $pre-element-border-style:		0;										// Border style for <pre>
-$pre-element-border-radius:		0 2px 2px 0;					// Border radius for <pre>
-$pre-element-margin:					8px 10px;							// Margin for <pre>
-$pre-element-box-shadow:														// Box shadow for <pre>
-	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
+$pre-element-border-radius:		0 2px 2px 0;;									// Border radius for <pre>
+$pre-element-margin:					0.5rem;								// Margin for <pre>
+$pre-element-box-shadow:			none;									// Box shadow for <pre>
 $add-pre-element-sidebar:		true;										// Should a fancy sidebar be added to the left side of <pre> (`true`/`false`) [7]
-$pre-element-sidebar-style:		3px solid #1565c0;		// Style of the sidebar of <pre>
-$kbd-element-padding:					2px 4px;							// Padding for <kbd>
+$pre-element-sidebar-style:		4px solid #1565c0;		// Style of the sidebar of <pre>
+$kbd-element-padding:				$code-element-padding;	// Padding for <kbd>
 $kbd-element-fore-color:			#fafafa;							// Text color for <kbd>
-$kbd-element-back-color:			$fore-color;					// Background color for <kbd>
+$kbd-element-back-color:			#0c0c0c;							// Background color for <kbd>
 $kbd-element-border-style:		0;										// Border style for <kbd>
-$kbd-element-border-radius:		2px;									// Border radius for <kbd>
-$kbd-element-box-shadow:														// Box shadow for <kbd>
-	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
+$kbd-element-border-radius:	$code-element-border-radius;	// Border radius for <kbd>
+$kbd-element-box-shadow:	$code-element-box-shadow;	// Box shadow for <kbd>
 $style-samp-element:			false;										// Should styles for <samp> be included? (`true`/`false`) [8]
 //$samp-element-padding:			2px 4px;							// Padding for <samp>
 //$samp-element-fore-color:		$fore-color;					// Text color for <samp>
@@ -88,18 +84,18 @@ $style-samp-element:			false;										// Should styles for <samp> be included? 
 //$samp-element-box-shadow:													// Box shadow for <samp>
 //0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
 $include-dfn-fix:			true;													// Should the fix for Android 4.3 concerning <dfn> be included (`true`/`false`) [9]
-$small-font-size:			75%;													// Font size for <small> elements
-$sup-font-size:				75%;													// Font size for <sup> elements
-$sub-font-size:				75%;													// Font size for <sub> elements
-$sup-top:							-8px;													// <sup> top
-$sub-bottom:					-4px;													// <sub> bottom
+$small-font-size:			0.75em;												// Font size for <small> elements
+$sup-font-size:				0.75em;												// Font size for <sup> elements
+$sub-font-size:				0.75em;												// Font size for <sub> elements
+$sup-top:							-0.5em;												// <sup> top
+$sub-bottom:					-0.25em;											// <sub> bottom
 $link-fore-color:					#0277bd;									// Text color for <a>
 $link-visited-fore-color:	#01579b;									// Text color for visited <a>
 $link-font-weight:				500;											// Font weight for <a>
 $apply-link-underline:		true;											// Should an underline be applied to all <a> elements? (`true`/`false`) [10]
 $apply-link-hover-fade:		true;											// Should the :hover and :focus state of <a> elements use fade-out instead of a different color (`true`/`false`) [11]
 //$link-hover-fore-color:	#0288d1;									// Text color for <a> when hovered or focused
-$figcaption-font-size:		80%;											// Font size of <figcaption> elements
+$figcaption-font-size:		0.8125rem;								// Font size of <figcaption> elements
 $figcaption-fore-color:		#424242;									// Text color for <figcaption> elements
 //	Notes:
 // [1] - The value $base-root-font-size should be in `px` only! This rule is very important, as it will determine the root
@@ -129,7 +125,7 @@ $figcaption-fore-color:		#424242;									// Text color for <figcaption> element
 $use-four-step-grid:			false;										// Should the old 4-step grid system be used instead of the new (`true`/`false`) [1]
 $include-parent-layout:		true;											// Should the classes for rows defining the column layout of children be included (`true`/`false`) [2]
 $grid-container-name:			'container';							// Class name for the grid container
-$grid-container-side-padding:	10px;									// Padding for the grid container (left and right only)
+$grid-container-side-padding:	0.75rem;							// Padding for the grid container (left and right only)
 $grid-row-name:								'row';								// Class name for the grid's rows
 $grid-row-parent-layout-prefix:	'cols';							// Class name prefix for the grid's row parents [2]
 $grid-column-prefix:					'col';								// Class name prefix for the grid's columns
@@ -138,7 +134,7 @@ $grid-order-normal-suffix:		'normal';							// Class name suffix for grid column
 $grid-order-first-suffix:			'first';							// Class name suffix for grid columns with highest priority
 $grid-order-last-suffix:			'last';								// Class name suffix for grid columns with lowest priorty
 $grid-column-count:						12;										// Number of columns in the grid (integer value only)
-$grid-column-padding:					0 4px;								// Padding for the columns of the grid
+$grid-column-padding:					0 0.25rem;						// Padding for the columns of the grid
 $grid-small-prefix:						'sm';									// Small screen class prefix for grid
 $grid-medium-breakpoint:			768px;								// Medium screen breakpoint for grid
 $grid-medium-prefix:					'md';									// Medium screen class prefix for grid
@@ -150,46 +146,44 @@ $grid-large-prefix:						'lg';									// Large screen class prefix for grid
 // [2] - If the value of $include-parent-layout is `true`, the grid system will contain extra classes that will define the column
 //	layout of their children. In this case, a value should be specified for $grid-row-parent-layout-prefix.
 //	Variables for navigational elements
-$header-height:						44px;											// Height for <header>
-$header-back-color:				#263238;									// Background color for <header>
-$header-fore-color:				#fafafa;									// Text color for <header>
+$header-height:						2.75rem;									// Height for <header>
+$header-back-color:				#12171a;									// Background color for <header>
+$header-fore-color:				#f5f5f5;									// Text color for <header>
 $header-border-style:			0;												// Border style for <header>
 $header-margin:						0;												// Margin for <header>
-$header-padding:					2px 8px;									// Padding for <header>
-$header-box-shadow:																	// Box shadow for <header>
-	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
+$header-padding:					0.125rem 0.5rem;					// Padding for <header>
+$header-box-shadow:				none;											// Box shadow for <header>
 $header-logo-name:				'logo';										// Class name for <header>'s logo
-$header-logo-font-size:		1.75em;										// Font size for <header>'s logo
-$header-logo-line-height:	1.2;											// Line height for <header>'s logo
-$header-logo-margin:			1px 6px 1px 1px;					// Margin for <header>'s logo
-$header-logo-padding:			3px 0 0;									// Padding for <header>'s logo
-$header-link-hover-color:	#37474f;									// Hover color for <header>'s links
-$header-link-margin:			2px 0 0;									// Margin for <header>'s links
+$header-logo-font-size:		1.75rem;									// Font size for <header>'s logo
+$header-logo-line-height:	1.3125em;										// Line height for <header>'s logo
+$header-logo-margin:			0.0625rem 0.375rem 0.0625rem 0.0625rem;					// Margin for <header>'s logo
+$header-logo-padding:			0;												// Padding for <header>'s logo
+$header-link-hover-color:	#20292e;									// Hover color for <header>'s links
+$header-link-margin:			0.125rem 0;								// Margin for <header>'s links
 $include-header-sticky:		true;											// Should sticky <header> elements be included? (`true`/`false`) [1]
 $header-sticky-name:			'sticky';									// Class name for sticky <header>
 $nav-back-color:					#eceff1;									// Background for <nav>
 $nav-fore-color:					$fore-color;							// Text color for <nav>
-$nav-border-style:				1px solid #bdbdbd;				// Border style for <nav>
+$nav-border-style:				1px solid #c9c9c9;				// Border style for <nav>
 $nav-border-radius:				0;												// Border radius for <nav>
-$nav-padding:							8px 8px 16px 20px;				// Padding for <nav>
-$nav-margin:							2px;											// Margin for <nav>
-$nav-box-shadow: 																		// Box shadow for <nav>
-	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
-$nav-link-fore-color:			#1565c0;									// Text color for links in <nav>
+$nav-padding:							0.75rem 1rem;							// Padding for <nav>
+$nav-margin:							0.5rem;										// Margin for <nav>
+$nav-box-shadow: 					none;											// Box shadow for <nav>
+$nav-link-fore-color:			#145caf;									// Text color for links in <nav>
 $nav-sublink-prefix:			'sublink';								// Prefix for the subcategory links in <nav>
 $nav-sublink-depth:				2;												// Amount of subcategory classes to add
-$nav-sublink-padding-left:12px;											// Left padding to add to subcategories
+$nav-sublink-padding-left:	1rem;										// Left padding to add to subcategories
 $nav-include-sublink-bar:	true;											// Should a left border bar be added to subcategories (`true`/`false`) [2]
-$nav-sublink-bar-left-position: 3px;								// Left position of subcategory bar
+$nav-sublink-bar-left-position: 0.1875rem;					// Left position of subcategory bar
 $nav-sublink-bar-width:		1px;											// Width of the subcategory bar
-$nav-sublink-bar-color:		#78909c;									// Subcategory bar color
-$footer-back-color:				#263238;									// Background color for <footer>
-$footer-fore-color:				#fafafa;									// Text color for <footer>
+$nav-sublink-bar-color:		#bdbdbd;									// Subcategory bar color
+$footer-back-color:				#192024;									// Background color for <footer>
+$footer-fore-color:				#f5f5f5;									// Text color for <footer>
 $footer-border-style:			0;												// Border stye for <footer>
-$footer-font-size:				85%;											// Font size for <footer>
-$footer-margin:						18px 0 0;									// Margin for <footer>
-$footer-padding:					22px 10px 12px;						// Padding for <footer>
-$footer-link-fore-color:	#039be5;									// Text color for links in <footer>
+$footer-font-size:				0.875rem;								// Font size for <footer>
+$footer-margin:						1rem 0 0;									// Margin for <footer>
+$footer-padding:					1.5rem 0.5rem 0.75rem;		// Padding for <footer>
+$footer-link-fore-color:	#0288d1;									// Text color for links in <footer>
 $include-footer-sticky:		true;											// Should sticky <footer> elements be included (`true`/`false`) [3]
 $footer-sticky-name:			'sticky';									// Class name for sticky <footer> elements
 //	Notes:
@@ -202,55 +196,52 @@ $footer-sticky-name:			'sticky';									// Class name for sticky <footer> eleme
 //	Variables for forms and inputs
 $form-back-color:				#eeeeee;										// Background color for forms
 $form-fore-color:				$fore-color;								// Text color for forms
-$form-border-style:			1px solid #bdbdbd;					// Border style for forms
+$form-border-style:			1px solid #c9c9c9;					// Border style for forms
 $form-border-radius:		0;													// Border radius for forms
-$form-margin:						8px;												// Margin for forms
-$form-padding:					12px 10px 18px;							// Padding for forms
-$form-box-shadow:																		// Box shadow for forms
-	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
+$form-margin:						0.5rem;											// Margin for forms
+$form-padding:					0.75rem 0.5rem 1.125rem;		// Padding for forms
+$form-box-shadow:				none;												// Box shadow for forms
 $fieldset-back-color:		$form-back-color;						// Background color for fieldset
-$fieldset-border-style:	1px solid #bdbdbd;					// Border style for fieldset
+$fieldset-border-style:	1px solid #d0d0d0;					// Border style for fieldset
 $fieldset-border-radius:2px;												// Border radius for fieldset
-$fieldset-margin:				2px;												// Margin for fieldset
-$fieldset-padding:			6px 8px 8px;								// Padding for fieldset
+$fieldset-margin:				0.125rem;										// Margin for fieldset
+$fieldset-padding:			0.5rem;											// Padding for fieldset
 $legend-font-weight:		$bold-font-weight;					// Font weight for legend
-$legend-font-size:			0.925em;										// Font size for legend
+$legend-font-size:			0.875rem;										// Font size for legend
 $legend-fore-color:			$form-fore-color;						// Text color for legend
-$legend-padding:				2px 4px;										// Padding for legend
-$label-padding:					4px;												// Padding for label
+$legend-padding:				0.125rem 0.25rem;						// Padding for legend
+$label-padding:					0.25rem;										// Padding for label
 $input-group-name:			'input-group';							// Class for input groups
 $include-fluid-input-group:		true;									// Should fluid input grooups be included? (`true`/`false`) [1]
 $input-group-fluid-name:'fluid';										// Class name for fluid input groups
 $input-group-mobile-breakpoint:	767px;							// Breakpoint for fluid input group mobile view
 $input-back-color:			#fafafa;										// Background for input
 $input-fore-color:			$fore-color;								// Text color for input
-$input-border-style:		1px solid #bdbdbd;					// Border style for input
-$input-border-radius:		1px;												// Border radius for input
-$input-margin:					2px;												// Margin for input
-$input-padding:					8px 12px;										// Padding for input
+$input-border-style:		1px solid #c9c9c9;					// Border style for input
+$input-border-radius:		2px;												// Border radius for input
+$input-margin:					0.25rem;										// Margin for input
+$input-padding:					0.5rem 0.75rem;							// Padding for input
 $input-focus-border-color:		#0288d1;							// Border color for focused input
 $input-invalid-border-color:	#d32f2f;							// Border color for invalid input
 $input-disabled-opacity:			0.75;									// Opacity for disabled input
-$input-readonly-back-color:		#e0e0e0;							// Background color for readonly input
-$input-readonly-border-color:	#bdbdbd;							// Border color for readonly input
+$input-readonly-back-color:		#e5e5e5;							// Background color for readonly input
+$input-readonly-border-color:	#c9c9c9;							// Border color for readonly input
 $input-placeholder-fore-color:#616161;							// Text color for input placeholder
-$button-back-color:			#bdbdbd;										// Back color for button elements
-$button-back-opacity:		0.65;												// Background opacity for button elements
-$button-hover-back-opacity:		0.8;									// Background opacity for button elements on hover or focus
+$button-back-color:			#acacac;										// Back color for button elements
+$button-back-opacity:		0.75;												// Background opacity for button elements
+$button-hover-back-opacity:		1;										// Background opacity for button elements on hover or focus
 $button-fore-color:			$fore-color;								// Text color for button elements
 $button-border-style:		0;													// Border style for button elements
 $button-border-radius:	2px;												// Border radius for button elements
-$button-padding:				8px 12px;										// Padding for button elements
-$button-margin:					8px;												// Margin for button elements
-$button-box-shadow:																	// Box shadow for buttons
-	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
-$button-disabled-opacity:		0.65;										// Disabled button elements opacity
+$button-padding:				0.5rem 0.75rem;							// Padding for button elements
+$button-margin:					0.5rem;											// Margin for button elements
+$button-box-shadow:			none;												// Box shadow for buttons
+$button-disabled-opacity:		0.75;										// Disabled button elements opacity
 $button-class-name:			'button';										// Class for custom button elements
 $button-group-name:			'button-group';							// Class for button groups
 $button-group-border-style:	1px solid #9e9e9e;			// Border style for button groups
 $button-group-margin:		$button-margin;							// Margin for button groups
-$button-group-box-shadow:														// Box shadow for button groups
-	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
+$button-group-box-shadow:		none;										// Box shadow for button groups
 $button-group-mobile-breakpoint:767px;							// Breakpoint for button group mobile view
 $hide-file-inputs:											true;				// Should a style be added that makes all <input>s of type `file` hidden? (`true`/`false`) [2]
 $button-variant1-name:									'primary';	// Class name for button variant 1
@@ -260,30 +251,30 @@ $button-variant1-hover-back-opacity:		1;					// Background opacity for button va
 $button-variant1-fore-color:						#fafafa;		// Text color for button variant 1
 $button-variant2-name:									'secondary';// Class name for button variant 2
 $button-variant2-back-color:						#c62828;		// Background color for button variant 2
-$button-variant2-back-opacity:					0.85;				// Background opacity for button variant 2
+$button-variant2-back-opacity:					0.9;				// Background opacity for button variant 2
 $button-variant2-hover-back-opacity:		1;					// Background opacity for button variant 2 on hover or focus
 $button-variant2-fore-color:						#fafafa;		// Text color for button variant 2
 $button-variant3-name:									'tertiary';	// Class name for button variant 3
-$button-variant3-back-color:						#689f38;		// Background color for button variant 3
-$button-variant3-back-opacity:					0.85;				// Background opacity for button variant 3
+$button-variant3-back-color:						#5f9133;		// Background color for button variant 3
+$button-variant3-back-opacity:					0.9;				// Background opacity for button variant 3
 $button-variant3-hover-back-opacity:		1;					// Background opacity for button variant 3 on hover or focus
 $button-variant3-fore-color:						#fafafa;		// Text color for button variant 3
 $button-variant4-name:									'inverse';	// Class name for button variant 4
-$button-variant4-back-color:						$fore-color;// Background color for button variant 4
-$button-variant4-back-opacity:					1;					// Background opacity for button variant 4
-$button-variant4-hover-back-opacity:		0.9;				// Background opacity for button variant 4 on hover or focus
+$button-variant4-back-color:						#0c0c0c;		// Background color for button variant 4
+$button-variant4-back-opacity:					0.9;				// Background opacity for button variant 4
+$button-variant4-hover-back-opacity:		1;					// Background opacity for button variant 4 on hover or focus
 $button-variant4-fore-color:						#fafafa;		// Text color for button variant 4
 $button-style1-name:						'small';						// Class name for button style 1
 $button-style1-border-style:		0;									// Border style for button style 1
 $button-style1-border-radius:		1px;								// Border radius for button style 1
-$button-style1-padding:					4px 6px;						// Padding for button style 1
-$button-style1-margin:					6px 8px;						// Margin for button style 1
+$button-style1-padding:					0.25rem 0.375rem;		// Padding for button style 1
+$button-style1-margin:					0.5rem;							// Margin for button style 1
 $button-style2-name:						'large';						// Class name for button style 2
 $button-style2-border-style:		0;									// Border style for button style 2
 $button-style2-border-radius:		4px;								// Border radius for button style 2
-$button-style2-padding:					12px 18px;					// Padding for button style 2
-$button-style2-margin:					10px 8px;						// Margin for button style 2
-$checkbox-size:									16px;								// Size for checkbox/radio [3]
+$button-style2-padding:					0.75rem 1.125rem;		// Padding for button style 2
+$button-style2-margin:					0.5rem;							// Margin for button style 2
+$checkbox-size:							 $base-root-font-size;	// Size for checkbox/radio [3]
 $checkbox-back-color:						$input-back-color;	// Background clor for checkbox/radio
 $checkbox-fore-color:						$input-fore-color;	// Text/mark color for checkbox/radio
 $checkbox-border-thickness:			1px;								// Border thickness for checkbox/radio
@@ -301,21 +292,20 @@ $checkbox-disabled-opacity:	$input-disabled-opacity;// Opacity for disabled chec
 //	If the value is `false`, some fixes will be applied to the <input type="file"> element.
 // [3] - The value of $checkbox-size will determine a few variables like some `margin` values, `height`, `width` etc.
 //	Variables for responsive tables
-$table-border-style:			1px solid #bdbdbd;				// Border style for <table> and children
+$table-border-style:			1px solid #c9c9c9;				// Border style for <table> and children
 $table-border-radius:			0;												// Border radius for <table> and children
 $table-margin:						0 auto;										// Margin for <table>
-$table-box-shadow:																	// Box shadow for <table>
-	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
-$table-caption-font-size:		1.5em;									// Font size for <caption>
-$table-caption-margin:			6px 8px 12px;						// Margin for <caption>
-$table-row-padding:					8px;										// Padding for <tr> - both views
-$table-column-padding:			10px;										// Padding for <td> and <th> - desktop view
+$table-box-shadow:				none;											// Box shadow for <table>
+$table-caption-font-size:		1.5rem;									// Font size for <caption>
+$table-caption-margin:			0.5rem;									// Margin for <caption>
+$table-row-padding:					0.5rem;									// Padding for <tr> - both views
+$table-column-padding:			0.625rem;								// Padding for <td> and <th> - desktop view
 $table-head-back-color:			#e0e0e0;								// Background color for <th>
 $table-head-fore-color:			$fore-color;						// Tex color for <th>
 $table-body-back-color:			#fafafa;								// Background color for <td>
 $table-body-fore-color:			$fore-color;						// Text color for <td>
 $table-mobile-breakpoint:		767px;									// Breakpoint for <table> mobile view
-$table-mobile-card-spacing:	10px;										// Space between <tr> cards - mobile view
+$table-mobile-card-spacing:	0.625rem;								// Space between <tr> cards - mobile view
 $table-mobile-card-label:		'data-label';						// Attribute used to replace column headers in mobile view [1]
 $table-mobile-label-font-weight:$bold-font-weight;	// Font weight for mobile headers
 $include-horizontal-table:		true;									// Should horizontal <table> elements be included? (`true`/`false`) [2]
@@ -323,7 +313,7 @@ $table-horizontal-breakpoint:	768px;								// Breakpoint for <table> horizontal
 $table-horizontal-name:				'horizontal';					// Class name for <table> horizontal view
 $table-not-responsive-name:		'preset';							// Class name for <table> non-responsive view
 $table-striped-name:					'striped';						// Class name for striped <table>
-$table-striped-alt-body-back-color:		#eeeeee;			// Alternate background color for <td> in striped <table>
+$table-striped-alt-body-back-color:		#e5e5e5;			// Alternate background color for <td> in striped <table>
 //	Notes:
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly.
@@ -333,14 +323,13 @@ $table-striped-alt-body-back-color:		#eeeeee;			// Alternate background color fo
 $card-name:							'card';											// Class name for cards
 $card-back-color:				#fafafa;										// Background color for cards
 $card-fore-color:				$fore-color;								// Text color for cards
-$card-border-style:			1px solid #9e9e9e;					// Border style for cards
+$card-border-style:			1px solid #acacac;					// Border style for cards
 $card-border-radius:		0;													// Border radius for cards
-$card-margin:						2px 10px 20px;							// Margin for cards
-$card-box-shadow:																		// Box shadow for cards
-	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
+$card-margin:						0.5rem;											// Margin for cards
+$card-box-shadow:				none;												// Box shadow for cards
 $card-section-name:						'section';						// Class name for card sections
-$card-section-border-style:		1px solid #bdbdbd;		// Border style for card sections
-$card-section-padding:				6px 8px 6px;					// Padding for card sections
+$card-section-border-style:		1px solid #c9c9c9;		// Border style for card sections
+$card-section-padding:				0.5rem;								// Padding for card sections
 $card-section-media-name:			'media';							// Class name for card media sections
 $card-section-media-height:		200px;								// Height for card media setions
 $card-normal-width:						320px;								// Width for normal cards
@@ -353,9 +342,9 @@ $card-size3-width:						100%;									// Width for fluid cards
 $card-style1-name:						'inverse';						// Class name for card style 1
 $card-style1-back-color:			$fore-color;					// Background color for card style 1
 $card-style1-fore-color:			#fafafa;							// Text color for card style 1
-$card-style1-border-style:		1px solid #424242;		// Border style for card style 1
+$card-style1-border-style:		1px solid #0c0c0c;		// Border style for card style 1
 $card-style1-border-radius:		0;										// Border radius for card style 1
-$card-style1-section-border-style:1px solid #616161;// Border style for card style 1 sections
+$card-style1-section-border-style:1px solid #424242;// Border style for card style 1 sections
 $card-section-style1-name:				'dark';						// Class name for card section style 1
 $card-section-style1-back-color:	#e0e0e0;					// Background color for card section style 1
 $card-section-style1-fore-color:	$fore-color;			// Text color for card section style 1
@@ -363,39 +352,37 @@ $card-section-style2-name:			'darker';						// Class name for card section style
 $card-section-style2-back-color:#bdbdbd;						// Background color for card section style 2
 $card-section-style2-fore-color:$fore-color;				// Text color for card section style 2
 $card-section-padding1-name:		'double-padded';		// Class name for card section padding style 1
-$card-section-padding1-padding:	10px 12px 10px;			// Padding for card section padding style 1
+$card-section-padding1-padding:	0.75rem;						// Padding for card section padding style 1
 //	Notes:
 // [1] - The cards module depends heavily on the grid system module.
 //	Variables for tabs
 $tab-container-name:						'tabs';							// Class name for the tabs' container
-$tab-container-box-shadow:													// Box shadow for the tabs' container
-	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
+$tab-container-box-shadow:			none;								// Box shadow for the tabs' container
 $tab-label-back-color:					#e0e0e0;						// Background color for tabs' labels
 $tab-label-fore-color:					$fore-color;				// Text color for tabs' labels
 $tab-label-selected-back-color:	#eeeeee;						// Background color for open tab's label
 $tab-label-selected-fore-color:	$fore-color;				// Text color for open tab's label
 $tab-label-hover-opacity:				0.8;								// Opacity of the tab's label on hover
-$tab-label-padding:							8px 12px;						// Padding for tabs' labels
-$tab-label-height:							26px;								// Height for tabs' labels
-$tab-border-style:							1px solid #9e9e9e;	// Border style for tabs
+$tab-label-padding:							0.75rem;						// Padding for tabs' labels
+$tab-label-height:							1.5rem;							// Height for tabs' labels
+$tab-border-style:							1px solid #bdbdbd;	// Border style for tabs
 $tab-border-radius:							0;									// Border radius for tabs
 $tab-panel-back-color:					#fafafa;						// Background color for tabs' panels
 $tab-panel-fore-color:					$fore-color;				// Text color for tabs' panels
-$tab-panel-padding:							8px;								// Padding for tabs' panels
+$tab-panel-padding:							0.5rem;							// Padding for tabs' panels
 $tab-panel-height:							400px;							// Height for tabs' panels
 $tab-stacked-breakpoint:				767px;							// Breakpoint for tabs layout (stacked/horizontal)
 $tab-stacked-name:							'stacked';					// Class name for stacked tabs
 //	Variables for contextual background elements and alerts
 $mark-back-color:				#0277bd;										// Background color for <mark>
 $mark-fore-color:				#fafafa;										// Text color for <mark>
-$mark-font-size:				95%;												// Font size for <mark>
-$mark-line-height:			1;													// Line height for <mark>
+$mark-font-size:				0.9375em;										// Font size for <mark>
+$mark-line-height:			1em;												// Line height for <mark>
 $mark-border-style:			0;													// Border style for <mark>
 $mark-border-radius:		2px;												// Border radius for <mark>
-$mark-padding:					2px 4px;										// Padding for <mark>
+$mark-padding:					0.125em 0.25em;							// Padding for <mark>
 $mark-margin:						0;													// Margin for <mark>
-$mark-box-shadow:																		// Box shadow for <mark>
-	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
+$mark-box-shadow:				none;												// Box shadow for <mark>
 $mark-inline-block-name:		'inline-block';					// Class name for <mark> inline block styling
 $mark-variant1-name:				'secondary';						// Class name for <mark> variant 1
 $mark-variant1-back-color:	#e53935;								// Background color for <mark> variant 1
@@ -404,22 +391,21 @@ $mark-variant2-back-color:	#689f38;								// Background color for <mark> varian
 $mark-style1-name:					'tag';									// Class name for <mark> style 1
 $mark-style1-border-style:	0;											// Border style for <mark> style 1
 $mark-style1-border-radius:	200px;									// Border radius for <mark> style 1
-$mark-style1-padding:				4px 8px;								// Padding for <mark> style 1
+$mark-style1-padding:				0.25em 0.5em;						// Padding for <mark> style 1
 $mark-style2-name:					'inline-block';					// Class name for <mark> style 2
 $mark-style2-border-style:	0;											// Border style for <mark> style 2
 $mark-style2-border-radius:	2px;										// Border radius for <mark> style 2
-$mark-style2-padding:				5px;										// Padding for <mark> style 2
-$mark-style2-font-size:			100%;										// Font size for <mark> style 2
-$mark-style2-line-height:		1.35;										// Line height for <mark> style 2
+$mark-style2-padding:				0.375em;								// Padding for <mark> style 2
+$mark-style2-font-size:			1em;										// Font size for <mark> style 2
+$mark-style2-line-height:		1.375em;								// Line height for <mark> style 2
 $alert-name:								'alert';								// Class name for alerts
-$alert-back-color:					#eeeeee;								// Background color for alerts
+$alert-back-color:					#d1e6f3;								// Background color for alerts
 $alert-fore-color:					$fore-color;						// Text color for alerts
-$alert-border-style:				1px solid #bdbdbd;			// Border style for alerts
+$alert-border-style:				1px solid #d0d0d0;			// Border style for alerts
 $alert-border-radius:				0;											// Border radius for alerts
-$alert-padding:							12px 16px;							// Padding for alerts
-$alert-margin:							1px 10px;								// Margin for alerts
-$alert-box-shadow:																	// Box shadow for alerts
-	0 1px 3px rgba(0,0,0, 0.18), 0 1px 2px rgba(0, 0, 0, 0.26);
+$alert-padding:							0.75rem;								// Padding for alerts
+$alert-margin:							0.5rem;									// Margin for alerts
+$alert-box-shadow:					none;										// Box shadow for alerts
 $alert-include-animated:		true;										// Should animated alerts be included? (`true`/`false`) [1]
 $alert-animated-class:			'animated';							// Class name for animated alerts
 $alert-variant1-name:				'urgent';								// Class name for alert variant 1
@@ -428,20 +414,19 @@ $alert-variant2-name:				'critical';							// Class name for alert variant 2
 $alert-variant2-back-color:	#b71c1c;								// Background color for alert variant 2
 $alert-variant2-fore-color:	#fafafa;								// Text color for alert variant 2
 $alert-style1-name:					'urgent';								// Class name for alert style 1
-$alert-style1-border-style:	1px solid #ff8f00;			// Border style for alert style 1
+$alert-style1-border-style:	1px solid #e8b825;			// Border style for alert style 1
 $alert-style1-border-radius:	$alert-border-radius;	// Border radius for alert style 1
 $alert-style2-name:					'critical';							// Class name for alert style 2
-$alert-style2-border-style:	1px solid #d50000;			// Border style for alert style 2
+$alert-style2-border-style:	1px solid #a71a1a;			// Border style for alert style 2
 $alert-style2-border-radius:	$alert-border-radius;	// Border radius for alert style 2
 $include-tooltip:						true;										// Should tooltips be included? (`true`/`false`) [2]
 $tooltip-name:							'tooltip';							// Class name for the tooltip component
 $tooltip-back-color:				$fore-color;						// Background color for tooltips
 $tooltip-fore-color:				#fafafa;								// Text color for tooltips
 $tooltip-border-radius:			2px;										// Border radius for tooltips
-$tooltip-tail-size:					6px;										// The size of the tooltip's tail
-$tooltip-padding:						6px;										// Padding for tooltips
-$tooltip-box-shadow:																// Box shadow for tooltip-box-shadow
-	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
+$tooltip-tail-size:					0.5rem;								// The size of the tooltip's tail
+$tooltip-padding:						0.5rem;								// Padding for tooltips
+$tooltip-box-shadow:				none;										// Box shadow for tooltip-box-shadow
 $tooltip-bottom-name:				'bottom';								// Class name for bottom tooltip
 // 	Notes:
 // [1] - If the value of $alert-include-animated is `true`, an animation will be created and the value of $alert-animated-class
@@ -450,16 +435,15 @@ $tooltip-bottom-name:				'bottom';								// Class name for bottom tooltip
 //	for the tooltip, as explained in their descriptions. Tooltip mixins will only work properly if the tooltip component is
 //	included.
 //	Variables for progress elements and spinners
-$progress-back-color:					#eeeeee;							// Background color for <progress>
-$progress-fore-color:					#01579b;							// Progress bar color for <progress>
-$progress-height:							14px;									// Height of <progress>
+$progress-back-color:					#e0e0e0;							// Background color for <progress>
+$progress-fore-color:					#0277bd;							// Progress bar color for <progress>
+$progress-height:							1rem;									// Height of <progress>
 $progress-max-value:					1000;									// Arithmetic max value of <progress>
 $progress-border-style:				0;										// Border style for <progress>
-$progress-border-radius:			1px;									// Border radius for the <progress> container
-$progress-top-bottom-margin:	2px;									// Top and bottom margin for <progress>
-$progress-left-right-margin:	8px;									// Left and right margin for <progress>
-$progress-box-shadow:																// Box shadow for <progress>
-	0 0.5px 1px rgba(0,0,0, 0.1), 0 0.5px 0.5px rgba(0, 0, 0, 0.15);
+$progress-border-radius:			2px;									// Border radius for the <progress> container
+$progress-top-bottom-margin:	0.5rem;								// Top and bottom margin for <progress>
+$progress-left-right-margin:	0.5rem;								// Left and right margin for <progress>
+$progress-box-shadow:					none;									// Box shadow for <progress>
 $progress-inline-name:				'inline';							// Class name for inline <progress>
 $progress-inline-width:				60%;									// Width for inline <progress>
 $progress-variant1-name:			'secondary';					// Class name for <progress> variant 1
@@ -467,16 +451,16 @@ $progress-variant1-fore-color:#e53935;							// Progress bar color for <progress
 $progress-variant2-name:			'tertiary';						// Class name for <progress> variant 2
 $progress-variant2-fore-color:#689f38;							// Progress bar color for <progress> variant 2
 $progress-style1-name:				'nano';								// Class name for <progress> style 1
-$progress-style1-height:			2px;									// Height for <progress> style 1
+$progress-style1-height:			0.125rem;							// Height for <progress> style 1
 $progress-style1-top-bottom-margin:	0;							// Top and bottom margin for <progress> style 1
 $progress-style1-left-right-margin:	0;							// Left and right margin for <progress> style 1
 $progress-style1-border-style:			0;							// Border style for <progress> style 1
 $progress-style1-border-radius:			0;							// Border radius for <progress> style 1
 $spinner-donut-name:			'spinner-donut';					// Class name for donut spinner
-$spinner-donut-border-thickness:		4px;						// Border thickness for donut spinner
+$spinner-donut-border-thickness:		0.25rem;				// Border thickness for donut spinner
 $spinner-donut-back-color:					#e3f2fd;				// Background color for donut spinner
 $spinner-donut-fore-color:					#1565c0;				// Foreground color for donut spinner
-$spinner-donut-size:								20px;						// Size for donut spinner
+$spinner-donut-size:								1.25rem;				// Size for donut spinner
 $spinner-donut-variant1-name:				'secondary';		// Class name for donut spinner variant 1
 $spinner-donut-variant1-back-color:	#ffebee;				// Background color for donut spinner variant 1
 $spinner-donut-variant1-fore-color:	#c62828;				// Foreground color for donut spinner variant 1
@@ -484,22 +468,21 @@ $spinner-donut-variant2-name:				'tertiary';			// Class name for donut spinner v
 $spinner-donut-variant2-back-color:	#e8f5e9;				// Background color for donut spinner variant 2
 $spinner-donut-variant2-fore-color:	#2e7d32;				// Foreground color for donut spinner variant 2
 $spinner-donut-style1-name:					'large';				// Class name for donut spinner style 1
-$spinner-donut-style1-size:					32px;						// Size for donut spinner style 1
-$spinner-donut-style1-border-thickness:	6px;				// Border thickness for donut spinner style 1
+$spinner-donut-style1-size:					2rem;						// Size for donut spinner style 1
+$spinner-donut-style1-border-thickness:	0.375rem;		// Border thickness for donut spinner style 1
 //	Variables for utilities and helper classes
 $hidden-name:							'hidden';									// Class name for hidden elements
 $visually-hidden-name:		'visually-hidden';				// Class name for visually hidden elements
 $breadcrumbs-name:				'breadcrumbs';						// Class name for breadcrumbs
 $breadcrumbs-back-color:	#e0e0e0;									// Background color for breadcrumbs
-$breadcrumbs-margin:			10px 8px;									// Margin for breadcrumbs
-$breadcrumbs-height:			32px;											// Height of the breadcrumbs
-$breadcrumbs-separator-width:	2px;									// Width of the breadcrumbs' separator
+$breadcrumbs-margin:			0.5rem;										// Margin for breadcrumbs
+$breadcrumbs-height:			2rem;											// Height of the breadcrumbs
+$breadcrumbs-separator-width:	0.125rem;							// Width of the breadcrumbs' separator
 $breadcrumbs-border-style:		0;										// Border style for breadcrumbs
-$breadcrumbs-border-radius:		4px;									// Border radius for breadcrumbs
-$breadcrumbs-box-shadow:														// Box shadow for breadcrumbs
-	0 1px 3px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.15);
+$breadcrumbs-border-radius:		0;										// Border radius for breadcrumbs
+$breadcrumbs-box-shadow:			none;									// Box shadow for breadcrumbs
 $close-icon-name:							'close';							// Class name for close icon
-$close-icon-size:							32px;									// Size of the close icon
+$close-icon-size:							2rem;									// Size of the close icon
 $close-icon-back-color:				#e0e0e0;							// Background color for the close icon
 $close-icon-fore-color:				#212121;							// Foreground color for the close icon
 $border-generic-name:					'bordered';						// Class name for generic border style
@@ -519,13 +502,13 @@ $box-shadow-style4-name:			'shadow-large';				// Class name for generic box-shad
 $box-shadow-style4-value:														// Box shadow value for generic box-shadow style 4
 	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
 $responsive-margin-name:			'responsive-margin';	// Class name for responsive margin
-$responsive-margin-small-value:		4px;							// Margin value for responsive margin on small screens
-$responsive-margin-medium-value:	6px;							// Margin value for responsive margin on medium screens
-$responsive-margin-large-value:		8px;							// Margin value for responsive margin on large screens
+$responsive-margin-small-value:		0.25rem;					// Margin value for responsive margin on small screens
+$responsive-margin-medium-value:	0.375rem;					// Margin value for responsive margin on medium screens
+$responsive-margin-large-value:		0.5rem;						// Margin value for responsive margin on large screens
 $responsive-padding-name:		'responsive-padding';		// Class name for responsive padding
-$responsive-padding-small-value:		2px 4px;				// Padding value for responsive padding on small screens
-$responsive-padding-medium-value:		4px 6px;				// Padding value for responsive padding on medium screens
-$responsive-padding-large-value:		6px 8px;				// Padding value for responsive padding on large screens
+$responsive-padding-small-value:	0.125rem 0.25rem;	// Padding value for responsive padding on small screens
+$responsive-padding-medium-value:	0.25rem 0.375rem;	// Padding value for responsive padding on medium screens
+$responsive-padding-large-value:	0.375rem 0.5rem;	// Padding value for responsive padding on large screens
 $responsive-hidden-prefix:					'hidden';				// Class name prefix for responsive hidden elements
 $responsive-visually-hidden-prefix:	'visually-hidden'; // Class name prefix for responsive visually hidden elements
 $include-floats:							false;								// Should floats be included? (`true`/`false`) [1]

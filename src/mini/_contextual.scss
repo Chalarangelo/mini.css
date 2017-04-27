@@ -123,10 +123,10 @@ mark {
 			left: 50%;
 		}
 		&:not(.#{$tooltip-bottom-name}):before, &:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
-			bottom: 100%;
+			bottom: 75%;
 		}
 		&.#{$tooltip-bottom-name}:before, &.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
-			top: 100%;
+			top: 75%;
 		}
 		&:hover, &:active, &:focus {
 			&:before, &:after {

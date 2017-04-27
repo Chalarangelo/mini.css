@@ -1020,3 +1020,18 @@
 - Checked `yarn`'s packaging, all systems nominal, added to download options.
 - Updated CHANGELOG and README.
 - Fixed a couple of problems in doc pages post-release, added secondary navigation to `quick_reference`.
+
+# v2.1.3 Development Log
+
+## 20170427
+
+- (Updated a few minor things in doc pages in the last week.)
+- Created a `demo.html` under `docs` to test flavor redesign.
+- Reworked a lot of the default flavor's colors. It should now look less flat and a little bit more rich in terms of coloration, making it more aesthetically pleasing.
+- Font ratio set to `~1.189207` for heading elements, should now look more consistent and pixel-clean.
+- Cleaned up a lot of the code and started using `rem` and more `em` than percentages and pixels whenever possible.
+- Removed underline from `nav` links.
+- Updated `card` module, removing the specific fix for `input` and `button` elements and replacing it with a more generic solution that can work for any element (so now `pre` `.section`s will look ok).
+- Removed `box-shadow`s from everything, because nobody liked them.
+- Changed `.tooltip` `top` and `bottom` to `75%` from `100%`, in order to bring it closer to the text.
+- After full internal testing, removed the `demo.html` file.

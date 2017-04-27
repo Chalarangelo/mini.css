@@ -45,14 +45,17 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 	@if $card-margin != 0 {
 		margin: $card-margin;
 	}
-	// Tasteful shadow
 	@if $card-box-shadow != none {
 		box-shadow: $card-box-shadow;
 	}
+	// Hide overflow from section borders
+	overflow: hidden;
 	// Card sections
 	& > .#{$card-section-name} {
 		box-sizing: border-box;
 		margin: 0;
+		border: 0;				// Clean borders and radiuses for any element-based sections
+		border-radius: 0; // Clean borders and radiuses for any element-based sections
 		border-bottom: $card-section-border-style;
 		padding: $card-section-padding;
 		width: 100%;
@@ -62,12 +65,6 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 			padding: 0;
 			-o-object-fit: cover;
 			   object-fit: cover;
-		}
-	}
-	// Card input and button sections
-	& > button, .#{$button-class-name}, [role="button"], input {
-		&.#{$card-section-name} {
-			border-radius: 0;	// Clean button and input gaps from border-radius
 		}
 	}
 	// Card sections - last

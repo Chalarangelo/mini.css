@@ -124,6 +124,7 @@ header {
 		a, a:visited {
 			display: block;
 			color: $nav-link-fore-color;		// Apply regardless to de-stylize visited links.
+			text-decoration: none;
 		}
 		// Subcategories in navigation.
 		@for $i from 1 through $nav-sublink-depth {

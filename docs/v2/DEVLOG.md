@@ -1035,3 +1035,4 @@
 - Removed `box-shadow`s from everything, because nobody liked them.
 - Changed `.tooltip` `top` and `bottom` to `75%` from `100%`, in order to bring it closer to the text.
 - After full internal testing, removed the `demo.html` file.
+- Developed `mini-dark`, some tweaks might be required, but overall color palette seems good.

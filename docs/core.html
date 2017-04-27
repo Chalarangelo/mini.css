@@ -21,193 +21,219 @@
 	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
 	.col-sm-12.col-sm-last.col-md-4.col-md-normal { box-sizing: border-box; border-right: 1px solid #bdbdbd; }
 	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd; } }
-	header.sticky a.button { padding: 4px 6px; font-size: 0.95em; }
 	</style>
   </head>
   <body>
-		<header>
+		<header class="sticky">
 			<a href="index.html" class="logo"><span id="header-logo">m</span></a>
 			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
 			<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
 			<a href="quick_reference.html" class="button">Quick Reference</a>
 			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 		</header>
-	<header class="sticky" style="height:36px;">
-		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
-		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
-		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
-		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
-		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
-	</header>
-    <!-- Insert your page content here-->
-    <main><div class="container">
-      <div class="row" style="padding-top: 40px;">
-        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
-          <h1>Core</h1>
-          <p>The <strong>core</strong> module contains basic reset and fix rules, based on <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> v5.0.0, along with lots of custom typography rules. Most textual HTML5 elements are styled by this module, so you can start writing your pages immediately without worrying about font families, weights, sizes, line heights, paddings and the like.</p>
-          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
-          <ul class="breadcrumbs"><li><a href="index.html">Home</a></li><li><a href="modules.html">Modules</a></li><li>Core</li></ul><br />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
-          <div class="card fluid">
-            <div class="section">
-              <h2>Quick overview</h2>
-              <p>Before applying any typography and styling rules, some resets need to be applied to make sure that different elements display consistently on all browsers. The <strong>core</strong> module utilizes the ruleset of <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> v5.0.0 to apply those much needed resets and fixes. However, to keep the framework small, we removed some rules that only help with legacy browser support and also tweaked a lot of the rules around to use customizable variables so no duplicate rules are applied, taking up unnecessary space. The typography rules in <strong>core</strong> deal with a page's basics, like fonts and styling of headings and paragraphs, horizontal rules, colors, margins, padding etc.</p><br>
-            </div>
-            <div class="section">
-              <h2>Quick start</h2>
-              <p>To use the <strong>core</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
-              <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
-          <div class="card fluid">
-            <div class="section"><h2>Typography</h2></div>
-            <div class="section row">
-              <div class="col-sm-12">
-                <p>For the basic typography rules we did the following, along with other things presented below:</p>
-                <ul>
-                  <li>We use a <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">native font stack</a> to figure out the best font for your device.</li>
-                  <li>We set the colors to <code>background: #f5f5f5;</code> and <code>color: #212121;</code>.</li>
-                  <li>We use a <code>font-size</code> of <code>16px</code> for the root element.</li>
-                  <li>We set <code>line-height</code> to <code>1.5</code>.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
-          <div class="card fluid">
-            <div class="section"><h2>Headings</h2></div>
-            <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal row">
-                <div class="col-sm-12 col-lg-6 col-lg-first"><h1>Heading 1<small>Subheading</small></h1></div>
-                <div class="col-sm-12 col-lg-6"><h2>Heading 2<small>Subheading</small></h2></div>
-                <div class="col-sm-12 col-lg-6 col-lg-last"><h3>Heading 3<small>Subheading</small></h3></div>
-                <div class="col-sm-12 col-lg-6 col-lg-first"><h4>Heading 4<small>Subheading</small></h4></div>
-                <div class="col-sm-12 col-lg-6"><h5>Heading 5<small>Subheading</small></h5></div>
-                <div class="col-sm-12 col-lg-6 col-lg-last"><h6>Heading 6<small>Subheading</small></h6></div>
-              </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>All six of the HTML headings (<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>) are styled with simple rules, providing a clean base for your pages' headings. Apart from the headings themselves, complementary rules are provided for <code>&lt;small&gt;</code> elements inside headings, allowing you to define subheadings or explanatory text for those headings. These subheadings are stylized to display below the headings in smaller, lighter type.</p>
-                <h3>Sample code</h3>
-                <pre>&lt;h1&gt;Heading 1&lt;small&gt;Subheading&lt;/small&gt;&lt;/h1&gt;
-&lt;h2&gt;Heading 2&lt;small&gt;Subheading&lt;/small&gt;&lt;/h2&gt;
-&lt;h3&gt;Heading 3&lt;small&gt;Subheading&lt;/small&gt;&lt;/h3&gt;
-&lt;h4&gt;Heading 4&lt;small&gt;Subheading&lt;/small&gt;&lt;/h4&gt;
-&lt;h5&gt;Heading 5&lt;small&gt;Subheading&lt;/small&gt;&lt;/h5&gt;
-&lt;h6&gt;Heading 6&lt;small&gt;Subheading&lt;/small&gt;&lt;/h6&gt;</pre><br>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
-          <div class="card fluid">
-            <div class="section"><h2>Common textual elements</h2></div>
-            <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-                <div><br><p>This is a paragraph with some sample text. Did you know <strong>mini.css</strong> v2.1 is codenamed <strong>Fermion</strong>? No? Well, now you do! Oh, by the way, that was some Bold text and here is some <em>text in Italics</em>. Maybe you want to know what our inline elements look like. For example a <a href="https://github.com/Chalarangelo/mini.css">link to the Github repository of mini.css</a> looks like that! Neat, right? Maybe you want to see some <code>inline code</code> or some sample <kbd>input</kbd>. Oh, also <small>small text</small> is cool, along with its siblings: the subscript<sub>hi!</sub> and the superscript<sup>hello!</sup>. Finally, check out the horizontal rule, preformatted code block and quotation below.</p><hr>
-                <pre>function sum(num1, num2) {
-    var num3 = num1 + num2;
-    console.log('Result: ' + num3);
-}</pre>
-                  <blockquote cite="Mr. Quotalot">This is some quoted text from elsewhere.</blockquote><br>
-                </div>
-              </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>The most common HTML5 elements must be things like <code>&lt;p&gt;</code>aragraphs, bold (<code>&lt;strong&gt;</code>) &amp; italics (<code>&lt;em&gt;</code>) text, links (<code>&lt;a&gt;</code>), horizontal rules (<code>&lt;hr&gt;</code>) and <code>&lt;small&gt;</code> text. These, along with a few others, are styled by default using clean, modern design to make your pages look cool and stand out from the rest of the internet.</p>
-                <h3>Sample code</h3>
-                <pre>&lt;p&gt;This is a paragraph with some &lt;strong&gt;bold text&lt;/strong&gt; and some &lt;em&gt;italics text&lt;/em&gt;.&lt;/p&gt;
-&lt;a href=&quot;#&quot;&gt;This is a link.&lt;/a&gt;
-&lt;small&gt;This is some small text.&lt;/small&gt;
-&lt;sub&gt;Subscript&lt;/sub&gt;
-&lt;sup&gt;Superscript&lt;/sup&gt;
-&lt;code&gt;Inline code&lt;/code&gt;
-&lt;kbd&gt;Keyboard Input&lt;/kbd&gt;
-&lt;hr&gt;
-&lt;pre&gt;This is some preformatted text.&lt;/pre&gt;
-&lt;blockquote cite=&quot;Quotation source&quot;&gt;
-  This is some quoted text from another website or person.
-&lt;/blockquote&gt;</pre><br>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
-          <div class="card fluid">
-            <div class="section"><h2>Lists</h2></div>
-            <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-                <div><br>
-                  <ul>
-                    <li>Apple</li>
-                    <li>Orange</li>
-                    <li>Strawberry</li>
-                  </ul><br>
-                  <ol>
-                    <li>Wake up</li>
-                    <li>Eat breakfast</li>
-                    <li>Go to work</li>
-                  </ol><br>
-                </div>
-              </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>Lists are also very commonly used in websites and apps. We tweaked a few margins and paddings to save some space and make them align properly with the rest of the common HTML elements that we use, but both unordered lists (<code>&lt;ul&gt;</code>) and ordered lists (<code>&lt;ol&gt;</code>) are minimally pre-styled to make things a little bit easier for you.</p>
-                <h3>Sample code</h3>
-                <pre>&lt;ul&gt;
-  &lt;li&gt;Apple&lt;/li&gt;
-  &lt;li&gt;Orange&lt;/li&gt;
-  &lt;li&gt;Strawberry&lt;/li&gt;
-&lt;/ul&gt;
+		<div class="container" style="padding-left: 0.25rem;">
+			<div class="row"> <div class="col-sm-12 col-md-4 col-lg-2 hidden-sm" style="padding: 0;"> <nav>
+				<h4 style="text-align: center">Modules</h4> <a href="core.html#core-title">Core</a>
+				<a href="core.html#typography" class="sublink-1">Typography</a> <a href="core.html#headings" class="sublink-1">Headings</a>
+				<a href="core.html#common-textual-elements" class="sublink-1">Common textual elements</a>
+				<a href="core.html#lists" class="sublink-1">Lists</a> <a href="core.html#images-captions" class="sublink-1">Image responsiveness &amp; captions</a>
+				<br/> <a href="grid.html#grid-title">Grid</a>
+				<a href="grid.html#basic-layout" class="sublink-1">Basic layout</a> <a href="grid.html#screen-specific-layout" class="sublink-1">Screen specific layouts</a>
+				<a href="grid.html#predefined-layout" class="sublink-1">Predefined layouts</a> <a href="grid.html#column-offset" class="sublink-1">Column offsets</a>
+				<a href="grid.html#column-reorder" class="sublink-1">Column reordering</a> <a href="grid.html#media-object" class="sublink-1">Media object pattern</a>
+				<br/> <a href="navigation.html#navigation-title">Navigation</a>
+				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a>
+				<a href="navigation.html#footer" class="sublink-1">Footer</a> <a href="navigation.html#sticky" class="sublink-1">Sticky headers &amp; footers</a>
+				<br/> <a href="input_control.html#input-control-title">Input Control</a>
+				<a href="input_control.html#forms-input" class="sublink-1">Forms &amp; input</a> <a href="input_control.html#checkbox-radio" class="sublink-1">Checkboxes &amp; radio buttons</a>
+				<a href="input_control.html#buttons" class="sublink-1">Buttons &amp; button groups</a> <a href="input_control.html#file-upload" class="sublink-1">File upload buttons</a>
+				<br/> <a href="table.html#table-title">Table</a>
+				<a href="table.html#syntax-responsiveness" class="sublink-1">Basic syntax &amp; responsiveness</a>
+				<a href="table.html#horizontal-tables" class="sublink-1">Horizontal tables</a> <a href="table.html#variants-matrices" class="sublink-1">Table variants &amp; matrices</a>
+				<br/> <a href="card.html#card-title">Card</a>
+				<a href="card.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="card.html#sections-media" class="sublink-1">Sections &amp; media</a>
+				<a href="card.html#sizing-fluidity" class="sublink-1">Card sizing &amp; fluidity</a>
+				<br/> <a href="tab.html#tab-title">Tab</a>
+				<a href="tab.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="tab.html#stacked-tabs" class="sublink-1">Stacked tabs</a>
+				<br/> <a href="contextual.html#contextual-title">Contextual</a>
+				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#alerts" class="sublink-1">Alerts</a>
+				<a href="contextual.html#animated-alerts" class="sublink-1">Animated alerts</a> <a href="contextual.html#tooltips" class="sublink-1">Tooltips</a>
+				<br/> <a href="progress.html#progress-title">Progress</a>
+				<a href="progress.html#basic-progress-bar" class="sublink-1">Basic progress bar</a> <a href="progress.html#progress-variants" class="sublink-1">Progress bar variants</a>
+				<a href="progress.html#donut-spinner" class="sublink-1">Donut spinner</a> <a href="progress.html#spinner-variants" class="sublink-1">Donut spinner variants</a>
+				<br/> <a href="utility.html#utility-title">Utility</a>
+				<a href="utility.html#visibility-helpers" class="sublink-1">Visibility helpers</a> <a href="utility.html#borders-shadows" class="sublink-1">Generic borders &amp; shadows</a>
+				<a href="utility.html#responsive-sizing" class="sublink-1">Responsive sizing &amp; spacing classes</a>
+				<a href="utility.html#responsive-visibility" class="sublink-1">Responsive visibility helpers</a> <a href="utility.html#breadcrumbs" class="sublink-1">Breadcrumbs</a>
+				<a href="utility.html#close-icon" class="sublink-1">Close icon</a> <br/>
+			</nav> </div>
+				<div class="col-sm-12 col-md-8 col-lg-10"><main>
+		      <div class="row" style="padding-top: 40px;" id="core-title">
+		        <div class="col-sm-12">
+		          <h1>Core</h1>
+		          <p>The <strong>core</strong> module contains basic reset and fix rules, based on <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> v5.0.0, along with lots of custom typography rules. Most textual HTML5 elements are styled by this module, so you can start writing your pages immediately without worrying about font families, weights, sizes, line heights, paddings and the like.</p>
+		          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
+		          <ul class="breadcrumbs"><li><a href="index.html">Home</a></li><li><a href="modules.html">Modules</a></li><li>Core</li></ul><br />
+		        </div>
+		      </div>
+		      <div class="row">
+		        <div class="col-sm-12">
+		          <div class="card fluid">
+		            <div class="section">
+		              <h2>Quick overview</h2>
+		              <p>Before applying any typography and styling rules, some resets need to be applied to make sure that different elements display consistently on all browsers. The <strong>core</strong> module utilizes the ruleset of <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> v5.0.0 to apply those much needed resets and fixes. However, to keep the framework small, we removed some rules that only help with legacy browser support and also tweaked a lot of the rules around to use customizable variables so no duplicate rules are applied, taking up unnecessary space. The typography rules in <strong>core</strong> deal with a page's basics, like fonts and styling of headings and paragraphs, horizontal rules, colors, margins, padding etc.</p><br>
+		            </div>
+		            <div class="section">
+		              <h2>Quick start</h2>
+		              <p>To use the <strong>core</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
+		              <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="row" id="typography">
+		        <div class="col-sm-12">
+		          <div class="card fluid">
+		            <div class="section"><h2>Typography</h2></div>
+		            <div class="section row">
+		              <div class="col-sm-12">
+		                <p>For the basic typography rules we did the following, along with other things presented below:</p>
+		                <ul>
+		                  <li>We use a <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">native font stack</a> to figure out the best font for your device.</li>
+		                  <li>We set the colors to <code>background: #f5f5f5;</code> and <code>color: #212121;</code>.</li>
+		                  <li>We use a <code>font-size</code> of <code>16px</code> for the root element.</li>
+		                  <li>We set <code>line-height</code> to <code>1.5</code>.</li>
+		                </ul>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="row" id="headings">
+		        <div class="col-sm-12">
+		          <div class="card fluid">
+		            <div class="section"><h2>Headings</h2></div>
+		            <div class="section row">
+		              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal row">
+		                <div class="col-sm-12 col-lg-6 col-lg-first"><h1>Heading 1<small>Subheading</small></h1></div>
+		                <div class="col-sm-12 col-lg-6"><h2>Heading 2<small>Subheading</small></h2></div>
+		                <div class="col-sm-12 col-lg-6 col-lg-last"><h3>Heading 3<small>Subheading</small></h3></div>
+		                <div class="col-sm-12 col-lg-6 col-lg-first"><h4>Heading 4<small>Subheading</small></h4></div>
+		                <div class="col-sm-12 col-lg-6"><h5>Heading 5<small>Subheading</small></h5></div>
+		                <div class="col-sm-12 col-lg-6 col-lg-last"><h6>Heading 6<small>Subheading</small></h6></div>
+		              </div>
+		              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+		                <p>All six of the HTML headings (<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>) are styled with simple rules, providing a clean base for your pages' headings. Apart from the headings themselves, complementary rules are provided for <code>&lt;small&gt;</code> elements inside headings, allowing you to define subheadings or explanatory text for those headings. These subheadings are stylized to display below the headings in smaller, lighter type.</p>
+		                <h3>Sample code</h3>
+		                <pre>&lt;h1&gt;Heading 1&lt;small&gt;Subheading&lt;/small&gt;&lt;/h1&gt;
+		&lt;h2&gt;Heading 2&lt;small&gt;Subheading&lt;/small&gt;&lt;/h2&gt;
+		&lt;h3&gt;Heading 3&lt;small&gt;Subheading&lt;/small&gt;&lt;/h3&gt;
+		&lt;h4&gt;Heading 4&lt;small&gt;Subheading&lt;/small&gt;&lt;/h4&gt;
+		&lt;h5&gt;Heading 5&lt;small&gt;Subheading&lt;/small&gt;&lt;/h5&gt;
+		&lt;h6&gt;Heading 6&lt;small&gt;Subheading&lt;/small&gt;&lt;/h6&gt;</pre><br>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="row" id="common-textual-elements">
+		        <div class="col-sm-12">
+		          <div class="card fluid">
+		            <div class="section"><h2>Common textual elements</h2></div>
+		            <div class="section row">
+		              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+		                <div><br><p>This is a paragraph with some sample text. Did you know <strong>mini.css</strong> v2.1 is codenamed <strong>Fermion</strong>? No? Well, now you do! Oh, by the way, that was some Bold text and here is some <em>text in Italics</em>. Maybe you want to know what our inline elements look like. For example a <a href="https://github.com/Chalarangelo/mini.css">link to the Github repository of mini.css</a> looks like that! Neat, right? Maybe you want to see some <code>inline code</code> or some sample <kbd>input</kbd>. Oh, also <small>small text</small> is cool, along with its siblings: the subscript<sub>hi!</sub> and the superscript<sup>hello!</sup>. Finally, check out the horizontal rule, preformatted code block and quotation below.</p><hr>
+		                <pre>function sum(num1, num2) {
+		    var num3 = num1 + num2;
+		    console.log('Result: ' + num3);
+		}</pre>
+		                  <blockquote cite="Mr. Quotalot">This is some quoted text from elsewhere.</blockquote><br>
+		                </div>
+		              </div>
+		              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+		                <p>The most common HTML5 elements must be things like <code>&lt;p&gt;</code>aragraphs, bold (<code>&lt;strong&gt;</code>) &amp; italics (<code>&lt;em&gt;</code>) text, links (<code>&lt;a&gt;</code>), horizontal rules (<code>&lt;hr&gt;</code>) and <code>&lt;small&gt;</code> text. These, along with a few others, are styled by default using clean, modern design to make your pages look cool and stand out from the rest of the internet.</p>
+		                <h3>Sample code</h3>
+		                <pre>&lt;p&gt;This is a paragraph with some &lt;strong&gt;bold text&lt;/strong&gt; and some &lt;em&gt;italics text&lt;/em&gt;.&lt;/p&gt;
+		&lt;a href=&quot;#&quot;&gt;This is a link.&lt;/a&gt;
+		&lt;small&gt;This is some small text.&lt;/small&gt;
+		&lt;sub&gt;Subscript&lt;/sub&gt;
+		&lt;sup&gt;Superscript&lt;/sup&gt;
+		&lt;code&gt;Inline code&lt;/code&gt;
+		&lt;kbd&gt;Keyboard Input&lt;/kbd&gt;
+		&lt;hr&gt;
+		&lt;pre&gt;This is some preformatted text.&lt;/pre&gt;
+		&lt;blockquote cite=&quot;Quotation source&quot;&gt;
+		  This is some quoted text from another website or person.
+		&lt;/blockquote&gt;</pre><br>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="row" id="lists">
+		        <div class="col-sm-12">
+		          <div class="card fluid">
+		            <div class="section"><h2>Lists</h2></div>
+		            <div class="section row">
+		              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+		                <div><br>
+		                  <ul>
+		                    <li>Apple</li>
+		                    <li>Orange</li>
+		                    <li>Strawberry</li>
+		                  </ul><br>
+		                  <ol>
+		                    <li>Wake up</li>
+		                    <li>Eat breakfast</li>
+		                    <li>Go to work</li>
+		                  </ol><br>
+		                </div>
+		              </div>
+		              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+		                <p>Lists are also very commonly used in websites and apps. We tweaked a few margins and paddings to save some space and make them align properly with the rest of the common HTML elements that we use, but both unordered lists (<code>&lt;ul&gt;</code>) and ordered lists (<code>&lt;ol&gt;</code>) are minimally pre-styled to make things a little bit easier for you.</p>
+		                <h3>Sample code</h3>
+		                <pre>&lt;ul&gt;
+		  &lt;li&gt;Apple&lt;/li&gt;
+		  &lt;li&gt;Orange&lt;/li&gt;
+		  &lt;li&gt;Strawberry&lt;/li&gt;
+		&lt;/ul&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Wake up&lt;/li&gt;
-  &lt;li&gt;Eat breakfast&lt;/li&gt;
-  &lt;li&gt;Go to work&lt;/li&gt;
-&lt;/ol&gt;</pre><br>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
-          <div class="card fluid">
-            <div class="section"><h2>Image responsiveness &amp; captions</h2></div>
-            <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
-                <div><figure><img src="https://placehold.it/800x600"><figcaption>Image caption</figcaption></figure></div>
-              </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>Image elements (<code>&lt;img&gt;</code>) are responsive by default, without the need for any special classes or anything else. We made sure they will scale down as necessary to display properly on smaller devices, while keeping their original aspect ratio, but they will never scale up above their original size.</p> <p>On a side note, if you want to add captions to images, you can use a <code>&lt;figcaption&gt;</code> element, while wrapping both the image and it inside a <code>&lt;figure&gt;</code>.</p>
-                <h3>Sample code</h3>
-                <pre>&lt;figure&gt;
-  &lt;img src=&quot;...&quot;&gt;
-  &lt;figcaption&gt;Image caption&lt;/figcaption&gt;
-&lt;/figure&gt;</pre><br>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row" style="padding-bottom: 20px; padding-top:20px;">
-        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
-          <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
-        </div>
-      </div>
-    </div></main>
-    <!-- End of page content-->
+		&lt;ol&gt;
+		  &lt;li&gt;Wake up&lt;/li&gt;
+		  &lt;li&gt;Eat breakfast&lt;/li&gt;
+		  &lt;li&gt;Go to work&lt;/li&gt;
+		&lt;/ol&gt;</pre><br>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="row" id="images-captions">
+		        <div class="col-sm-12">
+		          <div class="card fluid">
+		            <div class="section"><h2>Image responsiveness &amp; captions</h2></div>
+		            <div class="section row">
+		              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+		                <div><figure><img src="https://placehold.it/800x600"><figcaption>Image caption</figcaption></figure></div>
+		              </div>
+		              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+		                <p>Image elements (<code>&lt;img&gt;</code>) are responsive by default, without the need for any special classes or anything else. We made sure they will scale down as necessary to display properly on smaller devices, while keeping their original aspect ratio, but they will never scale up above their original size.</p> <p>On a side note, if you want to add captions to images, you can use a <code>&lt;figcaption&gt;</code> element, while wrapping both the image and it inside a <code>&lt;figure&gt;</code>.</p>
+		                <h3>Sample code</h3>
+		                <pre>&lt;figure&gt;
+		  &lt;img src=&quot;...&quot;&gt;
+		  &lt;figcaption&gt;Image caption&lt;/figcaption&gt;
+		&lt;/figure&gt;</pre><br>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="row" style="padding-bottom: 20px; padding-top:20px;">
+		        <div class="col-sm-12">
+		          <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
+		        </div>
+		      </div>
+    		</main></div></div></div>
     <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>
 </html>

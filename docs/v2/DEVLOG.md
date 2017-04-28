@@ -1044,3 +1044,8 @@
 - Tested aforementioned changes, everything seems to work ok. Size of `default` flavor is now `6.71KB` compared to a `6.89KB` in previous release. Pretty sweet reduction.
 - Built sidebar navigation into modules pages.
 - Tweaked color of `button` elements slightly to look less terrible.
+
+## 20170428
+
+- Checked online if support for old `flexbox` syntax can be removed, but due to **UC Browser** (~9% of the market) it cannot. Shame really, because it's the only browser that needs it, all other legacy browsers have a low market share or are already deprecated due to other changes. Thus, we keep the old syntax, but a flag might come later down the line for people who don't care about legacy and UC. Also, the `-webkit` prefix for the newer syntax is still needed in many modern-ish browsers, so no changes in that department, either. At least, I checked.
+- Fixed the extra tabbing in `core` module documentation.

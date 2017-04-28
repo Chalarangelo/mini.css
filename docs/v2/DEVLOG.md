@@ -1054,3 +1054,4 @@
 - Updated all Codepens to use `https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css` instead of version-specific files. That was tiresome!
 - Removed version from `README.md`, the npm shield has it listed, so no need to list it again!
 - Updated `mini-lite` to use the latest ruleset and colors from `mini-default`.
+- Added sidebar navigation for `\customization` pages, updated them all.

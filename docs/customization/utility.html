@@ -21,30 +21,55 @@
 	.col-sm-12.col-sm-last.col-md-4.col-md-normal { box-sizing: border-box; border-right: 1px solid #bdbdbd; }
 	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd;}}
 	.box-colored.green { background: #1b5e20; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
-	.box-colored { color: #f5f5f5;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	.box-colored { color: #f5f5f5;}
 	td:first-child, td:last-child { font-family: monospace, monospace; }
 	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;}
 	</style>
   </head>
   <body>
-		<header>
+		<header class="sticky">
 			<a href="../index.html" class="logo"><span id="header-logo">m</span></a>
 			<a href="../index.html" class="button">Introduction</a> <a href="../modules.html" class="button">Modules</a>
 			<a href="../flavors.html" class="button">Flavors</a> <a href="../templates.html" class="button">Templates</a> <a href="index.html" class="button">Customization</a>
 			<a href="../quick_reference.html" class="button">Quick Reference</a>
 			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 		</header>
-	  <header class="sticky" style="height:36px;">
-  		<a href="core.html" class="button">Core</a> <a href="grid.html" class="button">Grid</a>
-  		<a href="navigation.html" class="button">Navigation</a> <a href="input_control.html" class="button">Input Control</a>
-  		<a href="table.html" class="button">Table</a> <a href="card.html" class="button">Card</a>
-  		<a href="tab.html" class="button">Tab</a> <a href="contextual.html" class="button">Contextual</a>
-  		<a href="progress.html" class="button">Progress</a> <a href="utility.html" class="button">Utility</a>
-  	</header>
-    <!-- Insert your page content here-->
-    <main><div class="container">
-      <div class="row" style="padding-top: 40px;">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+		<div class="container" style="padding-left: 0.25rem;">
+			<div class="row"> <div class="col-sm-12 col-md-4 col-lg-2 hidden-sm" style="padding: 0;"> <nav>
+				<h4 style="text-align: center">Customization</h4> <a href="core.html#core-title">Core</a>
+				<a href="core.html#typography-headings" class="sublink-1">Typography &amp; headings</a>
+				<a href="core.html#common-elements" class="sublink-1">Common elements &amp; fixes</a>
+				<br/> <a href="grid.html#grid-title">Grid</a>
+				<a href="grid.html#classes-breakpoints" class="sublink-1">Classes &amp; breakpoints</a>
+				<br/> <a href="navigation.html#navigation-title">Navigation</a>
+				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a>
+				<a href="navigation.html#footer" class="sublink-1">Footer</a>
+				<br/> <a href="input_control.html#input-control-title">Input Control</a>
+				<a href="input_control.html#forms-input" class="sublink-1">Forms &amp; input</a> <a href="input_control.html#checkbox-radio" class="sublink-1">Checkboxes &amp; radio buttons</a>
+				<a href="input_control.html#buttons" class="sublink-1">Buttons &amp; button groups</a> <a href="input_control.html#button-mixins" class="sublink-1">Button mixins</a>
+				<br/> <a href="table.html#table-title">Table</a>
+				<a href="table.html#table-styling" class="sublink-1">Table styling</a>
+				<br/> <a href="card.html#card-title">Card</a>
+				<a href="card.html#cards-sections" class="sublink-1">Cards and sections</a> <a href="card.html#card-mixins" class="sublink-1">Card mixins</a>
+				<br/> <a href="tab.html#tab-title">Tab</a>
+				<a href="tab.html#tab-styling" class="sublink-1">Tab styling</a>
+				<br/> <a href="contextual.html#contextual-title">Contextual</a>
+				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#alerts" class="sublink-1">Alerts</a>
+				<a href="contextual.html#tooltips" class="sublink-1">Tooltips</a> <a href="contextual.html#highlighting-mixins" class="sublink-1">Text highlighting mixins</a>
+				<a href="contextual.html#alert-mixins" class="sublink-1">Alert mixins</a> <a href="contextual.html#tooltip-mixins" class="sublink-1">Tooltip mixins</a>
+				<br/> <a href="progress.html#progress-title">Progress</a>
+				<a href="progress.html#progress-bar" class="sublink-1">Progress bar</a> <a href="progress.html#donut-spinner" class="sublink-1">Donut spinner</a>
+				<a href="progress.html#progress-mixins" class="sublink-1">Progress bar mixins</a> <a href="progress.html#spinner-mixins" class="sublink-1">Donut spinner mixins</a>
+				<br/> <a href="utility.html#utility-title">Utility</a>
+				<a href="utility.html#visibility-legacy" class="sublink-1">Visibility helpers &amp; legacy features</a> <a href="utility.html#breadcrumbs" class="sublink-1">Breadcrumbs</a>
+				<a href="utility.html#close-icon" class="sublink-1">Close icon</a>
+				<a href="utility.html#borders-shadows-mixins" class="sublink-1">Generic border &amp; shadow mixins</a>
+				<a href="utility.html#responsive-sizing-mixins" class="sublink-1">Responsive sizing &amp; spacing mixins</a>
+				<a href="utility.html#responsive-visibility-mixins" class="sublink-1">Responsive visibility helper mixins</a>
+			</nav> </div>
+				<div class="col-sm-12 col-md-8 col-lg-10"><main>
+      <div class="row" style="padding-top: 40px;" id="utility-title">
+        <div class="col-sm-12">
           <h1>Utility</h1>
           <p>The <strong>utility</strong> module contains all the utilities and helper classes that you might want when designing a website or application. They solve common design problems efficiently and provide you with generic rules you can easily apply everywhere.</p>
           <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p>
@@ -52,7 +77,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-121">
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
@@ -66,8 +91,8 @@
         </div>
       </div>
 
-			<div class="row">
-        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+			<div class="row" id="visibility-legacy">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2>Visibility helpers &amp; legacy features</h2></div>
             <div class="section">
@@ -125,8 +150,8 @@
         </div>
       </div>
 
-			<div class="row">
-				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+			<div class="row" id="breadcrumbs">
+				<div class="col-sm-12">
 					<div class="card fluid">
 						<div class="section"><h2>Breadcrumbs</h2></div>
 						<div class="section">
@@ -176,8 +201,8 @@
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+			<div class="row" id="close-icon">
+				<div class="col-sm-12">
 					<div class="card fluid">
 						<div class="section"><h2>Close icon</h2></div>
 						<div class="section">
@@ -211,8 +236,8 @@
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+			<div class="row" id="borders-shadows-mixins">
+				<div class="col-sm-12">
 					<div class="card fluid">
 						<div class="section"><h2>Generic border &amp; shadow mixins</h2></div>
 						<div class="section">
@@ -295,8 +320,8 @@
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+			<div class="row" id="responsive-sizing-mixins">
+				<div class="col-sm-12">
 					<div class="card fluid">
 						<div class="section"><h2>Responsive sizing &amp; spacing mixins</h2></div>
 						<div class="section">
@@ -416,8 +441,8 @@
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+			<div class="row" id="responsive-visibility-mixins">
+				<div class="col-sm-12">
 					<div class="card fluid">
 						<div class="section"><h2>Responsive visibility helper mixins</h2></div>
 						<div class="section">
@@ -538,12 +563,11 @@
 			</div>
 
 			<div class="row" style="padding-bottom: 20px; padding-top:20px;">
-        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <p>If you want to learn more about customizing <strong>mini.css</strong>, go back to the <a href="index.html">customization page</a> or choose a module from the top menu to see its documentation.</p>
         </div>
       </div>
-    </div></main>
-    <!-- End of page content-->
+    </main></div></div></div>
     <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>
 </html>

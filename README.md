@@ -1,4 +1,4 @@
-# mini.css v2.1.2
+# mini.css
 A minimal, responsive, style-agnostic CSS framework
 
 [![npm](https://img.shields.io/npm/v/mini.css.svg)](https://www.npmjs.com/package/mini.css)

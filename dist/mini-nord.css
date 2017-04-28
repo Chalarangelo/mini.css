@@ -3,7 +3,7 @@
 	Flavor name: Nord (mini-nord)
 	Author: tphecca (https://github.com/tphecca)
 	Maintainers: tphecca
-	mini.css version: v2.1.2 (Fermion)
+	mini.css version: v2.1.3 (Fermion)
 */
 /*
 	Browsers resets and base typography.
@@ -118,7 +118,6 @@ hr {
   line-height: 1.25em;
   margin: 8px;
   height: 1px;
-  background: -webkit-linear-gradient(to right, #ECEFF4, #D8DEE9, #ECEFF4);
   background: linear-gradient(to right, #ECEFF4, #D8DEE9, #ECEFF4);
 }
 
@@ -195,8 +194,7 @@ a {
   color: #88C0D0;
   text-decoration: underline;
   opacity: 1;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  transition: opacity 0.3s;
 }
 
 a:visited {
@@ -732,8 +730,7 @@ header .logo {
   line-height: 1.2;
   margin: 1px 6px 1px 1px;
   padding: 3px 0 0;
-  -webkit-transition: 0s opacity;
-  transition: 0s opacity;
+  transition: opacity 0.3s;
 }
 
 header button, header [type="button"],
@@ -771,6 +768,7 @@ nav {
 nav a, nav a:visited {
   display: block;
   color: #88C0D0;
+  text-decoration: none;
 }
 
 nav .sublink-1 {
@@ -990,8 +988,7 @@ a[role="button"], label[role="button"], [role="button"] {
   margin: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
   text-decoration: none;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  transition: background 0.3s;
   cursor: pointer;
 }
 
@@ -1472,11 +1469,14 @@ table.striped tr:nth-of-type(2n) > td {
   border: 1px solid #D8DEE9;
   margin: 2px 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
+  overflow: hidden;
 }
 
 .card > .section {
   box-sizing: border-box;
   margin: 0;
+  border: 0;
+  border-radius: 0;
   border-bottom: 1px solid #E5E9F0;
   padding: 6px 8px 6px;
   width: 100%;
@@ -1487,10 +1487,6 @@ table.striped tr:nth-of-type(2n) > td {
   padding: 0;
   -o-object-fit: cover;
   object-fit: cover;
-}
-
-.card > button.section, .card .button.section, .card [role="button"].section, .card input.section {
-  border-radius: 0;
 }
 
 .card > .section:last-child {
@@ -1571,8 +1567,7 @@ table.striped tr:nth-of-type(2n) > td {
   display: inline-block;
   height: 26px;
   cursor: pointer;
-  -webkit-transition: background 0.3s ease 0s;
-  transition: background 0.3s ease 0s;
+  transition: background 0.3s;
   background: #D8DEE9;
   border: 1px solid #9e9e9e;
   padding: 8px 12px;
@@ -1604,8 +1599,7 @@ table.striped tr:nth-of-type(2n) > td {
   transform: scaleY(0);
   -webkit-transform-origin: top;
   transform-origin: top;
-  -webkit-transition: -webkit-transform 0.3s ease 0s, transform 0.3s ease 0s;
-  transition: -webkit-transform 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s, transform 0.3s;
 }
 
 .tabs > [type="radio"] + label + div + [type="radio"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="radio"] + label {
@@ -1764,8 +1758,7 @@ mark.inline-block {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s;
   z-index: 1010;
 }
 
@@ -1774,11 +1767,11 @@ mark.inline-block {
 }
 
 .tooltip:not(.bottom):before, .tooltip:not(.bottom):after {
-  bottom: 100%;
+  bottom: 75%;
 }
 
 .tooltip.bottom:before, .tooltip.bottom:after {
-  top: 100%;
+  top: 75%;
 }
 
 .tooltip:hover:before, .tooltip:hover:after, .tooltip:active:before, .tooltip:active:after, .tooltip:focus:before, .tooltip:focus:after {
@@ -1792,6 +1785,8 @@ mark.inline-block {
   content: '';
   background: transparent;
   border: 6px solid transparent;
+  left: 50%;
+  left: calc(50% - 6px);
 }
 
 .tooltip:not(.bottom):before {
@@ -1820,13 +1815,6 @@ mark.inline-block {
 
 .tooltip.bottom:after {
   margin-top: 12px;
-}
-
-@supports (left: calc(50% - 6px)) or (left: -webkit-calc(50% - 6px)) {
-  .tooltip:before {
-    left: -webkit-calc(50% - 6px);
-    left: calc(50% - 6px);
-  }
 }
 
 /*
@@ -1878,10 +1866,11 @@ progress {
   -moz-appearance: none;
   appearance: none;
   height: 14px;
-  width: 100%;
+  width: 90%;
+  width: calc(100% - 16px);
+  margin: 2px 8px;
   border: 0;
   border-radius: 1px;
-  margin: 2px auto;
   box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.1), 0 0.5px 0.5px rgba(0, 0, 0, 0.15);
   background: #D8DEE9;
   color: #5E81AC;
@@ -1909,14 +1898,6 @@ progress[value="1000"]::-webkit-progress-value {
 
 progress[value="1000"]::-moz-progress-bar {
   border-radius: 1px;
-}
-
-@supports (width: calc(100% - 2*8px)) or (width: -webkit-calc(100% - 2*8px)) {
-  progress {
-    width: -webkit-calc(100% - 2*8px);
-    width: calc(100% - 2*8px);
-    margin: 2px 8px;
-  }
 }
 
 @-webkit-keyframes spinner-donut-anim {
@@ -1983,7 +1964,8 @@ progress.tertiary::-moz-progress-bar {
 
 progress.nano {
   height: 2px;
-  width: 100%;
+  width: calc(100% - 0);
+  margin: 0 0;
   margin: 0 auto;
   border-radius: 0;
 }
@@ -2112,8 +2094,7 @@ ul.breadcrumbs li:last-child:after {
   background: rgba(236, 239, 244, 0);
   vertical-align: top;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  transition: background 0.3s;
 }
 
 .close:hover, .close:active, .close:focus {

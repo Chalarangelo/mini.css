@@ -1052,3 +1052,5 @@
 - Added better module descriptions in `modules.html`, updated the way their cards look, everything should look cleaner and better now.
 - Updated `flavors.html` page, removed latest version, because it was not really all that useful. Flavors that are not updated can just list it in their description now.
 - Updated all Codepens to use `https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css` instead of version-specific files. That was tiresome!
+- Removed version from `README.md`, the npm shield has it listed, so no need to list it again!
+- Updated `mini-lite` to use the latest ruleset and colors from `mini-default`.

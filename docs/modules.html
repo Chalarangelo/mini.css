@@ -16,7 +16,7 @@
 	<style>
 	#header-logo { background: -webkit-linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); background: linear-gradient(#07020d 20%, #150627 45%, #220a40 70%, #300d5a); line-height:1; font-size: 39px; width: 48px; height: 48px; padding: 8px; margin-left: -9px; }
 	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
-	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; } .box-left { text-align: left; }
+	.box-centered .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .box-left { text-align: left; } li a { text-decoration: none; } h2.section + div.section.box-left { height: 100%; }
 	</style>
   </head>
   <body>
@@ -71,82 +71,124 @@
         </div>
       </div>
       <div class="row box-centered">
-        <div class="col-sm-12 col-md-6 row">
+        <div class="col-sm-12 col-lg-6 row">
           <div class="card fluid">
             <h2 class="section"><mark class="primary"><i class="fa fa-font fa-fw" aria-hidden="true"></i></mark>&nbsp;Core</h2>
-            <p class="section box-left">The <strong>core</strong> module contains basic reset and fix rules, based on <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> v5.0.0, along with lots of custom typography rules. Most textual HTML5 elements are styled by this module, so you can start writing your pages immediately without worrying about font families, weights, sizes, line heights, paddings and the like.</p>
-            <a href="core.html" class="button section">See more</a>
+            <div class="section box-left"><p>The <strong>core</strong> module contains basic reset and fix rules, based on <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> v5.0.0, along with lots of custom typography rules. Most textual HTML5 elements are styled by this module, so you can start writing your pages immediately without worrying about font families, weights, sizes, line heights, paddings and the like. More specifically, the <strong>core</strong> module contains:</p><ul>
+							<li><a href="core.html#typography" class="sublink-1">General typography rules</a></li>
+							<li><a href="core.html#headings" class="sublink-1">Styling for headings</a></li>
+							<li><a href="core.html#common-textual-elements" class="sublink-1">Styling for common textual elements</a></li>
+							<li><a href="core.html#lists" class="sublink-1">Styling for lists</a></li>
+							<li><a href="core.html#images-captions" class="sublink-1">Rules for image responsiveness and captions</a></li>
+						</ul></div><a href="core.html" class="button section">See more</a>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 row">
+        <div class="col-sm-12 col-lg-6 row">
           <div class="card fluid">
             <h2 class="section"><mark class="secondary"><i class="fa fa-th-large fa-fw" aria-hidden="true"></i></mark>&nbsp;Grid</h2>
-            <p class="section box-left">The <strong>grid</strong> module provides you with a modern, responsive grid system based on the Flexible Layout Module (commonly known as <em>flexbox</em>). The structure of the grid is simple and logical, allowing you to quickly build your pages from scratch. Setting the layout for a page is easy and will behave the way you want them to on mobile devices and smaller screens.</p>
-            <a href="grid.html" class="button section">See more</a>
+            <div class="section box-left"><p>The <strong>grid</strong> module provides you with a modern, responsive grid system based on the Flexible Layout Module (commonly known as <em>flexbox</em>). The structure of the grid is simple and logical, allowing you to quickly build your pages from scratch. Setting the layout for a page is easy and will behave the way you want them to on mobile devices and smaller screens. More specifically, the <strong>grid</strong> module contains:</p><ul>
+							<li><a href="grid.html#basic-layout" class="sublink-1">Containers, rows and columns for layout</a></li>
+							<li><a href="grid.html#screen-specific-layout" class="sublink-1">Classes for defining screen-specific layouts</a></li>
+							<li><a href="grid.html#predefined-layout" class="sublink-1">Classes for predefined layouts</a></li>
+							<li><a href="grid.html#column-offset" class="sublink-1">Classes for content offsetting</a></li>
+							<li><a href="grid.html#column-reorder" class="sublink-1">Classes for content reordering</a></li>
+							<li><a href="grid.html#media-object" class="sublink-1">Layout examples for implementing the media object pattern</a></li>
+						</ul></div><a href="grid.html" class="button section">See more</a>
           </div>
         </div>
       </div>
       <div class="row box-centered">
-        <div class="col-sm-12 col-md-6 row">
+        <div class="col-sm-12 col-lg-6 row">
           <div class="card fluid">
             <h2 class="section"><mark class="primary"><i class="fa fa-compass fa-fw" aria-hidden="true"></i></mark>&nbsp;Navigation</h2>
-            <p class="section box-left">The <strong>navigation</strong> module seeks to remedy the problems of vertical and horizontal navigation design paradigms, by combining the two for a better presentational effect. HTML5 navigational elements are at the heart of the module, allowing you to quickly build your navigation without complicated structures and hacks.</p>
-            <a href="navigation.html" class="button section">See more</a>
+            <div class="section box-left"><p>The <strong>navigation</strong> module seeks to remedy the problems of vertical and horizontal navigation design paradigms, by combining the two for a better presentational effect. HTML5 navigational elements are at the heart of the module, allowing you to quickly build your navigation without complicated structures and hacks. More specifically, the <strong>navigation</strong> module contains:</p><ul>
+							<li><a href="navigation.html#navigation-title">Navigation</a>
+							<li><a href="navigation.html#header" class="sublink-1">Styling for headers, logos and header links</a></li>
+							<li><a href="navigation.html#navigation-bar" class="sublink-1">Styling for navigation bars</a></li>
+							<li><a href="navigation.html#footer" class="sublink-1">Styling for footers</a></li>
+							<li><a href="navigation.html#sticky" class="sublink-1">Classes for making headers and footers sticky</a></li>
+						</ul></div><a href="navigation.html" class="button section">See more</a>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 row">
+        <div class="col-sm-12 col-lg-6 row">
           <div class="card fluid">
             <h2 class="section"><mark class="tertiary"><i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i></mark>&nbsp;Input Control</h2>
-            <p class="section box-left">The <strong>input_control</strong> module contains rules that affect forms, input elements, buttons, checkboxes and radio buttons. All of these elements's styles are predefined, allowing you to create modern, responsive forms quickly. Layout alternatives are also provided if you want your forms to look a certain way.</p>
-            <a href="input_control.html" class="button section">See more</a>
+            <div class="section box-left"><p>The <strong>input_control</strong> module contains rules that affect forms, input elements, buttons, checkboxes and radio buttons. All of these elements's styles are predefined, allowing you to create modern, responsive forms quickly. Layout alternatives are also provided if you want your forms to look a certain way. More specifically, the <strong>input_control</strong> module contains:</p><ul>
+							<li><a href="input_control.html#forms-input" class="sublink-1">Styling for forms and input elements</a></li>
+							<li><a href="input_control.html#checkbox-radio" class="sublink-1">Styling for checkboxes and radio buttons</a></li>
+							<li><a href="input_control.html#buttons" class="sublink-1">Styling and groupping classes for buttons</a></li>
+							<li><a href="input_control.html#file-upload" class="sublink-1">Workarounds for styling file upload buttons</a></li>
+						</ul></div><a href="input_control.html" class="button section">See more</a>
           </div>
         </div>
       </div>
       <div class="row box-centered">
-        <div class="col-sm-12 col-md-6 row">
+        <div class="col-sm-12 col-lg-6 row">
           <div class="card fluid">
             <h2 class="section"><mark class="primary"><i class="fa fa-table fa-fw" aria-hidden="true"></i></mark>&nbsp;Table</h2>
-            <p class="section box-left">The <strong>table</strong> module provides styling and responsiveness for tables. Simple rules and accessible design paradigms have been used to make creating tables quick and easy. Large tables will collapse to cards when on smaller devices or, if you don't want that, they can be locked into their default, desktop view.</p>
-            <a href="table.html" class="button section">See more</a>
+            <div class="section box-left"><p>The <strong>table</strong> module provides styling and responsiveness for tables. Simple rules and accessible design paradigms have been used to make creating tables quick and easy. Large tables will collapse to cards when on smaller devices or, if you don't want that, they can be locked into their default, desktop view. More specifically, the <strong>table</strong> module contains:</p><ul>
+							<li><a href="table.html#syntax-responsiveness" class="sublink-1">Styling for tables and built-in responsiveness</a></li>
+							<li><a href="table.html#horizontal-tables" class="sublink-1">Classes for creating horizontal tables</a></li>
+							<li><a href="table.html#variants-matrices" class="sublink-1">Classes for creating table variants and matrices</a></li>
+						</ul></div><a href="table.html" class="button section">See more</a>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 row">
+        <div class="col-sm-12 col-lg-6 row">
           <div class="card fluid">
             <h2 class="section"><mark class="secondary"><i class="fa fa-id-card-o fa-fw" aria-hidden="true"></i></mark>&nbsp;Card</h2>
-            <p class="section box-left">The <strong>card</strong> module provides you with modern, responsive, general-purpose containers for your page's contents. They are very easy to use and their structure is really simple and versatile. Layouts will respond to smaller screens, realigning the cards in a manner that makes your page mobile-friendly.</p>
-            <a href="card.html" class="button section">See more</a>
+            <div class="section box-left"><p>The <strong>card</strong> module provides you with modern, responsive, general-purpose containers for your page's contents. They are very easy to use and their structure is really simple and versatile. Layouts will respond to smaller screens, realigning the cards in a manner that makes your page mobile-friendly. More specifically, the <strong>card</strong> module contains:</p><ul>
+							<li><a href="card.html#basic-syntax" class="sublink-1">Classes for creating card-based layouts</a></li>
+							<li><a href="card.html#sections-media" class="sublink-1">Classes for creating card sections and adding media</a></li>
+							<li><a href="card.html#sizing-fluidity" class="sublink-1">Classes for creating card variants and making cards fluid</a></li>
+						</ul></div><a href="card.html" class="button section">See more</a>
           </div>
         </div>
       </div>
       <div class="row box-centered">
-        <div class="col-sm-12 col-md-6 row">
+        <div class="col-sm-12 col-lg-6 row">
           <div class="card fluid">
             <h2 class="section"><mark class="secondary"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i></mark>&nbsp;Tab</h2>
-            <p class="section box-left">The <strong>tab</strong> module aims to combine multiple components and design paradigms, like collapses, accordions, carousels and tabs, into one general-purpose component. Tabs are very simple in structure, responsive on mobile and they allow for layout customization so that you can turn them into accordions or collapses whenever you want.</p>
-            <a href="tab.html" class="button section">See more</a>
+            <div class="section box-left"><p>The <strong>tab</strong> module aims to combine multiple components and design paradigms, like collapses, accordions, carousels and tabs, into one general-purpose component. Tabs are very simple in structure, responsive on mobile and they allow for layout customization so that you can turn them into accordions or collapses whenever you want. More specifically, the <strong>tab</strong> module contains:</p><ul>
+							<li><a href="tab.html#basic-syntax" class="sublink-1">Classes for creating tab-based layouts</a></li>
+							<li><a href="tab.html#stacked-tabs" class="sublink-1">Classes for creating stacked tabs, accordions and collapses</a></li>
+						</ul></div><a href="tab.html" class="button section">See more</a>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 row">
+        <div class="col-sm-12 col-lg-6 row">
           <div class="card fluid">
             <h2 class="section"><mark class="secondary"><i class="fa fa-tags fa-fw" aria-hidden="true"></i></mark>&nbsp;Contextual</h2>
-            <p class="section box-left">The <strong>contextual</strong> module provides you with simple tags, marks and highlights for your pages, allowing you to easily emphasize parts of your text. The contextual alerts aim to replace the commonly used modal dialog design paradigm with a more modern one. HTML5 elements and simple rules are used in order to make important messages and pieces of content stand out easily.</p>
-            <a href="contextual.html" class="button section">See more</a>
+            <div class="section box-left"><p>The <strong>contextual</strong> module provides you with simple tags, marks and highlights for your pages, allowing you to easily emphasize parts of your text. The contextual alerts aim to replace the commonly used modal dialog design paradigm with a more modern one. HTML5 elements and simple rules are used in order to make important messages and pieces of content stand out easily. More specifically, the <strong>contextual</strong> module contains:</p><ul>
+							<li><a href="contextual.html#text-highlighting" class="sublink-1">Styling for highlighted text</a></li>
+							<li><a href="contextual.html#alerts" class="sublink-1">Classes for creating alerts</a></li>
+							<li><a href="contextual.html#animated-alerts" class="sublink-1">Classes for animating alerts</a></li>
+							<li><a href="contextual.html#tooltips" class="sublink-1">Classes for creating hover-over tooltips</a></li>
+						</ul></div><a href="contextual.html" class="button section">See more</a>
           </div>
         </div>
       </div>
       <div class="row box-centered" style="padding-bottom: 40px;">
-        <div class="col-sm-12 col-md-6 row">
+        <div class="col-sm-12 col-lg-6 row">
           <div class="card fluid">
             <h2 class="section"><mark class="tertiary"><i class="fa fa-spinner fa-fw" aria-hidden="true"></i></mark>&nbsp;Progress</h2>
-            <p class="section box-left">The <strong>progress</strong> module gives you full control over the presentation of progress and loading on your pages. Apart from progress bars and color variants for them, spinner elements are provided to help communicate that something is loading.</p>
-            <a href="progress.html" class="button section">See more</a>
+            <div class="section box-left"><p>The <strong>progress</strong> module gives you full control over the presentation of progress and loading on your pages. Apart from progress bars and color variants for them, spinner elements are provided to help communicate that something is loading. More specifically, the <strong>progress</strong> module contains:</p><ul>
+							<li><a href="progress.html#basic-progress-bar" class="sublink-1">Styling for progress bars</a></li>
+							<li><a href="progress.html#progress-variants" class="sublink-1">Classes for creating progress bar variants</a></li>
+							<li><a href="progress.html#donut-spinner" class="sublink-1">Classes for creating donut spinners</a></li>
+							<li><a href="progress.html#spinner-variants" class="sublink-1">Classes for creating donut spinner variants</a></li>
+						</ul></div><a href="progress.html" class="button section">See more</a>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 row">
+        <div class="col-sm-12 col-lg-6 row">
           <div class="card fluid">
             <h2 class="section"><mark class="tertiary"><i class="fa fa-wrench fa-fw" aria-hidden="true"></i></mark>&nbsp;Utility</h2>
-            <p class="section box-left">The <strong>utility</strong> module contains all the utilities and helper classes that you might want when designing a website or application. They solve common design problems efficiently and provide you with generic rules you can easily apply everywhere.</p>
-            <a href="utility.html" class="button section">See more</a>
+            <div class="section box-left"><p>The <strong>utility</strong> module contains all the utilities and helper classes that you might want when designing a website or application. They solve common design problems efficiently and provide you with generic rules you can easily apply everywhere. More specifically, the <strong>utility</strong> module contains:</p><ul>
+							<li><a href="utility.html#visibility-helpers" class="sublink-1">Visibility helpers for hiding elements</a></li>
+							<li><a href="utility.html#borders-shadows" class="sublink-1">Classes for creating generic borders and shadows</a></li>
+							<li><a href="utility.html#responsive-sizing" class="sublink-1">Classes for responsive sizing and spacing</a></li>
+							<li><a href="utility.html#responsive-visibility" class="sublink-1">Responsive visibility helpers for hiding elements</a></li>
+							<li><a href="utility.html#breadcrumbs" class="sublink-1">Classes for creating breadcrumbs</a></li>
+							<li><a href="utility.html#close-icon" class="sublink-1">Classes for creating close icons</a></li>
+						</ul></div><a href="utility.html" class="button section">See more</a>
           </div>
         </div>
       </div>

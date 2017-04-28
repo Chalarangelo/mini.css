@@ -1049,3 +1049,4 @@
 
 - Checked online if support for old `flexbox` syntax can be removed, but due to **UC Browser** (~9% of the market) it cannot. Shame really, because it's the only browser that needs it, all other legacy browsers have a low market share or are already deprecated due to other changes. Thus, we keep the old syntax, but a flag might come later down the line for people who don't care about legacy and UC. Also, the `-webkit` prefix for the newer syntax is still needed in many modern-ish browsers, so no changes in that department, either. At least, I checked.
 - Fixed the extra tabbing in `core` module documentation.
+- Added better module descriptions in `modules.html`, updated the way their cards look, everything should look cleaner and better now.

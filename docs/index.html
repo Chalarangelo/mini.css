@@ -49,7 +49,7 @@
 	.box-centered > .card.fluid { -webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start;
 	justify-content: flex-start; -webkit-align-self: auto; align-self: auto;}
 	[class^='col-'] .card.fluid { margin: 2px 0 20px; } [class^='fore-'] { font-family: monospace, monospace;}
-	.fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
+	.fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;} li a { text-decoration: none;}
 	</style>
   </head>
   <body>
@@ -68,10 +68,10 @@
 		<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 	</header>
     <!-- Insert your page content here-->
-    <main><div class="container">
+    <main><div class="container responsive-padding">
       <div class="row" style="padding-top: 60px; padding-bottom: 20px;">
         <div class="col-sm-12 col-lg-10 col-lg-offset-1 row">
-          <div class="col-sm-12 col-md box-centered row">
+          <div class="col-sm-12 col-md-8 col-md-offset-2 col-lg col-lg col-lg-offset-0 box-centered row">
             <div class="card fluid">
               <div class="section">
                 <h2>Minimal<small>Size matters!</small></h2><br> <i class="fa fa-compress fa-4x" aria-hidden="true"></i><br><br>
@@ -79,7 +79,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md box-centered row">
+          <div class="col-sm-12 col-md-8 col-md-offset-2 col-lg col-lg col-lg-offset-0 box-centered row">
             <div class="card fluid">
               <div class="section">
                 <h2>Responsive<small>Think mobile!</small></h2><br> <i class="fa fa-mobile fa-4x" aria-hidden="true"></i><br><br>
@@ -87,7 +87,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md box-centered row">
+          <div class="col-sm-12 col-md-8 col-md-offset-2 col-lg col-lg-offset-0 box-centered row">
             <div class="card fluid">
               <div class="section">
                 <h2>Style-agnostic<small>Infinitely customizable!</small></h2><br> <i class="fa fa-paint-brush fa-4x" aria-hidden="true"></i><br><br>
@@ -109,105 +109,50 @@
 				<p>After downloading <strong>mini.css</strong>, pick a <a href="flavors.html">Flavor</a> and use it for your project.</p>
 				<br/>
 				<p>Alternatively, you can use either <strong>GitCDN</strong> or <strong>RawGit</strong> to import the default flavor of <strong>mini.css</strong>. Simply add one of the following references inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
-				<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css&quot;</span>&gt;</pre>		
-				<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.2/dist/mini-default.min.css&quot;</span>&gt;</pre><br/>
+				<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css&quot;</span>&gt;</pre>
+				<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.3/dist/mini-default.min.css&quot;</span>&gt;</pre><br/>
 				<p>Finally, you can find <strong>mini.css</strong> on <a href="https://cdnjs.com/libraries/mini.css">cdnjs</a>, which you can use to include it in your projects.</p><br/>
 				<hr>
+        </div>
+      </div>
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+					<h2>Browser support</h2>
+					<div class="row" style="padding: 0.5rem;">
+					<div class="col-sm" style="text-align:center; background: #35BCE6; padding: 1rem;"><img src="browser-logos/edge_128x128.png"><br/><h3><small>&nbsp;Edge</small>12</h3></div>
+					<div class="col-sm" style="text-align:center; background: #FF742E; padding: 1rem;"><img src="browser-logos/firefox_128x128.png"><br/><h3><small>&nbsp;Firefox</small>28</h3></div>
+					<div class="col-sm" style="text-align:center; background: #FFE270; padding: 1rem;"><img src="browser-logos/chrome_128x128.png"><br/><h3><small>&nbsp;Chrome</small>26</h3></div>
+					<div class="col-sm" style="text-align:center; background: #00D0FF; padding: 1rem;"><img src="browser-logos/safari_128x128.png"><br/><h3><small>&nbsp;Safari</small>7.1</h3></div>
+					<div class="col-sm" style="text-align:center; background: #FF6E6E; padding: 1rem;"><img src="browser-logos/opera_128x128.png"><br/><h3><small>&nbsp;Opera</small>17</h3></div>
+					<div class="col-sm" style="text-align:center; background: #0F98E0; padding: 1rem;"><img src="browser-logos/android_128x128.png"><br/><h3><small>&nbsp;Android</small>4.4</h3></div>
+			  </div></div> <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+          <p style="padding-top: 1rem; padding-bottom: 1rem;"><mark class="secondary" style="padding: 3px 6px;"><i class="fa fa-lg fa-exclamation" aria-hidden="true"></i></mark>&nbsp;Due to the way <strong>mini.css</strong> is crafted, some legacy browsers are not supported anymore and some others are partially supported. This could be a dealbreaker for some developers, however most legacy browsers will display a less feature-rich and modern website. On a side note, remember that some mobile browsers like Opera Mini, IE Mobile and UC Browser for Android are officially supported, but some features may not be displayed properly or behave as expected due to the browsers themselves.</p><hr>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-12 col-lg-10 col-lg-offset-1">
           <h2>Quick overview</h2>
-          <p>Take a couple of minutes to learn how <strong>mini.css</strong> differs from all those other UI frameworks (Bootstrap, Semantic UI etc):</p>
-			<table> <caption>Framework file size comparison</caption>
-				<thead> <tr> <th>Name</th><th>Version</th><th>Size (uncompressed)</th><th>Size (minified)</th><th>Size (gzipped)</th> </tr> </thead>
-				<tbody>
-					<tr>
-						<td data-label="Name">Bootstrap</td>
-						<td data-label="Version"><a href="https://github.com/twbs/bootstrap/blob/0b9c4a4007c44201dce9a6cc1a38407005c26c86/dist/css/bootstrap.css">v3.3.7</a></td>
-						<td data-label="Size (uncompressed)">143 KB</td><td data-label="Size (minified)">117 KB</td><td data-label="Size (gzipped)">20 KB</td>
-					</tr>
-					<tr>
-						<td data-label="Name">Material Framework</td>
-						<td data-label="Version"><a href="https://github.com/nt1m/material-framework/blob/c5f7fed174686118dded31aecca311d4cc9d8b07/css/material.css">v3.0</a></td>
-						<td data-label="Size (uncompressed)">114 KB</td><td data-label="Size (minified)">90 KB</td><td data-label="Size (gzipped)">18 KB</td>
-					</tr>
-					<tr>
-						<td data-label="Name">mini.css</td>
-						<td data-label="Version"><a href="https://github.com/Chalarangelo/mini.css/blob/master/dist/mini-default.css">v2.1.2</a></td>
-						<td data-label="Size (uncompressed)">50 KB</td><td data-label="Size (minified)">40 KB</td><td data-label="Size (gzipped)">7 KB</td>
-					</tr>
-					<tr>
-						<td data-label="Name">Semantic UI</td>
-						<td data-label="Version"><a href="https://github.com/Semantic-Org/Semantic-UI/blob/dfc323e608ff15e36a336c17ef925ffc27b5bb2e/dist/semantic.css">v2.2.10</a></td>
-						<td data-label="Size (uncompressed)">752 KB</td><td data-label="Size (minified)">553 KB</td><td data-label="Size (gzipped)">95 KB</td>
-					</tr>
-					<tr>
-						<td data-label="Name">Zurb Foundation</td>
-						<td data-label="Version"><a href="https://github.com/zurb/foundation-sites/blob/fc578179ab1718c18216f88b2ff5b04c70532d53/dist/css/foundation.css">v6.3.1</a></td>
-						<td data-label="Size (uncompressed)">103 KB</td><td data-label="Size (minified)">73 KB</td><td data-label="Size (gzipped)">13 KB</td>
-					</tr>
-				</tbody>
-			</table><br>
-          <p><mark class="secondary" style="padding: 3px 6px;"><i class="fa fa-lg fa-exclamation" aria-hidden="true"></i></mark>&nbsp;The above comparison takes into account only the CSS files of each framework. <strong>mini.css</strong>'s size is an approximation due to the nature of its flavor system. The calculated results were produced using <a href="http://refresh-sf.com/">Refresh-SF</a>.</p><br>
-          </div>
-          <div class="col-sm-12 col-md col-lg-5 col-lg-offset-1">
-            <h3>Module list</h3>
-            <ul>
-              <li><strong>Core</strong> - Resets, typography rules and fixes</li>
-              <li><strong>Grid</strong> - Powerful, responsive flexbox-based grid</li>
-              <li><strong>Navigation</strong> - Common elements for navigation</li>
-              <li><strong>Input Control</strong> - Forms, buttons and inputs</li>
-              <li><strong>Table</strong> - Modern, responsive tables</li>
-              <li><strong>Card</strong> - Sleek, modern content containers</li>
-              <li><strong>Tab</strong> - Responsive tabs and accordions</li>
-              <li><strong>Contextual</strong> - Contextual highlights and alerts</li>
-              <li><strong>Progress</strong> - Modern progress bars and loaders</li>
-              <li><strong>Utility</strong> - Utility and helper classes</li>
-            </ul>
-        </div>
-        <div class="col-sm-12 col-md col-lg-5">
-          <h3>Why does <strong>mini.css</strong> have so few modules?</h3>
-          <p>Modules are what make frameworks so powerful, by giving developers the essential components they need to structure and style their websites. <strong>mini.css</strong> simplifies the crafting and learning process for new developers by providing a handful of very powerful modules that can do many different things. This way, new developers will only have to learn a few different HTML structures and patterns, while having the ability to build a lot of interesting things with them. For example, cards can be used for almost any type of layout and can be customized to behave exactly as the developer needs them to. Tabs, on the other hand, are very responsive on mobile, collapsing to a stack below a certain width, but they can also be forced into a stack, allowing accordions and collapses to be built using the same building block as tabs.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
-		<table> <caption>Browser support</caption>
-			<thead> <tr> <th>Browser</th><th>Not supported</th><th>Partially supported</th><th>Fully supported</th> </tr> </thead>
-			<tbody>
-				<tr>
-					<td data-label="Browser"><i class="fa fa-internet-explorer" aria-hidden="true" style="color: #1565c0;"></i>&nbsp;Internet Explorer</td>
-					<td data-label="Not supported">8-</td><td data-label="Partially supported">9-10</td><td data-label="Fully supported">11+</td>
-				</tr>
-				<tr>
-					<td data-label="Browser"><i class="fa fa-edge" aria-hidden="true" style="color: #0d47a1;"></i>&nbsp;Edge</td>
-					<td data-label="Not supported">n/a</td><td data-label="Partially supported">n/a</td><td data-label="Fully supported">12+</td>
-				</tr>
-				<tr>
-					<td data-label="Browser"><i class="fa fa-firefox" aria-hidden="true" style="color: #bf360c;"></i>&nbsp;Firefox</td>
-					<td data-label="Not supported">21-</td><td data-label="Partially supported">22-27</td><td data-label="Fully supported">28+</td>
-				</tr>
-				<tr>
-					<td data-label="Browser"><i class="fa fa-chrome" aria-hidden="true" style="color: #ff8f00;"></i>&nbsp;Chrome</td>
-					<td data-label="Not supported">20-</td><td data-label="Partially supported">n/a</td><td data-label="Fully supported">21+</td>
-				</tr>
-				<tr>
-					<td data-label="Browser"><i class="fa fa-safari" aria-hidden="true" style="color: #0277bd;"></i>&nbsp;Safari</td>
-					<td data-label="Not supported">6-</td><td data-label="Partially supported">n/a</td><td data-label="Fully supported">6.1+</td>
-				</tr>
-				<tr>
-					<td data-label="Browser"><i class="fa fa-opera" aria-hidden="true" style="color: #b71c1c;"></i>&nbsp;Opera</td>
-					<td data-label="Not supported">11.5-</td><td data-label="Partially supported">12.1-16</td><td data-label="Fully supported">17+</td>
-				</tr>
-				<tr>
-					<td data-label="Browser"><i class="fa fa-android" aria-hidden="true" style="color: #827717;"></i>&nbsp;Android Browser</td>
-					<td data-label="Not supported">4.3-</td><td data-label="Partially supported">n/a</td><td data-label="Fully supported">4.4+</td>
-				</tr>
-			</tbody>
-		</table><br>
-          <p><mark class="secondary" style="padding: 3px 6px;"><i class="fa fa-lg fa-exclamation" aria-hidden="true"></i></mark>&nbsp;Due to the way <strong>mini.css</strong> is crafted, some legacy browsers are not supported anymore and some others are partially supported. This could be a dealbreaker for some developers, however most legacy browsers will display a less feature-rich and modern website. Apart from the table above, note that some mobile browsers like Opera Mini, IE Mobile and UC Browser for Android are officially supported, but some features may not be displayed properly or behave as expected due to the browsers themselves.</p><br><hr>
-        </div>
+					<p>Take a couple of minutes to explore what makes <strong>mini.css</strong> different from all those other CSS frameworks and UI toolkits.</p><br/>
+					<h3>Why should I use mini.css?</h3>
+					<p><strong>mini.css</strong> is a lot lighter than a lot of other full-featured CSS frameworks (e.g. Bootstrap, Semantic UI), but it is not a micro framework (e.g. Milligram, Pure.CSS). Instead, <strong>mini.css</strong> blurs the line between full-featured and micro frameworks by providing lots of modules and components in a very small file. All the things you expect to find in a CSS framework, such as grids, styling for common elements and typography, along with some more complex components such as tabs or cards are all present in <strong>mini.css</strong>.</p>
+					<br/>
+					<h3>What exactly does mini.css provide?</h3>
+					<p>Many CSS frameworks utilize modules to deliver more components and features, without making it necessary for all developers to include them. <strong>mini.css</strong> provides a handful of very powerful <a href="modules.html">modules</a> that can do many different things. This way, developers only have to learn a few different HTML structures and patterns, while having the ability to build a lot of interesting things with them. You can see an overview of the modules below:</p>
+					<ul>
+						<li><a href="core.html">Core</a> - Basic reset and fix rules, based on <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> v5.0.0, typography and common textual element styling</li>
+						<li><a href="grid.html">Grid</a> - Powerful, responsive grid system based on the Flexible Layout Module (commonly known as <em>flexbox</em>)</li>
+						<li><a href="navigation.html">Navigation</a> - Common navigational elements such as headers, footers and navigation bars</li>
+						<li><a href="input_control.html">Input Control</a> - Form, input element, checkbox, radio button and button styling</li>
+						<li><a href="table.html">Table</a> - Modern table styling, horizontal and preset tables, table responsiveness for mobile devices</li>
+						<li><a href="card.html">Card</a> - Sleek, modern general-purpose content containers, media embedding</li>
+						<li><a href="tab.html">Tab</a> - Modern, responsive tabs, accordions and collapses</li>
+						<li><a href="contextual.html">Contextual</a> - Content highlight element styling, elegant alerts and accessible tooltips</li>
+						<li><a href="progress.html">Progress</a> - Modern progress bar styling and spinning progress indicators</li>
+						<li><a href="utility.html">Utility</a> - Utilities, visibility helper classes, responsive sizing and breadcrumbs</li>
+					</ul><br/>
+					<h3>How do I customize mini.css?</h3>
+					<p><strong>mini.css</strong> allows you to easily customize your designs, using <a href="flavors.html">Flavors</a>, pre-built color and style variants of the framework. The functionality is the same, but many things like color palettes, spacing and fonts can be easily changed by the community. Apart from that, you can easily build your own flavor by tweaking variables and using mixins, as explained in depth in the <a href="customization/index.html">customization</a> section.</p><br/><hr/>
+				</div>
       </div>
       <div class="row" style="padding-bottom: 60px;">
         <div class="col-sm col-lg-10 col-lg-offset-1">
@@ -219,6 +164,7 @@
             <li>If you are familiar with <strong>mini.css</strong> and want a cheat sheet or quick reference guide, check the <a href="quick_reference.html">quick reference</a> page!</li>
             <li><strong>mini.css</strong> comes with a few nice pre-built customizable <a href="flavors.html">flavors</a>. See which one of them better suits your needs!</li>
             <li>If you are more experienced or demanding, you can always take a look at the <a href="customization.html">customization</a> section to cook up a flavor of your own custom-tailored to your needs!</li>
+						<li>Finally, if you want to contribute to the framework's development in any way or have an interest in what happens behind the scenes, visit the <a href="https://github.com/Chalarangelo/mini.css">Github repository</a> to find out more.</li>
             </ul>
         </div>
       </div>

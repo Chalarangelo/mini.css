@@ -1056,3 +1056,4 @@
 - Updated `mini-lite` to use the latest ruleset and colors from `mini-default`.
 - Added sidebar navigation for `\customization` pages, updated them all.
 - Added template for login forms.
+- Updated front-page a little bit, adding logos and changing the content around a little bit.

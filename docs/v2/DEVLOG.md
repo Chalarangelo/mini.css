@@ -1055,3 +1055,4 @@
 - Removed version from `README.md`, the npm shield has it listed, so no need to list it again!
 - Updated `mini-lite` to use the latest ruleset and colors from `mini-default`.
 - Added sidebar navigation for `\customization` pages, updated them all.
+- Added template for login forms.

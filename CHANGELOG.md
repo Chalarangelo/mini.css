@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.1.3
+
+- Removed some legacy browser support features.
+- Updated color palette.
+- Changed units from `px` to mostly `rem` and `em`.
+- Added **mini-dark** flavor (dakr version of **mini-default**).
+- Updated docs.
+
 ## v2.1.2
 
 - Updated `::placeholder` definitions (#36).

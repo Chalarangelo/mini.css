@@ -1057,3 +1057,10 @@
 - Added sidebar navigation for `\customization` pages, updated them all.
 - Added template for login forms.
 - Updated front-page a little bit, adding logos and changing the content around a little bit.
+
+# v2.1.4 Development Log
+
+## 20170503
+
+- Started validating the HTML pages with the W3C Validator, making sure to fix as many issues as possible.
+- Fixed 7 errors in `index.html`, 5 error in `flavors.html`, 2 errors in `core.html`, 2 errors in `grid.html`, 9 errors in `input_control.html`, 4 errors in `table.html`,  3 errors in `card.html`, 4 errors in `tab.html`, 7 errors in `templates.html`, 2 errors in `utilty.html`, all errors in the customization docs stemming from `width="100%"` in `table` elements, 5 errors in `customization\card.html`, 20 errors in `customization\navigation.html` (~100 errors in total).

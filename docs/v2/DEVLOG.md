@@ -1067,3 +1067,4 @@
 - Extensive validity checking for the CSS codebase, no real issues that can be solved, due to most being part of the `WD` or `REC`, so they will be resolved on their own over time.
 - Some testing and work on how to simplify certain rules has taken place. Honestly, some rules are too high-specificity, maybe a *loose* definitions flag is in store for later releases.
 - Checked page mobile-friendliness and speed, removed the `Noto Sans` link from the `head`, added as rules inside the pages to improve loading speed.
+- Updated the `index.html` of customization to make sure that mobile users have a menu they can use for the section (using a `.button-group`).

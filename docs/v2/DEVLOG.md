@@ -1064,3 +1064,6 @@
 
 - Started validating the HTML pages with the W3C Validator, making sure to fix as many issues as possible.
 - Fixed 7 errors in `index.html`, 5 error in `flavors.html`, 2 errors in `core.html`, 2 errors in `grid.html`, 9 errors in `input_control.html`, 4 errors in `table.html`,  3 errors in `card.html`, 4 errors in `tab.html`, 7 errors in `templates.html`, 2 errors in `utilty.html`, all errors in the customization docs stemming from `width="100%"` in `table` elements, 5 errors in `customization\card.html`, 20 errors in `customization\navigation.html` (~100 errors in total).
+- Extensive validity checking for the CSS codebase, no real issues that can be solved, due to most being part of the `WD` or `REC`, so they will be resolved on their own over time.
+- Some testing and work on how to simplify certain rules has taken place. Honestly, some rules are too high-specificity, maybe a *loose* definitions flag is in store for later releases.
+- Checked page mobile-friendliness and speed, removed the `Noto Sans` link from the `head`, added as rules inside the pages to improve loading speed.

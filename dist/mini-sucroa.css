@@ -1005,18 +1005,8 @@ input[type="file"] {
   box-shadow: none;
 }
 
-.button-group button + button, .button-group button + [type="button"], .button-group button + [type="submit"], .button-group button + [type="reset"],
-.button-group button + .button, .button-group button + [role="button"], .button-group [type="button"] + button, .button-group [type="button"] + [type="button"], .button-group [type="button"] + [type="submit"], .button-group [type="button"] + [type="reset"],
-.button-group [type="button"] + .button, .button-group [type="button"] + [role="button"], .button-group [type="submit"] + button, .button-group [type="submit"] + [type="button"], .button-group [type="submit"] + [type="submit"], .button-group [type="submit"] + [type="reset"],
-.button-group [type="submit"] + .button, .button-group [type="submit"] + [role="button"], .button-group [type="reset"] + button, .button-group [type="reset"] + [type="button"], .button-group [type="reset"] + [type="submit"], .button-group [type="reset"] + [type="reset"],
-.button-group [type="reset"] + .button, .button-group [type="reset"] + [role="button"],
-.button-group .button + button,
-.button-group .button + [type="button"],
-.button-group .button + [type="submit"],
-.button-group .button + [type="reset"],
-.button-group .button + .button,
-.button-group .button + [role="button"], .button-group [role="button"] + button, .button-group [role="button"] + [type="button"], .button-group [role="button"] + [type="submit"], .button-group [role="button"] + [type="reset"],
-.button-group [role="button"] + .button, .button-group [role="button"] + [role="button"] {
+.button-group * + button, .button-group * + [type="button"], .button-group * + [type="submit"], .button-group * + [type="reset"],
+.button-group * + .button, .button-group * + [role="button"] {
   border-left: 1px solid #a9a2ba;
 }
 
@@ -1026,18 +1016,8 @@ input[type="file"] {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
-  .button-group button + button, .button-group button + [type="button"], .button-group button + [type="submit"], .button-group button + [type="reset"],
-  .button-group button + .button, .button-group button + [role="button"], .button-group [type="button"] + button, .button-group [type="button"] + [type="button"], .button-group [type="button"] + [type="submit"], .button-group [type="button"] + [type="reset"],
-  .button-group [type="button"] + .button, .button-group [type="button"] + [role="button"], .button-group [type="submit"] + button, .button-group [type="submit"] + [type="button"], .button-group [type="submit"] + [type="submit"], .button-group [type="submit"] + [type="reset"],
-  .button-group [type="submit"] + .button, .button-group [type="submit"] + [role="button"], .button-group [type="reset"] + button, .button-group [type="reset"] + [type="button"], .button-group [type="reset"] + [type="submit"], .button-group [type="reset"] + [type="reset"],
-  .button-group [type="reset"] + .button, .button-group [type="reset"] + [role="button"],
-  .button-group .button + button,
-  .button-group .button + [type="button"],
-  .button-group .button + [type="submit"],
-  .button-group .button + [type="reset"],
-  .button-group .button + .button,
-  .button-group .button + [role="button"], .button-group [role="button"] + button, .button-group [role="button"] + [type="button"], .button-group [role="button"] + [type="submit"], .button-group [role="button"] + [type="reset"],
-  .button-group [role="button"] + .button, .button-group [role="button"] + [role="button"] {
+  .button-group * + button, .button-group * + [type="button"], .button-group * + [type="submit"], .button-group * + [type="reset"],
+  .button-group * + .button, .button-group * + [role="button"] {
     border: 0;
     border-top: 1px solid #a9a2ba;
   }

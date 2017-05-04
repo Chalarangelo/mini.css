@@ -12,6 +12,10 @@ $button-group-name:					'button-group' !default;// Class for button groups.
 // of the less specific, yet less complicated and less bloated input selector. This only applies to
 // the pseudo-classes and states of the <input> controls and not the default styling of them.
 $input-high-specificity-selectors:	false !default;	// [Hidden flag] Use legacy selectors for <input> element styling (`true`/`false`).
+// The below option will use the legacy high specificity selectors for <button> and button-like elements
+// instead of the less specific, yet less complicated and less bloated generic selector. This only applies
+// to the styling of consecutive elements.
+$button-group-high-specificity-selectors: false !default; // [Hidden flag] Use legacy selectors for button-like elements inside button groups (`false`/ `true`).
 $hide-file-inputs: 					true !default;					// Should `file` <input> elements be hidden? (`true`/`false`)
 $hide-check-and-radio:			true !default;					// [Hidden flag] Should checkboxes and radios be hidden? (`true`/`false`)
 // External variables' defaults are used only if you import this module on its own, without the rest of the framework.
@@ -327,14 +331,26 @@ a[role="button"], label[role="button"], [role="button"] {
 			@if $button-border-radius != 0 {
 				border-radius: 0;
 			}
-			@if $button-group-border-style != 0 {
-				+ button, + [type="button"], + [type="submit"], + [type="reset"],
-				+ .#{$button-class-name}, + [role="button"] {
-					border-left: $button-group-border-style;
+			@if $button-group-high-specificity-selectors {
+				@if $button-group-border-style != 0 {
+					+ button, + [type="button"], + [type="submit"], + [type="reset"],
+					+ .#{$button-class-name}, + [role="button"] {
+						border-left: $button-group-border-style;
+					}
 				}
 			}
 			@if $button-box-shadow != none {
 				box-shadow: none;
+			}
+		}
+		@if not $button-group-high-specificity-selectors {
+			@if $button-group-border-style != 0 {
+				* {
+					+ button, + [type="button"], + [type="submit"], + [type="reset"],
+					+ .#{$button-class-name}, + [role="button"] {
+						border-left: $button-group-border-style;
+					}
+				}
 			}
 		}
 	}
@@ -346,13 +362,26 @@ a[role="button"], label[role="button"], [role="button"] {
 			// New syntax
 			-webkit-flex-direction: column;
 							flex-direction: column;
-			@if $button-group-border-style !=0 {
-				button, [type="button"], [type="submit"], [type="reset"],
-				.#{$button-class-name}, [role="button"] {
-					+ button, + [type="button"], + [type="submit"], + [type="reset"],
-					+ .#{$button-class-name}, + [role="button"] {
-						border: 0;
-						border-top: $button-group-border-style;
+			@if $button-group-high-specificity-selectors {
+				@if $button-group-border-style !=0 {
+					button, [type="button"], [type="submit"], [type="reset"],
+					.#{$button-class-name}, [role="button"] {
+						+ button, + [type="button"], + [type="submit"], + [type="reset"],
+						+ .#{$button-class-name}, + [role="button"] {
+							border: 0;
+							border-top: $button-group-border-style;
+						}
+					}
+				}
+			}
+			@else {
+				@if $button-group-border-style !=0 {
+					* {
+						+ button, + [type="button"], + [type="submit"], + [type="reset"],
+						+ .#{$button-class-name}, + [role="button"] {
+							border: 0;
+							border-top: $button-group-border-style;
+						}
 					}
 				}
 			}

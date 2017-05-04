@@ -19,8 +19,9 @@
 	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
 	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
 	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
-	.col-sm-12.col-sm-last.col-lg-4.col-lg-normal { box-sizing: border-box; border-right: 1px solid #bdbdbd;}
-	@media (max-width: 767px){.col-sm-12.col-sm-last.col-lg-4.col-lg-normal {border: 0;border-top: 1px solid #bdbdbd;}}
+	.col-sm-12.col-sm-last.col-lg-4.col-md-normal { box-sizing: border-box; border-right: 1px solid #c9c9c9;}
+	@media (max-width: 767px){.col-sm-12.col-sm-last.col-lg-4.col-md-normal {border: 0;border-top: 1px solid #c9c9c9;}}
+	@media (max-width: 1269px) and (min-width: 768px){.col-sm-12.col-sm-last.col-lg-4.col-md-normal {border: 0;border-bottom: 1px solid #c9c9c9;}}
 	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
 	.box-colored {color: #f5f5f5;}
 	.responsive-label {align-items: center;} @media (min-width: 768px) { .responsive-label .col-md-3 {text-align: right;}}
@@ -98,7 +99,7 @@
           <div class="card fluid">
             <div class="section"><h2>Forms &amp; input</h2></div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
+              <div class="col-sm-12 col-sm-last col-lg-4 col-md-normal">
               <form>
               <fieldset>
                 <legend>Inline form (default style)</legend>
@@ -151,7 +152,7 @@
               </fieldset>
               </form>
               </div>
-              <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
+              <div class="col-sm-12 col-sm-first col-lg-8 col-md-normal">
                 <p>Forms are structured the same way you would structure a normal form in HTML5. Simply create a root <code>&lt;form&gt;</code> element and add your <code>&lt;input&gt;</code> elements inside. Link them to <code>&lt;label&gt;</code> elements for ease of acces and you are pretty much set. We highly recommend using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements to annotate your forms as well, but you can skip them if you wish.</p>
                 <p>Forms are inline by default. Use the <code>.input-group</code> class on a <code>&lt;div&gt;</code> wrapping inside it an <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> pair to make sure they always display together in one line. You can make your <code>.input-group</code>s respond to viewport changes, by adding the <code>.fluid</code> class to them. Finally, if you want to create aligned forms with a preset layout, you can utilize the <a href="grid.html"><strong>grid</strong></a> module's rows and columns.</p>
                 <h3>Sample code</h3>
@@ -270,7 +271,7 @@
           <div class="card fluid">
             <div class="section"><h2>Checkboxes &amp; radio buttons</h2></div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
+              <div class="col-sm-12 col-sm-last col-lg-4 col-md-normal">
                 <div class="box-centered">
                   <br>
                   <div class="input-group">
@@ -285,7 +286,7 @@
                   <br><br>
                 </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
+              <div class="col-sm-12 col-sm-first col-lg-8 col-md-normal">
                 <p>Checkboxes and radio buttons come pre-styled, using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, while remaining fully accessible. To create a checkbox or radio button, start using a <code>&lt;div&gt;</code> that implements the <code>.input-group</code> class, and then add an <code>&lt;input&gt;</code> of the proper <code><span class="secondary">type</span></code> inside it (<code><span class="fore-primary">&quot;checkbox&quot;</span></code> or <code><span class="fore-primary">&quot;radio&quot;</span></code>), followed immediately by a <code>&lt;label&gt;</code> linking to it. Remember to add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to your <code>&lt;input&gt;</code>, so that it will register properly for screen readers.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;input-group&quot;&gt;
@@ -358,7 +359,7 @@
           <div class="card fluid">
             <div class="section"><h2>Buttons &amp; button groups</h2></div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
+              <div class="col-sm-12 col-sm-last col-lg-4 col-md-normal">
                 <button>Default button</button>
                 <button class="primary">Primary button</button>
                 <button class="secondary">Secondary button</button>
@@ -370,7 +371,7 @@
                 <h4>Button group</h4>
                 <div class="button-group"> <button>Button</button> <button>Button</button> <button>Button</button> </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
+              <div class="col-sm-12 col-sm-first col-lg-8 col-md-normal">
                 <p>All button types have been stylized by default, while maintaining accessiblity. Simply add any <code>&lt;button&gt;</code> or an <code>&lt;input&gt;</code> with a button <code><span class="secondary">type</span></code> (i.e. <code><span class="fore-primary">&quot;button&quot;</span></code>, <code><span class="fore-primary">&quot;submit&quot;</span></code> or <code><span class="fore-primary">&quot;reset&quot;</span></code>) and they will be styled accordingly. You can also use the <code>.button</code> class or the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> attribute for links, labels and other elements of your choice to make them look like buttons.</p>
                 <p>Color variants are available in the form of the <code>.primary</code>, <code>.secondary</code>, <code>.tertiary</code> and <code>.inverse</code> classes. Size variants are available as well in the form of <code>.small</code> and <code>.large</code> classes.</p>
                 <p>Finally, you can create responsive groups of buttons by wrapping them inside a <code>&lt;div&gt;</code> with the <code>.button-group</code> class.</p>
@@ -439,7 +440,7 @@
           <div class="card fluid">
             <div class="section"><h2>File upload buttons</h2></div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-lg-4 col-lg-normal">
+              <div class="col-sm-12 col-sm-last col-lg-4 col-md-normal">
                 <div class="input-group">
                   <br>
                   <input type="file" id="file-input-demo">
@@ -447,7 +448,7 @@
                   <br>
                 </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-lg-8 col-lg-normal">
+              <div class="col-sm-12 col-sm-first col-lg-8 col-md-normal">
                 <p>File upload buttons are commonly a sore spot in CSS frameworks. We try to remedy this problem by hiding the <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code>, while maintaining accessibility and using a linked <code>&lt;label&gt;</code> of the <code>.button</code> class to display it in a modern way.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;input type=&quot;file&quot; id=&quot;file-input&quot;&gt;

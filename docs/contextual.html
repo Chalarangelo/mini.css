@@ -19,8 +19,10 @@
 	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
 	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
 	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
-	.col-sm-12.col-sm-last.col-md-4.col-md-normal { box-sizing: border-box; border-right: 1px solid #bdbdbd; }
-	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd;}}
+	.col-sm-12.col-sm-last.col-md-4.col-md-normal { box-sizing: border-box; border-right: 1px solid #c9c9c9; }
+	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #c9c9c9;}}
+	.col-sm-12.col-sm-last.col-md-12.col-md-normal { box-sizing: border-box; border-bottom: 1px solid #c9c9c9; }
+	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-12.col-md-normal { border: 0; border-top: 1px solid #c9c9c9;}}
 	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
 	.box-colored {color: #f5f5f5;}
 	</style>
@@ -156,14 +158,14 @@
           <div class="card fluid">
             <div class="section"><h2>Alerts</h2></div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
               <div>
                 <div class="alert" style="margin-top: 8px; margin-bottom: 8px;"><h3>This is an alert</h3><p>Make sure you read this!</p></div>
                 <div class="alert urgent" style="margin-bottom: 8px;"><h3>This is an urgent alert</h3><p>Make absolutely sure you read this!</p></div>
                 <div class="alert critical" style="margin-bottom: 8px;"><h3>This is a critical alert</h3><p>Make certain you read and actually understand this!</p></div>
               </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
                 <p>Alerts replace modal dialogs, along with messages, notifications and traditional alerts with a simpler, easier design paradigm. To create an alert, use a <code>&lt;div&gt;</code> element, which will contain one or more elements (for example a <code>&lt;h3&gt;</code> and a <code>&lt;p&gt;</code>) and add the <code>.alert</code> class to it. For more urgent alerts, use the <code>.urgent</code> class and for critical alerts, use the <code>.critical</code> class.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;alert&quot;&gt;
@@ -207,14 +209,14 @@
           <div class="card fluid">
             <div class="section"><h2>Animated alerts</h2></div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
               <div>
                 <div class="animated alert" style="margin-top: 8px; margin-bottom: 8px;"><h3>This is an alert</h3><p>Make sure you read this!</p></div>
                 <div class="animated alert urgent" style="margin-bottom: 8px;"><h3>This is an urgent alert</h3><p>Make absolutely sure you read this!</p></div>
                 <div class="animated alert critical" style="margin-bottom: 8px;"><h3>This is a critical alert</h3><p>Make certain you read and actually understand this!</p></div>
               </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
                 <p>Alerts can be animated, so that they pop out a little more to make sure your users can see them. To animate an alert box, use the <code>.animated</code> class on an existing <code>.alert</code> and it shall periodically scale up a little bit to make users notice it.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;alert animated&quot;&gt;

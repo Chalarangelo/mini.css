@@ -19,8 +19,10 @@
 	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #b71c1c; }
 	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
 	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
-	.col-sm-12.col-sm-last.col-md-4.col-md-normal { box-sizing: border-box; border-right: 1px solid #bdbdbd; }
-	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd;}}
+	.col-sm-12.col-sm-last.col-md-4.col-md-normal { box-sizing: border-box; border-right: 1px solid #c9c9c9; }
+	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #c9c9c9;}}
+	.col-sm-12.col-sm-last.col-md-12.col-md-normal { box-sizing: border-box; border-bottom: 1px solid #c9c9c9; }
+	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-12.col-md-normal { border: 0; border-top: 1px solid #c9c9c9;}}
 	.box-colored.green { background: #1b5e20; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
 	.box-colored { color: #f5f5f5;}
 	</style>
@@ -249,12 +251,12 @@
           <div class="card fluid">
             <div class="section"><h2>Breadcrumbs</h2></div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
                 <div><br>
                   <ul class="breadcrumbs"> <li><a href="#">Root</a></li> <li><a href="#">Folder</a></li> <li>File</li> </ul><br>
                 </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
                 <p>Breadcrumbs are usually used to show the navigational hierarchy of pages or folders. To use them, simply create a <code>&lt;ul&gt;</code> element that implements the <code>.breadcrumbs</code> class. Inside this unordered list, add as many <code>&lt;li&gt;</code> elements as needed to show your hierarchy. You can add links to the list elements, as necessary.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;ul class=&quot;breadcrumbs&quot;&gt;

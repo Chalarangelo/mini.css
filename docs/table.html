@@ -19,16 +19,16 @@
 	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
 	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
 	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
-	.col-sm-12.col-sm-last.col-md-4.col-md-normal {box-sizing: border-box;border-right: 1px solid #bdbdbd;}
-	@media (max-width: 767px){.col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd;}}
+	.col-sm-12.col-sm-last.col-md-4.col-md-normal {box-sizing: border-box;border-right: 1px solid #c9c9c9;}
+	@media (max-width: 767px){.col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #c9c9c9;}}
 	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
 	.box-colored {color: #f5f5f5; }
 	table#carded { border-collapse: collapse;border: 0;width: 100%; box-shadow: none; }
 	table#carded thead, table#carded th { border: 0;height: 1px;width: 1px; margin: -1px; overflow: hidden; padding: 0;position: absolute;clip: rect(0 0 0 0); -webkit-clip-path: inset(100%); clip-path: inset(100%); }
-	table#carded tr {display: block;border: 1px solid #bdbdbd;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);background: #fafafa;margin-bottom: 10px; }
-	table#carded td {display: block;border: 0; border-bottom: 1px solid #bdbdbd; text-align: right; }
+	table#carded tr {display: block;border: 1px solid #c9c9c9;box-shadow: none;background: #fafafa; margin-bottom: 0.625rem; }
+	table#carded td {display: block;border: 0; border-bottom: 1px solid #c9c9c9; text-align: right; }
 	table#carded td:before { content: attr(data-label); float: left; font-weight: 700; }
-	table#carded td:last-child { border-bottom: 0; } .border-fix > td, .border-fix > th { border-top: 0; }
+	table#carded td:last-child { border-bottom: 0; } .border-fix > td, .border-fix > th { border-top: 0; }.col-sm-12.col-sm-last.col-md-12.col-md-normal {box-sizing: border-box;border-bottom: 1px solid #c9c9c9;} @media (max-width: 767px){.col-sm-12.col-sm-last.col-md-12.col-md-normal {border: 0;border-top: 1px solid #c9c9c9;}}
 	</style>
   </head>
   <body>
@@ -103,7 +103,7 @@
           <div class="card fluid">
             <div class="section"><h2>Basic syntax &amp; responsiveness</h2></div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
               <div>
                 <h4>Medium/Large screen layout</h4><hr>
                 <table class="preset">
@@ -133,7 +133,7 @@
               <br>
             </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
                 <p>Table layout utilizes the <code>&lt;table&gt;</code> HTML element with the following structure (usual tabular structure):</p>
                 <ol>
                   <li>On the outermost level, there is the <code>&lt;table&gt;</code> element.</li>
@@ -232,7 +232,7 @@
               <h2>Horizontal tables</h2>
             </div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
                 <div>
                 <br><table class="horizontal preset">
                 <caption>People</caption>
@@ -248,7 +248,7 @@
               </table><br>
                 </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
                 <p>Horizontal tables can be created, by simply adding the <code>.horizontal</code> class to the root element of your table (i.e. the <code>&lt;table&gt;</code> element). Horizontal tables are flexible, so they can accommodate any amount of data rows and, if there is a lot of data, they will make their overflow scrollable. Remember to add the <code>data-label</code> attribute, as shown in the previous section, to allow your tables to be responsive without any errors. Keep in mind, however, that <code>.horizontal</code> tables do not support the <code>&lt;tfoot&gt;</code> element.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;table class=&quot;horizontal&quot;&gt;
@@ -307,7 +307,7 @@
           <div class="card fluid">
             <div class="section"><h2>Table variants &amp; matrices</h2></div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
               <div><br>
                 <table class="preset">
               <caption>Star Wars Character Alignment Table</caption>
@@ -320,7 +320,7 @@
             </table><br>
               </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
                 <p>Tables are responsive by default, however you can disable this functionality for one or more tables (normal or <code>.horizontal</code>), using the <code>.preset</code> class. This class can also be used for a multitude of things, like dealing with tables not allowing you to have <code>&lt;th&gt;</code> elements inside the <code>&lt;tbody&gt;</code> element, building matrices (i.e. tables with a header column and a header row) etc. Finally, you can make your tables use a different color for every other row, using the <code>.striped</code> class.</p>
                 <h3>Sample code</h3>
                 <p>The sample code is a bit lengthy, so we hid it by default to make it easier for mobile device users to read this page. Click or tap on <strong>Show sample code</strong> below to see the code sample for this example. By the way, we present a sample for a matrix table in he first example, but you can use the same principles and classes to create any table layout you wish.</p><br>

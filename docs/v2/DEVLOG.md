@@ -1086,3 +1086,6 @@
 - Fixed a typo in `core`'s code, nothing was really affected, but it's nice to have it fixed.
 - Optimized certain pieces of code in the `grid` module, including the pre-defined layouts in shared rules, actually saving a little bit of space. Size is now `6.50KB`, a noticeable improvement over the previous size.
 - Dramatically improved `input_control`'s `.button-group` styling, by reworking the way the combinatory selectors (`element + element`) inside it work, based on the fact that we are just styling the last element and we don't care about what the previous one was. This shaved off quite a lot of size, shrinking `mini-default` down to `6.37KB`. **Hugging cat** is especially happy with this.
+- Tried improving `:checked` styling for checkboxes, radios and `.tabs`, but decided it was not worth the lack of specificity due to very little space saved in reality.
+- Updated doc layout for consistency and better display on most screens.
+- Updated custom `border` styling for docs to be consistent in terms of coloring.

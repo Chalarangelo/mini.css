@@ -19,10 +19,10 @@
 	.box-centered { text-align: center; } .box-colored { background: #0277bd; border-radius: 2px; padding: 14px; margin-bottom: 8px; min-height: 14px;} .box-colored.red { background: #e53935; }
 	.box-centered > .card.fluid {-webkit-box-pack: start; -webkit-box-align: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-self: auto; align-self: auto; } [class^='col-'] .card.fluid { margin: 2px 0 20px; }
 	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
-	.col-sm-12.col-sm-last.col-md-4.col-md-normal {box-sizing: border-box;border-right: 1px solid #bdbdbd;}
-	@media (max-width: 767px){.col-sm-12.col-sm-last.col-md-4.col-md-normal { border: 0; border-top: 1px solid #bdbdbd;}}
+	.col-sm-12.col-sm-last.col-lg-4.col-md-normal {box-sizing: border-box;border-right: 1px solid #c9c9c9;}
 	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
-	.box-colored {color: #f5f5f5;}
+	.box-colored {color: #f5f5f5;} @media (max-width: 1279px){.col-sm-12.col-sm-last.col-md-12.col-md-normal {box-sizing: border-box; border: 0; border-bottom: 1px solid #c9c9c9;}}
+		@media (max-width: 767px){.col-sm-12.col-sm-last.col-md-12.col-md-normal {border: 0;border-top: 1px solid #c9c9c9;}}
 	</style>
   </head>
   <body>
@@ -97,7 +97,7 @@
           <div class="card fluid">
             <div class="section"><h2>Basic syntax</h2></div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal col-lg-4">
                 <div class="tabs" style="margin-top: 5px; margin-bottom: 5px;">
                   <input type="radio" name="tabdemo" id="tab1" checked aria-hidden="true">
                   <label for="tab1" aria-hidden="true">Tab 1</label>
@@ -113,7 +113,7 @@
                   <div> <h3>Tab 4</h3> <p>This is the fourth tab's content.</p> </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal col-lg-8">
                 <p>The tab container's basic sytanx is composed of two components, presented below in the order they should be added to the DOM tree:</p>
                 <ul>
                   <li>At the outermost level of the tab container is a <code>&lt;div&gt;</code> element implementing the <code>.tabs</code> class. This serves as the wrapper of the tab container.</li>
@@ -213,7 +213,7 @@
           <div class="card fluid">
             <div class="section"><h2>Stacked tabs</h2></div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal col-lg-4">
                 <div class="tabs stacked" style="margin-top: 5px; margin-bottom: 5px;">
                   <input type="radio" name="accordion" id="a1" checked aria-hidden="true">
                   <label for="a1" aria-hidden="true">Accordion section 1</label>
@@ -231,7 +231,7 @@
                   <div> <p>This is the second collapse section's content.</p> </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal col-lg-8">
                 <p>Apart from the normal tab layout, you can make your tabs stacked instead, using the <code>.stacked</code> class in your <code>.tabs</code> container element. Stacked tabs are more versatile, allowing you to use checkboxes and/or radio buttons to implement collapses, accordions and spoilers. Carousel-styled elements can also be displayed in this fashion, if you wish. Remember to use the <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> attribute to make your tabs fully accessible, as before.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;tabs stacked&quot;&gt;

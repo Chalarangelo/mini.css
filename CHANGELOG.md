@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.1.4
+
+- Updated documentation pages for a better user experience.
+- Removed excessive styling from certain elements and pseudo-class selectors, optimized parts of the code, effectively shrinking the size of the framework.
+
 ## v2.1.3
 
 - Removed some legacy browser support features.

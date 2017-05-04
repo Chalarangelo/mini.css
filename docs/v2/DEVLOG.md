@@ -1090,3 +1090,5 @@
 - Updated doc layout for consistency and better display on most screens.
 - Updated custom `border` styling for docs to be consistent in terms of coloring.
 - Made margins and spacing for most pages more responsive to make things easier to view on mobile.
+- Updated version tag in everything.
+- Updated `CHANGELOG` to reflect the latest changes. Ready to release (tomorrow morning).

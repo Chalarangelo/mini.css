@@ -234,37 +234,10 @@ figcaption {
   flex-flow: row wrap;
 }
 
-.row[class*='cols-sm-'] > * {
-  box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding: 0 4px;
-}
-
-@media screen and (min-width: 768px) {
-  .row[class*='cols-md-'] > * {
-    box-sizing: border-box;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-    flex: 0 0 auto;
-    padding: 0 4px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .row[class*='cols-lg-'] > * {
-    box-sizing: border-box;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-    flex: 0 0 auto;
-    padding: 0 4px;
-  }
-}
-
 .col-sm,
 [class^='col-sm-'],
-[class^='col-sm-offset-'] {
+[class^='col-sm-offset-'],
+.row[class*='cols-sm-'] > * {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
@@ -432,7 +405,7 @@ figcaption {
 @media screen and (min-width: 768px) {
   .col-md,
   [class^='col-md-'],
-  [class^='col-md-offset-'] {
+  [class^='col-md-offset-'], .row[class*='cols-md-'] > * {
     box-sizing: border-box;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
@@ -573,7 +546,8 @@ figcaption {
 @media screen and (min-width: 1280px) {
   .col-lg,
   [class^='col-lg-'],
-  [class^='col-lg-offset-'] {
+  [class^='col-lg-offset-'],
+  .row[class*='cols-lg-'] > * {
     box-sizing: border-box;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;

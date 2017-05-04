@@ -1083,3 +1083,5 @@
 	- Used *external flag* to make sure that `.close`s is stylized only if needed (`utility`).
 - Moved all mixin `@import` statements after each modules variables have been initialized.
 - After working on `:active` redefinition, the size is now `6.53KB` gzipped (previously `6.71KB` gzipped).
+- Fixed a typo in `core`'s code, nothing was really affected, but it's nice to have it fixed.
+- Optimized certain pieces of code in the `grid` module, including the pre-defined layouts in shared rules, actually saving a little bit of space. Size is now `6.50KB`, a noticeable improvement over the previous size.

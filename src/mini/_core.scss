@@ -240,7 +240,7 @@ pre {
 	@if $pre-element-padding != 0 {
 		padding: $pre-element-padding;
 	}
-	@if pre-element-margin != 0 {
+	@if $pre-element-margin != 0 {
 		margin: $pre-element-margin;
 	}
 	@if $add-pre-element-sidebar {

@@ -1089,3 +1089,4 @@
 - Tried improving `:checked` styling for checkboxes, radios and `.tabs`, but decided it was not worth the lack of specificity due to very little space saved in reality.
 - Updated doc layout for consistency and better display on most screens.
 - Updated custom `border` styling for docs to be consistent in terms of coloring.
+- Made margins and spacing for most pages more responsive to make things easier to view on mobile.

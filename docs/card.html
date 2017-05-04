@@ -22,7 +22,7 @@
 	.col-sm-12.col-sm-last.col-md-12.col-md-normal {box-sizing: border-box;border-bottom: 1px solid #c9c9c9;}
 	@media (max-width: 767px){.col-sm-12.col-sm-last.col-md-12.col-md-normal {border: 0;border-top: 1px solid #c9c9c9;}}
 	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
-	.box-colored {color: #f5f5f5;}
+	.box-colored {color: #f5f5f5;} @media (max-width: 767px){.container#co {padding: 0.25rem !important;}.col-sm-12.col-md-8.col-lg-10#col{padding: 0 !important;}}
 	</style>
   </head>
   <body>
@@ -33,7 +33,7 @@
 			<a href="quick_reference.html" class="button">Quick Reference</a>
 			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 		</header>
-		<div class="container" style="padding-left: 0.25rem;">
+		<div class="container" id="co" style="padding-left: 0.25rem;">
 			<div class="row"> <div class="col-sm-12 col-md-4 col-lg-2 hidden-sm" style="padding: 0;"> <nav>
 				<h4 style="text-align: center">Modules</h4> <a href="core.html#core-title">Core</a>
 				<a href="core.html#typography" class="sublink-1">Typography</a> <a href="core.html#headings" class="sublink-1">Headings</a>
@@ -69,7 +69,7 @@
 				<a href="utility.html#responsive-visibility" class="sublink-1">Responsive visibility helpers</a> <a href="utility.html#breadcrumbs" class="sublink-1">Breadcrumbs</a>
 				<a href="utility.html#close-icon" class="sublink-1">Close icon</a> <br/>
 			</nav> </div>
-				<div class="col-sm-12 col-md-8 col-lg-10"><main>
+				<div class="col-sm-12 col-md-8 col-lg-10" id="col"><main>
       <div class="row" style="padding-top: 40px;" id="card-title">
         <div class="col-sm-12">
           <h1>Card</h1>

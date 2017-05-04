@@ -1,8 +1,6 @@
 /*
 	Definitions for contextual background elements and alerts.
 */
-// Check the `_contextual_mixins.scss` file to find this module's mixins.
-@import 'contextual_mixins';
 // Contextual background elements use the mark element as their base.
 $mark-inline-block-name:	'inline-block' !default;	// Class name for <mark> inline block styling.
 $include-alerts:					true !default;						// [Hidden flag] Should alerts be included? (`true`/`false`)
@@ -16,6 +14,9 @@ $tooltip-bottom-name:			'bottom' !default;				// Bottom tooltip class name.
 $back-color:							white !default;						// [External variable - core] Background color for everything.
 $fore-color:							black !default;						// [External variable - core] Foreground color for everything.
 $base-line-height:				1 !default;								// [External variable - core] Line height for everything.
+$style-link-active-state:		false !default;					// [External flag - core] Should the :active state of <a> elements be stylized, same as the :hover state (`true`/`false`).
+// Check the `_contextual_mixins.scss` file to find this module's mixins.
+@import 'contextual_mixins';
 // Default styling for mark. Use mixins for alternate styles.
 mark {
 	@if $mark-back-color != $back-color {
@@ -127,12 +128,24 @@ mark {
 		&.#{$tooltip-bottom-name}:before, &.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
 			top: 75%;
 		}
-		&:hover, &:active, &:focus {
-			&:before, &:after {
-			opacity: 1;
-			clip: auto;
-			-webkit-clip-path: inset(0%);
-							clip-path: inset(0%);
+		@if $style-link-active-state {
+			&:hover, &:focus, &:active {
+				&:before, &:after {
+				opacity: 1;
+				clip: auto;
+				-webkit-clip-path: inset(0%);
+								clip-path: inset(0%);
+				}
+			}
+		}
+		@else {
+			&:hover, &:focus {
+				&:before, &:after {
+				opacity: 1;
+				clip: auto;
+				-webkit-clip-path: inset(0%);
+								clip-path: inset(0%);
+				}
 			}
 		}
 		&:before {	// This is the little tooltip triangle

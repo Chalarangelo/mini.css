@@ -1068,3 +1068,18 @@
 - Some testing and work on how to simplify certain rules has taken place. Honestly, some rules are too high-specificity, maybe a *loose* definitions flag is in store for later releases.
 - Checked page mobile-friendliness and speed, removed the `Noto Sans` link from the `head`, added as rules inside the pages to improve loading speed.
 - Updated the `index.html` of customization to make sure that mobile users have a menu they can use for the section (using a `.button-group`).
+
+## 20170304
+
+- Minor grammatical fix in `navigation` docs.
+- Started working on the removal of useless `:active` styles. Links and anythng affected by them will be styled based on a flag, while anything that is not a link, will be dealt with separately to make sure no excess styles are left (these were quite the problem in terms of size, so dealing with them is a priority). Extensive list of changes:
+  - Added `$style-link-active-state` in `core` as a *hidden flag*, updated code.
+	- Added the *external flag* `$style-link-active-state` to navigation, updated code.
+	- Completely removed the `:active` styling from checkboxes and radio buttons (`input_control`).
+	- Separated the classes that apply to `<a>` elements in `input_control`, moved their `:active` styling behind the *external flag* for active, effectively removing all excess styling from the other elements (this should improve their code a lot).
+	- Updated `input_control_mixins` to separately stylize the `:active` pseudo-class of `<a>` elements affected by the produced classes.
+	- Completely removed the `:active` styling from the `tab` module, as it was applied on `<label>` elements, which was unnecessary.
+	- Used *external flag* to make sure that `.tooltip`s are stylized only if needed (`contextual`).
+	- Used *external flag* to make sure that `.close`s is stylized only if needed (`utility`).
+- Moved all mixin `@import` statements after each modules variables have been initialized.
+- After working on `:active` redefinition, the size is now `6.53KB` gzipped (previously `6.71KB` gzipped).

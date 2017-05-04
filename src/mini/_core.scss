@@ -9,6 +9,7 @@ $horizontal-rule-fancy-style: false !default;				// Should a fancy styling be ap
 $add-pre-element-sidebar: 		false !default;				// Should a fancy sidebar be added to the left side of <pre> (`true`/`false`).
 $apply-link-underline: 				true !default;				// Should an underline be applied to all <a> elements? (`true`/`false`).
 $apply-link-hover-fade: 			true !default;				// Should the :hover and :focus state of <a> elements use fade-out instead of a different color (`true`/`false`).
+$style-link-active-state:			false !default;				// [Hidden flag] Should the :active state of <a> elements be stylized, same as the :hover state (`true`/`false`).
 
 html {
 	font-size: $base-root-font-size;	// Set root's font sizing.
@@ -401,13 +402,27 @@ a{
 		color: $link-visited-fore-color;
 	}
 	@if $apply-link-hover-fade {
-		&:hover, &:focus, &:active {
-			opacity: 0.75;
+		@if $style-link-active-state {
+			&:hover, &:focus, &:active {
+				opacity: 0.75;
+			}
+		}
+		@else {
+			&:hover, &:focus {
+				opacity: 0.75;
+			}
 		}
 	}
 	@else {
-		&:hover, &:focus, &:active {
-			color: $link-hover-fore-color;
+		@if $style-link-active-state {
+			&:hover, &:focus, &:active {
+				color: $link-hover-fore-color;
+			}
+		}
+		@else {
+			&:hover, &:focus {
+				color: $link-hover-fore-color;
+			}
 		}
 	}
 }

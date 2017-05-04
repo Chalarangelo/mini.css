@@ -195,7 +195,7 @@ a:visited {
   color: #01579b;
 }
 
-a:hover, a:focus, a:active {
+a:hover, a:focus {
   opacity: 0.75;
 }
 
@@ -734,13 +734,11 @@ header a[role="button"], header label[role="button"], header [role="button"] {
   margin: 0.125rem 0;
 }
 
-header button:hover, header button:active, header button:focus, header [type="button"]:hover, header [type="button"]:active, header [type="button"]:focus,
+header button:hover, header button:focus, header [type="button"]:hover, header [type="button"]:focus,
 header a.button:hover,
-header a.button:active,
-header a.button:focus, header label.button:hover, header label.button:active, header label.button:focus, header .button:hover, header .button:active, header .button:focus,
+header a.button:focus, header label.button:hover, header label.button:focus, header .button:hover, header .button:focus,
 header a[role="button"]:hover,
-header a[role="button"]:active,
-header a[role="button"]:focus, header label[role="button"]:hover, header label[role="button"]:active, header label[role="button"]:focus, header [role="button"]:hover, header [role="button"]:active, header [role="button"]:focus {
+header a[role="button"]:focus, header label[role="button"]:hover, header label[role="button"]:focus, header [role="button"]:hover, header [role="button"]:focus {
   background: #20292e;
 }
 
@@ -908,13 +906,11 @@ a[role="button"], label[role="button"], [role="button"] {
   cursor: pointer;
 }
 
-button:hover, button:active, button:focus, [type="button"]:hover, [type="button"]:active, [type="button"]:focus, [type="submit"]:hover, [type="submit"]:active, [type="submit"]:focus, [type="reset"]:hover, [type="reset"]:active, [type="reset"]:focus,
+button:hover, button:focus, [type="button"]:hover, [type="button"]:focus, [type="submit"]:hover, [type="submit"]:focus, [type="reset"]:hover, [type="reset"]:focus,
 a.button:hover,
-a.button:active,
-a.button:focus, label.button:hover, label.button:active, label.button:focus, .button:hover, .button:active, .button:focus,
+a.button:focus, label.button:hover, label.button:focus, .button:hover, .button:focus,
 a[role="button"]:hover,
-a[role="button"]:active,
-a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:active, label[role="button"]:focus, [role="button"]:hover, [role="button"]:active, [role="button"]:focus {
+a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:focus, [role="button"]:hover, [role="button"]:focus {
   background: #d0d0d0;
   opacity: 1;
 }
@@ -972,7 +968,7 @@ input[type="file"] {
   margin-left: -20px;
 }
 
-.input-group [type="checkbox"] + label:hover:before, .input-group [type="checkbox"] + label:active:before, .input-group [type="checkbox"] + label:focus:before, .input-group [type="radio"] + label:hover:before, .input-group [type="radio"] + label:active:before, .input-group [type="radio"] + label:focus:before {
+.input-group [type="checkbox"] + label:hover:before, .input-group [type="checkbox"] + label:focus:before, .input-group [type="radio"] + label:hover:before, .input-group [type="radio"] + label:focus:before {
   border-color: #0288d1;
 }
 
@@ -1012,10 +1008,9 @@ button.primary, [type="button"].primary, [type="submit"].primary,
   color: #fafafa;
 }
 
-button.primary:hover, button.primary:active, button.primary:focus, [type="button"].primary:hover, [type="button"].primary:active, [type="button"].primary:focus, [type="submit"].primary:hover, [type="submit"].primary:active, [type="submit"].primary:focus,
+button.primary:hover, button.primary:focus, [type="button"].primary:hover, [type="button"].primary:focus, [type="submit"].primary:hover, [type="submit"].primary:focus,
 [type="reset"].primary:hover,
-[type="reset"].primary:active,
-[type="reset"].primary:focus, .button.primary:hover, .button.primary:active, .button.primary:focus, [role="button"].primary:hover, [role="button"].primary:active, [role="button"].primary:focus {
+[type="reset"].primary:focus, .button.primary:hover, .button.primary:focus, [role="button"].primary:hover, [role="button"].primary:focus {
   background: #0277bd;
 }
 
@@ -1025,10 +1020,9 @@ button.secondary, [type="button"].secondary, [type="submit"].secondary,
   color: #fafafa;
 }
 
-button.secondary:hover, button.secondary:active, button.secondary:focus, [type="button"].secondary:hover, [type="button"].secondary:active, [type="button"].secondary:focus, [type="submit"].secondary:hover, [type="submit"].secondary:active, [type="submit"].secondary:focus,
+button.secondary:hover, button.secondary:focus, [type="button"].secondary:hover, [type="button"].secondary:focus, [type="submit"].secondary:hover, [type="submit"].secondary:focus,
 [type="reset"].secondary:hover,
-[type="reset"].secondary:active,
-[type="reset"].secondary:focus, .button.secondary:hover, .button.secondary:active, .button.secondary:focus, [role="button"].secondary:hover, [role="button"].secondary:active, [role="button"].secondary:focus {
+[type="reset"].secondary:focus, .button.secondary:hover, .button.secondary:focus, [role="button"].secondary:hover, [role="button"].secondary:focus {
   background: #c62828;
 }
 
@@ -1038,10 +1032,9 @@ button.tertiary, [type="button"].tertiary, [type="submit"].tertiary,
   color: #fafafa;
 }
 
-button.tertiary:hover, button.tertiary:active, button.tertiary:focus, [type="button"].tertiary:hover, [type="button"].tertiary:active, [type="button"].tertiary:focus, [type="submit"].tertiary:hover, [type="submit"].tertiary:active, [type="submit"].tertiary:focus,
+button.tertiary:hover, button.tertiary:focus, [type="button"].tertiary:hover, [type="button"].tertiary:focus, [type="submit"].tertiary:hover, [type="submit"].tertiary:focus,
 [type="reset"].tertiary:hover,
-[type="reset"].tertiary:active,
-[type="reset"].tertiary:focus, .button.tertiary:hover, .button.tertiary:active, .button.tertiary:focus, [role="button"].tertiary:hover, [role="button"].tertiary:active, [role="button"].tertiary:focus {
+[type="reset"].tertiary:focus, .button.tertiary:hover, .button.tertiary:focus, [role="button"].tertiary:hover, [role="button"].tertiary:focus {
   background: #5f9133;
 }
 

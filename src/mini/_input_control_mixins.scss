@@ -19,7 +19,12 @@
 		@if $button-alt-fore-color != $button-fore-color {
 			color: $button-alt-fore-color;
 		}
-		&:hover, &:active, &:focus {
+		&:hover, &:focus {
+			background: rgba($button-alt-back-color, $button-alt-hover-back-opacity);
+		}
+	}
+	@if $style-link-active-state {
+		a.#{$button-class-name}.#{$button-alt-name}:active, a[role="button"].#{$button-alt-name}:active {
 			background: rgba($button-alt-back-color, $button-alt-hover-back-opacity);
 		}
 	}

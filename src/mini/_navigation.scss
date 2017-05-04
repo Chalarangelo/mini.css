@@ -19,6 +19,7 @@ $back-color:							white !default;						// [External variable - core] Background
 $fore-color:							black !default;						// [External variable - core] Foreground color for everything.
 // Policy for below external flag is `ALWAYS_TRUE`. This is done due to links being underlined by default and as a safeguard from ugly branding.
 $apply-link-underline:		true !default;						// [External flag - core] Should underlining be applied to <a> elements? (`true`/`false`)
+$style-link-active-state:		false !default;					// [External flag - core] Should the :active state of <a> elements be stylized, same as the :hover state (`true`/`false`).
 $button-class-name:				'button' !default;				// [External variable - input_control] Name of the button-like element styling class.
 $button-box-shadow:0 1px 3px rgba(0,0,0, 0.1) !default;// [External variable - input_control] Value of button's box-shadow.
 $button-border-style: 1px solid transparent !default;	// [External variable - input_control] Value of button's border-style.
@@ -79,8 +80,15 @@ header {
 		@if $header-link-margin != 0 {
 			margin: $header-link-margin;
 		}
-		&:hover, &:active, &:focus {
-			background: $header-link-hover-color;
+		@if $style-link-active-state {
+			&:hover, &:focus, &:active {
+				background: $header-link-hover-color;
+			}
+		}
+		@else {
+			&:hover, &:focus {
+				background: $header-link-hover-color;
+			}
 		}
 		@if $button-box-shadow != none {	// Override for buttons when shadow is enabled.
 			box-shadow: none;

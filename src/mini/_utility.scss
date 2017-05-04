@@ -1,8 +1,6 @@
 /*
 	Definitions for utilities and helper classes.
 */
-// Check the `_utility_mixins.scss` file to find this module's mixins.
-@import 'utility_mixins';
 $hidden-name:						'hidden' !default;					// Class name for hidden elements.
 $visually-hidden-name:	'visually-hidden' !default;	// Class name for visually hidden elements.
 $include-breadcrumbs:		true !default;							// [Hidden flag] Should breadcrumbs be included? (`true`/`false`)
@@ -13,6 +11,9 @@ $close-icon-name:				'close'!default;						// Class name for close icon.
 $include-floats:				false !default;							// Should floats be included? (`true`/`false`)
 $include-clearfix:			false !default;							// Should clearfix be included? (`true`/`false`)
 $include-center-block:	false !default;							// Should center block be included? (`true`/`false`)
+$style-link-active-state:		false !default;					// [External flag - core] Should the :active state of <a> elements be stylized, same as the :hover state (`true`/`false`).
+// Check the `_utility_mixins.scss` file to find this module's mixins.
+@import 'utility_mixins';
 // Hidden elements class. ATTENTION: Uses !important.
 .#{$hidden-name}{
 	display: none !important;
@@ -118,8 +119,15 @@ $include-center-block:	false !default;							// Should center block be included?
 		vertical-align: top;
 		cursor: pointer;
 		transition: background 0.3s;
-		&:hover, &:active, &:focus {
-			background: rgba($close-icon-back-color,1);
+		@if $style-link-active-state {
+			&:hover, &:focus, &:active {
+				background: rgba($close-icon-back-color,1);
+			}
+		}
+		@else {
+			&:hover, &:focus {
+				background: rgba($close-icon-back-color,1);
+			}
 		}
 		&:before, &:after {
 			display: inline-block;

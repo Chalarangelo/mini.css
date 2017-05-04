@@ -62,7 +62,7 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 			}
 		}
 		// Hover styling for tabs' labels
-		&:hover, &:active, &:focus {
+		&:hover, &:focus {
 			background: rgba($tab-label-back-color, $tab-label-hover-opacity);
 		}
 	}
@@ -115,7 +115,7 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 	& > [type="radio"]:checked + label, &.#{$tab-stacked-name} > [type="checkbox"]:checked + label {
 		@if $tab-label-selected-back-color != $tab-label-back-color {
 			background: $tab-label-selected-back-color;
-			&:hover, &:active, &:focus {
+			&:hover, &:focus {
 				background: rgba($tab-label-selected-back-color, $tab-label-hover-opacity);
 			}
 		}

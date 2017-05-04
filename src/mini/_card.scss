@@ -1,8 +1,6 @@
 /*
 	Definitions for cards and containers.
 */
-// Check the `_card_mixins.scss` file to find this module's mixins.
-@import 'card_mixins';
 // Dependency: This module depends heavily on the grid system module.
 $card-name:								'card' !default;					// Class name for the cards
 $card-section-name:				'section' !default;				// Class name for the cards' sections
@@ -11,6 +9,8 @@ $card-normal-width:				320px !default;						// Width for normal cards
 // External variables' defaults are used only if you import this module on its own, without the rest of the framework.
 $back-color:							white !default;						// [External variable - core] Background color for everything.
 $fore-color:							black !default;						// [External variable - core] Foreground color for everything.
+// Check the `_card_mixins.scss` file to find this module's mixins.
+@import 'card_mixins';
 // Card styling
 .#{$card-name} {
 	// Old syntax

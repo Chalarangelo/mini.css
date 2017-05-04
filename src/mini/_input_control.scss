@@ -1,8 +1,6 @@
 /*
 	Definitions for forms and input elements.
 */
-// Check the `_input_control_mixins.scss` file to find this module's mixins.
-@import 'input_control_mixins';
 // Different elements are styled based on the same set of rules.
 $input-group-name:		'input-group' !default;				// Class name for input groups.
 $include-fluid-input-group:	true !default;					// Should fluid input groups be included? (`true`/`false`)
@@ -21,6 +19,9 @@ $back-color:							white !default;						// [External variable - core] Background
 $fore-color:							black !default;						// [External variable - core] Foreground color for everything.
 // Policy for below external flag is `ALWAYS_TRUE`. This is done due to links being underlined by default.
 $apply-link-underline:		true !default;						// [External flag - core] Should underlining be applied to <a> elements? (`true`/`false`)
+$style-link-active-state:			false !default;				// [External flag - core] Should the :active state of <a> elements be stylized, same as the :hover state (`true`/`false`).
+// Check the `_input_control_mixins.scss` file to find this module's mixins.
+@import 'input_control_mixins';
 // Base form styling.
 form {
 	@if $form-back-color != $back-color {
@@ -254,7 +255,7 @@ a[role="button"], label[role="button"], [role="button"] {
 	}
 	transition: background 0.3s;
 	cursor: pointer;
-	&:hover, &:active, &:focus {
+	&:hover, &:focus {
 		background: rgba($button-back-color, $button-hover-back-opacity);
 		@if $apply-link-hover-fade {	// Override for links if hover-fade is enabled.
 			opacity: 1;
@@ -263,6 +264,14 @@ a[role="button"], label[role="button"], [role="button"] {
 	&:disabled, &[disabled] {
 		cursor: not-allowed;
 		opacity: $button-disabled-opacity;
+	}
+}
+@if $style-link-active-state {
+	a.#{$button-class-name}:active, a[role="button"]:active {
+		background: rgba($button-back-color, $button-hover-back-opacity);
+		@if $apply-link-hover-fade {	// Override for links if hover-fade is enabled.
+			opacity: 1;
+		}
 	}
 }
 // Styling for file inputs
@@ -389,8 +398,8 @@ a[role="button"], label[role="button"], [role="button"] {
 			color: $checkbox-fore-color;
 			margin-left: -($checkbox-size + ($checkbox-size * 0.25));
 		}
-		// Hover, focus, active styling.
-		&:hover, &:active, &:focus {
+		// Hover, focus styling.
+		&:hover, &:focus {
 			&:before {
 				border-color: $checkbox-focus-border-color;
 			}

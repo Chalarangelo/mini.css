@@ -203,7 +203,7 @@ a:visited {
   color: #434e7f;
 }
 
-a:hover, a:focus, a:active {
+a:hover, a:focus {
   opacity: 0.75;
 }
 
@@ -746,13 +746,11 @@ header a[role="button"], header label[role="button"], header [role="button"] {
   border: 0;
 }
 
-header button:hover, header button:active, header button:focus, header [type="button"]:hover, header [type="button"]:active, header [type="button"]:focus,
+header button:hover, header button:focus, header [type="button"]:hover, header [type="button"]:focus,
 header a.button:hover,
-header a.button:active,
-header a.button:focus, header label.button:hover, header label.button:active, header label.button:focus, header .button:hover, header .button:active, header .button:focus,
+header a.button:focus, header label.button:hover, header label.button:focus, header .button:hover, header .button:focus,
 header a[role="button"]:hover,
-header a[role="button"]:active,
-header a[role="button"]:focus, header label[role="button"]:hover, header label[role="button"]:active, header label[role="button"]:focus, header [role="button"]:hover, header [role="button"]:active, header [role="button"]:focus {
+header a[role="button"]:focus, header label[role="button"]:hover, header label[role="button"]:focus, header [role="button"]:hover, header [role="button"]:focus {
   background: #493e4b;
 }
 
@@ -979,13 +977,11 @@ a[role="button"], label[role="button"], [role="button"] {
   cursor: pointer;
 }
 
-button:hover, button:active, button:focus, [type="button"]:hover, [type="button"]:active, [type="button"]:focus, [type="submit"]:hover, [type="submit"]:active, [type="submit"]:focus, [type="reset"]:hover, [type="reset"]:active, [type="reset"]:focus,
+button:hover, button:focus, [type="button"]:hover, [type="button"]:focus, [type="submit"]:hover, [type="submit"]:focus, [type="reset"]:hover, [type="reset"]:focus,
 a.button:hover,
-a.button:active,
-a.button:focus, label.button:hover, label.button:active, label.button:focus, .button:hover, .button:active, .button:focus,
+a.button:focus, label.button:hover, label.button:focus, .button:hover, .button:focus,
 a[role="button"]:hover,
-a[role="button"]:active,
-a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:active, label[role="button"]:focus, [role="button"]:hover, [role="button"]:active, [role="button"]:focus {
+a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:focus, [role="button"]:hover, [role="button"]:focus {
   background: rgba(211, 202, 232, 0.75);
   opacity: 1;
 }
@@ -1104,7 +1100,7 @@ input[type="file"] {
   margin-left: -20px;
 }
 
-.input-group [type="checkbox"] + label:hover:before, .input-group [type="checkbox"] + label:active:before, .input-group [type="checkbox"] + label:focus:before, .input-group [type="radio"] + label:hover:before, .input-group [type="radio"] + label:active:before, .input-group [type="radio"] + label:focus:before {
+.input-group [type="checkbox"] + label:hover:before, .input-group [type="checkbox"] + label:focus:before, .input-group [type="radio"] + label:hover:before, .input-group [type="radio"] + label:focus:before {
   border-color: #6979c6;
 }
 
@@ -1144,10 +1140,9 @@ button.primary, [type="button"].primary, [type="submit"].primary,
   color: #fffddc;
 }
 
-button.primary:hover, button.primary:active, button.primary:focus, [type="button"].primary:hover, [type="button"].primary:active, [type="button"].primary:focus, [type="submit"].primary:hover, [type="submit"].primary:active, [type="submit"].primary:focus,
+button.primary:hover, button.primary:focus, [type="button"].primary:hover, [type="button"].primary:focus, [type="submit"].primary:hover, [type="submit"].primary:focus,
 [type="reset"].primary:hover,
-[type="reset"].primary:active,
-[type="reset"].primary:focus, .button.primary:hover, .button.primary:active, .button.primary:focus, [role="button"].primary:hover, [role="button"].primary:active, [role="button"].primary:focus {
+[type="reset"].primary:focus, .button.primary:hover, .button.primary:focus, [role="button"].primary:hover, [role="button"].primary:focus {
   background: rgba(105, 121, 198, 0.75);
 }
 
@@ -1157,10 +1152,9 @@ button.secondary, [type="button"].secondary, [type="submit"].secondary,
   color: #fffddc;
 }
 
-button.secondary:hover, button.secondary:active, button.secondary:focus, [type="button"].secondary:hover, [type="button"].secondary:active, [type="button"].secondary:focus, [type="submit"].secondary:hover, [type="submit"].secondary:active, [type="submit"].secondary:focus,
+button.secondary:hover, button.secondary:focus, [type="button"].secondary:hover, [type="button"].secondary:focus, [type="submit"].secondary:hover, [type="submit"].secondary:focus,
 [type="reset"].secondary:hover,
-[type="reset"].secondary:active,
-[type="reset"].secondary:focus, .button.secondary:hover, .button.secondary:active, .button.secondary:focus, [role="button"].secondary:hover, [role="button"].secondary:active, [role="button"].secondary:focus {
+[type="reset"].secondary:focus, .button.secondary:hover, .button.secondary:focus, [role="button"].secondary:hover, [role="button"].secondary:focus {
   background: rgba(210, 64, 95, 0.75);
 }
 
@@ -1170,10 +1164,9 @@ button.tertiary, [type="button"].tertiary, [type="submit"].tertiary,
   color: #fffddc;
 }
 
-button.tertiary:hover, button.tertiary:active, button.tertiary:focus, [type="button"].tertiary:hover, [type="button"].tertiary:active, [type="button"].tertiary:focus, [type="submit"].tertiary:hover, [type="submit"].tertiary:active, [type="submit"].tertiary:focus,
+button.tertiary:hover, button.tertiary:focus, [type="button"].tertiary:hover, [type="button"].tertiary:focus, [type="submit"].tertiary:hover, [type="submit"].tertiary:focus,
 [type="reset"].tertiary:hover,
-[type="reset"].tertiary:active,
-[type="reset"].tertiary:focus, .button.tertiary:hover, .button.tertiary:active, .button.tertiary:focus, [role="button"].tertiary:hover, [role="button"].tertiary:active, [role="button"].tertiary:focus {
+[type="reset"].tertiary:focus, .button.tertiary:hover, .button.tertiary:focus, [role="button"].tertiary:hover, [role="button"].tertiary:focus {
   background: rgba(43, 134, 109, 0.75);
 }
 
@@ -1183,10 +1176,9 @@ button.inverse, [type="button"].inverse, [type="submit"].inverse,
   color: #fffddc;
 }
 
-button.inverse:hover, button.inverse:active, button.inverse:focus, [type="button"].inverse:hover, [type="button"].inverse:active, [type="button"].inverse:focus, [type="submit"].inverse:hover, [type="submit"].inverse:active, [type="submit"].inverse:focus,
+button.inverse:hover, button.inverse:focus, [type="button"].inverse:hover, [type="button"].inverse:focus, [type="submit"].inverse:hover, [type="submit"].inverse:focus,
 [type="reset"].inverse:hover,
-[type="reset"].inverse:active,
-[type="reset"].inverse:focus, .button.inverse:hover, .button.inverse:active, .button.inverse:focus, [role="button"].inverse:hover, [role="button"].inverse:active, [role="button"].inverse:focus {
+[type="reset"].inverse:focus, .button.inverse:hover, .button.inverse:focus, [role="button"].inverse:hover, [role="button"].inverse:focus {
   background: rgba(51, 30, 54, 0.75);
 }
 
@@ -1441,7 +1433,7 @@ table.striped tr:nth-of-type(2n) > td {
   border-top-right-radius: 2px;
 }
 
-.tabs > label:hover, .tabs > label:active, .tabs > label:focus {
+.tabs > label:hover, .tabs > label:focus {
   background: rgba(211, 202, 232, 0.8);
 }
 
@@ -1484,7 +1476,7 @@ table.striped tr:nth-of-type(2n) > td {
   background: #e8deff;
 }
 
-.tabs > [type="radio"]:checked + label:hover, .tabs > [type="radio"]:checked + label:active, .tabs > [type="radio"]:checked + label:focus, .tabs.stacked > [type="checkbox"]:checked + label:hover, .tabs.stacked > [type="checkbox"]:checked + label:active, .tabs.stacked > [type="checkbox"]:checked + label:focus {
+.tabs > [type="radio"]:checked + label:hover, .tabs > [type="radio"]:checked + label:focus, .tabs.stacked > [type="checkbox"]:checked + label:hover, .tabs.stacked > [type="checkbox"]:checked + label:focus {
   background: rgba(232, 222, 255, 0.8);
 }
 
@@ -1645,7 +1637,7 @@ mark.inline-block {
   top: 75%;
 }
 
-.tooltip:hover:before, .tooltip:hover:after, .tooltip:active:before, .tooltip:active:after, .tooltip:focus:before, .tooltip:focus:after {
+.tooltip:hover:before, .tooltip:hover:after, .tooltip:focus:before, .tooltip:focus:after {
   opacity: 1;
   clip: auto;
   -webkit-clip-path: inset(0%);
@@ -1969,7 +1961,7 @@ ul.breadcrumbs li:last-child:after {
   transition: background 0.3s;
 }
 
-.close:hover, .close:active, .close:focus {
+.close:hover, .close:focus {
   background: #e8deff;
 }
 

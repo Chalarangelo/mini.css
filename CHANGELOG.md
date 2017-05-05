@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.5
+
+- Proper re-release of `v2.1.4`.
+
 ## v2.1.4
 
 - Updated documentation pages for a better user experience.

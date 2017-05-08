@@ -490,17 +490,9 @@ $border-radial-style1-name:		'rounded';						// Class name for radial border sty
 $border-radial-style1-radius:	2px;									// Border radius for radial border style 1
 $border-radial-style2-name:		'circular';						// Class name for radial border style 2
 $border-radial-style2-radius:	50%;									// Border radius for radial border style 2
-$box-shadow-style1-name:			'shadow-none';				// Class name for generic box-shadow style 1
-$box-shadow-style1-value:			none;									// Box shadow value for generic box-shadow style 1
-$box-shadow-style2-name:			'shadow-small';				// Class name for generic box-shadow style 2
-$box-shadow-style2-value:														// Box shadow value for generic box-shadow style 2
-	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
-$box-shadow-style3-name:			'shadow-medium';			// Class name for generic box-shadow style 3
-$box-shadow-style3-value:														// Box shadow value for generic box-shadow style 3
-	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
-$box-shadow-style4-name:			'shadow-large';				// Class name for generic box-shadow style 4
-$box-shadow-style4-value:														// Box shadow value for generic box-shadow style 4
-	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
+$box-shadow-style1-name:			'shadowed';				// Class name for generic box-shadow style 1
+$box-shadow-style1-value:														// Box shadow value for generic box-shadow style 1
+	0 4px 4px 0 rgba(0, 0, 0, 0.125),  0 2px 2px -1px rgba(0, 0, 0, 0.25);
 $responsive-margin-name:			'responsive-margin';	// Class name for responsive margin
 $responsive-margin-small-value:		0.25rem;					// Margin value for responsive margin on small screens
 $responsive-margin-medium-value:	0.375rem;					// Margin value for responsive margin on medium screens
@@ -600,8 +592,5 @@ $include-center-block-name:		false;								// Should center block be included? (
 @include make-padding-responsive ($responsive-padding-name, $responsive-padding-small-value,
 	$responsive-padding-medium-value, $responsive-padding-large-value);
 @include make-box-shadow-generic ($box-shadow-style1-name, $box-shadow-style1-value);
-@include make-box-shadow-generic ($box-shadow-style2-name, $box-shadow-style2-value);
-@include make-box-shadow-generic ($box-shadow-style3-name, $box-shadow-style3-value);
-@include make-box-shadow-generic ($box-shadow-style4-name, $box-shadow-style4-value);
 @include make-hidden-responsive ($responsive-hidden-prefix);
 @include make-visually-hidden-responsive ($responsive-visually-hidden-prefix);

@@ -1106,3 +1106,4 @@
 
 - Embedded the intro that Per Harald Borgen built for the framework in the front page (`index.html`) under the `Quick overview` heading (I think it fits quite nicely).
 - Added Per Harald Borgen to the list of contributors to show my gratitude.
+- Removed old classes produced using the generic shadow mixin in `utility`, replaced with `.shadowed` to let developers still have some generic shadow class. Updated docs as needed, codepens will be updated right before release.

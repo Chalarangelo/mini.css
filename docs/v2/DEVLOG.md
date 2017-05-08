@@ -1104,5 +1104,5 @@
 
 ## 20170508
 
-- Embedded the intro that Pen Harald Borgen built for the framework in the front page (`index.html`) under the `Quick overview` heading (I think it fits quite nicely).
-- Added Pen Harald Borgen to the list of contributors to show my gratitude.
+- Embedded the intro that Per Harald Borgen built for the framework in the front page (`index.html`) under the `Quick overview` heading (I think it fits quite nicely).
+- Added Per Harald Borgen to the list of contributors to show my gratitude.

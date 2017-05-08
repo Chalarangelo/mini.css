@@ -1099,3 +1099,10 @@
 
 - After some quick tests, `@media print` styling will not be developed for now and might actually not be developed at all, as no requests have been made for it. I might add print styling to the requested modules list, so that someone else can implement it in the future.
 - Last release failed, re-released as 2.1.5!
+
+# v2.2.0 Development Log
+
+## 20170508
+
+- Embedded the intro that Pen Harald Borgen built for the framework in the front page (`index.html`) under the `Quick overview` heading (I think it fits quite nicely).
+- Added Pen Harald Borgen to the list of contributors to show my gratitude.

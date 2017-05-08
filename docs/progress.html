@@ -139,15 +139,13 @@
               <div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
                 <p>Secondary process is 60% complete!</p> <progress class="secondary" value="600" max="1000"></progress>
                 <p>Tertiary process is 30% complete!</p> <progress class="tertiary" value="300" max="1000"></progress>
-                <p>Nano progress bar is 75% filled!</p> <progress class="nano" value="750" max="1000"></progress>
                 <p>Inline progress bar:<progress class="inline" value="150" max="1000"></progress></p>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>Apart from the default style for the <code>&lt;progress&gt;</code> element, we have also included a couple of variants for it. First off, you can change the color of your progress bars, based on the context, using the <code>.secondary</code> or <code>.tertiary</code> class. You can also make a <code>&lt;progress&gt;</code> element tiny, using the <code>.nano</code> class. Finally, you can create inline progress bars, using the <code>.inline</code> class.</p>
+                <p>Apart from the default style for the <code>&lt;progress&gt;</code> element, we have also included a couple of variants for it. As with many other elements, you can change the color of your progress bars, based on the context, using the <code>.secondary</code> or <code>.tertiary</code> class. You can also make a <code>&lt;progress&gt;</code> element display inline, using the <code>.inline</code> class.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;progress class=&quot;secondary&quot; value=&quot;600&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
 &lt;progress class=&quot;tertiary&quot; value=&quot;300&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
-&lt;progress class=&quot;nano&quot; value=&quot;750&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
 &lt;progress class=&quot;inline&quot; value=&quot;150&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;</pre>
               </div>
             </div>
@@ -158,15 +156,13 @@
               </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
-                  <pre>&lt;progress class=&quot;nano secondary&quot; value=&quot;800&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
+                  <pre>&lt;progress class=&quot;inline secondary&quot; value=&quot;800&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
 <span class="fore-tertiary">&lt;!-- or --&gt;</span>
 &lt;progress class=&quot;inline tertiary&quot; value=&quot;650&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can mix size and color classes for <code>&lt;progress&gt;</code> elements as needed.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
-                  <pre>&lt;progress class=&quot;secondary teriary&quot; value=&quot;450&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
-<span class="fore-secondary">&lt;!-- or --&gt;</span>
-&lt;progress class=&quot;inline nano&quot; value=&quot;300&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;</pre>
+                  <pre>&lt;progress class=&quot;secondary teriary&quot; value=&quot;450&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;</pre>
                   <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid mixing two classes of the same type (i.e. two color classes or two size classes).</p>
                 </div>
               </div>

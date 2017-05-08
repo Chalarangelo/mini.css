@@ -1894,32 +1894,6 @@ progress.tertiary::-moz-progress-bar {
   background: #689f38;
 }
 
-progress.nano {
-  height: 0.125rem;
-  width: calc(100% - 0);
-  margin: 0 0;
-  margin: 0 auto;
-  border-radius: 0;
-}
-
-progress.nano::-webkit-progress-value {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-progress.nano::-moz-progress-bar {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-progress.nano[value="1000"]::-webkit-progress-value {
-  border-radius: 0;
-}
-
-progress.nano[value="1000"]::-moz-progress-bar {
-  border-radius: 0;
-}
-
 .spinner-donut.secondary {
   border: 0.25rem solid #ffebee;
   border-left: 0.25rem solid #c62828;

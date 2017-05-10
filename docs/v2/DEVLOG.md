@@ -1120,3 +1120,4 @@
 - Forked old codepens that used `.nano` and `.shadow-...` classes, updated links in `quick_reference` for all of them now.
 - Updated both `mini-default` and `mini-dark` to use the latest classes built in the `card` module with proper colors.
 - Deprecated `.alert` and all that comes with it, updated flavors to reflect this. I will update all docs after commiting, just to be on the safe side. By the way, `mini-default` is now `6.12KB` without the deprecated components and with a few of the additions already built-in. Pretty happy with how it's coming along right now!
+- Updated docs just barely to make sure that the new `.toast` component will easily find a suitable home in them.

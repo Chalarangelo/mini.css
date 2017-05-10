@@ -3,7 +3,7 @@
 	Flavor name: Nord (mini-nord)
 	Author: tphecca (https://github.com/tphecca)
 	Maintainers: tphecca
-	mini.css version: v2.1.5 (Fermion)
+	mini.css version: v2.2.0
 */
 /*
 	Browsers resets and base typography.
@@ -2031,12 +2031,12 @@ ul.breadcrumbs li:last-child:after {
 
 .close {
   display: inline-block;
-  width: 0.75em;
-  height: 0.75em;
-  position: relative;
-  border-radius: 1em;
+  width: 32px;
+  font-family: sans-serif;
   font-size: 32px;
-  text-overflow: clip;
+  line-height: 1;
+  font-weight: 700;
+  border-radius: 2rem;
   background: rgba(236, 239, 244, 0);
   vertical-align: top;
   cursor: pointer;
@@ -2047,26 +2047,10 @@ ul.breadcrumbs li:last-child:after {
   background: #eceff4;
 }
 
-.close:before, .close:after {
-  display: inline-block;
-  width: 0.45em;
-  height: 0.1em;
-  position: absolute;
-  content: "";
-  top: 0.33em;
-  left: 0.155em;
-  text-overflow: clip;
-  background: #2E3440;
-}
-
 .close:before {
-  -webkit-transform: rotateZ(45deg);
-  transform: rotateZ(45deg);
-}
-
-.close:after {
-  -webkit-transform: rotateZ(-45deg);
-  transform: rotateZ(-45deg);
+  content: "\00D7";
+  display: block;
+  text-align: center;
 }
 
 /*

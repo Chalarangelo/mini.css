@@ -1109,3 +1109,8 @@
 - Removed old classes produced using the generic shadow mixin in `utility`, replaced with `.shadowed` to let developers still have some generic shadow class. Updated docs as needed, codepens will be updated right before release.
 - Updated the definitions of the responsive visibility helpers to utilize `!important` properly. Size is now `6.34KB` which seems pretty good, based on the fact that some of the existing components that are being removed were unused by most devs to begin with.
 - Removed the `.nano` progress bar, as it served no real purpose. **Hugging cat** misses it already, but it had to go, don't judge. Size should be smaller but the tool I use (Refresh-SF) has crashed and I can't really check the gzipped size right now.
+
+## 20170510
+
+- Tonight's the night: Lots of updates and changes will be taking place (hopefully), as the next release needs to be fast-forwarded for a lot of reasons. Let the building begin.
+- Updated the `.close` icon with the new styling, making it less complicated, using a Unicode character instead of custom pseudo-elements, size is now `6.24KB`.

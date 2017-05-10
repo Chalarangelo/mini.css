@@ -5,7 +5,7 @@
 	Flavor name: Default (mini-default)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
 	Maintainers: Angelos Chalaris
-	mini.css version: v2.1.5 (Fermion)
+	mini.css version: v2.2.0
 */
 //	Basic rules for body and typography
 $fore-color:						#212121;									// Text and general foreground color
@@ -476,7 +476,7 @@ $breadcrumbs-border-style:		0;										// Border style for breadcrumbs
 $breadcrumbs-border-radius:		0;										// Border radius for breadcrumbs
 $breadcrumbs-box-shadow:			none;									// Box shadow for breadcrumbs
 $close-icon-name:							'close';							// Class name for close icon
-$close-icon-size:							2rem;									// Size of the close icon
+$close-icon-size:							1.5rem;									// Size of the close icon
 $close-icon-back-color:				#e0e0e0;							// Background color for the close icon
 $close-icon-fore-color:				#212121;							// Foreground color for the close icon
 $border-generic-name:					'bordered';						// Class name for generic border style

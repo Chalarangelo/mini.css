@@ -3,7 +3,7 @@
 	Flavor name: Sucroa (mini-sucroa)
 	Author: Angeliki Daskalakis
 	Maintainers: Angeliki Daskalakis, Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v2.1.5 (Fermion)
+	mini.css version: v2.2.0
 */
 @import url("https://fonts.googleapis.com/css?family=Cousine:400,400i,700|Libre+Baskerville:400,400i,700&subset=latin-ext");
 /*
@@ -1903,12 +1903,12 @@ ul.breadcrumbs li:last-child:after {
 
 .close {
   display: inline-block;
-  width: 0.75em;
-  height: 0.75em;
-  position: relative;
-  border-radius: 1em;
+  width: 32px;
+  font-family: sans-serif;
   font-size: 32px;
-  text-overflow: clip;
+  line-height: 1;
+  font-weight: 700;
+  border-radius: 2rem;
   background: rgba(232, 222, 255, 0);
   vertical-align: top;
   cursor: pointer;
@@ -1919,26 +1919,10 @@ ul.breadcrumbs li:last-child:after {
   background: #e8deff;
 }
 
-.close:before, .close:after {
-  display: inline-block;
-  width: 0.45em;
-  height: 0.1em;
-  position: absolute;
-  content: "";
-  top: 0.33em;
-  left: 0.155em;
-  text-overflow: clip;
-  background: #211423;
-}
-
 .close:before {
-  -webkit-transform: rotateZ(45deg);
-  transform: rotateZ(45deg);
-}
-
-.close:after {
-  -webkit-transform: rotateZ(-45deg);
-  transform: rotateZ(-45deg);
+  content: "\00D7";
+  display: block;
+  text-align: center;
 }
 
 /*

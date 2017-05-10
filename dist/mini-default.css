@@ -1647,53 +1647,6 @@ mark.inline-block {
   display: inline-block;
 }
 
-@-webkit-keyframes alert-anim {
-  45% {
-    -webkit-transform: scale(1);
-    -webkit-transform-origin: 50% 50%;
-  }
-  50% {
-    -webkit-transform: scale(1.005);
-    -webkit-transform-origin: 50% 50%;
-  }
-  55% {
-    -webkit-transform: scale(1);
-    -webkit-transform-origin: 50% 50%;
-  }
-}
-
-@keyframes alert-anim {
-  45% {
-    transform: scale(1);
-    transform-origin: 50% 50%;
-  }
-  50% {
-    transform: scale(1.005);
-    transform-origin: 50% 50%;
-  }
-  55% {
-    transform: scale(1);
-    transform-origin: 50% 50%;
-  }
-}
-
-.alert {
-  display: block;
-  background: #d1e6f3;
-  border: 1px solid #d0d0d0;
-  margin: 0.5rem;
-  padding: 0.75rem;
-}
-
-.alert.animated {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation: alert-anim 6s linear infinite;
-  animation: alert-anim 6s linear infinite;
-}
-
 .tooltip {
   position: relative;
   display: inline-block;
@@ -1783,23 +1736,6 @@ mark.inline-block {
   font-size: 1em;
   line-height: 1.375em;
   padding: 0.375em;
-}
-
-.alert.urgent {
-  background: #ffca28;
-}
-
-.alert.critical {
-  background: #b71c1c;
-  color: #fafafa;
-}
-
-.alert.urgent {
-  border: 1px solid #e8b825;
-}
-
-.alert.critical {
-  border: 1px solid #a71a1a;
 }
 
 /*

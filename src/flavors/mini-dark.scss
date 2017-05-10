@@ -404,28 +404,7 @@ $mark-style2-border-radius:	2px;										// Border radius for <mark> style 2
 $mark-style2-padding:				0.375em;								// Padding for <mark> style 2
 $mark-style2-font-size:			1em;										// Font size for <mark> style 2
 $mark-style2-line-height:		1.375em;								// Line height for <mark> style 2
-$alert-name:								'alert';								// Class name for alerts
-$alert-back-color:					#a7ffeb;								// Background color for alerts
-$alert-fore-color:					#212121;								// Text color for alerts
-$alert-border-style:				1px solid #d0d0d0;			// Border style for alerts
-$alert-border-radius:				0;											// Border radius for alerts
-$alert-padding:							0.75rem;								// Padding for alerts
-$alert-margin:							0.5rem;									// Margin for alerts
-$alert-box-shadow:					none;										// Box shadow for alerts
-$alert-include-animated:		true;										// Should animated alerts be included? (`true`/`false`) [1]
-$alert-animated-class:			'animated';							// Class name for animated alerts
-$alert-variant1-name:				'urgent';								// Class name for alert variant 1
-$alert-variant1-back-color:	 #fff176;								// Background color for alert variant 1
-$alert-variant2-name:				'critical';							// Class name for alert variant 2
-$alert-variant2-back-color:	#b71c1c;								// Background color for alert variant 2
-$alert-variant2-fore-color:	$fore-color;						// Text color for alert variant 2
-$alert-style1-name:					'urgent';								// Class name for alert style 1
-$alert-style1-border-style:	1px solid #d1c661;			// Border style for alert style 1
-$alert-style1-border-radius:	$alert-border-radius;	// Border radius for alert style 1
-$alert-style2-name:					'critical';							// Class name for alert style 2
-$alert-style2-border-style:	1px solid #a71a1a;			// Border style for alert style 2
-$alert-style2-border-radius:	$alert-border-radius;	// Border radius for alert style 2
-$include-tooltip:						true;										// Should tooltips be included? (`true`/`false`) [2]
+$include-tooltip:						true;										// Should tooltips be included? (`true`/`false`) [1]
 $tooltip-name:							'tooltip';							// Class name for the tooltip component
 $tooltip-back-color:				$fore-color;						// Background color for tooltips
 $tooltip-fore-color:				#0c0c0c;								// Text color for tooltips
@@ -435,9 +414,7 @@ $tooltip-padding:						0.5rem;									// Padding for tooltips
 $tooltip-box-shadow:				none;										// Box shadow for tooltip-box-shadow
 $tooltip-bottom-name:				'bottom';								// Class name for bottom tooltip
 // 	Notes:
-// [1] - If the value of $alert-include-animated is `true`, an animation will be created and the value of $alert-animated-class
-//	will be used to determine the class that will be used for animated alerts.
-// [2] - If the value of $include-tooltip is `true`, a tooltip component will be creatd based on the values of the variables
+// [1] - If the value of $include-tooltip is `true`, a tooltip component will be creatd based on the values of the variables
 //	for the tooltip, as explained in their descriptions. Tooltip mixins will only work properly if the tooltip component is
 //	included.
 //	Variables for progress elements and spinners
@@ -562,10 +539,6 @@ $include-center-block-name:		false;								// Should center block be included? (
 	$mark-style1-border-radius, $mark-style1-padding);
 @include make-mark-alt-style ($mark-style2-name, $mark-style2-border-style,
 	$mark-style2-border-radius, $mark-style2-padding, $mark-style2-font-size, $mark-style2-line-height);
-@include make-alert-alt-color ($alert-variant1-name, $alert-variant1-back-color);
-@include make-alert-alt-color ($alert-variant2-name, $alert-variant2-back-color, $alert-variant2-fore-color);
-@include make-alert-alt-style ($alert-style1-name, $alert-style1-border-style, $alert-style1-border-radius);
-@include make-alert-alt-style ($alert-style2-name, $alert-style2-border-style, $alert-style2-border-radius);
 @import '../mini/progress';
 /*
 	Custom elements for progress elements and spinners.

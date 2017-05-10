@@ -3,10 +3,6 @@
 */
 // Contextual background elements use the mark element as their base.
 $mark-inline-block-name:	'inline-block' !default;	// Class name for <mark> inline block styling.
-$include-alerts:					true !default;						// [Hidden flag] Should alerts be included? (`true`/`false`)
-$alert-name:							'alert' !default;					// Class name for the alerts.
-$alert-include-animated: 	true !default;						// Should animated alerts be included? (`true`/`false`)
-$alert-animated-name:			'animated' !default;			// Class name for animated alerts.
 $include-tooltip:					true !default;						// Should tooltips be included? (`true`/`false`)
 $tooltip-name:						'tooltip' !default;				// Class name for the tooltips.
 $tooltip-bottom-name:			'bottom' !default;				// Bottom tooltip class name.
@@ -48,60 +44,6 @@ mark {
 	}
 	&.#{$mark-inline-block-name}{
 		display: inline-block; // Can be used to deal with some problems.
-	}
-}
-// Animation definition for animated alerts (included if wanted)
-@if $include-alerts {			// Turn off if you want to disable the alert component.
-	@if $alert-include-animated {
-		@-webkit-keyframes alert-anim {
-			45% 	{		-webkit-transform: scale(1);			-webkit-transform-origin: 50% 50%;	}
-			50% 	{		-webkit-transform: scale(1.005);	-webkit-transform-origin: 50% 50%;	}
-			55% 	{		-webkit-transform: scale(1);			-webkit-transform-origin: 50% 50%;	}
-		}
-		@keyframes alert-anim {
-			45% 	{						transform: scale(1);							transform-origin: 50% 50%;	}
-			50% 	{						transform: scale(1.005);					transform-origin: 50% 50%;	}
-			55% 	{						transform: scale(1);							transform-origin: 50% 50%;	}
-		}
-	}
-}
-@if $include-alerts {			// Turn off if you want to disable the alert component.
-	// Default styling for alerts. Use mixins for alternate styles
-	.#{$alert-name} {
-		display: block;
-		@if $alert-back-color != $back-color {
-			background: $alert-back-color;
-		}
-		@if $alert-fore-color != $fore-color {
-			color: $alert-fore-color;
-		}
-		@if $alert-border-style != 0 {
-			border: $alert-border-style;
-		}
-		@if $alert-border-radius != 0 {
-			border-radius: $alert-border-radius;
-		}
-		@if $alert-margin != 0 {
-			margin: $alert-margin;
-		}
-		@if $alert-padding != 0 {
-			padding: $alert-padding;
-		}
-		@if $alert-box-shadow != none {
-			box-shadow: $alert-box-shadow;
-		}
-		@if $alert-include-animated {
-			&.#{$alert-animated-name} {
-				// Try to make the animated alert not blurry
-				-webkit-backface-visibility: hidden;
-								backface-visibility: hidden;
-				-webkit-transform: translateZ(0);
-								transform: translateZ(0);
-				// Apply the animation
-				-webkit-animation: alert-anim 6s linear infinite;
-								animation: alert-anim 6s linear infinite;
-			}
-		}
 	}
 }
 // Default styling for tooltips. Use mixins for alternate styles
@@ -187,6 +129,70 @@ mark {
 		}
 		&.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
 			margin-top: 2 * $tooltip-tail-size;
+		}
+	}
+}
+// [WARNING: As of v2.2.0, the alert component is deprecated and no longer maintained.]
+$include-alerts:					false !default;						// [Hidden flag] Should alerts be included? (`true`/`false`)
+// Animation definition for animated alerts (included if wanted)
+@if $include-alerts {			// Turn on if you want to enable the alert component.
+	$alert-name:							'alert' !default;					// Class name for the alerts.
+	$alert-include-animated: 	false !default;						// Should animated alerts be included? (`true`/`false`)
+	$alert-animated-name:			'animated' !default;			// Class name for animated alerts.
+	$alert-back-color:				#d1e6f3 !default;					// Background color for alerts
+	$alert-fore-color:				$fore-color !default;			// Text color for alerts
+	$alert-border-style:		1px solid #d0d0d0 !default;	// Border style for alerts
+	$alert-border-radius:			0 !default;								// Border radius for alerts
+	$alert-padding:						0.75rem !default;					// Padding for alerts
+	$alert-margin:						0.5rem !default;					// Margin for alerts
+	$alert-box-shadow:				none !default;						// Box shadow for alerts
+	@if $alert-include-animated {
+		@-webkit-keyframes alert-anim {
+			45% 	{		-webkit-transform: scale(1);			-webkit-transform-origin: 50% 50%;	}
+			50% 	{		-webkit-transform: scale(1.005);	-webkit-transform-origin: 50% 50%;	}
+			55% 	{		-webkit-transform: scale(1);			-webkit-transform-origin: 50% 50%;	}
+		}
+		@keyframes alert-anim {
+			45% 	{						transform: scale(1);							transform-origin: 50% 50%;	}
+			50% 	{						transform: scale(1.005);					transform-origin: 50% 50%;	}
+			55% 	{						transform: scale(1);							transform-origin: 50% 50%;	}
+		}
+	}
+	// Default styling for alerts. Use mixins for alternate styles
+	.#{$alert-name} {
+		display: block;
+		@if $alert-back-color != $back-color {
+			background: $alert-back-color;
+		}
+		@if $alert-fore-color != $fore-color {
+			color: $alert-fore-color;
+		}
+		@if $alert-border-style != 0 {
+			border: $alert-border-style;
+		}
+		@if $alert-border-radius != 0 {
+			border-radius: $alert-border-radius;
+		}
+		@if $alert-margin != 0 {
+			margin: $alert-margin;
+		}
+		@if $alert-padding != 0 {
+			padding: $alert-padding;
+		}
+		@if $alert-box-shadow != none {
+			box-shadow: $alert-box-shadow;
+		}
+		@if $alert-include-animated {
+			&.#{$alert-animated-name} {
+				// Try to make the animated alert not blurry
+				-webkit-backface-visibility: hidden;
+								backface-visibility: hidden;
+				-webkit-transform: translateZ(0);
+								transform: translateZ(0);
+				// Apply the animation
+				-webkit-animation: alert-anim 6s linear infinite;
+								animation: alert-anim 6s linear infinite;
+			}
 		}
 	}
 }

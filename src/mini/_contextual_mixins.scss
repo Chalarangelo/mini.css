@@ -48,56 +48,6 @@
 		}
 	}
 }
-// Mixin for alternate alert (alert color variants).
-// Variables:
-// - $alert-alt-name : The name of the class used for the alternate alert.
-// - $alert-alt-back-color : The background color of the alternate alert.
-// - $alert-alt-fore-color : (Optional) The text color of the alternate mark. Defaults to the text color of the alert.
-@mixin make-alert-alt-color ($alert-alt-name, $alert-alt-back-color, $alert-alt-fore-color: $alert-fore-color) {
-	@if not ($include-alerts) {
-		@error "Contextual module's alert mixins are only available if alerts are enabled. Set '$include-alerts' to 'true' and try again!";
-	}
-	.#{$alert-name}.#{$alert-alt-name} {
-		@if $alert-alt-back-color != $alert-back-color {
-			background: $alert-alt-back-color;
-		}
-		@if $alert-alt-fore-color != $alert-fore-color {
-			color: $alert-alt-fore-color;
-		}
-	}
-}
-// Mixin for alternate alert styles (alert style variants).
-// Variables:
-// - $alert-alt-name : The name of the class used for the alternate alert style.
-// - $alert-alt-border-style : The border style of the alternate alert style.
-// - $alert-alt-border-radius : Border radius of the alternate alert style.
-// - $alert-alt-padding : (Optional) Padding of the alternate alert style. Defaults to the alert's padding.
-// - $alert-alt-margin : (Optional) Margin of the alternate alert style. Defaults to the alert's margin.
-// - $alert-alt-box-shadow : (Optional) Box shadow of the alretnate alert style. Defaults to the alert's box shadow.
-@mixin make-alert-alt-style ($alert-alt-name, $alert-alt-border-style, $alert-alt-border-radius,
-	$alert-alt-padding : $alert-padding, $alert-alt-margin : $alert-margin,
-	$alert-alt-box-shadow : $alert-box-shadow) {
-	@if not ($include-alerts) {
-		@error "Contextual module's alert mixins are only available if alerts are enabled. Set '$include-alerts' to 'true' and try again!";
-	}
-	.#{$alert-name}.#{$alert-alt-name} {
-		@if $alert-alt-border-style != $alert-border-style {
-			border: $alert-alt-border-style;
-		}
-		@if $alert-alt-border-radius != $alert-border-radius {
-			border-radius: $alert-alt-border-radius;
-		}
-		@if $alert-alt-padding != $alert-padding {
-			padding: $alert-alt-padding;
-		}
-		@if $alert-alt-margin != $alert-margin {
-			margin: $alert-alt-margin;
-		}
-		@if $alert-alt-box-shadow != $alert-box-shadow {
-			box-shadow: $alert-alt-box-shadowbox-shadow;
-		}
-	}
-}
 // Mixin for alternate tooltip (tooltip color variants).
 // Variables:
 // - $tooltip-alt-name : The name of the class used for the alternate tooltip.
@@ -162,6 +112,58 @@
 			@if $tooltip-alt-box-shadow != $tooltip-box-shadow {
 				box-shadow: $tooltip-alt-box-shadow;
 			}
+		}
+	}
+}
+// [WARNING: As of v2.2.0, this mixin is deprecated, due to the fact that the alert component is no longer maintained.]
+// Mixin for alternate alert (alert color variants).
+// Variables:
+// - $alert-alt-name : The name of the class used for the alternate alert.
+// - $alert-alt-back-color : The background color of the alternate alert.
+// - $alert-alt-fore-color : (Optional) The text color of the alternate mark. Defaults to the text color of the alert.
+@mixin make-alert-alt-color ($alert-alt-name, $alert-alt-back-color, $alert-alt-fore-color: $alert-fore-color) {
+	@if not ($include-alerts) {
+		@error "Contextual module's alert mixins are only available if alerts are enabled. Set '$include-alerts' to 'true' and try again!";
+	}
+	.#{$alert-name}.#{$alert-alt-name} {
+		@if $alert-alt-back-color != $alert-back-color {
+			background: $alert-alt-back-color;
+		}
+		@if $alert-alt-fore-color != $alert-fore-color {
+			color: $alert-alt-fore-color;
+		}
+	}
+}
+// [WARNING: As of v2.2.0, this mixin is deprecated, due to the fact that the alert component is no longer maintained.]
+// Mixin for alternate alert styles (alert style variants).
+// Variables:
+// - $alert-alt-name : The name of the class used for the alternate alert style.
+// - $alert-alt-border-style : The border style of the alternate alert style.
+// - $alert-alt-border-radius : Border radius of the alternate alert style.
+// - $alert-alt-padding : (Optional) Padding of the alternate alert style. Defaults to the alert's padding.
+// - $alert-alt-margin : (Optional) Margin of the alternate alert style. Defaults to the alert's margin.
+// - $alert-alt-box-shadow : (Optional) Box shadow of the alretnate alert style. Defaults to the alert's box shadow.
+@mixin make-alert-alt-style ($alert-alt-name, $alert-alt-border-style, $alert-alt-border-radius,
+	$alert-alt-padding : $alert-padding, $alert-alt-margin : $alert-margin,
+	$alert-alt-box-shadow : $alert-box-shadow) {
+	@if not ($include-alerts) {
+		@error "Contextual module's alert mixins are only available if alerts are enabled. Set '$include-alerts' to 'true' and try again!";
+	}
+	.#{$alert-name}.#{$alert-alt-name} {
+		@if $alert-alt-border-style != $alert-border-style {
+			border: $alert-alt-border-style;
+		}
+		@if $alert-alt-border-radius != $alert-border-radius {
+			border-radius: $alert-alt-border-radius;
+		}
+		@if $alert-alt-padding != $alert-padding {
+			padding: $alert-alt-padding;
+		}
+		@if $alert-alt-margin != $alert-margin {
+			margin: $alert-alt-margin;
+		}
+		@if $alert-alt-box-shadow != $alert-box-shadow {
+			box-shadow: $alert-alt-box-shadowbox-shadow;
 		}
 	}
 }

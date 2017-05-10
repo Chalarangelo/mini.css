@@ -1118,3 +1118,4 @@
 - Updated `quick_reference` for said changes to `card` module.
 - Created new codepens for the `quick_reference` page for changes in the `card` module.
 - Forked old codepens that used `.nano` and `.shadow-...` classes, updated links in `quick_reference` for all of them now.
+- Updated both `mini-default` and `mini-dark` to use the latest classes built in the `card` module with proper colors.

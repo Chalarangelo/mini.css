@@ -339,12 +339,18 @@ $card-size2-name:							'small';							// Class name for small cards
 $card-size2-width:						240px;								// Width for small cards
 $card-size3-name:							'fluid';							// Class name for fluid cards
 $card-size3-width:						100%;									// Width for fluid cards
-$card-style1-name:						'inverse';						// Class name for card style 1
-$card-style1-back-color:			#ebecec;						// Background color for card style 1
-$card-style1-fore-color:			#0c0c0c;							// Text color for card style 1
-$card-style1-border-style:		1px solid #424242;		// Border style for card style 1
+$card-style1-name:						'warning';						// Class name for card style 1
+$card-style1-back-color:			#fff176;							// Background color for card style 1
+$card-style1-fore-color:			$back-color;					// Text color for card style 1
+$card-style1-border-style:		1px solid #d1c661;		// Border style for card style 1
 $card-style1-border-radius:		0;										// Border radius for card style 1
-$card-style1-section-border-style:1px solid #424242;// Border style for card style 1 sections
+$card-style1-section-border-style:1px solid #d1c661;// Border style for card style 1 sections
+$card-style2-name:						'error';							// Class name for card style 2
+$card-style2-back-color:			#b71c1c;							// Background color for card style 2
+$card-style2-fore-color:			#fafafa;							// Text color for card style 2
+$card-style2-border-style:		1px solid #a71a1a;		// Border style for card style 2
+$card-style2-border-radius:		0;										// Border radius for card style 2
+$card-style2-section-border-style:1px solid #a71a1a;// Border style for card style 2 sections
 $card-section-style1-name:				'dark';						// Class name for card section style 1
 $card-section-style1-back-color:	#1d262a;					// Background color for card section style 1
 $card-section-style1-fore-color:	$fore-color;			// Text color for card section style 1
@@ -538,6 +544,8 @@ $include-center-block-name:		false;								// Should center block be included? (
 @include make-card-alt-size ($card-size3-name, $card-size3-width);
 @include make-card-alt-color ($card-style1-name, $card-style1-back-color, $card-style1-fore-color,
 	$card-style1-border-style, $card-style1-border-radius, $card-style1-section-border-style);
+	@include make-card-alt-color ($card-style2-name, $card-style2-back-color, $card-style2-fore-color,
+		$card-style2-border-style, $card-style2-border-radius, $card-style2-section-border-style);
 @include make-card-section-alt-color ($card-section-style1-name, $card-section-style1-back-color,
 	$card-section-style1-fore-color);
 @include make-card-section-alt-color ($card-section-style2-name, $card-section-style2-back-color,

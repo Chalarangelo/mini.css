@@ -1451,17 +1451,30 @@ table.striped tr:nth-of-type(2n) > td {
   width: auto;
 }
 
-.card.inverse {
-  background: #212121;
+.card.warning {
+  background: #ffca28;
+  border: 1px solid #e8b825;
+}
+
+.card.warning > .section {
+  border-bottom: 1px solid #e8b825;
+}
+
+.card.warning > .section:last-child {
+  border-bottom: 0;
+}
+
+.card.error {
+  background: #b71c1c;
   color: #fafafa;
-  border: 1px solid #0c0c0c;
+  border: 1px solid #a71a1a;
 }
 
-.card.inverse > .section {
-  border-bottom: 1px solid #424242;
+.card.error > .section {
+  border-bottom: 1px solid #a71a1a;
 }
 
-.card.inverse > .section:last-child {
+.card.error > .section:last-child {
   border-bottom: 0;
 }
 

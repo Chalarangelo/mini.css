@@ -1114,3 +1114,7 @@
 
 - Tonight's the night: Lots of updates and changes will be taking place (hopefully), as the next release needs to be fast-forwarded for a lot of reasons. Let the building begin.
 - Updated the `.close` icon with the new styling, making it less complicated, using a Unicode character instead of custom pseudo-elements, size is now `6.24KB`.
+- Removed `.inverse` class from card, added `.warning` and `.error` instead (part of the `.alert` migration system).
+- Updated `quick_reference` for said changes to `card` module.
+- Created new codepens for the `quick_reference` page for changes in the `card` module.
+- Forked old codepens that used `.nano` and `.shadow-...` classes, updated links in `quick_reference` for all of them now.

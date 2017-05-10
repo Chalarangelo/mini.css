@@ -1,11 +1,13 @@
 /*
-	Definitions for contextual background elements and alerts.
+	Definitions for contextual background elements, toasts and tooltips.
 */
 // Contextual background elements use the mark element as their base.
 $mark-inline-block-name:	'inline-block' !default;	// Class name for <mark> inline block styling.
 $include-tooltip:					true !default;						// Should tooltips be included? (`true`/`false`)
 $tooltip-name:						'tooltip' !default;				// Class name for the tooltips.
 $tooltip-bottom-name:			'bottom' !default;				// Bottom tooltip class name.
+$include-toast:						true !default;						// [Hidden flag] Should toasts be included? (`true`/`false`)
+$toast-name:							'toast' !default;					// Class name for the toasts.
 // External variables' defaults are used only if you import this module on its own, without the rest of the framework.
 $back-color:							white !default;						// [External variable - core] Background color for everything.
 $fore-color:							black !default;						// [External variable - core] Foreground color for everything.
@@ -44,6 +46,32 @@ mark {
 	}
 	&.#{$mark-inline-block-name}{
 		display: inline-block; // Can be used to deal with some problems.
+	}
+}
+// Default styling for toasts. Use mixins for alternate styles
+@if $include-toast {
+	.#{$toast-name} {
+		position: fixed;
+		background: $toast-back-color;
+		bottom: $toast-bottom-position;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+		@if $toast-fore-color != $fore-color {
+			color: $toast-fore-color;
+		}
+		@if $toast-border-style != 0 {
+			border: $toast-border-style;
+		}
+		@if $toast-border-radius != 0 {
+			border-radius: $toast-border-radius;
+		}
+		@if $toast-padding != 0 {
+			padding: $toast-padding;
+		}
+		@if $toast-box-shadow != none {
+			box-shadow: $toast-box-shadow;
+		}
+
 	}
 }
 // Default styling for tooltips. Use mixins for alternate styles

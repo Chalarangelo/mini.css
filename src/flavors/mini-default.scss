@@ -404,6 +404,14 @@ $mark-style2-border-radius:	2px;										// Border radius for <mark> style 2
 $mark-style2-padding:				0.375em;								// Padding for <mark> style 2
 $mark-style2-font-size:			1em;										// Font size for <mark> style 2
 $mark-style2-line-height:		1.375em;								// Line height for <mark> style 2
+$toast-name:								'toast';								// Class name for toast component
+$toast-bottom-position:			1.5rem;									// Bottom position for toasts
+$toast-back-color:					#424242;								// Background color for toasts
+$toast-fore-color:					#fafafa;								// Text color for toasts
+$toast-border-style:				0;											// Border style for toasts
+$toast-border-radius:				2rem;										// Border radius for toasts
+$toast-padding:							0.75rem 1.5rem;					// Padding for toasts
+$toast-box-shadow:					none;										// Box shadow for toasts
 $include-tooltip:						true;										// Should tooltips be included? (`true`/`false`) [1]
 $tooltip-name:							'tooltip';							// Class name for the tooltip component
 $tooltip-back-color:				$fore-color;						// Background color for tooltips

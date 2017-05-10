@@ -1632,7 +1632,7 @@ table.striped tr:nth-of-type(2n) > td {
 }
 
 /*
-	Definitions for contextual background elements and alerts.
+	Definitions for contextual background elements, toasts and tooltips.
 */
 mark {
   background: #0277bd;
@@ -1645,6 +1645,17 @@ mark {
 
 mark.inline-block {
   display: inline-block;
+}
+
+.toast {
+  position: fixed;
+  background: #424242;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fafafa;
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
 }
 
 .tooltip {

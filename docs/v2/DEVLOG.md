@@ -1137,3 +1137,6 @@
 	- `mini-nord` still uses `.alert`s instead of `.toast`s, maintainer should address after update, otherwise I will in the next patch or so.
 	- `mini-sucroa` does not support it (or `.alert` for that matter), might be addressed with author later down the line, for now it's ok to not have either.
 - Changed order of `input_control` and `navigation` for all flavors and documentation pages.
+- Thoroughly tested fluid typography and updated the `core` module with the required variables and flags. This added a little bit of extra size to the framework, but it seems worthwhile as it scales a bit better on smaller screens, so that there is slightly more real estate for content.
+- Updated all flavors for fluid typography (basically only `default` and `dark` actually use it for now).
+- Updated `core` module documentation and customization documentation to explain fluid typography.

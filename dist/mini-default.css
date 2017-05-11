@@ -9,7 +9,20 @@
 	Browsers resets and base typography.
 */
 html {
-  font-size: 16px;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 256px) {
+  html {
+    font-size: 16px;
+    font-size: calc(14px + 2 * ((100vw - 256px) / 512));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 html, * {

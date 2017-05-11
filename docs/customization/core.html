@@ -131,6 +131,26 @@
 										<td data-label="Description">Default line height for all elements</td><td data-label="Sample value">1.5</td>
 									</tr>
 									<tr>
+										<td data-label="Variable">$use-fluid-typography</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Enables scaling of the font size for the root elements<sup><a href="#typo-note-two">2</a></sup></td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fluid-type-start-breakpoint</td><td data-label="Type">Breakpoint</td>
+										<td data-label="Description">Breakpoint where fluid typography scaling starts<sup><a href="#typo-note-two">2</a></sup></td><td data-label="Sample value">sans-serif</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fluid-type-end-breakpoint</td><td data-label="Type">Breakpoint</td>
+										<td data-label="Description">Breakpoint where fluid typography scaling ends<sup><a href="#typo-note-two">2</a></sup></td><td data-label="Sample value">sans-serif</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fluid-type-small-type</td><td data-label="Type">Font size (<code>px</code> only)</td>
+										<td data-label="Description">Smallest root font size for fluid typography<sup><a href="#typo-note-two">2</a></sup></td><td data-label="Sample value">sans-serif</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$fluid-type-large-type</td><td data-label="Type">Font size (<code>px</code> only)</td>
+										<td data-label="Description">Largest root font size for fluid typography<sup><a href="#typo-note-two">2</a></sup></td><td data-label="Sample value">sans-serif</td>
+									</tr>
+									<tr>
 										<td data-label="Variable">$body-margin</td><td data-label="Type">Margin</td>
 										<td data-label="Description">Margin for the body</td><td data-label="Sample value">4px</td>
 									</tr>
@@ -172,15 +192,15 @@
 									</tr>
 									<tr>
 										<td data-label="Variable">$make-heading-smalltext-block</td><td data-label="Type">Logical</td>
-										<td data-label="Description">Makes <code>&lt;small&gt;</code> elements inside headings display below them<sup><a href="#typo-note-two">2</a></sup></td><td data-label="Sample value">true</td>
+										<td data-label="Description">Makes <code>&lt;small&gt;</code> elements inside headings display below them<sup><a href="#typo-note-three">3</a></sup></td><td data-label="Sample value">true</td>
 									</tr>
 									<tr>
 										<td data-label="Variable">$heading-smalltext-b-font-size</td><td data-label="Type">Font size (percentage preferred)</td>
-										<td data-label="Description">Font size for <code>&lt;small&gt;</code> elements inside headings<sup><a href="#typo-note-two">2</a></sup></td><td data-label="Sample value">75%</td>
+										<td data-label="Description">Font size for <code>&lt;small&gt;</code> elements inside headings<sup><a href="#typo-note-three">3</a></sup></td><td data-label="Sample value">75%</td>
 									</tr>
 									<tr>
 										<td data-label="Variable">$heading-smalltext-b-top-margin</td><td data-label="Type">Margin</td>
-										<td data-label="Description">Top margin for <code>&lt;small&gt;</code> elements inside headings<sup><a href="#typo-note-two">2</a></sup></td><td data-label="Sample value">-4px</td>
+										<td data-label="Description">Top margin for <code>&lt;small&gt;</code> elements inside headings<sup><a href="#typo-note-three">3</a></sup></td><td data-label="Sample value">-4px</td>
 									</tr>
 									<tr>
 										<td data-label="Variable">$paragraph-margin</td><td data-label="Type">Margin</td>
@@ -220,11 +240,11 @@
 									</tr>
 									<tr>
 										<td data-label="Variable">$link-hover-fore-color</td><td data-label="Type">Color</td>
-										<td data-label="Description">Text color for links (on hover)<sup><a href="#typo-note-three">3</a></sup></td><td data-label="Sample value">#0288d1</td>
+										<td data-label="Description">Text color for links (on hover)<sup><a href="#typo-note-four">4</a></sup></td><td data-label="Sample value">#0288d1</td>
 									</tr>
 									<tr>
 										<td data-label="Variable">$apply-link-hover-fade</td><td data-label="Type">Logical</td>
-										<td data-label="Description">Applies fading to links on hover<sup><a href="#typo-note-three">3</a></sup></td><td data-label="Sample value">true</td>
+										<td data-label="Description">Applies fading to links on hover<sup><a href="#typo-note-four">4</a></sup></td><td data-label="Sample value">true</td>
 									</tr>
 									<tr>
 										<td data-label="Variable">$link-font-weight</td><td data-label="Type">Font weight</td>
@@ -241,8 +261,9 @@
 							<h3>Notes:</h3>
 							<ol>
 								<li id="typo-note-one">The value of <code>$base-font-size</code> will only be applied if <code>$apply-defaults-to-all</code> is set to <code class="fore-tertiary">true</code>.</li>
-								<li id="typo-note-two">The values of <code>$heading-smalltext-b-font-size</code> and <code>$heading-smalltext-b-top-margin</code> will only be applied if <code>$make-heading-smalltext-block</code> is set to <code class="fore-tertiary">true</code>.</li>
-								<li id="typo-note-three">The value of <code>$link-hover-fore-color</code> will only be applied if <code>$apply-link-hover-fade</code> is set to <code class="fore-secondary">false</code>.</li>
+								<li id="typo-note-two">The values of <code>$fluid-type-start-breakpoint</code>, <code>$fluid-type-end-breakpoint</code>, <code>$fluid-type-small-type</code> and <code>$fluid-type-large-type</code> will only be applied if <code>$use-fluid-typography</code> is set to <code class="fore-tertiary">true</code>.</li>
+								<li id="typo-note-three">The values of <code>$heading-smalltext-b-font-size</code> and <code>$heading-smalltext-b-top-margin</code> will only be applied if <code>$make-heading-smalltext-block</code> is set to <code class="fore-tertiary">true</code>.</li>
+								<li id="typo-note-four">The value of <code>$link-hover-fore-color</code> will only be applied if <code>$apply-link-hover-fade</code> is set to <code class="fore-secondary">false</code>.</li>
 							</ol>
 						</div>
           </div>

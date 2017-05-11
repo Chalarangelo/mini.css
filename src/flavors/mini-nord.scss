@@ -17,6 +17,7 @@ $base-font-family:																	// Default font stack for all elements:
 $base-root-font-size:			16px;											// Root font sizing for all elements [1]
 $base-font-size:				1em;												// Default font sizing for all elements [2]
 $base-line-height:				1.5;											// Default line height for all elements.
+$use-fluid-typography:	false;										// Should fluid typography be used at the root element? (`true`/`false`)
 $body-margin:					0;														// Margin for the body
 $apply-defaults-to-all:			true;										// Should default values be applied to all elements? (`true` or `false`) [3]
 $h1-font-size:					2em;												// Font size of h1

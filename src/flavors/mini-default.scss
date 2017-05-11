@@ -145,54 +145,6 @@ $grid-large-prefix:						'lg';									// Large screen class prefix for grid
 //	the needed styles. In this case, values should be specified for $grid-extra-small-prefix and $grid-small-breakpoint.
 // [2] - If the value of $include-parent-layout is `true`, the grid system will contain extra classes that will define the column
 //	layout of their children. In this case, a value should be specified for $grid-row-parent-layout-prefix.
-//	Variables for navigational elements
-$header-height:						2.75rem;									// Height for <header>
-$header-back-color:				#12171a;									// Background color for <header>
-$header-fore-color:				#f5f5f5;									// Text color for <header>
-$header-border-style:			0;												// Border style for <header>
-$header-margin:						0;												// Margin for <header>
-$header-padding:					0.125rem 0.5rem;					// Padding for <header>
-$header-box-shadow:				none;											// Box shadow for <header>
-$header-logo-name:				'logo';										// Class name for <header>'s logo
-$header-logo-font-size:		1.75rem;									// Font size for <header>'s logo
-$header-logo-line-height:	1.3125em;										// Line height for <header>'s logo
-$header-logo-margin:			0.0625rem 0.375rem 0.0625rem 0.0625rem;					// Margin for <header>'s logo
-$header-logo-padding:			0;												// Padding for <header>'s logo
-$header-link-hover-color:	#20292e;									// Hover color for <header>'s links
-$header-link-margin:			0.125rem 0;								// Margin for <header>'s links
-$include-header-sticky:		true;											// Should sticky <header> elements be included? (`true`/`false`) [1]
-$header-sticky-name:			'sticky';									// Class name for sticky <header>
-$nav-back-color:					#eceff1;									// Background for <nav>
-$nav-fore-color:					$fore-color;							// Text color for <nav>
-$nav-border-style:				1px solid #c9c9c9;				// Border style for <nav>
-$nav-border-radius:				0;												// Border radius for <nav>
-$nav-padding:							0.75rem 1rem;							// Padding for <nav>
-$nav-margin:							0.5rem;										// Margin for <nav>
-$nav-box-shadow: 					none;											// Box shadow for <nav>
-$nav-link-fore-color:			#145caf;									// Text color for links in <nav>
-$nav-sublink-prefix:			'sublink';								// Prefix for the subcategory links in <nav>
-$nav-sublink-depth:				2;												// Amount of subcategory classes to add
-$nav-sublink-padding-left:	1rem;										// Left padding to add to subcategories
-$nav-include-sublink-bar:	true;											// Should a left border bar be added to subcategories (`true`/`false`) [2]
-$nav-sublink-bar-left-position: 0.1875rem;					// Left position of subcategory bar
-$nav-sublink-bar-width:		1px;											// Width of the subcategory bar
-$nav-sublink-bar-color:		#bdbdbd;									// Subcategory bar color
-$footer-back-color:				#192024;									// Background color for <footer>
-$footer-fore-color:				#f5f5f5;									// Text color for <footer>
-$footer-border-style:			0;												// Border stye for <footer>
-$footer-font-size:				0.875rem;								// Font size for <footer>
-$footer-margin:						1rem 0 0;									// Margin for <footer>
-$footer-padding:					1.5rem 0.5rem 0.75rem;		// Padding for <footer>
-$footer-link-fore-color:	#0288d1;									// Text color for links in <footer>
-$include-footer-sticky:		true;											// Should sticky <footer> elements be included (`true`/`false`) [3]
-$footer-sticky-name:			'sticky';									// Class name for sticky <footer> elements
-//	Notes:
-// [1] - If the value of $include-header-sticky is `true`, a class will be created that will allow for sticky positioning
-//	of <header> elements, using the value of $header-sticky-name for the name of the class.
-// [2] - If the value of $nav-include-sublink-bar is `true`, a left-side border bar will appear next to the navigation
-//	subcategories, using the values specified.
-// [3] - If the value of $include-footer-bottom is `true`, a class will be created that will allow for sticky positioning
-//	of <footer> elements, using the value of $footer-sticky-name for the name of the class.
 //	Variables for forms and inputs
 $form-back-color:				#eeeeee;										// Background color for forms
 $form-fore-color:				$fore-color;								// Text color for forms
@@ -291,6 +243,54 @@ $checkbox-disabled-opacity:	$input-disabled-opacity;// Opacity for disabled chec
 //	allow for universal button styles, even for file input buttons, but can be disabled if the base style is desired.
 //	If the value is `false`, some fixes will be applied to the <input type="file"> element.
 // [3] - The value of $checkbox-size will determine a few variables like some `margin` values, `height`, `width` etc.
+//	Variables for navigational elements
+$header-height:						2.75rem;									// Height for <header>
+$header-back-color:				#12171a;									// Background color for <header>
+$header-fore-color:				#f5f5f5;									// Text color for <header>
+$header-border-style:			0;												// Border style for <header>
+$header-margin:						0;												// Margin for <header>
+$header-padding:					0.125rem 0.5rem;					// Padding for <header>
+$header-box-shadow:				none;											// Box shadow for <header>
+$header-logo-name:				'logo';										// Class name for <header>'s logo
+$header-logo-font-size:		1.75rem;									// Font size for <header>'s logo
+$header-logo-line-height:	1.3125em;										// Line height for <header>'s logo
+$header-logo-margin:			0.0625rem 0.375rem 0.0625rem 0.0625rem;					// Margin for <header>'s logo
+$header-logo-padding:			0;												// Padding for <header>'s logo
+$header-link-hover-color:	#20292e;									// Hover color for <header>'s links
+$header-link-margin:			0.125rem 0;								// Margin for <header>'s links
+$include-header-sticky:		true;											// Should sticky <header> elements be included? (`true`/`false`) [1]
+$header-sticky-name:			'sticky';									// Class name for sticky <header>
+$nav-back-color:					#eceff1;									// Background for <nav>
+$nav-fore-color:					$fore-color;							// Text color for <nav>
+$nav-border-style:				1px solid #c9c9c9;				// Border style for <nav>
+$nav-border-radius:				0;												// Border radius for <nav>
+$nav-padding:							0.75rem 1rem;							// Padding for <nav>
+$nav-margin:							0.5rem;										// Margin for <nav>
+$nav-box-shadow: 					none;											// Box shadow for <nav>
+$nav-link-fore-color:			#145caf;									// Text color for links in <nav>
+$nav-sublink-prefix:			'sublink';								// Prefix for the subcategory links in <nav>
+$nav-sublink-depth:				2;												// Amount of subcategory classes to add
+$nav-sublink-padding-left:	1rem;										// Left padding to add to subcategories
+$nav-include-sublink-bar:	true;											// Should a left border bar be added to subcategories (`true`/`false`) [2]
+$nav-sublink-bar-left-position: 0.1875rem;					// Left position of subcategory bar
+$nav-sublink-bar-width:		1px;											// Width of the subcategory bar
+$nav-sublink-bar-color:		#bdbdbd;									// Subcategory bar color
+$footer-back-color:				#192024;									// Background color for <footer>
+$footer-fore-color:				#f5f5f5;									// Text color for <footer>
+$footer-border-style:			0;												// Border stye for <footer>
+$footer-font-size:				0.875rem;								// Font size for <footer>
+$footer-margin:						1rem 0 0;									// Margin for <footer>
+$footer-padding:					1.5rem 0.5rem 0.75rem;		// Padding for <footer>
+$footer-link-fore-color:	#0288d1;									// Text color for links in <footer>
+$include-footer-sticky:		true;											// Should sticky <footer> elements be included (`true`/`false`) [3]
+$footer-sticky-name:			'sticky';									// Class name for sticky <footer> elements
+//	Notes:
+// [1] - If the value of $include-header-sticky is `true`, a class will be created that will allow for sticky positioning
+//	of <header> elements, using the value of $header-sticky-name for the name of the class.
+// [2] - If the value of $nav-include-sublink-bar is `true`, a left-side border bar will appear next to the navigation
+//	subcategories, using the values specified.
+// [3] - If the value of $include-footer-bottom is `true`, a class will be created that will allow for sticky positioning
+//	of <footer> elements, using the value of $footer-sticky-name for the name of the class.
 //	Variables for responsive tables
 $table-border-style:			1px solid #c9c9c9;				// Border style for <table> and children
 $table-border-radius:			0;												// Border radius for <table> and children
@@ -510,7 +510,6 @@ $include-center-block-name:		false;								// Should center block be included? (
 // that module and marked as such below it.
 @import '../mini/core';
 @import '../mini/grid';
-@import '../mini/navigation';
 @import '../mini/input_control';
 /*
 	Custom elements for forms and input elements.
@@ -527,6 +526,7 @@ $include-center-block-name:		false;								// Should center block be included? (
 	$button-style1-border-radius, $button-style1-padding, $button-style1-margin);
 @include make-button-alt-style ($button-style2-name, $button-style2-border-style,
 	$button-style2-border-radius, $button-style2-padding, $button-style2-margin);
+@import '../mini/navigation';
 @import '../mini/table';
 @import '../mini/card';
 /*

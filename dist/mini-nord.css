@@ -684,123 +684,6 @@ figcaption {
 }
 
 /*
-	Definitions for navigation elements.
-*/
-header {
-  display: block;
-  height: 44px;
-  background: #2E3440;
-  color: #ECEFF4;
-  padding: 2px 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-header .logo {
-  color: #ECEFF4;
-  font-size: 1.75em;
-  line-height: 1.2;
-  margin: 1px 6px 1px 1px;
-  padding: 3px 0 0;
-  transition: opacity 0.3s;
-}
-
-header button, header [type="button"],
-header a.button, header label.button, header .button,
-header a[role="button"], header label[role="button"], header [role="button"] {
-  background: #2E3440;
-  color: #ECEFF4;
-  vertical-align: top;
-  margin: 2px 0 0;
-  box-shadow: none;
-}
-
-header button:hover, header button:focus, header [type="button"]:hover, header [type="button"]:focus,
-header a.button:hover,
-header a.button:focus, header label.button:hover, header label.button:focus, header .button:hover, header .button:focus,
-header a[role="button"]:hover,
-header a[role="button"]:focus, header label[role="button"]:hover, header label[role="button"]:focus, header [role="button"]:hover, header [role="button"]:focus {
-  background: #37474f;
-}
-
-header .logo, header a.button, header a[role="button"] {
-  text-decoration: none;
-}
-
-nav {
-  display: block;
-  border: 1px solid #D8DEE9;
-  margin: 2px;
-  padding: 8px 8px 16px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
-}
-
-nav a, nav a:visited {
-  display: block;
-  color: #88C0D0;
-  text-decoration: none;
-}
-
-nav .sublink-1 {
-  padding-left: 12px;
-  position: relative;
-}
-
-nav .sublink-1:before {
-  position: absolute;
-  left: 3px;
-  top: -1px;
-  content: '';
-  height: 100%;
-  border: 1px solid #81A1C1;
-  border-left: 0;
-}
-
-nav .sublink-2 {
-  padding-left: 24px;
-  position: relative;
-}
-
-nav .sublink-2:before {
-  position: absolute;
-  left: 3px;
-  top: -1px;
-  content: '';
-  height: 100%;
-  border: 1px solid #81A1C1;
-  border-left: 0;
-}
-
-footer {
-  display: block;
-  background: #434C5E;
-  color: #ECEFF4;
-  margin: 18px 0 0;
-  padding: 22px 10px 12px;
-  font-size: 85%;
-}
-
-footer a, footer a:visited {
-  color: #88C0D0;
-}
-
-header.sticky, footer.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 1101;
-}
-
-header.sticky {
-  top: 0;
-}
-
-footer.sticky {
-  bottom: 0;
-}
-
-/*
 	Definitions for forms and input elements.
 */
 form {
@@ -1161,6 +1044,123 @@ button.large, [type="button"].large, [type="submit"].large,
   border-radius: 4px;
   padding: 12px 18px;
   margin: 10px 8px;
+}
+
+/*
+	Definitions for navigation elements.
+*/
+header {
+  display: block;
+  height: 44px;
+  background: #2E3440;
+  color: #ECEFF4;
+  padding: 2px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+header .logo {
+  color: #ECEFF4;
+  font-size: 1.75em;
+  line-height: 1.2;
+  margin: 1px 6px 1px 1px;
+  padding: 3px 0 0;
+  transition: opacity 0.3s;
+}
+
+header button, header [type="button"],
+header a.button, header label.button, header .button,
+header a[role="button"], header label[role="button"], header [role="button"] {
+  background: #2E3440;
+  color: #ECEFF4;
+  vertical-align: top;
+  margin: 2px 0 0;
+  box-shadow: none;
+}
+
+header button:hover, header button:focus, header [type="button"]:hover, header [type="button"]:focus,
+header a.button:hover,
+header a.button:focus, header label.button:hover, header label.button:focus, header .button:hover, header .button:focus,
+header a[role="button"]:hover,
+header a[role="button"]:focus, header label[role="button"]:hover, header label[role="button"]:focus, header [role="button"]:hover, header [role="button"]:focus {
+  background: #37474f;
+}
+
+header .logo, header a.button, header a[role="button"] {
+  text-decoration: none;
+}
+
+nav {
+  display: block;
+  border: 1px solid #D8DEE9;
+  margin: 2px;
+  padding: 8px 8px 16px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+nav a, nav a:visited {
+  display: block;
+  color: #88C0D0;
+  text-decoration: none;
+}
+
+nav .sublink-1 {
+  padding-left: 12px;
+  position: relative;
+}
+
+nav .sublink-1:before {
+  position: absolute;
+  left: 3px;
+  top: -1px;
+  content: '';
+  height: 100%;
+  border: 1px solid #81A1C1;
+  border-left: 0;
+}
+
+nav .sublink-2 {
+  padding-left: 24px;
+  position: relative;
+}
+
+nav .sublink-2:before {
+  position: absolute;
+  left: 3px;
+  top: -1px;
+  content: '';
+  height: 100%;
+  border: 1px solid #81A1C1;
+  border-left: 0;
+}
+
+footer {
+  display: block;
+  background: #434C5E;
+  color: #ECEFF4;
+  margin: 18px 0 0;
+  padding: 22px 10px 12px;
+  font-size: 85%;
+}
+
+footer a, footer a:visited {
+  color: #88C0D0;
+}
+
+header.sticky, footer.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1101;
+}
+
+header.sticky {
+  top: 0;
+}
+
+footer.sticky {
+  bottom: 0;
 }
 
 /*

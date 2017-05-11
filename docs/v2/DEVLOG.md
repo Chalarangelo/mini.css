@@ -1136,3 +1136,4 @@
 	- `mini-lite` does not support it (in keeping with tradition of the lite flavor's decisions).
 	- `mini-nord` still uses `.alert`s instead of `.toast`s, maintainer should address after update, otherwise I will in the next patch or so.
 	- `mini-sucroa` does not support it (or `.alert` for that matter), might be addressed with author later down the line, for now it's ok to not have either.
+- Changed order of `input_control` and `navigation` for all flavors and documentation pages.

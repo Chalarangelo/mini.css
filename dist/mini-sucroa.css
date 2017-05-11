@@ -686,106 +686,6 @@ figcaption {
 }
 
 /*
-	Definitions for navigation elements.
-*/
-header {
-  display: block;
-  height: 48px;
-  background: #211423;
-  color: #fffddc;
-  padding: 3px 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-header .logo {
-  color: #fffddc;
-  font-size: 1.75em;
-  line-height: 1.5;
-  margin: 6px 6px 1px 1px;
-  padding: 6px 0 0;
-  transition: opacity 0.3s;
-}
-
-header button, header [type="button"],
-header a.button, header label.button, header .button,
-header a[role="button"], header label[role="button"], header [role="button"] {
-  background: #211423;
-  color: #fffddc;
-  vertical-align: top;
-  margin: 3px 0 0;
-  box-shadow: none;
-  border: 0;
-}
-
-header button:hover, header button:focus, header [type="button"]:hover, header [type="button"]:focus,
-header a.button:hover,
-header a.button:focus, header label.button:hover, header label.button:focus, header .button:hover, header .button:focus,
-header a[role="button"]:hover,
-header a[role="button"]:focus, header label[role="button"]:hover, header label[role="button"]:focus, header [role="button"]:hover, header [role="button"]:focus {
-  background: #493e4b;
-}
-
-header .logo, header a.button, header a[role="button"] {
-  text-decoration: none;
-}
-
-nav {
-  display: block;
-  background: #e8deff;
-  border: 1px solid #a9a2ba;
-  border-radius: 2px;
-  margin: 2px;
-  padding: 12px 10px 18px 22px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
-}
-
-nav a, nav a:visited {
-  display: block;
-  color: #6979c6;
-  text-decoration: none;
-}
-
-nav .sublink-1 {
-  padding-left: 14px;
-  position: relative;
-}
-
-nav .sublink-2 {
-  padding-left: 28px;
-  position: relative;
-}
-
-footer {
-  display: block;
-  background: #211423;
-  color: #fffddc;
-  margin: 22px 0 0;
-  padding: 24px 10px 14px;
-  font-size: 90%;
-}
-
-footer a, footer a:visited {
-  color: #7480b3;
-}
-
-header.sticky, footer.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 1101;
-}
-
-header.sticky {
-  top: 0;
-}
-
-footer.sticky {
-  bottom: 0;
-}
-
-/*
 	Definitions for forms and input elements.
 */
 form {
@@ -1150,6 +1050,106 @@ button.large, [type="button"].large, [type="submit"].large,
   border-radius: 4px;
   padding: 12px 18px;
   margin: 10px 8px;
+}
+
+/*
+	Definitions for navigation elements.
+*/
+header {
+  display: block;
+  height: 48px;
+  background: #211423;
+  color: #fffddc;
+  padding: 3px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+header .logo {
+  color: #fffddc;
+  font-size: 1.75em;
+  line-height: 1.5;
+  margin: 6px 6px 1px 1px;
+  padding: 6px 0 0;
+  transition: opacity 0.3s;
+}
+
+header button, header [type="button"],
+header a.button, header label.button, header .button,
+header a[role="button"], header label[role="button"], header [role="button"] {
+  background: #211423;
+  color: #fffddc;
+  vertical-align: top;
+  margin: 3px 0 0;
+  box-shadow: none;
+  border: 0;
+}
+
+header button:hover, header button:focus, header [type="button"]:hover, header [type="button"]:focus,
+header a.button:hover,
+header a.button:focus, header label.button:hover, header label.button:focus, header .button:hover, header .button:focus,
+header a[role="button"]:hover,
+header a[role="button"]:focus, header label[role="button"]:hover, header label[role="button"]:focus, header [role="button"]:hover, header [role="button"]:focus {
+  background: #493e4b;
+}
+
+header .logo, header a.button, header a[role="button"] {
+  text-decoration: none;
+}
+
+nav {
+  display: block;
+  background: #e8deff;
+  border: 1px solid #a9a2ba;
+  border-radius: 2px;
+  margin: 2px;
+  padding: 12px 10px 18px 22px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+nav a, nav a:visited {
+  display: block;
+  color: #6979c6;
+  text-decoration: none;
+}
+
+nav .sublink-1 {
+  padding-left: 14px;
+  position: relative;
+}
+
+nav .sublink-2 {
+  padding-left: 28px;
+  position: relative;
+}
+
+footer {
+  display: block;
+  background: #211423;
+  color: #fffddc;
+  margin: 22px 0 0;
+  padding: 24px 10px 14px;
+  font-size: 90%;
+}
+
+footer a, footer a:visited {
+  color: #7480b3;
+}
+
+header.sticky, footer.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1101;
+}
+
+header.sticky {
+  top: 0;
+}
+
+footer.sticky {
+  bottom: 0;
 }
 
 /*

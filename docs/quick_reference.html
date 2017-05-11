@@ -34,7 +34,7 @@
 		</header>
 		<header class="sticky" style="height:36px;">
 			<a href="#core" class="button">Core</a> <a href="#grid" class="button">Grid</a>
-			<a href="#navigation" class="button">Navigation</a> <a href="#input_control" class="button">Input Control</a>
+			<a href="#input_control" class="button">Input Control</a> <a href="#navigation" class="button">Navigation</a>
 			<a href="#table" class="button">Table</a> <a href="#card" class="button">Card</a>
 			<a href="#tab" class="button">Tab</a> <a href="#contextual" class="button">Contextual</a>
 			<a href="#progress" class="button">Progress</a> <a href="#utility" class="button">Utility</a>
@@ -367,95 +367,6 @@
           </div>
         </div>
       </div>
-      <div class="row" id="navigation">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
-          <div class="card fluid">
-            <div class="section"><h2><a href="navigation.html" target="_blank" class="button primary small"><i class="fa fa-compass fa-fw" aria-hidden="true"></i></a>&nbsp;Navigation</h2></div>
-            <div class="section row">
-              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Header <a href="https://codepen.io/chalarangelo/pen/NbewvB" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre>&lt;header&gt;
-  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt;
-  &lt;button&gt;Home&lt;/button&gt;
-  &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;News&lt;/a&gt;
-  &lt;span&gt;|&lt;/span&gt;
-  &lt;button&gt;About&lt;/button&gt;
-  &lt;button&gt;Contact&lt;/button&gt;
-&lt;/header&gt;</pre>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <h3>Notes</h3>
-                <ul>
-                  <li>Use the <code>.logo</code> class for the first child (either textual element or image)</li>
-                  <li>The rest of the elements inside the <code>&lt;header&gt;</code> must be button elements (i.e. <code>&lt;button&gt;</code>, <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;button&quot;</span>&gt;</code>, <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> or <code>.button</code>)</li>
-                  <li>Use <code>&lt;span&gt;</code> elements as separators</li>
-                  <li>You can mix buttons, links and labels inside the header, as long as all of them are styled as buttons</li>
-                  <li>The logo element should not be a <code>&lt;button&gt;</code> element or of the <code>.button</code> class</li>
-                  <li>Header is not displayed as fixed by default</li>
-                </ul>
-              </div>
-            </div>
-            <div class="section row">
-              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Navigation bar <a href="https://codepen.io/chalarangelo/pen/ENGbwa" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre>&lt;nav&gt;
-  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
-  &lt;span&gt;News&lt;/span&gt;
-  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;New Courses&lt;/a&gt;
-  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;Certifications&lt;/a&gt;
-  &lt;span class=&quot;sublink-1&quot;&gt;Events&lt;/span&gt;
-  &lt;a href=&quot;#&quot; class=&quot;sublink-2&quot;&gt;Course Showcase - 12th, Dec&lt;/a&gt;
-  &lt;a href=&quot;#&quot; class=&quot;sublink-2&quot;&gt;Staff AMA - 16th, Dec&lt;/a&gt;
-  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;Policy Update&lt;/a&gt;
-  &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
-  &lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;
-&lt;/nav&gt;</pre>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <h3>Notes</h3>
-                <ul>
-                  <li>Use <code>&lt;nav&gt;</code> element, populate it with links</li>
-                  <li>Use <code>.sublink-1</code> and <code>.sublink-2</code> classes to create subcategories in your navigation menu</li>
-                  <li>Combine the navigation bar with grid reordering to display aside from text on larger displays or at the bottom on smaller displays</li>
-                </ul>
-              </div>
-            </div>
-            <div class="section row">
-              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Footer <a href="https://codepen.io/chalarangelo/pen/dOwZVO" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre>&lt;footer&gt;
-  &lt;p&gt;&amp;copy; 2001-2016 Web Corporation | &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Terms of use&lt;/a&gt;&lt;/p&gt;
-&lt;/footer&gt;</pre>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <h3>Notes</h3>
-                <ul>
-                  <li>Simple syntax and structure, add content as normal</li>
-                </ul>
-              </div>
-            </div>
-			<div class="section row">
-              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Sticky headers and footers <a href="https://codepen.io/chalarangelo/pen/ZLVMzX" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre>&lt;header class=&quot;sticky&quot;&gt;
-  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt; &lt;button&gt;Home&lt;/button&gt; &lt;button&gt;About&lt;/button&gt;
-&lt;/header&gt;
-
-&lt;footer class=&quot;sticky&quot;&gt;
-  &lt;p&gt;&amp;copy; 2001-2016 Web Corporation | &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Terms of use&lt;/a&gt;&lt;/p&gt;
-&lt;/footer&gt;</pre>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <h3>Notes</h3>
-                <ul>
-                  <li>Use <code>.sticky</code> class to create</li>
-                  <li>Compatible with modern browsers, support for <a href="http://caniuse.com/#feat=css-sticky"><code>position:sticky</code></a> is growing</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="row" id="input_control">
         <div class="col-sm col-lg-10 col-lg-offset-1">
           <div class="card fluid">
@@ -566,6 +477,95 @@
                   <li>Link an <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code> element to a <code>&lt;label&gt;</code></li>
                   <li>The file button will not change text when uploading a file, Javascript may be required</li>
                   <li>Compatible with <code>.input-group</code></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="navigation">
+        <div class="col-sm col-lg-10 col-lg-offset-1">
+          <div class="card fluid">
+            <div class="section"><h2><a href="navigation.html" target="_blank" class="button primary small"><i class="fa fa-compass fa-fw" aria-hidden="true"></i></a>&nbsp;Navigation</h2></div>
+            <div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Header <a href="https://codepen.io/chalarangelo/pen/NbewvB" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;header&gt;
+  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt;
+  &lt;button&gt;Home&lt;/button&gt;
+  &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;News&lt;/a&gt;
+  &lt;span&gt;|&lt;/span&gt;
+  &lt;button&gt;About&lt;/button&gt;
+  &lt;button&gt;Contact&lt;/button&gt;
+&lt;/header&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Use the <code>.logo</code> class for the first child (either textual element or image)</li>
+                  <li>The rest of the elements inside the <code>&lt;header&gt;</code> must be button elements (i.e. <code>&lt;button&gt;</code>, <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;button&quot;</span>&gt;</code>, <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> or <code>.button</code>)</li>
+                  <li>Use <code>&lt;span&gt;</code> elements as separators</li>
+                  <li>You can mix buttons, links and labels inside the header, as long as all of them are styled as buttons</li>
+                  <li>The logo element should not be a <code>&lt;button&gt;</code> element or of the <code>.button</code> class</li>
+                  <li>Header is not displayed as fixed by default</li>
+                </ul>
+              </div>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Navigation bar <a href="https://codepen.io/chalarangelo/pen/ENGbwa" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;nav&gt;
+  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+  &lt;span&gt;News&lt;/span&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;New Courses&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;Certifications&lt;/a&gt;
+  &lt;span class=&quot;sublink-1&quot;&gt;Events&lt;/span&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-2&quot;&gt;Course Showcase - 12th, Dec&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-2&quot;&gt;Staff AMA - 16th, Dec&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;Policy Update&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Use <code>&lt;nav&gt;</code> element, populate it with links</li>
+                  <li>Use <code>.sublink-1</code> and <code>.sublink-2</code> classes to create subcategories in your navigation menu</li>
+                  <li>Combine the navigation bar with grid reordering to display aside from text on larger displays or at the bottom on smaller displays</li>
+                </ul>
+              </div>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Footer <a href="https://codepen.io/chalarangelo/pen/dOwZVO" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2001-2016 Web Corporation | &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Terms of use&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Simple syntax and structure, add content as normal</li>
+                </ul>
+              </div>
+            </div>
+			<div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Sticky headers and footers <a href="https://codepen.io/chalarangelo/pen/ZLVMzX" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;header class=&quot;sticky&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt; &lt;button&gt;Home&lt;/button&gt; &lt;button&gt;About&lt;/button&gt;
+&lt;/header&gt;
+
+&lt;footer class=&quot;sticky&quot;&gt;
+  &lt;p&gt;&amp;copy; 2001-2016 Web Corporation | &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Terms of use&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Use <code>.sticky</code> class to create</li>
+                  <li>Compatible with modern browsers, support for <a href="http://caniuse.com/#feat=css-sticky"><code>position:sticky</code></a> is growing</li>
                 </ul>
               </div>
             </div>

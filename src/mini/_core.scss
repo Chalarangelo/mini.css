@@ -3,11 +3,11 @@
 */
 $apply-defaults-to-all: 			true !default;				// Should default values be applied to all elements? (`true`/`false`).
 $base-root-font-size:					16px !default;				// Root font sizing for all elements - Should only be specified in `px` units!
-$use-fluid-typography:				true !default;				// Should fluid typography be used at the root element? (`true`/`false`)
-$fluid-type-start-breakpoint:	256px !default;				// Breakpoint where fluid typography scaling starts.
-$fluid-type-end-breakpoint:		768px !default;				// Breakpoint where fluid typography scaling ends.
+$use-fluid-typography:				false !default;				// Should fluid typography be used at the root element? (`true`/`false`)
+$fluid-type-start-breakpoint:	320px !default;				// Breakpoint where fluid typography scaling starts.
+$fluid-type-end-breakpoint:		1600px !default;			// Breakpoint where fluid typography scaling ends.
 $fluid-type-small-type:				14px !default;				// Smallest root font size for fluid typography.
-$fluid-type-large-type:				16px !default;				// Largest root font size for fluid typography.
+$fluid-type-large-type:				18px !default;				// Largest root font size for fluid typography.
 $include-dfn-fix: 						true !default;				// Fix display of <dfn> element in older versions of Android.
 $make-heading-smalltext-block:false !default;				// Should <small> elements in headings be displayed as blocks (`true`/`false`).
 $horizontal-rule-fancy-style: false !default;				// Should a fancy styling be applied for the <hr> element (`true`/`false`).

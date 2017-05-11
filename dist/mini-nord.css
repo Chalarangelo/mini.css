@@ -1092,6 +1092,10 @@ header .logo, header a.button, header a[role="button"] {
   text-decoration: none;
 }
 
+header.row {
+  box-sizing: content-box;
+}
+
 nav {
   display: block;
   border: 1px solid #D8DEE9;

@@ -1140,3 +1140,4 @@
 - Thoroughly tested fluid typography and updated the `core` module with the required variables and flags. This added a little bit of extra size to the framework, but it seems worthwhile as it scales a bit better on smaller screens, so that there is slightly more real estate for content.
 - Updated all flavors for fluid typography (basically only `default` and `dark` actually use it for now).
 - Updated `core` module documentation and customization documentation to explain fluid typography.
+- Fixed the `header` element bug that didn't allow them to work well with the `.row` class for responsive layouts. They should now display as expected.

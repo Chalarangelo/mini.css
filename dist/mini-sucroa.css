@@ -1099,6 +1099,10 @@ header .logo, header a.button, header a[role="button"] {
   text-decoration: none;
 }
 
+header.row {
+  box-sizing: content-box;
+}
+
 nav {
   display: block;
   background: #e8deff;

@@ -20,6 +20,8 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 // Policy for below external flag is `ALWAYS_TRUE`. This is done due to links being underlined by default and as a safeguard from ugly branding.
 $apply-link-underline:		true !default;						// [External flag - core] Should underlining be applied to <a> elements? (`true`/`false`)
 $style-link-active-state:		false !default;					// [External flag - core] Should the :active state of <a> elements be stylized, same as the :hover state (`true`/`false`).
+// The below variable is used to fix the display problem of the <header> element when used as a responsive row
+$grid-row-name:								'row' !default;				// [External flag - grid] Class name for the grid system rows.
 $button-class-name:				'button' !default;				// [External variable - input_control] Name of the button-like element styling class.
 $button-box-shadow:0 1px 3px rgba(0,0,0, 0.1) !default;// [External variable - input_control] Value of button's box-shadow.
 $button-border-style: 1px solid transparent !default;	// [External variable - input_control] Value of button's border-style.
@@ -101,6 +103,10 @@ header {
 		.#{$header-logo-name}, a.#{$button-class-name}, a[role="button"] {
 			text-decoration: none;
 		}
+	}
+	// Fix for responsive header, using the grid system's row and column alignment.
+	&.#{$grid-row-name} {
+		box-sizing: content-box;
 	}
 }
 // Navigation sidebar styling.

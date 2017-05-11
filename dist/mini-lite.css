@@ -997,6 +997,10 @@ header .logo, header a.button, header a[role="button"] {
   text-decoration: none;
 }
 
+header.row {
+  box-sizing: content-box;
+}
+
 footer {
   display: block;
   background: #192024;

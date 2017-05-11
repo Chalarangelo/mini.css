@@ -1122,3 +1122,11 @@
 - Deprecated `.alert` and all that comes with it, updated flavors to reflect this. I will update all docs after commiting, just to be on the safe side. By the way, `mini-default` is now `6.12KB` without the deprecated components and with a few of the additions already built-in. Pretty happy with how it's coming along right now!
 - Updated docs just barely to make sure that the new `.toast` component will easily find a suitable home in them.
 - Implemented `.toast` quite quickly and without doing too much work on it, seems to work pretty well. Documentation, mixins and customization not yet done.
+
+## 20170511
+
+- Added `.toast` mixins to make them customizable.
+- Added `.large` and `.small` size variants for `.toast` elements.
+- Added `z-index` to `.toast` elements, so that they display above everything else so far.
+- Documented `.toast` changes in their page. Updated the documentation in `quick_reference`. Created related codepen (bit fiddly but should be ok).
+- Updated `customization` for the new `.toast` component, fixed some mistakes I found in the `customization/contextual.html` page.

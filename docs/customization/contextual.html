@@ -150,13 +150,12 @@
 				</div>
 			</div>
 
-			<!-- TODO -->
 			<div class="row" id="toasts">
 				<div class="col-sm-12">
 					<div class="card fluid">
 						<div class="section"><h2>Toasts</h2></div>
 						<div class="section">
-							<p>The <strong>contextual</strong> module's contains custom classes and styles for defining alerts.</p><br/>
+							<p>The <strong>contextual</strong> module's contains custom classes and styles for defining toast messages.</p><br/>
 							<table style="width: 100%" class="striped">
 								<caption>Variables</caption>
 								<thead>
@@ -164,53 +163,39 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td data-label="Variable">$alert-name</td><td data-label="Type">String</td>
-										<td data-label="Description">Class name for alert components</td><td data-label="Sample value">'alert'</td>
+										<td data-label="Variable">$toast-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for toast components</td><td data-label="Sample value">'toast'</td>
 									</tr>
 									<tr>
-										<td data-label="Variable">$alert-back-color</td><td data-label="Type">Color</td>
-										<td data-label="Description">Background color for alert components</td><td data-label="Sample value">#eeeeee</td>
+										<td data-label="Variable">$toast-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for toast components</td><td data-label="Sample value">#424242</td>
 									</tr>
 									<tr>
-										<td data-label="Variable">$alert-fore-color</td><td data-label="Type">Color</td>
-										<td data-label="Description">Text color for alert components</td><td data-label="Sample value">$fore-color</td>
+										<td data-label="Variable">$toast-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Text color for toast components</td><td data-label="Sample value">$fore-color</td>
 									</tr>
 									<tr>
-										<td data-label="Variable">$alert-border-style</td><td data-label="Type">Border</td>
-										<td data-label="Description">Border style for alert components</td><td data-label="Sample value">1px solid #bdbdbd</td>
+										<td data-label="Variable">$toast-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for toast components</td><td data-label="Sample value">1px solid #bdbdbd</td>
 									</tr>
 									<tr>
-										<td data-label="Variable">$alert-border-radius</td><td data-label="Type">Border radius</td>
-										<td data-label="Description">Border radius for alert components</td><td data-label="Sample value">2px</td>
+										<td data-label="Variable">$toast-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for toast components</td><td data-label="Sample value">8px</td>
 									</tr>
 									<tr>
-										<td data-label="Variable">$alert-padding</td><td data-label="Type">Padding</td>
-										<td data-label="Description">Padding for alert components</td><td data-label="Sample value">12px 16px</td>
+										<td data-label="Variable">$toast-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for toast components</td><td data-label="Sample value">12px 16px</td>
 									</tr>
 									<tr>
-										<td data-label="Variable">$alert-margin</td><td data-label="Type">Margin</td>
-										<td data-label="Description">Margin for alert components</td><td data-label="Sample value">6px</td>
+										<td data-label="Variable">$toast-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for toast components</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
 									</tr>
 									<tr>
-										<td data-label="Variable">$alert-box-shadow</td><td data-label="Type">Box shadow</td>
-										<td data-label="Description">Box shadow for alert components</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
-									</tr>
-									<tr>
-										<td data-label="Variable">$alert-include-animated</td><td data-label="Type">Logical</td>
-										<td data-label="Description">Enables animated alert components<sup><a href="#alert-note-one">1</a></sup></td><td data-label="Sample value">true</td>
-									</tr>
-									<tr>
-										<td data-label="Variable">$alert-animated-class</td><td data-label="Type">String</td>
-										<td data-label="Description">Class name for animated alert components<sup><a href="#alert-note-one">1</a></sup></td><td data-label="Sample value">'animated'</td>
+										<td data-label="Variable">$toast-bottom</td><td data-label="Type">Position bottom</td>
+										<td data-label="Description">Position bottom for toast components</td><td data-label="Sample value">20px</td>
 									</tr>
 								</tbody>
 							</table><br/>
-						</div>
-						<div class="section">
-							<h3>Notes:</h3>
-							<ol>
-								<li id="alert-note-one">The value of <code>$alert-animated-class</code> will only be used if <code>$alert-include-animated</code> is set to <code class="fore-tertiary">true</code>.</li>
-							</ol>
 						</div>
 					</div>
 				</div>
@@ -372,7 +357,7 @@
 					<div class="card fluid">
 						<div class="section"><h2>Toast mixins</h2></div>
 						<div class="section">
-							<p>The <strong>contextual</strong> module contains a couple of mixins for adding custom styles to alerts (color and style variants).</p><br/>
+							<p>The <strong>contextual</strong> module contains a couple of mixins for adding custom styles to toasts (color and style variants).</p><br/>
 							<table style="width: 100%" class="striped">
 								<caption>Mixin definitions</caption>
 								<thead>
@@ -380,72 +365,68 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td data-label="Mixin">make-alert-alt-color (<span class="fore-primary">$alert-alt-name</span>, <span class="fore-primary">$alert-alt-back-color</span>, <span class="fore-tertiary">$alert-alt-fore-color</span>)</td>
-										<td data-label="Description">Creates a new alert color variant using the specified values.</td>
+										<td data-label="Mixin">make-toast-alt-color (<span class="fore-primary">$toast-alt-name</span>, <span class="fore-primary">$toast-alt-back-color</span>, <span class="fore-tertiary">$toast-alt-fore-color</span>)</td>
+										<td data-label="Description">Creates a new toast color variant using the specified values.</td>
 									</tr>
 									<tr>
-										<td data-label="Mixin">make-alert-alt-style (<span class="fore-primary">$alert-alt-name</span>, <span class="fore-primary">$alert-alt-border-style</span>, <span class="fore-primary">$alert-alt-border-radius</span>, <span class="fore-tertiary">$alert-alt-padding</span>, <span class="fore-tertiary">$alert-alt-margin</span>, <span class="fore-tertiary">$alert-alt-box-shadow</span>)</td>
-										<td data-label="Description">Creates a new alert style variant using the specified values.</td>
+										<td data-label="Mixin">make-toast-alt-style (<span class="fore-primary">$toast-alt-name</span>, <span class="fore-primary">$toast-alt-border-style</span>, <span class="fore-primary">$toast-alt-border-radius</span>, <span class="fore-tertiary">$toast-alt-padding</span>, <span class="fore-tertiary">$toast-alt-box-shadow</span>)</td>
+										<td data-label="Description">Creates a new toast style variant using the specified values.</td>
 									</tr>
 								</tbody>
 							</table><br/>
 							<table style="width: 100%" class="striped">
-								<caption style="font-family: monospace, monospace">make-alert-alt-color</caption>
+								<caption style="font-family: monospace, monospace">make-toast-alt-color</caption>
 								<thead>
 									<tr><th>Parameter</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td data-label="Parameter">$alert-alt-name</td><td data-label="Type">String</td>
-										<td data-label="Description">Class name for the alert color variant</td><td data-label="Sample value">'urgent'</td>
+										<td data-label="Parameter">$toast-alt-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the toast color variant</td><td data-label="Sample value">'warning'</td>
 									</tr>
 									<tr>
-										<td data-label="Parameter">$alert-alt-back-color</td><td data-label="Type">Color</td>
-										<td data-label="Description">Background color for the alert color variant</td><td data-label="Sample value">#ffca28</td>
+										<td data-label="Parameter">$toast-alt-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for the toast color variant</td><td data-label="Sample value">#ffca28</td>
 									</tr>
 									<tr>
-										<td data-label="Parameter">$alert-alt-fore-color</td><td data-label="Type">Color</td>
-										<td data-label="Description">(Optional) Text color for the alert color variant</td><td data-label="Sample value">#212121</td>
+										<td data-label="Parameter">$toast-alt-fore-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">(Optional) Text color for the toast color variant</td><td data-label="Sample value">#212121</td>
 									</tr>
 								</tbody>
 							</table><br/>
 							<h3>Sample usage</h3>
-							<pre><span class="fore-secondary">@include</span> <span class="fore-primary">make-alert-alt-color</span> ('urgent', #ffca28, #212121);</pre>
+							<pre><span class="fore-secondary">@include</span> <span class="fore-primary">make-toast-alt-color</span> ('warning', #ffca28, #212121);</pre>
 							<br/>
 							<table style="width: 100%" class="striped">
-								<caption style="font-family: monospace, monospace">make-alert-alt-style</caption>
+								<caption style="font-family: monospace, monospace">make-toast-alt-style</caption>
 								<thead>
 									<tr><th>Parameter</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td data-label="Parameter">$alert-alt-name</td><td data-label="Type">String</td>
-										<td data-label="Description">Class name for the alert style variant</td><td data-label="Sample value">'urgent'</td>
+										<td data-label="Parameter">$toast-alt-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the toast style variant</td><td data-label="Sample value">'small'</td>
 									</tr>
 									<tr>
-										<td data-label="Parameter">$alert-alt-border-style</td><td data-label="Type">Border</td>
-										<td data-label="Description">Border style for the alert style variant</td><td data-label="Sample value">1px solid #ff8f00</td>
+										<td data-label="Parameter">$toast-alt-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for the toast style variant</td><td data-label="Sample value">1px solid #bdbdbd</td>
 									</tr>
 									<tr>
-										<td data-label="Parameter">$alert-alt-border-radius</td><td data-label="Type">Border radius</td>
-										<td data-label="Description">Border radius for the alert style variant</td><td data-label="Sample value">2px</td>
+										<td data-label="Parameter">$toast-alt-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for the toast style variant</td><td data-label="Sample value">6px</td>
 									</tr>
 									<tr>
-										<td data-label="Parameter">$alert-alt-padding</td><td data-label="Type">Padding</td>
-										<td data-label="Description">Padding for the alert style variant</td><td data-label="Sample value">12px 16px</td>
+										<td data-label="Parameter">$toast-alt-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">(Optional) Padding for the toast style variant</td><td data-label="Sample value">9px 12px</td>
 									</tr>
 									<tr>
-										<td data-label="Parameter">$alert-alt-margin</td><td data-label="Type">Margin</td>
-										<td data-label="Description">Margin for the alert style variant</td><td data-label="Sample value">6px</td>
-									</tr>
-									<tr>
-										<td data-label="Parameter">$alert-alt-box-shadow</td><td data-label="Type">Margin</td>
-										<td data-label="Description">Box shadow for the alert style variant</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+										<td data-label="Parameter">$toast-alt-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">(Optional) Box shadow for the toast style variant</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
 									</tr>
 								</tbody>
 							</table><br/>
 							<h3>Sample usage</h3>
-							<pre><span class="fore-secondary">@include</span> <span class="fore-primary">make-alert-alt-style</span> ('urgent', 1px solid #ff8f00, 2px, 12px 16px, 6px, 6px, 0 1px 3px rgba(0,0,0, 0.1));</pre>
+							<pre><span class="fore-secondary">@include</span> <span class="fore-primary">make-toast-alt-style</span> ('small', 1px solid #bdbdbd, 6px, 9px 12px, 0 1px 3px rgba(0,0,0, 0.1));</pre>
 							<br/>
 						</div>
 					</div>
@@ -517,11 +498,11 @@
 									</tr>
 									<tr>
 										<td data-label="Parameter">$tooltip-alt-padding</td><td data-label="Type">Padding</td>
-										<td data-label="Description">Padding for the tooltip style variant</td><td data-label="Sample value">15px 20px</td>
+										<td data-label="Description">(Optional) Padding for the tooltip style variant</td><td data-label="Sample value">15px 20px</td>
 									</tr>
 									<tr>
-										<td data-label="Parameter">$tooltip-alt-box-shadow</td><td data-label="Type">Margin</td>
-										<td data-label="Description">Box shadow for the tooltip style variant</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+										<td data-label="Parameter">$tooltip-alt-box-shadow</td><td data-label="Type">Box Shadow</td>
+										<td data-label="Description">(Optional) Box shadow for the tooltip style variant</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
 									</tr>
 								</tbody>
 							</table><br/>

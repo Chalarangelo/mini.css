@@ -48,6 +48,51 @@
 		}
 	}
 }
+// Mixin for alternate toast (toast color variants).
+// Variables:
+// - $toast-alt-name : The name of the class used for the alternate toast.
+// - $toast-alt-back-color : The background color of the alternate toast.
+// - $toast-alt-fore-color : (Optional) The text color of the alternate mark. Defaults to the text color of the toast.
+@mixin make-toast-alt-color ($toast-alt-name, $toast-alt-back-color, $toast-alt-fore-color: $toast-fore-color) {
+	@if not ($include-toast) {
+		@error "Contextual module's toast mixins are only available if toasts are enabled. Set '$include-toast' to 'true' and try again!";
+	}
+	.#{$toast-name}.#{$toast-alt-name} {
+		@if $toast-alt-back-color != $toast-back-color {
+			background: $toast-alt-back-color;
+		}
+		@if $toast-alt-fore-color != $toast-fore-color {
+			color: $toast-alt-fore-color;
+		}
+	}
+}
+// Mixin for alternate toast styles (toast style variants).
+// Variables:
+// - $toast-alt-name : The name of the class used for the alternate toast style.
+// - $toast-alt-border-style : The border style of the alternate toast style.
+// - $toast-alt-border-radius : Border radius of the alternate toast style.
+// - $toast-alt-padding : (Optional) Padding of the alternate toast style. Defaults to the toast's padding.
+// - $toast-alt-box-shadow : (Optional) Box shadow of the alretnate toast style. Defaults to the toast's box shadow.
+@mixin make-toast-alt-style ($toast-alt-name, $toast-alt-border-style, $toast-alt-border-radius,
+	$toast-alt-padding : $toast-padding, $toast-alt-box-shadow : $toast-box-shadow) {
+	@if not ($include-toast) {
+		@error "Contextual module's toast mixins are only available if toasts are enabled. Set '$include-toast' to 'true' and try again!";
+	}
+	.#{$toast-name}.#{$toast-alt-name} {
+		@if $toast-alt-border-style != $toast-border-style {
+			border: $toast-alt-border-style;
+		}
+		@if $toast-alt-border-radius != $toast-border-radius {
+			border-radius: $toast-alt-border-radius;
+		}
+		@if $toast-alt-padding != $toast-padding {
+			padding: $toast-alt-padding;
+		}
+		@if $toast-alt-box-shadow != $toast-box-shadow {
+			box-shadow: $toast-alt-box-shadowbox-shadow;
+		}
+	}
+}
 // Mixin for alternate tooltip (tooltip color variants).
 // Variables:
 // - $tooltip-alt-name : The name of the class used for the alternate tooltip.
@@ -55,7 +100,7 @@
 // - $tooltip-alt-fore-color : (Optional) The text color of the alternate mark. Defaults to the text color of the tooltip.
 @mixin make-tooltip-alt-color ($tooltip-alt-name, $tooltip-alt-back-color, $tooltip-alt-fore-color: $tooltip-fore-color) {
 	@if not ($include-tooltip) {
-		@error "Contextual module's tooltip mixins are only available if tooltips are enabled. Set '$include-tooltips' to 'true' and try again!";
+		@error "Contextual module's tooltip mixins are only available if tooltips are enabled. Set '$include-tooltip' to 'true' and try again!";
 	}
 	.#{$tooltip-name}.#{$tooltip-alt-name} {
 		@if $tooltip-alt-back-color != $tooltip-back-color {
@@ -86,7 +131,7 @@
 @mixin make-tooltip-alt-style ($tooltip-alt-name, $tooltip-alt-tail-size, $tooltip-alt-border-radius,
 	$tooltip-alt-padding : $tooltip-padding, $tooltip-alt-box-shadow : $tooltip-box-shadow) {
 	@if not ($include-tooltip) {
-		@error "Contextual module's tooltip mixins are only available if tooltips are enabled. Set '$include-tooltips' to 'true' and try again!";
+		@error "Contextual module's tooltip mixins are only available if tooltips are enabled. Set '$include-tooltip' to 'true' and try again!";
 	}
 	.#{$tooltip-name}.#{$tooltip-alt-name} {
 		@if $tooltip-alt-tail-size != $tooltip-tail-size {

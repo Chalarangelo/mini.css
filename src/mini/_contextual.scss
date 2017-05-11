@@ -71,7 +71,7 @@ mark {
 		@if $toast-box-shadow != none {
 			box-shadow: $toast-box-shadow;
 		}
-		z-index: 1110;
+		z-index: 1111;
 	}
 }
 // Default styling for tooltips. Use mixins for alternate styles

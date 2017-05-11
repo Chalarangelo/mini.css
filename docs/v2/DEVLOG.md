@@ -1142,3 +1142,4 @@
 - Updated `core` module documentation and customization documentation to explain fluid typography.
 - Fixed the `header` element bug that didn't allow them to work well with the `.row` class for responsive layouts. They should now display as expected.
 - Disabled fluid typography by default, it needs more testing and the `14px` font in smaller screens doesn't sit well with me. The feature is still there for those who want it.
+- Implemented `.drawer` component along with everything that it needs. Documentation pending.

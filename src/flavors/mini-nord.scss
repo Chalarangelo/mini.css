@@ -412,6 +412,7 @@ $mark-style2-border-radius:		2px;									// Border radius for <mark> style 2
 $mark-style2-padding:			5px;											// Padding for <mark> style 2
 $mark-style2-font-size:			100%;										// Font size for <mark> style 2
 $mark-style2-line-height:		1.35;										// Line height for <mark> style 2
+$include-toast:							false;									// Should the toast component be included? (`true`/`false`)
 $include-alerts:						true;										// Should the alert component be included? (`true`/`false`)
 $alert-name:					'alert';											// Class name for alerts
 $alert-back-color:				#ECEFF4;									// Background color for alerts

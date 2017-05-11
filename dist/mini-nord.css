@@ -1630,7 +1630,7 @@ table.striped tr:nth-of-type(2n) > td {
 }
 
 /*
-	Definitions for contextual background elements and alerts.
+	Definitions for contextual background elements, toasts and tooltips.
 */
 mark {
   background: #5E81AC;

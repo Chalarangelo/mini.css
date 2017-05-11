@@ -1173,7 +1173,7 @@ table th:first-child, table td:first-child {
 }
 
 /*
-	Definitions for contextual background elements and alerts.
+	Definitions for contextual background elements, toasts and tooltips.
 */
 mark {
   background: #0277bd;

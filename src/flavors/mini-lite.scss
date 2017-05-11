@@ -335,12 +335,12 @@ $mark-style2-border-radius:	2px;										// Border radius for <mark> style 2
 $mark-style2-padding:				0.375em;								// Padding for <mark> style 2
 $mark-style2-font-size:			1em;										// Font size for <mark> style 2
 $mark-style2-line-height:		1.375em;								// Line height for <mark> style 2
-$include-alerts:						false;									// [Hidden flag override] Should alerts be included? (`true`/`false``) [1]
+$include-toast:							false;									// [Hidden flag override] Should toasts be included? (`true`/`false``) [1]
 $include-tooltip:						false;									// Should tooltips be included? (`true`/`false`) [1]
 // 	Notes:
-// [1] - Due to the value of $include-tooltip being set to `false`, no styling
-// is provided for this element. If you want to enable it, please refer to a
-// full flavor file for variable definitions.
+// [1] - Due to the values of $include-toast and $include-tooltip being set to `false`,
+//	no styling is provided for these elements. If you want to enable them, please
+//	refer to a full flavor file for variable definitions.
 //	Variables for progress elements and spinners
 $progress-back-color:					#e0e0e0;							// Background color for <progress>
 $progress-fore-color:					#0277bd;							// Progress bar color for <progress>

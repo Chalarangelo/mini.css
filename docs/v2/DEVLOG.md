@@ -1130,3 +1130,9 @@
 - Added `z-index` to `.toast` elements, so that they display above everything else so far.
 - Documented `.toast` changes in their page. Updated the documentation in `quick_reference`. Created related codepen (bit fiddly but should be ok).
 - Updated `customization` for the new `.toast` component, fixed some mistakes I found in the `customization/contextual.html` page.
+- Updated flavors for `.toast`:
+	- `mini-default` fully supports it.
+	- `mini-dark` fully supports it.
+	- `mini-lite` does not support it (in keeping with tradition of the lite flavor's decisions).
+	- `mini-nord` still uses `.alert`s instead of `.toast`s, maintainer should address after update, otherwise I will in the next patch or so.
+	- `mini-sucroa` does not support it (or `.alert` for that matter), might be addressed with author later down the line, for now it's ok to not have either.

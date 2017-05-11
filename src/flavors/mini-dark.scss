@@ -404,6 +404,22 @@ $mark-style2-border-radius:	2px;										// Border radius for <mark> style 2
 $mark-style2-padding:				0.375em;								// Padding for <mark> style 2
 $mark-style2-font-size:			1em;										// Font size for <mark> style 2
 $mark-style2-line-height:		1.375em;								// Line height for <mark> style 2
+$toast-name:								'toast';								// Class name for toast component
+$toast-bottom:							1.5rem;									// Bottom position for toasts
+$toast-back-color:					#acacac;								// Background color for toasts
+$toast-fore-color:					#0c0c0c;								// Text color for toasts
+$toast-border-style:				0;											// Border style for toasts
+$toast-border-radius:				2rem;										// Border radius for toasts
+$toast-padding:							0.75rem 1.5rem;					// Padding for toasts
+$toast-box-shadow:					none;										// Box shadow for toasts
+$toast-style1-name:					'small';								// Class name for toast style 1
+$toast-style1-border-style:	0;											// Border style for toast style 1
+$toast-style1-border-radius:1.5rem;									// Border radius for toast style 1
+$toast-style1-padding:			0.5rem 1rem;								// Padding for toast style 1
+$toast-style2-name:					'large';								// Class name for toast style 2
+$toast-style2-border-style:	0;											// Border style for toast style 2
+$toast-style2-border-radius:3rem;										// Border radius for toast style 2
+$toast-style2-padding:			1.125rem 2.25rem;				// Padding for toast style 2
 $include-tooltip:						true;										// Should tooltips be included? (`true`/`false`) [1]
 $tooltip-name:							'tooltip';							// Class name for the tooltip component
 $tooltip-back-color:				$fore-color;						// Background color for tooltips
@@ -539,6 +555,10 @@ $include-center-block-name:		false;								// Should center block be included? (
 	$mark-style1-border-radius, $mark-style1-padding);
 @include make-mark-alt-style ($mark-style2-name, $mark-style2-border-style,
 	$mark-style2-border-radius, $mark-style2-padding, $mark-style2-font-size, $mark-style2-line-height);
+@include make-toast-alt-style($toast-style1-name, $toast-style1-border-style,
+	$toast-style1-border-radius, $toast-style1-padding);
+@include make-toast-alt-style($toast-style2-name, $toast-style2-border-style,
+	$toast-style2-border-radius, $toast-style2-padding);
 @import '../mini/progress';
 /*
 	Custom elements for progress elements and spinners.

@@ -1167,7 +1167,7 @@ footer.sticky {
 .drawer {
   display: block;
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 320px;
   height: 100vh;
@@ -1191,7 +1191,7 @@ footer.sticky {
 
 .drawer .close {
   position: absolute;
-  top: 0.25rem;
+  top: 0.75rem;
   right: 0.25rem;
   z-index: 1111;
   padding: 0;
@@ -1206,7 +1206,8 @@ footer.sticky {
 @media screen and (min-width: 768px) {
   .drawer:not(.persistent) {
     position: static;
-    height: calc(100vh - 3rem);
+    height: 100%;
+    z-index: 1100;
   }
   .drawer-toggle:not(.persistent) {
     display: none;

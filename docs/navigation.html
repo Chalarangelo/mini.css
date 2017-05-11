@@ -86,7 +86,7 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Menus and navigation are some of the most important elements for any website or web app and their design and ease-of-use are key factors that can determine a page's bounce rates. The <strong>navigation</strong> module takes a step back from all the complicated menu and navigation design paradigms of the modern web, like dropdown menus and hamburger buttons, and tries to reinvent the basics for page navigation using HTML5 elements (i.e. <code>header</code>, <code>nav</code> and <code>footer</code>) and make navigation fully accessible for screen readers. Instead of sticking to either horizontal navigation menus (headers) or vertical menus (sidebars), we opted to allow the use of both for different things. Header menus are designed to stand out and contain links to help users find new content, whereas vertical navigation aims to provide a more traditional navigation menu that maps out your website's structure. Finally, footers are also part of the <strong>navigation</strong> module, as they can often provide the user with useful information and/or links that are very important to enhancing their experience.</p><br>
+              <p>Menus and navigation are some of the most important elements for any website or web app and their design and ease-of-use are key factors that can determine a page's bounce rates. The <strong>navigation</strong> module takes a step back from the complicated menu and navigation design paradigms of the modern web, using HTML5 elements (i.e. <code>header</code>, <code>nav</code> and <code>footer</code>) for basic navigation, while providing fully accessibility for screen readers. Apart from the simple horizontal navigation (headers) and vertical menus (sidebars), we opted to add a responsive slide-in drawer menu that works well with any page layout. Finally, footers are also part of the <strong>navigation</strong> module, as they can often provide the user with useful information and/or links that are very important to enhancing their experience.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
@@ -202,6 +202,72 @@
   &lt;/nav&gt;
 &lt;/div&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;We strongly recommend using the <code>&lt;nav&gt;</code> element in combination with the <a href="grid.html"><strong>grid</strong></a> module to make your layouts more responsive. For example, you could make your sidebar appear on the left side of your content in medium-sized and larger screens, but move to the very bottom of your content on smaller screens.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+			<div class="row" id="drawer">
+        <div class="col-sm-12">
+          <div class="card fluid">
+            <div class="section"><h2>Drawer</h2></div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
+              <div style="height: 15rem;"><br>
+								<style>.drawer.demo { position: absolute; height: 15rem; z-index: 0; top: 6.625rem; height: 12.5rem;} [type="checkbox"]:checked + .drawer.demo { z-index: 1001; margin-left: 0.75rem;}</style>
+                <header><label for="demo-toggle" class="button drawer-toggle persistent"></label></header> <br>
+								<input type="checkbox" id="demo-toggle"> <nav class="drawer demo persistent">
+								<label for="demo-toggle" class="close"></label><a href="#">Home</a> <span>News</span>
+								<a href="#" class="sublink-1">New Courses</a> <a href="#" class="sublink-1">Certifications</a>
+								<span class="sublink-1">Events</span> <a href="#" class="sublink-2">Course Showcase - 12th, Dec</a>
+								<a href="#" class="sublink-2">Staff AMA - 16th, Dec</a> <a href="#" class="sublink-1">Policy Update</a>
+								<a href="#">About</a> <a href="#">Contact</a><br/></nav>
+            </div>
+              </div>
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
+                <p>The drawer component is used to create responsive and collapsible navigation menus. To create the drawer system, follow the steps presented below:</p>
+								<ul>
+									<li>Inside your <code>&lt;header&gt;</code> element, add a <code>&lt;label&gt;</code> element with the <code>.drawer-toggle</code> class (remember to add the <code>.button</code> class to apply the necessary styles).</li>
+									<li>Create an <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code> element. Give it an <code class="fore-secondary">id</code> to be able to link it to the necessary interactive elements.</li>
+									<li>Immediately after the previous <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code>, create a <code>&lt;div&gt;</code> element with the <code>.drawer</code> class. This is where you will put your menu's contents.</li>
+									<li>Add an empty <code>&lt;label&gt;</code> element inside your <code>.drawer</code>, adding the <code>.close</code> class to it.</li>
+									<li>Finally, link the <code>.drawer-toggle</code> and <code>.close</code> elements to the <code class="fore-secondary">id</code> of your <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code>.</li>
+								</ul>
+								<p>Drawers are responsive and will expand into normal containers on larger screens. If you want to avoid this, add the <code>.persistent</code> class to both your <code>.drawer-toggle</code> and <code>.drawer</code> elements. You can also change the position of the drawer from the left side of the screen to the right by applying the <code>.right</code> class to your <code>.drawer</code> element.</p>
+                <h3>Sample code</h3>
+                <pre>&lt;header&gt;
+  &lt;label for=&quot;drawer-checkbox&quot; class=&quot;button&quot;&gt;&lt;/label&gt;
+&lt;/header&gt;
+
+&lt;input type=&quot;checkbox&quot; id=&quot;drawer-checkbox&quot;&gt;
+&lt;div class=&quot;drawer&quot;&gt;
+  &lt;label for=&quot;drawer-checkbox&quot; class=&quot;close&quot;&gt;&lt;/label&gt;
+  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+&lt;/div&gt;</pre>
+              </div>
+            </div>
+            <div class="section">
+            <h3>Notes</h3>
+              <ul>
+                <li>The <code>.drawer</code> component can be easily and effectively combined with the <a href="grid.html"><strong>grid</strong></a> module's system and classes to create fully responsive navigation menus.</li>
+                <li>It's best to use the <code>.drawer</code> component in combination with a <code>&lt;header&gt;</code> element that has the <code>.sticky</code> class (check the last section of this page).</li>
+              </ul><hr>
+							<div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <pre>&lt;div class=&quot;drawer&quot;&gt;
+  &lt;label for=&quot;drawer-checkbox&quot; class=&quot;close&quot;&gt;&lt;/label&gt;
+  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+&lt;/div&gt;</pre>
+                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can apply the <code>.drawer</code> class to a <code>&lt;nav&gt;</code> element, effectively making your page's navigation menu collapse on smaller screen sizes.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
+                  <pre>&lt;input type=&quot;checkbox&quot; id=&quot;drawer-checkbox&quot;&gt;
+<span class="fore-secondary">&lt;!-- Other stuff here --&gt;</span>
+&lt;div class=&quot;drawer&quot;&gt;
+  &lt;h3&gt;Bad drawer&lt;/h3&gt;
+&lt;/div&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;The syntax and structure of the drawer container is very strict. Try to follow it exactly as described in this section.</p>
                 </div>
               </div>
             </div>

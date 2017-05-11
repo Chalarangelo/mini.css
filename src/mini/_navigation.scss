@@ -233,7 +233,7 @@ footer {
 	.#{$drawer-name} {
 		display: block;
 		box-sizing: border-box;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		width: $drawer-width;
 		height: 100vh;
@@ -270,9 +270,8 @@ footer {
 	@media screen and (min-width: #{$drawer-mobile-breakpoint}){
 		.#{$drawer-name}:not(.#{$drawer-persistent}) {
 			position: static;
-			@if $drawer-normal-height != 100vh {
-				height: $drawer-normal-height;
-			}
+			height: 100%;
+			z-index: 1100;
 		}
 		.#{$drawer-toggle-name}:not(.#{$drawer-persistent}) {
 			display: none;

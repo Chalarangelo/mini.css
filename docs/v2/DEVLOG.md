@@ -1143,3 +1143,13 @@
 - Fixed the `header` element bug that didn't allow them to work well with the `.row` class for responsive layouts. They should now display as expected.
 - Disabled fluid typography by default, it needs more testing and the `14px` font in smaller screens doesn't sit well with me. The feature is still there for those who want it.
 - Implemented `.drawer` component along with everything that it needs. Documentation pending.
+- Tested `.drawer` on the `modules.html` page, it seems to work pretty well.
+- Documented `.drawer` component, updated descriptions wherever possible, the customization documentation will be added in later.
+- *TODO* list for tomorrow (before release):
+	- Update customization documentation for `.drawer`.
+	- Update flavors to use the new `.drawer` component, rebuild.
+	- Update all navigation menus on all pages to use both the `.drawer` and show the new menus.
+	- Update all flavors to work with new components etc.
+	- Update all flavor demos.
+	- Create codepen for `.drawer`, new section in `quick_reference`.
+	- Look into updating the templates.

@@ -1163,3 +1163,4 @@
 - Updated `flavors.html` and `templates.html`, both now use the new menu and the tags are updated for the flavor doc.
 - Updated `quick_reference.html` with new navigation, new tag, checked everything.
 - Updated menus in all `customization` pages.
+- Updated `mini-nord` to use the new components.

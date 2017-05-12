@@ -1739,7 +1739,7 @@ mark.inline-block {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ECEFF4;
-  border-radius: 2rem;
+  border-radius: 32px;
   padding: 12px 24px;
   z-index: 1111;
 }

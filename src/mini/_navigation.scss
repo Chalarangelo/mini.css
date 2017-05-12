@@ -239,7 +239,12 @@ footer {
 		height: 100vh;
 		overflow-y: auto;
 		background: $drawer-back-color;
-		border: $drawer-border-style;
+		@if $drawer-border-style != 0 {
+			border: $drawer-border-style;
+		}
+		@if $drawer-border-radius != 0 {
+			border-radius: $drawer-border-radius;
+		}
 		margin: 0;
 		@if $drawer-padding != 0 {
 			padding: $drawer-padding;

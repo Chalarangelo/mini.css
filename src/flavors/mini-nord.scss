@@ -289,6 +289,7 @@ $nav-sublink-bar-color:			#81A1C1;								// Subcategory bar color
 $drawer-name:							'drawer';									// Class name for the drawer component
 $drawer-back-color:				$nav-back-color;					// Background color of the drawer component
 $drawer-border-style:			$nav-border-style;				// Border style of the drawer component
+$drawer-border-radius:		0;												// Border radius of the drawer component
 $drawer-width:						320px;										// Width of the drawer component
 $drawer-padding:					0;												// Padding of the drawer component
 $drawer-box-shadow:				none;											// Box shadow for the drawer component
@@ -442,7 +443,7 @@ $toast-bottom:							24px;										// Bottom position for toasts
 $toast-back-color:					#424242;								// Background color for toasts
 $toast-fore-color:					#ECEFF4;								// Text color for toasts
 $toast-border-style:				0;											// Border style for toasts
-$toast-border-radius:				2rem;										// Border radius for toasts
+$toast-border-radius:				32px;										// Border radius for toasts
 $toast-padding:							12px 24px;							// Padding for toasts
 $toast-box-shadow:					none;										// Box shadow for toasts
 $toast-style1-name:					'small';								// Class name for toast style 1

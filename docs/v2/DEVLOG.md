@@ -1146,7 +1146,6 @@
 - Tested `.drawer` on the `modules.html` page, it seems to work pretty well.
 - Documented `.drawer` component, updated descriptions wherever possible, the customization documentation will be added in later.
 - *TODO* list for tomorrow (before release):
-	- Update flavors to use the new `.drawer` component, rebuild.
 	- Update all flavors to work with new components etc.
 	- Update all flavor demos.
 	- Look into updating the templates.
@@ -1165,3 +1164,5 @@
 - Updated menus in all `customization` pages.
 - Updated `mini-nord` to use the new components.
 - Added screencasts to `core` and `grid` modules, so that people get a better starter.
+- Added `$drawer-border-radius` for constistency.
+- Updated `mini-sucroa` to use the new components.

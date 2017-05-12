@@ -282,6 +282,24 @@ $nav-sublink-prefix:			'sublink';								// Prefix for the subcategory links in 
 $nav-sublink-depth:				2;												// Amount of subcategory classes to add
 $nav-sublink-padding-left:14px;											// Left padding to add to subcategories
 $nav-include-sublink-bar:	false;										// Should a left border bar be added to subcategories (`true`/`false`) [2]
+$drawer-name:							'drawer';									// Class name for the drawer component
+$drawer-back-color:				$nav-back-color;					// Background color of the drawer component
+$drawer-border-style:			$nav-border-style;				// Border style of the drawer component
+$drawer-border-radius:		2px;											// Border radius of the drawer component
+$drawer-width:						320px;										// Width of the drawer component
+$drawer-padding:					0;												// Padding of the drawer component
+$drawer-box-shadow:				none;											// Box shadow for the drawer component
+$drawer-mobile-breakpoint: 768px;										// Mobile breakpoint for the drawer component
+$drawer-normal-height:		calc(100vh - 54px);				// Height of the drawer component when shown as normal menu
+$drawer-right-name:				'right';									// Class name for the right variant of the drawer component
+$drawer-persistent-name:	'persistent';							// Class name for the persisten variant of the drawer component
+$drawer-toggle-name:			'drawer-toggle';					// Class name for the drawer component's toggle
+$drawer-toggle-font-size:	40px;											// Font size for the drawer component's toggle icon
+$drawer-toggle-line-height:0.125;										// Line height for the drawer component's toggle icon
+$drawer-toggle-top:				9px;											// Top position for the drawer component's toggle icon
+$drawer-close-name:				'close';									// Class name of the close element for the drawer component
+$drawer-close-top:				12px;											// Top position of the drawer component's close icon
+$drawer-close-right:			4px;											// Right position of the drawer component's close icon
 $footer-back-color:				#211423;									// Background color for <footer>
 $footer-fore-color:				#fffddc;									// Text color for <footer>
 $footer-border-style:			0;												// Border stye for <footer>
@@ -346,12 +364,18 @@ $card-size2-name:						'small';								// Class name for small cards
 $card-size2-width:					240px;									// Width for small cards
 $card-size3-name:						'fluid';								// Class name for fluid cards
 $card-size3-width:					100%;										// Width for fluid cards
-$card-style1-name:					'inverse';							// Class name for card style 1
-$card-style1-back-color:		$fore-color;						// Background color for card style 1
-$card-style1-fore-color:		#fffddc;								// Text color for card style 1
-$card-style1-border-style:	1px solid #190f1a;			// Border style for card style 1
+$card-style1-name:					'warning';							// Class name for card style 1
+$card-style1-back-color:		#fe9992;								// Background color for card style 1
+$card-style1-fore-color:		$fore-color;						// Text color for card style 1
+$card-style1-border-style:	1px solid #fedb64;			// Border style for card style 1
 $card-style1-border-radius:	2px;										// Border radius for card style 1
-$card-style1-section-border-style:1px solid #493e4b;// Border style for card style 1 sections
+$card-style1-section-border-style:1px solid #fedb64;// Border style for card style 1 sections
+$card-style2-name:						'error';							// Class name for card style 2
+$card-style2-back-color:			#ac354e;							// Background color for card style 2
+$card-style2-fore-color:			#fffddc;							// Text color for card style 2
+$card-style2-border-style:		1px solid #86293d;		// Border style for card style 2
+$card-style2-border-radius:		2px;									// Border radius for card style 2
+$card-style2-section-border-style:1px solid #86293d;// Border style for card style 2 sections
 $card-section-style1-name:					'light';				// Class name for card section style 1
 $card-section-style1-back-color:		#f6e5e6;				// Background color for card section style 1
 $card-section-style1-fore-color:		$fore-color;		// Text color for card section style 1
@@ -407,7 +431,22 @@ $mark-style2-border-radius:	2px;										// Border radius for <mark> style 2
 $mark-style2-padding:				5px;										// Padding for <mark> style 2
 $mark-style2-font-size:			100%;										// Font size for <mark> style 2
 $mark-style2-line-height:		1.35;										// Line height for <mark> style 2
-$include-toast:							false;									// Should the toast component be included? (`true`/`false`)
+$toast-name:								'toast';								// Class name for toast component
+$toast-bottom:							24px;									// Bottom position for toasts
+$toast-back-color:					#424242;								// Background color for toasts
+$toast-fore-color:					#fffddc;								// Text color for toasts
+$toast-border-style:				0;											// Border style for toasts
+$toast-border-radius:				32px;										// Border radius for toasts
+$toast-padding:							12px 24px;							// Padding for toasts
+$toast-box-shadow:					none;										// Box shadow for toasts
+$toast-style1-name:					'small';								// Class name for toast style 1
+$toast-style1-border-style:	0;											// Border style for toast style 1
+$toast-style1-border-radius:24px;										// Border radius for toast style 1
+$toast-style1-padding:			8px 16px;								// Padding for toast style 1
+$toast-style2-name:					'large';								// Class name for toast style 2
+$toast-style2-border-style:	0;											// Border style for toast style 2
+$toast-style2-border-radius:48px;										// Border radius for toast style 2
+$toast-style2-padding:			18px 36px;							// Padding for toast style 2
 $include-tooltip:						true;										// Should tooltips be included? (`true`/`false`) [1]
 $tooltip-name:							'tooltip';							// Class name for the tooltip component
 $tooltip-back-color:				$fore-color;						// Background color for tooltips
@@ -439,12 +478,6 @@ $progress-variant1-name:				'secondary';				// Class name for <progress> variant
 $progress-variant1-fore-color:	#d2405f;						// Progress bar color for <progress> variant 1
 $progress-variant2-name:				'tertiary';					// Class name for <progress> variant 2
 $progress-variant2-fore-color:	#2b866d;						// Progress bar color for <progress> variant 2
-$progress-style1-name:					'nano';							// Class name for <progress> style 1
-$progress-style1-height:				2px;								// Height for <progress> style 1
-$progress-style1-top-bottom-margin:		0;						// Top and bottom margin for <progress> style 1
-$progress-style1-left-right-margin:		0;						// Left and right margin for <progress> style 1
-$progress-style1-border-style:				0;						// Border style for <progress> style 1
-$progress-style1-border-radius:				0;						// Border radius for <progress> style 1
 $spinner-donut-name:		'spinner-donut';						// Class name for donut spinner
 $spinner-donut-border-thickness:		4px;						// Border thickness for donut spinner
 $spinner-donut-back-color:			#d6daef;						// Background color for donut spinner
@@ -546,6 +579,8 @@ $include-center-block-name:		false;								// Should center block be included? (
 @include make-card-alt-size ($card-size3-name, $card-size3-width);
 @include make-card-alt-color ($card-style1-name, $card-style1-back-color, $card-style1-fore-color,
 	$card-style1-border-style, $card-style1-border-radius, $card-style1-section-border-style);
+@include make-card-alt-color ($card-style2-name, $card-style2-back-color, $card-style2-fore-color,
+	$card-style2-border-style, $card-style2-border-radius, $card-style2-section-border-style);
 @include make-card-section-alt-color ($card-section-style1-name, $card-section-style1-back-color,
 	$card-section-style1-fore-color);
 @include make-card-section-alt-color ($card-section-style2-name, $card-section-style2-back-color,
@@ -562,6 +597,10 @@ $include-center-block-name:		false;								// Should center block be included? (
 	$mark-style1-border-radius, $mark-style1-padding);
 @include make-mark-alt-style ($mark-style2-name, $mark-style2-border-style,
 	$mark-style2-border-radius, $mark-style2-padding, $mark-style2-font-size, $mark-style2-line-height);
+@include make-toast-alt-style($toast-style1-name, $toast-style1-border-style,
+	$toast-style1-border-radius, $toast-style1-padding);
+@include make-toast-alt-style($toast-style2-name, $toast-style2-border-style,
+	$toast-style2-border-radius, $toast-style2-padding);
 @import '../mini/progress';
 /*
 	Custom elements for progress elements and spinners.
@@ -569,9 +608,6 @@ $include-center-block-name:		false;								// Should center block be included? (
 @include make-progress-inline ($progress-inline-name, $progress-inline-width);
 @include make-progress-alt-color ($progress-variant1-name, $progress-variant1-fore-color);
 @include make-progress-alt-color ($progress-variant2-name, $progress-variant2-fore-color);
-@include make-progress-alt-style ($progress-style1-name, $progress-style1-height,
-	$progress-style1-top-bottom-margin, $progress-style1-left-right-margin,
-	$progress-style1-border-style, $progress-style1-border-radius);
 @include make-spinner-donut-alt-color ($spinner-donut-variant1-name, $spinner-donut-variant1-back-color,
 	$spinner-donut-variant1-fore-color);
 @include make-spinner-donut-alt-color ($spinner-donut-variant2-name, $spinner-donut-variant2-back-color,

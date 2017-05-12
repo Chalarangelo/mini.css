@@ -1156,6 +1156,76 @@ footer.sticky {
   bottom: 0;
 }
 
+.drawer-toggle:before {
+  position: relative;
+  top: 9px;
+  font-family: sans-serif;
+  font-size: 40px;
+  line-height: 0.125;
+  content: '\2261';
+}
+
+.drawer {
+  display: block;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 320px;
+  height: 100vh;
+  overflow-y: auto;
+  background: #e8deff;
+  border: 1px solid #a9a2ba;
+  border-radius: 2px;
+  margin: 0;
+  z-index: 1110;
+}
+
+.drawer:not(.right) {
+  left: -320px;
+  transition: left 0.3s;
+}
+
+.drawer.right {
+  right: -320px;
+  transition: right 0.3s;
+}
+
+.drawer .close {
+  position: absolute;
+  top: 12px;
+  right: 4px;
+  z-index: 1111;
+  padding: 0;
+}
+
+@media screen and (max-width: 320px) {
+  .drawer {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .drawer:not(.persistent) {
+    position: static;
+    height: 100%;
+    z-index: 1100;
+  }
+  .drawer:not(.persistent) .close {
+    display: none;
+  }
+  .drawer-toggle:not(.persistent) {
+    display: none;
+  }
+}
+
+[type="checkbox"]:checked + .drawer:not(.right) {
+  left: 0;
+}
+
+[type="checkbox"]:checked + .drawer.right {
+  right: 0;
+}
+
 /*
 	Definitions for the responsive table component.
 */
@@ -1325,17 +1395,30 @@ table.striped tr:nth-of-type(2n) > td {
   width: auto;
 }
 
-.card.inverse {
-  background: #211423;
+.card.warning {
+  background: #fe9992;
+  border: 1px solid #fedb64;
+}
+
+.card.warning > .section {
+  border-bottom: 1px solid #fedb64;
+}
+
+.card.warning > .section:last-child {
+  border-bottom: 0;
+}
+
+.card.error {
+  background: #ac354e;
   color: #fffddc;
-  border: 1px solid #190f1a;
+  border: 1px solid #86293d;
 }
 
-.card.inverse > .section {
-  border-bottom: 1px solid #493e4b;
+.card.error > .section {
+  border-bottom: 1px solid #86293d;
 }
 
-.card.inverse > .section:last-child {
+.card.error > .section:last-child {
   border-bottom: 0;
 }
 
@@ -1558,6 +1641,18 @@ mark.inline-block {
   display: inline-block;
 }
 
+.toast {
+  position: fixed;
+  background: #424242;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fffddc;
+  border-radius: 32px;
+  padding: 12px 24px;
+  z-index: 1111;
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -1648,6 +1743,16 @@ mark.inline-block {
   font-size: 100%;
   line-height: 1.35;
   padding: 5px;
+}
+
+.toast.small {
+  border-radius: 24px;
+  padding: 8px 16px;
+}
+
+.toast.large {
+  border-radius: 48px;
+  padding: 18px 36px;
 }
 
 /*
@@ -1754,32 +1859,6 @@ progress.tertiary::-webkit-progress-value {
 
 progress.tertiary::-moz-progress-bar {
   background: #2b866d;
-}
-
-progress.nano {
-  height: 2px;
-  width: calc(100% - 0);
-  margin: 0 0;
-  margin: 0 auto;
-  border-radius: 0;
-}
-
-progress.nano::-webkit-progress-value {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-progress.nano::-moz-progress-bar {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-progress.nano[value="1000"]::-webkit-progress-value {
-  border-radius: 0;
-}
-
-progress.nano[value="1000"]::-moz-progress-bar {
-  border-radius: 0;
 }
 
 .spinner-donut.secondary {

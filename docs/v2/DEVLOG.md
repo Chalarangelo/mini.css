@@ -1167,3 +1167,4 @@
 - The other two flavors will be updated to include the new elements and get rid of any problematic stuff (will update in a bit).
 - Updated flavor descriptions in `flavors.html`.
 - Everything is ready for release, let's write the `CHANGELOG` for **v2.2.0**. (A couple of templates and things might be done later today, as well as linking to them from certain components such as the `.drawer` which could benefit from that.)
+- Updated `CHANGELOG`, readying up for release. See you and **hugging cat** on the other side!

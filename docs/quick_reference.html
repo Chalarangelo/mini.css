@@ -21,35 +21,41 @@
 	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
 	.col-sm-12.col-md-6.col-sm-first.col-md-first {box-sizing: border-box;border-right: 1px solid #c9c9c9;}
 	@media (max-width: 767px){.col-sm-12.col-md-6.col-sm-first.col-md-first {border: 0;border-bottom: 1px solid #c9c9c9;}}
-	h3 > a{font-size: 1rem;} h2 > a {font-size: 0.85em;} pre {max-height: 400px;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	h3 > a{font-size: 1rem;} h2 > a {font-size: 0.85em;} pre {max-height: 400px;} @media screen and (min-width: 768px) { .drawer { margin-top: 4px;}}
 	</style>
   </head>
   <body>
-		<header>
+		<header class="sticky">
 			<a href="index.html" class="logo"><span id="header-logo">m</span></a>
-			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
-			<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
-			<a href="quick_reference.html" class="button">Quick Reference</a>
+				<label class="drawer-toggle button" for="navigation-toggle"></label>
+			<a href="index.html" class="button hidden-sm">Introduction</a> <a href="modules.html" class="button hidden-sm">Modules</a>
+			<a href="flavors.html" class="button hidden-sm">Flavors</a> <a href="templates.html" class="button hidden-sm">Templates</a>
+			<a href="customization/index.html" class="button hidden-sm">Customization</a> <a href="quick_reference.html" class="button hidden-sm">Quick Reference</a>
 			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 		</header>
-		<header class="sticky" style="height:36px;">
-			<a href="#core" class="button">Core</a> <a href="#grid" class="button">Grid</a>
-			<a href="#navigation" class="button">Navigation</a> <a href="#input_control" class="button">Input Control</a>
-			<a href="#table" class="button">Table</a> <a href="#card" class="button">Card</a>
-			<a href="#tab" class="button">Tab</a> <a href="#contextual" class="button">Contextual</a>
-			<a href="#progress" class="button">Progress</a> <a href="#utility" class="button">Utility</a>
-		</header>
+		<div class="container" style="padding-left: 0.25rem;">
+			<div class="row"> <input type="checkbox" id="navigation-toggle"> <nav class="drawer col-md-4 col-lg-2">
+				<label class="close" for="navigation-toggle"></label>
+				<a href="index.html"><h4 style="margin-left: 0;">Introduction</h4></a>
+				<a href="index.html"><h4 style="margin-left: 0;">Modules</h4></a>
+				<a href="flavors.html"><h4 style="margin-left: 0;">Flavors</h4></a>
+				<a href="templates.html"><h4 style="margin-left: 0;">Templates</h4></a>
+				<a href="customization/index.html"><h4 style="margin-left: 0;">Customization</h4></a>
+				<a href="quick_reference.html"><h4 style="margin-left: 0;">Quick Reference</h4></a>
+				<a href="#core">Core</a> <a href="#grid">Grid</a> <a href="#input_control">Input Control</a> <a href="#navigation">Navigation</a> <a href="#table">Table</a>
+				<a href="#card">Card</a> <a href="#tab">Tab</a> <a href="#contextual">Contextual</a> <a href="#progress">Progress</a> <a href="#utility">Utility</a> <br/>
+			</nav>
     <!-- Insert your page content here-->
-    <main><div class="container">
+    <div class="col-sm-12 col-md-8 col-lg-10"><main>
       <div class="row" style="padding-top: 40px;">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <h1>Quick Reference</h1>
           <p>If you are familiar with <strong>mini.css</strong> and want a cheat sheet, you've come to the right place. Below you will find a quick overview of the framework and examples to help you brush up on your website-building skills. For more detailed instructions on modules, check out the <a href="modules.html">modules</a> page.</p>
           <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2>Setup &amp; usage</h2></div>
             <div class="section">
@@ -61,7 +67,7 @@
               </div><br>
               <p>You can import the default flavor of <strong>mini.css</strong> in your webpage by simply adding one of the following references inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
 							<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css&quot;</span>&gt;</pre>
-              <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.5/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
+              <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.2.0/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
 							<p>You can also find <strong>mini.css</strong> on <a href="https://cdnjs.com/libraries/mini.css">cdnjs</a>, which you can use to include it in your projects.</p><br/>
               <p>We strongly suggest you add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre>
@@ -70,7 +76,7 @@
         </div>
       </div>
       <div class="row" id="core">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="core.html" target="_blank" class="button primary small"><i class="fa fa-font fa-fw" aria-hidden="true"></i></a>&nbsp;Core</h2></div>
             <div class="section row">
@@ -89,7 +95,7 @@
                   <li>Basic reset and fix rules applied, based on <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> v5.0.0</li>
                   <li>A <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">native font stack</a> is used</li>
                   <li>The colors are set to <code>background: #f5f5f5;</code> and <code>color: #212121;</code></li>
-                  <li>The <code>font-size</code> is <code>16px</code> for the root element</li>
+                  <li>The <code>font-size</code> for the root element is <code>16px</code></li>
                   <li>The <code>line-height</code> is <code>1.5</code></li>
                   <li>All HTML headings are pre-styled</li>
                   <li>Styling provided for <code>&lt;small&gt;</code> elements inside headings</li>
@@ -138,7 +144,7 @@
         </div>
       </div>
       <div class="row" id="grid">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="grid.html" target="_blank" class="button secondary small"><i class="fa fa-th-large fa-fw" aria-hidden="true"></i></a>&nbsp;Grid</h2></div>
             <div class="section row">
@@ -367,97 +373,8 @@
           </div>
         </div>
       </div>
-      <div class="row" id="navigation">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
-          <div class="card fluid">
-            <div class="section"><h2><a href="navigation.html" target="_blank" class="button primary small"><i class="fa fa-compass fa-fw" aria-hidden="true"></i></a>&nbsp;Navigation</h2></div>
-            <div class="section row">
-              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Header <a href="https://codepen.io/chalarangelo/pen/NbewvB" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre>&lt;header&gt;
-  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt;
-  &lt;button&gt;Home&lt;/button&gt;
-  &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;News&lt;/a&gt;
-  &lt;span&gt;|&lt;/span&gt;
-  &lt;button&gt;About&lt;/button&gt;
-  &lt;button&gt;Contact&lt;/button&gt;
-&lt;/header&gt;</pre>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <h3>Notes</h3>
-                <ul>
-                  <li>Use the <code>.logo</code> class for the first child (either textual element or image)</li>
-                  <li>The rest of the elements inside the <code>&lt;header&gt;</code> must be button elements (i.e. <code>&lt;button&gt;</code>, <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;button&quot;</span>&gt;</code>, <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> or <code>.button</code>)</li>
-                  <li>Use <code>&lt;span&gt;</code> elements as separators</li>
-                  <li>You can mix buttons, links and labels inside the header, as long as all of them are styled as buttons</li>
-                  <li>The logo element should not be a <code>&lt;button&gt;</code> element or of the <code>.button</code> class</li>
-                  <li>Header is not displayed as fixed by default</li>
-                </ul>
-              </div>
-            </div>
-            <div class="section row">
-              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Navigation bar <a href="https://codepen.io/chalarangelo/pen/ENGbwa" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre>&lt;nav&gt;
-  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
-  &lt;span&gt;News&lt;/span&gt;
-  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;New Courses&lt;/a&gt;
-  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;Certifications&lt;/a&gt;
-  &lt;span class=&quot;sublink-1&quot;&gt;Events&lt;/span&gt;
-  &lt;a href=&quot;#&quot; class=&quot;sublink-2&quot;&gt;Course Showcase - 12th, Dec&lt;/a&gt;
-  &lt;a href=&quot;#&quot; class=&quot;sublink-2&quot;&gt;Staff AMA - 16th, Dec&lt;/a&gt;
-  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;Policy Update&lt;/a&gt;
-  &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
-  &lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;
-&lt;/nav&gt;</pre>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <h3>Notes</h3>
-                <ul>
-                  <li>Use <code>&lt;nav&gt;</code> element, populate it with links</li>
-                  <li>Use <code>.sublink-1</code> and <code>.sublink-2</code> classes to create subcategories in your navigation menu</li>
-                  <li>Combine the navigation bar with grid reordering to display aside from text on larger displays or at the bottom on smaller displays</li>
-                </ul>
-              </div>
-            </div>
-            <div class="section row">
-              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Footer <a href="https://codepen.io/chalarangelo/pen/dOwZVO" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre>&lt;footer&gt;
-  &lt;p&gt;&amp;copy; 2001-2016 Web Corporation | &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Terms of use&lt;/a&gt;&lt;/p&gt;
-&lt;/footer&gt;</pre>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <h3>Notes</h3>
-                <ul>
-                  <li>Simple syntax and structure, add content as normal</li>
-                </ul>
-              </div>
-            </div>
-			<div class="section row">
-              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Sticky headers and footers <a href="https://codepen.io/chalarangelo/pen/ZLVMzX" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre>&lt;header class=&quot;sticky&quot;&gt;
-  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt; &lt;button&gt;Home&lt;/button&gt; &lt;button&gt;About&lt;/button&gt;
-&lt;/header&gt;
-
-&lt;footer class=&quot;sticky&quot;&gt;
-  &lt;p&gt;&amp;copy; 2001-2016 Web Corporation | &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Terms of use&lt;/a&gt;&lt;/p&gt;
-&lt;/footer&gt;</pre>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <h3>Notes</h3>
-                <ul>
-                  <li>Use <code>.sticky</code> class to create</li>
-                  <li>Compatible with modern browsers, support for <a href="http://caniuse.com/#feat=css-sticky"><code>position:sticky</code></a> is growing</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="row" id="input_control">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section">
               <h2><a href="input_control.html" target="_blank" class="button tertiary small"><i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i></a>&nbsp;Input Control</h2>
@@ -572,8 +489,126 @@
           </div>
         </div>
       </div>
+      <div class="row" id="navigation">
+        <div class="col-sm-12">
+          <div class="card fluid">
+            <div class="section"><h2><a href="navigation.html" target="_blank" class="button primary small"><i class="fa fa-compass fa-fw" aria-hidden="true"></i></a>&nbsp;Navigation</h2></div>
+            <div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Header <a href="https://codepen.io/chalarangelo/pen/NbewvB" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;header&gt;
+  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt;
+  &lt;button&gt;Home&lt;/button&gt;
+  &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;News&lt;/a&gt;
+  &lt;span&gt;|&lt;/span&gt;
+  &lt;button&gt;About&lt;/button&gt;
+  &lt;button&gt;Contact&lt;/button&gt;
+&lt;/header&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Use the <code>.logo</code> class for the first child (either textual element or image)</li>
+                  <li>The rest of the elements inside the <code>&lt;header&gt;</code> must be button elements (i.e. <code>&lt;button&gt;</code>, <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;button&quot;</span>&gt;</code>, <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> or <code>.button</code>)</li>
+                  <li>Use <code>&lt;span&gt;</code> elements as separators</li>
+                  <li>You can mix buttons, links and labels inside the header, as long as all of them are styled as buttons</li>
+                  <li>The logo element should not be a <code>&lt;button&gt;</code> element or of the <code>.button</code> class</li>
+                  <li>Header is not displayed as fixed by default</li>
+                </ul>
+              </div>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Navigation bar <a href="https://codepen.io/chalarangelo/pen/ENGbwa" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;nav&gt;
+  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+  &lt;span&gt;News&lt;/span&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;New Courses&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;Certifications&lt;/a&gt;
+  &lt;span class=&quot;sublink-1&quot;&gt;Events&lt;/span&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-2&quot;&gt;Course Showcase - 12th, Dec&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-2&quot;&gt;Staff AMA - 16th, Dec&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sublink-1&quot;&gt;Policy Update&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Use <code>&lt;nav&gt;</code> element, populate it with links</li>
+                  <li>Use <code>.sublink-1</code> and <code>.sublink-2</code> classes to create subcategories in your navigation menu</li>
+                  <li>Combine the navigation bar with grid reordering to display aside from text on larger displays or at the bottom on smaller displays</li>
+                </ul>
+              </div>
+            </div>
+						<div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Drawer <a href="https://codepen.io/chalarangelo/pen/JNvPrB" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;header&gt;
+  &lt;label for=&quot;drawer-checkbox&quot; class=&quot;button drawer-toggle&quot;&gt;&lt;/label&gt;
+&lt;/header&gt;
+
+&lt;input type=&quot;checkbox&quot; id=&quot;drawer-checkbox&quot;&gt;
+&lt;div class=&quot;drawer&quot;&gt;
+  &lt;label for=&quot;drawer-checkbox&quot; class=&quot;close&quot;&gt;&lt;/label&gt;
+  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+&lt;/div&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Structure as follows:<ol>
+										<li><code>&lt;label&gt;</code> element with the <code>.drawer-toggle</code> class in the <code>&lt;header&gt;</code> element, linked to the <code class="fore-secondary">id</code> of the <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code> used to toggle the drawer component</li>
+										<li><code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code> element with a unique <code class="fore-secondary">id</code></li>
+										<li><code>&lt;div&gt;</code> element with the <code>.drawer</code> class immediately after the <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code></li>
+										<li>Empty <code>&lt;label&gt;</code> element with the <code>.close</code> class inside the <code>.drawer</code>, linked to the <code class="fore-secondary">id</code> of the <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code></li>
+									</ol></li>
+									<li>Drawers are left-aligned and expand on non-mobile screen sizes by default</li>
+                  <li>Use <code>.right</code> to create right-aligned drawers or <code>.persistent</code> for non-responsive drawers.</li>
+                  <li>Apply the <code>.drawer</code> class on a navigation bar and combine with grid classes for best results</li>
+									<li>Use the syntax exactly as presented in the examples, do not add elements between the checkbox and the container</li>
+                </ul>
+              </div>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Footer <a href="https://codepen.io/chalarangelo/pen/dOwZVO" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2001-2016 Web Corporation | &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Terms of use&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Simple syntax and structure, add content as normal</li>
+                </ul>
+              </div>
+            </div>
+			<div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Sticky headers and footers <a href="https://codepen.io/chalarangelo/pen/ZLVMzX" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;header class=&quot;sticky&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt; &lt;button&gt;Home&lt;/button&gt; &lt;button&gt;About&lt;/button&gt;
+&lt;/header&gt;
+
+&lt;footer class=&quot;sticky&quot;&gt;
+  &lt;p&gt;&amp;copy; 2001-2016 Web Corporation | &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Terms of use&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Use <code>.sticky</code> class to create</li>
+                  <li>Compatible with modern browsers, support for <a href="http://caniuse.com/#feat=css-sticky"><code>position:sticky</code></a> is growing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row" id="table">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="table.html" target="_blank" class="button primary small"><i class="fa fa-table fa-fw" aria-hidden="true"></i></a>&nbsp;Table</h2></div>
             <div class="section row">
@@ -723,7 +758,7 @@
         </div>
       </div>
       <div class="row" id="card">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="card.html" target="_blank" class="button secondary small"><i class="fa fa-id-card-o fa-fw" aria-hidden="true"></i></a>&nbsp;Card</h2></div>
             <div class="section row">
@@ -765,16 +800,12 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Sections &amp; media <a href="https://codepen.io/chalarangelo/pen/oYmoJz" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <h3>Sections &amp; media <a href="https://codepen.io/chalarangelo/pen/gWvJEw" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
                 <pre>&lt;div class=&quot;card&quot;&gt;
   &lt;img src=&quot;...&quot; class=&quot;section media&quot;&gt;
   &lt;div class=&quot;section double-padded&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
   &lt;div class=&quot;section dark&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
   &lt;div class=&quot;section darker&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;card inverse&quot;&gt;
-  &lt;div class=&quot;section&quot;&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
@@ -783,7 +814,6 @@
                   <li>Create media sections for images or video, using the <code>.media</code> class</li>
                   <li>Color variants for sections are available using the <code>.dark</code> and <code>.darker</code> classes</li>
                   <li>Extra padding section variant available using the <code>.double-padded</code> class</li>
-                  <li>Card color variant is available using the <code>.inverse</code> class</li>
                   <li><code>.media</code> sections might not be fully supported in older browsers</li>
                   <li><code>.media</code> sections have a preset height of <code>200px</code></li>
                 </ul>
@@ -822,11 +852,35 @@
                 </ul>
               </div>
             </div>
+            <div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Card color variants <a href="https://codepen.io/chalarangelo/pen/BRYeeW" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;div class=&quot;card warning&quot;&gt;
+  &lt;div class=&quot;section&quot;&gt;
+    &lt;p&gt;Warning&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;card error&quot;&gt;
+  &lt;div class=&quot;section&quot;&gt;
+    &lt;p&gt;Error&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Create yellow warning cards, using the <code>.warning</code> class</li>
+                  <li>Create red error cards, using <code>.error</code> class</li>
+                  <li>Avoid combining two or more card color variants</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="row" id="tab">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="tab.html" target="_blank" class="button secondary small"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i></a>&nbsp;Tab</h2></div>
             <div class="section row">
@@ -915,7 +969,7 @@
         </div>
       </div>
       <div class="row" id="contextual">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="contextual.html" target="_blank" class="button secondary small"><i class="fa fa-tags fa-fw" aria-hidden="true"></i></a>&nbsp;Contextual</h2></div>
             <div class="section row">
@@ -941,50 +995,18 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Alerts <a href="https://codepen.io/chalarangelo/pen/bBzYzj" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre>&lt;div class=&quot;alert&quot;&gt;
-  &lt;h3&gt;This is an alert&lt;/h3&gt;
-  &lt;p&gt;Make sure you read this!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;alert urgent&quot;&gt;
-  &lt;h3&gt;This is an urgent alert&lt;/h3&gt;
-  &lt;p&gt;Make absolutely sure you read this!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;alert critical&quot;&gt;
-  &lt;h3&gt;This is a critical alert&lt;/h3&gt;
-  &lt;p&gt;Make certain you read and actually understand this!&lt;/p&gt;
-&lt;/div&gt;</pre>
+                <h3>Toasts <a href="https://codepen.io/chalarangelo/pen/XREdeq" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;span class=&quot;toast&quot;&gt;This is a normal toast message!&lt;/span&gt;
+&lt;span class=&quot;toast small&quot;&gt;This is a large toast message!&lt;/span&gt;
+&lt;span class=&quot;toast large&quot;&gt;This is a small toast message!&lt;/span&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
-                  <li>Use the <code>.alert</code> class to create alerts</li>
-                  <li>Color variants available using the <code>.urgent</code> and <code>.critical</code> classes</li>
-                  <li>Alerts have no pre-defined behavior, use Javascript</li>
-                  <li>The <code>.alert</code> class can be applied to <code>&lt;div&gt;</code> elements and textual elements alike</li>
-                  <li>Avoid applying the <code>.alert</code> class to non-textual elements, such as images</li>
-				  <li>Use either the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role">alert</a>&quot;</span></code> attribute or the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role">alertdialog</a>&quot;</span></code> attribute for accessible alerts</li>
-                </ul>
-              </div>
-            </div>
-            <div class="section row">
-              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Animated alerts <a href="https://codepen.io/chalarangelo/pen/NbowoL" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
-                <pre>&lt;div class=&quot;alert animated&quot;&gt;
-  &lt;h3&gt;Animated alert&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div class=&quot;alert urgent animated&quot;&gt;
-  &lt;h3&gt;Animated urgent alert&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div class=&quot;alert critical animated&quot;&gt;
-  &lt;h3&gt;Animated critical alert&lt;/h3&gt;
-&lt;/div&gt;</pre>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <h3>Notes</h3>
-                <ul>
-                  <li>Animated alerts are available using the <code>.animated</code> class</li>
-                  <li>Compatible with modern browsers, but might cause some problems and bluriness in Webkit-based or older browsers</li>
+                  <li>Use the <code>.toast</code> class on <code>&lt;span&gt;</code> elements to create toast messages</li>
+                  <li>Size variants available using the <code>.small</code> and <code>.large</code> classes</li>
+                  <li>Toasts have no pre-defined behavior, use Javascript</li>
+                  <li>Toasts display at the bottom of the screen on top of everything else</li>
                 </ul>
               </div>
             </div>
@@ -1007,7 +1029,7 @@
         </div>
       </div>
       <div class="row" id="progress">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="progress.html" target="_blank" class="button tertiary small"><i class="fa fa-spinner fa-fw" aria-hidden="true"></i></a>&nbsp;Progress</h2></div>
             <div class="section row">
@@ -1028,17 +1050,16 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Progress bar variants <a href="https://codepen.io/chalarangelo/pen/MbLLwb" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <h3>Progress bar variants <a href="https://codepen.io/chalarangelo/pen/OmQePm" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
                 <pre>&lt;progress class=&quot;secondary&quot; value=&quot;600&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
 &lt;progress class=&quot;tertiary&quot; value=&quot;300&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
-&lt;progress class=&quot;nano&quot; value=&quot;750&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
 &lt;progress class=&quot;inline&quot; value=&quot;150&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
                   <li>Color variants available using the <code>.secondary</code> and <code>.tertiary</code> classes</li>
-                  <li>Size variants available using the <code>.nano</code> and <code>.inline</code> classes</li>
+                  <li>Inline variant available using the <code>.inline</code> class</li>
                   <li>Mix color and size variants, but not multiple of the same type</li>
                 </ul>
               </div>
@@ -1079,7 +1100,7 @@
         </div>
       </div>
       <div class="row" id="utility">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="utility.html" target="_blank" class="button tertiary small"><i class="fa fa-wrench fa-fw" aria-hidden="true"></i></a>&nbsp;Utility</h2></div>
             <div class="section row">
@@ -1100,21 +1121,18 @@
             </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
-                <h3>Generic borders &amp; shadows <a href="https://codepen.io/chalarangelo/pen/aBXXvE" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <h3>Generic borders &amp; shadows <a href="https://codepen.io/chalarangelo/pen/bWLPdo" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
                 <pre>&lt;span class=&quot;bordered&quot;&gt;Bordered&lt;/span&gt;
 &lt;span class=&quot;rounded&quot;&gt;Rounded&lt;/span&gt;
 &lt;span class=&quot;circular&quot;&gt;Circular&lt;/span&gt;
-&lt;span class=&quot;shadow-none&quot;&gt;No shadow&lt;/span&gt;
-&lt;span class=&quot;shadow-small&quot;&gt;Small shadow&lt;/span&gt;
-&lt;span class=&quot;shadow-medium&quot;&gt;Medium shadow&lt;/span&gt;
-&lt;span class=&quot;shadow-large&quot;&gt;Large shadow&lt;/span&gt;</pre>
+&lt;span class=&quot;shadowed&quot;&gt;Casts shadow&lt;/span&gt;</pre>
               </div>
               <div class="col-sm-12 col-md-6">
                 <h3>Notes</h3>
                 <ul>
                   <li>Create generic borders using <code>.bordered</code></li>
                   <li>Rounded and circular border radii available using <code>.rounded</code> and <code>.circular</code> classes</li>
-                  <li>Generic shadows available using the <code>.shadow-small</code>, <code>.shadow-medium</code>, <code>.shadow-large</code> and <code>.shadow-none</code> classes</li>
+                  <li>Generic shadows available using the <code>.shadowed</code> class</li>
                   <li>Combine generic borders, border radii and generic shadows with each other but not with themselves</li>
                   <li>All classes use <code><span class="fore-secondary">!important</span></code> declarations</li>
                   <li>Generic borders work well with buttons</li>
@@ -1203,7 +1221,7 @@
         <div class="col-sm-12 col-lg-10 col-lg-offset-1">
         </div>
       </div>
-    </div></main>
+    </main></div></div></div>
     <!-- End of page content-->
     <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>

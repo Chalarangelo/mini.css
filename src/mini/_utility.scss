@@ -109,12 +109,12 @@ $style-link-active-state:		false !default;					// [External flag - core] Should 
 	// Close icon
 	.#{$close-icon-name}{
 		display: inline-block;
-		width: 0.75em;
-		height: 0.75em;
-		position: relative;
-		border-radius: 1em;
+		width: $close-icon-size;
+		font-family: sans-serif;
 		font-size: $close-icon-size;
-		text-overflow: clip;
+		line-height: 1;
+		font-weight: 700;
+		border-radius: 2rem;
 		background: rgba($close-icon-back-color,0);
 		vertical-align: top;
 		cursor: pointer;
@@ -129,24 +129,10 @@ $style-link-active-state:		false !default;					// [External flag - core] Should 
 				background: rgba($close-icon-back-color,1);
 			}
 		}
-		&:before, &:after {
-			display: inline-block;
-			width: 0.45em;
-			height: 0.1em;
-			position: absolute;
-			content: "";
-			top: 0.33em;
-			left: 0.155em;
-			text-overflow: clip;
-			background: $close-icon-fore-color;
-		}
 		&:before {
-			-webkit-transform: rotateZ(45deg);
-							transform: rotateZ(45deg);
-		}
-		&:after {
-			-webkit-transform: rotateZ(-45deg);
-							transform: rotateZ(-45deg);
+			content: "\00D7";
+  		display: block;
+  		text-align: center;
 		}
 	}
 }

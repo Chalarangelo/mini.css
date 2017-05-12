@@ -1,6 +1,21 @@
 # Changelog
 
-## 2.1.5
+## v2.2.0
+
+- Replaced old classes for generic shadows with one class (`.shadowed`).
+- Removed the `.nano` progress style variant.
+- Responsive visibility helpers now properly utilize `!important`.
+- Updated the styling of the `.close` icon.
+- Removed `.alert` and all its variants. Alerts are now deprecated.
+- Added a `.toast` message to contextual module, along with variants.
+- Removed `.inverse` card color variant, added `.warning` and `.error` variants to replace the old alerts.
+- Swapped the order of the input_control and naviation modules.
+- Added a fluid typography mode (currently disabled by default on all flavors).
+- Added a `.drawer` component in navigation module, along with variants.
+- Updated documentation and customization documentation to reflect latest changes.
+- Updated all flavors to utilize the latest features.
+
+## v2.1.5
 
 - Proper re-release of `v2.1.4`.
 

@@ -1106,3 +1106,65 @@
 
 - Embedded the intro that Per Harald Borgen built for the framework in the front page (`index.html`) under the `Quick overview` heading (I think it fits quite nicely).
 - Added Per Harald Borgen to the list of contributors to show my gratitude.
+- Removed old classes produced using the generic shadow mixin in `utility`, replaced with `.shadowed` to let developers still have some generic shadow class. Updated docs as needed, codepens will be updated right before release.
+- Updated the definitions of the responsive visibility helpers to utilize `!important` properly. Size is now `6.34KB` which seems pretty good, based on the fact that some of the existing components that are being removed were unused by most devs to begin with.
+- Removed the `.nano` progress bar, as it served no real purpose. **Hugging cat** misses it already, but it had to go, don't judge. Size should be smaller but the tool I use (Refresh-SF) has crashed and I can't really check the gzipped size right now.
+
+## 20170510
+
+- Tonight's the night: Lots of updates and changes will be taking place (hopefully), as the next release needs to be fast-forwarded for a lot of reasons. Let the building begin.
+- Updated the `.close` icon with the new styling, making it less complicated, using a Unicode character instead of custom pseudo-elements, size is now `6.24KB`.
+- Removed `.inverse` class from card, added `.warning` and `.error` instead (part of the `.alert` migration system).
+- Updated `quick_reference` for said changes to `card` module.
+- Created new codepens for the `quick_reference` page for changes in the `card` module.
+- Forked old codepens that used `.nano` and `.shadow-...` classes, updated links in `quick_reference` for all of them now.
+- Updated both `mini-default` and `mini-dark` to use the latest classes built in the `card` module with proper colors.
+- Deprecated `.alert` and all that comes with it, updated flavors to reflect this. I will update all docs after commiting, just to be on the safe side. By the way, `mini-default` is now `6.12KB` without the deprecated components and with a few of the additions already built-in. Pretty happy with how it's coming along right now!
+- Updated docs just barely to make sure that the new `.toast` component will easily find a suitable home in them.
+- Implemented `.toast` quite quickly and without doing too much work on it, seems to work pretty well. Documentation, mixins and customization not yet done.
+
+## 20170511
+
+- Added `.toast` mixins to make them customizable.
+- Added `.large` and `.small` size variants for `.toast` elements.
+- Added `z-index` to `.toast` elements, so that they display above everything else so far.
+- Documented `.toast` changes in their page. Updated the documentation in `quick_reference`. Created related codepen (bit fiddly but should be ok).
+- Updated `customization` for the new `.toast` component, fixed some mistakes I found in the `customization/contextual.html` page.
+- Updated flavors for `.toast`:
+	- `mini-default` fully supports it.
+	- `mini-dark` fully supports it.
+	- `mini-lite` does not support it (in keeping with tradition of the lite flavor's decisions).
+	- `mini-nord` still uses `.alert`s instead of `.toast`s, maintainer should address after update, otherwise I will in the next patch or so.
+	- `mini-sucroa` does not support it (or `.alert` for that matter), might be addressed with author later down the line, for now it's ok to not have either.
+- Changed order of `input_control` and `navigation` for all flavors and documentation pages.
+- Thoroughly tested fluid typography and updated the `core` module with the required variables and flags. This added a little bit of extra size to the framework, but it seems worthwhile as it scales a bit better on smaller screens, so that there is slightly more real estate for content.
+- Updated all flavors for fluid typography (basically only `default` and `dark` actually use it for now).
+- Updated `core` module documentation and customization documentation to explain fluid typography.
+- Fixed the `header` element bug that didn't allow them to work well with the `.row` class for responsive layouts. They should now display as expected.
+- Disabled fluid typography by default, it needs more testing and the `14px` font in smaller screens doesn't sit well with me. The feature is still there for those who want it.
+- Implemented `.drawer` component along with everything that it needs. Documentation pending.
+- Tested `.drawer` on the `modules.html` page, it seems to work pretty well.
+- Documented `.drawer` component, updated descriptions wherever possible, the customization documentation will be added in later.
+
+## 20170512
+
+- `$include-drawer` is now a *hidden* flag.
+- Updated `.drawer` to include a `$drawer-box-shadow` just in case.
+- Updated customization for the new `.drawer` component.
+- Updated `mini-default`, `mini-lite` and `mini-dark` for the new `.drawer` component, the other two flavors will be updated later today.
+- Updated `quick_reference` for `.drawer`, added a codepen for the component.
+- Updated `index.html` with mobile menu, updated tags to latest version. Fixed the way the screencast displays, so that it fits nicely on smaller screens.
+- Updated all module pages to use `.drawer` on mobile.
+- Updated `flavors.html` and `templates.html`, both now use the new menu and the tags are updated for the flavor doc.
+- Updated `quick_reference.html` with new navigation, new tag, checked everything.
+- Updated menus in all `customization` pages.
+- Updated `mini-nord` to use the new components.
+- Added screencasts to `core` and `grid` modules, so that people get a better starter.
+- Added `$drawer-border-radius` for constistency.
+- Updated `mini-sucroa` to use the new components.
+- Updated all templates to display perfectly after all the change.
+- `mini-sucroa` demo didn't need any updates, `mini-lite` required the removal of the `nav` element which was an artifact (whoops!).
+- The other two flavors will be updated to include the new elements and get rid of any problematic stuff (will update in a bit).
+- Updated flavor descriptions in `flavors.html`.
+- Everything is ready for release, let's write the `CHANGELOG` for **v2.2.0**. (A couple of templates and things might be done later today, as well as linking to them from certain components such as the `.drawer` which could benefit from that.)
+- Updated `CHANGELOG`, readying up for release. See you and **hugging cat** on the other side!

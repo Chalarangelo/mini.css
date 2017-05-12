@@ -24,53 +24,60 @@
 	.col-sm-12.col-sm-last.col-md-12.col-md-normal { box-sizing: border-box; border-bottom: 1px solid #c9c9c9; }
 	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-12.col-md-normal { border: 0; border-top: 1px solid #c9c9c9;}}
 	.box-colored.green { background: #1b5e20; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
-	.box-colored { color: #f5f5f5;}
+	.box-colored { color: #f5f5f5;} @media screen and (min-width: 768px) { .drawer { margin-top: 4px;}}
 	</style>
   </head>
   <body>
 		<header class="sticky">
 			<a href="index.html" class="logo"><span id="header-logo">m</span></a>
-			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
-			<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
-			<a href="quick_reference.html" class="button">Quick Reference</a>
+				<label class="drawer-toggle button" for="navigation-toggle"></label>
+			<a href="index.html" class="button hidden-sm">Introduction</a> <a href="modules.html" class="button hidden-sm">Modules</a>
+			<a href="flavors.html" class="button hidden-sm">Flavors</a> <a href="templates.html" class="button hidden-sm">Templates</a>
+			<a href="customization/index.html" class="button hidden-sm">Customization</a> <a href="quick_reference.html" class="button hidden-sm">Quick Reference</a>
 			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 		</header>
 		<div class="container" style="padding-left: 0.25rem;">
- 		 <div class="row"> <div class="col-sm-12 col-md-4 col-lg-2 hidden-sm" style="padding: 0;"> <nav>
- 			 <h4 style="text-align: center">Modules</h4> <a href="core.html#core-title">Core</a>
- 			 <a href="core.html#typography" class="sublink-1">Typography</a> <a href="core.html#headings" class="sublink-1">Headings</a>
- 			 <a href="core.html#common-textual-elements" class="sublink-1">Common textual elements</a>
- 			 <a href="core.html#lists" class="sublink-1">Lists</a> <a href="core.html#images-captions" class="sublink-1">Image responsiveness &amp; captions</a>
- 			 <br/> <a href="grid.html#grid-title">Grid</a>
- 			 <a href="grid.html#basic-layout" class="sublink-1">Basic layout</a> <a href="grid.html#screen-specific-layout" class="sublink-1">Screen specific layouts</a>
- 			 <a href="grid.html#predefined-layout" class="sublink-1">Predefined layouts</a> <a href="grid.html#column-offset" class="sublink-1">Column offsets</a>
- 			 <a href="grid.html#column-reorder" class="sublink-1">Column reordering</a> <a href="grid.html#media-object" class="sublink-1">Media object pattern</a>
- 			 <br/> <a href="navigation.html#navigation-title">Navigation</a>
- 			 <a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a>
- 			 <a href="navigation.html#footer" class="sublink-1">Footer</a> <a href="navigation.html#sticky" class="sublink-1">Sticky headers &amp; footers</a>
- 			 <br/> <a href="input_control.html#input-control-title">Input Control</a>
- 			 <a href="input_control.html#forms-input" class="sublink-1">Forms &amp; input</a> <a href="input_control.html#checkbox-radio" class="sublink-1">Checkboxes &amp; radio buttons</a>
- 			 <a href="input_control.html#buttons" class="sublink-1">Buttons &amp; button groups</a> <a href="input_control.html#file-upload" class="sublink-1">File upload buttons</a>
- 			 <br/> <a href="table.html#table-title">Table</a>
- 			 <a href="table.html#syntax-responsiveness" class="sublink-1">Basic syntax &amp; responsiveness</a>
- 			 <a href="table.html#horizontal-tables" class="sublink-1">Horizontal tables</a> <a href="table.html#variants-matrices" class="sublink-1">Table variants &amp; matrices</a>
- 			 <br/> <a href="card.html#card-title">Card</a>
- 			 <a href="card.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="card.html#sections-media" class="sublink-1">Sections &amp; media</a>
- 			 <a href="card.html#sizing-fluidity" class="sublink-1">Card sizing &amp; fluidity</a>
- 			 <br/> <a href="tab.html#tab-title">Tab</a>
- 			 <a href="tab.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="tab.html#stacked-tabs" class="sublink-1">Stacked tabs</a>
- 			 <br/> <a href="contextual.html#contextual-title">Contextual</a>
- 			 <a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#alerts" class="sublink-1">Alerts</a>
- 			 <a href="contextual.html#animated-alerts" class="sublink-1">Animated alerts</a> <a href="contextual.html#tooltips" class="sublink-1">Tooltips</a>
- 			 <br/> <a href="progress.html#progress-title">Progress</a>
- 			 <a href="progress.html#basic-progress-bar" class="sublink-1">Basic progress bar</a> <a href="progress.html#progress-variants" class="sublink-1">Progress bar variants</a>
- 			 <a href="progress.html#donut-spinner" class="sublink-1">Donut spinner</a> <a href="progress.html#spinner-variants" class="sublink-1">Donut spinner variants</a>
- 			 <br/> <a href="utility.html#utility-title">Utility</a>
- 			 <a href="utility.html#visibility-helpers" class="sublink-1">Visibility helpers</a> <a href="utility.html#borders-shadows" class="sublink-1">Generic borders &amp; shadows</a>
- 			 <a href="utility.html#responsive-sizing" class="sublink-1">Responsive sizing &amp; spacing classes</a>
- 			 <a href="utility.html#responsive-visibility" class="sublink-1">Responsive visibility helpers</a> <a href="utility.html#breadcrumbs" class="sublink-1">Breadcrumbs</a>
- 			 <a href="utility.html#close-icon" class="sublink-1">Close icon</a> <br/>
- 		 </nav> </div>
+			<div class="row"> <input type="checkbox" id="navigation-toggle"> <nav class="drawer col-md-4 col-lg-2">
+				<label class="close" for="navigation-toggle"></label>
+				<a href="index.html"><h4 style="margin-left: 0;">Introduction</h4></a>
+				<h4 style="margin-left: 0;">Modules</h4> <a href="core.html#core-title">Core</a>
+				<a href="core.html#typography" class="sublink-1">Typography</a> <a href="core.html#headings" class="sublink-1">Headings</a>
+				<a href="core.html#common-textual-elements" class="sublink-1">Common textual elements</a>
+				<a href="core.html#lists" class="sublink-1">Lists</a> <a href="core.html#images-captions" class="sublink-1">Image responsiveness &amp; captions</a>
+				<br/> <a href="grid.html#grid-title">Grid</a>
+				<a href="grid.html#basic-layout" class="sublink-1">Basic layout</a> <a href="grid.html#screen-specific-layout" class="sublink-1">Screen specific layouts</a>
+				<a href="grid.html#predefined-layout" class="sublink-1">Predefined layouts</a> <a href="grid.html#column-offset" class="sublink-1">Column offsets</a>
+				<a href="grid.html#column-reorder" class="sublink-1">Column reordering</a> <a href="grid.html#media-object" class="sublink-1">Media object pattern</a>
+				<br/> <a href="input_control.html#input-control-title">Input Control</a>
+				<a href="input_control.html#forms-input" class="sublink-1">Forms &amp; input</a> <a href="input_control.html#checkbox-radio" class="sublink-1">Checkboxes &amp; radio buttons</a>
+				<a href="input_control.html#buttons" class="sublink-1">Buttons &amp; button groups</a> <a href="input_control.html#file-upload" class="sublink-1">File upload buttons</a>
+				<br/> <a href="navigation.html#navigation-title">Navigation</a>
+				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a> <a href="navigation.html#drawer" class="sublink-1">Drawer</a>
+				<a href="navigation.html#footer" class="sublink-1">Footer</a> <a href="navigation.html#sticky" class="sublink-1">Sticky headers &amp; footers</a>
+				<br/> <a href="table.html#table-title">Table</a>
+				<a href="table.html#syntax-responsiveness" class="sublink-1">Basic syntax &amp; responsiveness</a>
+				<a href="table.html#horizontal-tables" class="sublink-1">Horizontal tables</a> <a href="table.html#variants-matrices" class="sublink-1">Table variants &amp; matrices</a>
+				<br/> <a href="card.html#card-title">Card</a>
+				<a href="card.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="card.html#sections-media" class="sublink-1">Sections &amp; media</a>
+				<a href="card.html#sizing-fluidity" class="sublink-1">Card sizing &amp; fluidity</a> <a href="card.html#color-variants" class="sublink-1">Card color variants</a>
+				<br/> <a href="tab.html#tab-title">Tab</a>
+				<a href="tab.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="tab.html#stacked-tabs" class="sublink-1">Stacked tabs</a>
+				<br/> <a href="contextual.html#contextual-title">Contextual</a>
+				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#toasts" class="sublink-1">Toasts</a>
+				<a href="contextual.html#tooltips" class="sublink-1">Tooltips</a>
+				<br/> <a href="progress.html#progress-title">Progress</a>
+				<a href="progress.html#basic-progress-bar" class="sublink-1">Basic progress bar</a> <a href="progress.html#progress-variants" class="sublink-1">Progress bar variants</a>
+				<a href="progress.html#donut-spinner" class="sublink-1">Donut spinner</a> <a href="progress.html#spinner-variants" class="sublink-1">Donut spinner variants</a>
+				<br/> <a href="utility.html#utility-title">Utility</a>
+				<a href="utility.html#visibility-helpers" class="sublink-1">Visibility helpers</a> <a href="utility.html#borders-shadows" class="sublink-1">Generic borders &amp; shadows</a>
+				<a href="utility.html#responsive-sizing" class="sublink-1">Responsive sizing &amp; spacing classes</a>
+				<a href="utility.html#responsive-visibility" class="sublink-1">Responsive visibility helpers</a> <a href="utility.html#breadcrumbs" class="sublink-1">Breadcrumbs</a>
+				<a href="utility.html#close-icon" class="sublink-1">Close icon</a>
+				<a href="flavors.html"><h4 style="margin-left: 0;">Flavors</h4></a>
+				<a href="templates.html"><h4 style="margin-left: 0;">Templates</h4></a>
+				<a href="customization/index.html"><h4 style="margin-left: 0;">Customization</h4></a>
+				<a href="quick_reference.html"><h4 style="margin-left: 0;">Quick Reference</h4></a>
+			</nav>
  			 <div class="col-sm-12 col-md-8 col-lg-10"><main>
       <div class="row" style="padding-top: 40px;" id="utility-title">
         <div class="col-sm-12">
@@ -88,7 +95,7 @@
             </div>
             <div class="section">
               <h2>Quick start</h2>
-              <p>To use the <strong>utility</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
+              <p>To use the <strong>utility</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
             </div>
           </div>
@@ -132,19 +139,16 @@
                   <p>This is a paragraph with a piece of <span class="bordered">bordered text</span>.</p>
                   <button class="bordered">Bordered button</button><button class="bordered primary">Bordered button</button><br>
                   <p><img src="https://placehold.it/200x200?text=rounded" class="rounded" alt="image">&nbsp;&nbsp;<img src="https://placehold.it/200x200?text=circular" class="circular" alt="image"></p><br>
-                  <p><span class="shadow-none">No shadow</span>&nbsp;&nbsp;<span class="shadow-small">Small shadow</span>&nbsp;&nbsp;<span class="shadow-medium">Medium shadow</span>&nbsp;&nbsp;<span class="shadow-large">Large shadow</span></p><br>
+                  <p><span class="shadowed">This is an element that casts a shadow.</span></p><br>
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>Use the <code>.bordered</code> class to apply a generic black border with 25% opacity to any element. Apart from that you can use the <code>.rounded</code> and <code>.circular</code> classes to create generic border radiuses. Finally, you can use the <code>.shadow-small</code>, <code>.shadow-medium</code> and <code>.shadow-large</code> to add a generic <code><span class="fore-secondary">box-shadow</span></code> to any element, as well as the <code>.shadow-none</code> class to remove it entirely.</p>
+                <p>Use the <code>.bordered</code> class to apply a generic black border with 25% opacity to any element. Apart from that you can use the <code>.rounded</code> and <code>.circular</code> classes to create generic border radiuses. Finally, you can use the <code>.shadowed</code> class to add a generic <code><span class="fore-secondary">box-shadow</span></code> to any element.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;span class=&quot;bordered&quot;&gt;Bordered&lt;/span&gt;
 &lt;span class=&quot;rounded&quot;&gt;Rounded&lt;/span&gt;
 &lt;span class=&quot;circular&quot;&gt;Circular&lt;/span&gt;
-&lt;span class=&quot;shadow-none&quot;&gt;No shadow&lt;/span&gt;
-&lt;span class=&quot;shadow-small&quot;&gt;Small shadow&lt;/span&gt;
-&lt;span class=&quot;shadow-medium&quot;&gt;Medium shadow&lt;/span&gt;
-&lt;span class=&quot;shadow-large&quot;&gt;Large shadow&lt;/span&gt;</pre>
+&lt;span class=&quot;shadowed&quot;&gt;Casts shadow&lt;/span&gt;</pre>
               </div>
             </div>
             <div class="section">

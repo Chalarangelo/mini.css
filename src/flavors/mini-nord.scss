@@ -5,7 +5,7 @@
 	Flavor name: Nord (mini-nord)
 	Author: tphecca (https://github.com/tphecca)
 	Maintainers: tphecca
-	mini.css version: v2.1.5 (Fermion)
+	mini.css version: v2.2.0
 */
 //	This flavor is based on the Nord color palette: https://github.com/arcticicestudio/nord
 //	Basic rules for body and typography
@@ -17,6 +17,7 @@ $base-font-family:																	// Default font stack for all elements:
 $base-root-font-size:			16px;											// Root font sizing for all elements [1]
 $base-font-size:				1em;												// Default font sizing for all elements [2]
 $base-line-height:				1.5;											// Default line height for all elements.
+$use-fluid-typography:	false;										// Should fluid typography be used at the root element? (`true`/`false`)
 $body-margin:					0;														// Margin for the body
 $apply-defaults-to-all:			true;										// Should default values be applied to all elements? (`true` or `false`) [3]
 $h1-font-size:					2em;												// Font size of h1
@@ -150,56 +151,6 @@ $grid-large-prefix:				'lg';												// Large screen class prefix for grid
 //	the needed styles. In this case, values should be specified for $grid-extra-small-prefix and $grid-small-breakpoint.
 // [2] - If the value of $include-parent-layout is `true`, the grid system will contain extra classes that will define the column
 //	layout of their children. In this case, a value should be specified for $grid-row-parent-layout-prefix.
-//	Variables for navigational elements
-$header-height:					44px;												// Height for <header>
-$header-back-color:				#2E3440;									// Background color for <header>
-$header-fore-color:				#ECEFF4;									// Text color for <header>
-$header-border-style:			0;												// Border style for <header>
-$header-margin:					0;													// Margin for <header>
-$header-padding:				2px 8px;										// Padding for <header>
-$header-box-shadow:																	// Box shadow for <header>
-	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
-$header-logo-name:				'logo';										// Class name for <header>'s logo
-$header-logo-font-size:			1.75em;									// Font size for <header>'s logo
-$header-logo-line-height:		1.2;										// Line height for <header>'s logo
-$header-logo-margin:			1px 6px 1px 1px;					// Margin for <header>'s logo
-$header-logo-padding:			3px 0 0;									// Padding for <header>'s logo
-$header-link-hover-color:		#37474f;								// Hover color for <header>'s links
-$header-link-margin:			2px 0 0;									// Margin for <header>'s links
-$include-header-sticky:			true;										// Should sticky <header> elements be included? (`true`/`false`) [1]
-$header-sticky-name:			'sticky';									// Class name for sticky <header>
-$nav-back-color:				#ECEFF4;										// Background for <nav>
-$nav-fore-color:				$fore-color;								// Text color for <nav>
-$nav-border-style:				1px solid #D8DEE9;				// Border style for <nav>
-$nav-border-radius:				0;												// Border radius for <nav>
-$nav-padding:					8px 8px 16px 20px;						// Padding for <nav>
-$nav-margin:					2px;													// Margin for <nav>
-$nav-box-shadow: 																		// Box shadow for <nav>
-	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
-$nav-link-fore-color:			#88C0D0;									// Text color for links in <nav>
-$nav-sublink-prefix:			'sublink';								// Prefix for the subcategory links in <nav>
-$nav-sublink-depth:				2;												// Amount of subcategory classes to add
-$nav-sublink-padding-left:		12px;									// Left padding to add to subcategories
-$nav-include-sublink-bar:		true;										// Should a left border bar be added to subcategories (`true`/`false`) [2]
-$nav-sublink-bar-left-position: 3px;								// Left position of subcategory bar
-$nav-sublink-bar-width:			1px;										// Width of the subcategory bar
-$nav-sublink-bar-color:			#81A1C1;								// Subcategory bar color
-$footer-back-color:				#434C5E;									// Background color for <footer>
-$footer-fore-color:				#ECEFF4;									// Text color for <footer>
-$footer-border-style:			0;												// Border stye for <footer>
-$footer-font-size:				85%;											// Font size for <footer>
-$footer-margin:					18px 0 0;										// Margin for <footer>
-$footer-padding:				22px 10px 12px;							// Padding for <footer>
-$footer-link-fore-color:		#88C0D0;								// Text color for links in <footer>
-$include-footer-sticky:			true;										// Should sticky <footer> elements be included (`true`/`false`) [3]
-$footer-sticky-name:			'sticky';									// Class name for sticky <footer> elements
-//	Notes:
-// [1] - If the value of $include-header-sticky is `true`, a class will be created that will allow for sticky positioning
-//	of <header> elements, using the value of $header-sticky-name for the name of the class.
-// [2] - If the value of $nav-include-sublink-bar is `true`, a left-side border bar will appear next to the navigation
-//	subcategories, using the values specified.
-// [3] - If the value of $include-footer-bottom is `true`, a class will be created that will allow for sticky positioning
-//	of <footer> elements, using the value of $footer-sticky-name for the name of the class.
 //	Variables for forms and inputs
 $form-back-color:				#ECEFF4;										// Background color for forms
 $form-fore-color:				$fore-color;								// Text color for forms
@@ -301,6 +252,74 @@ $checkbox-disabled-opacity:		$input-disabled-opacity;			// Opacity for disabled 
 //	allow for universal button styles, even for file input buttons, but can be disabled if the base style is desired.
 //	If the value is `false`, some fixes will be applied to the <input type="file"> element.
 // [3] - The value of $checkbox-size will determine a few variables like some `margin` values, `height`, `width` etc.
+//	Variables for navigational elements
+$header-height:					44px;												// Height for <header>
+$header-back-color:				#2E3440;									// Background color for <header>
+$header-fore-color:				#ECEFF4;									// Text color for <header>
+$header-border-style:			0;												// Border style for <header>
+$header-margin:					0;													// Margin for <header>
+$header-padding:				2px 8px;										// Padding for <header>
+$header-box-shadow:																	// Box shadow for <header>
+	0 2px 4px rgba(0,0,0, 0.18), 0 2px 3px rgba(0, 0, 0, 0.26);
+$header-logo-name:				'logo';										// Class name for <header>'s logo
+$header-logo-font-size:			1.75em;									// Font size for <header>'s logo
+$header-logo-line-height:		1.2;										// Line height for <header>'s logo
+$header-logo-margin:			1px 6px 1px 1px;					// Margin for <header>'s logo
+$header-logo-padding:			3px 0 0;									// Padding for <header>'s logo
+$header-link-hover-color:		#37474f;								// Hover color for <header>'s links
+$header-link-margin:			2px 0 0;									// Margin for <header>'s links
+$include-header-sticky:			true;										// Should sticky <header> elements be included? (`true`/`false`) [1]
+$header-sticky-name:			'sticky';									// Class name for sticky <header>
+$nav-back-color:				#ECEFF4;										// Background for <nav>
+$nav-fore-color:				$fore-color;								// Text color for <nav>
+$nav-border-style:				1px solid #D8DEE9;				// Border style for <nav>
+$nav-border-radius:				0;												// Border radius for <nav>
+$nav-padding:					8px 8px 16px 20px;						// Padding for <nav>
+$nav-margin:					2px;													// Margin for <nav>
+$nav-box-shadow: 																		// Box shadow for <nav>
+	0 2px 4px rgba(0,0,0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
+$nav-link-fore-color:			#88C0D0;									// Text color for links in <nav>
+$nav-sublink-prefix:			'sublink';								// Prefix for the subcategory links in <nav>
+$nav-sublink-depth:				2;												// Amount of subcategory classes to add
+$nav-sublink-padding-left:		12px;									// Left padding to add to subcategories
+$nav-include-sublink-bar:		true;										// Should a left border bar be added to subcategories (`true`/`false`) [2]
+$nav-sublink-bar-left-position: 3px;								// Left position of subcategory bar
+$nav-sublink-bar-width:			1px;										// Width of the subcategory bar
+$nav-sublink-bar-color:			#81A1C1;								// Subcategory bar color
+$drawer-name:							'drawer';									// Class name for the drawer component
+$drawer-back-color:				$nav-back-color;					// Background color of the drawer component
+$drawer-border-style:			$nav-border-style;				// Border style of the drawer component
+$drawer-border-radius:		0;												// Border radius of the drawer component
+$drawer-width:						320px;										// Width of the drawer component
+$drawer-padding:					0;												// Padding of the drawer component
+$drawer-box-shadow:				none;											// Box shadow for the drawer component
+$drawer-mobile-breakpoint: 768px;										// Mobile breakpoint for the drawer component
+$drawer-normal-height:		calc(100vh - 48px);				// Height of the drawer component when shown as normal menu
+$drawer-right-name:				'right';									// Class name for the right variant of the drawer component
+$drawer-persistent-name:	'persistent';							// Class name for the persisten variant of the drawer component
+$drawer-toggle-name:			'drawer-toggle';					// Class name for the drawer component's toggle
+$drawer-toggle-font-size:	40px;											// Font size for the drawer component's toggle icon
+$drawer-toggle-line-height:0.125;										// Line height for the drawer component's toggle icon
+$drawer-toggle-top:				7px;											// Top position for the drawer component's toggle icon
+$drawer-close-name:				'close';									// Class name of the close element for the drawer component
+$drawer-close-top:				12px;											// Top position of the drawer component's close icon
+$drawer-close-right:			4px;									// Right position of the drawer component's close icon
+$footer-back-color:				#434C5E;									// Background color for <footer>
+$footer-fore-color:				#ECEFF4;									// Text color for <footer>
+$footer-border-style:			0;												// Border stye for <footer>
+$footer-font-size:				85%;											// Font size for <footer>
+$footer-margin:					18px 0 0;										// Margin for <footer>
+$footer-padding:				22px 10px 12px;							// Padding for <footer>
+$footer-link-fore-color:		#88C0D0;								// Text color for links in <footer>
+$include-footer-sticky:			true;										// Should sticky <footer> elements be included (`true`/`false`) [3]
+$footer-sticky-name:			'sticky';									// Class name for sticky <footer> elements
+//	Notes:
+// [1] - If the value of $include-header-sticky is `true`, a class will be created that will allow for sticky positioning
+//	of <header> elements, using the value of $header-sticky-name for the name of the class.
+// [2] - If the value of $nav-include-sublink-bar is `true`, a left-side border bar will appear next to the navigation
+//	subcategories, using the values specified.
+// [3] - If the value of $include-footer-bottom is `true`, a class will be created that will allow for sticky positioning
+//	of <footer> elements, using the value of $footer-sticky-name for the name of the class.
 //	Variables for responsive tables
 $table-border-style:			1px solid #D8DEE9;				// Border style for <table> and children
 $table-border-radius:			0;												// Border radius for <table> and children
@@ -351,12 +370,18 @@ $card-size2-name:				'small';									// Class name for small cards
 $card-size2-width:				240px;									// Width for small cards
 $card-size3-name:				'fluid';									// Class name for fluid cards
 $card-size3-width:				100%;										// Width for fluid cards
-$card-style1-name:				'inverse';							// Class name for card style 1
-$card-style1-back-color:		$fore-color;					// Background color for card style 1
-$card-style1-fore-color:		#ECEFF4;							// Text color for card style 1
-$card-style1-border-style:		1px solid #3B4252;	// Border style for card style 1
-$card-style1-border-radius:		0;									// Border radius for card style 1
-$card-style1-section-border-style:	1px solid #434C5E;		// Border style for card style 1 sections
+$card-style1-name:						'warning';						// Class name for card style 1
+$card-style1-back-color:			#EBCB8B;							// Background color for card style 1
+$card-style1-fore-color:			$fore-color;					// Text color for card style 1
+$card-style1-border-style:		1px solid #D08770;		// Border style for card style 1
+$card-style1-border-radius:		0;										// Border radius for card style 1
+$card-style1-section-border-style:1px solid #D08770;// Border style for card style 1 sections
+$card-style2-name:						'error';							// Class name for card style 2
+$card-style2-back-color:			#BF616A;							// Background color for card style 2
+$card-style2-fore-color:			#ECEFF4;							// Text color for card style 2
+$card-style2-border-style:		1px solid #BF616A;		// Border style for card style 2
+$card-style2-border-radius:		0;										// Border radius for card style 2
+$card-style2-section-border-style:1px solid #BF616A;// Border style for card style 2 sections
 $card-section-style1-name:		'dark';							// Class name for card section style 1
 $card-section-style1-back-color:#ECEFF4;					// Background color for card section style 1
 $card-section-style1-fore-color:$fore-color;			// Text color for card section style 1
@@ -412,28 +437,23 @@ $mark-style2-border-radius:		2px;									// Border radius for <mark> style 2
 $mark-style2-padding:			5px;											// Padding for <mark> style 2
 $mark-style2-font-size:			100%;										// Font size for <mark> style 2
 $mark-style2-line-height:		1.35;										// Line height for <mark> style 2
-$alert-name:					'alert';											// Class name for alerts
-$alert-back-color:				#ECEFF4;									// Background color for alerts
-$alert-fore-color:				$fore-color;							// Text color for alerts
-$alert-border-style:			1px solid #D8DEE9;				// Border style for alerts
-$alert-border-radius:			0;												// Border radius for alerts
-$alert-padding:					12px 16px;									// Padding for alerts
-$alert-margin:					1px 10px;										// Margin for alerts
-$alert-box-shadow:																	// Box shadow for alerts
-	0 1px 3px rgba(0,0,0, 0.18), 0 1px 2px rgba(0, 0, 0, 0.26);
-$alert-include-animated:		true;										// Should animated alerts be included? (`true`/`false`) [1]
-$alert-animated-class:			'animated';							// Class name for animated alerts
-$alert-variant1-name:			'urgent';									// Class name for alert variant 1
-$alert-variant1-back-color:		 #EBCB8B;							// Background color for alert variant 1
-$alert-variant2-name:			'critical';								// Class name for alert variant 2
-$alert-variant2-back-color:		 #BF616A;							// Background color for alert variant 2
-$alert-variant2-fore-color:		 #ECEFF4;							// Text color for alert variant 2
-$alert-style1-name:				'urgent';									// Class name for alert style 1
-$alert-style1-border-style:		1px solid #D08770;		// Border style for alert style 1
-$alert-style1-border-radius:	$alert-border-radius;	// Border radius for alert style 1
-$alert-style2-name:				'critical';								// Class name for alert style 2
-$alert-style2-border-style:		1px solid #BF616A;		// Border style for alert style 2
-$alert-style2-border-radius:	$alert-border-radius;	// Border radius for alert style 2
+$include-toast:							true;										// Should the toast component be included? (`true`/`false`)
+$toast-name:								'toast';								// Class name for toast component
+$toast-bottom:							24px;										// Bottom position for toasts
+$toast-back-color:					#424242;								// Background color for toasts
+$toast-fore-color:					#ECEFF4;								// Text color for toasts
+$toast-border-style:				0;											// Border style for toasts
+$toast-border-radius:				32px;										// Border radius for toasts
+$toast-padding:							12px 24px;							// Padding for toasts
+$toast-box-shadow:					none;										// Box shadow for toasts
+$toast-style1-name:					'small';								// Class name for toast style 1
+$toast-style1-border-style:	0;											// Border style for toast style 1
+$toast-style1-border-radius:24px;										// Border radius for toast style 1
+$toast-style1-padding:			8px 16px;								// Padding for toast style 1
+$toast-style2-name:					'large';								// Class name for toast style 2
+$toast-style2-border-style:	0;											// Border style for toast style 2
+$toast-style2-border-radius:48px;										// Border radius for toast style 2
+$toast-style2-padding:			18px 36px;							// Padding for toast style 2
 $include-tooltip:				true;												// Should tooltips be included? (`true`/`false`) [2]
 $tooltip-name:					'tooltip';									// Class name for the tooltip component
 $tooltip-back-color:			$fore-color;							// Background color for tooltips
@@ -467,12 +487,6 @@ $progress-variant1-name:		'secondary';						// Class name for <progress> variant
 $progress-variant1-fore-color:	#BF616A;						// Progress bar color for <progress> variant 1
 $progress-variant2-name:		'tertiary';							// Class name for <progress> variant 2
 $progress-variant2-fore-color:	#A3BE8C;						// Progress bar color for <progress> variant 2
-$progress-style1-name:			'nano';									// Class name for <progress> style 1
-$progress-style1-height:		2px;										// Height for <progress> style 1
-$progress-style1-top-bottom-margin:		0;						// Top and bottom margin for <progress> style 1
-$progress-style1-left-right-margin:		0;						// Left and right margin for <progress> style 1
-$progress-style1-border-style:	0;									// Border style for <progress> style 1
-$progress-style1-border-radius:	0;									// Border radius for <progress> style 1
 $spinner-donut-name:			'spinner-donut';					// Class name for donut spinner
 $spinner-donut-border-thickness:4px;								// Border thickness for donut spinner
 $spinner-donut-back-color:		#D8DEE9;							// Background color for donut spinner
@@ -543,7 +557,6 @@ $include-center-block-name:		false;							// Should center block be included? (`
 // that module and marked as such below it.
 @import '../mini/core';
 @import '../mini/grid';
-@import '../mini/navigation';
 @import '../mini/input_control';
 /*
 	Custom elements for forms and input elements.
@@ -560,6 +573,7 @@ $include-center-block-name:		false;							// Should center block be included? (`
 	$button-style1-border-radius, $button-style1-padding, $button-style1-margin);
 @include make-button-alt-style ($button-style2-name, $button-style2-border-style,
 	$button-style2-border-radius, $button-style2-padding, $button-style2-margin);
+@import '../mini/navigation';
 @import '../mini/table';
 @import '../mini/card';
 /*
@@ -570,6 +584,8 @@ $include-center-block-name:		false;							// Should center block be included? (`
 @include make-card-alt-size ($card-size3-name, $card-size3-width);
 @include make-card-alt-color ($card-style1-name, $card-style1-back-color, $card-style1-fore-color,
 	$card-style1-border-style, $card-style1-border-radius, $card-style1-section-border-style);
+	@include make-card-alt-color ($card-style2-name, $card-style2-back-color, $card-style2-fore-color,
+		$card-style2-border-style, $card-style2-border-radius, $card-style2-section-border-style);
 @include make-card-section-alt-color ($card-section-style1-name, $card-section-style1-back-color,
 	$card-section-style1-fore-color);
 @include make-card-section-alt-color ($card-section-style2-name, $card-section-style2-back-color,
@@ -586,10 +602,10 @@ $include-center-block-name:		false;							// Should center block be included? (`
 	$mark-style1-border-radius, $mark-style1-padding);
 @include make-mark-alt-style ($mark-style2-name, $mark-style2-border-style,
 	$mark-style2-border-radius, $mark-style2-padding, $mark-style2-font-size, $mark-style2-line-height);
-@include make-alert-alt-color ($alert-variant1-name, $alert-variant1-back-color);
-@include make-alert-alt-color ($alert-variant2-name, $alert-variant2-back-color, $alert-variant2-fore-color);
-@include make-alert-alt-style ($alert-style1-name, $alert-style1-border-style, $alert-style1-border-radius);
-@include make-alert-alt-style ($alert-style2-name, $alert-style2-border-style, $alert-style2-border-radius);
+@include make-toast-alt-style($toast-style1-name, $toast-style1-border-style,
+	$toast-style1-border-radius, $toast-style1-padding);
+@include make-toast-alt-style($toast-style2-name, $toast-style2-border-style,
+	$toast-style2-border-radius, $toast-style2-padding);
 @import '../mini/progress';
 /*
 	Custom elements for progress elements and spinners.
@@ -597,9 +613,6 @@ $include-center-block-name:		false;							// Should center block be included? (`
 @include make-progress-inline ($progress-inline-name, $progress-inline-width);
 @include make-progress-alt-color ($progress-variant1-name, $progress-variant1-fore-color);
 @include make-progress-alt-color ($progress-variant2-name, $progress-variant2-fore-color);
-@include make-progress-alt-style ($progress-style1-name, $progress-style1-height,
-	$progress-style1-top-bottom-margin, $progress-style1-left-right-margin,
-	$progress-style1-border-style, $progress-style1-border-radius);
 @include make-spinner-donut-alt-color ($spinner-donut-variant1-name, $spinner-donut-variant1-back-color,
 	$spinner-donut-variant1-fore-color);
 @include make-spinner-donut-alt-color ($spinner-donut-variant2-name, $spinner-donut-variant2-back-color,

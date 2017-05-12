@@ -25,19 +25,24 @@
 	@media (max-width: 767px){ .col-sm-12.col-sm-last.col-md-12.col-md-normal { border: 0; border-top: 1px solid #c9c9c9;}}
 	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
 	.box-colored {color: #f5f5f5;} @media (max-width: 767px){.container {padding: 0.25rem !important;}.col-sm-12.col-md-8.col-lg-10{padding: 0 !important;}}
+	.toast.demo {   position: relative; top: 2rem; left: calc(50% - 6rem); z-index: 1;} .toast.demo.small { top: 4.5rem; left: calc(50% - 6.75rem);} .toast.demo.large { top: 7.5rem; left: calc(50% - 8rem);}
+	@media screen and (min-width: 768px) { .drawer { margin-top: 4px;}}
 	</style>
   </head>
   <body>
 		<header class="sticky">
 			<a href="index.html" class="logo"><span id="header-logo">m</span></a>
-			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
-			<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
-			<a href="quick_reference.html" class="button">Quick Reference</a>
+				<label class="drawer-toggle button" for="navigation-toggle"></label>
+			<a href="index.html" class="button hidden-sm">Introduction</a> <a href="modules.html" class="button hidden-sm">Modules</a>
+			<a href="flavors.html" class="button hidden-sm">Flavors</a> <a href="templates.html" class="button hidden-sm">Templates</a>
+			<a href="customization/index.html" class="button hidden-sm">Customization</a> <a href="quick_reference.html" class="button hidden-sm">Quick Reference</a>
 			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 		</header>
 		<div class="container" style="padding-left: 0.25rem;">
-			<div class="row"> <div class="col-sm-12 col-md-4 col-lg-2 hidden-sm" style="padding: 0;"> <nav>
-				<h4 style="text-align: center">Modules</h4> <a href="core.html#core-title">Core</a>
+			<div class="row"> <input type="checkbox" id="navigation-toggle"> <nav class="drawer col-md-4 col-lg-2">
+				<label class="close" for="navigation-toggle"></label>
+				<a href="index.html"><h4 style="margin-left: 0;">Introduction</h4></a>
+				<h4 style="margin-left: 0;">Modules</h4> <a href="core.html#core-title">Core</a>
 				<a href="core.html#typography" class="sublink-1">Typography</a> <a href="core.html#headings" class="sublink-1">Headings</a>
 				<a href="core.html#common-textual-elements" class="sublink-1">Common textual elements</a>
 				<a href="core.html#lists" class="sublink-1">Lists</a> <a href="core.html#images-captions" class="sublink-1">Image responsiveness &amp; captions</a>
@@ -45,23 +50,23 @@
 				<a href="grid.html#basic-layout" class="sublink-1">Basic layout</a> <a href="grid.html#screen-specific-layout" class="sublink-1">Screen specific layouts</a>
 				<a href="grid.html#predefined-layout" class="sublink-1">Predefined layouts</a> <a href="grid.html#column-offset" class="sublink-1">Column offsets</a>
 				<a href="grid.html#column-reorder" class="sublink-1">Column reordering</a> <a href="grid.html#media-object" class="sublink-1">Media object pattern</a>
-				<br/> <a href="navigation.html#navigation-title">Navigation</a>
-				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a>
-				<a href="navigation.html#footer" class="sublink-1">Footer</a> <a href="navigation.html#sticky" class="sublink-1">Sticky headers &amp; footers</a>
 				<br/> <a href="input_control.html#input-control-title">Input Control</a>
 				<a href="input_control.html#forms-input" class="sublink-1">Forms &amp; input</a> <a href="input_control.html#checkbox-radio" class="sublink-1">Checkboxes &amp; radio buttons</a>
 				<a href="input_control.html#buttons" class="sublink-1">Buttons &amp; button groups</a> <a href="input_control.html#file-upload" class="sublink-1">File upload buttons</a>
+				<br/> <a href="navigation.html#navigation-title">Navigation</a>
+				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a> <a href="navigation.html#drawer" class="sublink-1">Drawer</a>
+				<a href="navigation.html#footer" class="sublink-1">Footer</a> <a href="navigation.html#sticky" class="sublink-1">Sticky headers &amp; footers</a>
 				<br/> <a href="table.html#table-title">Table</a>
 				<a href="table.html#syntax-responsiveness" class="sublink-1">Basic syntax &amp; responsiveness</a>
 				<a href="table.html#horizontal-tables" class="sublink-1">Horizontal tables</a> <a href="table.html#variants-matrices" class="sublink-1">Table variants &amp; matrices</a>
 				<br/> <a href="card.html#card-title">Card</a>
 				<a href="card.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="card.html#sections-media" class="sublink-1">Sections &amp; media</a>
-				<a href="card.html#sizing-fluidity" class="sublink-1">Card sizing &amp; fluidity</a>
+				<a href="card.html#sizing-fluidity" class="sublink-1">Card sizing &amp; fluidity</a> <a href="card.html#color-variants" class="sublink-1">Card color variants</a>
 				<br/> <a href="tab.html#tab-title">Tab</a>
 				<a href="tab.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="tab.html#stacked-tabs" class="sublink-1">Stacked tabs</a>
 				<br/> <a href="contextual.html#contextual-title">Contextual</a>
-				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#alerts" class="sublink-1">Alerts</a>
-				<a href="contextual.html#animated-alerts" class="sublink-1">Animated alerts</a> <a href="contextual.html#tooltips" class="sublink-1">Tooltips</a>
+				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#toasts" class="sublink-1">Toasts</a>
+				<a href="contextual.html#tooltips" class="sublink-1">Tooltips</a>
 				<br/> <a href="progress.html#progress-title">Progress</a>
 				<a href="progress.html#basic-progress-bar" class="sublink-1">Basic progress bar</a> <a href="progress.html#progress-variants" class="sublink-1">Progress bar variants</a>
 				<a href="progress.html#donut-spinner" class="sublink-1">Donut spinner</a> <a href="progress.html#spinner-variants" class="sublink-1">Donut spinner variants</a>
@@ -69,13 +74,17 @@
 				<a href="utility.html#visibility-helpers" class="sublink-1">Visibility helpers</a> <a href="utility.html#borders-shadows" class="sublink-1">Generic borders &amp; shadows</a>
 				<a href="utility.html#responsive-sizing" class="sublink-1">Responsive sizing &amp; spacing classes</a>
 				<a href="utility.html#responsive-visibility" class="sublink-1">Responsive visibility helpers</a> <a href="utility.html#breadcrumbs" class="sublink-1">Breadcrumbs</a>
-				<a href="utility.html#close-icon" class="sublink-1">Close icon</a> <br/>
-			</nav> </div>
+				<a href="utility.html#close-icon" class="sublink-1">Close icon</a>
+				<a href="flavors.html"><h4 style="margin-left: 0;">Flavors</h4></a>
+				<a href="templates.html"><h4 style="margin-left: 0;">Templates</h4></a>
+				<a href="customization/index.html"><h4 style="margin-left: 0;">Customization</h4></a>
+				<a href="quick_reference.html"><h4 style="margin-left: 0;">Quick Reference</h4></a>
+			</nav>
 				<div class="col-sm-12 col-md-8 col-lg-10"><main>
       <div class="row" style="padding-top: 40px;" id="contextual-title">
         <div class="col-sm-12">
           <h1>Contextual</h1>
-          <p>The <strong>contextual</strong> module provides you with simple tags, marks and highlights for your pages, allowing you to easily emphasize parts of your text. The contextual alerts aim to replace the commonly used modal dialog design paradigm with a more modern one. HTML5 elements and simple rules are used in order to make important messages and pieces of content stand out easily.</p>
+          <p>The <strong>contextual</strong> module provides you with simple tags, marks and highlights for your pages, allowing you to easily emphasize parts of your text. Contextual toasts and tooltips are also provided, aiming to help deliver important information to users. HTML5 elements and simple rules are used in order to make important messages and pieces of content stand out easily.</p>
           <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
         </div>
       </div>
@@ -84,11 +93,11 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Almost every piece of content present on the web has some sort of content that needs highlighting in one way or another. The <strong>contextual</strong> module provides you with simple semantic text highlighting that utilises the <code>&lt;mark&gt;</code> HTML element. Apart from that, this module contains styles and definitions for a simple <code>.alert</code> container, that you can use to show alerts on your websites and web apps. Alerts replace the traditional design paradigms of modals, messages and alerts by defining a simple, usable container that is also mobile friendly. Finally, a simple accessible <code>.tooltip</code> implementation is included. All components in this module are fully accessible, so that's another thing not to worry about.</p><br>
+              <p>Almost every website present on the web has some sort of content that needs highlighting in one way or another. The <strong>contextual</strong> module provides you with simple semantic text highlighting that utilises the <code>&lt;mark&gt;</code> HTML element. Apart from that, this module contains styles and definitions for a simple <code>.toast</code> container, that you can use to display toast messages on your websites and web apps. Toasts mimic the native application notifications of certain devices, making them mobile friendly. Finally, a simple accessible <code>.tooltip</code> implementation is included. All components in this module are fully accessible, so that's another thing not to worry about.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
-              <p>To use the <strong>contextual</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p><br>
+              <p>To use the <strong>contextual</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
             </div>
           </div>
@@ -153,89 +162,38 @@
           </div>
         </div>
       </div>
-      <div class="row" id="alerts">
+      <div class="row" id="toasts">
         <div class="col-sm-12">
           <div class="card fluid">
-            <div class="section"><h2>Alerts</h2></div>
+            <div class="section"><h2>Toasts</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
-              <div>
-                <div class="alert" style="margin-top: 8px; margin-bottom: 8px;"><h3>This is an alert</h3><p>Make sure you read this!</p></div>
-                <div class="alert urgent" style="margin-bottom: 8px;"><h3>This is an urgent alert</h3><p>Make absolutely sure you read this!</p></div>
-                <div class="alert critical" style="margin-bottom: 8px;"><h3>This is a critical alert</h3><p>Make certain you read and actually understand this!</p></div>
-              </div>
+                <div style="height: 15rem;">
+									<span class="toast demo">I'm a toast message!</span><br/>
+									<span class="toast small demo">I'm a small toast message!</span><br/>
+									<span class="toast large demo">I'm a large toast message!</span>
+								</div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
-                <p>Alerts replace modal dialogs, along with messages, notifications and traditional alerts with a simpler, easier design paradigm. To create an alert, use a <code>&lt;div&gt;</code> element, which will contain one or more elements (for example a <code>&lt;h3&gt;</code> and a <code>&lt;p&gt;</code>) and add the <code>.alert</code> class to it. For more urgent alerts, use the <code>.urgent</code> class and for critical alerts, use the <code>.critical</code> class.</p>
+                <p>Toasts aim to help bridge the gap between web and native applications on mobile devices, by displaying native-looking toast messages. To create a toast, wrap some text inside a <code>&lt;span&gt;</code> element with the <code>.toast</code> class. Toasts appear at the bottom of the screen on top of everything else. If you want to create smaller or larger toast messasges, you can add the <code>.small</code> or <code>.large</code> classes respectively.</p>
                 <h3>Sample code</h3>
-                <pre>&lt;div class=&quot;alert&quot;&gt;
-  &lt;h3&gt;This is an alert&lt;/h3&gt;
-  &lt;p&gt;Make sure you read this!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;alert urgent&quot;&gt;
-  &lt;h3&gt;This is an urgent alert&lt;/h3&gt;
-  &lt;p&gt;Make absolutely sure you read this!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;alert critical&quot;&gt;
-  &lt;h3&gt;This is a critical alert&lt;/h3&gt;
-  &lt;p&gt;Make certain you read and actually understand this!&lt;/p&gt;
-&lt;/div&gt;</pre>
+                <pre>&lt;span class=&quot;toast&quot;&gt;This is a normal toast message!&lt;/span&gt;
+&lt;span class=&quot;toast small&quot;&gt;This is a large toast message!&lt;/span&gt;
+&lt;span class=&quot;toast large&quot;&gt;This is a small toast message!&lt;/span&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
               <ul>
-                <li>Alert elements do not have any pre-defined behavior. You should use your own Javascript code and interactive HTML elements to deal with showing and hiding them as necessary.</li>
-				<li>If you want to make your alerts more accessible, we suggest you add either the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role">alert</a>&quot;</span></code> attribute or the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role">alertdialog</a>&quot;</span></code> attribute, depending on the behavior you are planning to implement for your alerts.</li>
+                <li>Toast elements do not have any pre-defined behavior. You should use your own Javascript code and interactive HTML elements to deal with showing and hiding them as necessary.</li>
+				<li>If you want to create your own color or size variants for toast messages, check out the <a href="customization.html">customization</a> page.</li>
               </ul><hr>
               <div class="row">
-                <div class="col-sm-12 col-md-6">
-                  <pre>&lt;p class=&quot;alert&quot;&gt;Short and to the point&lt;/p&gt;
-<span class="fore-tertiary">&lt;!-- or --&gt;</span>
-&lt;h2 class=&quot;alert urgent&quot;&gt;Large and to the point&lt;/h2&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Instead of using a <code>&lt;div&gt;</code> element, you can also apply the <code>.alert</code> class to common textual elements, such as paragraphs or headings.</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
-                  <pre>&lt;button class=&quot;alert&quot;&gt;Not a good alert&lt;/button&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid applying the <code>.alert</code> class to non-textual HTML elements, such as buttons or images. Doing so might result in unexpected behavior.</p>
+                <div class="col-sm-12">
+                  <pre>&lt;span class=&quot;toast small large&quot;&gt;Not a good toast&lt;/span&gt;</pre>
+                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining two toast size variants, as this might cause unexpected behavior.</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row" id="animated-alerts">
-        <div class="col-sm-12">
-          <div class="card fluid">
-            <div class="section"><h2>Animated alerts</h2></div>
-            <div class="section row">
-              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
-              <div>
-                <div class="animated alert" style="margin-top: 8px; margin-bottom: 8px;"><h3>This is an alert</h3><p>Make sure you read this!</p></div>
-                <div class="animated alert urgent" style="margin-bottom: 8px;"><h3>This is an urgent alert</h3><p>Make absolutely sure you read this!</p></div>
-                <div class="animated alert critical" style="margin-bottom: 8px;"><h3>This is a critical alert</h3><p>Make certain you read and actually understand this!</p></div>
-              </div>
-              </div>
-              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
-                <p>Alerts can be animated, so that they pop out a little more to make sure your users can see them. To animate an alert box, use the <code>.animated</code> class on an existing <code>.alert</code> and it shall periodically scale up a little bit to make users notice it.</p>
-                <h3>Sample code</h3>
-                <pre>&lt;div class=&quot;alert animated&quot;&gt;
-  &lt;h3&gt;Animated alert&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div class=&quot;alert urgent animated&quot;&gt;
-  &lt;h3&gt;Animated urgent alert&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div class=&quot;alert critical animated&quot;&gt;
-  &lt;h3&gt;Animated critical alert&lt;/h3&gt;
-&lt;/div&gt;</pre>
-              </div>
-            </div>
-            <div class="section">
-            <h3>Notes</h3>
-              <ul>
-                <li>Animated alerts may not display properly on older browsers, especially legacy versions of Internet Explorer.</li>
-                <li>It has been reported that some Webkit-based browsers, such as Chrome, display animated alerts in a very blurry fashion. Despite our best attempts at solving these problems, they seem to be quite persistent and we do not yet know how to fix them. Thus, you might want to hold off on using animated alerts if you think this might be an issue or try to control them using Javascript code to make the animation stop after a short amount of time (i.e. removing the <code>.animated</code> class).</li>
-              </ul>
             </div>
           </div>
         </div>

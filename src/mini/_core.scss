@@ -3,6 +3,11 @@
 */
 $apply-defaults-to-all: 			true !default;				// Should default values be applied to all elements? (`true`/`false`).
 $base-root-font-size:					16px !default;				// Root font sizing for all elements - Should only be specified in `px` units!
+$use-fluid-typography:				false !default;				// Should fluid typography be used at the root element? (`true`/`false`)
+$fluid-type-start-breakpoint:	320px !default;				// Breakpoint where fluid typography scaling starts.
+$fluid-type-end-breakpoint:		1600px !default;			// Breakpoint where fluid typography scaling ends.
+$fluid-type-small-type:				14px !default;				// Smallest root font size for fluid typography.
+$fluid-type-large-type:				18px !default;				// Largest root font size for fluid typography.
 $include-dfn-fix: 						true !default;				// Fix display of <dfn> element in older versions of Android.
 $make-heading-smalltext-block:false !default;				// Should <small> elements in headings be displayed as blocks (`true`/`false`).
 $horizontal-rule-fancy-style: false !default;				// Should a fancy styling be applied for the <hr> element (`true`/`false`).
@@ -10,10 +15,32 @@ $add-pre-element-sidebar: 		false !default;				// Should a fancy sidebar be adde
 $apply-link-underline: 				true !default;				// Should an underline be applied to all <a> elements? (`true`/`false`).
 $apply-link-hover-fade: 			true !default;				// Should the :hover and :focus state of <a> elements use fade-out instead of a different color (`true`/`false`).
 $style-link-active-state:			false !default;				// [Hidden flag] Should the :active state of <a> elements be stylized, same as the :hover state (`true`/`false`).
-
-html {
-	font-size: $base-root-font-size;	// Set root's font sizing.
+// Base typography rules
+@if $use-fluid-typography {
+	// Calculation of local variables (unitless values needed for the calculation of fluid typography)
+	$_fluid-type-unitless-size-change:	($fluid-type-large-type - $fluid-type-small-type)/($fluid-type-small-type * 0 + 1);
+	$_fluid-type-unitless-distance:	($fluid-type-end-breakpoint - $fluid-type-start-breakpoint)/($fluid-type-start-breakpoint * 0 + 1);
+	html {
+		font-size: #{$fluid-type-small-type};
+	}
+	@media screen and (min-width: #{$fluid-type-start-breakpoint}) {
+		html {
+			font-size: $base-root-font-size; // If the below calculation does not work, this is the fallback.
+			font-size: calc(#{$fluid-type-small-type} + #{$_fluid-type-unitless-size-change} * ((100vw - #{$fluid-type-start-breakpoint}) / #{$_fluid-type-unitless-distance}));
+		}
+	}
+	@media screen and (min-width: #{$fluid-type-end-breakpoint}) {
+		html {
+			font-size: #{$fluid-type-large-type};
+		}
+	}
 }
+@else {
+	html {
+		font-size: $base-root-font-size;	// Set root's font sizing.
+	}
+}
+
 @if $apply-defaults-to-all {
 	html, * {
 		font-family: #{$base-font-family};

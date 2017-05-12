@@ -48,53 +48,48 @@
 		}
 	}
 }
-// Mixin for alternate alert (alert color variants).
+// Mixin for alternate toast (toast color variants).
 // Variables:
-// - $alert-alt-name : The name of the class used for the alternate alert.
-// - $alert-alt-back-color : The background color of the alternate alert.
-// - $alert-alt-fore-color : (Optional) The text color of the alternate mark. Defaults to the text color of the alert.
-@mixin make-alert-alt-color ($alert-alt-name, $alert-alt-back-color, $alert-alt-fore-color: $alert-fore-color) {
-	@if not ($include-alerts) {
-		@error "Contextual module's alert mixins are only available if alerts are enabled. Set '$include-alerts' to 'true' and try again!";
+// - $toast-alt-name : The name of the class used for the alternate toast.
+// - $toast-alt-back-color : The background color of the alternate toast.
+// - $toast-alt-fore-color : (Optional) The text color of the alternate mark. Defaults to the text color of the toast.
+@mixin make-toast-alt-color ($toast-alt-name, $toast-alt-back-color, $toast-alt-fore-color: $toast-fore-color) {
+	@if not ($include-toast) {
+		@error "Contextual module's toast mixins are only available if toasts are enabled. Set '$include-toast' to 'true' and try again!";
 	}
-	.#{$alert-name}.#{$alert-alt-name} {
-		@if $alert-alt-back-color != $alert-back-color {
-			background: $alert-alt-back-color;
+	.#{$toast-name}.#{$toast-alt-name} {
+		@if $toast-alt-back-color != $toast-back-color {
+			background: $toast-alt-back-color;
 		}
-		@if $alert-alt-fore-color != $alert-fore-color {
-			color: $alert-alt-fore-color;
+		@if $toast-alt-fore-color != $toast-fore-color {
+			color: $toast-alt-fore-color;
 		}
 	}
 }
-// Mixin for alternate alert styles (alert style variants).
+// Mixin for alternate toast styles (toast style variants).
 // Variables:
-// - $alert-alt-name : The name of the class used for the alternate alert style.
-// - $alert-alt-border-style : The border style of the alternate alert style.
-// - $alert-alt-border-radius : Border radius of the alternate alert style.
-// - $alert-alt-padding : (Optional) Padding of the alternate alert style. Defaults to the alert's padding.
-// - $alert-alt-margin : (Optional) Margin of the alternate alert style. Defaults to the alert's margin.
-// - $alert-alt-box-shadow : (Optional) Box shadow of the alretnate alert style. Defaults to the alert's box shadow.
-@mixin make-alert-alt-style ($alert-alt-name, $alert-alt-border-style, $alert-alt-border-radius,
-	$alert-alt-padding : $alert-padding, $alert-alt-margin : $alert-margin,
-	$alert-alt-box-shadow : $alert-box-shadow) {
-	@if not ($include-alerts) {
-		@error "Contextual module's alert mixins are only available if alerts are enabled. Set '$include-alerts' to 'true' and try again!";
+// - $toast-alt-name : The name of the class used for the alternate toast style.
+// - $toast-alt-border-style : The border style of the alternate toast style.
+// - $toast-alt-border-radius : Border radius of the alternate toast style.
+// - $toast-alt-padding : (Optional) Padding of the alternate toast style. Defaults to the toast's padding.
+// - $toast-alt-box-shadow : (Optional) Box shadow of the alretnate toast style. Defaults to the toast's box shadow.
+@mixin make-toast-alt-style ($toast-alt-name, $toast-alt-border-style, $toast-alt-border-radius,
+	$toast-alt-padding : $toast-padding, $toast-alt-box-shadow : $toast-box-shadow) {
+	@if not ($include-toast) {
+		@error "Contextual module's toast mixins are only available if toasts are enabled. Set '$include-toast' to 'true' and try again!";
 	}
-	.#{$alert-name}.#{$alert-alt-name} {
-		@if $alert-alt-border-style != $alert-border-style {
-			border: $alert-alt-border-style;
+	.#{$toast-name}.#{$toast-alt-name} {
+		@if $toast-alt-border-style != $toast-border-style {
+			border: $toast-alt-border-style;
 		}
-		@if $alert-alt-border-radius != $alert-border-radius {
-			border-radius: $alert-alt-border-radius;
+		@if $toast-alt-border-radius != $toast-border-radius {
+			border-radius: $toast-alt-border-radius;
 		}
-		@if $alert-alt-padding != $alert-padding {
-			padding: $alert-alt-padding;
+		@if $toast-alt-padding != $toast-padding {
+			padding: $toast-alt-padding;
 		}
-		@if $alert-alt-margin != $alert-margin {
-			margin: $alert-alt-margin;
-		}
-		@if $alert-alt-box-shadow != $alert-box-shadow {
-			box-shadow: $alert-alt-box-shadowbox-shadow;
+		@if $toast-alt-box-shadow != $toast-box-shadow {
+			box-shadow: $toast-alt-box-shadowbox-shadow;
 		}
 	}
 }
@@ -105,7 +100,7 @@
 // - $tooltip-alt-fore-color : (Optional) The text color of the alternate mark. Defaults to the text color of the tooltip.
 @mixin make-tooltip-alt-color ($tooltip-alt-name, $tooltip-alt-back-color, $tooltip-alt-fore-color: $tooltip-fore-color) {
 	@if not ($include-tooltip) {
-		@error "Contextual module's tooltip mixins are only available if tooltips are enabled. Set '$include-tooltips' to 'true' and try again!";
+		@error "Contextual module's tooltip mixins are only available if tooltips are enabled. Set '$include-tooltip' to 'true' and try again!";
 	}
 	.#{$tooltip-name}.#{$tooltip-alt-name} {
 		@if $tooltip-alt-back-color != $tooltip-back-color {
@@ -136,7 +131,7 @@
 @mixin make-tooltip-alt-style ($tooltip-alt-name, $tooltip-alt-tail-size, $tooltip-alt-border-radius,
 	$tooltip-alt-padding : $tooltip-padding, $tooltip-alt-box-shadow : $tooltip-box-shadow) {
 	@if not ($include-tooltip) {
-		@error "Contextual module's tooltip mixins are only available if tooltips are enabled. Set '$include-tooltips' to 'true' and try again!";
+		@error "Contextual module's tooltip mixins are only available if tooltips are enabled. Set '$include-tooltip' to 'true' and try again!";
 	}
 	.#{$tooltip-name}.#{$tooltip-alt-name} {
 		@if $tooltip-alt-tail-size != $tooltip-tail-size {
@@ -162,6 +157,58 @@
 			@if $tooltip-alt-box-shadow != $tooltip-box-shadow {
 				box-shadow: $tooltip-alt-box-shadow;
 			}
+		}
+	}
+}
+// [WARNING: As of v2.2.0, this mixin is deprecated, due to the fact that the alert component is no longer maintained.]
+// Mixin for alternate alert (alert color variants).
+// Variables:
+// - $alert-alt-name : The name of the class used for the alternate alert.
+// - $alert-alt-back-color : The background color of the alternate alert.
+// - $alert-alt-fore-color : (Optional) The text color of the alternate mark. Defaults to the text color of the alert.
+@mixin make-alert-alt-color ($alert-alt-name, $alert-alt-back-color, $alert-alt-fore-color: $alert-fore-color) {
+	@if not ($include-alerts) {
+		@error "Contextual module's alert mixins are only available if alerts are enabled. Set '$include-alerts' to 'true' and try again!";
+	}
+	.#{$alert-name}.#{$alert-alt-name} {
+		@if $alert-alt-back-color != $alert-back-color {
+			background: $alert-alt-back-color;
+		}
+		@if $alert-alt-fore-color != $alert-fore-color {
+			color: $alert-alt-fore-color;
+		}
+	}
+}
+// [WARNING: As of v2.2.0, this mixin is deprecated, due to the fact that the alert component is no longer maintained.]
+// Mixin for alternate alert styles (alert style variants).
+// Variables:
+// - $alert-alt-name : The name of the class used for the alternate alert style.
+// - $alert-alt-border-style : The border style of the alternate alert style.
+// - $alert-alt-border-radius : Border radius of the alternate alert style.
+// - $alert-alt-padding : (Optional) Padding of the alternate alert style. Defaults to the alert's padding.
+// - $alert-alt-margin : (Optional) Margin of the alternate alert style. Defaults to the alert's margin.
+// - $alert-alt-box-shadow : (Optional) Box shadow of the alretnate alert style. Defaults to the alert's box shadow.
+@mixin make-alert-alt-style ($alert-alt-name, $alert-alt-border-style, $alert-alt-border-radius,
+	$alert-alt-padding : $alert-padding, $alert-alt-margin : $alert-margin,
+	$alert-alt-box-shadow : $alert-box-shadow) {
+	@if not ($include-alerts) {
+		@error "Contextual module's alert mixins are only available if alerts are enabled. Set '$include-alerts' to 'true' and try again!";
+	}
+	.#{$alert-name}.#{$alert-alt-name} {
+		@if $alert-alt-border-style != $alert-border-style {
+			border: $alert-alt-border-style;
+		}
+		@if $alert-alt-border-radius != $alert-border-radius {
+			border-radius: $alert-alt-border-radius;
+		}
+		@if $alert-alt-padding != $alert-padding {
+			padding: $alert-alt-padding;
+		}
+		@if $alert-alt-margin != $alert-margin {
+			margin: $alert-alt-margin;
+		}
+		@if $alert-alt-box-shadow != $alert-box-shadow {
+			box-shadow: $alert-alt-box-shadowbox-shadow;
 		}
 	}
 }

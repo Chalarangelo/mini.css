@@ -25,12 +25,18 @@
   </head>
   <body>
 		<header class="sticky">
-			<a href="index.html" class="logo"><span id="header-logo">m</span></a>
-			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
-			<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
-			<a href="quick_reference.html" class="button">Quick Reference</a>
+			<a href="index.html" class="logo"><span id="header-logo">m</span></a> <label class="drawer-toggle button" for="navigation-toggle"></label>
+			<a href="index.html" class="button hidden-sm">Introduction</a> <a href="modules.html" class="button hidden-sm">Modules</a>
+			<a href="flavors.html" class="button hidden-sm">Flavors</a> <a href="templates.html" class="button hidden-sm">Templates</a>
+			<a href="customization/index.html" class="button hidden-sm">Customization</a> <a href="quick_reference.html" class="button hidden-sm">Quick Reference</a>
 			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 		</header>
+		<input type="checkbox" id="navigation-toggle"> <nav class="drawer hidden-md hidden-lg">
+			<label class="close" for="navigation-toggle"></label>
+			<a href="index.html"><h4 style="margin-left: 0;">Introduction</h4></a> <a href="modules.html"><h4 style="margin-left: 0;">Modules</h4></a>
+			<a href="flavors.html"><h4 style="margin-left: 0;">Flavors</h4></a> <a href="templates.html"><h4 style="margin-left: 0;">Templates</h4></a>
+			<a href="customization/index.html"><h4 style="margin-left: 0;">Customization</h4></a> <a href="quick_reference.html"><h4 style="margin-left: 0;">Quick Reference</h4></a>
+		</nav>
     <!-- Insert your page content here-->
     <main><div class="container">
       <div class="row" style="padding-top: 40px;">

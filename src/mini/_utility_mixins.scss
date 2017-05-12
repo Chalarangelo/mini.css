@@ -122,29 +122,29 @@
 	@if $hidden-use-four-step-grid {
 		@media screen and (max-width: #{$hidden-small-breakpoint}-1px) {
 			.#{$hidden-prefix}-#{$hidden-extra-small-suffix} {
-				display: none;
+				display: none !important;
 			}
 		}
 		@media screen and (min-width: #{$hidden-small-breakpoint}) and (max-width: #{$hidden-medium-breakpoint}-1px) {
 			.#{$hidden-prefix}-#{$hidden-small-suffix} {
-				display: none;
+				display: none !important;
 			}
 		}
 	}
 	@else {
 		@media screen and (max-width: #{$hidden-medium-breakpoint}-1px) {
 			.#{$hidden-prefix}-#{$hidden-small-suffix} {
-				display: none;
+				display: none !important;
 			}
 		}
 		@media screen and (min-width: #{$hidden-medium-breakpoint}) and (max-width: #{$hidden-large-breakpoint}-1px) {
 			.#{$hidden-prefix}-#{$hidden-medium-suffix} {
-				display: none;
+				display: none !important;
 			}
 		}
 		@media screen and (min-width: #{$hidden-large-breakpoint}) {
 			.#{$hidden-prefix}-#{$hidden-large-suffix} {
-				display: none;
+				display: none !important;
 			}
 		}
 	}

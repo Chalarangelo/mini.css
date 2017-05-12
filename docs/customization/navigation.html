@@ -24,30 +24,36 @@
 	.box-colored.green { background: #689f38; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
 	.box-colored { color: #f5f5f5;} @media (max-width: 767px){.container {padding: 0.25rem !important;}.col-sm-12.col-md-8.col-lg-10{padding: 0 !important;}}
 	td:first-child, td:last-child { font-family: monospace, monospace; }
-	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;}
+	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;} @media screen and (min-width: 768px) { .drawer { margin-top: 4px;}}
 	</style>
   </head>
   <body>
 		<header class="sticky">
 			<a href="../index.html" class="logo"><span id="header-logo">m</span></a>
-			<a href="../index.html" class="button">Introduction</a> <a href="../modules.html" class="button">Modules</a>
-			<a href="../flavors.html" class="button">Flavors</a> <a href="../templates.html" class="button">Templates</a> <a href="index.html" class="button">Customization</a>
-			<a href="../quick_reference.html" class="button">Quick Reference</a>
+				<label class="drawer-toggle button" for="navigation-toggle"></label>
+			<a href="../index.html" class="button hidden-sm">Introduction</a> <a href="../modules.html" class="button hidden-sm">Modules</a>
+			<a href="../flavors.html" class="button hidden-sm">Flavors</a> <a href="../templates.html" class="button hidden-sm">Templates</a>
+			<a href="index.html" class="button hidden-sm">Customization</a> <a href="../quick_reference.html" class="button hidden-sm">Quick Reference</a>
 			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 		</header>
 		<div class="container" style="padding-left: 0.25rem;">
-			<div class="row"> <div class="col-sm-12 col-md-4 col-lg-2 hidden-sm" style="padding: 0;"> <nav>
-				<h4 style="text-align: center">Customization</h4> <a href="core.html#core-title">Core</a>
+			<div class="row"> <input type="checkbox" id="navigation-toggle"> <nav class="drawer col-md-4 col-lg-2">
+				<label class="close" for="navigation-toggle"></label>
+				<a href="../index.html"><h4 style="margin-left: 0;">Introduction</h4></a>
+				<a href="../modules.html"><h4 style="margin-left: 0;">Modules</h4></a>
+				<a href="../flavors.html"><h4 style="margin-left: 0;">Flavors</h4></a>
+				<a href="../templates.html"><h4 style="margin-left: 0;">Templates</h4></a>
+				<h4 style="margin-left: 0;">Customization</h4> <a href="core.html#core-title">Core</a>
 				<a href="core.html#typography-headings" class="sublink-1">Typography &amp; headings</a>
 				<a href="core.html#common-elements" class="sublink-1">Common elements &amp; fixes</a>
 				<br/> <a href="grid.html#grid-title">Grid</a>
 				<a href="grid.html#classes-breakpoints" class="sublink-1">Classes &amp; breakpoints</a>
-				<br/> <a href="navigation.html#navigation-title">Navigation</a>
-				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a>
-				<a href="navigation.html#footer" class="sublink-1">Footer</a>
 				<br/> <a href="input_control.html#input-control-title">Input Control</a>
 				<a href="input_control.html#forms-input" class="sublink-1">Forms &amp; input</a> <a href="input_control.html#checkbox-radio" class="sublink-1">Checkboxes &amp; radio buttons</a>
 				<a href="input_control.html#buttons" class="sublink-1">Buttons &amp; button groups</a> <a href="input_control.html#button-mixins" class="sublink-1">Button mixins</a>
+				<br/> <a href="navigation.html#navigation-title">Navigation</a>
+				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a>
+				<a href="navigation.html#drawer" class="sublink-1">Drawer</a> <a href="navigation.html#footer" class="sublink-1">Footer</a>
 				<br/> <a href="table.html#table-title">Table</a>
 				<a href="table.html#table-styling" class="sublink-1">Table styling</a>
 				<br/> <a href="card.html#card-title">Card</a>
@@ -55,9 +61,9 @@
 				<br/> <a href="tab.html#tab-title">Tab</a>
 				<a href="tab.html#tab-styling" class="sublink-1">Tab styling</a>
 				<br/> <a href="contextual.html#contextual-title">Contextual</a>
-				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#alerts" class="sublink-1">Alerts</a>
+				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#toasts" class="sublink-1">Toasts</a>
 				<a href="contextual.html#tooltips" class="sublink-1">Tooltips</a> <a href="contextual.html#highlighting-mixins" class="sublink-1">Text highlighting mixins</a>
-				<a href="contextual.html#alert-mixins" class="sublink-1">Alert mixins</a> <a href="contextual.html#tooltip-mixins" class="sublink-1">Tooltip mixins</a>
+				<a href="contextual.html#toast-mixins" class="sublink-1">Toast mixins</a> <a href="contextual.html#tooltip-mixins" class="sublink-1">Tooltip mixins</a>
 				<br/> <a href="progress.html#progress-title">Progress</a>
 				<a href="progress.html#progress-bar" class="sublink-1">Progress bar</a> <a href="progress.html#donut-spinner" class="sublink-1">Donut spinner</a>
 				<a href="progress.html#progress-mixins" class="sublink-1">Progress bar mixins</a> <a href="progress.html#spinner-mixins" class="sublink-1">Donut spinner mixins</a>
@@ -66,13 +72,14 @@
 				<a href="utility.html#close-icon" class="sublink-1">Close icon</a>
 				<a href="utility.html#borders-shadows-mixins" class="sublink-1">Generic border &amp; shadow mixins</a>
 				<a href="utility.html#responsive-sizing-mixins" class="sublink-1">Responsive sizing &amp; spacing mixins</a>
-				<a href="utility.html#responsive-visibility-mixins" class="sublink-1">Responsive visibility helper mixins</a><br/>
-			</nav> </div>
+				<a href="utility.html#responsive-visibility-mixins" class="sublink-1">Responsive visibility helper mixins</a>
+				<a href="../quick_reference.html"><h4 style="margin-left: 0;">Quick Reference</h4></a>
+			</nav>
 				<div class="col-sm-12 col-md-8 col-lg-10"><main>
       <div class="row" style="padding-top: 40px;" id="navigation-title">
         <div class="col-sm-121">
           <h1>Navigation</h1>
-          <p>The <strong>navigation</strong> module seeks to remedy the problems of vertical and horizontal navigation design paradigms, by combining the two for a better presentational effect. HTML5 navigational elements are at the heart of the module, allowing you to quickly build your navigation without complicated structures and hacks.</p>
+          <p>The <strong>navigation</strong> module seeks to remedy the problems of vertical and horizontal navigation design paradigms, by combining the two for a better presentational effect. HTML5 navigational elements are at the heart of the module, allowing you to quickly build your navigation menus.</p>
           <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
         </div>
       </div>
@@ -81,7 +88,7 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Menus and navigation are some of the most important elements for any website or web app and their design and ease-of-use are key factors that can determine a page's bounce rates. The <strong>navigation</strong> module takes a step back from all the complicated menu and navigation design paradigms of the modern web, like dropdown menus and hamburger buttons, and tries to reinvent the basics for page navigation using HTML5 elements (i.e. <code>header</code>, <code>nav</code> and <code>footer</code>) and make navigation fully accessible for screen readers. Instead of sticking to either horizontal navigation menus (headers) or vertical menus (sidebars), we opted to allow the use of both for different things. Header menus are designed to stand out and contain links to help users find new content, whereas vertical navigation aims to provide a more traditional navigation menu that maps out your website's structure. Finally, footers are also part of the <strong>navigation</strong> module, as they can often provide the user with useful information and/or links that are very important to enhancing their experience.</p><br>
+              <p>Menus and navigation are some of the most important elements for any website or web app and their design and ease-of-use are key factors that can determine a page's bounce rates. The <strong>navigation</strong> module takes a step back from the complicated menu and navigation design paradigms of the modern web, using HTML5 elements (i.e. <code>header</code>, <code>nav</code> and <code>footer</code>) for basic navigation, while providing fully accessibility for screen readers. Apart from the simple horizontal navigation (headers) and vertical menus (sidebars), we opted to add a responsive slide-in drawer menu that works well with any page layout. Finally, footers are also part of the <strong>navigation</strong> module, as they can often provide the user with useful information and/or links that are very important to enhancing their experience.</p><br>
             </div>
             <div class="section">
 							<h2>Quick start</h2>
@@ -259,6 +266,107 @@
 							<h3>Notes:</h3>
 							<ol>
 								<li id="nav-note-one">The values of <code>$nav-sublink-bar-left-position</code>, <code>$nav-sublink-bar-width</code> and <code>$nav-sublink-bar-color</code> will only be used if <code>$nav-include-sublink-bar</code> is set to <code class="fore-tertiary">true</code>.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" id="drawer">
+				<div class="col-sm-12">
+					<div class="card fluid">
+						<div class="section"><h2>Drawer</h2></div>
+						<div class="section">
+							<p>The <strong>navigation</strong> module contains custom classes and definitions for creating and styling a responsive drawer component.</p><br/>
+							<table style="width: 100%" class="striped">
+								<caption>Variables</caption>
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$drawer-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for the drawer component</td><td data-label="Sample value">'drawer'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for the drawer component</td><td data-label="Sample value">#eceff1</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-border-style</td><td data-label="Type">Border</td>
+										<td data-label="Description">Border style for the drawer component</td><td data-label="Sample value">1px solid #bdbdbd</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for the drawer component</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-border-radius</td><td data-label="Type">Border radius</td>
+										<td data-label="Description">Border radius for the drawer component</td><td data-label="Sample value">2px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-width</td><td data-label="Type">Width</td>
+										<td data-label="Description">Width for the drawer component</td><td data-label="Sample value">320px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-padding</td><td data-label="Type">Padding</td>
+										<td data-label="Description">Padding for the drawer component</td><td data-label="Sample value">4px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-box-shadow</td><td data-label="Type">Box shadow</td>
+										<td data-label="Description">Box shadow for the drawer component</td><td data-label="Sample value">0 1px 3px rgba(0,0,0, 0.1)</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-mobile-breakpoint</td><td data-label="Type">Breakpoint</td>
+										<td data-label="Description">Breakpoint for the drawer component on mobile devices</td><td data-label="Sample value">768px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-normal-height</td><td data-label="Type">Height</td>
+										<td data-label="Description">height of the drawer component on medium-sized and larger screens<sup><a href="#drawer-note-one">1</a></sup></td><td data-label="Sample value">calc(100vh - 48px)</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-right-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name of the right-aligned variant of the drawer component</td><td data-label="Sample value">'right'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-peristent-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name of the non-responsive variant of the drawer component</td><td data-label="Sample value">'persistent'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-toggle-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name of the toggle button of the drawer component</td><td data-label="Sample value">'drawer-toggle'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-toggle-font-size</td><td data-label="Type">Font size</td>
+										<td data-label="Description">Font size of the toggle button of the drawer component</td><td data-label="Sample value">2.5em</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-toggle-line-height</td><td data-label="Type">Line height</td>
+										<td data-label="Description">Line height of the toggle button of the drawer component</td><td data-label="Sample value">0.125</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-toggle-top</td><td data-label="Type">Position top</td>
+										<td data-label="Description">Top position of the toggle button of the drawer component</td><td data-label="Sample value">6px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-close-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name of the close button of the drawer component</td><td data-label="Sample value">'close'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-close-top</td><td data-label="Type">Position top</td>
+										<td data-label="Description">Top position of the close button of the drawer component</td><td data-label="Sample value">12px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$drawer-close-right</td><td data-label="Type">Position right</td>
+										<td data-label="Description">Right position of the close button of the drawer component<td data-label="Sample value">4px</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol>
+								<li id="drawer-note-one">The values of <code>$drawer-normal-height</code> <em>should be</em> the calculated value of the screen height minus the total height of the <code>&lt;header&gt;</code> element for best results.</li>
 							</ol>
 						</div>
 					</div>

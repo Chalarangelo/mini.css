@@ -24,30 +24,36 @@
 	.box-colored.green { background: #1b5e20; } .do {border-top: 15px solid #689f38;padding-top: 10px;} .dont {border-top: 15px solid #e53935;padding-top: 10px;}
 	.box-colored { color: #f5f5f5;} @media (max-width: 767px){.container {padding: 0.25rem !important;}.col-sm-12.col-md-8.col-lg-10{padding: 0 !important;}}
 	td:first-child, td:last-child { font-family: monospace, monospace; }
-	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;}
+	td:first-child::before, td:last-child::before { font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;} sup a { text-decoration: none; padding: 2px;} @media screen and (min-width: 768px) { .drawer { margin-top: 4px;}}
 	</style>
   </head>
   <body>
 		<header class="sticky">
 			<a href="../index.html" class="logo"><span id="header-logo">m</span></a>
-			<a href="../index.html" class="button">Introduction</a> <a href="../modules.html" class="button">Modules</a>
-			<a href="../flavors.html" class="button">Flavors</a> <a href="../templates.html" class="button">Templates</a> <a href="index.html" class="button">Customization</a>
-			<a href="../quick_reference.html" class="button">Quick Reference</a>
+				<label class="drawer-toggle button" for="navigation-toggle"></label>
+			<a href="../index.html" class="button hidden-sm">Introduction</a> <a href="../modules.html" class="button hidden-sm">Modules</a>
+			<a href="../flavors.html" class="button hidden-sm">Flavors</a> <a href="../templates.html" class="button hidden-sm">Templates</a>
+			<a href="index.html" class="button hidden-sm">Customization</a> <a href="../quick_reference.html" class="button hidden-sm">Quick Reference</a>
 			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 		</header>
 		<div class="container" style="padding-left: 0.25rem;">
-			<div class="row"> <div class="col-sm-12 col-md-4 col-lg-2 hidden-sm" style="padding: 0;"> <nav>
-				<h4 style="text-align: center">Customization</h4> <a href="core.html#core-title">Core</a>
+			<div class="row"> <input type="checkbox" id="navigation-toggle"> <nav class="drawer col-md-4 col-lg-2">
+				<label class="close" for="navigation-toggle"></label>
+				<a href="../index.html"><h4 style="margin-left: 0;">Introduction</h4></a>
+				<a href="../modules.html"><h4 style="margin-left: 0;">Modules</h4></a>
+				<a href="../flavors.html"><h4 style="margin-left: 0;">Flavors</h4></a>
+				<a href="../templates.html"><h4 style="margin-left: 0;">Templates</h4></a>
+				<h4 style="margin-left: 0;">Customization</h4> <a href="core.html#core-title">Core</a>
 				<a href="core.html#typography-headings" class="sublink-1">Typography &amp; headings</a>
 				<a href="core.html#common-elements" class="sublink-1">Common elements &amp; fixes</a>
 				<br/> <a href="grid.html#grid-title">Grid</a>
 				<a href="grid.html#classes-breakpoints" class="sublink-1">Classes &amp; breakpoints</a>
-				<br/> <a href="navigation.html#navigation-title">Navigation</a>
-				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a>
-				<a href="navigation.html#footer" class="sublink-1">Footer</a>
 				<br/> <a href="input_control.html#input-control-title">Input Control</a>
 				<a href="input_control.html#forms-input" class="sublink-1">Forms &amp; input</a> <a href="input_control.html#checkbox-radio" class="sublink-1">Checkboxes &amp; radio buttons</a>
 				<a href="input_control.html#buttons" class="sublink-1">Buttons &amp; button groups</a> <a href="input_control.html#button-mixins" class="sublink-1">Button mixins</a>
+				<br/> <a href="navigation.html#navigation-title">Navigation</a>
+				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a>
+				<a href="navigation.html#drawer" class="sublink-1">Drawer</a> <a href="navigation.html#footer" class="sublink-1">Footer</a>
 				<br/> <a href="table.html#table-title">Table</a>
 				<a href="table.html#table-styling" class="sublink-1">Table styling</a>
 				<br/> <a href="card.html#card-title">Card</a>
@@ -55,9 +61,9 @@
 				<br/> <a href="tab.html#tab-title">Tab</a>
 				<a href="tab.html#tab-styling" class="sublink-1">Tab styling</a>
 				<br/> <a href="contextual.html#contextual-title">Contextual</a>
-				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#alerts" class="sublink-1">Alerts</a>
+				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#toasts" class="sublink-1">Toasts</a>
 				<a href="contextual.html#tooltips" class="sublink-1">Tooltips</a> <a href="contextual.html#highlighting-mixins" class="sublink-1">Text highlighting mixins</a>
-				<a href="contextual.html#alert-mixins" class="sublink-1">Alert mixins</a> <a href="contextual.html#tooltip-mixins" class="sublink-1">Tooltip mixins</a>
+				<a href="contextual.html#toast-mixins" class="sublink-1">Toast mixins</a> <a href="contextual.html#tooltip-mixins" class="sublink-1">Tooltip mixins</a>
 				<br/> <a href="progress.html#progress-title">Progress</a>
 				<a href="progress.html#progress-bar" class="sublink-1">Progress bar</a> <a href="progress.html#donut-spinner" class="sublink-1">Donut spinner</a>
 				<a href="progress.html#progress-mixins" class="sublink-1">Progress bar mixins</a> <a href="progress.html#spinner-mixins" class="sublink-1">Donut spinner mixins</a>
@@ -66,8 +72,9 @@
 				<a href="utility.html#close-icon" class="sublink-1">Close icon</a>
 				<a href="utility.html#borders-shadows-mixins" class="sublink-1">Generic border &amp; shadow mixins</a>
 				<a href="utility.html#responsive-sizing-mixins" class="sublink-1">Responsive sizing &amp; spacing mixins</a>
-				<a href="utility.html#responsive-visibility-mixins" class="sublink-1">Responsive visibility helper mixins</a><br/>
-			</nav> </div>
+				<a href="utility.html#responsive-visibility-mixins" class="sublink-1">Responsive visibility helper mixins</a>
+				<a href="../quick_reference.html"><h4 style="margin-left: 0;">Quick Reference</h4></a>
+			</nav>
 				<div class="col-sm-12 col-md-8 col-lg-10"><main>
       <div class="row" style="padding-top: 40px;" id="utility-title">
         <div class="col-sm-12">

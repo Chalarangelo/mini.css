@@ -536,6 +536,35 @@
                 </ul>
               </div>
             </div>
+						<div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Drawer <a href="https://codepen.io/chalarangelo/pen/JNvPrB" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;header&gt;
+  &lt;label for=&quot;drawer-checkbox&quot; class=&quot;button drawer-toggle&quot;&gt;&lt;/label&gt;
+&lt;/header&gt;
+
+&lt;input type=&quot;checkbox&quot; id=&quot;drawer-checkbox&quot;&gt;
+&lt;div class=&quot;drawer&quot;&gt;
+  &lt;label for=&quot;drawer-checkbox&quot; class=&quot;close&quot;&gt;&lt;/label&gt;
+  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+&lt;/div&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul>
+                  <li>Structure as follows:<ol>
+										<li><code>&lt;label&gt;</code> element with the <code>.drawer-toggle</code> class in the <code>&lt;header&gt;</code> element, linked to the <code class="fore-secondary">id</code> of the <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code> used to toggle the drawer component</li>
+										<li><code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code> element with a unique <code class="fore-secondary">id</code></li>
+										<li><code>&lt;div&gt;</code> element with the <code>.drawer</code> class immediately after the <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code></li>
+										<li>Empty <code>&lt;label&gt;</code> element with the <code>.close</code> class inside the <code>.drawer</code>, linked to the <code class="fore-secondary">id</code> of the <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code></li>
+									</ol></li>
+									<li>Drawers are left-aligned and expand on non-mobile screen sizes by default</li>
+                  <li>Use <code>.right</code> to create right-aligned drawers or <code>.persistent</code> for non-responsive drawers.</li>
+                  <li>Apply the <code>.drawer</code> class on a navigation bar and combine with grid classes for best results</li>
+									<li>Use the syntax exactly as presented in the examples, do not add elements between the checkbox and the container</li>
+                </ul>
+              </div>
+            </div>
             <div class="section row">
               <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
                 <h3>Footer <a href="https://codepen.io/chalarangelo/pen/dOwZVO" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>

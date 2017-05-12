@@ -1146,12 +1146,10 @@
 - Tested `.drawer` on the `modules.html` page, it seems to work pretty well.
 - Documented `.drawer` component, updated descriptions wherever possible, the customization documentation will be added in later.
 - *TODO* list for tomorrow (before release):
-	- Update customization documentation for `.drawer`.
 	- Update flavors to use the new `.drawer` component, rebuild.
 	- Update all navigation menus on all pages to use both the `.drawer` and show the new menus.
 	- Update all flavors to work with new components etc.
 	- Update all flavor demos.
-	- Create codepen for `.drawer`, new section in `quick_reference`.
 	- Look into updating the templates.
 
 ## 20170512
@@ -1159,3 +1157,5 @@
 - `$include-drawer` is now a *hidden* flag.
 - Updated `.drawer` to include a `$drawer-box-shadow` just in case.
 - Updated customization for the new `.drawer` component.
+- Updated `mini-default`, `mini-lite` and `mini-dark` for the new `.drawer` component, the other two flavors will be updated later today.
+- Updated `quick_reference` for `.drawer`, added a codepen for the component.

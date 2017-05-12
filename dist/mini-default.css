@@ -1208,6 +1208,9 @@ footer.sticky {
     height: 100%;
     z-index: 1100;
   }
+  .drawer:not(.persistent) .close {
+    display: none;
+  }
   .drawer-toggle:not(.persistent) {
     display: none;
   }

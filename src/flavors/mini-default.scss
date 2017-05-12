@@ -276,18 +276,9 @@ $nav-include-sublink-bar:	true;											// Should a left border bar be added t
 $nav-sublink-bar-left-position: 0.1875rem;					// Left position of subcategory bar
 $nav-sublink-bar-width:		1px;											// Width of the subcategory bar
 $nav-sublink-bar-color:		#bdbdbd;									// Subcategory bar color
-$footer-back-color:				#192024;									// Background color for <footer>
-$footer-fore-color:				#f5f5f5;									// Text color for <footer>
-$footer-border-style:			0;												// Border stye for <footer>
-$footer-font-size:				0.875rem;									// Font size for <footer>
-$footer-margin:						1rem 0 0;									// Margin for <footer>
-$footer-padding:					1.5rem 0.5rem 0.75rem;		// Padding for <footer>
-$footer-link-fore-color:	#0288d1;									// Text color for links in <footer>
-$include-footer-sticky:		true;											// Should sticky <footer> elements be included (`true`/`false`) [3]
-$footer-sticky-name:			'sticky';									// Class name for sticky <footer> elements
 $drawer-name:							'drawer';									// Class name for the drawer component
-$drawer-back-color:				#eceff1;									// Background color of the drawer component
-$drawer-border-style:			1px solid #c9c9c9;				// Border style of the drawer component
+$drawer-back-color:				$nav-back-color;					// Background color of the drawer component
+$drawer-border-style:			$nav-border-style;				// Border style of the drawer component
 $drawer-width:						320px;										// Width of the drawer component
 $drawer-padding:					0;												// Padding of the drawer component
 $drawer-box-shadow:				none;											// Box shadow for the drawer component
@@ -302,6 +293,15 @@ $drawer-toggle-top:				0.4375rem;								// Top position for the drawer componen
 $drawer-close-name:				'close';									// Class name of the close element for the drawer component
 $drawer-close-top:				0.75rem;									// Top position of the drawer component's close icon
 $drawer-close-right:			0.25rem;									// Right position of the drawer component's close icon
+$footer-back-color:				#192024;									// Background color for <footer>
+$footer-fore-color:				#f5f5f5;									// Text color for <footer>
+$footer-border-style:			0;												// Border stye for <footer>
+$footer-font-size:				0.875rem;									// Font size for <footer>
+$footer-margin:						1rem 0 0;									// Margin for <footer>
+$footer-padding:					1.5rem 0.5rem 0.75rem;		// Padding for <footer>
+$footer-link-fore-color:	#0288d1;									// Text color for links in <footer>
+$include-footer-sticky:		true;											// Should sticky <footer> elements be included (`true`/`false`) [3]
+$footer-sticky-name:			'sticky';									// Class name for sticky <footer> elements
 //	Notes:
 // [1] - If the value of $include-header-sticky is `true`, a class will be created that will allow for sticky positioning
 //	of <header> elements, using the value of $header-sticky-name for the name of the class.

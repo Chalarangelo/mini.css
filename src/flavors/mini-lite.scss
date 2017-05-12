@@ -244,10 +244,11 @@ $header-link-margin:			0.125rem 0;								// Margin for <header>'s links
 $include-header-sticky:		true;											// Should sticky <header> elements be included? (`true`/`false`) [1]
 $header-sticky-name:			'sticky';									// Class name for sticky <header>
 $include-nav-styles:			false;										// [Hidden flag override] Should <nav> elements by stylized? (`true`/`false`) [2]
+$include-drawer:					false;										// [Hidden flag override] Should the drawer component be included? (`true`/`false`) [2]
 $footer-back-color:				#192024;									// Background color for <footer>
 $footer-fore-color:				#f5f5f5;									// Text color for <footer>
 $footer-border-style:			0;												// Border stye for <footer>
-$footer-font-size:				0.875rem;								// Font size for <footer>
+$footer-font-size:				0.875rem;									// Font size for <footer>
 $footer-margin:						1rem 0 0;									// Margin for <footer>
 $footer-padding:					1.5rem 0.5rem 0.75rem;		// Padding for <footer>
 $footer-link-fore-color:	#0288d1;									// Text color for links in <footer>
@@ -256,8 +257,9 @@ $footer-sticky-name:			'sticky';									// Class name for sticky <footer> eleme
 //	Notes:
 // [1] - If the value of $include-header-sticky is `true`, a class will be created that will allow for sticky positioning
 //	of <header> elements, using the value of $header-sticky-name for the name of the class.
-// [2] - Due to the fact that the value of $include-nav-styles is set to `false`, <nav> elements will not be stylized. If
-//	you set it to `true`, please refer to a full flavor to find the required variable definitions.
+// [2] - Due to the fact that the values of $include-nav-styles and $include-drawer are set to `false`, <nav> elements
+// will not be stylized and the drawer component will not be included. If you set it to `true`, please refer to a full
+// flavor to find the required variable definitions.
 // [3] - If the value of $include-footer-bottom is `true`, a class will be created that will allow for sticky positioning
 //	of <footer> elements, using the value of $footer-sticky-name for the name of the class.
 //	Variables for responsive tables

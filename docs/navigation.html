@@ -237,7 +237,7 @@
 								<p>Drawers are responsive and will expand into normal containers on larger screens. If you want to avoid this, add the <code>.persistent</code> class to both your <code>.drawer-toggle</code> and <code>.drawer</code> elements. You can also change the position of the drawer from the left side of the screen to the right by applying the <code>.right</code> class to your <code>.drawer</code> element.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;header&gt;
-  &lt;label for=&quot;drawer-checkbox&quot; class=&quot;button&quot;&gt;&lt;/label&gt;
+  &lt;label for=&quot;drawer-checkbox&quot; class=&quot;button drawer-toggle&quot;&gt;&lt;/label&gt;
 &lt;/header&gt;
 
 &lt;input type=&quot;checkbox&quot; id=&quot;drawer-checkbox&quot;&gt;
@@ -255,10 +255,10 @@
               </ul><hr>
 							<div class="row">
                 <div class="col-sm-12 col-md-6">
-                  <pre>&lt;div class=&quot;drawer&quot;&gt;
+                  <pre>&lt;nav class=&quot;drawer&quot;&gt;
   &lt;label for=&quot;drawer-checkbox&quot; class=&quot;close&quot;&gt;&lt;/label&gt;
   &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
-&lt;/div&gt;</pre>
+&lt;/nav&gt;</pre>
                   <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can apply the <code>.drawer</code> class to a <code>&lt;nav&gt;</code> element, effectively making your page's navigation menu collapse on smaller screen sizes.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">

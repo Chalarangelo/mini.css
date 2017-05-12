@@ -274,6 +274,9 @@ footer {
 			position: static;
 			height: 100%;
 			z-index: 1100;
+			& .#{$drawer-close-name} {
+				display: none;
+			}
 		}
 		.#{$drawer-toggle-name}:not(.#{$drawer-persistent-name}) {
 			display: none;

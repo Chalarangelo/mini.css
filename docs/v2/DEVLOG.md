@@ -1145,10 +1145,6 @@
 - Implemented `.drawer` component along with everything that it needs. Documentation pending.
 - Tested `.drawer` on the `modules.html` page, it seems to work pretty well.
 - Documented `.drawer` component, updated descriptions wherever possible, the customization documentation will be added in later.
-- *TODO* list for tomorrow (before release):
-	- Update all flavors to work with new components etc.
-	- Update all flavor demos.
-	- Look into updating the templates.
 
 ## 20170512
 
@@ -1166,3 +1162,8 @@
 - Added screencasts to `core` and `grid` modules, so that people get a better starter.
 - Added `$drawer-border-radius` for constistency.
 - Updated `mini-sucroa` to use the new components.
+- Updated all templates to display perfectly after all the change.
+- `mini-sucroa` demo didn't need any updates, `mini-lite` required the removal of the `nav` element which was an artifact (whoops!).
+- The other two flavors will be updated to include the new elements and get rid of any problematic stuff (will update in a bit).
+- Updated flavor descriptions in `flavors.html`.
+- Everything is ready for release, let's write the `CHANGELOG` for **v2.2.0**. (A couple of templates and things might be done later today, as well as linking to them from certain components such as the `.drawer` which could benefit from that.)

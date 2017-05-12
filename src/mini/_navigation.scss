@@ -14,12 +14,12 @@ $nav-sublink-prefix:			'sublink' !default;				// Prefix for the subcategory tabs
 $nav-sublink-depth:				2 !default;								// Amount of subcategory classes to add.
 $nav-sublink-padding-left:12px !default;						// Left padding to add to subcategories.
 $nav-include-sublink-bar: false !default;						// Should a border be added to the subcategories? (`true`/`false`)
-$include-drawer:					true !default;						// Should the drawer component be included? (`true`/`false`)
+$include-drawer:					true !default;						// [Hidden flag] Should the drawer component be included? (`true`/`false`)
 $drawer-name:							'drawer' !default;				// Class name for the drawer component.
 $drawer-toggle-name:			'drawer-toggle' !default;	// Class name for the drawer component's toggle.
 $drawer-mobile-breakpoint: 768px !default;					// Mobile breakpoint for the drawer component.
 $drawer-right-name:				'right' !default;					// Class name for the right variant of the drawer component.
-$drawer-persistent:				'persistent' !default;		// Class name for the persisten variant of the drawer component.
+$drawer-persistent-name:	'persistent' !default;		// Class name for the persisten variant of the drawer component.
 $drawer-width:						320px !default;						// Width of the drawer component.
 $drawer-close-name:				'close' !default;					// Class name of the close element for the drawer component.
 // External variables' defaults are used only if you import this module on its own, without the rest of the framework.
@@ -240,11 +240,13 @@ footer {
 		overflow-y: auto;
 		background: $drawer-back-color;
 		border: $drawer-border-style;
+		margin: 0;
 		@if $drawer-padding != 0 {
 			padding: $drawer-padding;
 		}
-		margin: 0;
-		transition: left,right 0.3s;
+		@if $drawer-box-shadow != none {
+			box-shadow: $drawer-box-shadow;
+		}
 		z-index: 1110;
 		&:not(.#{$drawer-right-name}) {
 			left: -$drawer-width;
@@ -268,12 +270,12 @@ footer {
 		}
 	}
 	@media screen and (min-width: #{$drawer-mobile-breakpoint}){
-		.#{$drawer-name}:not(.#{$drawer-persistent}) {
+		.#{$drawer-name}:not(.#{$drawer-persistent-name}) {
 			position: static;
 			height: 100%;
 			z-index: 1100;
 		}
-		.#{$drawer-toggle-name}:not(.#{$drawer-persistent}) {
+		.#{$drawer-toggle-name}:not(.#{$drawer-persistent-name}) {
 			display: none;
 		}
 	}

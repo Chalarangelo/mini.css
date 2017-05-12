@@ -1175,7 +1175,6 @@ footer.sticky {
   background: #eceff1;
   border: 1px solid #c9c9c9;
   margin: 0;
-  transition: left,right 0.3s;
   z-index: 1110;
 }
 

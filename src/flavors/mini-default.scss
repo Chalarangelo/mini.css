@@ -285,22 +285,23 @@ $footer-padding:					1.5rem 0.5rem 0.75rem;		// Padding for <footer>
 $footer-link-fore-color:	#0288d1;									// Text color for links in <footer>
 $include-footer-sticky:		true;											// Should sticky <footer> elements be included (`true`/`false`) [3]
 $footer-sticky-name:			'sticky';									// Class name for sticky <footer> elements
-$drawer-name:							'drawer';									// Class name for the drawer component.
-$drawer-back-color:				#eceff1;									// Background color of the drawer component.
-$drawer-border-style:			1px solid #c9c9c9;				// Border style of the drawer component.
-$drawer-width:						320px;										// Width of the drawer component.
-$drawer-padding:					0;												// Padding of the drawer component.
-$drawer-mobile-breakpoint: 768px;										// Mobile breakpoint for the drawer component.
-$drawer-normal-height:		calc(100vh - 3rem);				// Height of the drawer component when shown as normal menu.
-$drawer-right-name:				'right';									// Class name for the right variant of the drawer component.
-$drawer-persistent:				'persistent';							// Class name for the persisten variant of the drawer component.
-$drawer-toggle-name:			'drawer-toggle';					// Class name for the drawer component's toggle.
-$drawer-toggle-font-size:	2.5rem;										// Font size for the drawer component's toggle icon.
-$drawer-toggle-line-height:0.125;										// Line height for the drawer component's toggle icon.
-$drawer-toggle-top:				0.4375rem;								// Top position for the drawer component's toggle icon.
-$drawer-close-name:				'close';									// Class name of the close element for the drawer component.
-$drawer-close-top:				0.75rem;									// Top position of the drawer component's close icon.
-$drawer-close-right:			0.25rem;									// Right position of the drawer component's close icon.
+$drawer-name:							'drawer';									// Class name for the drawer component
+$drawer-back-color:				#eceff1;									// Background color of the drawer component
+$drawer-border-style:			1px solid #c9c9c9;				// Border style of the drawer component
+$drawer-width:						320px;										// Width of the drawer component
+$drawer-padding:					0;												// Padding of the drawer component
+$drawer-box-shadow:				none;											// Box shadow for the drawer component
+$drawer-mobile-breakpoint: 768px;										// Mobile breakpoint for the drawer component
+$drawer-normal-height:		calc(100vh - 3rem);				// Height of the drawer component when shown as normal menu
+$drawer-right-name:				'right';									// Class name for the right variant of the drawer component
+$drawer-persistent-name:	'persistent';							// Class name for the persisten variant of the drawer component
+$drawer-toggle-name:			'drawer-toggle';					// Class name for the drawer component's toggle
+$drawer-toggle-font-size:	2.5rem;										// Font size for the drawer component's toggle icon
+$drawer-toggle-line-height:0.125;										// Line height for the drawer component's toggle icon
+$drawer-toggle-top:				0.4375rem;								// Top position for the drawer component's toggle icon
+$drawer-close-name:				'close';									// Class name of the close element for the drawer component
+$drawer-close-top:				0.75rem;									// Top position of the drawer component's close icon
+$drawer-close-right:			0.25rem;									// Right position of the drawer component's close icon
 //	Notes:
 // [1] - If the value of $include-header-sticky is `true`, a class will be created that will allow for sticky positioning
 //	of <header> elements, using the value of $header-sticky-name for the name of the class.

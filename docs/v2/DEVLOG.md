@@ -1153,3 +1153,9 @@
 	- Update all flavor demos.
 	- Create codepen for `.drawer`, new section in `quick_reference`.
 	- Look into updating the templates.
+
+## 20170512
+
+- `$include-drawer` is now a *hidden* flag.
+- Updated `.drawer` to include a `$drawer-box-shadow` just in case.
+- Updated customization for the new `.drawer` component.

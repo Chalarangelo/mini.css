@@ -1164,3 +1164,4 @@
 - Updated `quick_reference.html` with new navigation, new tag, checked everything.
 - Updated menus in all `customization` pages.
 - Updated `mini-nord` to use the new components.
+- Added screencasts to `core` and `grid` modules, so that people get a better starter.

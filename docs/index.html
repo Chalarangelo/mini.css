@@ -57,17 +57,23 @@
 		<div id="logo-body">
   		<p id="description">minimal, responsive, style-agnostic CSS framework</p>
     	<h1 id="top-heading"><span style="font-size: 1.45em; font-family: 'Noto Sans', sans-serif;">m</span>ini<span style="font-size:0.65em; color: #4527a0; font-family: 'Noto Sans', sans-serif;">.css</span></h1>
-  		<p id="top-vtag-cont"><mark id="top-version-tag">v2.1</mark></p>
+  		<p id="top-vtag-cont"><mark id="top-version-tag">v2.2</mark></p>
   		<div id="mt1"></div><div id="mt2"></div><div id="mt3"></div><div id="mt4"></div><div id="mt5"></div>
   		<small id="codename">Fermion</small>
 		</div>
 	<header class="sticky">
-		<a href="index.html" class="logo"><span id="header-logo">m</span></a>
-		<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
-		<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
-		<a href="quick_reference.html" class="button">Quick Reference</a>
+		<a href="index.html" class="logo"><span id="header-logo">m</span></a> <label class="drawer-toggle button" for="navigation-toggle"></label>
+		<a href="index.html" class="button hidden-sm">Introduction</a> <a href="modules.html" class="button hidden-sm">Modules</a>
+		<a href="flavors.html" class="button hidden-sm">Flavors</a> <a href="templates.html" class="button hidden-sm">Templates</a>
+		<a href="customization/index.html" class="button hidden-sm">Customization</a> <a href="quick_reference.html" class="button hidden-sm">Quick Reference</a>
 		<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 	</header>
+	<input type="checkbox" id="navigation-toggle"> <nav class="drawer hidden-md hidden-lg">
+		<label class="close" for="navigation-toggle"></label>
+		<a href="index.html"><h4 style="margin-left: 0;">Introduction</h4></a> <a href="modules.html"><h4 style="margin-left: 0;">Modules</h4></a>
+		<a href="flavors.html"><h4 style="margin-left: 0;">Flavors</h4></a> <a href="templates.html"><h4 style="margin-left: 0;">Templates</h4></a>
+		<a href="customization/index.html"><h4 style="margin-left: 0;">Customization</h4></a> <a href="quick_reference.html"><h4 style="margin-left: 0;">Quick Reference</h4></a>
+	</nav>
     <!-- Insert your page content here-->
     <main><div class="container responsive-padding">
       <div class="row" style="padding-top: 60px; padding-bottom: 20px;">
@@ -111,7 +117,7 @@
 				<br/>
 				<p>Alternatively, you can use either <strong>GitCDN</strong> or <strong>RawGit</strong> to import the default flavor of <strong>mini.css</strong>. Simply add one of the following references inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
 				<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css&quot;</span>&gt;</pre>
-				<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.5/dist/mini-default.min.css&quot;</span>&gt;</pre><br/>
+				<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.2.0/dist/mini-default.min.css&quot;</span>&gt;</pre><br/>
 				<p>Finally, you can find <strong>mini.css</strong> on <a href="https://cdnjs.com/libraries/mini.css">cdnjs</a>, which you can use to include it in your projects.</p><br/>
 				<hr>
         </div>
@@ -134,7 +140,7 @@
         <div class="col-sm-12 col-lg-10 col-lg-offset-1">
           <h2>Quick overview</h2>
 					<p>Take a couple of minutes to explore what makes <strong>mini.css</strong> different from all those other CSS frameworks and UI toolkits.</p>
-					<figure style="margin: 0;"><div style="position: relative; padding: 0.5rem; padding-bottom: 42%; margin-bottom: 0.25rem;"><iframe style="display: none; border: 0; position: absolute; width: 100%; height: 100%;" onload="this.style.display='block';" src="https://scrimba.com/cast/cast-1949.embed"></iframe></div><figcaption style="padding: 0.5rem;">Intro to mini.css by <a href="https://scrimba.com/casts/cast-1949" style="font-size: 0.8125rem; text-decoration: none;">Per Harald Borgen</a></figcaption></figure><br/>
+					<figure style="margin: 0;"><div style="position: relative; padding: 0.5rem; padding-bottom: 42%; margin-bottom: 0.25rem; margin-right: 1rem;"><iframe style="display: none; border: 0; position: absolute; width: 100%; height: 100%;" onload="this.style.display='block';" src="https://scrimba.com/cast/cast-1949.embed"></iframe></div><figcaption style="padding: 0.5rem;">Intro to mini.css by <a href="https://scrimba.com/casts/cast-1949" style="font-size: 0.8125rem; text-decoration: none;">Per Harald Borgen</a></figcaption></figure><br/>
 					<h3>Why should I use mini.css?</h3>
 					<p><strong>mini.css</strong> is a lot lighter than a lot of other full-featured CSS frameworks (e.g. Bootstrap, Semantic UI), but it is not a micro framework (e.g. Milligram, Pure.CSS). Instead, <strong>mini.css</strong> blurs the line between full-featured and micro frameworks by providing lots of modules and components in a very small file. All the things you expect to find in a CSS framework, such as grids, styling for common elements and typography, along with some more complex components such as tabs or cards are all present in <strong>mini.css</strong>.</p>
 					<br/>

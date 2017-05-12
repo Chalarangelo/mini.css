@@ -21,35 +21,41 @@
 	[class^='fore-'] { font-family: monospace, monospace;} .fore-primary { color: #0d47a1;} .fore-secondary { color: #b71c1c;} .fore-tertiary { color: #1b5e20;}
 	.col-sm-12.col-md-6.col-sm-first.col-md-first {box-sizing: border-box;border-right: 1px solid #c9c9c9;}
 	@media (max-width: 767px){.col-sm-12.col-md-6.col-sm-first.col-md-first {border: 0;border-bottom: 1px solid #c9c9c9;}}
-	h3 > a{font-size: 1rem;} h2 > a {font-size: 0.85em;} pre {max-height: 400px;} header.sticky a.button {padding: 4px 6px; font-size: 0.95em;}
+	h3 > a{font-size: 1rem;} h2 > a {font-size: 0.85em;} pre {max-height: 400px;} @media screen and (min-width: 768px) { .drawer { margin-top: 4px;}}
 	</style>
   </head>
   <body>
-		<header>
+		<header class="sticky">
 			<a href="index.html" class="logo"><span id="header-logo">m</span></a>
-			<a href="index.html" class="button">Introduction</a> <a href="modules.html" class="button">Modules</a>
-			<a href="flavors.html" class="button">Flavors</a> <a href="templates.html" class="button">Templates</a> <a href="customization/index.html" class="button">Customization</a>
-			<a href="quick_reference.html" class="button">Quick Reference</a>
+				<label class="drawer-toggle button" for="navigation-toggle"></label>
+			<a href="index.html" class="button hidden-sm">Introduction</a> <a href="modules.html" class="button hidden-sm">Modules</a>
+			<a href="flavors.html" class="button hidden-sm">Flavors</a> <a href="templates.html" class="button hidden-sm">Templates</a>
+			<a href="customization/index.html" class="button hidden-sm">Customization</a> <a href="quick_reference.html" class="button hidden-sm">Quick Reference</a>
 			<a href="https://github.com/Chalarangelo/mini.css" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; bottom: -2px; margin-right: 2px;"></i>&nbsp;Github</a>
 		</header>
-		<header class="sticky" style="height:36px;">
-			<a href="#core" class="button">Core</a> <a href="#grid" class="button">Grid</a>
-			<a href="#input_control" class="button">Input Control</a> <a href="#navigation" class="button">Navigation</a>
-			<a href="#table" class="button">Table</a> <a href="#card" class="button">Card</a>
-			<a href="#tab" class="button">Tab</a> <a href="#contextual" class="button">Contextual</a>
-			<a href="#progress" class="button">Progress</a> <a href="#utility" class="button">Utility</a>
-		</header>
+		<div class="container" style="padding-left: 0.25rem;">
+			<div class="row"> <input type="checkbox" id="navigation-toggle"> <nav class="drawer col-md-4 col-lg-2">
+				<label class="close" for="navigation-toggle"></label>
+				<a href="index.html"><h4 style="margin-left: 0;">Introduction</h4></a>
+				<a href="index.html"><h4 style="margin-left: 0;">Modules</h4></a>
+				<a href="flavors.html"><h4 style="margin-left: 0;">Flavors</h4></a>
+				<a href="templates.html"><h4 style="margin-left: 0;">Templates</h4></a>
+				<a href="customization/index.html"><h4 style="margin-left: 0;">Customization</h4></a>
+				<a href="quick_reference.html"><h4 style="margin-left: 0;">Quick Reference</h4></a>
+				<a href="#core">Core</a> <a href="#grid">Grid</a> <a href="#input_control">Input Control</a> <a href="#navigation">Navigation</a> <a href="#table">Table</a>
+				<a href="#card">Card</a> <a href="#tab">Tab</a> <a href="#contextual">Contextual</a> <a href="#progress">Progress</a> <a href="#utility">Utility</a> <br/>
+			</nav>
     <!-- Insert your page content here-->
-    <main><div class="container">
+    <div class="col-sm-12 col-md-8 col-lg-10"><main>
       <div class="row" style="padding-top: 40px;">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <h1>Quick Reference</h1>
           <p>If you are familiar with <strong>mini.css</strong> and want a cheat sheet, you've come to the right place. Below you will find a quick overview of the framework and examples to help you brush up on your website-building skills. For more detailed instructions on modules, check out the <a href="modules.html">modules</a> page.</p>
           <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2>Setup &amp; usage</h2></div>
             <div class="section">
@@ -61,7 +67,7 @@
               </div><br>
               <p>You can import the default flavor of <strong>mini.css</strong> in your webpage by simply adding one of the following references inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
 							<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css&quot;</span>&gt;</pre>
-              <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.5/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
+              <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.2.0/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
 							<p>You can also find <strong>mini.css</strong> on <a href="https://cdnjs.com/libraries/mini.css">cdnjs</a>, which you can use to include it in your projects.</p><br/>
               <p>We strongly suggest you add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre>
@@ -70,7 +76,7 @@
         </div>
       </div>
       <div class="row" id="core">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="core.html" target="_blank" class="button primary small"><i class="fa fa-font fa-fw" aria-hidden="true"></i></a>&nbsp;Core</h2></div>
             <div class="section row">
@@ -138,7 +144,7 @@
         </div>
       </div>
       <div class="row" id="grid">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="grid.html" target="_blank" class="button secondary small"><i class="fa fa-th-large fa-fw" aria-hidden="true"></i></a>&nbsp;Grid</h2></div>
             <div class="section row">
@@ -368,7 +374,7 @@
         </div>
       </div>
       <div class="row" id="input_control">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section">
               <h2><a href="input_control.html" target="_blank" class="button tertiary small"><i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i></a>&nbsp;Input Control</h2>
@@ -484,7 +490,7 @@
         </div>
       </div>
       <div class="row" id="navigation">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="navigation.html" target="_blank" class="button primary small"><i class="fa fa-compass fa-fw" aria-hidden="true"></i></a>&nbsp;Navigation</h2></div>
             <div class="section row">
@@ -602,7 +608,7 @@
         </div>
       </div>
       <div class="row" id="table">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="table.html" target="_blank" class="button primary small"><i class="fa fa-table fa-fw" aria-hidden="true"></i></a>&nbsp;Table</h2></div>
             <div class="section row">
@@ -752,7 +758,7 @@
         </div>
       </div>
       <div class="row" id="card">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="card.html" target="_blank" class="button secondary small"><i class="fa fa-id-card-o fa-fw" aria-hidden="true"></i></a>&nbsp;Card</h2></div>
             <div class="section row">
@@ -874,7 +880,7 @@
         </div>
       </div>
       <div class="row" id="tab">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="tab.html" target="_blank" class="button secondary small"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i></a>&nbsp;Tab</h2></div>
             <div class="section row">
@@ -963,7 +969,7 @@
         </div>
       </div>
       <div class="row" id="contextual">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="contextual.html" target="_blank" class="button secondary small"><i class="fa fa-tags fa-fw" aria-hidden="true"></i></a>&nbsp;Contextual</h2></div>
             <div class="section row">
@@ -1023,7 +1029,7 @@
         </div>
       </div>
       <div class="row" id="progress">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="progress.html" target="_blank" class="button tertiary small"><i class="fa fa-spinner fa-fw" aria-hidden="true"></i></a>&nbsp;Progress</h2></div>
             <div class="section row">
@@ -1094,7 +1100,7 @@
         </div>
       </div>
       <div class="row" id="utility">
-        <div class="col-sm col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
           <div class="card fluid">
             <div class="section"><h2><a href="utility.html" target="_blank" class="button tertiary small"><i class="fa fa-wrench fa-fw" aria-hidden="true"></i></a>&nbsp;Utility</h2></div>
             <div class="section row">
@@ -1215,7 +1221,7 @@
         <div class="col-sm-12 col-lg-10 col-lg-offset-1">
         </div>
       </div>
-    </div></main>
+    </main></div></div></div>
     <!-- End of page content-->
     <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>

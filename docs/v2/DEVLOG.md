@@ -1159,3 +1159,7 @@
 - Updated customization for the new `.drawer` component.
 - Updated `mini-default`, `mini-lite` and `mini-dark` for the new `.drawer` component, the other two flavors will be updated later today.
 - Updated `quick_reference` for `.drawer`, added a codepen for the component.
+- Updated `index.html` with mobile menu, updated tags to latest version. Fixed the way the screencast displays, so that it fits nicely on smaller screens.
+- Updated all module pages to use `.drawer` on mobile.
+- Updated `flavors.html` and `templates.html`, both now use the new menu and the tags are updated for the flavor doc.
+- Updated `quick_reference.html` with new navigation, new tag, checked everything.

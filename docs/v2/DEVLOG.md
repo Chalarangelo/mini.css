@@ -1147,7 +1147,6 @@
 - Documented `.drawer` component, updated descriptions wherever possible, the customization documentation will be added in later.
 - *TODO* list for tomorrow (before release):
 	- Update flavors to use the new `.drawer` component, rebuild.
-	- Update all navigation menus on all pages to use both the `.drawer` and show the new menus.
 	- Update all flavors to work with new components etc.
 	- Update all flavor demos.
 	- Look into updating the templates.
@@ -1163,3 +1162,4 @@
 - Updated all module pages to use `.drawer` on mobile.
 - Updated `flavors.html` and `templates.html`, both now use the new menu and the tags are updated for the flavor doc.
 - Updated `quick_reference.html` with new navigation, new tag, checked everything.
+- Updated menus in all `customization` pages.

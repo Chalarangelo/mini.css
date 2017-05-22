@@ -83,8 +83,8 @@
       <div class="row" style="padding-top: 40px;" id="input-control-title">
         <div class="col-sm-12">
           <h1>Input Control</h1>
-          <p>The <strong>input_control</strong> module contains rules that affect forms, input elements, buttons, checkboxes and radio buttons. All of these elements' styles are predefined, allowing you to create modern, responsive forms quickly. Layout alternatives are also provided if you want your forms to look a certain way.</p>
-          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
+          <p style="text-align: justify;">The <strong>input_control</strong> module contains rules that affect forms, input elements, buttons, checkboxes and radio buttons. All of these elements' styles are predefined, allowing you to create modern, responsive forms quickly. Layout alternatives are also provided if you want your forms to look a certain way.</p>
+          <p style="text-align: justify;"><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
         </div>
       </div>
       <div class="row">
@@ -92,11 +92,11 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>The presentation of forms, input fields, buttons and other interactive elements is always very important for any website or app. The <strong>input_control</strong> module provides you with much needed styling improvements for all of these elements, while keeping everything simple to use and understand, as well as combine with the other modules. Forms and input elements have a clean, modern design, while some elements like checkoxes and radio buttons get a much needed facelift. Buttons have also been stylized to look the same in all browsers, while keeping their design clean and allowing for a few color and size variants. Grouping inputs and labels or buttons is also part of this module and, as always, responsiveness is an important feature. Finally, all of the components are accessible, with a few minor caveats, that are discussed in their respective section in this page.</p><br>
+              <p style="text-align: justify;">The presentation of forms, input fields, buttons and other interactive elements is always very important for any website or app. The <strong>input_control</strong> module provides you with much needed styling improvements for all of these elements, while keeping everything simple to use and understand, as well as combine with the other modules. Forms and input elements have a clean, modern design, while some elements like checkoxes and radio buttons get a much needed facelift. Buttons have also been stylized to look the same in all browsers, while keeping their design clean and allowing for a few color and size variants. Grouping inputs and labels or buttons is also part of this module and, as always, responsiveness is an important feature. Finally, all of the components are accessible, with a few minor caveats, that are discussed in their respective section in this page.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
-              <p>To use the <strong>input_control</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
+              <p style="text-align: justify;">To use the <strong>input_control</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
             </div>
           </div>
@@ -161,8 +161,8 @@
               </form>
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-md-normal">
-                <p>Forms are structured the same way you would structure a normal form in HTML5. Simply create a root <code>&lt;form&gt;</code> element and add your <code>&lt;input&gt;</code> elements inside. Link them to <code>&lt;label&gt;</code> elements for ease of acces and you are pretty much set. We highly recommend using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements to annotate your forms as well, but you can skip them if you wish.</p>
-                <p>Forms are inline by default. Use the <code>.input-group</code> class on a <code>&lt;div&gt;</code> wrapping inside it an <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> pair to make sure they always display together in one line. You can make your <code>.input-group</code>s respond to viewport changes, by adding the <code>.fluid</code> class to them. Finally, if you want to create aligned forms with a preset layout, you can utilize the <a href="grid.html"><strong>grid</strong></a> module's rows and columns.</p>
+                <p style="text-align: justify;">Forms are structured the same way you would structure a normal form in HTML5. Simply create a root <code>&lt;form&gt;</code> element and add your <code>&lt;input&gt;</code> elements inside. Link them to <code>&lt;label&gt;</code> elements for ease of acces and you are pretty much set. We highly recommend using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements to annotate your forms as well, but you can skip them if you wish.</p>
+                <p style="text-align: justify;">Forms are inline by default. Use the <code>.input-group</code> class on a <code>&lt;div&gt;</code> wrapping inside it an <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> pair to make sure they always display together in one line. You can make your <code>.input-group</code>s respond to viewport changes, by adding the <code>.fluid</code> class to them. Finally, if you want to create aligned forms with a preset layout, you can utilize the <a href="grid.html"><strong>grid</strong></a> module's rows and columns.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;form&gt;
   &lt;fieldset&gt;
@@ -181,7 +181,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align: justify;">
                 <li>Using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements is highly recommended for a better presentational effect. Using these elements is a matter of personal preference, however try to keep your forms consistent (i.e. either use them in all forms or no forms as to not confuse users).</li>
                 <li>Some <code>&lt;input&gt;</code> elements, such as date &amp; time, color and range types, are not supported and, as a result, do not have a default style defined for them. You can define said styles manually if you need to use them in your website or app.</li>
                 <li>Checkboxes and radio buttons are not stylized the same way as most of the other elements, nor do they follow the exact same stucture for layout. Please refer to the next section for information on how to use those.</li>
@@ -210,7 +210,7 @@
     &lt;/div&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use <code>.row</code> and <code>.col-<span class="fore-primary">SCR_SZ</span></code> or <code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code> (replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names (<code><span class="fore-tertiary">sm</span></code> for smaller screens, <code><span class="fore-tertiary">md</span></code> for medium-sized screens or <code><span class="fore-tertiary">lg</span></code> for larger screens and <code><span class="fore-secondary">COL_WD</span></code> with a number from <code>1</code> to <code>12</code> specifying the width of the column) to set specific layouts for your aligned forms. You can also use the same column classes to make them responsive for different screen sizes.</p>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;You can use <code>.row</code> and <code>.col-<span class="fore-primary">SCR_SZ</span></code> or <code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code> (replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names (<code><span class="fore-tertiary">sm</span></code> for smaller screens, <code><span class="fore-tertiary">md</span></code> for medium-sized screens or <code><span class="fore-tertiary">lg</span></code> for larger screens and <code><span class="fore-secondary">COL_WD</span></code> with a number from <code>1</code> to <code>12</code> specifying the width of the column) to set specific layouts for your aligned forms. You can also use the same column classes to make them responsive for different screen sizes.</p>
                 </div>
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;form&gt;
@@ -230,7 +230,7 @@
     &lt;/div&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;Apart from using <code>.row</code> and <code>.col-<span class="fore-primary">SCR_SZ</span></code> or <code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code> for responsiveness, you can also use other classes from the <strong>grid</strong> module such as the offset classes to make your form layouts more interesting.</p>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;Apart from using <code>.row</code> and <code>.col-<span class="fore-primary">SCR_SZ</span></code> or <code>.col-<span class="fore-primary">SCR_SZ</span>-<span class="fore-secondary">COL_WD</span></code> for responsiveness, you can also use other classes from the <strong>grid</strong> module such as the offset classes to make your form layouts more interesting.</p>
                 </div>
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;style&gt;
@@ -251,7 +251,7 @@
     &lt;/div&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;When creating aligned forms using the <strong>grid</strong> module's classes, labels might be off-center vertically compared to their inline counterparts. Use a simple styling for their parent <code>.row</code> element, if you want to adjust their vertical alignment.</p>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;When creating aligned forms using the <strong>grid</strong> module's classes, labels might be off-center vertically compared to their inline counterparts. Use a simple styling for their parent <code>.row</code> element, if you want to adjust their vertical alignment.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;form&gt;
@@ -267,7 +267,7 @@
     &lt;/div&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using the <code>.input-group</code> class when creating aligned forms. This might cause unexpected behavior.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;Avoid using the <code>.input-group</code> class when creating aligned forms. This might cause unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -295,7 +295,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-md-normal">
-                <p>Checkboxes and radio buttons come pre-styled, using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, while remaining fully accessible. To create a checkbox or radio button, start using a <code>&lt;div&gt;</code> that implements the <code>.input-group</code> class, and then add an <code>&lt;input&gt;</code> of the proper <code><span class="secondary">type</span></code> inside it (<code><span class="fore-primary">&quot;checkbox&quot;</span></code> or <code><span class="fore-primary">&quot;radio&quot;</span></code>), followed immediately by a <code>&lt;label&gt;</code> linking to it. Remember to add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to your <code>&lt;input&gt;</code>, so that it will register properly for screen readers.</p>
+                <p style="text-align: justify;">Checkboxes and radio buttons come pre-styled, using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, while remaining fully accessible. To create a checkbox or radio button, start using a <code>&lt;div&gt;</code> that implements the <code>.input-group</code> class, and then add an <code>&lt;input&gt;</code> of the proper <code><span class="secondary">type</span></code> inside it (<code><span class="fore-primary">&quot;checkbox&quot;</span></code> or <code><span class="fore-primary">&quot;radio&quot;</span></code>), followed immediately by a <code>&lt;label&gt;</code> linking to it. Remember to add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to your <code>&lt;input&gt;</code>, so that it will register properly for screen readers.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;input-group&quot;&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt;
@@ -310,7 +310,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align: justify;">
                 <li>Checkboxes and radio buttons are fully accessible. However, if not provided with a label, they are not visible to users, but only to screen readers.</li>
               </ul><hr>
               <div class="row">
@@ -321,26 +321,26 @@
   &lt;input type=&quot;radio&quot; id=&quot;rad2&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
   &lt;label for=&quot;rad2&quot;&gt;Value 2&lt;/label&gt;
 &lt;/div&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can add multiple <code>radio</code> buttons inside one <code>.input-group</code>, as long as they follow the syntax shown above. In fact, we strongly recommend grouping controls that are relevant to each other in this manner.</p>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;You can add multiple <code>radio</code> buttons inside one <code>.input-group</code>, as long as they follow the syntax shown above. In fact, we strongly recommend grouping controls that are relevant to each other in this manner.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt;
 &lt;label for=&quot;check1&quot;&gt;Checkbox&lt;/label&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Always use an <code>.input-group</code> for your checkboxes and radio buttons. Not doing so will cause the checkbox or radio button to not display properly.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;Always use an <code>.input-group</code> for your checkboxes and radio buttons. Not doing so will cause the checkbox or radio button to not display properly.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;input-group&quot;&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot;
   &lt;label for=&quot;check1&quot;&gt;Checkbox&lt;/label&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Remember to add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to all your checkboxes and radio buttons to make them accessible.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;Remember to add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to all your checkboxes and radio buttons to make them accessible.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;input-group&quot;&gt;
   &lt;label for=&quot;check1&quot;&gt;Checkbox&lt;/label&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;The structure of checkboxes and radio buttons is very strict, meaning that the <code>&lt;label&gt;</code> should always be after the <code>&lt;input&gt;</code> and never before, otherwise the checkbox or radio button will not display properly.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;The structure of checkboxes and radio buttons is very strict, meaning that the <code>&lt;label&gt;</code> should always be after the <code>&lt;input&gt;</code> and never before, otherwise the checkbox or radio button will not display properly.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;input-group&quot;&gt;
@@ -349,13 +349,13 @@
   &lt;label for=&quot;rad2&quot;&gt;Value 2&lt;/label&gt;
   &lt;label for=&quot;rad1&quot;&gt;Value 1&lt;/label&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;When using multiple radio buttons inside an <code>.input-group</code>, remember to use the usual structure of the radio button component for each radio button (i.e. the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code>). Not doing so will cause the radio buttons to not display properly.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;When using multiple radio buttons inside an <code>.input-group</code>, remember to use the usual structure of the radio button component for each radio button (i.e. the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code>). Not doing so will cause the radio buttons to not display properly.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal col-lg-4 col-lg-last">
                   <pre>&lt;div class=&quot;input-group&quot;&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; tabindex=&quot;0&quot;&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Never leave a checkbox or radio button without a <code>&lt;label&gt;</code>. The <code>&lt;label&gt;</code> is essential to properly display the checkbox or radio button.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;Never leave a checkbox or radio button without a <code>&lt;label&gt;</code>. The <code>&lt;label&gt;</code> is essential to properly display the checkbox or radio button.</p>
                 </div>
               </div>
             </div>
@@ -380,9 +380,9 @@
                 <div class="button-group"> <button>Button</button> <button>Button</button> <button>Button</button> </div>
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-md-normal">
-                <p>All button types have been stylized by default, while maintaining accessiblity. Simply add any <code>&lt;button&gt;</code> or an <code>&lt;input&gt;</code> with a button <code><span class="secondary">type</span></code> (i.e. <code><span class="fore-primary">&quot;button&quot;</span></code>, <code><span class="fore-primary">&quot;submit&quot;</span></code> or <code><span class="fore-primary">&quot;reset&quot;</span></code>) and they will be styled accordingly. You can also use the <code>.button</code> class or the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> attribute for links, labels and other elements of your choice to make them look like buttons.</p>
-                <p>Color variants are available in the form of the <code>.primary</code>, <code>.secondary</code>, <code>.tertiary</code> and <code>.inverse</code> classes. Size variants are available as well in the form of <code>.small</code> and <code>.large</code> classes.</p>
-                <p>Finally, you can create responsive groups of buttons by wrapping them inside a <code>&lt;div&gt;</code> with the <code>.button-group</code> class.</p>
+                <p style="text-align: justify;">All button types have been stylized by default, while maintaining accessiblity. Simply add any <code>&lt;button&gt;</code> or an <code>&lt;input&gt;</code> with a button <code><span class="secondary">type</span></code> (i.e. <code><span class="fore-primary">&quot;button&quot;</span></code>, <code><span class="fore-primary">&quot;submit&quot;</span></code> or <code><span class="fore-primary">&quot;reset&quot;</span></code>) and they will be styled accordingly. You can also use the <code>.button</code> class or the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> attribute for links, labels and other elements of your choice to make them look like buttons.</p>
+                <p style="text-align: justify;">Color variants are available in the form of the <code>.primary</code>, <code>.secondary</code>, <code>.tertiary</code> and <code>.inverse</code> classes. Size variants are available as well in the form of <code>.small</code> and <code>.large</code> classes.</p>
+                <p style="text-align: justify;">Finally, you can create responsive groups of buttons by wrapping them inside a <code>&lt;div&gt;</code> with the <code>.button-group</code> class.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;button&gt;Default button&lt;/button&gt;
 &lt;input type=&quot;button&quot; class=&quot;primary&quot; value=&quot;Primary button&quot;&gt;
@@ -406,7 +406,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align: justify;">
                 <li>If you want more color or size variants for your buttons, check out the <a href="customization.html">customization</a> page.</li>
                 <li>The <code>.button-group</code> component is compatible with modern browsers, but might not display properly in older browsers.</li>
                 <li><code>.button-group</code>s will display as a horizontal container with all their buttons in one row on medium-sized and larger displays, however they will collapse into a column view for smaller displays.</li>
@@ -414,13 +414,13 @@
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;button class=&quot;inverse small&quot;&gt;Small inverse button&lt;/button&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can mix and match button color and size variants to achieve the desired effect.</p>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;You can mix and match button color and size variants to achieve the desired effect.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;button class=&quot;secondary inverse&quot;&gt;Problematic button&lt;/button&gt;
 <span class="fore-secondary">&lt;!-- or --&gt;</span>
 &lt;button class=&quot;small large&quot;&gt;Problematic button&lt;/button&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid mixing two or more button color or size variants, as these combinations might result in unexpected behavior.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;Avoid mixing two or more button color or size variants, as these combinations might result in unexpected behavior.</p>
                 </div>
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;div class=&quot;button-group&quot;&gt;
@@ -428,7 +428,7 @@
   &lt;input type=&quot;reset&quot; class=&quot;secondary&quot; value=&quot;Secondary button&quot;&gt;
   &lt;label class=&quot;button inverse&quot;&gt;Label button&lt;/label&gt;
 &lt;/div&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use button color variants inside the same <code>.button-group</code>. You can also use any component styled like a button inside a <code>.button-group</code>.</p>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;You can use button color variants inside the same <code>.button-group</code>. You can also use any component styled like a button inside a <code>.button-group</code>.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;div class=&quot;button-group&quot;&gt;
@@ -436,7 +436,7 @@
   &lt;button&gt;Button&lt;/button&gt;
   &lt;button class=&quot;small&quot;&gt;Button&lt;/button&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using button size variants inside a <code>.button-group</code>, as this might result in unexpected behavior.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;Avoid using button size variants inside a <code>.button-group</code>, as this might result in unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -457,7 +457,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-md-normal">
-                <p>File upload buttons are commonly a sore spot in CSS frameworks. We try to remedy this problem by hiding the <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code>, while maintaining accessibility and using a linked <code>&lt;label&gt;</code> of the <code>.button</code> class to display it in a modern way.</p>
+                <p style="text-align: justify;">File upload buttons are commonly a sore spot in CSS frameworks. We try to remedy this problem by hiding the <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;file&quot;</span>&gt;</code>, while maintaining accessibility and using a linked <code>&lt;label&gt;</code> of the <code>.button</code> class to display it in a modern way.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;input type=&quot;file&quot; id=&quot;file-input&quot;&gt;
 &lt;label for=&quot;file-input&quot; class=&quot;button&quot;&gt;Upload file...&lt;/label&gt;</pre>
@@ -465,7 +465,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align: justify;">
                 <li>The icon displayed in the example above is not part of the button styling.</li>
                 <li>File upload buttons do not change their text to the name of the file after the user has selected a file to upload. You can, however, add this functionality using a few lines of Javascript.</li>
 								<li>File upload buttons cannot be focused (i.e. have a <code>:focus</code> state) using the keyboard and this applies to linked labels, too. You can use Javascript to add this functionality, if you wish.</li>
@@ -476,7 +476,7 @@
   &lt;input type=&quot;file&quot; id=&quot;file-input&quot;&gt;
   &lt;label for=&quot;file-input&quot; class=&quot;button&quot;&gt;Upload file...&lt;/label&gt;
 &lt;/div&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use an <code>.input-group</code> to wrap the file upload <code>&lt;input&gt;</code> and its linked <code>&lt;label&gt;</code>, if you wish.</p>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;You can use an <code>.input-group</code> to wrap the file upload <code>&lt;input&gt;</code> and its linked <code>&lt;label&gt;</code>, if you wish.</p>
                 </div>
               </div>
             </div>
@@ -485,10 +485,10 @@
       </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12">
-          <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
+          <p style="text-align: justify;">If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>
     </main></div></div></div>
-    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+    <footer style="text-align: justify;"><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>
 </html>

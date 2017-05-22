@@ -85,8 +85,8 @@
       <div class="row" style="padding-top: 40px;" id="navigation-title">
         <div class="col-sm-12">
           <h1>Navigation</h1>
-          <p>The <strong>navigation</strong> module seeks to remedy the problems of vertical and horizontal navigation design paradigms, by combining the two for a better presentational effect. HTML5 navigational elements are at the heart of the module, allowing you to quickly build your navigation menus.</p>
-          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
+          <p style="text-align: justify;">The <strong>navigation</strong> module seeks to remedy the problems of vertical and horizontal navigation design paradigms, by combining the two for a better presentational effect. HTML5 navigational elements are at the heart of the module, allowing you to quickly build your navigation menus.</p>
+          <p style="text-align: justify;"><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
         </div>
       </div>
       <div class="row">
@@ -94,11 +94,11 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Menus and navigation are some of the most important elements for any website or web app and their design and ease-of-use are key factors that can determine a page's bounce rates. The <strong>navigation</strong> module takes a step back from the complicated menu and navigation design paradigms of the modern web, using HTML5 elements (i.e. <code>header</code>, <code>nav</code> and <code>footer</code>) for basic navigation, while providing fully accessibility for screen readers. Apart from the simple horizontal navigation (headers) and vertical menus (sidebars), we opted to add a responsive slide-in drawer menu that works well with any page layout. Finally, footers are also part of the <strong>navigation</strong> module, as they can often provide the user with useful information and/or links that are very important to enhancing their experience.</p><br>
+              <p style="text-align: justify;">Menus and navigation are some of the most important elements for any website or web app and their design and ease-of-use are key factors that can determine a page's bounce rates. The <strong>navigation</strong> module takes a step back from the complicated menu and navigation design paradigms of the modern web, using HTML5 elements (i.e. <code>header</code>, <code>nav</code> and <code>footer</code>) for basic navigation, while providing fully accessibility for screen readers. Apart from the simple horizontal navigation (headers) and vertical menus (sidebars), we opted to add a responsive slide-in drawer menu that works well with any page layout. Finally, footers are also part of the <strong>navigation</strong> module, as they can often provide the user with useful information and/or links that are very important to enhancing their experience.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
-              <p>To use the <strong>navigation</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
+              <p style="text-align: justify;">To use the <strong>navigation</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
             </div>
           </div>
@@ -119,7 +119,7 @@
             </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
-                <p>The <code>&lt;header&gt;</code> HTML element is used for a page's top horizontal navigation menu. It can contain a unique <code>.logo</code> element as its first child (this structure is not mandatory, but still recommended as a best practice), which can be either text (with or without a link) or an image. The rest of the elements inside the <code>&lt;header&gt;</code> must be button elements (i.e. <code>&lt;button&gt;</code>, <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;button&quot;</span>&gt;</code>, <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> or <code>.button</code>) in order to be styled properly. Textual separators between those can be added using <code>&lt;span&gt;</code> elements.</p>
+                <p style="text-align: justify;">The <code>&lt;header&gt;</code> HTML element is used for a page's top horizontal navigation menu. It can contain a unique <code>.logo</code> element as its first child (this structure is not mandatory, but still recommended as a best practice), which can be either text (with or without a link) or an image. The rest of the elements inside the <code>&lt;header&gt;</code> must be button elements (i.e. <code>&lt;button&gt;</code>, <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;button&quot;</span>&gt;</code>, <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> or <code>.button</code>) in order to be styled properly. Textual separators between those can be added using <code>&lt;span&gt;</code> elements.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;header&gt;
   &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt;
@@ -133,7 +133,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align: justify;">
                 <li>The <code>&lt;header&gt;</code> element is partially responsive on smaller screen devices. More specifically, when the content inside it exceeds the width of the viewport (ie. overflows to the right), users will be able to scroll horizontally in order to see the rest of the menu.</li>
                 <li>The <code>&lt;header&gt;</code> element does not display as <code class="fore-tertiary">fixed</code> by default. You can, however, alter this CSS property manually, if you so desire.</li>
               </ul><hr>
@@ -145,7 +145,7 @@
   &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Action 2&lt;/a&gt;
   &lt;label class=&quot;button&quot;&gt;Action 3&lt;/label&gt;
 &lt;/header&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can mix different elements styled like buttons inside a <code>&lt;header&gt;</code> element. In fact, we strongly recommend doing so, if you need to.</p>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;You can mix different elements styled like buttons inside a <code>&lt;header&gt;</code> element. In fact, we strongly recommend doing so, if you need to.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;header&gt;
@@ -156,7 +156,7 @@
   &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt;
   &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
 &lt;/header&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;The <code>.logo</code> element should not be a <code>&lt;button&gt;</code> element, have the <code>.button</code> class or the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> attribute. On the other hand, links and labels in the <code>&lt;header&gt;</code> should not be without a <code>.button</code> class or a <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> attribute. Ignoring this rule might cause unexpected behavior.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;The <code>.logo</code> element should not be a <code>&lt;button&gt;</code> element, have the <code>.button</code> class or the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> attribute. On the other hand, links and labels in the <code>&lt;header&gt;</code> should not be without a <code>.button</code> class or a <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">button</a>&quot;</span></code> attribute. Ignoring this rule might cause unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -180,7 +180,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal col-lg-8 col-lg-normal">
-                <p>To add vertical navigation to your websites, use the <code>&lt;nav&gt;</code> HTML element. Adding links is pretty simple, just use <code>&lt;a&gt;</code> elements, no lists or anything else required. In order to add subcategories to your vertical navigation, use any normal textual element as the title of the subcategory and follow it with its links as normal, adding the <code>.sublink-1</code> class to them. Similarly, you can create a subcategory with a depth of 2, using a similar structure and the <code>.sublink-2</code> class.</p>
+                <p style="text-align: justify;">To add vertical navigation to your websites, use the <code>&lt;nav&gt;</code> HTML element. Adding links is pretty simple, just use <code>&lt;a&gt;</code> elements, no lists or anything else required. In order to add subcategories to your vertical navigation, use any normal textual element as the title of the subcategory and follow it with its links as normal, adding the <code>.sublink-1</code> class to them. Similarly, you can create a subcategory with a depth of 2, using a similar structure and the <code>.sublink-2</code> class.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;nav&gt;
   &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
@@ -198,7 +198,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align: justify;">
                 <li>Subcategories and their links support a depth of 2 by default. If, however, you need more than that, we recommend you check the <a href="customization.html">customization page</a> for instructions on how to add more depth to the vertical navigation.</li>
                 <li>We strongly suggest you do not add irrelevant things inside your <code>&lt;nav&gt;</code> element, like images or text that are not part of the navigation menu.</li>
               </ul><hr>
@@ -209,7 +209,7 @@
     <span class="fore-tertiary">&lt;!-- navigation content --&gt;</span>
   &lt;/nav&gt;
 &lt;/div&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;We strongly recommend using the <code>&lt;nav&gt;</code> element in combination with the <a href="grid.html"><strong>grid</strong></a> module to make your layouts more responsive. For example, you could make your sidebar appear on the left side of your content in medium-sized and larger screens, but move to the very bottom of your content on smaller screens.</p>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;We strongly recommend using the <code>&lt;nav&gt;</code> element in combination with the <a href="grid.html"><strong>grid</strong></a> module to make your layouts more responsive. For example, you could make your sidebar appear on the left side of your content in medium-sized and larger screens, but move to the very bottom of your content on smaller screens.</p>
                 </div>
               </div>
             </div>
@@ -234,15 +234,15 @@
             </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
-                <p>The drawer component is used to create responsive and collapsible navigation menus. To create the drawer system, follow the steps presented below:</p>
-								<ul>
+                <p style="text-align: justify;">The drawer component is used to create responsive and collapsible navigation menus. To create the drawer system, follow the steps presented below:</p>
+								<ul style="text-align: justify;">
 									<li>Inside your <code>&lt;header&gt;</code> element, add a <code>&lt;label&gt;</code> element with the <code>.drawer-toggle</code> class (remember to add the <code>.button</code> class to apply the necessary styles).</li>
 									<li>Create an <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code> element. Give it an <code class="fore-secondary">id</code> to be able to link it to the necessary interactive elements.</li>
 									<li>Immediately after the previous <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code>, create a <code>&lt;div&gt;</code> element with the <code>.drawer</code> class. This is where you will put your menu's contents.</li>
 									<li>Add an empty <code>&lt;label&gt;</code> element inside your <code>.drawer</code>, adding the <code>.close</code> class to it.</li>
 									<li>Finally, link the <code>.drawer-toggle</code> and <code>.close</code> elements to the <code class="fore-secondary">id</code> of your <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code>.</li>
 								</ul>
-								<p>Drawers are responsive and will expand into normal containers on larger screens. If you want to avoid this, add the <code>.persistent</code> class to both your <code>.drawer-toggle</code> and <code>.drawer</code> elements. You can also change the position of the drawer from the left side of the screen to the right by applying the <code>.right</code> class to your <code>.drawer</code> element.</p>
+								<p style="text-align: justify;">Drawers are responsive and will expand into normal containers on larger screens. If you want to avoid this, add the <code>.persistent</code> class to both your <code>.drawer-toggle</code> and <code>.drawer</code> elements. You can also change the position of the drawer from the left side of the screen to the right by applying the <code>.right</code> class to your <code>.drawer</code> element.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;header&gt;
   &lt;label for=&quot;drawer-checkbox&quot; class=&quot;button drawer-toggle&quot;&gt;&lt;/label&gt;
@@ -257,17 +257,17 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
-                <li>The <code>.drawer</code> component can be easily and effectively combined with the <a href="grid.html"><strong>grid</strong></a> module's system and classes to create fully responsive navigation menus.</li>
+              <ul style="text-align: justify;">
+                <li>The <code>.drawer</code> component can be easily and effectively combined with the <a href="grid.html"><strong>grid</strong></a> module's system and classes, as well as the <a href="utility.html"><strong>utility</strong></a> module's responsive visibility helper classes to create fully responsive navigation menus.</li>
                 <li>It's best to use the <code>.drawer</code> component in combination with a <code>&lt;header&gt;</code> element that has the <code>.sticky</code> class (check the last section of this page).</li>
               </ul><hr>
 							<div class="row">
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6 col-sm-first">
                   <pre>&lt;nav class=&quot;drawer&quot;&gt;
   &lt;label for=&quot;drawer-checkbox&quot; class=&quot;close&quot;&gt;&lt;/label&gt;
   &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
 &lt;/nav&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can apply the <code>.drawer</code> class to a <code>&lt;nav&gt;</code> element, effectively making your page's navigation menu collapse on smaller screen sizes.</p>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;You can apply the <code>.drawer</code> class to a <code>&lt;nav&gt;</code> element, effectively making your page's navigation menu collapse on smaller screen sizes.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;input type=&quot;checkbox&quot; id=&quot;drawer-checkbox&quot;&gt;
@@ -275,7 +275,35 @@
 &lt;div class=&quot;drawer&quot;&gt;
   &lt;h3&gt;Bad drawer&lt;/h3&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;The syntax and structure of the drawer container is very strict. Try to follow it exactly as described in this section.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;The syntax and structure of the drawer container is very strict. Try to follow it exactly as described in this section.</p>
+                </div>
+								<div class="col-sm-12 col-md-6 col-sm-first col-md-normal">
+                  <pre>&lt;div class=&quot;row&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;drawer-checkbox&quot;&gt;
+  &lt;div class=&quot;drawer col-md-4&quot;&gt;
+    &lt;label for=&quot;drawer-checkbox&quot; class=&quot;close&quot;&gt;&lt;/label&gt;
+    &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-sm-12 col-md-8&quot;&gt;
+    &lt;p&gt;Page content&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;You can combine the <code>.drawer</code> component with the grid system, similarly to any other element or component. The <code>.drawer</code> will be displayed as a slide-in menu on smaller screens, but it's part of the layout on medium-sized and larger screens.</p>
+                </div>
+								<div class="col-sm-12 col-md-6 col-sm-last">
+                  <pre>&lt;header&gt;
+  &lt;label for=&quot;drawer-checkbox&quot; class=&quot;button drawer-toggle persistent&quot;&gt;&lt;/label&gt;
+&lt;/header&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;drawer-checkbox&quot;&gt;
+&lt;div class=&quot;drawer&quot;&gt;...&lt;/div&gt;
+&lt;!-- or --&gt;
+&lt;header&gt;
+  &lt;label for=&quot;drawer-checkbox&quot; class=&quot;button drawer-toggle&quot;&gt;&lt;/label&gt;
+&lt;/header&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;drawer-checkbox&quot;&gt;
+&lt;div class=&quot;drawer peristent&quot;&gt;...&lt;/div&gt;</pre>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;Remember to apply the <code>.persistent</code> class to the <code>.drawer-toggle</code> and <code>.drawer</code> elements to avoid unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -293,7 +321,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-md-normal">
-                <p>The <code>&lt;footer&gt;</code> element is used to create your page's footer. As normal, add the <code>&lt;footer&gt;</code> at or near the end of your <code>&lt;body&gt;</code> element and add content to it like you would otherwise.</p>
+                <p style="text-align: justify;">The <code>&lt;footer&gt;</code> element is used to create your page's footer. As normal, add the <code>&lt;footer&gt;</code> at or near the end of your <code>&lt;body&gt;</code> element and add content to it like you would otherwise.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;footer&gt;
   &lt;p&gt;&amp;copy; 2001-2016 Web Corporation | &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Terms of use&lt;/a&gt;&lt;/p&gt;
@@ -309,7 +337,7 @@
             <div class="section"><h2>Sticky headers and footers</h2></div>
             <div class="section row">
               <div class="col-sm-12">
-                <p>You can create sticky headers and footers, using the <code>.sticky</code> class on either of these elements.</p>
+                <p style="text-align: justify;">You can create sticky headers and footers, using the <code>.sticky</code> class on either of these elements.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;header class=&quot;sticky&quot;&gt;
   &lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;Logo&lt;/a&gt; &lt;button&gt;Home&lt;/button&gt; &lt;button&gt;About&lt;/button&gt;
@@ -322,7 +350,7 @@
             </div>
 			<div class="section">
 			<h3>Notes</h3>
-			  <ul>
+			  <ul style="text-align: justify;">
 				<li>Sticky headers and footers are compatible with modern browsers, but might not display properly in older browsers. Support is being added over time, so be sure to check out if your target platforms support <a href="http://caniuse.com/#feat=css-sticky"><code>position:sticky</code></a>.</li>
 			  </ul>
 			</div>
@@ -331,10 +359,10 @@
       </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12">
-          <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
+          <p style="text-align: justify;">If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>
     </main></div></div></div>
-    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+    <footer style="text-align: justify;"><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>
 </html>

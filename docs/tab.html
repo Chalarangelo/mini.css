@@ -81,8 +81,8 @@
       <div class="row" style="padding-top: 40px;" id="tab-title">
         <div class="col-sm-12">
           <h1>Tab</h1>
-          <p>The <strong>tab</strong> module aims to combine multiple components and design paradigms, like collapses, accordions, carousels and tabs, into one general-purpose component. Tabs are very simple in structure, responsive on mobile and they allow for layout customization so that you can turn them into accordions or collapses whenever you want.</p>
-          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
+          <p style="text-align:justify">The <strong>tab</strong> module aims to combine multiple components and design paradigms, like collapses, accordions, carousels and tabs, into one general-purpose component. Tabs are very simple in structure, responsive on mobile and they allow for layout customization so that you can turn them into accordions or collapses whenever you want.</p>
+          <p style="text-align:justify"><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
         </div>
       </div>
       <div class="row">
@@ -90,11 +90,11 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Spoilers, collapses, accordions, tabs, carousels have been a staple of modern design for quite a long time. All of these elements are implemented using the <strong>tab</strong> module's single generic container. The tab container replaces all of these design paradigms with one component that is very flexible and responsive in order to let you present your website or app's content any way you like. Tabbed navigation is very easy to implement, while collapse, accordion and carousel components use the stacked architecture of tabs. As usual, the tab container is responsive and accessible, allowing you to deliver your content properly to all devices and users.</p><br>
+              <p style="text-align:justify">Spoilers, collapses, accordions, tabs, carousels have been a staple of modern design for quite a long time. All of these elements are implemented using the <strong>tab</strong> module's single generic container. The tab container replaces all of these design paradigms with one component that is very flexible and responsive in order to let you present your website or app's content any way you like. Tabbed navigation is very easy to implement, while collapse, accordion and carousel components use the stacked architecture of tabs. As usual, the tab container is responsive and accessible, allowing you to deliver your content properly to all devices and users.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
-              <p>To use the <strong>tab</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
+              <p style="text-align:justify">To use the <strong>tab</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
             </div>
           </div>
@@ -122,8 +122,8 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal col-lg-8">
-                <p>The tab container's basic sytanx is composed of two components, presented below in the order they should be added to the DOM tree:</p>
-                <ul>
+                <p style="text-align:justify">The tab container's basic sytanx is composed of two components, presented below in the order they should be added to the DOM tree:</p>
+                <ul style="text-align:justify">
                   <li>At the outermost level of the tab container is a <code>&lt;div&gt;</code> element implementing the <code>.tabs</code> class. This serves as the wrapper of the tab container.</li>
                   <li>Inside the <code>.tabs</code> container, add a set of the following three elements for each tab:
                     <ol>
@@ -133,7 +133,7 @@
                     </ol>
                   </li>
                 </ul>
-                <p>Tabs are responsive and will collapse into a stacked display on smaller screens, allowing the user to view the actual content more easily. The tab container's syntax is accessible, but parts of it might confuse screen readers, so we suggest adding the <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> attribute to all the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> elements inside the <code>.tabs</code> container.</p>
+                <p style="text-align:justify">Tabs are responsive and will collapse into a stacked display on smaller screens, allowing the user to view the actual content more easily. The tab container's syntax is accessible, but parts of it might confuse screen readers, so we suggest adding the <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> attribute to all the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> elements inside the <code>.tabs</code> container.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;tabs&quot;&gt;
   &lt;input type=&quot;radio&quot; name=&quot;tab-group&quot; id=&quot;tab1&quot; checked aria-hidden=&quot;true&quot;&gt;
@@ -159,7 +159,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li>Tabs are compatible with modern browsers, but might not display properly in older browsers.</li>
                 <li>Remember to add the <code><span class="fore-secondary">checked</span></code> attribute to one of your <code>&lt;input&gt;</code>s if you want that tab to be the one displayed by default. If none is specified, the first one will be displayed.</li>
                 <li>The <code>height</code> of the tab container's panel area is <code>400px</code>. If you want to change this default size, please check out the <a href="customization.html">customization</a> page.</li>
@@ -174,7 +174,7 @@
     &lt;h3&gt;Bad Tab&lt;/h3&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Do not use checkboxes inside the default <code>.tabs</code> container, otherwise you might notice unexpected behavior. If you want to use an <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;checkbox&quot;</span>&gt;</code>, check out the next section.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Do not use checkboxes inside the default <code>.tabs</code> container, otherwise you might notice unexpected behavior. If you want to use an <code>&lt;input <span class="fore-secondary">type</span>=<span class="fore-primary">&quot;checkbox&quot;</span>&gt;</code>, check out the next section.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;div class=&quot;tabs&quot;&gt;
@@ -184,7 +184,7 @@
     &lt;h3&gt;Lonely Tab&lt;/h3&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;You can add a single tab in a <code>.tabs</code> container, but what use would that be? You should probably read the next section to see what you can do with a stacked tab container instead.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;You can add a single tab in a <code>.tabs</code> container, but what use would that be? You should probably read the next section to see what you can do with a stacked tab container instead.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;div class=&quot;tabs&quot;&gt;
@@ -199,7 +199,7 @@
     &lt;h3&gt;Bad Tab&lt;/h3&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;The syntax and structure of the tab container is very strict. Try to follow it exactly as described in this section.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;The syntax and structure of the tab container is very strict. Try to follow it exactly as described in this section.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;div class=&quot;tabs&quot;&gt;
@@ -209,7 +209,7 @@
     &lt;h3&gt;Not fully accessible tab&lt;/h3&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Remember to use the <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> attribute to make your tabs fully accessible.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Remember to use the <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> attribute to make your tabs fully accessible.</p>
                 </div>
               </div>
             </div>
@@ -240,7 +240,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal col-lg-8">
-                <p>Apart from the normal tab layout, you can make your tabs stacked instead, using the <code>.stacked</code> class in your <code>.tabs</code> container element. Stacked tabs are more versatile, allowing you to use checkboxes and/or radio buttons to implement collapses, accordions and spoilers. Carousel-styled elements can also be displayed in this fashion, if you wish. Remember to use the <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> attribute to make your tabs fully accessible, as before.</p>
+                <p style="text-align:justify">Apart from the normal tab layout, you can make your tabs stacked instead, using the <code>.stacked</code> class in your <code>.tabs</code> container element. Stacked tabs are more versatile, allowing you to use checkboxes and/or radio buttons to implement collapses, accordions and spoilers. Carousel-styled elements can also be displayed in this fashion, if you wish. Remember to use the <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> attribute to make your tabs fully accessible, as before.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;tabs stacked&quot;&gt;
   &lt;input type=&quot;radio&quot; name=&quot;accordion&quot; id=&quot;a1&quot; checked aria-hidden=&quot;true&quot;&gt;
@@ -273,7 +273,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li><code>.stacked</code> tabs can be used with either checkboxes or radio buttons.</li>
                 <li>You can mix and match checkboxes and radio buttons, but we suggest you do not do so, unless you think it is necessary for your design.</li>
               </ul><hr>
@@ -286,7 +286,7 @@
     &lt;p&gt;This is a singular collapse.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can implement single collapses (otherwise known as spoilers), using a <code>.tabs</code><code>.stacked</code> container with only one checkbox-based tab.</p>
+                  <p class="do" style="text-align:justify"><mark class="tertiary">Do:</mark>&nbsp;You can implement single collapses (otherwise known as spoilers), using a <code>.tabs</code><code>.stacked</code> container with only one checkbox-based tab.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;div class=&quot;tabs stacked&quot;&gt;
@@ -296,7 +296,7 @@
     &lt;p&gt;This accordion section cannot close once opened&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid having a single radio-based tab in a <code>.tabs</code><code>.stacked</code> container, as this might result in unexpected behavior.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Avoid having a single radio-based tab in a <code>.tabs</code><code>.stacked</code> container, as this might result in unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -305,10 +305,10 @@
       </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12">
-          <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
+          <p style="text-align:justify">If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>
     </main></div></div></div>
-    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+    <footer style="text-align:justify"><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>
 </html>

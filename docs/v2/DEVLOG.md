@@ -238,7 +238,7 @@
 ## 20161102
 
 - Updated `checkbox` and `radio` styles for accesibility. Now they are visible to screen readers.
-- Added style for `:hover`, :focus`, `:active` for the `label` elements of the `checkbox` module.
+- Added style for `:hover`, `:focus`, `:active` for the `label` elements of the `checkbox` module.
 - Added `tabindex` marks for labels in the `checkbox` module demo.
 - Added styling for `readonly` and `disabled` for `checkbox` module.
 - Updated `checkbox` module and added variables.
@@ -1168,3 +1168,14 @@
 - Updated flavor descriptions in `flavors.html`.
 - Everything is ready for release, let's write the `CHANGELOG` for **v2.2.0**. (A couple of templates and things might be done later today, as well as linking to them from certain components such as the `.drawer` which could benefit from that.)
 - Updated `CHANGELOG`, readying up for release. See you and **hugging cat** on the other side!
+
+# v2.2.1 Development Log
+
+## 20170522
+
+- After taking a break, started updating the documentation. Added the sample website codpen project to the `templates.html` page to help newcomers get started.
+- Added a small prompt for starring from the homepage.
+- Added an exclamation mark next to Edge in the `index.html` page to make sure people read the note.
+- Justify-aligned all paragraphs of text in documentation pages.
+- Fixed a couple of mistakes in the documentation pages.
+- Updated `navigation`'s `.drawer` documentation with better notes and examples.

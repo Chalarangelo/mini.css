@@ -87,8 +87,8 @@
       <div class="row" style="padding-top: 40px;" id="table-title">
         <div class="col-sm-12">
           <h1>Table</h1>
-          <p>The <strong>table</strong> module provides styling and responsiveness for tables. Simple rules and accessible design paradigms have been used to make creating tables quick and easy. Large tables will collapse to cards when on smaller devices or, if you don't want that, they can be locked into their default, desktop view.</p>
-          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
+          <p style="text-align: justify;">The <strong>table</strong> module provides styling and responsiveness for tables. Simple rules and accessible design paradigms have been used to make creating tables quick and easy. Large tables will collapse to cards when on smaller devices or, if you don't want that, they can be locked into their default, desktop view.</p>
+          <p style="text-align: justify;"><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
         </div>
       </div>
       <div class="row">
@@ -96,11 +96,11 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Presenting information the right way is very important, especially so when dealing with large amounts of data. The <strong>table</strong> module reinvents tabular data presentation, using modern styling and responsiveness to help make tables fun again for all users no matter the device size. Tables can be either vertical or horizontal, both collapsing to a card view on smaller devices, so that they are easier to view properly. Horizontal tables are also flexible, allowing you to take as little space as possible, while still providing your users with a pleasant way to view their data. Finally, like in most CSS frameworks nowadays, you can stripe your tables to make reading them slightly less tiresome for your users' eyes. Note that all of the table variants are fully accessible.</p><br>
+              <p style="text-align: justify;">Presenting information the right way is very important, especially so when dealing with large amounts of data. The <strong>table</strong> module reinvents tabular data presentation, using modern styling and responsiveness to help make tables fun again for all users no matter the device size. Tables can be either vertical or horizontal, both collapsing to a card view on smaller devices, so that they are easier to view properly. Horizontal tables are also flexible, allowing you to take as little space as possible, while still providing your users with a pleasant way to view their data. Finally, like in most CSS frameworks nowadays, you can stripe your tables to make reading them slightly less tiresome for your users' eyes. Note that all of the table variants are fully accessible.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
-              <p>To use the <strong>table</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
+              <p style="text-align: justify;">To use the <strong>table</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
             </div>
           </div>
@@ -142,8 +142,8 @@
             </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
-                <p>Table layout utilizes the <code>&lt;table&gt;</code> HTML element with the following structure (usual tabular structure):</p>
-                <ol>
+                <p style="text-align: justify;">Table layout utilizes the <code>&lt;table&gt;</code> HTML element with the following structure (usual tabular structure):</p>
+                <ol style="text-align: justify;">
                   <li>On the outermost level, there is the <code>&lt;table&gt;</code> element.</li>
                   <li>If you want to include a <code>&lt;caption&gt;</code> element, it must by the first element inside the <code>&lt;table&gt;</code> element.</li>
                   <li>Following the above, you need to add a <code>&lt;thead&gt;</code> element. Inside it, you should usually add one <code>&lt;tr&gt;</code> element, which contains one or more <code>&lt;th&gt;</code> elements.</li>
@@ -194,7 +194,7 @@
   &lt;td&gt;Wilberts&lt;/td&gt;
   &lt;td&gt;MrOne&lt;/td&gt;
 &lt;/tr&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Remember to always add a <code>data-label</code> attribute to your <code>&lt;td&gt;</code> elements, as the table's card view is very dependent on them to display properly. <code>&lt;th&gt;</code> elements, however, do not require or utilize this attribute.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;Remember to always add a <code>data-label</code> attribute to your <code>&lt;td&gt;</code> elements, as the table's card view is very dependent on them to display properly. <code>&lt;th&gt;</code> elements, however, do not require or utilize this attribute.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;table&gt;
@@ -209,7 +209,7 @@
     <span class="fore-secondary">&lt;!-- ... --&gt;</span>
   &lt;/tfoot&gt;
 &lt;/table&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;The <code>&lt;tfoot&gt;</code> element must always be immediately after the <code>&lt;thead&gt;</code> element, if included.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;The <code>&lt;tfoot&gt;</code> element must always be immediately after the <code>&lt;thead&gt;</code> element, if included.</p>
                 </div>
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;tbody&gt;
@@ -218,7 +218,7 @@
     &lt;td data-label=&quot;Name&quot;&gt;Chad&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid inserting <code>&lt;th&gt;</code> elements inside your <code>&lt;tbody&gt;</code> element. If you want to make your tables horizontal or preset their styling in a manner different from the one shown in the previous examples, check the below sections.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;Avoid inserting <code>&lt;th&gt;</code> elements inside your <code>&lt;tbody&gt;</code> element. If you want to make your tables horizontal or preset their styling in a manner different from the one shown in the previous examples, check the below sections.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;thead&gt;
@@ -226,7 +226,7 @@
     &lt;td data-label=&quot;Name&quot;&gt;Chad&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/thead&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using <code>&lt;td&gt;</code> elements inside your <code>&lt;thead&gt;</code>. You should use a <code>&lt;tbody&gt;</code> element instead.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;Avoid using <code>&lt;td&gt;</code> elements inside your <code>&lt;thead&gt;</code>. You should use a <code>&lt;tbody&gt;</code> element instead.</p>
                 </div>
               </div>
             </div>
@@ -257,7 +257,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
-                <p>Horizontal tables can be created, by simply adding the <code>.horizontal</code> class to the root element of your table (i.e. the <code>&lt;table&gt;</code> element). Horizontal tables are flexible, so they can accommodate any amount of data rows and, if there is a lot of data, they will make their overflow scrollable. Remember to add the <code>data-label</code> attribute, as shown in the previous section, to allow your tables to be responsive without any errors. Keep in mind, however, that <code>.horizontal</code> tables do not support the <code>&lt;tfoot&gt;</code> element.</p>
+                <p style="text-align: justify;">Horizontal tables can be created, by simply adding the <code>.horizontal</code> class to the root element of your table (i.e. the <code>&lt;table&gt;</code> element). Horizontal tables are flexible, so they can accommodate any amount of data rows and, if there is a lot of data, they will make their overflow scrollable. Remember to add the <code>data-label</code> attribute, as shown in the previous section, to allow your tables to be responsive without any errors. Keep in mind, however, that <code>.horizontal</code> tables do not support the <code>&lt;tfoot&gt;</code> element.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;table class=&quot;horizontal&quot;&gt;
   &lt;caption&gt;People&lt;/caption&gt;
@@ -290,7 +290,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align: justify;">
                 <li>Due to <code>.horizontal</code> tables utilizing the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Layout</a>, some older browsers may not properly display these tables. This is especially true with legacy versions of Internet Explorer.</li>
                 <li>Mixing the Flexible Layout Module with <code>&lt;table&gt;</code> elements seems to upset some browsers. We noticed this on an older mobile version of Firefox, where our implementation should work in theory, given the fact that both features are properly supported. If you notice any problems with <code>.horizontal</code> tables, feel free to <a href="https://github.com/Chalarangelo/mini.css/issues/new">submit a new issue on Github</a>.</li>
               </ul>
@@ -303,7 +303,7 @@
     <span class="fore-secondary">&lt;!-- ... --&gt;</span>
   &lt;/tfoot&gt;
 &lt;/table&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;We already explicitly stated that, due to the way <code>.horizontal</code> tables are styled, the <code>&lt;tfoot&gt;</code> element is not supported. Please refer to the next section if you need to use this element and you want to have a horizontal table layout.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;We already explicitly stated that, due to the way <code>.horizontal</code> tables are styled, the <code>&lt;tfoot&gt;</code> element is not supported. Please refer to the next section if you need to use this element and you want to have a horizontal table layout.</p>
                 </div>
               </div>
             </div>
@@ -329,7 +329,7 @@
               </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
-                <p>Tables are responsive by default, however you can disable this functionality for one or more tables (normal or <code>.horizontal</code>), using the <code>.preset</code> class. This class can also be used for a multitude of things, like dealing with tables not allowing you to have <code>&lt;th&gt;</code> elements inside the <code>&lt;tbody&gt;</code> element, building matrices (i.e. tables with a header column and a header row) etc. Finally, you can make your tables use a different color for every other row, using the <code>.striped</code> class.</p>
+                <p style="text-align: justify;">Tables are responsive by default, however you can disable this functionality for one or more tables (normal or <code>.horizontal</code>), using the <code>.preset</code> class. This class can also be used for a multitude of things, like dealing with tables not allowing you to have <code>&lt;th&gt;</code> elements inside the <code>&lt;tbody&gt;</code> element, building matrices (i.e. tables with a header column and a header row) etc. Finally, you can make your tables use a different color for every other row, using the <code>.striped</code> class.</p>
                 <h3>Sample code</h3>
                 <p>The sample code is a bit lengthy, so we hid it by default to make it easier for mobile device users to read this page. Click or tap on <strong>Show sample code</strong> below to see the code sample for this example. By the way, we present a sample for a matrix table in he first example, but you can use the same principles and classes to create any table layout you wish.</p><br>
                 <div class="container"><div class="row"><div class="tabs stacked">
@@ -379,7 +379,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align: justify;">
                 <li>Making a table <code>.striped</code> also affects the color of the cards in their responsive view on mobile devices.</li>
                 <li>If you create a <code>.preset</code> table, which you do not want to alter via Javascript to be responsive at any time in the future, you can omit the <code>data-label</code> attributes.</li>
               </ul><hr>
@@ -399,7 +399,7 @@
     <span class="fore-tertiary">&lt;!-- ... --&gt;</span>
   &lt;/tbody&gt;
 &lt;/table&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;The first row in a preset matrix table or any table without a <code>&lt;thead&gt;</code> element will have an extra border at the top. You can use a generic class to set <code>border-to: 0;</code> for the elements inside that row to fix this.</p>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;The first row in a preset matrix table or any table without a <code>&lt;thead&gt;</code> element will have an extra border at the top. You can use a generic class to set <code>border-to: 0;</code> for the elements inside that row to fix this.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;table class=&quot;horizontal preset&quot;&gt;
@@ -417,7 +417,7 @@
 &lt;table class=&quot;preset horizontal striped&quot;&gt;
   <span class="fore-tertiary">&lt;!-- ... -&gt;</span>
 &lt;/table&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can combine any two of the following classes without any problems: <code>.horizontal</code>, <code>.preset</code>, <code>.striped</code>. Just make sure you respect each one's specific rules.</p>
+                  <p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;You can combine any two of the following classes without any problems: <code>.horizontal</code>, <code>.preset</code>, <code>.striped</code>. Just make sure you respect each one's specific rules.</p>
                 </div>
               </div>
             </div>
@@ -426,10 +426,10 @@
       </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12">
-          <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
+          <p style="text-align: justify;">If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>
     </main></div></div></div>
-    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+    <footer style="text-align: justify;"><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>
 </html>

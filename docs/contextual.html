@@ -84,8 +84,8 @@
       <div class="row" style="padding-top: 40px;" id="contextual-title">
         <div class="col-sm-12">
           <h1>Contextual</h1>
-          <p>The <strong>contextual</strong> module provides you with simple tags, marks and highlights for your pages, allowing you to easily emphasize parts of your text. Contextual toasts and tooltips are also provided, aiming to help deliver important information to users. HTML5 elements and simple rules are used in order to make important messages and pieces of content stand out easily.</p>
-          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
+          <p style="text-align:justify">The <strong>contextual</strong> module provides you with simple tags, marks and highlights for your pages, allowing you to easily emphasize parts of your text. Contextual toasts and tooltips are also provided, aiming to help deliver important information to users. HTML5 elements and simple rules are used in order to make important messages and pieces of content stand out easily.</p>
+          <p style="text-align:justify"><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
         </div>
       </div>
       <div class="row">
@@ -93,11 +93,11 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Almost every website present on the web has some sort of content that needs highlighting in one way or another. The <strong>contextual</strong> module provides you with simple semantic text highlighting that utilises the <code>&lt;mark&gt;</code> HTML element. Apart from that, this module contains styles and definitions for a simple <code>.toast</code> container, that you can use to display toast messages on your websites and web apps. Toasts mimic the native application notifications of certain devices, making them mobile friendly. Finally, a simple accessible <code>.tooltip</code> implementation is included. All components in this module are fully accessible, so that's another thing not to worry about.</p><br>
+              <p style="text-align:justify">Almost every website present on the web has some sort of content that needs highlighting in one way or another. The <strong>contextual</strong> module provides you with simple semantic text highlighting that utilises the <code>&lt;mark&gt;</code> HTML element. Apart from that, this module contains styles and definitions for a simple <code>.toast</code> container, that you can use to display toast messages on your websites and web apps. Toasts mimic the native application notifications of certain devices, making them mobile friendly. Finally, a simple accessible <code>.tooltip</code> implementation is included. All components in this module are fully accessible, so that's another thing not to worry about.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
-              <p>To use the <strong>contextual</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
+              <p style="text-align:justify">To use the <strong>contextual</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
             </div>
           </div>
@@ -117,7 +117,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>To add simple highlights in your text, you can use the <code>&lt;mark&gt;</code> HTML element. These highlights come pre-styled to use the default primary color, but if you would rather use another color for your highlight you can easily add the <code>.secondary</code> or <code>.tertiary</code> class to a <code>&lt;mark&gt;</code> element. For longer pieces of text that need highlighting, consider adding the <code>.inline-block</code> class to make them stand out even more. Finally, you can create contextual tags, using the <code>.tag</code> class.</p>
+                <p style="text-align:justify">To add simple highlights in your text, you can use the <code>&lt;mark&gt;</code> HTML element. These highlights come pre-styled to use the default primary color, but if you would rather use another color for your highlight you can easily add the <code>.secondary</code> or <code>.tertiary</code> class to a <code>&lt;mark&gt;</code> element. For longer pieces of text that need highlighting, consider adding the <code>.inline-block</code> class to make them stand out even more. Finally, you can create contextual tags, using the <code>.tag</code> class.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;mark&gt;primary&lt;/mark&gt;
 &lt;mark class=&quot;secondary&quot;&gt;secondary&lt;/mark&gt;
@@ -128,7 +128,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li>Try to use elements with the <code>.inline-block</code> class only when absolutely necessary, as they break the normal text flow of the document. Avoid using this class on shorter pieces of text that span a few words and contain no line breaks.</li>
                 <li><code>&lt;mark&gt;</code> elements, along with their supporting classes (except for <code>.inline-block</code>) can be easily used in paragraphs, headings and other elements, as they scale according to their parent element.</li>
               </ul><hr>
@@ -137,25 +137,25 @@
                   <pre>&lt;mark class=&quot;tag tertiary&quot;&gt;green tag&lt;/mark&gt;
 <span class="fore-tertiary">&lt;!-- or --&gt;</span>
 &lt;mark class=&quot;inline-block secondary&quot;&gt;red chunk&lt;/mark&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can combine any of the contextual color classes (<code>.secondary</code> or <code>.tertiary</code>) with the <code>.tag</code> or <code>.inline-block</code> class.</p>
+                  <p class="do" style="text-align:justify"><mark class="tertiary">Do:</mark>&nbsp;You can combine any of the contextual color classes (<code>.secondary</code> or <code>.tertiary</code>) with the <code>.tag</code> or <code>.inline-block</code> class.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;mark class=&quot;secondary tertiary&quot;&gt;no, no&lt;/mark&gt;
 <span class="fore-secondary">&lt;!-- or --&gt;</span>
 &lt;mark class=&quot;inline-block tag&quot;&gt;oh, no&lt;/mark&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining two contextual color classes or a <code>.tag</code> and an <code>.inline-block</code>, as these combinations might result in unexpected behavior.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining two contextual color classes or a <code>.tag</code> and an <code>.inline-block</code>, as these combinations might result in unexpected behavior.</p>
                 </div>
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;mark class=&quot;inline-block&quot;&gt;some
   &lt;mark class=&quot;secondary&quot;&gt;text&lt;/mark&gt;
 &lt;/mark&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can only nest a <code>&lt;mark&gt;</code> inside another if the outer one is of the <code>.inline-block</code> class. You can color the inner <code>&lt;mark&gt;</code> using any of the contextual color classes or even make it a <code>.tag</code>. Be careful, however, to not make the inner <code>&lt;mark&gt;</code> an <code>.inline-block</code> as well.</p>
+                  <p class="do" style="text-align:justify"><mark class="tertiary">Do:</mark>&nbsp;You can only nest a <code>&lt;mark&gt;</code> inside another if the outer one is of the <code>.inline-block</code> class. You can color the inner <code>&lt;mark&gt;</code> using any of the contextual color classes or even make it a <code>.tag</code>. Be careful, however, to not make the inner <code>&lt;mark&gt;</code> an <code>.inline-block</code> as well.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;mark&gt;some
   &lt;mark class=&quot;secondary&quot;&gt;text&lt;/mark&gt;
 &lt;/mark&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using nested <code>&lt;mark&gt;</code> elements, unless the outer <code>&lt;mark&gt;</code> element is an <code>.inline-block</code>.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Avoid using nested <code>&lt;mark&gt;</code> elements, unless the outer <code>&lt;mark&gt;</code> element is an <code>.inline-block</code>.</p>
                 </div>
               </div>
             </div>
@@ -175,7 +175,7 @@
 								</div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
-                <p>Toasts aim to help bridge the gap between web and native applications on mobile devices, by displaying native-looking toast messages. To create a toast, wrap some text inside a <code>&lt;span&gt;</code> element with the <code>.toast</code> class. Toasts appear at the bottom of the screen on top of everything else. If you want to create smaller or larger toast messasges, you can add the <code>.small</code> or <code>.large</code> classes respectively.</p>
+                <p style="text-align:justify">Toasts aim to help bridge the gap between web and native applications on mobile devices, by displaying native-looking toast messages. To create a toast, wrap some text inside a <code>&lt;span&gt;</code> element with the <code>.toast</code> class. Toasts appear at the bottom of the screen on top of everything else. If you want to create smaller or larger toast messasges, you can add the <code>.small</code> or <code>.large</code> classes respectively.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;span class=&quot;toast&quot;&gt;This is a normal toast message!&lt;/span&gt;
 &lt;span class=&quot;toast small&quot;&gt;This is a large toast message!&lt;/span&gt;
@@ -191,7 +191,7 @@
               <div class="row">
                 <div class="col-sm-12">
                   <pre>&lt;span class=&quot;toast small large&quot;&gt;Not a good toast&lt;/span&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining two toast size variants, as this might cause unexpected behavior.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining two toast size variants, as this might cause unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -210,7 +210,7 @@
 			  </div>
 			  </div>
 			  <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-				<p>Tooltips can be used to convey context-sensitive information when the user hovers over some text. To create a tooltip, simply wrap the text you want users to hover over in an element with the <code>.tooltip</code> class (our choice is usually a <code>&lt;span&gt;</code> element, but your needs may differ) and add an <code><span class="fore-secondary">aria-label</span></code> in that element, setting its value to the content of your tooltip. Tooltips display at the top of the hovered text by default, so if you want to show them below the text, add the <code>.bottom</code> class to them.</p>
+				<p style="text-align:justify">Tooltips can be used to convey context-sensitive information when the user hovers over some text. To create a tooltip, simply wrap the text you want users to hover over in an element with the <code>.tooltip</code> class (our choice is usually a <code>&lt;span&gt;</code> element, but your needs may differ) and add an <code><span class="fore-secondary">aria-label</span></code> in that element, setting its value to the content of your tooltip. Tooltips display at the top of the hovered text by default, so if you want to show them below the text, add the <code>.bottom</code> class to them.</p>
 				<h3>Sample code</h3>
 				<pre>&lt;span class=&quot;tooltip&quot; aria-label=&quot;This is a tooltip&quot;&gt;Hover over this text to see a tooltip!&lt;/span&gt;
 &lt;span class=&quot;tooltip bottom&quot; aria-label=&quot;This is a tooltip&quot;&gt;Hover over this text to see a reverse tooltip!&lt;/span&gt;</pre>
@@ -218,10 +218,10 @@
 			</div>
 			<div class="section">
 			<h3>Notes</h3>
-			  <ul>
+			  <ul style="text-align:justify">
 				<li>Tooltips are built to be accessible and should display properly on screenreaders.</li>
 				<li>If you are not satisfied with the default tooltip colors, please check out the <a href="customization.html">customization page</a> for instuctions on how to create your own tooltip variants.</li>
-				<li>Rembmer to always add the <code><span class="fore-secondary">aria-label</span></code> attribute, otherwise your tooltip will not have any text to show.</li>
+				<li>Remember to always add the <code><span class="fore-secondary">aria-label</span></code> attribute, otherwise your tooltip will not have any text to show.</li>
 			  </ul>
 			</div>
 		  </div>
@@ -229,10 +229,10 @@
 	  </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12">
-          <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
+          <p style="text-align:justify">If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>
     </main></div></div></div>
-    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+    <footer style="text-align:justify"><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>
 </html>

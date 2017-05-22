@@ -82,8 +82,8 @@
       <div class="row" style="padding-top: 40px;" id="utility-title">
         <div class="col-sm-12">
           <h1>Utility</h1>
-          <p>The <strong>utility</strong> module contains all the utilities and helper classes that you might want when designing a website or application. They solve common design problems efficiently and provide you with generic rules you can easily apply everywhere.</p>
-          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
+          <p style="text-align:justify">The <strong>utility</strong> module contains all the utilities and helper classes that you might want when designing a website or application. They solve common design problems efficiently and provide you with generic rules you can easily apply everywhere.</p>
+          <p style="text-align:justify"><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
         </div>
       </div>
       <div class="row">
@@ -91,11 +91,11 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Every website or app has different needs and no CSS framework can predict them all. The <strong>utility</strong> module addresses this issue by providing you with a handful of utility and helper classes to make common, repetitive declarations easier. These classes include, but are not limited to, generic border styling and shadows, some responsive sizing and spacing utilities and a few other things, like a close icon, breadcrumbs styling and visiblity helpers for screen readers.</p><br>
+              <p style="text-align:justify">Every website or app has different needs and no CSS framework can predict them all. The <strong>utility</strong> module addresses this issue by providing you with a handful of utility and helper classes to make common, repetitive declarations easier. These classes include, but are not limited to, generic border styling and shadows, some responsive sizing and spacing utilities and a few other things, like a close icon, breadcrumbs styling and visiblity helpers for screen readers.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
-              <p>To use the <strong>utility</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
+              <p style="text-align:justify">To use the <strong>utility</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
             </div>
           </div>
@@ -107,7 +107,7 @@
             <div class="section"><h2>Visibility helpers</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-first">
-                <p>You can hide content for all your users, using the default <code><span class="fore-secondary">hidden</span></code> attribute. However, we provide you with the <code>.hidden</code> class for the same purpose, as well as the <code>.visually-hidden</code> class which will make your content hidden, except for screen readers.</p>
+                <p style="text-align:justify">You can hide content for all your users, using the default <code><span class="fore-secondary">hidden</span></code> attribute. However, we provide you with the <code>.hidden</code> class for the same purpose, as well as the <code>.visually-hidden</code> class which will make your content hidden, except for screen readers.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;span class=&quot;hidden&quot;&gt;Hidden text&lt;/span&gt;
 &lt;span class=&quot;visually-hidden&quot;&gt;Screen-reader-only text&lt;/span&gt;</pre>
@@ -115,13 +115,13 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li>Both classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
               </ul><hr>
               <div class="row">
                 <div class="col-sm-12">
                   <pre>&lt;span class=&quot;hidden visually-hidden&quot;&gt;Not a good idea&lt;/span&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using both classes at the same time. Instead, use <code>.hidden</code> to hide content for all users, <code>.visually-hidden</code> to hide it for non-screen-reader users or <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> to hide it for screen-reader-only users.</p>
+                  <p class="dont"  style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Avoid using both classes at the same time. Instead, use <code>.hidden</code> to hide content for all users, <code>.visually-hidden</code> to hide it for non-screen-reader users or <code><span class="fore-secondary">aria-hidden</span>=<span class="fore-primary">&quot;true&quot;</span></code> to hide it for screen-reader-only users.</p>
                 </div>
               </div>
             </div>
@@ -143,7 +143,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>Use the <code>.bordered</code> class to apply a generic black border with 25% opacity to any element. Apart from that you can use the <code>.rounded</code> and <code>.circular</code> classes to create generic border radiuses. Finally, you can use the <code>.shadowed</code> class to add a generic <code><span class="fore-secondary">box-shadow</span></code> to any element.</p>
+                <p style="text-align:justify">Use the <code>.bordered</code> class to apply a generic black border with 25% opacity to any element. Apart from that you can use the <code>.rounded</code> and <code>.circular</code> classes to create generic border radiuses. Finally, you can use the <code>.shadowed</code> class to add a generic <code><span class="fore-secondary">box-shadow</span></code> to any element.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;span class=&quot;bordered&quot;&gt;Bordered&lt;/span&gt;
 &lt;span class=&quot;rounded&quot;&gt;Rounded&lt;/span&gt;
@@ -153,7 +153,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li>All of these classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
                 <li>The <code>.bordered</code> class was originally created with elements such as buttons in mind, to allow users highlighting certain elements in their designs, without having to change any default styles.</li>
                 <li>All of the above classes can be used with most modern HTML elements.</li>
@@ -161,13 +161,13 @@
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;span class=&quot;bordered rounded shadow-small&quot;&gt;Stylized element&lt;/span&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can combine a generic border with any border radius or shadow or even both.</p>
+                  <p class="do" style="text-align:justify"><mark class="tertiary">Do:</mark>&nbsp;You can combine a generic border with any border radius or shadow or even both.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;span class=&quot;rounded circular&quot;&gt;Bad radius&lt;/span&gt;
 <span class="fore-secondary">&lt;!-- or --&gt;</span>
 &lt;span class=&quot;shadow-small shadow-large&quot;&gt;Bad shadow&lt;/span&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining two classes of the same type (i.e. two radii or two shadow styles), as they might overwrite each other and cause unexpected behavior.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining two classes of the same type (i.e. two radii or two shadow styles), as they might overwrite each other and cause unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -180,7 +180,7 @@
             <div class="section"><h2>Responsive sizing &amp; spacing classes</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-first">
-                <p>Helper classes for the <code>padding</code> and <code>margin</code> attributes are provided in the form of <code>.responsive-margin</code> and <code>.responsive-padding</code> classes. Both of these classes are responsive, allowing you to collapse the spacing and size of elements on different displays to make better use of the device's viewport.</p>
+                <p style="text-align:justify">Helper classes for the <code>padding</code> and <code>margin</code> attributes are provided in the form of <code>.responsive-margin</code> and <code>.responsive-padding</code> classes. Both of these classes are responsive, allowing you to collapse the spacing and size of elements on different displays to make better use of the device's viewport.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;responsive-padding&quot;&gt;Responsive padding&lt;/div&gt;
 &lt;div class=&quot;responsive-margin&quot;&gt;Responsive margin&lt;/div&gt;</pre>
@@ -188,14 +188,14 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li>If the default values of these classes are not suited to your needs, check out the <a href="customization.html">customization</a> page.</li>
                 <li>Both classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
               </ul><hr>
               <div class="row">
                 <div class="col-sm-12">
                   <pre>&lt;div class=&quot;responsive-padding responsive-margin&quot;&gt;Responsive padding and margin&lt;/div&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use both of these classes to make certain element adapt to changes. This could be especially useful for certain grid layouts.</p>
+                  <p class="do" style="text-align:justify"><mark class="tertiary">Do:</mark>&nbsp;You can use both of these classes to make certain element adapt to changes. This could be especially useful for certain grid layouts.</p>
                 </div>
               </div>
             </div>
@@ -208,7 +208,7 @@
             <div class="section"><h2>Responsive visibility helpers</h2></div>
             <div class="section row">
               <div class="col-sm-12 col-sm-first">
-                <p>You can hide content (either fully or only visually) for certain screens, using the responsive visibility helpers. To hide elements completely use the <code>.hidden-<span class="fore-primary">SCR_SZ</span></code> syntax, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names (<code><span class="fore-tertiary">sm</span></code> for smaller screens, <code><span class="fore-tertiary">md</span></code> for medium-sized screens or <code><span class="fore-tertiary">lg</span></code> for larger screens). If you want to hide certains elements for all users, except screen readers, replace <code>.hidden</code> with <code>.visually-hidden</code>, followed by the screen size name.</p>
+                <p style="text-align:justify">You can hide content (either fully or only visually) for certain screens, using the responsive visibility helpers. To hide elements completely use the <code>.hidden-<span class="fore-primary">SCR_SZ</span></code> syntax, replacing <code><span class="fore-primary">SCR_SZ</span></code> with one of the available screen size names (<code><span class="fore-tertiary">sm</span></code> for smaller screens, <code><span class="fore-tertiary">md</span></code> for medium-sized screens or <code><span class="fore-tertiary">lg</span></code> for larger screens). If you want to hide certains elements for all users, except screen readers, replace <code>.hidden</code> with <code>.visually-hidden</code>, followed by the screen size name.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;span class=&quot;hidden-sm&quot;&gt;Hidden in smaller screens&lt;/span&gt;
 &lt;span class=&quot;hidden-md&quot;&gt;Hidden in medium-sized screens&lt;/span&gt;
@@ -221,7 +221,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li>Responsive visibility helper classes utilize <code><span class="fore-secondary">!important</span></code> declarations, so be careful when and how to use them.</li>
 								<li>The specific breakpoints for small, medium and large screen sizes are as follows:
                   <ul>
@@ -239,11 +239,11 @@
 &lt;span class=&quot;visually-hidden-md visually-hidden-lg&quot;&gt;Visually hidden in medium-sized and larger screens, visible in smaller screens&lt;/span&gt;
 <span class="fore-tertiary">&lt;!-- or --&gt;</span>
 &lt;span class=&quot;hidden-sm visually-hidden-lg&quot;&gt;Hidden in smaller screens, visually hidden in larger screens, visible in medium-sized screens&lt;/span&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can combine responsive visibility helpers for different sizes, based on your needs.</p>
+                  <p class="do" style="text-align:justify"><mark class="tertiary">Do:</mark>&nbsp;You can combine responsive visibility helpers for different sizes, based on your needs.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;span class=&quot;hidden-sm visually-hidden-sm&quot;&gt;Not a good idea&lt;/span&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining responsive visibility helpers for the same screen size. Combining both of them might cause unexpected behavior.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Avoid combining responsive visibility helpers for the same screen size. Combining both of them might cause unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -261,7 +261,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
-                <p>Breadcrumbs are usually used to show the navigational hierarchy of pages or folders. To use them, simply create a <code>&lt;ul&gt;</code> element that implements the <code>.breadcrumbs</code> class. Inside this unordered list, add as many <code>&lt;li&gt;</code> elements as needed to show your hierarchy. You can add links to the list elements, as necessary.</p>
+                <p style="text-align:justify">Breadcrumbs are usually used to show the navigational hierarchy of pages or folders. To use them, simply create a <code>&lt;ul&gt;</code> element that implements the <code>.breadcrumbs</code> class. Inside this unordered list, add as many <code>&lt;li&gt;</code> elements as needed to show your hierarchy. You can add links to the list elements, as necessary.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;ul class=&quot;breadcrumbs&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Root&lt;/a&gt;&lt;/li&gt;
@@ -272,7 +272,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li>The separators between breadcrumbs are added using some tricky CSS rules. Due to that, there might be a few browser versions or devices where you can see part of the seams between the element separators.</li>
                 <li>Breadcrumbs show a hierarchy, an ordered list. However, we do not use the <code>&lt;ol&gt;</code> element, as it might conflict with some custom styles we've seen people use.</li>
 				<li>If you want to add some accesibility to your breadcrumbs, you can add the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://www.w3.org/TR/wai-aria/roles#navigation">navigation</a>&quot;</span></code> attribute, although it is not required.</li>
@@ -284,7 +284,7 @@
   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Not&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Work&lt;/li&gt;
 &lt;/ol&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;The structure of the breadcrumb component prohibits the use of <code>&lt;ol&gt;</code> in place of the <code>&lt;ul&gt;</code> element.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;The structure of the breadcrumb component prohibits the use of <code>&lt;ol&gt;</code> in place of the <code>&lt;ul&gt;</code> element.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;ul class=&quot;breadcrumbs&quot;&gt;
@@ -295,7 +295,7 @@
   &lt;/li&gt;
   &lt;li&gt;File&lt;/li&gt;
 &lt;/ul&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid nesting lists, breadcrumbs or a combination of the two inside the <code>.breadcrumbs</code> list, as this might cause unexpected behavior.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Avoid nesting lists, breadcrumbs or a combination of the two inside the <code>.breadcrumbs</code> list, as this might cause unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -315,24 +315,24 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>To create a close icon, simply add an element implementing the <code>.close</code> class.</p>
+                <p style="text-align:justify">To create a close icon, simply add an element implementing the <code>.close</code> class.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;span class=&quot;close&quot;&gt;&lt;/span&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li>The close icon behaves similar to a button when hovering over it or otherwise focusing or selecting it.</li>
               </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;div class=&quot;close&quot;&gt;&lt;/div&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can use a handful of other HTML elements instead of the <code>&lt;span&gt;</code> element showcased in the example above, most commonly <code>&lt;div&gt;</code> elements.</p>
+                  <p class="do" style="text-align:justify"><mark class="tertiary">Do:</mark>&nbsp;You can use a handful of other HTML elements instead of the <code>&lt;span&gt;</code> element showcased in the example above, most commonly <code>&lt;div&gt;</code> elements.</p>
                 </div>
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;button class=&quot;close&quot;&gt;&lt;/button&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;If you want your close icon to behave like a button (i.e. register as a button on screen readers and have the required logic attached to it), you can apply the <code>.close</code> class to a <code>&lt;button&gt;</code> element instead. You can even apply any of the button color variant classes.</p>
+                  <p class="do" style="text-align:justify"><mark class="tertiary">Do:</mark>&nbsp;If you want your close icon to behave like a button (i.e. register as a button on screen readers and have the required logic attached to it), you can apply the <code>.close</code> class to a <code>&lt;button&gt;</code> element instead. You can even apply any of the button color variant classes.</p>
                 </div>
               </div>
             </div>
@@ -341,10 +341,10 @@
       </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12">
-          <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
+          <p style="text-align:justify">If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>
     </main></div></div></div>
-    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+    <footer style="text-align:justify"><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>
 </html>

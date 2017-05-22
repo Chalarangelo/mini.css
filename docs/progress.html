@@ -81,8 +81,8 @@
       <div class="row" style="padding-top: 40px;" id="progress-title">
         <div class="col-sm-12">
           <h1>Progress</h1>
-          <p>The <strong>progress</strong> module gives you full control over the presentation of progress and loading on your pages. Apart from progress bars and color variants for them, spinner elements are provided to help communicate that something is loading.</p>
-          <p><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
+          <p style="text-align:justify">The <strong>progress</strong> module gives you full control over the presentation of progress and loading on your pages. Apart from progress bars and color variants for them, spinner elements are provided to help communicate that something is loading.</p>
+          <p style="text-align:justify"><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
         </div>
       </div>
       <div class="row">
@@ -90,11 +90,11 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p>Progress indicators are very common UI elements for almost any website and web app, as they help communicate vital information such as the fact that a process is being executed in the background, informing the user that they should wait for it to complete before proceeding. The <strong>progress</strong> module provides you with two essential tools to communicate this information: the <code>&lt;progress&gt;</code> HTML element, which is pre-styled and compatible with modern browsers to help you communicate information about the percentage of a task and the <code>.spinner-donut</code> class that allows you to create an animated spinner that communicates that something is loading currently and will continue doing so for an indefinite amount of time. Both elements come with their own color and size variants and are fully accessible.</p><br>
+              <p style="text-align:justify">Progress indicators are very common UI elements for almost any website and web app, as they help communicate vital information such as the fact that a process is being executed in the background, informing the user that they should wait for it to complete before proceeding. The <strong>progress</strong> module provides you with two essential tools to communicate this information: the <code>&lt;progress&gt;</code> HTML element, which is pre-styled and compatible with modern browsers to help you communicate information about the percentage of a task and the <code>.spinner-donut</code> class that allows you to create an animated spinner that communicates that something is loading currently and will continue doing so for an indefinite amount of time. Both elements come with their own color and size variants and are fully accessible.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
-              <p>To use the <strong>progress</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
+              <p style="text-align:justify">To use the <strong>progress</strong> module, simply include the link to the flavor you are using and start writing your HTML page as usual. One suggestion we will make is to add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre><br>
             </div>
           </div>
@@ -111,7 +111,7 @@
                 <p>Process is 100% complete!</p> <progress value="1000" max="1000"></progress>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>To create a progress bar, use the <code>&lt;progress&gt;</code> HTML element, specify the preset maximum of <code><span class="fore-secondary">max</span>=<span class="fore-primary">&quot;1000&quot;</span></code> and set a <code>value</code> between <code>0</code> and <code>1000</code>. Update your <code>&lt;progress&gt;</code> element using some Javascript code, by changing its <code>value</code> to any integer in the same range.</p>
+                <p style="text-align:justify">To create a progress bar, use the <code>&lt;progress&gt;</code> HTML element, specify the preset maximum of <code><span class="fore-secondary">max</span>=<span class="fore-primary">&quot;1000&quot;</span></code> and set a <code>value</code> between <code>0</code> and <code>1000</code>. Update your <code>&lt;progress&gt;</code> element using some Javascript code, by changing its <code>value</code> to any integer in the same range.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;progress value=&quot;0&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
 &lt;progress value=&quot;450&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
@@ -120,18 +120,18 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li>We made sure that the <code>&lt;progress&gt;</code> element displays properly on all modern browsers, using browser-specific rules. However, there might be some irregularities with older browsers, especially legacy versions of Internet Explorer.</li>
                 <li>If the preset <code>max="1000"</code> does not suit your needs, you should check the <a href="customization.html">customization page</a> for instructions on how to set your own maximum value for the <code>&lt;progress&gt;</code> element.</li>
               </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;progress value=&quot;80&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid using different values for the <code>&lt;progress&gt;</code> element's <code>max</code>, except for the preset one (<code>1000</code>).</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Avoid using different values for the <code>&lt;progress&gt;</code> element's <code>max</code>, except for the preset one (<code>1000</code>).</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;progress value=&quot;450.5&quot; max=&quot;1000.0&quot;&gt;&lt;/progress&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Try not to use floating point values for either the <code>&lt;progress&gt;</code> element's <code>value</code> or <code>max</code>. During testing of the module, we found that floating point values could cause unexpected behavior.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Try not to use floating point values for either the <code>&lt;progress&gt;</code> element's <code>value</code> or <code>max</code>. During testing of the module, we found that floating point values could cause unexpected behavior.</p>
                 </div>
               </div>
             </div>
@@ -149,7 +149,7 @@
                 <p>Inline progress bar:<progress class="inline" value="150" max="1000"></progress></p>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>Apart from the default style for the <code>&lt;progress&gt;</code> element, we have also included a couple of variants for it. As with many other elements, you can change the color of your progress bars, based on the context, using the <code>.secondary</code> or <code>.tertiary</code> class. You can also make a <code>&lt;progress&gt;</code> element display inline, using the <code>.inline</code> class.</p>
+                <p style="text-align:justify">Apart from the default style for the <code>&lt;progress&gt;</code> element, we have also included a couple of variants for it. As with many other elements, you can change the color of your progress bars, based on the context, using the <code>.secondary</code> or <code>.tertiary</code> class. You can also make a <code>&lt;progress&gt;</code> element display inline, using the <code>.inline</code> class.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;progress class=&quot;secondary&quot; value=&quot;600&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
 &lt;progress class=&quot;tertiary&quot; value=&quot;300&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
@@ -158,7 +158,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li>If you want to add your own custom size classes for <code>&lt;progress&gt;</code> elements, check the <a href="customization.html">customization page</a> for instructions.</li>
               </ul><hr>
               <div class="row">
@@ -166,11 +166,11 @@
                   <pre>&lt;progress class=&quot;inline secondary&quot; value=&quot;800&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;
 <span class="fore-tertiary">&lt;!-- or --&gt;</span>
 &lt;progress class=&quot;inline tertiary&quot; value=&quot;650&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can mix size and color classes for <code>&lt;progress&gt;</code> elements as needed.</p>
+                  <p class="do" style="text-align:justify"><mark class="tertiary">Do:</mark>&nbsp;You can mix size and color classes for <code>&lt;progress&gt;</code> elements as needed.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;progress class=&quot;secondary teriary&quot; value=&quot;450&quot; max=&quot;1000&quot;&gt;&lt;/progress&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid mixing two classes of the same type (i.e. two color classes or two size classes).</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Avoid mixing two classes of the same type (i.e. two color classes or two size classes).</p>
                 </div>
               </div>
             </div>
@@ -188,25 +188,25 @@
               </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>Donut spinners can be used to indicate that something is loading or that a process is running in the background. To create a donut spinner, add the <code>.spinner-donut</code> class to an element of your liking. We would recommend using a <code>&lt;div&gt;</code> element for most cases, but <code>&lt;span&gt;</code> elements should work pretty well, too.</p>
+                <p style="text-align:justify">Donut spinners can be used to indicate that something is loading or that a process is running in the background. To create a donut spinner, add the <code>.spinner-donut</code> class to an element of your liking. We would recommend using a <code>&lt;div&gt;</code> element for most cases, but <code>&lt;span&gt;</code> elements should work pretty well, too.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;spinner-donut&quot;&gt;&lt;/div&gt;</pre>
               </div>
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li>The <code>.spinner-donut</code> is an animated component, meaning that if a browsers does not support animation, this element might display incorrectly.</li>
 				<li>In certain cases, it might be useful to add the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role">progressbar</a>&quot;</span></code> attribute to increase donut spinner accessibility.</li>
               </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <pre>&lt;p&gt;Loading... &lt;span class=&quot;spinner-donut&quot;&gt;&lt;/span&gt;&lt;/p&gt;</pre>
-                  <p class="do"><mark class="tertiary">Do:</mark>&nbsp;You can place a <code>.spinner-donut</code> inside a paragraph or some other textual context and it will display inline.</p>
+                  <p class="do" style="text-align:justify"><mark class="tertiary">Do:</mark>&nbsp;You can place a <code>.spinner-donut</code> inside a paragraph or some other textual context and it will display inline.</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
                   <pre>&lt;div class=&quot;spinner-donut&quot;&gt;Loading...&lt;/div&gt;</pre>
-                  <p class="dont"><mark class="secondary">Don't:</mark>&nbsp;Avoid inserting text inside the <code>.spinner-donut</code>, as this might cause unexpected bahavior and will probably make the text spin along with it.</p>
+                  <p class="dont" style="text-align:justify"><mark class="secondary">Don't:</mark>&nbsp;Avoid inserting text inside the <code>.spinner-donut</code>, as this might cause unexpected bahavior and will probably make the text spin along with it.</p>
                 </div>
               </div>
             </div>
@@ -224,7 +224,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
-                <p>Apart from the default donut spinner style, there are also two more contextual color classes: <code>.secondary</code> and <code>.tertiary</code>. If your donut spinners are too small, you can also use the <code>.large</code> class to make it pop out a little bit more.</p>
+                <p style="text-align:justify">Apart from the default donut spinner style, there are also two more contextual color classes: <code>.secondary</code> and <code>.tertiary</code>. If your donut spinners are too small, you can also use the <code>.large</code> class to make it pop out a little bit more.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;div class=&quot;spinner-donut secondary&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;spinner-donut tertiary&quot;&gt;&lt;/div&gt;
@@ -233,7 +233,7 @@
             </div>
             <div class="section">
             <h3>Notes</h3>
-              <ul>
+              <ul style="text-align:justify">
                 <li>You can mix one of the contextual color classes and the <code>.large</code> class, if you want, similarly to what you can do with progress bars.</li>
               </ul>
             </div>
@@ -242,10 +242,10 @@
       </div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12">
-          <p>If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
+          <p style="text-align:justify">If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>
         </div>
       </div>
     </main></div></div></div>
-    <footer><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
+    <footer style="text-align:justify"><strong>mini.css</strong> was designed and built with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Chalarangelo">@Chalarangelo</a>. It is licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>. You can view the project's source code on <a href="https://github.com/Chalarangelo/mini.css">Github</a>.</footer>
   </body>
 </html>

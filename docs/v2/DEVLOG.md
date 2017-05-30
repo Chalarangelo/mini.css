@@ -1185,3 +1185,4 @@
 - Added a note in `core` doc to tell people about fluid typography.
 - Fixed a typo in `tab`.
 - Fixed a typo in `table`.
+- Fixed a typo in `input_control`.

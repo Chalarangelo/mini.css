@@ -1179,3 +1179,9 @@
 - Justify-aligned all paragraphs of text in documentation pages.
 - Fixed a couple of mistakes in the documentation pages.
 - Updated `navigation`'s `.drawer` documentation with better notes and examples.
+
+## 20170530
+
+- Added a note in `core` doc to tell people about fluid typography.
+- Fixed a typo in `tab`.
+- Fixed a typo in `table`.

@@ -8,6 +8,9 @@ $toast-name:							'toast' !default;					// Class name for the toasts.
 $include-tooltip:					true !default;						// Should tooltips be included? (`true`/`false`)
 $tooltip-name:						'tooltip' !default;				// Class name for the tooltips.
 $tooltip-bottom-name:			'bottom' !default;				// Bottom tooltip class name.
+$include-modal:						true !default;						// Should modals be included? (`true`/`false`)
+$modal-name:							'modal' !default;					// Class name for the modals.
+$modal-close-name:				'close' !default;					// Class name of the close element for the modal component.
 // External variables' defaults are used only if you import this module on its own, without the rest of the framework.
 $back-color:							white !default;						// [External variable - core] Background color for everything.
 $fore-color:							black !default;						// [External variable - core] Foreground color for everything.
@@ -155,6 +158,44 @@ mark {
 		}
 		&.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
 			margin-top: 2 * $tooltip-tail-size;
+		}
+	}
+}
+@if $include-modal {
+	.#{$modal-name} {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: none;
+		width: 100vw;
+		height: 100vh;
+		background: rgba($modal-back-color, $modal-back-opacity);
+		& .card {
+			margin: 0 auto;
+			max-height: 50vh;
+			overflow: auto;
+			& .#{$modal-close-name} {
+				position: absolute;
+				top: $modal-close-top;
+				right: $modal-close-right;
+				padding: 0; // Fixes the extra padding added from <label> styling.
+			}
+		}
+	}
+	:checked + .#{$modal-name} {
+		// Old syntax
+		display: -webkit-box;
+		-webkit-box-flex: 0;
+		// New syntax
+		display: 	-webkit-flex;
+		display:					flex;
+		-webkit-flex: 0 1 auto;
+						flex: 0 1 auto;
+		z-index: 1200;
+		& .card {
+			& .#{$modal-close-name} {
+				z-index: 1211;
+			}
 		}
 	}
 }

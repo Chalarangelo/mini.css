@@ -1218,3 +1218,4 @@
 - Merged some styles in `contextual` in regards to `.tooltip`.
 - Changed `table` selectors to use `:not(:first-child)`, similarly to other modules.
 - All changes have been tested and no errors were found (as far as I can tell).
+- Created the `.modal` component, added to the `default` flavor, documenting and adding to other flavors pending.

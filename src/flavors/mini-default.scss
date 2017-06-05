@@ -448,6 +448,13 @@ $tooltip-tail-size:					0.5rem;									// The size of the tooltip's tail
 $tooltip-padding:						0.5rem;									// Padding for tooltips
 $tooltip-box-shadow:				none;										// Box shadow for tooltip-box-shadow
 $tooltip-bottom-name:				'bottom';								// Class name for bottom tooltip
+$include-modal:							true;										// Should modals be included? (`true`/`false`) [2]
+$modal-name:								'modal';								// Class name for the modals
+$modal-back-color:					#000;										// Background color of the modal overlay
+$modal-back-opacity:				0.45;										// Background opacity of the modal overlay
+$modal-close-name:				'close';									// Class name of the close element od the modal component.
+$modal-close-top:					0.75rem;									// Top position of the modal component's close icon
+$modal-close-right:				0.25rem;									// Right position of the modal component's close icon
 // 	Notes:
 // [1] - If the value of $include-tooltip is `true`, a tooltip component will be creatd based on the values of the variables
 //	for the tooltip, as explained in their descriptions. Tooltip mixins will only work properly if the tooltip component is

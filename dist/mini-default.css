@@ -1208,11 +1208,11 @@ footer.sticky {
   }
 }
 
-[type="checkbox"]:checked + .drawer:not(.right) {
+:checked + .drawer:not(.right) {
   left: 0;
 }
 
-[type="checkbox"]:checked + .drawer.right {
+:checked + .drawer.right {
   right: 0;
 }
 
@@ -1784,6 +1784,43 @@ mark.inline-block {
 
 .tooltip.bottom:after {
   margin-top: 1rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.modal .card {
+  margin: 0 auto;
+  max-height: 50vh;
+  overflow: auto;
+}
+
+.modal .card .close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.25rem;
+  padding: 0;
+}
+
+:checked + .modal {
+  display: -webkit-box;
+  -webkit-box-flex: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  z-index: 1200;
+}
+
+:checked + .modal .card .close {
+  z-index: 1211;
 }
 
 /*

@@ -3,7 +3,7 @@
 	Flavor name: Nord (mini-nord)
 	Author: tphecca (https://github.com/tphecca)
 	Maintainers: tphecca
-	mini.css version: v2.2.0
+	mini.css version: v2.3.0
 */
 /*
 	Browsers resets and base typography.
@@ -888,8 +888,8 @@ input[type="file"] {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
 }
 
-.button-group button, .button-group [type="button"], .button-group [type="submit"], .button-group [type="reset"],
-.button-group .button, .button-group [role="button"] {
+.button-group > button, .button-group [type="button"], .button-group > [type="submit"], .button-group > [type="reset"],
+.button-group > .button, .button-group > [role="button"] {
   margin: 0;
   -webkit-box-flex: 1;
   max-width: 100%;
@@ -901,8 +901,7 @@ input[type="file"] {
   box-shadow: none;
 }
 
-.button-group * + button, .button-group * + [type="button"], .button-group * + [type="submit"], .button-group * + [type="reset"],
-.button-group * + .button, .button-group * + [role="button"] {
+.button-group > :not(:first-child) {
   border-left: 1px solid #9e9e9e;
 }
 
@@ -912,8 +911,7 @@ input[type="file"] {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
-  .button-group * + button, .button-group * + [type="button"], .button-group * + [type="submit"], .button-group * + [type="reset"],
-  .button-group * + .button, .button-group * + [role="button"] {
+  .button-group > :not(:first-child) {
     border: 0;
     border-top: 1px solid #9e9e9e;
   }
@@ -962,11 +960,14 @@ input[type="file"] {
   border-radius: 50%;
 }
 
-.input-group [type="checkbox"][disabled] + label, .input-group [type="radio"][disabled] + label {
+.input-group [type="checkbox"][disabled] + label, .input-group [type="radio"][disabled] + label,
+.input-group [type="checkbox"]:disabled + label, .input-group [type="radio"]:disabled + label {
   cursor: not-allowed;
 }
 
-.input-group [type="checkbox"][disabled] + label:before, .input-group [type="checkbox"][disabled] + label:after, .input-group [type="radio"][disabled] + label:before, .input-group [type="radio"][disabled] + label:after {
+.input-group [type="checkbox"][disabled] + label:before, .input-group [type="checkbox"][disabled] + label:after, .input-group [type="radio"][disabled] + label:before, .input-group [type="radio"][disabled] + label:after,
+.input-group [type="checkbox"]:disabled + label:before,
+.input-group [type="checkbox"]:disabled + label:after, .input-group [type="radio"]:disabled + label:before, .input-group [type="radio"]:disabled + label:after {
   opacity: 0.75;
 }
 
@@ -1228,11 +1229,11 @@ footer.sticky {
   }
 }
 
-[type="checkbox"]:checked + .drawer:not(.right) {
+:checked + .drawer:not(.right) {
   left: 0;
 }
 
-[type="checkbox"]:checked + .drawer.right {
+:checked + .drawer.right {
   right: 0;
 }
 
@@ -1376,7 +1377,7 @@ table th:first-child, table td:first-child {
     width: 100%;
     border: 1px solid #D8DEE9;
   }
-  table.horizontal th + th, table.horizontal th + td, table.horizontal td + th, table.horizontal td + td {
+  table.horizontal th:not(:first-child), table.horizontal td:not(:first-child) {
     border-top: 0;
   }
   table.horizontal th {
@@ -1446,7 +1447,7 @@ table th:first-child, table td:first-child {
     width: 100%;
     border: 1px solid #D8DEE9;
   }
-  table.horizontal.preset th + th, table.horizontal.preset th + td, table.horizontal.preset td + th, table.horizontal.preset td + td {
+  table.horizontal.preset th:not(:first-child), table.horizontal.preset td:not(:first-child) {
     border-top: 0;
   }
   table.horizontal.preset th {
@@ -1609,12 +1610,12 @@ table.striped tr:nth-of-type(2n) > td {
   background: rgba(216, 222, 233, 0.8);
 }
 
-.tabs > [type="radio"], .tabs.stacked > [type="checkbox"] {
+.tabs > [type="radio"], .tabs > [type="checkbox"] {
   display: none;
   visibility: hidden;
 }
 
-.tabs > [type="radio"] + label + div, .tabs.stacked > [type="checkbox"] + label + div {
+.tabs > label + div {
   -webkit-flex-basis: auto;
   flex-basis: auto;
   -webkit-order: 2;
@@ -1634,24 +1635,20 @@ table.striped tr:nth-of-type(2n) > td {
   transition: -webkit-transform 0.3s, transform 0.3s;
 }
 
-.tabs > [type="radio"] + label + div + [type="radio"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="radio"] + label {
+.tabs > label:not(:first-of-type) {
   border-left: 0;
 }
 
-.tabs.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
-  border-left: 0;
-}
-
-.tabs > [type="radio"]:checked + label, .tabs.stacked > [type="checkbox"]:checked + label {
+.tabs > :checked + label {
   background: #4C566A;
   color: #ECEFF4;
 }
 
-.tabs > [type="radio"]:checked + label:hover, .tabs > [type="radio"]:checked + label:focus, .tabs.stacked > [type="checkbox"]:checked + label:hover, .tabs.stacked > [type="checkbox"]:checked + label:focus {
+.tabs > :checked + label:hover, .tabs > :checked + label:focus {
   background: rgba(76, 86, 106, 0.8);
 }
 
-.tabs > [type="radio"]:checked + label + div, .tabs.stacked > [type="checkbox"]:checked + label + div {
+.tabs > :checked + label + div {
   box-sizing: border-box;
   position: relative;
   height: 400px;
@@ -1679,19 +1676,19 @@ table.striped tr:nth-of-type(2n) > td {
   order: initial;
 }
 
-.tabs.stacked > [type="radio"] + label + div, .tabs.stacked > [type="checkbox"] + label + div {
+.tabs.stacked > label + div {
   -webkit-order: initial;
   order: initial;
   -webkit-transform-origin: top;
   transform-origin: top;
 }
 
-.tabs.stacked > [type="radio"] + label + div + [type="radio"] + label, .tabs.stacked > [type="radio"] + label + div + [type="checkbox"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="radio"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
+.tabs.stacked > label:not(:first-of-type) {
   border: 1px solid #9e9e9e;
   border-top: 0;
 }
 
-.tabs.stacked > [type="radio"]:checked + label + div, .tabs.stacked > [type="checkbox"]:checked + label + div {
+.tabs.stacked > :checked + label + div {
   height: auto;
 }
 
@@ -1705,11 +1702,11 @@ table.striped tr:nth-of-type(2n) > td {
     -webkit-order: initial;
     order: initial;
   }
-  .tabs > [type="radio"] + label + div {
+  .tabs > label + div {
     -webkit-order: initial;
     order: initial;
   }
-  .tabs > [type="radio"] + label + div + [type="radio"] + label {
+  .tabs > label:not(:first-of-type) {
     border: 1px solid #9e9e9e;
     border-top: 0;
   }
@@ -1757,9 +1754,6 @@ mark.inline-block {
   clip-path: inset(100%);
   transition: all 0.3s;
   z-index: 1010;
-}
-
-.tooltip:before, .tooltip:after {
   left: 50%;
 }
 
@@ -1812,6 +1806,43 @@ mark.inline-block {
 
 .tooltip.bottom:after {
   margin-top: 12px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.modal .card {
+  margin: 0 auto;
+  max-height: 50vh;
+  overflow: auto;
+}
+
+.modal .card .close {
+  position: absolute;
+  top: 12px;
+  right: 4px;
+  padding: 0;
+}
+
+:checked + .modal {
+  display: -webkit-box;
+  -webkit-box-flex: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  z-index: 1200;
+}
+
+:checked + .modal .card .close {
+  z-index: 1211;
 }
 
 /*

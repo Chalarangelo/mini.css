@@ -5,7 +5,7 @@
 	Flavor name: Sucroa (mini-sucroa)
 	Author: Angeliki Daskalakis
 	Maintainers: Angeliki Daskalakis, Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v2.2.0
+	mini.css version: v2.3.0
 */
 // Google Fonts imports and usage
 @import url('https://fonts.googleapis.com/css?family=Cousine:400,400i,700|Libre+Baskerville:400,400i,700&subset=latin-ext');
@@ -457,10 +457,13 @@ $tooltip-padding:						10px;										// Padding for tooltips
 $tooltip-box-shadow:																// Box shadow for tooltip-box-shadow
 	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
 $tooltip-bottom-name:				'bottom';								// Class name for bottom tooltip
+$include-modal:							false;									// Should modals be included? (`true`/`false`) [2]
 // 	Notes:
 // [1] - If the value of $include-tooltip is `true`, a tooltip component will be creatd based on the values of the variables
 //	for the tooltip, as explained in their descriptions. Tooltip mixins will only work properly if the tooltip component is
 //	included.
+// [2] - If the value of $include-modal is `true`, a modal component will be created based on the values of the variables
+//	for the modal, as explained in their descriptions.
 //	Variables for progress elements and spinners
 $progress-back-color:				#e8deff;								// Background color for <progress>
 $progress-fore-color:				#6979c6;								// Progress bar color for <progress>

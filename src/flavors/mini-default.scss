@@ -5,7 +5,7 @@
 	Flavor name: Default (mini-default)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
 	Maintainers: Angelos Chalaris
-	mini.css version: v2.2.0
+	mini.css version: v2.3.0
 */
 //	Basic rules for body and typography
 $fore-color:						#212121;									// Text and general foreground color
@@ -459,6 +459,8 @@ $modal-close-right:				0.25rem;									// Right position of the modal component
 // [1] - If the value of $include-tooltip is `true`, a tooltip component will be creatd based on the values of the variables
 //	for the tooltip, as explained in their descriptions. Tooltip mixins will only work properly if the tooltip component is
 //	included.
+// [2] - If the value of $include-modal is `true`, a modal component will be created based on the values of the variables
+//	for the modal, as explained in their descriptions.
 //	Variables for progress elements and spinners
 $progress-back-color:					#e0e0e0;							// Background color for <progress>
 $progress-fore-color:					#0277bd;							// Progress bar color for <progress>

@@ -5,7 +5,7 @@
 	Flavor name: Nord (mini-nord)
 	Author: tphecca (https://github.com/tphecca)
 	Maintainers: tphecca
-	mini.css version: v2.2.0
+	mini.css version: v2.3.0
 */
 //	This flavor is based on the Nord color palette: https://github.com/arcticicestudio/nord
 //	Basic rules for body and typography
@@ -464,12 +464,21 @@ $tooltip-padding:				6px;												// Padding for tooltips
 $tooltip-box-shadow:																// Box shadow for tooltip-box-shadow
 	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
 $tooltip-bottom-name:			'bottom';									// Class name for bottom tooltip
+$include-modal:							true;										// Should modals be included? (`true`/`false`) [3]
+$modal-name:								'modal';								// Class name for the modals
+$modal-back-color:					#000;										// Background color of the modal overlay
+$modal-back-opacity:				0.45;										// Background opacity of the modal overlay
+$modal-close-name:				'close';									// Class name of the close element od the modal component.
+$modal-close-top:					12px;											// Top position of the modal component's close icon
+$modal-close-right:				4px;											// Right position of the modal component's close icon
 // 	Notes:
 // [1] - If the value of $alert-include-animated is `true`, an animation will be created and the value of $alert-animated-class
 //	will be used to determine the class that will be used for animated alerts.
 // [2] - If the value of $include-tooltip is `true`, a tooltip component will be creatd based on the values of the variables
 //	for the tooltip, as explained in their descriptions. Tooltip mixins will only work properly if the tooltip component is
 //	included.
+// [3] - If the value of $include-modal is `true`, a modal component will be created based on the values of the variables
+//	for the modal, as explained in their descriptions.
 //	Variables for progress elements and spinners
 $progress-back-color:			#D8DEE9;									// Background color for <progress>
 $progress-fore-color:			#5E81AC;									// Progress bar color for <progress>

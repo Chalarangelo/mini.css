@@ -3,7 +3,7 @@
 	Flavor name: Sucroa (mini-sucroa)
 	Author: Angeliki Daskalakis
 	Maintainers: Angeliki Daskalakis, Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v2.2.0
+	mini.css version: v2.3.0
 */
 @import url("https://fonts.googleapis.com/css?family=Cousine:400,400i,700|Libre+Baskerville:400,400i,700&subset=latin-ext");
 /*
@@ -892,8 +892,8 @@ input[type="file"] {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.15);
 }
 
-.button-group button, .button-group [type="button"], .button-group [type="submit"], .button-group [type="reset"],
-.button-group .button, .button-group [role="button"] {
+.button-group > button, .button-group [type="button"], .button-group > [type="submit"], .button-group > [type="reset"],
+.button-group > .button, .button-group > [role="button"] {
   margin: 0;
   -webkit-box-flex: 1;
   max-width: 100%;
@@ -905,8 +905,7 @@ input[type="file"] {
   box-shadow: none;
 }
 
-.button-group * + button, .button-group * + [type="button"], .button-group * + [type="submit"], .button-group * + [type="reset"],
-.button-group * + .button, .button-group * + [role="button"] {
+.button-group > :not(:first-child) {
   border-left: 1px solid #a9a2ba;
 }
 
@@ -916,8 +915,7 @@ input[type="file"] {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
-  .button-group * + button, .button-group * + [type="button"], .button-group * + [type="submit"], .button-group * + [type="reset"],
-  .button-group * + .button, .button-group * + [role="button"] {
+  .button-group > :not(:first-child) {
     border: 0;
     border-top: 1px solid #a9a2ba;
   }
@@ -966,11 +964,14 @@ input[type="file"] {
   border-radius: 50%;
 }
 
-.input-group [type="checkbox"][disabled] + label, .input-group [type="radio"][disabled] + label {
+.input-group [type="checkbox"][disabled] + label, .input-group [type="radio"][disabled] + label,
+.input-group [type="checkbox"]:disabled + label, .input-group [type="radio"]:disabled + label {
   cursor: not-allowed;
 }
 
-.input-group [type="checkbox"][disabled] + label:before, .input-group [type="checkbox"][disabled] + label:after, .input-group [type="radio"][disabled] + label:before, .input-group [type="radio"][disabled] + label:after {
+.input-group [type="checkbox"][disabled] + label:before, .input-group [type="checkbox"][disabled] + label:after, .input-group [type="radio"][disabled] + label:before, .input-group [type="radio"][disabled] + label:after,
+.input-group [type="checkbox"]:disabled + label:before,
+.input-group [type="checkbox"]:disabled + label:after, .input-group [type="radio"]:disabled + label:before, .input-group [type="radio"]:disabled + label:after {
   opacity: 0.8;
 }
 
@@ -1218,11 +1219,11 @@ footer.sticky {
   }
 }
 
-[type="checkbox"]:checked + .drawer:not(.right) {
+:checked + .drawer:not(.right) {
   left: 0;
 }
 
-[type="checkbox"]:checked + .drawer.right {
+:checked + .drawer.right {
   right: 0;
 }
 
@@ -1478,12 +1479,12 @@ table.striped tr:nth-of-type(2n) > td {
   background: rgba(211, 202, 232, 0.8);
 }
 
-.tabs > [type="radio"], .tabs.stacked > [type="checkbox"] {
+.tabs > [type="radio"], .tabs > [type="checkbox"] {
   display: none;
   visibility: hidden;
 }
 
-.tabs > [type="radio"] + label + div, .tabs.stacked > [type="checkbox"] + label + div {
+.tabs > label + div {
   -webkit-flex-basis: auto;
   flex-basis: auto;
   -webkit-order: 2;
@@ -1505,23 +1506,19 @@ table.striped tr:nth-of-type(2n) > td {
   border-bottom-right-radius: 2px;
 }
 
-.tabs > [type="radio"] + label + div + [type="radio"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="radio"] + label {
+.tabs > label:not(:first-of-type) {
   border-left: 0;
 }
 
-.tabs.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
-  border-left: 0;
-}
-
-.tabs > [type="radio"]:checked + label, .tabs.stacked > [type="checkbox"]:checked + label {
+.tabs > :checked + label {
   background: #e8deff;
 }
 
-.tabs > [type="radio"]:checked + label:hover, .tabs > [type="radio"]:checked + label:focus, .tabs.stacked > [type="checkbox"]:checked + label:hover, .tabs.stacked > [type="checkbox"]:checked + label:focus {
+.tabs > :checked + label:hover, .tabs > :checked + label:focus {
   background: rgba(232, 222, 255, 0.8);
 }
 
-.tabs > [type="radio"]:checked + label + div, .tabs.stacked > [type="checkbox"]:checked + label + div {
+.tabs > :checked + label + div {
   box-sizing: border-box;
   position: relative;
   height: 400px;
@@ -1560,12 +1557,12 @@ table.striped tr:nth-of-type(2n) > td {
   border-top-right-radius: 2px;
 }
 
-.tabs.stacked > [type="radio"]:checked + label, .tabs.stacked > [type="checkbox"]:checked + label {
+.tabs.stacked > :checked + label {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.tabs.stacked > [type="radio"] + label + div, .tabs.stacked > [type="checkbox"] + label + div {
+.tabs.stacked > label + div {
   -webkit-order: initial;
   order: initial;
   -webkit-transform-origin: top;
@@ -1573,16 +1570,16 @@ table.striped tr:nth-of-type(2n) > td {
   border-radius: 0;
 }
 
-.tabs.stacked > [type="radio"] + label + div + [type="radio"] + label, .tabs.stacked > [type="radio"] + label + div + [type="checkbox"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="radio"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
+.tabs.stacked > label:not(:first-of-type) {
   border: 1px solid #a9a2ba;
   border-top: 0;
 }
 
-.tabs.stacked > [type="radio"]:checked + label + div, .tabs.stacked > [type="checkbox"]:checked + label + div {
+.tabs.stacked > :checked + label + div {
   height: auto;
 }
 
-.tabs.stacked > [type="radio"] + label + div:last-of-type, .tabs.stacked > [type="checkbox"] + label + div:last-of-type {
+.tabs.stacked > label + div:last-of-type {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
@@ -1605,20 +1602,20 @@ table.striped tr:nth-of-type(2n) > td {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
   }
-  .tabs > [type="radio"]:checked + label {
+  .tabs > :checked + label {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .tabs > [type="radio"] + label + div {
+  .tabs > label + div {
     -webkit-order: initial;
     order: initial;
     border-radius: 0;
   }
-  .tabs > [type="radio"] + label + div + [type="radio"] + label {
+  .tabs > label:not(:first-of-type) {
     border: 1px solid #a9a2ba;
     border-top: 0;
   }
-  .tabs > [type="radio"] + label + div:last-of-type {
+  .tabs > label + div:last-of-type {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
   }
@@ -1666,9 +1663,6 @@ mark.inline-block {
   clip-path: inset(100%);
   transition: all 0.3s;
   z-index: 1010;
-}
-
-.tooltip:before, .tooltip:after {
   left: 50%;
 }
 

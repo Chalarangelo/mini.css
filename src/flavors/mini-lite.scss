@@ -7,7 +7,7 @@
 	Flavor name: Lite (mini-lite)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
 	Maintainers: Angelos Chalaris
-	mini.css version: v2.2.0
+	mini.css version: v2.3.0
 */
 //	Basic rules for body and typography
 $fore-color:						#212121;									// Text and general foreground color
@@ -340,9 +340,10 @@ $mark-style2-font-size:			1em;										// Font size for <mark> style 2
 $mark-style2-line-height:		1.375em;								// Line height for <mark> style 2
 $include-toast:							false;									// [Hidden flag override] Should toasts be included? (`true`/`false``) [1]
 $include-tooltip:						false;									// Should tooltips be included? (`true`/`false`) [1]
+$include-modal:							false;									// Should modals be included? (`true`/`false`) [1]
 // 	Notes:
-// [1] - Due to the values of $include-toast and $include-tooltip being set to `false`,
-//	no styling is provided for these elements. If you want to enable them, please
+// [1] - Due to the values of $include-toast, $include-tooltip and $include-modal being set
+//	to `false`, no styling is provided for these elements. If you want to enable them, please
 //	refer to a full flavor file for variable definitions.
 //	Variables for progress elements and spinners
 $progress-back-color:					#e0e0e0;							// Background color for <progress>

@@ -1354,7 +1354,7 @@ table th:first-child, table td:first-child {
     width: 100%;
     border: 1px solid #c9c9c9;
   }
-  table.horizontal th + th, table.horizontal th + td, table.horizontal td + th, table.horizontal td + td {
+  table.horizontal th:not(:first-child), table.horizontal td:not(:first-child) {
     border-top: 0;
   }
   table.horizontal th {
@@ -1424,7 +1424,7 @@ table th:first-child, table td:first-child {
     width: 100%;
     border: 1px solid #c9c9c9;
   }
-  table.horizontal.preset th + th, table.horizontal.preset th + td, table.horizontal.preset td + th, table.horizontal.preset td + td {
+  table.horizontal.preset th:not(:first-child), table.horizontal.preset td:not(:first-child) {
     border-top: 0;
   }
   table.horizontal.preset th {
@@ -1733,9 +1733,6 @@ mark.inline-block {
   clip-path: inset(100%);
   transition: all 0.3s;
   z-index: 1010;
-}
-
-.tooltip:before, .tooltip:after {
   left: 50%;
 }
 

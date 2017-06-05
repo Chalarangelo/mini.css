@@ -1215,3 +1215,6 @@
 - Moved `input_control`'s `disabled` styling to low-specificity behind the existing flag, saved another `0.05KB`, which is quite a big change. Parsing should also be faster than before. Good catch, **hugging cat**!
 - Lowered specificity of selectors used in `.button-group` for styling `border`s, cut off another `0.02KB`.
 - Added styling for `:disabled` on `checkbox` and `radio`, pushed the size back up a little bit.
+- Merged some styles in `contextual` in regards to `.tooltip`.
+- Changed `table` selectors to use `:not(:first-child)`, similarly to other modules.
+- All changes have been tested and no errors were found (as far as I can tell).

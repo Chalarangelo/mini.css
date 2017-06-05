@@ -185,7 +185,7 @@ table {
 		   		width: 100%;
 		   		border: $table-border-style;	// Apply to overwrite.
 		   		@if $table-border-style != 0 {
-			   		& + th, & + td {
+			   		&:not(:first-child) {
 			   			border-top: 0;
 			   		}
 		   		}
@@ -272,7 +272,7 @@ table {
 		   		width: 100%;
 		   		border: $table-border-style;	// Apply to overwrite.
 		   		@if $table-border-style != 0 {
-			   		& + th, & + td {
+			   		&:not(:first-child){
 			   			border-top: 0;
 			   		}
 		   		}

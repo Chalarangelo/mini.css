@@ -88,8 +88,6 @@ mark {
 			transition: all 0.3s;
 			// Remember to keep this index a lower value than the one used for stickies.
 			z-index: 1010;	// Deals with certain problems when combined with cards and tables.
-		}
-		&:before, &:after {
 			left: 50%;
 		}
 		&:not(.#{$tooltip-bottom-name}):before, &:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling

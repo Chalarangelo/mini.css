@@ -147,14 +147,14 @@ code, kbd, pre, samp {
 
 code {
   border-radius: 2px;
-  background: #e0e0e0;
+  background: #e6e6e6;
   padding: 0.125rem 0.25rem;
 }
 
 pre {
   overflow: auto;
   border-radius: 0 2px 2px 0;
-  background: #e0e0e0;
+  background: #e6e6e6;
   padding: 0.75rem;
   margin: 0.5rem;
 }
@@ -799,7 +799,7 @@ button, [type="button"], [type="submit"], [type="reset"],
 a.button, label.button, .button,
 a[role="button"], label[role="button"], [role="button"] {
   display: inline-block;
-  background: rgba(208, 208, 208, 0.75);
+  background: rgba(220, 220, 220, 0.75);
   color: #212121;
   border: 0;
   border-radius: 2px;
@@ -815,7 +815,7 @@ a.button:hover,
 a.button:focus, label.button:hover, label.button:focus, .button:hover, .button:focus,
 a[role="button"]:hover,
 a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:focus, [role="button"]:hover, [role="button"]:focus {
-  background: #d0d0d0;
+  background: gainsboro;
   opacity: 1;
 }
 
@@ -1062,7 +1062,7 @@ table thead th {
 }
 
 table th {
-  background: #e0e0e0;
+  background: #e6e6e6;
 }
 
 table th:first-child, table td:first-child {

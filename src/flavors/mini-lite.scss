@@ -57,7 +57,7 @@ $blockquote-box-shadow:						none;						// Box shadow for <blockquote>
 $use-default-code-fonts:			true;									// Should default font choice (monospace) be used for code elements? (`true`/`false`) [6]
 $code-element-padding:				0.125rem 0.25rem;			// Padding for <code>
 $code-element-fore-color:			$fore-color;					// Text color for <code>
-$code-element-back-color:			#e0e0e0;							// Background color for <code>
+$code-element-back-color:			#e6e6e6;							// Background color for <code>
 $code-element-border-style:		0;										// Border style for <code>
 $code-element-border-radius:	2px;									// Border radius for <code>
 $code-element-box-shadow:			none;									// Box shadow for <code>
@@ -169,7 +169,7 @@ $input-disabled-opacity:			0.75;									// Opacity for disabled input
 $input-readonly-back-color:		#e5e5e5;							// Background color for readonly input
 $input-readonly-border-color:	#c9c9c9;							// Border color for readonly input
 $input-placeholder-fore-color:#616161;							// Text color for input placeholder
-$button-back-color:			#d0d0d0;										// Back color for button elements
+$button-back-color:			#dcdcdc;										// Back color for button elements
 $button-back-opacity:		0.75;												// Background opacity for button elements
 $button-hover-back-opacity:		1;										// Background opacity for button elements on hover or focus
 $button-fore-color:			$fore-color;								// Text color for button elements
@@ -271,7 +271,7 @@ $table-caption-font-size:		1.5rem;									// Font size for <caption>
 $table-caption-margin:			0.5rem;									// Margin for <caption>
 $table-row-padding:					0.5rem;									// Padding for <tr> - both views
 $table-column-padding:			0.625rem;								// Padding for <td> and <th> - desktop view
-$table-head-back-color:			#e0e0e0;								// Background color for <th>
+$table-head-back-color:			#e6e6e6;								// Background color for <th>
 $table-head-fore-color:			$fore-color;						// Tex color for <th>
 $table-body-back-color:			#fafafa;								// Background color for <td>
 $table-body-fore-color:			$fore-color;						// Text color for <td>

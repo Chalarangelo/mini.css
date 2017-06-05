@@ -1196,3 +1196,4 @@
 	- http://www.flaticon.com/free-icon/wings_262678 (Feather)
 	- http://www.flaticon.com/free-icon/bacteria_191004 (Bacteria)
 	- http://www.flaticon.com/free-icon/meteor_433944 (Meteor)
+- Updated colors for `<pre>` and `<code>`, along with `<button>` and some other elements to better contrast colors on older and less bright displays. Updated both `mini-default` and `mini-lite` to fix issues with those colors.

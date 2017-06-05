@@ -57,7 +57,7 @@ $use-default-code-fonts:			true;								// Should default font choice (monospace
 //$code-font-family:					monospace, monospace;	// Fonts for code elements if not default
 $code-element-padding:				0.125rem 0.25rem;			// Padding for <code>
 $code-element-fore-color:			$fore-color;					// Text color for <code>
-$code-element-back-color:			#e0e0e0;							// Background color for <code>
+$code-element-back-color:			#e6e6e6;							// Background color for <code>
 $code-element-border-style:		0;										// Border style for <code>
 $code-element-border-radius:	2px;									// Border radius for <code>
 $code-element-box-shadow:			none;									// Box shadow for <code>
@@ -180,7 +180,7 @@ $input-disabled-opacity:			0.75;									// Opacity for disabled input
 $input-readonly-back-color:		#e5e5e5;							// Background color for readonly input
 $input-readonly-border-color:	#c9c9c9;							// Border color for readonly input
 $input-placeholder-fore-color:#616161;							// Text color for input placeholder
-$button-back-color:			#d0d0d0;										// Back color for button elements
+$button-back-color:			#dcdcdc;										// Back color for button elements
 $button-back-opacity:		0.75;												// Background opacity for button elements
 $button-hover-back-opacity:		1;										// Background opacity for button elements on hover or focus
 $button-fore-color:			$fore-color;								// Text color for button elements
@@ -319,7 +319,7 @@ $table-caption-font-size:		1.5rem;									// Font size for <caption>
 $table-caption-margin:			0.5rem;									// Margin for <caption>
 $table-row-padding:					0.5rem;									// Padding for <tr> - both views
 $table-column-padding:			0.625rem;								// Padding for <td> and <th> - desktop view
-$table-head-back-color:			#e0e0e0;								// Background color for <th>
+$table-head-back-color:			#e6e6e6;								// Background color for <th>
 $table-head-fore-color:			$fore-color;						// Tex color for <th>
 $table-body-back-color:			#fafafa;								// Background color for <td>
 $table-body-fore-color:			$fore-color;						// Text color for <td>
@@ -383,7 +383,7 @@ $card-section-padding1-padding:	0.75rem;						// Padding for card section paddin
 //	Variables for tabs
 $tab-container-name:						'tabs';							// Class name for the tabs' container
 $tab-container-box-shadow:			none;								// Box shadow for the tabs' container
-$tab-label-back-color:					#e0e0e0;						// Background color for tabs' labels
+$tab-label-back-color:					#e6e6e6;						// Background color for tabs' labels
 $tab-label-fore-color:					$fore-color;				// Text color for tabs' labels
 $tab-label-selected-back-color:	#eeeeee;						// Background color for open tab's label
 $tab-label-selected-fore-color:	$fore-color;				// Text color for open tab's label
@@ -486,7 +486,7 @@ $spinner-donut-style1-border-thickness:	0.375rem;		// Border thickness for donut
 $hidden-name:							'hidden';									// Class name for hidden elements
 $visually-hidden-name:		'visually-hidden';				// Class name for visually hidden elements
 $breadcrumbs-name:				'breadcrumbs';						// Class name for breadcrumbs
-$breadcrumbs-back-color:	#e0e0e0;									// Background color for breadcrumbs
+$breadcrumbs-back-color:	#e6e6e6;									// Background color for breadcrumbs
 $breadcrumbs-margin:			0.5rem;										// Margin for breadcrumbs
 $breadcrumbs-height:			2rem;											// Height of the breadcrumbs
 $breadcrumbs-separator-width:	0.125rem;							// Width of the breadcrumbs' separator
@@ -495,7 +495,7 @@ $breadcrumbs-border-radius:		0;										// Border radius for breadcrumbs
 $breadcrumbs-box-shadow:			none;									// Box shadow for breadcrumbs
 $close-icon-name:							'close';							// Class name for close icon
 $close-icon-size:							1.5rem;								// Size of the close icon
-$close-icon-back-color:				#e0e0e0;							// Background color for the close icon
+$close-icon-back-color:				#e6e6e6;							// Background color for the close icon
 $close-icon-fore-color:				#212121;							// Foreground color for the close icon
 $border-generic-name:					'bordered';						// Class name for generic border style
 $border-radial-style1-name:		'rounded';						// Class name for radial border style 1

@@ -148,14 +148,14 @@ code, kbd, pre, samp {
 
 code {
   border-radius: 2px;
-  background: #e0e0e0;
+  background: #e6e6e6;
   padding: 0.125rem 0.25rem;
 }
 
 pre {
   overflow: auto;
   border-radius: 0 2px 2px 0;
-  background: #e0e0e0;
+  background: #e6e6e6;
   padding: 0.75rem;
   margin: 0.5rem;
   border-left: 4px solid #1565c0;
@@ -831,7 +831,7 @@ button, [type="button"], [type="submit"], [type="reset"],
 a.button, label.button, .button,
 a[role="button"], label[role="button"], [role="button"] {
   display: inline-block;
-  background: rgba(208, 208, 208, 0.75);
+  background: rgba(220, 220, 220, 0.75);
   color: #212121;
   border: 0;
   border-radius: 2px;
@@ -847,7 +847,7 @@ a.button:hover,
 a.button:focus, label.button:hover, label.button:focus, .button:hover, .button:focus,
 a[role="button"]:hover,
 a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:focus, [role="button"]:hover, [role="button"]:focus {
-  background: #d0d0d0;
+  background: gainsboro;
   opacity: 1;
 }
 
@@ -1258,7 +1258,7 @@ table thead th {
 }
 
 table th {
-  background: #e0e0e0;
+  background: #e6e6e6;
 }
 
 table th:first-child, table td:first-child {
@@ -1589,13 +1589,13 @@ table.striped tr:nth-of-type(2n) > td {
   height: 1.5rem;
   cursor: pointer;
   transition: background 0.3s;
-  background: #e0e0e0;
+  background: #e6e6e6;
   border: 1px solid #bdbdbd;
   padding: 0.75rem;
 }
 
 .tabs > label:hover, .tabs > label:focus {
-  background: rgba(224, 224, 224, 0.8);
+  background: rgba(230, 230, 230, 0.8);
 }
 
 .tabs > [type="radio"], .tabs.stacked > [type="checkbox"] {
@@ -1992,7 +1992,7 @@ ul.breadcrumbs li {
   flex-basis: 0;
   position: relative;
   text-align: center;
-  background: #e0e0e0;
+  background: #e6e6e6;
   height: 2rem;
   line-height: 2rem;
   margin-right: 1.125rem;
@@ -2004,7 +2004,7 @@ ul.breadcrumbs li:before, ul.breadcrumbs li:after {
   top: 0;
   width: 0;
   height: 0;
-  border: 0 solid #e0e0e0;
+  border: 0 solid #e6e6e6;
   border-width: 1rem 1rem;
 }
 
@@ -2016,7 +2016,7 @@ ul.breadcrumbs li:before {
 ul.breadcrumbs li:after {
   left: 100%;
   border-color: transparent;
-  border-left-color: #e0e0e0;
+  border-left-color: #e6e6e6;
 }
 
 ul.breadcrumbs li:first-child:before {
@@ -2039,14 +2039,14 @@ ul.breadcrumbs li:last-child:after {
   line-height: 1;
   font-weight: 700;
   border-radius: 2rem;
-  background: rgba(224, 224, 224, 0);
+  background: rgba(230, 230, 230, 0);
   vertical-align: top;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .close:hover, .close:focus {
-  background: #e0e0e0;
+  background: #e6e6e6;
 }
 
 .close:before {

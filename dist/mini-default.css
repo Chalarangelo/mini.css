@@ -873,8 +873,8 @@ input[type="file"] {
   margin: 0.5rem;
 }
 
-.button-group button, .button-group [type="button"], .button-group [type="submit"], .button-group [type="reset"],
-.button-group .button, .button-group [role="button"] {
+.button-group > button, .button-group [type="button"], .button-group > [type="submit"], .button-group > [type="reset"],
+.button-group > .button, .button-group > [role="button"] {
   margin: 0;
   -webkit-box-flex: 1;
   max-width: 100%;
@@ -885,8 +885,7 @@ input[type="file"] {
   border-radius: 0;
 }
 
-.button-group * + button, .button-group * + [type="button"], .button-group * + [type="submit"], .button-group * + [type="reset"],
-.button-group * + .button, .button-group * + [role="button"] {
+.button-group > :not(:first-child) {
   border-left: 1px solid #bdbdbd;
 }
 
@@ -896,8 +895,7 @@ input[type="file"] {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
-  .button-group * + button, .button-group * + [type="button"], .button-group * + [type="submit"], .button-group * + [type="reset"],
-  .button-group * + .button, .button-group * + [role="button"] {
+  .button-group > :not(:first-child) {
     border: 0;
     border-top: 1px solid #bdbdbd;
   }

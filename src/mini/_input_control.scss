@@ -331,8 +331,8 @@ a[role="button"], label[role="button"], [role="button"] {
 		@if $button-group-box-shadow != none {
 			box-shadow: $button-group-box-shadow;
 		}
-		button, [type="button"], [type="submit"], [type="reset"],
-		.#{$button-class-name}, [role="button"] {
+		&> button, [type="button"], & > [type="submit"], & > [type="reset"],
+		& > .#{$button-class-name}, & > [role="button"] {
 			margin: 0;
 			// Old syntax
 			-webkit-box-flex: 1;
@@ -359,11 +359,8 @@ a[role="button"], label[role="button"], [role="button"] {
 		}
 		@if not $button-group-high-specificity-selectors {
 			@if $button-group-border-style != 0 {
-				* {
-					+ button, + [type="button"], + [type="submit"], + [type="reset"],
-					+ .#{$button-class-name}, + [role="button"] {
-						border-left: $button-group-border-style;
-					}
+				& > :not(:first-child) {
+					border-left: $button-group-border-style;
 				}
 			}
 		}
@@ -390,12 +387,9 @@ a[role="button"], label[role="button"], [role="button"] {
 			}
 			@else {
 				@if $button-group-border-style !=0 {
-					* {
-						+ button, + [type="button"], + [type="submit"], + [type="reset"],
-						+ .#{$button-class-name}, + [role="button"] {
-							border: 0;
-							border-top: $button-group-border-style;
-						}
+					& > :not(:first-child) {
+						border: 0;
+						border-top: $button-group-border-style;
 					}
 				}
 			}

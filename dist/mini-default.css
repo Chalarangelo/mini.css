@@ -1623,11 +1623,7 @@ table.striped tr:nth-of-type(2n) > td {
   transition: -webkit-transform 0.3s, transform 0.3s;
 }
 
-.tabs > [type="radio"] + label + div + [type="radio"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="radio"] + label {
-  border-left: 0;
-}
-
-.tabs.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
+.tabs > label:not(:first-of-type) {
   border-left: 0;
 }
 
@@ -1675,7 +1671,7 @@ table.striped tr:nth-of-type(2n) > td {
   transform-origin: top;
 }
 
-.tabs.stacked > [type="radio"] + label + div + [type="radio"] + label, .tabs.stacked > [type="radio"] + label + div + [type="checkbox"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="radio"] + label, .tabs.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
+.tabs.stacked > label:not(:first-of-type) {
   border: 1px solid #bdbdbd;
   border-top: 0;
 }
@@ -1698,7 +1694,7 @@ table.striped tr:nth-of-type(2n) > td {
     -webkit-order: initial;
     order: initial;
   }
-  .tabs > [type="radio"] + label + div + [type="radio"] + label {
+  .tabs > label:not(:first-of-type) {
     border: 1px solid #bdbdbd;
     border-top: 0;
   }
@@ -1842,7 +1838,7 @@ progress {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 1rem;
+  height: 0.625rem;
   width: 90%;
   width: calc(100% - 1rem);
   margin: 0.5rem 0.5rem;

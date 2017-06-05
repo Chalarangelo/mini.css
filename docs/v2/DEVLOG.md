@@ -1197,3 +1197,17 @@
 	- http://www.flaticon.com/free-icon/bacteria_191004 (Bacteria)
 	- http://www.flaticon.com/free-icon/meteor_433944 (Meteor)
 - Updated colors for `<pre>` and `<code>`, along with `<button>` and some other elements to better contrast colors on older and less bright displays. Updated both `mini-default` and `mini-lite` to fix issues with those colors.
+- Altered default height of `<progress>` elements to `0.625rem` from `1rem`, should look more modern and sleek. Updated both core flavors.
+- **State check for all modules and implemented components** (CSS variables - #19 - not included in features checked):
+	- `core` - Most likely **100% complete**, fluid type will *not* be enabled by default anytime soon. Everything else is fully nominal.
+	- `grid` - Everything works as expected, **no changes** to existing components. Possible addition of a couple of atomic css classes to make everything smoother.
+	- `input_control` - **Requires testing** for `.input-group` and other components. **New component**, `.switch`es must be added.
+	- `navigation` - **100% complete**, should be checked against the new additions to other modules to make sure everything works as expected.
+	- `table` - **New component**, `.scrollable` tables should be added. Everything else should be fine.
+	- `card` - Everything is fine, **no changes**, should check for compatibility with `grid`'s new atomic css and/or build in-module ones, too.
+	- `tab` - Most likely **no changes**, might test to see if more modern styling can be applied to the module's component.
+	- `contextual`- **New component**, `.modal` should be added. Nothing else of note here.
+	- `progress` - **100% complete**, some fancier components such as Android-styled spinner donuts might be coming later down the line, but they will be flavor-customized.
+	- `utility` - **No changes** to existing components, however some additions might be required to make everything play as expected.
+- Refer to above list in regards to the #19 feature request.
+- Reworked complex `tab` module selectors to utilize the functionality of `:not(:first-of-type)` on `label` elements.

@@ -1223,7 +1223,7 @@ progress {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 1rem;
+  height: 0.625rem;
   width: 90%;
   width: calc(100% - 1rem);
   margin: 0.5rem 0.5rem;

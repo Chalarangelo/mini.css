@@ -95,19 +95,14 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 						transform-origin: top;
 		transition: -webkit-transform 0.3s,
 												transform 0.3s;
-		// Style for tab labels except the first
-		@if $tab-border-style != 0 {
-			& + [type="radio"] + label {
-				border-left: 0;
-			}
-		}
 		@if $tab-border-radius != 0 {
 			border-bottom-left-radius: $tab-border-radius;
 			border-bottom-right-radius: $tab-border-radius;
 		}
 	}
+	// Style for tab labels except the first
 	@if $tab-border-style != 0 {
-		&.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
+		& > label:not(:first-of-type) {
 			border-left: 0;
 		}
 	}
@@ -190,11 +185,11 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 			@if $tab-border-radius != 0 {
 				border-radius: 0;
 			}
-			& + [type="radio"] + label, & + [type="checkbox"] + label {
-				@if $tab-border-style != 0 {
-					border: $tab-border-style;
-					border-top: 0;
-				}
+		}
+		& > label:not(:first-of-type) {
+			@if $tab-border-style != 0 {
+				border: $tab-border-style;
+				border-top: 0;
 			}
 		}
 		& > [type="radio"]:checked + label + div, & > [type="checkbox"]:checked + label + div {
@@ -242,11 +237,11 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 			@if $tab-border-radius != 0 {
 				border-radius: 0;
 			}
-			& + [type="radio"] + label {
-				@if $tab-border-style != 0 {
-					border: $tab-border-style;
-					border-top: 0;
-				}
+		}
+		& > label:not(:first-of-type) {
+			@if $tab-border-style != 0 {
+				border: $tab-border-style;
+				border-top: 0;
 			}
 		}
 		@if $tab-border-radius != 0 {

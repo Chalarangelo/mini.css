@@ -452,7 +452,8 @@ a[role="button"], label[role="button"], [role="button"] {
 		}
 	}
 	// Disabled and readonly styles.
-	[type="checkbox"][disabled] + label, [type="radio"][disabled] + label {
+	[type="checkbox"][disabled] + label, [type="radio"][disabled] + label,
+	[type="checkbox"]:disabled + label, [type="radio"]:disabled + label {
 		cursor: not-allowed;
 		&:before, &:after {
 			opacity: $checkbox-disabled-opacity;

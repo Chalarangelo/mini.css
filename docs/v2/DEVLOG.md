@@ -1186,3 +1186,13 @@
 - Fixed a typo in `tab`.
 - Fixed a typo in `table`.
 - Fixed a typo in `input_control`.
+
+# v2.3.0 Development Log
+
+## 20170605
+
+- Updated packaging information etc. (structural updates for next release)
+- Spent a long while, but found the icons to replace the front page's style:
+	- http://www.flaticon.com/free-icon/wings_262678 (Feather)
+	- http://www.flaticon.com/free-icon/bacteria_191004 (Bacteria)
+	- http://www.flaticon.com/free-icon/meteor_433944 (Meteor)

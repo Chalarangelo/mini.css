@@ -67,12 +67,12 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 		}
 	}
 	// Tab radio styling
-	& > [type="radio"], &.#{$tab-stacked-name} > [type="checkbox"] {
+	& > [type="radio"], & > [type="checkbox"] {
 		display: none;
 		visibility: hidden;
 	}
 	// Tab content styling
-	& > [type="radio"] + label + div, &.#{$tab-stacked-name} > [type="checkbox"] + label + div {
+	& > label + div {
 		// New syntax
 		-webkit-flex-basis: auto;
 						flex-basis: auto;
@@ -107,7 +107,7 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 		}
 	}
 	// Tab label styling for open tab
-	& > [type="radio"]:checked + label, &.#{$tab-stacked-name} > [type="checkbox"]:checked + label {
+	& > :checked + label {
 		@if $tab-label-selected-back-color != $tab-label-back-color {
 			background: $tab-label-selected-back-color;
 			&:hover, &:focus {
@@ -119,7 +119,7 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 		}
 	}
 	// Tab content styling (open tab)
-	& > [type="radio"]:checked + label + div, &.#{$tab-stacked-name} > [type="checkbox"]:checked + label + div {
+	& > :checked + label + div {
 		box-sizing: border-box;
 		position: relative;
 		height: $tab-panel-height;
@@ -171,12 +171,12 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 			}
 		}
 		@if $tab-border-radius != 0 {	// Style the last tabs' label corners when it's open as needed
-			& > [type="radio"]:checked + label, & > [type="checkbox"]:checked + label {
+			& > :checked + label {
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
 			}
 		}
-		& > [type="radio"] + label + div, & > [type="checkbox"] + label + div {
+		& > label + div {
 			-webkit-order: initial;		// Reset order to show stacked tabs properly
 							order: initial;
 			// Presentation
@@ -192,11 +192,11 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 				border-top: 0;
 			}
 		}
-		& > [type="radio"]:checked + label + div, & > [type="checkbox"]:checked + label + div {
+		& > :checked + label + div {
 			height: auto;
 		}
 		@if $tab-border-radius != 0 {
-			& > [type="radio"] + label + div:last-of-type, & > [type="checkbox"] + label + div:last-of-type {
+			& > label + div:last-of-type {
 				border-bottom-left-radius: $tab-border-radius;
 				border-bottom-right-radius: $tab-border-radius;
 			}
@@ -226,12 +226,12 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 			}
 		}
 		@if $tab-border-radius != 0 {	// Style the last tabs' label corners when it's open as needed
-			& > [type="radio"]:checked + label {
+			& > :checked + label {
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
 			}
 		}
-		& > [type="radio"] + label + div {
+		& > label + div {
 			-webkit-order: initial;		// Reset order to show stacked tabs properly
 							order: initial;
 			@if $tab-border-radius != 0 {
@@ -245,7 +245,7 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 			}
 		}
 		@if $tab-border-radius != 0 {
-			& > [type="radio"] + label + div:last-of-type {
+			& > label + div:last-of-type {
 				border-bottom-left-radius: $tab-border-radius;
 				border-bottom-right-radius: $tab-border-radius;
 			}

@@ -1598,12 +1598,12 @@ table.striped tr:nth-of-type(2n) > td {
   background: rgba(230, 230, 230, 0.8);
 }
 
-.tabs > [type="radio"], .tabs.stacked > [type="checkbox"] {
+.tabs > [type="radio"], .tabs > [type="checkbox"] {
   display: none;
   visibility: hidden;
 }
 
-.tabs > [type="radio"] + label + div, .tabs.stacked > [type="checkbox"] + label + div {
+.tabs > label + div {
   -webkit-flex-basis: auto;
   flex-basis: auto;
   -webkit-order: 2;
@@ -1627,15 +1627,15 @@ table.striped tr:nth-of-type(2n) > td {
   border-left: 0;
 }
 
-.tabs > [type="radio"]:checked + label, .tabs.stacked > [type="checkbox"]:checked + label {
+.tabs > :checked + label {
   background: #eeeeee;
 }
 
-.tabs > [type="radio"]:checked + label:hover, .tabs > [type="radio"]:checked + label:focus, .tabs.stacked > [type="checkbox"]:checked + label:hover, .tabs.stacked > [type="checkbox"]:checked + label:focus {
+.tabs > :checked + label:hover, .tabs > :checked + label:focus {
   background: rgba(238, 238, 238, 0.8);
 }
 
-.tabs > [type="radio"]:checked + label + div, .tabs.stacked > [type="checkbox"]:checked + label + div {
+.tabs > :checked + label + div {
   box-sizing: border-box;
   position: relative;
   height: 400px;
@@ -1664,7 +1664,7 @@ table.striped tr:nth-of-type(2n) > td {
   order: initial;
 }
 
-.tabs.stacked > [type="radio"] + label + div, .tabs.stacked > [type="checkbox"] + label + div {
+.tabs.stacked > label + div {
   -webkit-order: initial;
   order: initial;
   -webkit-transform-origin: top;
@@ -1676,7 +1676,7 @@ table.striped tr:nth-of-type(2n) > td {
   border-top: 0;
 }
 
-.tabs.stacked > [type="radio"]:checked + label + div, .tabs.stacked > [type="checkbox"]:checked + label + div {
+.tabs.stacked > :checked + label + div {
   height: auto;
 }
 
@@ -1690,7 +1690,7 @@ table.striped tr:nth-of-type(2n) > td {
     -webkit-order: initial;
     order: initial;
   }
-  .tabs > [type="radio"] + label + div {
+  .tabs > label + div {
     -webkit-order: initial;
     order: initial;
   }

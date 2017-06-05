@@ -746,11 +746,6 @@ input:not([type="button"]):not([type="submit"]):not([type="reset"]):hover, input
   box-shadow: none;
 }
 
-input:not([type="button"]):not([type="submit"]):not([type="reset"]):disabled, input:not([type="button"]):not([type="submit"]):not([type="reset"])[disabled], textarea:disabled, textarea[disabled], select:disabled, select[disabled] {
-  cursor: not-allowed;
-  opacity: 0.75;
-}
-
 input:not([type="button"]):not([type="submit"]):not([type="reset"]):invalid, input:not([type="button"]):not([type="submit"]):not([type="reset"]):focus:invalid, textarea:invalid, textarea:focus:invalid, select:invalid, select:focus:invalid {
   border-color: #d32f2f;
   box-shadow: none;
@@ -819,11 +814,7 @@ a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:focus, 
   opacity: 1;
 }
 
-button:disabled, button[disabled], [type="button"]:disabled, [type="button"][disabled], [type="submit"]:disabled, [type="submit"][disabled], [type="reset"]:disabled, [type="reset"][disabled],
-a.button:disabled,
-a.button[disabled], label.button:disabled, label.button[disabled], .button:disabled, .button[disabled],
-a[role="button"]:disabled,
-a[role="button"][disabled], label[role="button"]:disabled, label[role="button"][disabled], [role="button"]:disabled, [role="button"][disabled] {
+input:disabled, input[disabled], textarea:disabled, textarea[disabled], select:disabled, select[disabled], button:disabled, button[disabled], .button:disabled, .button[disabled], [role="button"]:disabled, [role="button"][disabled] {
   cursor: not-allowed;
   opacity: 0.75;
 }

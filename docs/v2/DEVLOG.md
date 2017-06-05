@@ -1212,3 +1212,4 @@
 - Refer to above list in regards to the #19 feature request.
 - Reworked complex `tab` module selectors to utilize the functionality of `:not(:first-of-type)` on `label` elements.
 - Updated `tab` selectors to use new, *loose* definitions, effectively making the module `0.04KB` lighter. Not a huge difference, but good enough due to the maintenance impact it has on the module, plus the consistency fixed for `.stacked`.
+- Moved `input_control`'s `disabled` styling to low-specificity behind the existing flag, saved another `0.05KB`, which is quite a big change. Parsing should also be faster than before. Good catch, **hugging cat**!

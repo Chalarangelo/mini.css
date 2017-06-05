@@ -187,9 +187,11 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 			border-color: $input-focus-border-color;
 			box-shadow: none;
 		}
-		&:disabled, &[disabled] {
-			cursor: not-allowed;
-			opacity: $input-disabled-opacity;
+		@if $input-high-specificity-selectors or $input-disabled-opacity != $button-disabled-opacity {
+			&:disabled, &[disabled] {
+				cursor: not-allowed;
+				opacity: $input-disabled-opacity;
+			}
 		}
 		&:invalid, &:focus:invalid{
 			border-color: $input-invalid-border-color;
@@ -265,9 +267,21 @@ a[role="button"], label[role="button"], [role="button"] {
 			opacity: 1;
 		}
 	}
-	&:disabled, &[disabled] {
-		cursor: not-allowed;
-		opacity: $button-disabled-opacity;
+	@if $input-high-specificity-selectors or $input-disabled-opacity != $button-disabled-opacity {
+		&:disabled, &[disabled] {
+			cursor: not-allowed;
+			opacity: $button-disabled-opacity;
+		}
+	}
+}
+@if not $input-high-specificity-selectors {
+	@if $input-disabled-opacity == $button-disabled-opacity {
+		input, textarea, select, button, .#{$button-class-name}, [role="button"] { // .button[disabled] is actually higher specificity than a.button, so no need for more than that
+			&:disabled, &[disabled] {
+				cursor: not-allowed;
+				opacity: $button-disabled-opacity;
+			}
+		}
 	}
 }
 @if $style-link-active-state {

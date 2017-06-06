@@ -271,7 +271,18 @@
 							<li>You can place your modal dialog anywhere on your page, as long as the structure is not altered. You can also toggle it from anywhere on a page.</li>
 						</ul><hr>
 						<div class="row">
-							<div class="col-sm-12">
+							<div class="col-sm-12 col-md-6">
+								<pre>&lt;input id=&quot;modal-toggle&quot; type=&quot;checkbox&quot;/&gt;
+&lt;label for=&quot;modal-toggle&quot;&gt;Show modal&lt;/label&gt;
+&lt;div class=&quot;modal&quot; role=&quot;dialog&quot; aria-labelledby=&quot;dialogTitle&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;label for=&quot;modal-toggle&quot; class=&quot;close&quot;&gt;&lt;/label&gt;
+    &lt;h3 class=&quot;section&quot; id=&quot;dialogTitle&quot;&gt;Bad Modal&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+								<p class="do" style="text-align:justify"><mark class="tertiary">Do:</mark>&nbsp;You can use the <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role">dialog</a>&quot;</span></code> to add accessibility to your modal dialogs. Remember to properly label it and manage keyboard focus, as required.</p>
+							</div>
+							<div class="col-sm-12 col-md-6 col-sm-last col-md-normal">
 								<pre>&lt;input id=&quot;modal-toggle&quot; type=&quot;checkbox&quot;/&gt;
 &lt;label for=&quot;modal-toggle&quot;&gt;Show modal&lt;/label&gt;
 &lt;div class=&quot;modal&quot;&gt;

@@ -1226,3 +1226,4 @@
 - Fully documented `modal` component.
 - Added navigation for `modal` component.
 - Documented customization of `modal` component.
+- Added accessibility guidelines for `modal` component.

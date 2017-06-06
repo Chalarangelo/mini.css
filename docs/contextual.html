@@ -66,7 +66,7 @@
 				<a href="tab.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="tab.html#stacked-tabs" class="sublink-1">Stacked tabs</a>
 				<br/> <a href="contextual.html#contextual-title">Contextual</a>
 				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#toasts" class="sublink-1">Toasts</a>
-				<a href="contextual.html#tooltips" class="sublink-1">Tooltips</a>
+				<a href="contextual.html#tooltips" class="sublink-1">Tooltips</a> <a href="contextual.html#modals" class="sublink-1">Modals</a>
 				<br/> <a href="progress.html#progress-title">Progress</a>
 				<a href="progress.html#basic-progress-bar" class="sublink-1">Basic progress bar</a> <a href="progress.html#progress-variants" class="sublink-1">Progress bar variants</a>
 				<a href="progress.html#donut-spinner" class="sublink-1">Donut spinner</a> <a href="progress.html#spinner-variants" class="sublink-1">Donut spinner variants</a>
@@ -84,7 +84,7 @@
       <div class="row" style="padding-top: 40px;" id="contextual-title">
         <div class="col-sm-12">
           <h1>Contextual</h1>
-          <p style="text-align:justify">The <strong>contextual</strong> module provides you with simple tags, marks and highlights for your pages, allowing you to easily emphasize parts of your text. Contextual toasts and tooltips are also provided, aiming to help deliver important information to users. HTML5 elements and simple rules are used in order to make important messages and pieces of content stand out easily.</p>
+          <p style="text-align:justify">The <strong>contextual</strong> module provides you with simple tags, marks and highlights for your pages, allowing you to easily emphasize parts of your text. Contextual toasts, tooltips and modals are also provided, aiming to help deliver important information to users. HTML5 elements and simple rules are used in order to make important messages and pieces of content stand out easily.</p>
           <p style="text-align:justify"><small>All examples showcased refer to the mini-default flavor, some class names and styles might differ based on the flavor you're using.</small></p><br/>
         </div>
       </div>
@@ -93,7 +93,7 @@
           <div class="card fluid">
             <div class="section">
               <h2>Quick overview</h2>
-              <p style="text-align:justify">Almost every website present on the web has some sort of content that needs highlighting in one way or another. The <strong>contextual</strong> module provides you with simple semantic text highlighting that utilises the <code>&lt;mark&gt;</code> HTML element. Apart from that, this module contains styles and definitions for a simple <code>.toast</code> container, that you can use to display toast messages on your websites and web apps. Toasts mimic the native application notifications of certain devices, making them mobile friendly. Finally, a simple accessible <code>.tooltip</code> implementation is included. All components in this module are fully accessible, so that's another thing not to worry about.</p><br>
+              <p style="text-align:justify">Almost every website present on the web has some sort of content that needs highlighting in one way or another. The <strong>contextual</strong> module provides you with simple semantic text highlighting that utilises the <code>&lt;mark&gt;</code> HTML element. Apart from that, this module contains styles and definitions for a simple <code>.toast</code> container, that you can use to display toast messages on your websites and web apps. Toasts mimic the native application notifications of certain devices, making them mobile friendly. Finally, a simple accessible <code>.tooltip</code> implementation is included along with an implementation for <code>.modal</code> dialogs. All components in this module are fully accessible, so that's another thing not to worry about.</p><br>
             </div>
             <div class="section">
               <h2>Quick start</h2>
@@ -227,6 +227,66 @@
 		  </div>
 		</div>
 	  </div>
+		<div class="row" id="modals">
+			<div class="col-sm-12">
+				<div class="card fluid">
+					<div class="section"><h2>Modals</h2></div>
+					<div class="section row">
+						<div class="col-sm-12 col-sm-last col-md-4 col-md-normal">
+							<div style="text-align:center"><br/>
+								<label class="button primary large" for="modal-check">Click to display a modal dialog</label><br/><br/>
+								<input id="modal-check" type="checkbox"/>
+								<div class="modal" style="text-align:initial">
+									<div class="card">
+										<label for="modal-check" class="close"></label>
+										<h3 class="section double-padded">Modal</h3>
+										<div class="section double-padded">
+											<p>This is a modal window!</p>
+											<label class="button primary" for="modal-check">Close modal</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-sm-first col-md-8 col-md-normal">
+							<p style="text-align: justify;">Modal dialogs are pretty ease to make. Simply create an <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code> element, immediately followed by a <code>&lt;div&gt;</code> element with the <code>.modal</code> class. Inside this element, you can add a <code>.card</code> element with your modal dialog's contents. Remember to add a <code>&lt;label&gt;</code> element linked to your modal dialog's <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code> to let users close the dialog. You can also apply the <code>.close</code> class to a <code>&lt;label&gt;</code> element to display a close icon at the top right of the modal dialog.</p>
+							<h3>Sample code</h3>
+							<pre>&lt;label for=&quot;modal-toggle&quot;&gt;Show modal&lt;/label&gt;
+
+&lt;input id=&quot;modal-toggle&quot; type=&quot;checkbox&quot;/&gt;
+&lt;div class=&quot;modal&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;label for=&quot;modal-toggle&quot; class=&quot;close&quot;&gt;&lt;/label&gt;
+    &lt;h3 class=&quot;section&quot;&gt;Modal&lt;/h3&gt;
+    &lt;p class=&quot;section&quot;&gt;This is a modal window!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+						</div>
+					</div>
+					<div class="section">
+					<h3>Notes</h3>
+						<ul style="text-align: justify;">
+							<li>You can use any styles you want from the <strong><a href="card.html">card</a></strong> module to create different dialogs based on context (e.g. alerts, warnings etc.).</li>
+							<li>Remember to add a <code>&lt;label&gt;</code> linked to your modal dialog's <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code> or use Javascript to alter its state, otherwise users will not be able to close the dialog.</li>
+							<li>You can place your modal dialog anywhere on your page, as long as the structure is not altered. You can also toggle it from anywhere on a page.</li>
+						</ul><hr>
+						<div class="row">
+							<div class="col-sm-12">
+								<pre>&lt;input id=&quot;modal-toggle&quot; type=&quot;checkbox&quot;/&gt;
+&lt;label for=&quot;modal-toggle&quot;&gt;Show modal&lt;/label&gt;
+&lt;div class=&quot;modal&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;label for=&quot;modal-toggle&quot; class=&quot;close&quot;&gt;&lt;/label&gt;
+    &lt;h3 class=&quot;section&quot;&gt;Bad Modal&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+								<p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;The syntax and structure of the modal dialog's container is very strict. Try to follow it exactly as described in this section.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
       <div class="row" style="padding-bottom: 20px; padding-top:20px;">
         <div class="col-sm-12">
           <p style="text-align:justify">If you want to learn more about <strong>mini.css</strong>'s modules, go back to the <a href="modules.html">modules page</a> and choose another module to see its documentation.</p>

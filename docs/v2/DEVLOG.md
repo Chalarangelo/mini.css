@@ -1220,3 +1220,9 @@
 - All changes have been tested and no errors were found (as far as I can tell).
 - Created the `.modal` component, added to the `default` flavor, documenting and adding to other flavors pending.
 - Updated all flavors for the new `.modal` component to be included (or not) as needed.
+
+## 20170606
+
+- Fully documented `modal` component.
+- Added navigation for `modal` component.
+- Documented customization of `modal` component.

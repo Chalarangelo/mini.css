@@ -62,7 +62,8 @@
 				<a href="tab.html#tab-styling" class="sublink-1">Tab styling</a>
 				<br/> <a href="contextual.html#contextual-title">Contextual</a>
 				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#toasts" class="sublink-1">Toasts</a>
-				<a href="contextual.html#tooltips" class="sublink-1">Tooltips</a> <a href="contextual.html#highlighting-mixins" class="sublink-1">Text highlighting mixins</a>
+				<a href="contextual.html#tooltips" class="sublink-1">Tooltips</a> <a href="contextual.html#modals" class="sublink-1">Modals</a>
+				<a href="contextual.html#highlighting-mixins" class="sublink-1">Text highlighting mixins</a>
 				<a href="contextual.html#toast-mixins" class="sublink-1">Toast mixins</a> <a href="contextual.html#tooltip-mixins" class="sublink-1">Tooltip mixins</a>
 				<br/> <a href="progress.html#progress-title">Progress</a>
 				<a href="progress.html#progress-bar" class="sublink-1">Progress bar</a> <a href="progress.html#donut-spinner" class="sublink-1">Donut spinner</a>
@@ -79,7 +80,7 @@
       <div class="row" style="padding-top: 40px;" id="contextual-title">
         <div class="col-sm-12">
           <h1>Contextual</h1>
-          <p style="text-align:justify">The <strong>contextual</strong> module provides you with simple tags, marks and highlights for your pages, allowing you to easily emphasize parts of your text. Contextual toasts and tooltips are also provided, aiming to help deliver important information to users. HTML5 elements and simple rules are used in order to make important messages and pieces of content stand out easily.</p><br/>
+          <p style="text-align:justify">The <strong>contextual</strong> module provides you with simple tags, marks and highlights for your pages, allowing you to easily emphasize parts of your text. Contextual toasts, tooltips and modals are also provided, aiming to help deliver important information to users. HTML5 elements and simple rules are used in order to make important messages and pieces of content stand out easily.</p><br/>
         </div>
       </div>
       <div class="row">
@@ -212,7 +213,7 @@
 					<div class="card fluid">
 						<div class="section"><h2>Tooltips</h2></div>
 						<div class="section">
-							<p style="text-align:justify">The <strong>contextual</strong> module's contains a flag to enable or disable tooltips, custom classes for creating them and other variables for style customization.</p><br/>
+							<p style="text-align:justify">The <strong>contextual</strong> module contains a flag to enable or disable tooltips, custom classes for creating them and other variables for style customization.</p><br/>
 							<table style="width: 100%" class="striped">
 								<caption>Variables</caption>
 								<thead>
@@ -262,6 +263,59 @@
 							<h3>Notes:</h3>
 							<ol style="text-align:justify">
 								<li id="tooltip-note-one">The values used in the tooltip components will only be used if <code>$include-tooltip</code> is set to <code class="fore-tertiary">true</code>.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" id="modals">
+				<div class="col-sm-12">
+					<div class="card fluid">
+						<div class="section"><h2>Modals</h2></div>
+						<div class="section">
+							<p style="text-align:justify">The <strong>contextual</strong> module contains a flag to enable or disable modals, a custom class for creating them and other variables for style customization.</p><br/>
+							<table style="width: 100%" class="striped">
+								<caption>Variables</caption>
+								<thead>
+									<tr><th>Variable</th><th>Type</th><th>Description</th><th>Sample value</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Variable">$include-modal</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Enables modal components<sup><a href="#modal-note-one">1</a></sup></td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$modal-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for modal components<sup><a href="#modal-note-one">1</a></sup></td><td data-label="Sample value">'modal'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$modal-back-color</td><td data-label="Type">Color</td>
+										<td data-label="Description">Background color for modal components<sup><a href="#modal-note-one">1</a></sup></td><td data-label="Sample value">black</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$modal-back-opacity</td><td data-label="Type">Opacity</td>
+										<td data-label="Description">Background opacity for modal components<sup><a href="#modal-note-one">1</a></sup></td><td data-label="Sample value">0.4</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$modal-close-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name of the close button of the modal component<sup><a href="#modal-note-one">1</a></sup></td><td data-label="Sample value">'close'</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$modal-close-top</td><td data-label="Type">Position top</td>
+										<td data-label="Description">Top position of the close button of the modal component<sup><a href="#modal-note-one">1</a></sup></td><td data-label="Sample value">12px</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$modal-close-right</td><td data-label="Type">Position right</td>
+										<td data-label="Description">Right position of the close button of the modal component<sup><a href="#modal-note-one">1</a></sup><td data-label="Sample value">4px</td>
+									</tr>
+								</tbody>
+							</table><br/>
+						</div>
+						<div class="section">
+							<h3>Notes:</h3>
+							<ol style="text-align:justify">
+								<li id="modal-note-one">The values used in the modal components will only be used if <code>$include-modal</code> is set to <code class="fore-tertiary">true</code>.</li>
 							</ol>
 						</div>
 					</div>

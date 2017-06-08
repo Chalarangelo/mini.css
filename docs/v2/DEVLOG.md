@@ -1238,3 +1238,6 @@
 - Added `make-switch-alt-color` mixin for `.switch` components.
 - Added `cursor:pointer` to `checkbox` and `.switch` components.
 - Added documentation and navigation for `.switch` component.
+- Added `box-shadow` option to `.switch` (was missing before).
+- Added `box-shadow` to `checkbox` and `radio`, updated flavors as required.
+- Added and updated customization documentation and navigation for `.switch` component.

@@ -951,6 +951,7 @@ input[type="file"] {
   background: #f2edff;
   color: #211423;
   margin-left: -20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .input-group [type="checkbox"] + label:hover:before, .input-group [type="checkbox"] + label:focus:before, .input-group [type="radio"] + label:hover:before, .input-group [type="radio"] + label:focus:before {

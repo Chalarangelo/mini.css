@@ -218,6 +218,7 @@ $checkbox-border-radius:			$input-border-radius;	// Border radius for checkbox/r
 $checkbox-focus-border-color: $input-focus-border-color;// Border color for checkbox/radio on focus
 $checkbox-bottom-spacing:				0.375rem;						// Bottom spacing for checkbox/radio
 $checkbox-disabled-opacity:	$input-disabled-opacity;// Opacity for disabled checkbox/radio
+$checkbox-box-shadow:						none;								// Box shadow for checkbox/radio
 $include-switch: 								false;							// Should switch components be included? (`true`/`false`) [5]
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values

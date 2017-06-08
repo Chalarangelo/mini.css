@@ -448,6 +448,9 @@ a[role="button"], label[role="button"], [role="button"] {
 			@else {
 				margin-left: - $checkbox-size * 1.25;
 			}
+			@if $checkbox-box-shadow != none {
+				box-shadow: $checkbox-box-shadow;
+			}
 		}
 		// Hover, focus styling.
 		&:hover, &:focus {
@@ -521,6 +524,9 @@ a[role="button"], label[role="button"], [role="button"] {
 				@else {
 					margin-left: - ($switch-bar-width + $switch-knob-width/2);
 				}
+				@if $switch-bar-box-shadow != none {
+					box-shadow: $switch-bar-box-shadow;
+				}
 			}
 			// Styling for the knob part of the switch
 			&:after {
@@ -546,6 +552,9 @@ a[role="button"], label[role="button"], [role="button"] {
 				@else {
 					bottom: (2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2;
 					margin-left: - ($switch-bar-width + $switch-knob-width);
+				}
+				@if $switch-knob-box-shadow != none {
+					box-shadow: $switch-knob-box-shadow;
 				}
 	      transition: left 0.3s;
 			}

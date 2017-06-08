@@ -947,6 +947,7 @@ input[type="file"] {
   background: #E5E9F0;
   color: #2E3440;
   margin-left: -20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .input-group [type="checkbox"] + label:hover:before, .input-group [type="checkbox"] + label:focus:before, .input-group [type="radio"] + label:hover:before, .input-group [type="radio"] + label:focus:before {
@@ -991,6 +992,7 @@ input[type="file"] {
   border-radius: 8px;
   background: #D8DEE9;
   margin-left: -38px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .input-group [type="checkbox"] + label.switch:after, .input-group [type="radio"] + label.switch:after {
@@ -1004,6 +1006,7 @@ input[type="file"] {
   border-radius: 100%;
   bottom: 5px;
   margin-left: -48px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
   transition: left 0.3s;
 }
 

@@ -238,6 +238,7 @@ $checkbox-border-radius:			$input-border-radius;	// Border radius for checkbox/r
 $checkbox-focus-border-color: $input-focus-border-color;// Border color for checkbox/radio on focus
 $checkbox-bottom-spacing:				0.375rem;						// Bottom spacing for checkbox/radio
 $checkbox-disabled-opacity:	$input-disabled-opacity;// Opacity for disabled checkbox/radio
+$checkbox-box-shadow:						none;								// Box shadow for checkbox/radio
 $include-switch: 								true;								// Should switch components be included? (`true`/`false`)
 $switch-name: 									'switch';						// Class name for switch components
 $switch-bar-back-color: 				#c9c9c9;						// Back color for the switch's bar
@@ -245,14 +246,16 @@ $switch-on-bar-back-color: 			#dcdcdc;						// Back color for the switch's bar w
 $switch-bar-width:							1.75rem;						// Width for the switch's bar
 $switch-bar-height:							0.875rem;						// Height for the switch's bar
 $switch-bar-border-style: 			0;									// Border style for the switch's bar
-$switch-bar-border-radius: 			0.5rem;							// Borer radius for the switch's bar
+$switch-bar-border-radius: 			0.5rem;							// Border radius for the switch's bar
 $switch-bottom-spacing:					0.5rem;							// Bottom spacing for the switch's bar
+$switch-bar-box-shadow:					none;								// Box shadow for the switch's bar
 $switch-knob-back-color: 				#e0e0e0;						// Back color for the switch's knob
 $switch-on-knob-back-color: 		#0277bd;						// Back color for the switch's knob when the switch is turned on
 $switch-knob-width:							1.25rem;						// Width for the switch's knob
 $switch-knob-height: 						1.25rem;						// Height for the switch's knob
 $switch-knob-border-style: 			0;									// Border style for the switch's knob
 $switch-knob-border-radius: 		100%;								// Borer radius for the switch's knob
+$switch-knob-box-shadow:				none;								// Box shadow for the switch's knob
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values
 //	specified in the corresponding variables.

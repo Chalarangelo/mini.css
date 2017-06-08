@@ -247,12 +247,14 @@ $switch-bar-height:							0.875rem;						// Height for the switch's bar
 $switch-bar-border-style: 			0;									// Border style for the switch's bar
 $switch-bar-border-radius: 			0.5rem;							// Borer radius for the switch's bar
 $switch-bottom-spacing:					0.5rem;							// Bottom spacing for the switch's bar
+$switch-bar-box-shadow:					none;								// Box shadow for the switch's bar
 $switch-knob-back-color: 				#39444a;						// Back color for the switch's knob
 $switch-on-knob-back-color: 		#0277bd;						// Back color for the switch's knob when the switch is turned on
 $switch-knob-width:							1.25rem;						// Width for the switch's knob
 $switch-knob-height: 						1.25rem;						// Height for the switch's knob
 $switch-knob-border-style: 			0;									// Border style for the switch's knob
 $switch-knob-border-radius: 		100%;								// Borer radius for the switch's knob
+$switch-bar-box-shadow:					none;								// Box shadow for the switch's knob
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values
 //	specified in the corresponding variables.

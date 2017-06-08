@@ -1235,3 +1235,6 @@
 - Altered `input_control`'s `checkbox` components to properly work with the latest changes to the unit system.
 - Completed `.switch` component, total size (gzipped) is `0.10KB`.
 - Updated `mini-default` with `.switch`, other flavors, too, following their logical addition pattern.
+- Added `make-switch-alt-color` mixin for `.switch` components.
+- Added `cursor:pointer` to `checkbox` and `.switch` components.
+- Added documentation and navigation for `.switch` component.

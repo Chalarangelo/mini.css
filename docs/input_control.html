@@ -50,7 +50,7 @@
 				<a href="grid.html#predefined-layout" class="sublink-1">Predefined layouts</a> <a href="grid.html#column-offset" class="sublink-1">Column offsets</a>
 				<a href="grid.html#column-reorder" class="sublink-1">Column reordering</a> <a href="grid.html#media-object" class="sublink-1">Media object pattern</a>
 				<br/> <a href="input_control.html#input-control-title">Input Control</a>
-				<a href="input_control.html#forms-input" class="sublink-1">Forms &amp; input</a> <a href="input_control.html#checkbox-radio" class="sublink-1">Checkboxes &amp; radio buttons</a>
+				<a href="input_control.html#forms-input" class="sublink-1">Forms &amp; input</a> <a href="input_control.html#checkbox-radio" class="sublink-1">Checkboxes &amp; radio buttons</a> <a href="input_control.html#switches" class="sublink-1">Switches</a>
 				<a href="input_control.html#buttons" class="sublink-1">Buttons &amp; button groups</a> <a href="input_control.html#file-upload" class="sublink-1">File upload buttons</a>
 				<br/> <a href="navigation.html#navigation-title">Navigation</a>
 				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a> <a href="navigation.html#drawer" class="sublink-1">Drawer</a>
@@ -362,6 +362,54 @@
           </div>
         </div>
       </div>
+			<div class="row" id="switches">
+				<div class="col-sm-12">
+					<div class="card fluid">
+						<div class="section"><h2>Switches</h2></div>
+						<div class="section row">
+							<div class="col-sm-12 col-sm-last col-md-12 col-md-normal col-lg-4 col-lg-normal">
+								<div class="box-centered">
+									<br>
+									<div class="input-group">
+								    <input type="checkbox" id="switch-box" tabindex="0">
+								  	<label for="switch-box" class="switch">Switch</label>
+								  </div>
+									<br>
+								</div>
+							</div>
+							<div class="col-sm-12 col-sm-first col-md-12 col-md-normal col-lg-8 col-lg-normal">
+								<p style="text-align: justify;">Switches are almost identical in structure to checkboxes and radio buttons (an <code>.input-group</code> containing an <code>&lt;input&gt;</code> of the proper <code><span class="secondary">type</span></code> inside it (<code><span class="fore-primary">&quot;checkbox&quot;</span></code> or <code><span class="fore-primary">&quot;radio&quot;</span></code>), followed immediately by a <code>&lt;label&gt;</code> linking to it), their only difference being that you need to add the <code>.switch</code> class to <code>&lt;label&gt;</code> element to turn your input into a switch. Remember to apply <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to your <code>&lt;input&gt;</code> to make it accessible.</p>
+								<h3>Sample code</h3>
+								<pre>&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch1&quot; tabindex=&quot;0&quot;&gt;
+  &lt;label for=&quot;switch1&quot; class=&quot;switch&quot;&gt;Checkbox switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radswitch1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
+  &lt;label for=&quot;radswitch1&quot; class=&quot;switch&quot;&gt;Radio switch&lt;/label&gt;
+&lt;/div&gt;</pre>
+							</div>
+						</div>
+						<div class="section">
+						<h3>Notes</h3>
+							<ul style="text-align: justify;">
+								<li>You can create your own color variants for the <code>.switch</code> component. For more information, check out the <a href="customization.html">customization page</a>.</li>
+							</ul><hr>
+							<div class="row">
+								<div class="col-sm-12">
+									<pre>&lt;div class=&quot;input-group&quot;&gt;
+  &lt;label for=&quot;switch1&quot;&gt;Switch with text on its left&lt;/label&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch1&quot; tabindex=&quot;0&quot;&gt;
+  &lt;label for=&quot;switch1&quot; class=&quot;switch&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;</pre>
+									<p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;By using two <code>&lt;label&gt;</code> elements, you can move the actual <code>.switch</code> to the right of the label's text, effectively allowing you to change the layout. Remember to not add any text to your second <code>&lt;label&gt;</code> that implements the <code>.switch</code> class. You might want, however, to add a few trailing spaces to the first <code>&lt;label&gt;</code> element to make sure the text does not get covered by the component.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
       <div class="row" id="buttons">
         <div class="col-sm-12">
           <div class="card fluid">

@@ -425,6 +425,7 @@ a[role="button"], label[role="button"], [role="button"] {
 		@else {
 			margin-left: $checkbox-size * 1.25;
 		}
+		cursor: pointer;
 		// Styling for checkbox/radio box part.
 		&:before {
 			display: inline-block;

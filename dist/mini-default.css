@@ -915,6 +915,7 @@ input[type="file"] {
 .input-group [type="checkbox"] + label, .input-group [type="radio"] + label {
   position: relative;
   margin-left: 1.25rem;
+  cursor: pointer;
 }
 
 .input-group [type="checkbox"] + label:before, .input-group [type="radio"] + label:before {

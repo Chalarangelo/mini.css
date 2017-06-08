@@ -58,3 +58,44 @@
 		}
 	}
 }
+// Mixin for alternate switch (switch color variants).
+// Variables:
+// - $switch-alt-name : The name of the class used for the alternate switch.
+// - $switch-alt-on-knob-back-color : The background color of the alternate switch's knob when the switch is turned on.
+// - $switch-alt-on-bar-back-color : (Optional) The background color of the alternate switch's bar when the switch is turned on. Defaults to the background color of the switch's bar when the switch is turned on.
+// - $switch-alt-knob-back-color : (Optional) The background color of the alternate switch's knob. Defaults to the background color of the switch's knob.
+// - $switch-alt-bar-back-color : (Optional) The background color of the alternate switch's bar. Defaults to the background color of the switch's bar.
+@mixin make-switch-alt-color ($switch-alt-name, $switch-alt-on-knob-back-color,
+	$switch-alt-on-bar-back-color: $switch-on-bar-back-color, $switch-alt-knob-back-color: $switch-knob-back-color,
+	$switch-alt-bar-back-color: $switch-bar-back-color) {
+	@if not ($include-switch) {
+		@error "Input_control module's switch mixins are only available if switchws are enabled. Set '$include-switch' to 'true' and try again!";
+	}
+	[type="checkbox"] + label.#{$switch-name}.#{$switch-alt-name},
+	[type="radio"] + label.#{$switch-name}.#{$switch-alt-name} {
+		&:before {
+			@if $switch-alt-bar-back-color != $switch--bar-back-color {
+				background: $switch-alt-bar-back-color;
+			}
+		}
+		&:after {
+			@if $switch-alt-knob-back-color != $switch-knob-back-color {
+				background: $switch-alt-knob-back-color;
+			}
+		}
+	}
+	[type="checkbox"]:checked + label.#{$switch-name}.#{$switch-alt-name},
+	[type="radio"]:checked + label.#{$switch-name}.#{$switch-alt-name} {
+		&:before {
+			@if $switch-alt-on-bar-back-color != $switch-on-bar-back-color {
+				background: $switch-alt-on-bar-back-color;
+			}
+		}
+		&:after {
+			@if $switch-alt-on-knob-back-color != $switch-on-knob-back-color {
+				background: $switch-alt-on-knob-back-color;
+			}
+		}
+	}
+
+}

@@ -976,14 +976,14 @@ input[type="file"] {
 }
 
 .input-group [type="checkbox"]:checked + label:after, .input-group [type="radio"]:checked + label:after {
-  margin-left: -20px;
   position: absolute;
+  background: #211423;
+  content: '';
+  margin-left: -20px;
   bottom: 7px;
   left: 4px;
   width: 10px;
   height: 10px;
-  background: #211423;
-  content: '';
 }
 
 /*

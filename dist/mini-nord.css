@@ -972,14 +972,47 @@ input[type="file"] {
 }
 
 .input-group [type="checkbox"]:checked + label:after, .input-group [type="radio"]:checked + label:after {
-  margin-left: -20px;
   position: absolute;
+  background: #2E3440;
+  content: '';
+  margin-left: -20px;
   bottom: 10px;
   left: 4px;
   width: 10px;
   height: 10px;
-  background: #2E3440;
+}
+
+.input-group [type="checkbox"] + label.switch:before, .input-group [type="radio"] + label.switch:before {
+  bottom: 8px;
+  width: 28px;
+  height: 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #D8DEE9;
+  margin-left: -38px;
+}
+
+.input-group [type="checkbox"] + label.switch:after, .input-group [type="radio"] + label.switch:after {
+  display: inline-block;
   content: '';
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #ECEFF4;
+  border-radius: 100%;
+  bottom: 5px;
+  margin-left: -48px;
+  transition: left 0.3s;
+}
+
+.input-group [type="checkbox"]:checked + label.switch:after, .input-group [type="radio"]:checked + label.switch:after {
+  left: 28px;
+  width: 20px;
+  height: 20px;
+  bottom: 5px;
+  margin-left: -48px;
+  background: #5E81AC;
 }
 
 /*

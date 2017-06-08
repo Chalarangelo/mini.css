@@ -14,6 +14,7 @@ $base-font-family:																// Default font stack for all elements:
 	'-apple-system, BlinkMacSystemFont,\"Segoe UI\",\"Roboto\", \"Droid Sans\",\"Helvetica Neue\", Helvetica, Arial, sans-serif';
 // OS X and iOS system fonts (San Francisco) -> Windows system fonts -> Android system fonts (newer and older) -> Fallback fonts
 $base-root-font-size:		16px;											// Root font sizing for all elements [1]
+$_1px:	(1px/$base-root-font-size) * 1rem;				// Calculated rem value of 1px [1]
 $base-font-size:				1rem;											// Default font sizing for all elements [2]
 $base-line-height:			1.5;											// Default line height for all elements.
 $use-fluid-typography:	false;										// Should fluid typography be used at the root element? (`true`/`false`)
@@ -38,20 +39,20 @@ $list-left-padding:			1rem;											// Left padding for <ol> and <ul> elements
 $bold-font-weight:			700;											// Font weight for <b> and <strong>
 $horizontal-rule-line-height:	1.25em;							// <hr> line height
 $horizontal-rule-margin:	0.5rem;									// <hr> margin
-$horizontal-rule-border-style:	1px solid #8c8c8c;// Border style for horizontal rules (used in the <hr> element's border-top)
+$horizontal-rule-border-style:	$_1px solid #8c8c8c;// Border style for horizontal rules (used in the <hr> element's border-top)
 $horizontal-rule-fancy-style:	true;								// Should a fancy styling be applied for the <hr> element (`true`/`false`) [5]
 $horizontal-rule-fancy-gradient:"to right, #bdbdbd, #8c8c8c, #bdbdbd";					// Gradient style for fancy horizontal rule
 $blockquote-back-color:			#eeeeee;							// Background color for <blockquote>
 $blockquote-fore-color:			$fore-color;					// Text color for <blockquote>
 $blockquote-margin:					0.5rem;								// Margin for <blockquote>
 $blockquote-padding:				0.5rem 0.5rem 1.5rem;	// Padding for <blockquote>
-$blockquote-sidebar-style:	4px solid #505050;		// Style for the sidebar of <blockquote>
-$blockquote-cite-font-size:	0.875rem;						// Font size for citation of <blockquote>
+$blockquote-sidebar-style:	4*$_1px solid #505050;// Style for the sidebar of <blockquote>
+$blockquote-cite-font-size:	0.875rem;							// Font size for citation of <blockquote>
 $blockquote-cite-fore-color:			#505050;				// Text color for citation of <blockquote>
 $blockquote-cite-left-position:		0.625rem;				// Left padding for citation of <blockquote>
 $blockquote-cite-bottom-position:	0;							// Bottom padding for citation of <blockquote>
 $blockquote-border-style:					0;							// Border style for <blockquote>
-$blockquote-border-radius:				0 2px 2px 0;		// Border radius for <blockquote>
+$blockquote-border-radius:	0 2*$_1px 2*$_1px 0;	// Border radius for <blockquote>
 $blockquote-box-shadow:						none;						// Box shadow for <blockquote>
 $use-default-code-fonts:			true;								// Should default font choice (monospace) be used for code elements? (`true`/`false`) [6]
 //$code-font-family:					monospace, monospace;	// Fonts for code elements if not default
@@ -59,17 +60,17 @@ $code-element-padding:				0.125rem 0.25rem;			// Padding for <code>
 $code-element-fore-color:			$fore-color;					// Text color for <code>
 $code-element-back-color:			#e6e6e6;							// Background color for <code>
 $code-element-border-style:		0;										// Border style for <code>
-$code-element-border-radius:	2px;									// Border radius for <code>
+$code-element-border-radius:	2*$_1px;							// Border radius for <code>
 $code-element-box-shadow:			none;									// Box shadow for <code>
 $pre-element-padding:					0.75rem;							// Padding for <pre>
 $pre-element-fore-color:	$code-element-fore-color;	// Text color for <pre>
 $pre-element-back-color:	$code-element-back-color;	// Background color for <pre>
 $pre-element-border-style:		0;										// Border style for <pre>
-$pre-element-border-radius:		0 2px 2px 0;;					// Border radius for <pre>
+$pre-element-border-radius:		0 2*$_1px 2*$_1px 0;;	// Border radius for <pre>
 $pre-element-margin:					0.5rem;								// Margin for <pre>
 $pre-element-box-shadow:			none;									// Box shadow for <pre>
 $add-pre-element-sidebar:		true;										// Should a fancy sidebar be added to the left side of <pre> (`true`/`false`) [7]
-$pre-element-sidebar-style:		4px solid #1565c0;		// Style of the sidebar of <pre>
+$pre-element-sidebar-style:		4*$_1px solid #1565c0;// Style of the sidebar of <pre>
 $kbd-element-padding:				$code-element-padding;	// Padding for <kbd>
 $kbd-element-fore-color:			#fafafa;							// Text color for <kbd>
 $kbd-element-back-color:			#0c0c0c;							// Background color for <kbd>
@@ -100,7 +101,8 @@ $figcaption-font-size:		0.8125rem;								// Font size of <figcaption> elements
 $figcaption-fore-color:		#424242;									// Text color for <figcaption> elements
 //	Notes:
 // [1] - The value $base-root-font-size should be in `px` only! This rule is very important, as it will determine the root
-//	element's font sizing.
+//	element's font sizing. The value of $_1px is calculated based on the value of $base-root-font-size, please do not alter
+// 	the way that it's calculated.
 // [2] - The value of $base-font-size will only be used if the value of $apply-defaults-to-all is set to `true` (see [3]).
 //	This is due to the fact that applying the value of it on the root element again will overwrite the value of
 //	$base-root-font-size (see [1]). The value of this variable should be set in either `em` or `rem`.
@@ -149,14 +151,14 @@ $grid-large-prefix:						'lg';									// Large screen class prefix for grid
 //	Variables for forms and inputs
 $form-back-color:				#eeeeee;										// Background color for forms
 $form-fore-color:				$fore-color;								// Text color for forms
-$form-border-style:			1px solid #c9c9c9;					// Border style for forms
+$form-border-style:			$_1px solid #c9c9c9;				// Border style for forms
 $form-border-radius:		0;													// Border radius for forms
 $form-margin:						0.5rem;											// Margin for forms
 $form-padding:					0.75rem 0.5rem 1.125rem;		// Padding for forms
 $form-box-shadow:				none;												// Box shadow for forms
 $fieldset-back-color:		$form-back-color;						// Background color for fieldset
-$fieldset-border-style:	1px solid #d0d0d0;					// Border style for fieldset
-$fieldset-border-radius:2px;												// Border radius for fieldset
+$fieldset-border-style:	$_1px solid #d0d0d0;				// Border style for fieldset
+$fieldset-border-radius:2*$_1px;										// Border radius for fieldset
 $fieldset-margin:				0.125rem;										// Margin for fieldset
 $fieldset-padding:			0.5rem;											// Padding for fieldset
 $legend-font-weight:		$bold-font-weight;					// Font weight for legend
@@ -170,8 +172,8 @@ $input-group-fluid-name:'fluid';										// Class name for fluid input groups
 $input-group-mobile-breakpoint:	767px;							// Breakpoint for fluid input group mobile view
 $input-back-color:			#fafafa;										// Background for input
 $input-fore-color:			$fore-color;								// Text color for input
-$input-border-style:		1px solid #c9c9c9;					// Border style for input
-$input-border-radius:		2px;												// Border radius for input
+$input-border-style:		$_1px solid #c9c9c9;				// Border style for input
+$input-border-radius:		2*$_1px;										// Border radius for input
 $input-margin:					0.25rem;										// Margin for input
 $input-padding:					0.5rem 0.75rem;							// Padding for input
 $input-focus-border-color:		#0288d1;							// Border color for focused input
@@ -185,14 +187,14 @@ $button-back-opacity:		0.75;												// Background opacity for button element
 $button-hover-back-opacity:		1;										// Background opacity for button elements on hover or focus
 $button-fore-color:			$fore-color;								// Text color for button elements
 $button-border-style:		0;													// Border style for button elements
-$button-border-radius:	2px;												// Border radius for button elements
+$button-border-radius:	2*$_1px;										// Border radius for button elements
 $button-padding:				0.5rem 0.75rem;							// Padding for button elements
 $button-margin:					0.5rem;											// Margin for button elements
 $button-box-shadow:			none;												// Box shadow for buttons
 $button-disabled-opacity:		0.75;										// Disabled button elements opacity
 $button-class-name:			'button';										// Class for custom button elements
 $button-group-name:			'button-group';							// Class for button groups
-$button-group-border-style:	1px solid #bdbdbd;			// Border style for button groups
+$button-group-border-style:	$_1px solid #bdbdbd;		// Border style for button groups
 $button-group-margin:		$button-margin;							// Margin for button groups
 $button-group-box-shadow:		none;										// Box shadow for button groups
 $button-group-mobile-breakpoint:767px;							// Breakpoint for button group mobile view
@@ -219,23 +221,38 @@ $button-variant4-hover-back-opacity:		1;					// Background opacity for button va
 $button-variant4-fore-color:						#fafafa;		// Text color for button variant 4
 $button-style1-name:						'small';						// Class name for button style 1
 $button-style1-border-style:		0;									// Border style for button style 1
-$button-style1-border-radius:		1px;								// Border radius for button style 1
+$button-style1-border-radius:		$_1px;							// Border radius for button style 1
 $button-style1-padding:					0.25rem 0.375rem;		// Padding for button style 1
 $button-style1-margin:					0.5rem;							// Margin for button style 1
 $button-style2-name:						'large';						// Class name for button style 2
 $button-style2-border-style:		0;									// Border style for button style 2
-$button-style2-border-radius:		4px;								// Border radius for button style 2
+$button-style2-border-radius:		4*$_1px;						// Border radius for button style 2
 $button-style2-padding:					0.75rem 1.125rem;		// Padding for button style 2
 $button-style2-margin:					0.5rem;							// Margin for button style 2
-$checkbox-size:							 $base-root-font-size;	// Size for checkbox/radio [3]
+$checkbox-size:							 		1rem;								// Size for checkbox/radio [3]
 $checkbox-back-color:						$input-back-color;	// Background clor for checkbox/radio
 $checkbox-fore-color:						$input-fore-color;	// Text/mark color for checkbox/radio
-$checkbox-border-thickness:			1px;								// Border thickness for checkbox/radio
+$checkbox-border-thickness:			$_1px;							// Border thickness for checkbox/radio
 $checkbox-border-color:					#bdbdbd;						// Border color for checkbox/radio
 $checkbox-border-radius:			$input-border-radius;	// Border radius for checkbox/radio
 $checkbox-focus-border-color: $input-focus-border-color;// Border color for checkbox/radio on focus
-$checkbox-bottom-spacing:				6px;								// Bottom spacing for checkbox/radio
+$checkbox-bottom-spacing:				0.375rem;						// Bottom spacing for checkbox/radio
 $checkbox-disabled-opacity:	$input-disabled-opacity;// Opacity for disabled checkbox/radio
+$include-switch: 								true;								// Should switch components be included? (`true`/`false`)
+$switch-name: 									'switch';						// Class name for switch components
+$switch-bar-back-color: 				#c9c9c9;						// Back color for the switch's bar
+$switch-on-bar-back-color: 			#dcdcdc;						// Back color for the switch's bar when the switch is turned on
+$switch-bar-width:							1.75rem;						// Width for the switch's bar
+$switch-bar-height:							0.875rem;						// Height for the switch's bar
+$switch-bar-border-style: 			0;									// Border style for the switch's bar
+$switch-bar-border-radius: 			0.5rem;							// Borer radius for the switch's bar
+$switch-bottom-spacing:					0.5rem;							// Bottom spacing for the switch's bar
+$switch-knob-back-color: 				#e0e0e0;						// Back color for the switch's knob
+$switch-on-knob-back-color: 		#0277bd;						// Back color for the switch's knob when the switch is turned on
+$switch-knob-width:							1.25rem;						// Width for the switch's knob
+$switch-knob-height: 						1.25rem;						// Height for the switch's knob
+$switch-knob-border-style: 			0;									// Border style for the switch's knob
+$switch-knob-border-radius: 		100%;								// Borer radius for the switch's knob
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values
 //	specified in the corresponding variables.
@@ -263,7 +280,7 @@ $include-header-sticky:		true;											// Should sticky <header> elements be i
 $header-sticky-name:			'sticky';									// Class name for sticky <header>
 $nav-back-color:					#eceff1;									// Background for <nav>
 $nav-fore-color:					$fore-color;							// Text color for <nav>
-$nav-border-style:				1px solid #c9c9c9;				// Border style for <nav>
+$nav-border-style:				$_1px solid #c9c9c9;				// Border style for <nav>
 $nav-border-radius:				0;												// Border radius for <nav>
 $nav-padding:							0.75rem 1rem;							// Padding for <nav>
 $nav-margin:							0.5rem;										// Margin for <nav>
@@ -274,7 +291,7 @@ $nav-sublink-depth:				2;												// Amount of subcategory classes to add
 $nav-sublink-padding-left:	1rem;										// Left padding to add to subcategories
 $nav-include-sublink-bar:	true;											// Should a left border bar be added to subcategories (`true`/`false`) [2]
 $nav-sublink-bar-left-position: 0.1875rem;					// Left position of subcategory bar
-$nav-sublink-bar-width:		1px;											// Width of the subcategory bar
+$nav-sublink-bar-width:		$_1px;											// Width of the subcategory bar
 $nav-sublink-bar-color:		#bdbdbd;									// Subcategory bar color
 $drawer-name:							'drawer';									// Class name for the drawer component
 $drawer-back-color:				$nav-back-color;					// Background color of the drawer component
@@ -311,7 +328,7 @@ $footer-sticky-name:			'sticky';									// Class name for sticky <footer> eleme
 // [3] - If the value of $include-footer-bottom is `true`, a class will be created that will allow for sticky positioning
 //	of <footer> elements, using the value of $footer-sticky-name for the name of the class.
 //	Variables for responsive tables
-$table-border-style:			1px solid #c9c9c9;				// Border style for <table> and children
+$table-border-style:			$_1px solid #c9c9c9;				// Border style for <table> and children
 $table-border-radius:			0;												// Border radius for <table> and children
 $table-margin:						0 auto;										// Margin for <table>
 $table-box-shadow:				none;											// Box shadow for <table>
@@ -342,12 +359,12 @@ $table-striped-alt-body-back-color:		#e5e5e5;			// Alternate background color fo
 $card-name:							'card';											// Class name for cards
 $card-back-color:				#fafafa;										// Background color for cards
 $card-fore-color:				$fore-color;								// Text color for cards
-$card-border-style:			1px solid #acacac;					// Border style for cards
+$card-border-style:			$_1px solid #acacac;					// Border style for cards
 $card-border-radius:		0;													// Border radius for cards
 $card-margin:						0.5rem;											// Margin for cards
 $card-box-shadow:				none;												// Box shadow for cards
 $card-section-name:						'section';						// Class name for card sections
-$card-section-border-style:		1px solid #c9c9c9;		// Border style for card sections
+$card-section-border-style:		$_1px solid #c9c9c9;		// Border style for card sections
 $card-section-padding:				0.5rem;								// Padding for card sections
 $card-section-media-name:			'media';							// Class name for card media sections
 $card-section-media-height:		200px;								// Height for card media setions
@@ -361,15 +378,15 @@ $card-size3-width:						100%;									// Width for fluid cards
 $card-style1-name:						'warning';						// Class name for card style 1
 $card-style1-back-color:			#ffca28;							// Background color for card style 1
 $card-style1-fore-color:			$fore-color;					// Text color for card style 1
-$card-style1-border-style:		1px solid #e8b825;		// Border style for card style 1
+$card-style1-border-style:		$_1px solid #e8b825;		// Border style for card style 1
 $card-style1-border-radius:		0;										// Border radius for card style 1
-$card-style1-section-border-style:1px solid #e8b825;// Border style for card style 1 sections
+$card-style1-section-border-style:$_1px solid #e8b825;// Border style for card style 1 sections
 $card-style2-name:						'error';							// Class name for card style 2
 $card-style2-back-color:			#b71c1c;							// Background color for card style 2
 $card-style2-fore-color:			#fafafa;							// Text color for card style 2
-$card-style2-border-style:		1px solid #a71a1a;		// Border style for card style 2
+$card-style2-border-style:		$_1px solid #a71a1a;		// Border style for card style 2
 $card-style2-border-radius:		0;										// Border radius for card style 2
-$card-style2-section-border-style:1px solid #a71a1a;// Border style for card style 2 sections
+$card-style2-section-border-style:$_1px solid #a71a1a;// Border style for card style 2 sections
 $card-section-style1-name:				'dark';						// Class name for card section style 1
 $card-section-style1-back-color:	#e0e0e0;					// Background color for card section style 1
 $card-section-style1-fore-color:	$fore-color;			// Text color for card section style 1
@@ -390,7 +407,7 @@ $tab-label-selected-fore-color:	$fore-color;				// Text color for open tab's lab
 $tab-label-hover-opacity:				0.8;								// Opacity of the tab's label on hover
 $tab-label-padding:							0.75rem;						// Padding for tabs' labels
 $tab-label-height:							1.5rem;							// Height for tabs' labels
-$tab-border-style:							1px solid #bdbdbd;	// Border style for tabs
+$tab-border-style:							$_1px solid #bdbdbd;	// Border style for tabs
 $tab-border-radius:							0;									// Border radius for tabs
 $tab-panel-back-color:					#fafafa;						// Background color for tabs' panels
 $tab-panel-fore-color:					$fore-color;				// Text color for tabs' panels
@@ -404,7 +421,7 @@ $mark-fore-color:				#fafafa;										// Text color for <mark>
 $mark-font-size:				0.9375em;										// Font size for <mark>
 $mark-line-height:			1em;												// Line height for <mark>
 $mark-border-style:			0;													// Border style for <mark>
-$mark-border-radius:		2px;												// Border radius for <mark>
+$mark-border-radius:		2*$_1px;										// Border radius for <mark>
 $mark-padding:					0.125em 0.25em;							// Padding for <mark>
 $mark-margin:						0;													// Margin for <mark>
 $mark-box-shadow:				none;												// Box shadow for <mark>
@@ -419,7 +436,7 @@ $mark-style1-border-radius:	200px;									// Border radius for <mark> style 1
 $mark-style1-padding:				0.25em 0.5em;						// Padding for <mark> style 1
 $mark-style2-name:					'inline-block';					// Class name for <mark> style 2
 $mark-style2-border-style:	0;											// Border style for <mark> style 2
-$mark-style2-border-radius:	2px;										// Border radius for <mark> style 2
+$mark-style2-border-radius:	2*$_1px;								// Border radius for <mark> style 2
 $mark-style2-padding:				0.375em;								// Padding for <mark> style 2
 $mark-style2-font-size:			1em;										// Font size for <mark> style 2
 $mark-style2-line-height:		1.375em;								// Line height for <mark> style 2
@@ -443,7 +460,7 @@ $include-tooltip:						true;										// Should tooltips be included? (`true`/`f
 $tooltip-name:							'tooltip';							// Class name for the tooltip component
 $tooltip-back-color:				$fore-color;						// Background color for tooltips
 $tooltip-fore-color:				#fafafa;								// Text color for tooltips
-$tooltip-border-radius:			2px;										// Border radius for tooltips
+$tooltip-border-radius:			2*$_1px;								// Border radius for tooltips
 $tooltip-tail-size:					0.5rem;									// The size of the tooltip's tail
 $tooltip-padding:						0.5rem;									// Padding for tooltips
 $tooltip-box-shadow:				none;										// Box shadow for tooltip-box-shadow
@@ -467,7 +484,7 @@ $progress-fore-color:					#0277bd;							// Progress bar color for <progress>
 $progress-height:							0.625rem;							// Height of <progress>
 $progress-max-value:					1000;									// Arithmetic max value of <progress>
 $progress-border-style:				0;										// Border style for <progress>
-$progress-border-radius:			2px;									// Border radius for the <progress> container
+$progress-border-radius:			2*$_1px;							// Border radius for the <progress> container
 $progress-top-bottom-margin:	0.5rem;								// Top and bottom margin for <progress>
 $progress-left-right-margin:	0.5rem;								// Left and right margin for <progress>
 $progress-box-shadow:					none;									// Box shadow for <progress>
@@ -508,12 +525,12 @@ $close-icon-back-color:				#e6e6e6;							// Background color for the close icon
 $close-icon-fore-color:				#212121;							// Foreground color for the close icon
 $border-generic-name:					'bordered';						// Class name for generic border style
 $border-radial-style1-name:		'rounded';						// Class name for radial border style 1
-$border-radial-style1-radius:	2px;									// Border radius for radial border style 1
+$border-radial-style1-radius:	2*$_1px;							// Border radius for radial border style 1
 $border-radial-style2-name:		'circular';						// Class name for radial border style 2
 $border-radial-style2-radius:	50%;									// Border radius for radial border style 2
 $box-shadow-style1-name:			'shadowed';						// Class name for generic box-shadow style 1
 $box-shadow-style1-value:														// Box shadow value for generic box-shadow style 1
-	0 4px 4px 0 rgba(0, 0, 0, 0.125),  0 2px 2px -1px rgba(0, 0, 0, 0.25);
+	0 4*$_1px 4*$_1px 0 rgba(0, 0, 0, 0.125),  0 2*$_1px 2*$_1px -2*$_1px rgba(0, 0, 0, 0.25);
 $responsive-margin-name:			'responsive-margin';	// Class name for responsive margin
 $responsive-margin-small-value:		0.25rem;					// Margin value for responsive margin on small screens
 $responsive-margin-medium-value:	0.375rem;					// Margin value for responsive margin on medium screens

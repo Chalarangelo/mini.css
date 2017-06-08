@@ -244,6 +244,21 @@ $checkbox-border-radius:		$input-border-radius;			// Border radius for checkbox/
 $checkbox-focus-border-color: 	$input-focus-border-color;	// Border color for checkbox/radio on focus
 $checkbox-bottom-spacing:		6px;											// Bottom spacing for checkbox/radio
 $checkbox-disabled-opacity:		$input-disabled-opacity;			// Opacity for disabled checkbox/radio
+$include-switch: 								true;								// Should switch components be included? (`true`/`false`)
+$switch-name: 									'switch';						// Class name for switch components
+$switch-bar-back-color: 				#D8DEE9;						// Back color for the switch's bar
+$switch-on-bar-back-color: 			#D8DEE9;						// Back color for the switch's bar when the switch is turned on
+$switch-bar-width:							28px;								// Width for the switch's bar
+$switch-bar-height:							14px;								// Height for the switch's bar
+$switch-bar-border-style: 			0;									// Border style for the switch's bar
+$switch-bar-border-radius: 			8px;								// Borer radius for the switch's bar
+$switch-bottom-spacing:					8px;								// Bottom spacing for the switch's bar
+$switch-knob-back-color: 				#ECEFF4;						// Back color for the switch's knob
+$switch-on-knob-back-color: 		#5E81AC;						// Back color for the switch's knob when the switch is turned on
+$switch-knob-width:							20px;								// Width for the switch's knob
+$switch-knob-height: 						20px;								// Height for the switch's knob
+$switch-knob-border-style: 			0;									// Border style for the switch's knob
+$switch-knob-border-radius: 		100%;								// Borer radius for the switch's knob
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values
 //	specified in the corresponding variables.

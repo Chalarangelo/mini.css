@@ -1227,3 +1227,11 @@
 - Added navigation for `modal` component.
 - Documented customization of `modal` component.
 - Added accessibility guidelines for `modal` component.
+
+## 20170608
+
+- Added a calculated `$_1px` variable to fully transition to `rem` units.
+- Altered everything that was `px`-based to `rem`-based values in `mini-default`, `mini-dark` and `mini-lite`.
+- Altered `input_control`'s `checkbox` components to properly work with the latest changes to the unit system.
+- Completed `.switch` component, total size (gzipped) is `0.10KB`.
+- Updated `mini-default` with `.switch`, other flavors, too, following their logical addition pattern.

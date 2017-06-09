@@ -2,9 +2,9 @@
   "name": "mini.css",
   "version": "2.2.0",
   "description": "A minimal, responsive, style-agnostic CSS framework.",
-  "main": "flavors/mini-default.min.css",
+  "main": "dist/mini-default.min.css",
   "directories": {
-    "doc": "docs"
+    "lib": "src/mini"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,10 +27,11 @@
     "mini",
     "mini.css"
   ],
-  "author": "Angelos Chalaris (Chalarangelo)",
+  "author": "Angelos Chalaris (chalarangelo@gmail.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Chalarangelo/mini.css/issues"
+    "url": "https://github.com/Chalarangelo/mini.css/issues",
+		"email": "chalarangelo@gmail.com"
   },
-  "homepage": "https://chalarangelo.github.io/mini.css/"
+  "homepage": "http://minicss.org"
 }

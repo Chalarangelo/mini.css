@@ -287,10 +287,10 @@ footer {
 			display: none;
 		}
 	}
-	[type="checkbox"]:checked + .#{$drawer-name}:not(.#{$drawer-right-name}) {
+	:checked + .#{$drawer-name}:not(.#{$drawer-right-name}) {
 		left: 0;
 	}
-	[type="checkbox"]:checked + .#{$drawer-name}.#{$drawer-right-name} {
+	:checked + .#{$drawer-name}.#{$drawer-right-name} {
 		right: 0;
 	}
 }

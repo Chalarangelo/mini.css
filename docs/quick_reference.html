@@ -67,7 +67,7 @@
               </div><br>
               <p style="text-align:justify">You can import the default flavor of <strong>mini.css</strong> in your webpage by simply adding one of the following references inside your HTML page's <code>&lt;head&gt;</code> tag:</p>
 							<pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css&quot;</span>&gt;</pre>
-              <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.2.0/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
+              <pre>&lt;<span class="fore-tertiary">link</span> <span class="fore-secondary">rel</span>=<span class="fore-primary">&quot;stylesheet&quot;</span> <span class="fore-secondary">href</span>=<span class="fore-primary">&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.0/dist/mini-default.min.css&quot;</span>&gt;</pre><br>
 							<p style="text-align:justify">You can also find <strong>mini.css</strong> on <a href="https://cdnjs.com/libraries/mini.css">cdnjs</a>, which you can use to include it in your projects.</p><br/>
               <p style="text-align:justify">We strongly suggest you add the following line inside your HTML page's <code>&lt;head&gt;</code> to utilize the viewport meta tag:</p>
               <pre>&lt;<span class="fore-tertiary">meta</span> <span class="fore-secondary">name</span>=<span class="fore-primary">&quot;viewport&quot;</span> <span class="fore-secondary">content</span>=<span class="fore-primary">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</pre>
@@ -386,12 +386,16 @@
   &lt;fieldset&gt;
     &lt;legend&gt;Simple form&lt;/legend&gt;
     &lt;div class=&quot;input-group fluid&quot;&gt;
-      &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
+      &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
       &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;input-group fluid&quot;&gt;
-      &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt;
+      &lt;label for=&quot;pwd&quot;&gt;Password&lt;/label&gt;
       &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;input-group vertical&quot;&gt;
+      &lt;label for=&quot;nmbr&quot;&gt;Number&lt;/label&gt;
+      &lt;input type=&quot;number&quot; id=&quot;nmbr&quot; value=&quot;5&quot;&gt;
     &lt;/div&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
@@ -406,7 +410,8 @@
                   <li>Checkboxes and radio buttons are stylized differently, as shown below</li>
                   <li>You can use the grid module's column classes to align form elements or make them responsive</li>
                   <li>Avoid using <code>.input-group</code> in aligned forms</li>
-				  <li>Make <code>.input-group</code>s responsive by adding the <code>.fluid</code> class</li>
+				  				<li>Make <code>.input-group</code>s responsive by adding the <code>.fluid</code> class</li>
+				  				<li>Vertically align <code>.input-group</code>s using the <code>.vertical</code> class</li>
                 </ul>
               </div>
             </div>
@@ -432,6 +437,28 @@
                   <li>Add multiple radio buttons in the same group inside the same <code>.input-group</code> wrapper</li>
                   <li>Always use <code>.input-group</code> and follow the code structure provided in the examples</li>
                   <li>Remember to use <code>&lt;label&gt;</code> elements for every single one of your checkbox or radio buttons</li>
+                </ul>
+              </div>
+            </div>
+						<div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Switches <a href="https://codepen.io/chalarangelo/pen/rwxBPv" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch1&quot; tabindex=&quot;0&quot;&gt;
+  &lt;label for=&quot;switch1&quot; class=&quot;switch&quot;&gt;Checkbox switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radswitch1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
+  &lt;label for=&quot;radswitch1&quot; class=&quot;switch&quot;&gt;Radio switch&lt;/label&gt;
+&lt;/div&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul style="text-align:justify">
+                  <li>Use the same structure as checkboxes and radios, add <code>.switch</code> to the <code>&lt;label&gt;</code> element</li>
+                  <li>Add <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to the <code>&lt;input&gt;</code> element for accessibility</li>
+                  <li>You can add two <code>&lt;label&gt;</code> elements inside the <code>.input-group</code>, the first one containing the text and the second one the <code>.switch</code> component to reverse the switch's layout</li>
                 </ul>
               </div>
             </div>
@@ -658,6 +685,46 @@
                   <li>Always specify a <code>data-label</code> for each <code>&lt;td&gt;</code> element corresponding to the column's header to properly display table on mobile devices</li>
 				  <li>Avoid having multiline <code>&lt;thead&gt;</code> elements, however if you need to, you can use <a href="https://codepen.io/chalarangelo/pen/VPqWQE">this fix</a></li>
                   <li>For horizontal tables or matrices, check the examples below</li>
+                </ul>
+              </div>
+            </div>
+						<div class="section row">
+              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+                <h3>Scrollable tables <a href="https://codepen.io/chalarangelo/pen/OgMgRb" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+                <pre>&lt;table class=&quot;scrollable&quot;&gt;
+  &lt;caption&gt;People&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Surname&lt;/th&gt;
+      &lt;th&gt;Alias&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Chad&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Wilberts&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;MrOne&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Adam&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Smith&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;TheSmith&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Sophia&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Canderson&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;Candee&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3>Notes</h3>
+                <ul style="text-align:justify">
+                  <li>Use the <code>.scrollable</code> class to make a <code>&lt;table&gt;</code> scrollable</li>
+                  <li>Does not support the <code>&lt;tfoot&gt;</code> element</li>
+                  <li>Scrollable tables might not be fully compatible with older browsers</li>
                 </ul>
               </div>
             </div>
@@ -1025,6 +1092,31 @@
                 </ul>
               </div>
             </div>
+						<div class="section row">
+			              <div class="col-sm-12 col-md-6 col-md-first col-sm-first">
+			                <h3>Modals <a href="https://codepen.io/chalarangelo/pen/rwagLK" target="_blank" class="button small"><i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;View on Codepen</a></h3>
+			                <pre>&lt;label for=&quot;modal-toggle&quot;&gt;Show modal&lt;/label&gt;
+
+&lt;input id=&quot;modal-toggle&quot; type=&quot;checkbox&quot;/&gt;
+&lt;div class=&quot;modal&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;label for=&quot;modal-toggle&quot; class=&quot;close&quot;&gt;&lt;/label&gt;
+    &lt;h3 class=&quot;section&quot;&gt;Modal&lt;/h3&gt;
+    &lt;p class=&quot;section&quot;&gt;This is a modal window!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+			              </div>
+			              <div class="col-sm-12 col-md-6">
+			                <h3>Notes</h3>
+			                <ul style="text-align:justify">
+			                  <li>Create an <code>&lt;input <span class="fore-secondary">type</span>="<span class="fore-primary">checkbox</span>"&gt;</code> element, immediately followed by a <code>&lt;div&gt;</code> element with the <code>.modal</code> class</li>
+			                  <li>Use a <code>.card</code> inside the <code>.modal</code> to display contents</li>
+							  				<li>Remember to use a <code>&lt;label&gt;</code> or some Javascript to allow users to close the dialog</li>
+												<li>Modal dialogs can be placed and toggled from anywhere, although the structure must be kept intact</li>
+												<li>Use <code><span class="fore-secondary">role</span>=<span class="fore-primary">&quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role">dialog</a>&quot;</span></code> to add accessibility to modal dialogs</li>
+			                </ul>
+			              </div>
+			            </div>
           </div>
         </div>
       </div>

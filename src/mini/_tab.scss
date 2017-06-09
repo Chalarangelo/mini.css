@@ -67,12 +67,12 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 		}
 	}
 	// Tab radio styling
-	& > [type="radio"], &.#{$tab-stacked-name} > [type="checkbox"] {
+	& > [type="radio"], & > [type="checkbox"] {
 		display: none;
 		visibility: hidden;
 	}
 	// Tab content styling
-	& > [type="radio"] + label + div, &.#{$tab-stacked-name} > [type="checkbox"] + label + div {
+	& > label + div {
 		// New syntax
 		-webkit-flex-basis: auto;
 						flex-basis: auto;
@@ -95,24 +95,19 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 						transform-origin: top;
 		transition: -webkit-transform 0.3s,
 												transform 0.3s;
-		// Style for tab labels except the first
-		@if $tab-border-style != 0 {
-			& + [type="radio"] + label {
-				border-left: 0;
-			}
-		}
 		@if $tab-border-radius != 0 {
 			border-bottom-left-radius: $tab-border-radius;
 			border-bottom-right-radius: $tab-border-radius;
 		}
 	}
+	// Style for tab labels except the first
 	@if $tab-border-style != 0 {
-		&.stacked > [type="checkbox"] + label + div + [type="checkbox"] + label {
+		& > label:not(:first-of-type) {
 			border-left: 0;
 		}
 	}
 	// Tab label styling for open tab
-	& > [type="radio"]:checked + label, &.#{$tab-stacked-name} > [type="checkbox"]:checked + label {
+	& > :checked + label {
 		@if $tab-label-selected-back-color != $tab-label-back-color {
 			background: $tab-label-selected-back-color;
 			&:hover, &:focus {
@@ -122,9 +117,10 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 		@if $tab-label-selected-fore-color != $tab-label-fore-color {
 			color: $tab-label-selected-fore-color;
 		}
+		border-bottom-color: $tab-selected-border-color;
 	}
 	// Tab content styling (open tab)
-	& > [type="radio"]:checked + label + div, &.#{$tab-stacked-name} > [type="checkbox"]:checked + label + div {
+	& > :checked + label + div {
 		box-sizing: border-box;
 		position: relative;
 		height: $tab-panel-height;
@@ -175,13 +171,16 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 				}
 			}
 		}
-		@if $tab-border-radius != 0 {	// Style the last tabs' label corners when it's open as needed
-			& > [type="radio"]:checked + label, & > [type="checkbox"]:checked + label {
+		& > :checked + label {
+			@if $tab-border-style != 0 {
+				border: $tab-border-style;
+			}
+			@if $tab-border-radius != 0 {
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
 			}
 		}
-		& > [type="radio"] + label + div, & > [type="checkbox"] + label + div {
+		& > label + div {
 			-webkit-order: initial;		// Reset order to show stacked tabs properly
 							order: initial;
 			// Presentation
@@ -190,18 +189,18 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 			@if $tab-border-radius != 0 {
 				border-radius: 0;
 			}
-			& + [type="radio"] + label, & + [type="checkbox"] + label {
-				@if $tab-border-style != 0 {
-					border: $tab-border-style;
-					border-top: 0;
-				}
+		}
+		& > label:not(:first-of-type) {
+			@if $tab-border-style != 0 {
+				border: $tab-border-style;
+				border-top: 0;
 			}
 		}
-		& > [type="radio"]:checked + label + div, & > [type="checkbox"]:checked + label + div {
+		& > :checked + label + div {
 			height: auto;
 		}
 		@if $tab-border-radius != 0 {
-			& > [type="radio"] + label + div:last-of-type, & > [type="checkbox"] + label + div:last-of-type {
+			& > label + div:last-of-type {
 				border-bottom-left-radius: $tab-border-radius;
 				border-bottom-right-radius: $tab-border-radius;
 			}
@@ -230,27 +229,30 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 				}
 			}
 		}
-		@if $tab-border-radius != 0 {	// Style the last tabs' label corners when it's open as needed
-			& > [type="radio"]:checked + label {
+		& > :checked + label {
+			@if $tab-border-style != 0 {
+				border: $tab-border-style;
+			}
+			@if $tab-border-radius != 0 {
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
 			}
 		}
-		& > [type="radio"] + label + div {
+		& > label + div {
 			-webkit-order: initial;		// Reset order to show stacked tabs properly
 							order: initial;
 			@if $tab-border-radius != 0 {
 				border-radius: 0;
 			}
-			& + [type="radio"] + label {
-				@if $tab-border-style != 0 {
-					border: $tab-border-style;
-					border-top: 0;
-				}
+		}
+		& > label:not(:first-of-type) {
+			@if $tab-border-style != 0 {
+				border: $tab-border-style;
+				border-top: 0;
 			}
 		}
 		@if $tab-border-radius != 0 {
-			& > [type="radio"] + label + div:last-of-type {
+			& > label + div:last-of-type {
 				border-bottom-left-radius: $tab-border-radius;
 				border-bottom-right-radius: $tab-border-radius;
 			}

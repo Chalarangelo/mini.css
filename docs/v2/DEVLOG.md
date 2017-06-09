@@ -1186,3 +1186,72 @@
 - Fixed a typo in `tab`.
 - Fixed a typo in `table`.
 - Fixed a typo in `input_control`.
+
+# v2.3.0 Development Log
+
+## 20170605
+
+- Updated packaging information etc. (structural updates for next release)
+- Spent a long while, but found the icons to replace the front page's style:
+	- http://www.flaticon.com/free-icon/wings_262678 (Feather)
+	- http://www.flaticon.com/free-icon/bacteria_191004 (Bacteria)
+	- http://www.flaticon.com/free-icon/meteor_433944 (Meteor)
+- Updated colors for `<pre>` and `<code>`, along with `<button>` and some other elements to better contrast colors on older and less bright displays. Updated both `mini-default` and `mini-lite` to fix issues with those colors.
+- Altered default height of `<progress>` elements to `0.625rem` from `1rem`, should look more modern and sleek. Updated both core flavors.
+- **State check for all modules and implemented components** (CSS variables - #19 - not included in features checked):
+	- `core` - Most likely **100% complete**, fluid type will *not* be enabled by default anytime soon. Everything else is fully nominal.
+	- `grid` - Everything works as expected, **no changes** to existing components. Possible addition of a couple of atomic css classes to make everything smoother.
+	- `input_control` - **Requires testing** for `.input-group` and other components. **New component**, `.switch`es must be added.
+	- `navigation` - **100% complete**, should be checked against the new additions to other modules to make sure everything works as expected.
+	- `table` - **New component**, `.scrollable` tables should be added. Everything else should be fine.
+	- `card` - Everything is fine, **no changes**, should check for compatibility with `grid`'s new atomic css and/or build in-module ones, too.
+	- `tab` - Most likely **no changes**, might test to see if more modern styling can be applied to the module's component.
+	- `contextual`- **New component**, `.modal` should be added. Nothing else of note here.
+	- `progress` - **100% complete**, some fancier components such as Android-styled spinner donuts might be coming later down the line, but they will be flavor-customized.
+	- `utility` - **No changes** to existing components, however some additions might be required to make everything play as expected.
+- Refer to above list in regards to the #19 feature request.
+- Reworked complex `tab` module selectors to utilize the functionality of `:not(:first-of-type)` on `label` elements.
+- Updated `tab` selectors to use new, *loose* definitions, effectively making the module `0.04KB` lighter. Not a huge difference, but good enough due to the maintenance impact it has on the module, plus the consistency fixed for `.stacked`.
+- Moved `input_control`'s `disabled` styling to low-specificity behind the existing flag, saved another `0.05KB`, which is quite a big change. Parsing should also be faster than before. Good catch, **hugging cat**!
+- Lowered specificity of selectors used in `.button-group` for styling `border`s, cut off another `0.02KB`.
+- Added styling for `:disabled` on `checkbox` and `radio`, pushed the size back up a little bit.
+- Merged some styles in `contextual` in regards to `.tooltip`.
+- Changed `table` selectors to use `:not(:first-child)`, similarly to other modules.
+- All changes have been tested and no errors were found (as far as I can tell).
+- Created the `.modal` component, added to the `default` flavor, documenting and adding to other flavors pending.
+- Updated all flavors for the new `.modal` component to be included (or not) as needed.
+
+## 20170606
+
+- Fully documented `modal` component.
+- Added navigation for `modal` component.
+- Documented customization of `modal` component.
+- Added accessibility guidelines for `modal` component.
+
+## 20170608
+
+- Added a calculated `$_1px` variable to fully transition to `rem` units.
+- Altered everything that was `px`-based to `rem`-based values in `mini-default`, `mini-dark` and `mini-lite`.
+- Altered `input_control`'s `checkbox` components to properly work with the latest changes to the unit system.
+- Completed `.switch` component, total size (gzipped) is `0.10KB`.
+- Updated `mini-default` with `.switch`, other flavors, too, following their logical addition pattern.
+- Added `make-switch-alt-color` mixin for `.switch` components.
+- Added `cursor:pointer` to `checkbox` and `.switch` components.
+- Added documentation and navigation for `.switch` component.
+- Added `box-shadow` option to `.switch` (was missing before).
+- Added `box-shadow` to `checkbox` and `radio`, updated flavors as required.
+- Added and updated customization documentation and navigation for `.switch` component.
+
+## 20170609
+
+- Removed `$table-horizontal-breakpoint`, will now use generated value from `$table-mobile-breakpoint`.
+- Added styling for `.scrollable` `table`s, total size about `0.29KB` gzipped, pretty large but that's the largest component that was added in the update.
+- Updated the definition of `hr` to use `$_1px` instead of `1px`.
+- Optimized `.horizontal` and `.scrollable` `table`s to use mixed definitions whenever possible.
+- Updated all flavors to use (or not) `.scrollable` `table`s.
+- Added customization documentation for `.scrollable` `table`s.
+- Documented `.scrollable` `table`s everywhere.
+- Added `$tab-selected-border-color` to imbue `tabs` with a little extra style (applies only to non-`.stacked` tabs).
+- Altered `$label-padding` from `0.25rem` to `0.25rem 0.5rem` to make it align properly with everything else.
+- Added code for `.vertical` `.input-group`, documented it, updated flavors. Everything is ready, size is `6.70KB`, which is pretty good I might add.
+- Updated `CHANGELOG` and doc pages (new tag etc.), released **v2.3.0**.

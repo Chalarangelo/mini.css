@@ -5,7 +5,7 @@
 	Flavor name: Nord (mini-nord)
 	Author: tphecca (https://github.com/tphecca)
 	Maintainers: tphecca
-	mini.css version: v2.2.0
+	mini.css version: v2.3.0
 */
 //	This flavor is based on the Nord color palette: https://github.com/arcticicestudio/nord
 //	Basic rules for body and typography
@@ -169,10 +169,12 @@ $legend-font-weight:			$bold-font-weight;				// Font weight for legend
 $legend-font-size:				0.925em;									// Font size for legend
 $legend-fore-color:				$form-fore-color;					// Text color for legend
 $legend-padding:				2px 4px;										// Padding for legend
-$label-padding:					4px;												// Padding for label
+$label-padding:					4px 8px;										// Padding for label
 $input-group-name:				'input-group';						// Class for input groups
 $include-fluid-input-group:		true;									// Should fluid input grooups be included? (`true`/`false`) [1]
 $input-group-fluid-name:		'fluid';								// Class name for fluid input groups
+$include-vertical-input-group:	true;								// Should vertical input groups be included? (`true`/`false`) [1]
+$input-group-vertical-name: 	'vertical';						// Class name for vertical input groups.
 $input-group-mobile-breakpoint:	767px;							// Breakpoint for fluid input group mobile view
 $input-back-color:				#E5E9F0;									// Background for input
 $input-fore-color:				$fore-color;							// Text color for input
@@ -244,9 +246,30 @@ $checkbox-border-radius:		$input-border-radius;			// Border radius for checkbox/
 $checkbox-focus-border-color: 	$input-focus-border-color;	// Border color for checkbox/radio on focus
 $checkbox-bottom-spacing:		6px;											// Bottom spacing for checkbox/radio
 $checkbox-disabled-opacity:		$input-disabled-opacity;			// Opacity for disabled checkbox/radio
+$checkbox-box-shadow:																	// Box shadow for the checkbox/radio
+	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
+$include-switch: 								true;								// Should switch components be included? (`true`/`false`)
+$switch-name: 									'switch';						// Class name for switch components
+$switch-bar-back-color: 				#D8DEE9;						// Back color for the switch's bar
+$switch-on-bar-back-color: 			#D8DEE9;						// Back color for the switch's bar when the switch is turned on
+$switch-bar-width:							28px;								// Width for the switch's bar
+$switch-bar-height:							14px;								// Height for the switch's bar
+$switch-bar-border-style: 			0;									// Border style for the switch's bar
+$switch-bar-border-radius: 			8px;								// Borer radius for the switch's bar
+$switch-bottom-spacing:					8px;								// Bottom spacing for the switch's bar
+$switch-bar-box-shadow:															// Box shadow for the switch's bar
+	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
+$switch-knob-back-color: 				#ECEFF4;						// Back color for the switch's knob
+$switch-on-knob-back-color: 		#5E81AC;						// Back color for the switch's knob when the switch is turned on
+$switch-knob-width:							20px;								// Width for the switch's knob
+$switch-knob-height: 						20px;								// Height for the switch's knob
+$switch-knob-border-style: 			0;									// Border style for the switch's knob
+$switch-knob-border-radius: 		100%;								// Borer radius for the switch's knob
+$switch-knob-box-shadow:														// Box shadow for the switch's knob
+	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values
-//	specified in the corresponding variables.
+//	specified in the corresponding variables. The same applies for $include-vertical-input-group and vertical input groups.
 // [2] - If the value of $hide-file-inputs is `true`, all <input type="file"> elements will be hidden and the only way
 // 	to access them is via the use of <label> elements that are linked to them. This option is enabled by default to
 //	allow for universal button styles, even for file input buttons, but can be disabled if the base style is desired.
@@ -339,16 +362,20 @@ $table-mobile-card-spacing:		10px;									// Space between <tr> cards - mobile 
 $table-mobile-card-label:		'data-label';						// Attribute used to replace column headers in mobile view [1]
 $table-mobile-label-font-weight: $bold-font-weight;	// Font weight for mobile headers
 $include-horizontal-table:		true;									// Should horizontal <table> elements be included? (`true`/`false`) [2]
-$table-horizontal-breakpoint:	768px;								// Breakpoint for <table> horizontal view
 $table-horizontal-name:			'horizontal';						// Class name for <table> horizontal view
+$include-scrollable-table:		true;									// Should scrollable <table> elements be included? (`true`/`false`) [3]
+$table-scrollable-name:				'scrollable';					// Class name for <table> scrollable view
+$table-scrollable-height:			400px;								// Height for <table> scrolalble view.
 $table-not-responsive-name:		'preset';							// Class name for <table> non-responsive view
 $table-striped-name:			'striped';								// Class name for striped <table>
 $table-striped-alt-body-back-color:	#E5E9F0;				// Alternate background color for <td> in striped <table>
 //	Notes:
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly.
-// [2] - If $include-horizontal-table is `true`, then the <table> horizontal biew will be included in a class defined by
-//	$table-horizontal-name and a breakpoint defined in $table-horizontal-breakpoint.
+// [2] - If $include-horizontal-table is `true`, then the <table> horizontal view will be included in a class defined by
+//	$table-horizontal-name.
+// [3] - If $include-scrollable-table is `true`, then the <table> scrollable view will be included in a class defined by
+//	$table-scrollable-name and a height defined by $table-scrollable-height.
 //	Variables for cards [1]
 $card-name:						'card';											// Class name for cards
 $card-back-color:				#ECEFF4;									// Background color for cards
@@ -405,6 +432,7 @@ $tab-label-padding:				8px 12px;										// Padding for tabs' labels
 $tab-label-height:				26px;												// Height for tabs' labels
 $tab-border-style:				1px solid #9e9e9e;					// Border style for tabs
 $tab-border-radius:				0;													// Border radius for tabs
+$tab-selected-border-color:			#5E81AC;						// Selected tab's bottom border color
 $tab-panel-back-color:			#ECEFF4;									// Background color for tabs' panels
 $tab-panel-fore-color:			$fore-color;							// Text color for tabs' panels
 $tab-panel-padding:				8px;												// Padding for tabs' panels
@@ -464,12 +492,21 @@ $tooltip-padding:				6px;												// Padding for tooltips
 $tooltip-box-shadow:																// Box shadow for tooltip-box-shadow
 	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
 $tooltip-bottom-name:			'bottom';									// Class name for bottom tooltip
+$include-modal:							true;										// Should modals be included? (`true`/`false`) [3]
+$modal-name:								'modal';								// Class name for the modals
+$modal-back-color:					#000;										// Background color of the modal overlay
+$modal-back-opacity:				0.45;										// Background opacity of the modal overlay
+$modal-close-name:				'close';									// Class name of the close element od the modal component.
+$modal-close-top:					12px;											// Top position of the modal component's close icon
+$modal-close-right:				4px;											// Right position of the modal component's close icon
 // 	Notes:
 // [1] - If the value of $alert-include-animated is `true`, an animation will be created and the value of $alert-animated-class
 //	will be used to determine the class that will be used for animated alerts.
 // [2] - If the value of $include-tooltip is `true`, a tooltip component will be creatd based on the values of the variables
 //	for the tooltip, as explained in their descriptions. Tooltip mixins will only work properly if the tooltip component is
 //	included.
+// [3] - If the value of $include-modal is `true`, a modal component will be created based on the values of the variables
+//	for the modal, as explained in their descriptions.
 //	Variables for progress elements and spinners
 $progress-back-color:			#D8DEE9;									// Background color for <progress>
 $progress-fore-color:			#5E81AC;									// Progress bar color for <progress>

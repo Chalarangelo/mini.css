@@ -50,13 +50,13 @@
 				<a href="grid.html#predefined-layout" class="sublink-1">Predefined layouts</a> <a href="grid.html#column-offset" class="sublink-1">Column offsets</a>
 				<a href="grid.html#column-reorder" class="sublink-1">Column reordering</a> <a href="grid.html#media-object" class="sublink-1">Media object pattern</a>
 				<br/> <a href="input_control.html#input-control-title">Input Control</a>
-				<a href="input_control.html#forms-input" class="sublink-1">Forms &amp; input</a> <a href="input_control.html#checkbox-radio" class="sublink-1">Checkboxes &amp; radio buttons</a>
+				<a href="input_control.html#forms-input" class="sublink-1">Forms &amp; input</a> <a href="input_control.html#checkbox-radio" class="sublink-1">Checkboxes &amp; radio buttons</a> <a href="input_control.html#switches" class="sublink-1">Switches</a>
 				<a href="input_control.html#buttons" class="sublink-1">Buttons &amp; button groups</a> <a href="input_control.html#file-upload" class="sublink-1">File upload buttons</a>
 				<br/> <a href="navigation.html#navigation-title">Navigation</a>
 				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a> <a href="navigation.html#drawer" class="sublink-1">Drawer</a>
 				<a href="navigation.html#footer" class="sublink-1">Footer</a> <a href="navigation.html#sticky" class="sublink-1">Sticky headers &amp; footers</a>
 				<br/> <a href="table.html#table-title">Table</a>
-				<a href="table.html#syntax-responsiveness" class="sublink-1">Basic syntax &amp; responsiveness</a>
+				<a href="table.html#syntax-responsiveness" class="sublink-1">Basic syntax &amp; responsiveness</a> <a href="table.html#scrollable-tables" class="sublink-1">Scrollable tables</a>
 				<a href="table.html#horizontal-tables" class="sublink-1">Horizontal tables</a> <a href="table.html#variants-matrices" class="sublink-1">Table variants &amp; matrices</a>
 				<br/> <a href="card.html#card-title">Card</a>
 				<a href="card.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="card.html#sections-media" class="sublink-1">Sections &amp; media</a>
@@ -65,7 +65,7 @@
 				<a href="tab.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="tab.html#stacked-tabs" class="sublink-1">Stacked tabs</a>
 				<br/> <a href="contextual.html#contextual-title">Contextual</a>
 				<a href="contextual.html#text-highlighting" class="sublink-1">Text highlighting</a> <a href="contextual.html#toasts" class="sublink-1">Toasts</a>
-				<a href="contextual.html#tooltips" class="sublink-1">Tooltips</a>
+				<a href="contextual.html#tooltips" class="sublink-1">Tooltips</a> <a href="contextual.html#modals" class="sublink-1">Modals</a>
 				<br/> <a href="progress.html#progress-title">Progress</a>
 				<a href="progress.html#basic-progress-bar" class="sublink-1">Basic progress bar</a> <a href="progress.html#progress-variants" class="sublink-1">Progress bar variants</a>
 				<a href="progress.html#donut-spinner" class="sublink-1">Donut spinner</a> <a href="progress.html#spinner-variants" class="sublink-1">Donut spinner variants</a>
@@ -111,17 +111,24 @@
               <form>
               <fieldset>
                 <legend>Inline form (default style)</legend>
-                <div class="input-group"><label for="username">username</label> <input type="email" value="" id="username" placeholder="username">&nbsp;</div>
-                <div class="input-group"><label for="pwd">password</label> <input type="password" value="" id="pwd" placeholder="password"></div>
+                <div class="input-group"><label for="username">Username</label> <input type="email" value="" id="username" placeholder="username">&nbsp;</div>
+                <div class="input-group"><label for="pwd">Password</label> <input type="password" value="" id="pwd" placeholder="password"></div>
               </fieldset>
               </form>
 			  <form>
               <fieldset>
                 <legend>Fluid form</legend>
-                <div class="input-group fluid"><label for="username2">username</label> <input type="email" value="" id="username2" placeholder="username"></div>
-                <div class="input-group fluid"><label for="pwd2">password</label> <input type="password" value="" id="pwd2" placeholder="password"></div>
+                <div class="input-group fluid"><label for="username2">Username</label> <input type="email" value="" id="username2" placeholder="username"></div>
+                <div class="input-group fluid"><label for="pwd2">Password</label> <input type="password" value="" id="pwd2" placeholder="password"></div>
               </fieldset>
               </form>
+							<form>
+	              <fieldset>
+	                <legend>Vertical form</legend>
+	                <div class="input-group vertical"><label for="username2">Username</label> <input type="email" value="" id="username2" placeholder="username"></div>
+	                <div class="input-group vertical"><label for="pwd2">Password</label> <input type="password" value="" id="pwd2" placeholder="password"></div>
+	              </fieldset>
+	              </form>
               <form>
               <fieldset>
                 <legend>Aligned form (using grid)</legend>
@@ -162,18 +169,22 @@
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-md-normal">
                 <p style="text-align: justify;">Forms are structured the same way you would structure a normal form in HTML5. Simply create a root <code>&lt;form&gt;</code> element and add your <code>&lt;input&gt;</code> elements inside. Link them to <code>&lt;label&gt;</code> elements for ease of access and you are pretty much set. We highly recommend using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements to annotate your forms as well, but you can skip them if you wish.</p>
-                <p style="text-align: justify;">Forms are inline by default. Use the <code>.input-group</code> class on a <code>&lt;div&gt;</code> wrapping inside it an <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> pair to make sure they always display together in one line. You can make your <code>.input-group</code>s respond to viewport changes, by adding the <code>.fluid</code> class to them. Finally, if you want to create aligned forms with a preset layout, you can utilize the <a href="grid.html"><strong>grid</strong></a> module's rows and columns.</p>
+                <p style="text-align: justify;">Forms are inline by default. Use the <code>.input-group</code> class on a <code>&lt;div&gt;</code> wrapping inside it an <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> pair to make sure they always display together in one line. You can make your <code>.input-group</code>s respond to viewport changes, by adding the <code>.fluid</code> class to them or you can align them vertically by adding the <code>.vertical</code> class. Finally, if you want to create aligned forms with a preset layout, you can utilize the <a href="grid.html"><strong>grid</strong></a> module's rows and columns.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;form&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Simple form&lt;/legend&gt;
     &lt;div class=&quot;input-group fluid&quot;&gt;
-      &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
+      &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
       &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;input-group fluid&quot;&gt;
-      &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt;
+      &lt;label for=&quot;pwd&quot;&gt;Password&lt;/label&gt;
       &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;input-group vertical&quot;&gt;
+      &lt;label for=&quot;nmbr&quot;&gt;Number&lt;/label&gt;
+      &lt;input type=&quot;number&quot; id=&quot;nmbr&quot; value=&quot;5&quot;&gt;
     &lt;/div&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
@@ -185,7 +196,7 @@
                 <li>Using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements is highly recommended for a better presentational effect. Using these elements is a matter of personal preference, however try to keep your forms consistent (i.e. either use them in all forms or no forms as to not confuse users).</li>
                 <li>Some <code>&lt;input&gt;</code> elements, such as date &amp; time, color and range types, are not supported and, as a result, do not have a default style defined for them. You can define said styles manually if you need to use them in your website or app.</li>
                 <li>Checkboxes and radio buttons are not stylized the same way as most of the other elements, nor do they follow the exact same stucture for layout. Please refer to the next section for information on how to use those.</li>
-				<li>Try not to combine the <strong>grid</strong> module's classes with <code>.fluid</code><code>.input-group</code>s, as this might cause certain styles to overlap and not display exactly like you want them to.</li>
+				<li>Try not to combine the <strong>grid</strong> module's classes with <code>.fluid</code> or <code>.vertical</code> <code>.input-group</code>s, as this might cause certain styles to overlap and not display exactly like you want them to.</li>
               </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">
@@ -362,6 +373,55 @@
           </div>
         </div>
       </div>
+			<div class="row" id="switches">
+				<div class="col-sm-12">
+					<div class="card fluid">
+						<div class="section"><h2>Switches</h2></div>
+						<div class="section row">
+							<div class="col-sm-12 col-sm-last col-md-12 col-md-normal col-lg-4 col-lg-normal">
+								<div class="box-centered">
+									<br />
+									<div class="input-group">
+								    <input type="checkbox" id="switch-box" tabindex="0">
+								  	<label for="switch-box" class="switch">Switch</label>
+								  </div>
+									<br/>
+									<br>
+								</div>
+							</div>
+							<div class="col-sm-12 col-sm-first col-md-12 col-md-normal col-lg-8 col-lg-normal">
+								<p style="text-align: justify;">Switches are almost identical in structure to checkboxes and radio buttons (an <code>.input-group</code> containing an <code>&lt;input&gt;</code> of the proper <code><span class="secondary">type</span></code> inside it (<code><span class="fore-primary">&quot;checkbox&quot;</span></code> or <code><span class="fore-primary">&quot;radio&quot;</span></code>), followed immediately by a <code>&lt;label&gt;</code> linking to it), their only difference being that you need to add the <code>.switch</code> class to <code>&lt;label&gt;</code> element to turn your input into a switch. Remember to apply <code><span class="fore-secondary">tabindex</span>=<span class="fore-primary">&quot;0&quot;</span></code> to your <code>&lt;input&gt;</code> to make it accessible.</p>
+								<h3>Sample code</h3>
+								<pre>&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch1&quot; tabindex=&quot;0&quot;&gt;
+  &lt;label for=&quot;switch1&quot; class=&quot;switch&quot;&gt;Checkbox switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radswitch1&quot; tabindex=&quot;0&quot; name=&quot;radio-group-1&quot;&gt;
+  &lt;label for=&quot;radswitch1&quot; class=&quot;switch&quot;&gt;Radio switch&lt;/label&gt;
+&lt;/div&gt;</pre>
+							</div>
+						</div>
+						<div class="section">
+						<h3>Notes</h3>
+							<ul style="text-align: justify;">
+								<li>You can create your own color variants for the <code>.switch</code> component. For more information, check out the <a href="customization.html">customization page</a>.</li>
+							</ul><hr>
+							<div class="row">
+								<div class="col-sm-12">
+									<pre>&lt;div class=&quot;input-group&quot;&gt;
+  &lt;label for=&quot;switch1&quot;&gt;Switch with text on its left&lt;/label&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch1&quot; tabindex=&quot;0&quot;&gt;
+  &lt;label for=&quot;switch1&quot; class=&quot;switch&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;</pre>
+									<p class="do" style="text-align: justify;"><mark class="tertiary">Do:</mark>&nbsp;By using two <code>&lt;label&gt;</code> elements, you can move the actual <code>.switch</code> to the right of the label's text, effectively allowing you to change the layout. Remember to not add any text to your second <code>&lt;label&gt;</code> that implements the <code>.switch</code> class. You might want, however, to add a few trailing spaces to the first <code>&lt;label&gt;</code> element to make sure the text does not get covered by the component.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
       <div class="row" id="buttons">
         <div class="col-sm-12">
           <div class="card fluid">

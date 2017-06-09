@@ -5,6 +5,8 @@
 $input-group-name:		'input-group' !default;				// Class name for input groups.
 $include-fluid-input-group:	true !default;					// Should fluid input groups be included? (`true`/`false`)
 $input-group-fluid-name: 		'fluid' !default;				// Class name for fluid input groups.
+$include-vertical-input-group:true !default;				// Should vertical input groups be included? (`true`/`false`)
+$input-group-vertical-name: 	'vertical' !default;	// Class name for vertical input groups.
 $button-class-name:					'button' !default;			// Class for custom button elements.
 $include-button-group:			true !default;					// [Hidden flag] Should button groups be enabled? (`true`/`false`)
 $button-group-name:					'button-group' !default;// Class for button groups.
@@ -18,6 +20,8 @@ $input-high-specificity-selectors:	false !default;	// [Hidden flag] Use legacy s
 $button-group-high-specificity-selectors: false !default; // [Hidden flag] Use legacy selectors for button-like elements inside button groups (`false`/ `true`).
 $hide-file-inputs: 					true !default;					// Should `file` <input> elements be hidden? (`true`/`false`)
 $hide-check-and-radio:			true !default;					// [Hidden flag] Should checkboxes and radios be hidden? (`true`/`false`)
+$include-switch: 						true !default; 					// Should switch components be included? (`true`/`false`)
+$switch-name: 							'switch' !default; 			// Class name for switch components
 // External variables' defaults are used only if you import this module on its own, without the rest of the framework.
 $back-color:							white !default;						// [External variable - core] Background color for everything.
 $fore-color:							black !default;						// [External variable - core] Foreground color for everything.
@@ -127,6 +131,33 @@ legend {
 		}
 	}
 }
+@if $include-vertical-input-group {
+	.#{$input-group-name}.#{$input-group-vertical-name} {
+		// Old syntax
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-box-pack: justify;
+		// New syntax
+		display: 	-webkit-flex;
+		display: 		 			flex;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+		-webkit-align-items: stretch;
+						align-items: stretch;
+		-webkit-justify-content: center;
+						justify-content: center;
+		& > input {
+			// Old syntax
+			-webkit-box-flex: 1;
+			max-width: 100%;
+			// New syntax
+			-webkit-flex-grow: 1;
+							flex-grow: 1;
+			-webkit-flex-basis: 0;
+							flex-basis: 0;
+		}
+	}
+}
 // Correct the cursor style of increment and decrement buttons in Chrome.
 [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
 	height: auto;
@@ -187,9 +218,11 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 			border-color: $input-focus-border-color;
 			box-shadow: none;
 		}
-		&:disabled, &[disabled] {
-			cursor: not-allowed;
-			opacity: $input-disabled-opacity;
+		@if $input-high-specificity-selectors or $input-disabled-opacity != $button-disabled-opacity {
+			&:disabled, &[disabled] {
+				cursor: not-allowed;
+				opacity: $input-disabled-opacity;
+			}
 		}
 		&:invalid, &:focus:invalid{
 			border-color: $input-invalid-border-color;
@@ -265,9 +298,21 @@ a[role="button"], label[role="button"], [role="button"] {
 			opacity: 1;
 		}
 	}
-	&:disabled, &[disabled] {
-		cursor: not-allowed;
-		opacity: $button-disabled-opacity;
+	@if $input-high-specificity-selectors or $input-disabled-opacity != $button-disabled-opacity {
+		&:disabled, &[disabled] {
+			cursor: not-allowed;
+			opacity: $button-disabled-opacity;
+		}
+	}
+}
+@if not $input-high-specificity-selectors {
+	@if $input-disabled-opacity == $button-disabled-opacity {
+		input, textarea, select, button, .#{$button-class-name}, [role="button"] { // .button[disabled] is actually higher specificity than a.button, so no need for more than that
+			&:disabled, &[disabled] {
+				cursor: not-allowed;
+				opacity: $button-disabled-opacity;
+			}
+		}
 	}
 }
 @if $style-link-active-state {
@@ -317,8 +362,8 @@ a[role="button"], label[role="button"], [role="button"] {
 		@if $button-group-box-shadow != none {
 			box-shadow: $button-group-box-shadow;
 		}
-		button, [type="button"], [type="submit"], [type="reset"],
-		.#{$button-class-name}, [role="button"] {
+		&> button, [type="button"], & > [type="submit"], & > [type="reset"],
+		& > .#{$button-class-name}, & > [role="button"] {
 			margin: 0;
 			// Old syntax
 			-webkit-box-flex: 1;
@@ -345,11 +390,8 @@ a[role="button"], label[role="button"], [role="button"] {
 		}
 		@if not $button-group-high-specificity-selectors {
 			@if $button-group-border-style != 0 {
-				* {
-					+ button, + [type="button"], + [type="submit"], + [type="reset"],
-					+ .#{$button-class-name}, + [role="button"] {
-						border-left: $button-group-border-style;
-					}
+				& > :not(:first-child) {
+					border-left: $button-group-border-style;
 				}
 			}
 		}
@@ -376,12 +418,9 @@ a[role="button"], label[role="button"], [role="button"] {
 			}
 			@else {
 				@if $button-group-border-style !=0 {
-					* {
-						+ button, + [type="button"], + [type="submit"], + [type="reset"],
-						+ .#{$button-class-name}, + [role="button"] {
-							border: 0;
-							border-top: $button-group-border-style;
-						}
+					& > :not(:first-child) {
+						border: 0;
+						border-top: $button-group-border-style;
 					}
 				}
 			}
@@ -408,10 +447,16 @@ a[role="button"], label[role="button"], [role="button"] {
 	// Label styling based on the specifics of the checkbox/radio variables.
 	[type="checkbox"] + label, [type="radio"] + label {
 		position: relative;
-		margin-left: floor($checkbox-size + floor($checkbox-size * 0.25));
+		$_unit: $checkbox-size*0 +1;		// Used to check if the unit is `px` or `rem/em`
+		@if $_unit == 1px {
+			margin-left: floor($checkbox-size + floor($checkbox-size * 0.25));
+		}
+		@else {
+			margin-left: $checkbox-size * 1.25;
+		}
+		cursor: pointer;
 		// Styling for checkbox/radio box part.
 		&:before {
-			//box-sizing: border-box;
 			display: inline-block;
 			position: absolute;
 			bottom: $checkbox-bottom-spacing;
@@ -425,7 +470,16 @@ a[role="button"], label[role="button"], [role="button"] {
 			}
 			background: $checkbox-back-color;
 			color: $checkbox-fore-color;
-			margin-left: -($checkbox-size + ($checkbox-size * 0.25));
+			$_unit: $checkbox-size*0 +1;		// Used to check if the unit is `px` or `rem/em`
+			@if $_unit == 1px {
+				margin-left: - floor($checkbox-size + floor($checkbox-size * 0.25));
+			}
+			@else {
+				margin-left: - $checkbox-size * 1.25;
+			}
+			@if $checkbox-box-shadow != none {
+				box-shadow: $checkbox-box-shadow;
+			}
 		}
 		// Hover, focus styling.
 		&:hover, &:focus {
@@ -444,7 +498,8 @@ a[role="button"], label[role="button"], [role="button"] {
 		}
 	}
 	// Disabled and readonly styles.
-	[type="checkbox"][disabled] + label, [type="radio"][disabled] + label {
+	[type="checkbox"][disabled] + label, [type="radio"][disabled] + label,
+	[type="checkbox"]:disabled + label, [type="radio"]:disabled + label {
 		cursor: not-allowed;
 		&:before, &:after {
 			opacity: $checkbox-disabled-opacity;
@@ -453,14 +508,115 @@ a[role="button"], label[role="button"], [role="button"] {
 	// Fill for checked checkbox/radio elements.
 	[type="checkbox"]:checked + label, [type="radio"]:checked + label{
 		&:after {
-			margin-left: - floor($checkbox-size + floor($checkbox-size * 0.25));
 			position: absolute;
-			bottom: floor($checkbox-size * 0.25) + $checkbox-bottom-spacing;
-			left: floor($checkbox-size * 0.25);
-			width: floor($checkbox-size * 0.5) + floor($checkbox-border-thickness * 2);
-			height: floor($checkbox-size * 0.5) + floor($checkbox-border-thickness * 2);
 			background: $checkbox-fore-color;
 			content: '';
+			$_unit: $checkbox-size*0 +1;		// Used to check if the unit is `px` or `rem/em`
+			@if $_unit == 1px {
+				margin-left: - floor($checkbox-size + floor($checkbox-size * 0.25));
+				bottom: floor($checkbox-size * 0.25) + $checkbox-bottom-spacing;
+				left: floor($checkbox-size * 0.25);
+				width: floor($checkbox-size * 0.5) + floor($checkbox-border-thickness * 2);
+				height: floor($checkbox-size * 0.5) + floor($checkbox-border-thickness * 2);
+			}
+			@else {
+				margin-left: - ($checkbox-size * 1.25);
+				bottom: $checkbox-size * 0.25 + $checkbox-bottom-spacing;
+				left: $checkbox-size * 0.25;
+				width: $checkbox-size * 0.5 + $checkbox-border-thickness * 2;
+				height: $checkbox-size * 0.5 + $checkbox-border-thickness * 2;
+			}
+		}
+	}
+}
+// Definitions for switch components.
+@if $include-switch {
+	.#{$input-group-name} {
+		// Label styling based on the specifics of the switch variables.
+		[type="checkbox"] + label.#{$switch-name}, [type="radio"] + label.#{$switch-name} {
+			// Styling for the bar part of the switch
+			&:before {
+				@if $switch-bottom-spacing != $checkbox-bottom-spacing {
+					bottom: $switch-bottom-spacing;
+				}
+				width: $switch-bar-width;
+				height: $switch-bar-height;
+				border: $switch-bar-border-style;
+				@if $switch-bar-border-radius != 0 {
+					border-radius: $switch-bar-border-radius;
+				}
+				background: $switch-bar-back-color;
+				$_unit: $switch-bar-width*0 +1;		// Used to check if the unit is `px` or `rem/em`
+				@if $_unit == 1px {
+					margin-left: - floor($switch-bar-width + floor($switch-knob-width/2));
+				}
+				@else {
+					margin-left: - ($switch-bar-width + $switch-knob-width/2);
+				}
+				@if $switch-bar-box-shadow != none {
+					box-shadow: $switch-bar-box-shadow;
+				}
+			}
+			// Styling for the knob part of the switch
+			&:after {
+				display: inline-block;
+				content: '';
+	      position: absolute;
+	      left: 0;
+	      width: $switch-knob-width;
+	      height: $switch-knob-height;
+	      background: $switch-knob-back-color;
+				@if $switch-knob-border-style != 0 {
+					border: $switch-knob-border-style;
+					box-sizing: border-box;
+				}
+				@if $switch-knob-border-radius != 0 {
+					border-radius: $switch-knob-border-radius;
+				}
+				$_unit: $switch-bar-width*0 +1;		// Used to check if the unit is `px` or `rem/em`
+				@if $_unit == 1px {
+					bottom: floor((2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2);
+					margin-left: - floor($switch-bar-width + $switch-knob-width);
+				}
+				@else {
+					bottom: (2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2;
+					margin-left: - ($switch-bar-width + $switch-knob-width);
+				}
+				@if $switch-knob-box-shadow != none {
+					box-shadow: $switch-knob-box-shadow;
+				}
+	      transition: left 0.3s;
+			}
+			// Hover and focus styles are absent for switches, as they are mainly intended for mobile, but you can add them in manually.
+		}
+		// [type="checkbox"]:focus + label:before, [type="radio"]:focus + label:before {
+			// border-color: $checkbox-focus-border-color;
+		// }
+		// Fill for checked checkbox/radio elements.
+		[type="checkbox"]:checked + label.#{$switch-name}, [type="radio"]:checked + label.#{$switch-name}{
+			&:before {
+				@if $switch-on-bar-back-color != $switch-bar-back-color {
+					background: $switch-on-bar-back-color;
+				}
+			}
+			&:after {
+				left: $switch-bar-width;
+				// Some values need to be re-applied to avoid overwriting by the default checkbox ones.
+				width: $switch-knob-width;
+	      height: $switch-knob-height;
+				$_unit: $switch-bar-width*0 +1;		// Used to check if the unit is `px` or `rem/em`
+				@if $_unit == 1px {
+					bottom: floor((2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2);
+					margin-left: - floor($switch-bar-width + $switch-knob-width);
+				}
+				@else {
+					bottom: (2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2;
+					margin-left: - ($switch-bar-width + $switch-knob-width);
+				}
+				@if $switch-on-knob-back-color != $switch-knob-back-color {
+					background: $switch-on-knob-back-color;
+				}
+			}
 		}
 	}
 }

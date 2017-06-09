@@ -5,7 +5,7 @@
 	Flavor name: Sucroa (mini-sucroa)
 	Author: Angeliki Daskalakis
 	Maintainers: Angeliki Daskalakis, Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v2.2.0
+	mini.css version: v2.3.0
 */
 // Google Fonts imports and usage
 @import url('https://fonts.googleapis.com/css?family=Cousine:400,400i,700|Libre+Baskerville:400,400i,700&subset=latin-ext');
@@ -172,6 +172,8 @@ $label-padding:						6px;											// Padding for label
 $input-group-name:				'input-group';						// Class for input groups
 $include-fluid-input-group:		true;									// Should fluid input grooups be included? (`true`/`false`) [1]
 $input-group-fluid-name:			'fluid';							// Class name for fluid input groups
+$include-vertical-input-group:	true;								// Should vertical input groups be included? (`true`/`false`) [1]
+$input-group-vertical-name: 	'vertical';						// Class name for vertical input groups.
 $input-group-mobile-breakpoint:	767px;							// Breakpoint for fluid input group mobile view
 $input-back-color:				#f2edff;									// Background for input
 $input-fore-color:				$fore-color;							// Text color for input
@@ -243,9 +245,12 @@ $checkbox-border-radius:		$input-border-radius;		// Border radius for checkbox/r
 $checkbox-focus-border-color: 	$input-focus-border-color;	// Border color for checkbox/radio on focus
 $checkbox-bottom-spacing:				3px;								// Bottom spacing for checkbox/radio
 $checkbox-disabled-opacity:			$input-disabled-opacity;		// Opacity for disabled checkbox/radio
+$checkbox-box-shadow:																	// Box shadow for checkbox/radio
+	0 1px 3px rgba(0,0,0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.15);
+$include-switch: 								false;								// Should switch components be included? (`true`/`false`)
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values
-//	specified in the corresponding variables.
+//	specified in the corresponding variables. The same applies for $include-vertical-input-group and vertical input groups.
 // [2] - If the value of $hide-file-inputs is `true`, all <input type="file"> elements will be hidden and the only way
 // 	to access them is via the use of <label> elements that are linked to them. This option is enabled by default to
 //	allow for universal button styles, even for file input buttons, but can be disabled if the base style is desired.
@@ -335,6 +340,7 @@ $table-mobile-card-spacing:	12px;										// Space between <tr> cards - mobile 
 $table-mobile-card-label:		'data-label';						// Attribute used to replace column headers in mobile view [1]
 $table-mobile-label-font-weight:$bold-font-weight;	// Font weight for mobile headers
 $include-horizontal-table:	false;									// Should horizontal <table> elements be included? (`true`/`false`) [2]
+$include-scrollable-table:	false;									// Should scrollable <table> elements be included? (`true`/`false`) [2]
 $table-not-responsive-name:	'preset';								// Class name for <table> non-responsive view
 $table-striped-name:				'striped';							// Class name for striped <table>
 $table-striped-alt-body-back-color:	#ece4ff;				// Alternate background color for <td> in striped <table>
@@ -342,7 +348,9 @@ $table-striped-alt-body-back-color:	#ece4ff;				// Alternate background color fo
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly.
 // [2] - If $include-horizontal-table is `true`, then the <table> horizontal view will be included in a class defined by
-//	$table-horizontal-name and a breakpoint defined in $table-horizontal-breakpoint.
+//	$table-horizontal-name.
+// [3] - If $include-scrollable-table is `true`, then the <table> scrollable view will be included in a class defined by
+//	$table-scrollable-name and a height defined by $table-scrollable-height.
 //	Variables for cards [1]
 $card-name:							'card';											// Class name for cards
 $card-back-color:				#f2d7d8;										// Background color for cards
@@ -399,6 +407,7 @@ $tab-label-padding:							10px 12px;					// Padding for tabs' labels
 $tab-label-height:							28px;								// Height for tabs' labels
 $tab-border-style:							1px solid #a9a2ba;	// Border style for tabs
 $tab-border-radius:							2px;								// Border radius for tabs
+$tab-selected-border-color:			#6979c6;						// Selected tab's bottom border color
 $tab-panel-back-color:					#eee7ff;						// Background color for tabs' panels
 $tab-panel-fore-color:					$fore-color;				// Text color for tabs' panels
 $tab-panel-padding:							10px;								// Padding for tabs' panels
@@ -457,10 +466,13 @@ $tooltip-padding:						10px;										// Padding for tooltips
 $tooltip-box-shadow:																// Box shadow for tooltip-box-shadow
 	0 1px 2px rgba(0,0,0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
 $tooltip-bottom-name:				'bottom';								// Class name for bottom tooltip
+$include-modal:							false;									// Should modals be included? (`true`/`false`) [2]
 // 	Notes:
 // [1] - If the value of $include-tooltip is `true`, a tooltip component will be creatd based on the values of the variables
 //	for the tooltip, as explained in their descriptions. Tooltip mixins will only work properly if the tooltip component is
 //	included.
+// [2] - If the value of $include-modal is `true`, a modal component will be created based on the values of the variables
+//	for the modal, as explained in their descriptions.
 //	Variables for progress elements and spinners
 $progress-back-color:				#e8deff;								// Background color for <progress>
 $progress-fore-color:				#6979c6;								// Progress bar color for <progress>

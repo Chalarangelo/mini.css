@@ -274,7 +274,7 @@ $header-padding:					0.125rem 0.5rem;					// Padding for <header>
 $header-box-shadow:				none;											// Box shadow for <header>
 $header-logo-name:				'logo';										// Class name for <header>'s logo
 $header-logo-font-size:		1.75rem;									// Font size for <header>'s logo
-$header-logo-line-height:	1.3125em;										// Line height for <header>'s logo
+$header-logo-line-height:	1.3125em;									// Line height for <header>'s logo
 $header-logo-margin:			0.0625rem 0.375rem 0.0625rem 0.0625rem;					// Margin for <header>'s logo
 $header-logo-padding:			0;												// Padding for <header>'s logo
 $header-link-hover-color:	#20292e;									// Hover color for <header>'s links
@@ -283,7 +283,7 @@ $include-header-sticky:		true;											// Should sticky <header> elements be i
 $header-sticky-name:			'sticky';									// Class name for sticky <header>
 $nav-back-color:					#eceff1;									// Background for <nav>
 $nav-fore-color:					$fore-color;							// Text color for <nav>
-$nav-border-style:				$_1px solid #c9c9c9;				// Border style for <nav>
+$nav-border-style:				$_1px solid #c9c9c9;			// Border style for <nav>
 $nav-border-radius:				0;												// Border radius for <nav>
 $nav-padding:							0.75rem 1rem;							// Padding for <nav>
 $nav-margin:							0.5rem;										// Margin for <nav>
@@ -294,7 +294,7 @@ $nav-sublink-depth:				2;												// Amount of subcategory classes to add
 $nav-sublink-padding-left:	1rem;										// Left padding to add to subcategories
 $nav-include-sublink-bar:	true;											// Should a left border bar be added to subcategories (`true`/`false`) [2]
 $nav-sublink-bar-left-position: 0.1875rem;					// Left position of subcategory bar
-$nav-sublink-bar-width:		$_1px;											// Width of the subcategory bar
+$nav-sublink-bar-width:		$_1px;										// Width of the subcategory bar
 $nav-sublink-bar-color:		#bdbdbd;									// Subcategory bar color
 $drawer-name:							'drawer';									// Class name for the drawer component
 $drawer-back-color:				$nav-back-color;					// Background color of the drawer component
@@ -348,26 +348,30 @@ $table-mobile-card-spacing:	0.625rem;								// Space between <tr> cards - mobil
 $table-mobile-card-label:		'data-label';						// Attribute used to replace column headers in mobile view [1]
 $table-mobile-label-font-weight:$bold-font-weight;	// Font weight for mobile headers
 $include-horizontal-table:		true;									// Should horizontal <table> elements be included? (`true`/`false`) [2]
-$table-horizontal-breakpoint:	768px;								// Breakpoint for <table> horizontal view
 $table-horizontal-name:				'horizontal';					// Class name for <table> horizontal view
+$include-scrollable-table:		true;									// Should scrollable <table> elements be included? (`true`/`false`) [3]
+$table-scrollable-name:				'scrollable';					// Class name for <table> scrollable view
+$table-scrollable-height:			400px;								// Height for <table> scrolalble view.
 $table-not-responsive-name:		'preset';							// Class name for <table> non-responsive view
 $table-striped-name:					'striped';						// Class name for striped <table>
 $table-striped-alt-body-back-color:		#e5e5e5;			// Alternate background color for <td> in striped <table>
 //	Notes:
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly.
-// [2] - If $include-horizontal-table is `true`, then the <table> horizontal biew will be included in a class defined by
-//	$table-horizontal-name and a breakpoint defined in $table-horizontal-breakpoint.
+// [2] - If $include-horizontal-table is `true`, then the <table> horizontal view will be included in a class defined by
+//	$table-horizontal-name.
+// [3] - If $include-scrollable-table is `true`, then the <table> scrollable view will be included in a class defined by
+//	$table-scrollable-name and a height defined by $table-scrollable-height.
 //	Variables for cards [1]
 $card-name:							'card';											// Class name for cards
 $card-back-color:				#fafafa;										// Background color for cards
 $card-fore-color:				$fore-color;								// Text color for cards
-$card-border-style:			$_1px solid #acacac;					// Border style for cards
+$card-border-style:			$_1px solid #acacac;				// Border style for cards
 $card-border-radius:		0;													// Border radius for cards
 $card-margin:						0.5rem;											// Margin for cards
 $card-box-shadow:				none;												// Box shadow for cards
 $card-section-name:						'section';						// Class name for card sections
-$card-section-border-style:		$_1px solid #c9c9c9;		// Border style for card sections
+$card-section-border-style:		$_1px solid #c9c9c9;	// Border style for card sections
 $card-section-padding:				0.5rem;								// Padding for card sections
 $card-section-media-name:			'media';							// Class name for card media sections
 $card-section-media-height:		200px;								// Height for card media setions

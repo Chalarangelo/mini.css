@@ -286,13 +286,14 @@ $table-mobile-card-spacing:	0.625rem;								// Space between <tr> cards - mobil
 $table-mobile-card-label:		'data-label';						// Attribute used to replace column headers in mobile view [1]
 $table-mobile-label-font-weight:$bold-font-weight;	// Font weight for mobile headers
 $include-horizontal-table:		false;								// Should horizontal <table> elements be included? (`true`/`false`) [2]
+$include-scrollable-table:		false;								// Should scrollable <table> elements be included? (`true`/`false`) [2]
 $include-striped-table:				false;								// [Hidden flag override] Should striped <table> elements be included (`true`/`false`) [2]
 //	Notes:
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly.
-// [2] - Due to the $include-horizontal-table and $include-striped-table flags being set to `false`, no styling will be
-//	provided for horizontal and striped <table> elements. Please refer to a full fulavor to find the variables associated
-//	with these components, if you want to enable them.
+// [2] - Due to the $include-horizontal-table, $include-scrollable-table and $include-striped-table flags being set to `false`,
+//	no styling will be provided for horizontal, scrollable and striped <table> elements. Please refer to a full fulavor to find
+//	the variables associated with these components, if you want to enable them.
 $card-name:							'card';											// Class name for cards
 $card-back-color:				#fafafa;										// Background color for cards
 $card-fore-color:				$fore-color;								// Text color for cards

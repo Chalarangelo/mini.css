@@ -171,7 +171,7 @@ hr {
 	line-height: $horizontal-rule-line-height;
 	margin: $horizontal-rule-margin;
 	@if $horizontal-rule-fancy-style {
-		height: 1px;
+		height: $_1px;
 		background: linear-gradient(#{$horizontal-rule-fancy-gradient});
 	}
 	@else {

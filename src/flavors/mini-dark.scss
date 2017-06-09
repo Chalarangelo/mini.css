@@ -238,6 +238,7 @@ $checkbox-border-radius:			$input-border-radius;	// Border radius for checkbox/r
 $checkbox-focus-border-color: $input-focus-border-color;// Border color for checkbox/radio on focus
 $checkbox-bottom-spacing:				0.375rem;						// Bottom spacing for checkbox/radio
 $checkbox-disabled-opacity:	$input-disabled-opacity;// Opacity for disabled checkbox/radio
+$checkbox-box-shadow:				none;										// Box shadow for checkbox/radio
 $include-switch: 								true;								// Should switch components be included? (`true`/`false`)
 $switch-name: 									'switch';						// Class name for switch components
 $switch-bar-back-color: 				#324148;						// Back color for the switch's bar
@@ -254,7 +255,7 @@ $switch-knob-width:							1.25rem;						// Width for the switch's knob
 $switch-knob-height: 						1.25rem;						// Height for the switch's knob
 $switch-knob-border-style: 			0;									// Border style for the switch's knob
 $switch-knob-border-radius: 		100%;								// Borer radius for the switch's knob
-$switch-bar-box-shadow:					none;								// Box shadow for the switch's knob
+$switch-knob-box-shadow:					none;							// Box shadow for the switch's knob
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values
 //	specified in the corresponding variables.
@@ -347,16 +348,20 @@ $table-mobile-card-spacing:	0.625rem;								// Space between <tr> cards - mobil
 $table-mobile-card-label:		'data-label';						// Attribute used to replace column headers in mobile view [1]
 $table-mobile-label-font-weight:$bold-font-weight;	// Font weight for mobile headers
 $include-horizontal-table:		true;									// Should horizontal <table> elements be included? (`true`/`false`) [2]
-$table-horizontal-breakpoint:	768px;								// Breakpoint for <table> horizontal view
 $table-horizontal-name:				'horizontal';					// Class name for <table> horizontal view
+$include-scrollable-table:		true;									// Should scrollable <table> elements be included? (`true`/`false`) [3]
+$table-scrollable-name:				'scrollable';					// Class name for <table> scrollable view
+$table-scrollable-height:			400px;								// Height for <table> scrolalble view.
 $table-not-responsive-name:		'preset';							// Class name for <table> non-responsive view
 $table-striped-name:					'striped';						// Class name for striped <table>
 $table-striped-alt-body-back-color:		#263238;			// Alternate background color for <td> in striped <table>
 //	Notes:
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly.
-// [2] - If $include-horizontal-table is `true`, then the <table> horizontal biew will be included in a class defined by
-//	$table-horizontal-name and a breakpoint defined in $table-horizontal-breakpoint.
+// [2] - If $include-horizontal-table is `true`, then the <table> horizontal view will be included in a class defined by
+//	$table-horizontal-name.
+// [3] - If $include-scrollable-table is `true`, then the <table> scrollable view will be included in a class defined by
+//	$table-scrollable-name and a height defined by $table-scrollable-height.
 //	Variables for cards [1]
 $card-name:							'card';											// Class name for cards
 $card-back-color:				#232e33;										// Background color for cards

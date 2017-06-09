@@ -1241,3 +1241,11 @@
 - Added `box-shadow` option to `.switch` (was missing before).
 - Added `box-shadow` to `checkbox` and `radio`, updated flavors as required.
 - Added and updated customization documentation and navigation for `.switch` component.
+
+## 20170609
+
+- Removed `$table-horizontal-breakpoint`, will now use generated value from `$table-mobile-breakpoint`.
+- Added styling for `.scrollable` `table`s, total size about `0.29KB` gzipped, pretty large but that's the largest component that was added in the update.
+- Updated the definition of `hr` to use `$_1px` instead of `1px`.
+- Optimized `.horizontal` and `.scrollable` `table`s to use mixed definitions whenever possible.
+- Updated all flavors to use (or not) `.scrollable` `table`s.

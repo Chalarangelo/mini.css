@@ -338,6 +338,7 @@ $table-mobile-card-spacing:	12px;										// Space between <tr> cards - mobile 
 $table-mobile-card-label:		'data-label';						// Attribute used to replace column headers in mobile view [1]
 $table-mobile-label-font-weight:$bold-font-weight;	// Font weight for mobile headers
 $include-horizontal-table:	false;									// Should horizontal <table> elements be included? (`true`/`false`) [2]
+$include-scrollable-table:	false;									// Should scrollable <table> elements be included? (`true`/`false`) [2]
 $table-not-responsive-name:	'preset';								// Class name for <table> non-responsive view
 $table-striped-name:				'striped';							// Class name for striped <table>
 $table-striped-alt-body-back-color:	#ece4ff;				// Alternate background color for <td> in striped <table>
@@ -345,7 +346,9 @@ $table-striped-alt-body-back-color:	#ece4ff;				// Alternate background color fo
 // [1] - The attribute specified in $table-mobile-card-label must be added manually to each and every element in the table
 //	in order for their mobile headers to display properly.
 // [2] - If $include-horizontal-table is `true`, then the <table> horizontal view will be included in a class defined by
-//	$table-horizontal-name and a breakpoint defined in $table-horizontal-breakpoint.
+//	$table-horizontal-name.
+// [3] - If $include-scrollable-table is `true`, then the <table> scrollable view will be included in a class defined by
+//	$table-scrollable-name and a height defined by $table-scrollable-height.
 //	Variables for cards [1]
 $card-name:							'card';											// Class name for cards
 $card-back-color:				#f2d7d8;										// Background color for cards

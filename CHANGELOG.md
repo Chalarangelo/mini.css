@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.3.0
+
+- Added a new `.modal` component, which allows you to show modal dialogs (`contextual`).
+- Added a new `.switch` component for displaying on/off switches (`input_control`).
+- Added `.scrollable` tables, allowing for long tables to be displayed in an alternate way (`table`).
+- Added `.vertical` input groups, allowing vertical forms to be created more easily (`input_control`).
+- Updated **mini-default** color palette. The new palette should now display better on screens with uncommon contrast settings.
+- Slightly tweaked the styling of various elements to improve their look.
+- Various under-the-hood updates to make everything work better, load faster and be lighter.
+- Updated the styling of borders and other elements to use `rem` instead of `px` in all `rem`-based flavors.
+- Added a color highlight for the selected tab in `.tabs`.
+- Added styling for `disabled` elements in `input_control` that were wrongly omitted in the past.
+- Fixed some bugs and improved overall stability, updated all flavors accordingly.
+
 ## v2.2.0
 
 - Replaced old classes for generic shadows with one class (`.shadowed`).

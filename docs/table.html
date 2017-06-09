@@ -60,7 +60,7 @@
 				<a href="navigation.html#header" class="sublink-1">Header</a> <a href="navigation.html#navigation-bar" class="sublink-1">Navigation bar</a> <a href="navigation.html#drawer" class="sublink-1">Drawer</a>
 				<a href="navigation.html#footer" class="sublink-1">Footer</a> <a href="navigation.html#sticky" class="sublink-1">Sticky headers &amp; footers</a>
 				<br/> <a href="table.html#table-title">Table</a>
-				<a href="table.html#syntax-responsiveness" class="sublink-1">Basic syntax &amp; responsiveness</a>
+				<a href="table.html#syntax-responsiveness" class="sublink-1">Basic syntax &amp; responsiveness</a> <a href="table.html#scrollable-tables" class="sublink-1">Scrollable tables</a>
 				<a href="table.html#horizontal-tables" class="sublink-1">Horizontal tables</a> <a href="table.html#variants-matrices" class="sublink-1">Table variants &amp; matrices</a>
 				<br/> <a href="card.html#card-title">Card</a>
 				<a href="card.html#basic-syntax" class="sublink-1">Basic syntax</a> <a href="card.html#sections-media" class="sublink-1">Sections &amp; media</a>
@@ -233,6 +233,90 @@
           </div>
         </div>
       </div>
+			<div class="row" id="scrollable-tables">
+        <div class="col-sm-12">
+          <div class="card fluid">
+            <div class="section">
+              <h2>Scrollable tables</h2>
+            </div>
+            <div class="section row">
+              <div class="col-sm-12 col-sm-last col-md-12 col-md-normal">
+                <div>
+                <br><table class="scrollable preset">
+                <caption>People</caption>
+                <thead>
+                  <tr><th>Name</th><th>Surname</th><th>Alias</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td data-label="Name">Chad</td><td data-label="Surname">Wilberts</td><td data-label="Alias">MrOne</td></tr>
+                  <tr><td data-label="Name">Adam</td><td data-label="Surname">Smith</td><td data-label="Alias">TheSmith</td></tr>
+                  <tr><td data-label="Name">Sophia</td><td data-label="Surname">Canderson</td><td data-label="Alias">Candee</td></tr>
+                  <tr><td data-label="Name">Nick</td><td data-label="Surname">Thomson</td><td data-label="Alias">NickThom</td></tr>
+                  <tr><td data-label="Name">Mark</td><td data-label="Surname">Gerkis</td><td data-label="Alias">Markie</td></tr>
+                  <tr><td data-label="Name">John</td><td data-label="Surname">Fergusson</td><td data-label="Alias">Fergujohn</td></tr>
+                  <tr><td data-label="Name">Sylvia</td><td data-label="Surname">Pouleau</td><td data-label="Alias">Sylver</td></tr>
+                  <tr><td data-label="Name">Norman</td><td data-label="Surname">Jones</td><td data-label="Alias">NormalJones</td></tr>
+                  <tr><td data-label="Name">Trevor</td><td data-label="Surname">Heidel</td><td data-label="Alias">Heidi</td></tr>
+                </tbody>
+              </table><br>
+                </div>
+              </div>
+              <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
+                <p style="text-align: justify;">Scrollable tables can be created by simply adding the <code>.scrollable</code> class to the root element of your table (i.e. the <code>&lt;table&gt;</code> element). Scrollable tables are flexible, so they can accommodate any amount of data rows and, if there is a lot of data, they will make their overflow scrollable. Remember to add the <code>data-label</code> attribute, as shown in the previous section, to allow your tables to be responsive without any errors. Keep in mind, however, that <code>.horizontal</code> tables do not support the <code>&lt;tfoot&gt;</code> element.</p>
+                <h3>Sample code</h3>
+                <pre>&lt;table class=&quot;scrollable&quot;&gt;
+  &lt;caption&gt;People&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Surname&lt;/th&gt;
+      &lt;th&gt;Alias&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Chad&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Wilberts&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;MrOne&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Adam&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Smith&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;TheSmith&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label=&quot;Name&quot;&gt;Sophia&lt;/td&gt;
+      &lt;td data-label=&quot;Surname&quot;&gt;Canderson&lt;/td&gt;
+      &lt;td data-label=&quot;Alias&quot;&gt;Candee&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+              </div>
+            </div>
+            <div class="section">
+            <h3>Notes</h3>
+              <ul style="text-align: justify;">
+                <li>Due to <code>.scrollable</code> tables utilizing the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Layout</a>, some older browsers may not properly display these tables. This is especially true with legacy versions of Internet Explorer.</li>
+                <li>Mixing the Flexible Layout Module with <code>&lt;table&gt;</code> elements seems to upset some browsers. We noticed this on an older mobile version of Firefox, where our implementation should work in theory, given the fact that both features are properly supported. If you notice any problems with <code>.scrollable</code> tables, feel free to <a href="https://github.com/Chalarangelo/mini.css/issues/new">submit a new issue on Github</a>.</li>
+								<li><code>.scrollable</code> tables have a default maximum height of <code>400px</code>. If you want to change this, you should check out the <a href="customization.html">customization</a> page.</li>
+              </ul>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                  <pre>&lt;table class=&quot;scrollable&quot;&gt;
+  <span class="fore-secondary">&lt;!-- ... --&gt;</span>
+  &lt;tfoot&gt;
+    <span class="fore-secondary">&lt;!-- Do not do this! --&gt;</span>
+  &lt;/tfoot&gt;
+  <span class="fore-secondary">&lt;!-- ... --&gt;</span>
+&lt;/table&gt;</pre>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;We already explicitly stated that, due to the way <code>.scrollable</code> tables are styled, the <code>&lt;tfoot&gt;</code> element is not supported. Please refer to the last section of this page if you need to use this element and you want to have a scrollable table layout.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row" id="horizontal-tables">
         <div class="col-sm-12">
           <div class="card fluid">
@@ -257,7 +341,7 @@
                 </div>
               </div>
               <div class="col-sm-12 col-sm-first col-md-12 col-md-normal">
-                <p style="text-align: justify;">Horizontal tables can be created, by simply adding the <code>.horizontal</code> class to the root element of your table (i.e. the <code>&lt;table&gt;</code> element). Horizontal tables are flexible, so they can accommodate any amount of data rows and, if there is a lot of data, they will make their overflow scrollable. Remember to add the <code>data-label</code> attribute, as shown in the previous section, to allow your tables to be responsive without any errors. Keep in mind, however, that <code>.horizontal</code> tables do not support the <code>&lt;tfoot&gt;</code> element.</p>
+                <p style="text-align: justify;">Scrollable tables are very similar to horizontal ones and can be created by simply adding the <code>.scrollable</code> class to the root element of your table (i.e. the <code>&lt;table&gt;</code> element). Similarly to horizontal ones, they can accommodate as many data rows as you like, making their overflow scrollable, while they do not support the <code>&lt;tfoot&gt;</code> element. As usual, remember to add the <code>data-label</code> attribute, as shown in the previous section, to allow your tables to be responsive without any errors.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;table class=&quot;horizontal&quot;&gt;
   &lt;caption&gt;People&lt;/caption&gt;
@@ -297,13 +381,16 @@
               <hr>
               <div class="row">
                 <div class="col-sm-12">
-                  <pre>&lt;table&gt;
-  <span class="fore-secondary">&lt;!-- ... --&gt;</span>
-  &lt;tfoot&gt;
+                  <pre>&lt;table class=&quot;horizontal scrollable&quot;&gt;
+  <span class="fore-secondary">&lt;!-- Bad table --&gt;</span>
+  &lt;thead&gt;
     <span class="fore-secondary">&lt;!-- ... --&gt;</span>
-  &lt;/tfoot&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    <span class="fore-secondary">&lt;!-- ... --&gt;</span>
+  &lt;/tbody&gt;
 &lt;/table&gt;</pre>
-                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;We already explicitly stated that, due to the way <code>.horizontal</code> tables are styled, the <code>&lt;tfoot&gt;</code> element is not supported. Please refer to the next section if you need to use this element and you want to have a horizontal table layout.</p>
+                  <p class="dont" style="text-align: justify;"><mark class="secondary">Don't:</mark>&nbsp;Avoid comibing the <code>.horizontal</code> and <code>.scrollable</code> classes on the same element, as this can cause unexpected behavior.</p>
                 </div>
               </div>
             </div>

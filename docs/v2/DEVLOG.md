@@ -1249,3 +1249,5 @@
 - Updated the definition of `hr` to use `$_1px` instead of `1px`.
 - Optimized `.horizontal` and `.scrollable` `table`s to use mixed definitions whenever possible.
 - Updated all flavors to use (or not) `.scrollable` `table`s.
+- Added customization documentation for `.scrollable` `table`s.
+- Documented `.scrollable` `table`s everywhere.

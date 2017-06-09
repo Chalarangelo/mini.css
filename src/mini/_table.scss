@@ -217,7 +217,7 @@ table {
 		}
 		table.#{$table-scrollable-name} {
 			overflow: auto;
-			height: $table-scrollable-height;
+			max-height: $table-scrollable-height;
 			border: 0;
 			padding-top: 0;
 			thead, tbody {
@@ -357,7 +357,7 @@ table {
 		}
 		table.#{$table-scrollable-name}.#{$table-not-responsive-name} {
 			overflow: auto;
-			height: $table-scrollable-height;
+			max-height: $table-scrollable-height;
 			border: 0;
 			padding-top: 0;
 			thead, tbody {
@@ -589,7 +589,7 @@ table {
 			-webkit-flex-flow: row wrap;
 		    			flex-flow: row wrap;
 			overflow: auto;
-			height: $table-scrollable-height;
+			max-height: $table-scrollable-height;
 			border: 0;
 			padding: $table-row-padding;
 			padding-top: 0;
@@ -667,7 +667,7 @@ table {
 			-webkit-flex-flow: row wrap;
 		    			flex-flow: row wrap;
 			overflow: auto;
-			height: $table-scrollable-height;
+			max-height: $table-scrollable-height;
 			border: 0;
 			padding: $table-row-padding;
 			padding-top: 0;

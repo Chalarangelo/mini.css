@@ -1410,7 +1410,7 @@ table th:first-child, table td:first-child {
   }
   table.scrollable {
     overflow: auto;
-    height: 400px;
+    max-height: 400px;
     border: 0;
     padding-top: 0;
   }
@@ -1525,7 +1525,7 @@ table th:first-child, table td:first-child {
   }
   table.scrollable.preset {
     overflow: auto;
-    height: 400px;
+    max-height: 400px;
     border: 0;
     padding-top: 0;
   }

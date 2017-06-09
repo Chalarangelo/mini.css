@@ -1,6 +1,6 @@
 {
   "name": "mini.css",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "A minimal, responsive, style-agnostic CSS framework.",
   "main": "dist/mini-default.min.css",
   "directories": {
@@ -31,7 +31,7 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Chalarangelo/mini.css/issues",
-		"email": "chalarangelo@gmail.com"
+    "email": "chalarangelo@gmail.com"
   },
   "homepage": "http://minicss.org"
 }

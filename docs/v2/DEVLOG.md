@@ -1251,3 +1251,4 @@
 - Updated all flavors to use (or not) `.scrollable` `table`s.
 - Added customization documentation for `.scrollable` `table`s.
 - Documented `.scrollable` `table`s everywhere.
+- Added `$tab-selected-border-color` to imbue `tabs` with a little extra style (applies only to non-`.stacked` tabs).

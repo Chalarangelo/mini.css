@@ -1751,6 +1751,7 @@ table.striped tr:nth-of-type(2n) > td {
 
 .tabs > :checked + label {
   background: #263238;
+  border-bottom-color: #0277bd;
 }
 
 .tabs > :checked + label:hover, .tabs > :checked + label:focus {
@@ -1785,6 +1786,10 @@ table.striped tr:nth-of-type(2n) > td {
   order: initial;
 }
 
+.tabs.stacked > :checked + label {
+  border: 0.0625rem solid #757575;
+}
+
 .tabs.stacked > label + div {
   -webkit-order: initial;
   order: initial;
@@ -1810,6 +1815,9 @@ table.striped tr:nth-of-type(2n) > td {
   .tabs > label {
     -webkit-order: initial;
     order: initial;
+  }
+  .tabs > :checked + label {
+    border: 0.0625rem solid #757575;
   }
   .tabs > label + div {
     -webkit-order: initial;

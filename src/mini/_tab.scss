@@ -117,6 +117,7 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 		@if $tab-label-selected-fore-color != $tab-label-fore-color {
 			color: $tab-label-selected-fore-color;
 		}
+		border-bottom-color: $tab-selected-border-color;
 	}
 	// Tab content styling (open tab)
 	& > :checked + label + div {
@@ -170,8 +171,11 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 				}
 			}
 		}
-		@if $tab-border-radius != 0 {	// Style the last tabs' label corners when it's open as needed
-			& > :checked + label {
+		& > :checked + label {
+			@if $tab-border-style != 0 {
+				border: $tab-border-style;
+			}
+			@if $tab-border-radius != 0 {
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
 			}
@@ -225,8 +229,11 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 				}
 			}
 		}
-		@if $tab-border-radius != 0 {	// Style the last tabs' label corners when it's open as needed
-			& > :checked + label {
+		& > :checked + label {
+			@if $tab-border-style != 0 {
+				border: $tab-border-style;
+			}
+			@if $tab-border-radius != 0 {
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
 			}

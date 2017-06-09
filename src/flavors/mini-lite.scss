@@ -156,9 +156,10 @@ $legend-font-weight:		$bold-font-weight;					// Font weight for legend
 $legend-font-size:			0.875rem;										// Font size for legend
 $legend-fore-color:			$form-fore-color;						// Text color for legend
 $legend-padding:				0.125rem 0.25rem;						// Padding for legend
-$label-padding:					0.25rem;										// Padding for label
+$label-padding:					0.25rem 0.5rem;							// Padding for label
 $input-group-name:			'input-group';							// Class for input groups
 $include-fluid-input-group:		false;								// Should fluid input grooups be included? (`true`/`false`) [1]
+$include-vertical-input-group:		false;						// Should vertical input grooups be included? (`true`/`false`) [1]
 $input-back-color:			#fafafa;										// Background for input
 $input-fore-color:			$fore-color;								// Text color for input
 $input-border-style:		$_1px solid #c9c9c9;				// Border style for input
@@ -222,7 +223,7 @@ $checkbox-box-shadow:						none;								// Box shadow for checkbox/radio
 $include-switch: 								false;							// Should switch components be included? (`true`/`false`) [5]
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values
-//	specified in the corresponding variables.
+//	specified in the corresponding variables. The same applies for $include-vertical-input-group and vertical input groups.
 // [2] - Due to the fact that the value of $include-button-group is set to `false`, no button group styles will be created.
 //	If you wish to enable them, please refer to a full flavor for the required variables.
 // [3] - If the value of $hide-file-inputs is `true`, all <input type="file"> elements will be hidden and the only way

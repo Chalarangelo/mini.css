@@ -165,10 +165,12 @@ $legend-font-weight:		$bold-font-weight;					// Font weight for legend
 $legend-font-size:			0.875rem;										// Font size for legend
 $legend-fore-color:			$form-fore-color;						// Text color for legend
 $legend-padding:				0.125rem 0.25rem;						// Padding for legend
-$label-padding:					0.25rem;										// Padding for label
+$label-padding:					0.25rem 0.5rem;							// Padding for label
 $input-group-name:			'input-group';							// Class for input groups
 $include-fluid-input-group:		true;									// Should fluid input grooups be included? (`true`/`false`) [1]
 $input-group-fluid-name:'fluid';										// Class name for fluid input groups
+$include-vertical-input-group:	true;								// Should vertical input groups be included? (`true`/`false`) [1]
+$input-group-vertical-name: 	'vertical';						// Class name for vertical input groups.
 $input-group-mobile-breakpoint:	767px;							// Breakpoint for fluid input group mobile view
 $input-back-color:			#39444a;										// Background for input
 $input-fore-color:			$fore-color;								// Text color for input
@@ -258,7 +260,7 @@ $switch-knob-border-radius: 		100%;								// Borer radius for the switch's knob
 $switch-knob-box-shadow:					none;							// Box shadow for the switch's knob
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values
-//	specified in the corresponding variables.
+//	specified in the corresponding variables. The same applies for $include-vertical-input-group and vertical input groups.
 // [2] - If the value of $hide-file-inputs is `true`, all <input type="file"> elements will be hidden and the only way
 // 	to access them is via the use of <label> elements that are linked to them. This option is enabled by default to
 //	allow for universal button styles, even for file input buttons, but can be disabled if the base style is desired.

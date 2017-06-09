@@ -111,17 +111,24 @@
               <form>
               <fieldset>
                 <legend>Inline form (default style)</legend>
-                <div class="input-group"><label for="username">username</label> <input type="email" value="" id="username" placeholder="username">&nbsp;</div>
-                <div class="input-group"><label for="pwd">password</label> <input type="password" value="" id="pwd" placeholder="password"></div>
+                <div class="input-group"><label for="username">Username</label> <input type="email" value="" id="username" placeholder="username">&nbsp;</div>
+                <div class="input-group"><label for="pwd">Password</label> <input type="password" value="" id="pwd" placeholder="password"></div>
               </fieldset>
               </form>
 			  <form>
               <fieldset>
                 <legend>Fluid form</legend>
-                <div class="input-group fluid"><label for="username2">username</label> <input type="email" value="" id="username2" placeholder="username"></div>
-                <div class="input-group fluid"><label for="pwd2">password</label> <input type="password" value="" id="pwd2" placeholder="password"></div>
+                <div class="input-group fluid"><label for="username2">Username</label> <input type="email" value="" id="username2" placeholder="username"></div>
+                <div class="input-group fluid"><label for="pwd2">Password</label> <input type="password" value="" id="pwd2" placeholder="password"></div>
               </fieldset>
               </form>
+							<form>
+	              <fieldset>
+	                <legend>Vertical form</legend>
+	                <div class="input-group vertical"><label for="username2">Username</label> <input type="email" value="" id="username2" placeholder="username"></div>
+	                <div class="input-group vertical"><label for="pwd2">Password</label> <input type="password" value="" id="pwd2" placeholder="password"></div>
+	              </fieldset>
+	              </form>
               <form>
               <fieldset>
                 <legend>Aligned form (using grid)</legend>
@@ -162,18 +169,22 @@
               </div>
               <div class="col-sm-12 col-sm-first col-lg-8 col-md-normal">
                 <p style="text-align: justify;">Forms are structured the same way you would structure a normal form in HTML5. Simply create a root <code>&lt;form&gt;</code> element and add your <code>&lt;input&gt;</code> elements inside. Link them to <code>&lt;label&gt;</code> elements for ease of access and you are pretty much set. We highly recommend using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements to annotate your forms as well, but you can skip them if you wish.</p>
-                <p style="text-align: justify;">Forms are inline by default. Use the <code>.input-group</code> class on a <code>&lt;div&gt;</code> wrapping inside it an <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> pair to make sure they always display together in one line. You can make your <code>.input-group</code>s respond to viewport changes, by adding the <code>.fluid</code> class to them. Finally, if you want to create aligned forms with a preset layout, you can utilize the <a href="grid.html"><strong>grid</strong></a> module's rows and columns.</p>
+                <p style="text-align: justify;">Forms are inline by default. Use the <code>.input-group</code> class on a <code>&lt;div&gt;</code> wrapping inside it an <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> pair to make sure they always display together in one line. You can make your <code>.input-group</code>s respond to viewport changes, by adding the <code>.fluid</code> class to them or you can align them vertically by adding the <code>.vertical</code> class. Finally, if you want to create aligned forms with a preset layout, you can utilize the <a href="grid.html"><strong>grid</strong></a> module's rows and columns.</p>
                 <h3>Sample code</h3>
                 <pre>&lt;form&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Simple form&lt;/legend&gt;
     &lt;div class=&quot;input-group fluid&quot;&gt;
-      &lt;label for=&quot;username&quot;&gt;username&lt;/label&gt;
+      &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
       &lt;input type=&quot;email&quot; value=&quot;&quot; id=&quot;username&quot; placeholder=&quot;username&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;input-group fluid&quot;&gt;
-      &lt;label for=&quot;pwd&quot;&gt;password&lt;/label&gt;
+      &lt;label for=&quot;pwd&quot;&gt;Password&lt;/label&gt;
       &lt;input type=&quot;password&quot; value=&quot;&quot; id=&quot;pwd&quot; placeholder=&quot;password&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;input-group vertical&quot;&gt;
+      &lt;label for=&quot;nmbr&quot;&gt;Number&lt;/label&gt;
+      &lt;input type=&quot;number&quot; id=&quot;nmbr&quot; value=&quot;5&quot;&gt;
     &lt;/div&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
@@ -185,7 +196,7 @@
                 <li>Using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements is highly recommended for a better presentational effect. Using these elements is a matter of personal preference, however try to keep your forms consistent (i.e. either use them in all forms or no forms as to not confuse users).</li>
                 <li>Some <code>&lt;input&gt;</code> elements, such as date &amp; time, color and range types, are not supported and, as a result, do not have a default style defined for them. You can define said styles manually if you need to use them in your website or app.</li>
                 <li>Checkboxes and radio buttons are not stylized the same way as most of the other elements, nor do they follow the exact same stucture for layout. Please refer to the next section for information on how to use those.</li>
-				<li>Try not to combine the <strong>grid</strong> module's classes with <code>.fluid</code><code>.input-group</code>s, as this might cause certain styles to overlap and not display exactly like you want them to.</li>
+				<li>Try not to combine the <strong>grid</strong> module's classes with <code>.fluid</code> or <code>.vertical</code> <code>.input-group</code>s, as this might cause certain styles to overlap and not display exactly like you want them to.</li>
               </ul><hr>
               <div class="row">
                 <div class="col-sm-12 col-md-6">

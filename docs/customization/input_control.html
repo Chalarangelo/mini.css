@@ -244,6 +244,14 @@
 										<td data-label="Description">Breakpoint for fluid input groups on mobile devices<sup><a href="#forms-note-one">1</a></sup></td><td data-label="Sample value">767px</td>
 									</tr>
 									<tr>
+										<td data-label="Variable">$include-vertical-input-group</td><td data-label="Type">Logical</td>
+										<td data-label="Description">Enables vertical input groups<sup><a href="#forms-note-two">1</a></sup></td><td data-label="Sample value">true</td>
+									</tr>
+									<tr>
+										<td data-label="Variable">$input-group-vertical-name</td><td data-label="Type">String</td>
+										<td data-label="Description">Class name for vertical input groups<sup><a href="#forms-note-two">1</a></sup></td><td data-label="Sample value">'fluid'</td>
+									</tr>
+									<tr>
 										<td data-label="Variable">$hide-file-inputs</td><td data-label="Type">Logical</td>
 										<td data-label="Description">Hides all <code>&lt;input <span class="fore-secondary">type</span>=&quot;<span class="fore-primary">file</span>&quot;&gt;</code> elements, allowing access only via the use of labels</td><td data-label="Sample value">true</td>
 									</tr>
@@ -254,6 +262,7 @@
 							<h3>Notes:</h3>
 							<ol style="text-align:justify">
 								<li id="forms-note-one">The values of <code>$input-group-fluid-name</code> and <code>$input-group-mobile-breakpoint</code> will only be used if <code>$include-fluid-input-group</code> is set to <code class="fore-tertiary">true</code>.</li>
+									<li id="forms-note-two">The value of <code>$input-group-vertical-name</code> will only be used if <code>$include-vertical-input-group</code> is set to <code class="fore-tertiary">true</code>.</li>
 							</ol>
 						</div>
 					</div>

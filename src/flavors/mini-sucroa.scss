@@ -172,6 +172,8 @@ $label-padding:						6px;											// Padding for label
 $input-group-name:				'input-group';						// Class for input groups
 $include-fluid-input-group:		true;									// Should fluid input grooups be included? (`true`/`false`) [1]
 $input-group-fluid-name:			'fluid';							// Class name for fluid input groups
+$include-vertical-input-group:	true;								// Should vertical input groups be included? (`true`/`false`) [1]
+$input-group-vertical-name: 	'vertical';						// Class name for vertical input groups.
 $input-group-mobile-breakpoint:	767px;							// Breakpoint for fluid input group mobile view
 $input-back-color:				#f2edff;									// Background for input
 $input-fore-color:				$fore-color;							// Text color for input
@@ -248,7 +250,7 @@ $checkbox-box-shadow:																	// Box shadow for checkbox/radio
 $include-switch: 								false;								// Should switch components be included? (`true`/`false`)
 // 	Notes:
 // [1] - If the value of $include-fluid-input-group is `true`, fluid input groups will be included, using the values
-//	specified in the corresponding variables.
+//	specified in the corresponding variables. The same applies for $include-vertical-input-group and vertical input groups.
 // [2] - If the value of $hide-file-inputs is `true`, all <input type="file"> elements will be hidden and the only way
 // 	to access them is via the use of <label> elements that are linked to them. This option is enabled by default to
 //	allow for universal button styles, even for file input buttons, but can be disabled if the base style is desired.

@@ -111,8 +111,8 @@ legend {
 				// New syntax
 				-webkit-flex-grow: 1;
 								flex-grow: 1;
-				-webkit-flex-basis: 0;
-								flex-basis: 0;
+				-webkit-flex-basis: 0px;
+								flex-basis: 0px;
 			}
 		}
 	}
@@ -153,8 +153,8 @@ legend {
 			// New syntax
 			-webkit-flex-grow: 1;
 							flex-grow: 1;
-			-webkit-flex-basis: 0;
-							flex-basis: 0;
+			-webkit-flex-basis: 0px;
+							flex-basis: 0px;
 		}
 	}
 }

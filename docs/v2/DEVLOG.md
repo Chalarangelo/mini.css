@@ -1255,3 +1255,13 @@
 - Altered `$label-padding` from `0.25rem` to `0.25rem 0.5rem` to make it align properly with everything else.
 - Added code for `.vertical` `.input-group`, documented it, updated flavors. Everything is ready, size is `6.70KB`, which is pretty good I might add.
 - Updated `CHANGELOG` and doc pages (new tag etc.), released **v2.3.0**.
+
+
+# v2.3.1 Development Log
+
+## 20170619
+
+- Merged two PRs resolving two issues that have been reported.
+- Added a lot of code in `input_control` module, some exotic functions included. Also added `$select-padding-right` to help solve an issue and update changes.
+- Used `svg` tricks to resolve the `select` issue, file size is now `6.90KB` gzipped, which is just below the maximum limit of the framework.
+- Updated flavor files and source code to use spaces instead of tabs. Should now look better on Github.

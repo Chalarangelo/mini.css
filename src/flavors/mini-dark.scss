@@ -5,7 +5,7 @@
 	Flavor name: Dark (mini-dark)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
 	Maintainers: Angelos Chalaris
-	mini.css version: v2.3.0
+	mini.css version: v2.3.1
 */
 //	Basic rules for body and typography
 $fore-color:						#d0d0d0;									// Text and general foreground color
@@ -184,6 +184,7 @@ $input-disabled-opacity:			0.75;									// Opacity for disabled input
 $input-readonly-back-color:		#263238;							// Background color for readonly input
 $input-readonly-border-color:	#20292e;							// Border color for readonly input
 $input-placeholder-fore-color:#757575;							// Text color for input placeholder
+$select-padding-right: 1.5rem;                      // Right padding for select element
 $button-back-color:			#39444a;										// Back color for button elements
 $button-back-opacity:		0.75;												// Background opacity for button elements
 $button-hover-back-opacity:		1;										// Background opacity for button elements on hover or focus

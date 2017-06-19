@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*
-	Flavor name: Sucroa (mini-sucroa)
-	Author: Angeliki Daskalakis
-	Maintainers: Angeliki Daskalakis, Angelos Chalaris (chalarangelo@gmail.com)
-	mini.css version: v2.3.0
+  Flavor name: Sucroa (mini-sucroa)
+  Author: Angeliki Daskalakis
+  Maintainers: Angeliki Daskalakis, Angelos Chalaris (chalarangelo@gmail.com)
+  mini.css version: v2.3.1
 */
 @import url("https://fonts.googleapis.com/css?family=Cousine:400,400i,700|Libre+Baskerville:400,400i,700&subset=latin-ext");
 /*
@@ -738,8 +738,8 @@ label {
   max-width: 100%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
-  -webkit-flex-basis: 0;
-  flex-basis: 0;
+  -webkit-flex-basis: 0px;
+  flex-basis: 0px;
 }
 
 @media screen and (max-width: 767px) {
@@ -771,8 +771,8 @@ label {
   max-width: 100%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
-  -webkit-flex-basis: 0;
-  flex-basis: 0;
+  -webkit-flex-basis: 0px;
+  flex-basis: 0px;
 }
 
 [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
@@ -822,6 +822,20 @@ input:not([type="button"]):not([type="submit"]):not([type="reset"]):invalid, inp
 input:not([type="button"]):not([type="submit"]):not([type="reset"])[readonly], textarea[readonly], select[readonly] {
   background: #eae1ff;
   border-color: #a9a2ba;
+}
+
+select {
+  padding-right: 20px;
+  background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="%23211423" d="M.25.75h.5L.5 1"/></svg>'), url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" style="background:%23f2edff"/>');
+  background-position: right, left;
+  background-repeat: no-repeat, repeat;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select[readonly] {
+  background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="%23211423" d="M.25.75h.5L.5 1"/></svg>'), url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" style="background:%23eae1ff"/>');
 }
 
 ::-webkit-input-placeholder {
@@ -1012,7 +1026,7 @@ input[type="file"] {
 }
 
 /*
-	Custom elements for forms and input elements.
+  Custom elements for forms and input elements.
 */
 button.primary, [type="button"].primary, [type="submit"].primary,
 [type="reset"].primary, .button.primary, [role="button"].primary {
@@ -1402,7 +1416,7 @@ table.striped tr:nth-of-type(2n) > td {
 }
 
 /*
-	Custom elements for cards and containers.
+  Custom elements for cards and containers.
 */
 @media screen and (min-width: 480px) {
   .card.large {
@@ -1746,7 +1760,7 @@ mark.inline-block {
 }
 
 /*
-	Custom contextual background elements and alerts.
+  Custom contextual background elements and alerts.
 */
 mark.secondary {
   background: #d2405f;
@@ -1851,7 +1865,7 @@ progress[value="1000"]::-moz-progress-bar {
 }
 
 /*
-	Custom elements for progress elements and spinners.
+  Custom elements for progress elements and spinners.
 */
 progress.inline {
   display: inline-block;
@@ -2004,7 +2018,7 @@ ul.breadcrumbs li:last-child:after {
 }
 
 /*
-	Custom elements for utilities and helper classes.
+  Custom elements for utilities and helper classes.
 */
 .bordered {
   border: 1px solid rgba(0, 0, 0, 0.25) !important;

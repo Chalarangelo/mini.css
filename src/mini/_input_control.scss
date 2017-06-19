@@ -28,6 +28,37 @@ $fore-color:							black !default;						// [External variable - core] Foreground
 // Policy for below external flag is `ALWAYS_TRUE`. This is done due to links being underlined by default.
 $apply-link-underline:		true !default;						// [External flag - core] Should underlining be applied to <a> elements? (`true`/`false`)
 $style-link-active-state:			false !default;				// [External flag - core] Should the :active state of <a> elements be stylized, same as the :hover state (`true`/`false`).
+// Necessary functions for certain elements (select)
+/// Courtesy of: https://css-tricks.com/snippets/sass/str-replace-function/
+/// -----------------------------------------------------------------------
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+// Generate the arrow for the select element
+@function selectArrow() {
+  $_input_fore_color: str-replace(#{$input-fore-color}, '#', '%23'); // Make sure it's all encoded properly
+  @return 'data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="'+$_input_fore_color+'" d="M.25.75h.5L.5 1"/></svg>';
+}
+// Generate the rest of the background for the select element
+@function selectBackground() {
+  $_input_back_color: str-replace(#{$input-back-color}, '#', '%23'); // Make sure it's all encoded properly
+  @return 'data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" style="background:'+$_input-back-color+'"/>';
+}
+// Generate the rest of the background for the select element when readonly
+@function selectReadonlyBackground() {
+  $_input-readonly-back-color: str-replace(#{$input-readonly-back-color}, '#', '%23'); // Make sure it's all encoded properly
+  @return 'data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" style="background:'+$_input-readonly-back-color+'"/>';
+}
 // Check the `_input_control_mixins.scss` file to find this module's mixins.
 @import 'input_control_mixins';
 // Base form styling.
@@ -166,13 +197,6 @@ legend {
 textarea {
 	overflow: auto;
 }
-// Correct background styling in Safari
-select {
-	background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-}
 // Correct style in Chrome and Safari.
 [type="search"] {
 	-webkit-appearance: textfield;
@@ -240,6 +264,19 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 			border-color: $input-readonly-border-color;
 		}
 	}
+}
+// Correct background styling in Safari
+select {
+  padding-right: $select-padding-right;
+  background-image: url(selectArrow()), url(selectBackground());
+  background-position: right, left;
+  background-repeat: no-repeat, repeat;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  &[readonly]{
+    background-image: url(selectArrow()), url(selectReadonlyBackground());
+  }
 }
 // Placeholder styling (keep browser-specific definitions separated, they do not play well together).
 ::-webkit-input-placeholder {

@@ -3,7 +3,7 @@
 	Flavor name: Dark (mini-dark)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
 	Maintainers: Angelos Chalaris
-	mini.css version: v2.3.0
+	mini.css version: v2.3.1
 */
 /*
 	Browsers resets and base typography.
@@ -731,8 +731,8 @@ label {
   max-width: 100%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
-  -webkit-flex-basis: 0;
-  flex-basis: 0;
+  -webkit-flex-basis: 0px;
+  flex-basis: 0px;
 }
 
 @media screen and (max-width: 767px) {
@@ -764,8 +764,8 @@ label {
   max-width: 100%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
-  -webkit-flex-basis: 0;
-  flex-basis: 0;
+  -webkit-flex-basis: 0px;
+  flex-basis: 0px;
 }
 
 [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
@@ -810,6 +810,20 @@ input:not([type="button"]):not([type="submit"]):not([type="reset"]):invalid, inp
 input:not([type="button"]):not([type="submit"]):not([type="reset"])[readonly], textarea[readonly], select[readonly] {
   background: #263238;
   border-color: #20292e;
+}
+
+select {
+  padding-right: 1.5rem;
+  background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="%23d0d0d0" d="M.25.75h.5L.5 1"/></svg>'), url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" style="background:%2339444a"/>');
+  background-position: right, left;
+  background-repeat: no-repeat, repeat;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select[readonly] {
+  background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="%23d0d0d0" d="M.25.75h.5L.5 1"/></svg>'), url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" style="background:%23263238"/>');
 }
 
 ::-webkit-input-placeholder {

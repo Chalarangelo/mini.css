@@ -3,7 +3,7 @@
 	Flavor name: Lite (mini-lite)
 	Author: Angelos Chalaris (chalarangelo@gmail.com)
 	Maintainers: Angelos Chalaris
-	mini.css version: v2.3.0
+	mini.css version: v2.3.1
 */
 /*
 	Browsers resets and base typography.
@@ -754,6 +754,20 @@ input:not([type="button"]):not([type="submit"]):not([type="reset"]):invalid, inp
 input:not([type="button"]):not([type="submit"]):not([type="reset"])[readonly], textarea[readonly], select[readonly] {
   background: #e5e5e5;
   border-color: #c9c9c9;
+}
+
+select {
+  padding-right: 1.5rem;
+  background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="%23212121" d="M.25.75h.5L.5 1"/></svg>'), url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" style="background:%23fafafa"/>');
+  background-position: right, left;
+  background-repeat: no-repeat, repeat;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select[readonly] {
+  background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="%23212121" d="M.25.75h.5L.5 1"/></svg>'), url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" style="background:%23e5e5e5"/>');
 }
 
 ::-webkit-input-placeholder {

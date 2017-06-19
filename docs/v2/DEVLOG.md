@@ -1265,3 +1265,4 @@
 - Added a lot of code in `input_control` module, some exotic functions included. Also added `$select-padding-right` to help solve an issue and update changes.
 - Used `svg` tricks to resolve the `select` issue, file size is now `6.90KB` gzipped, which is just below the maximum limit of the framework.
 - Updated flavor files and source code to use spaces instead of tabs. Should now look better on Github.
+- Released update to deal with bugs.

@@ -81,6 +81,7 @@ Special thanks to these fine folks for helping in the development of **mini.css*
 - [Per Harald Borgen](https://scrimba.com/perborgen) - Introductory video creator
 - Rory Primrose ([@roryprimrose](https://github.com/roryprimrose)) - Code restructure
 - Sandro Magi ([@naasking](https://github.com/naasking)) - [Multiple](https://github.com/Chalarangelo/mini.css/issues?q=is%3Aissue+author%3Anaasking) suggestions, ideas, bug reports
+- Wade Garrett ([@wad3g](https://github.com/wad3g)) - [Multiple](https://github.com/Chalarangelo/mini.css/pulls?q=is%3Apr+author%3Awad3g) fixes for issues and bugs
 
 ## License
 

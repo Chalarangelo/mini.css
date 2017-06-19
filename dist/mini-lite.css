@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /*
-	Flavor name: Lite (mini-lite)
-	Author: Angelos Chalaris (chalarangelo@gmail.com)
-	Maintainers: Angelos Chalaris
-	mini.css version: v2.3.1
+  Flavor name: Lite (mini-lite)
+  Author: Angelos Chalaris (chalarangelo@gmail.com)
+  Maintainers: Angelos Chalaris
+  mini.css version: v2.3.1
 */
 /*
-	Browsers resets and base typography.
+  Browsers resets and base typography.
 */
 html {
   font-size: 16px;
@@ -913,7 +913,7 @@ input[type="file"] {
 }
 
 /*
-	Custom elements for forms and input elements.
+  Custom elements for forms and input elements.
 */
 button.primary, [type="button"].primary, [type="submit"].primary,
 [type="reset"].primary, .button.primary, [role="button"].primary {
@@ -1170,7 +1170,7 @@ table th:first-child, table td:first-child {
 }
 
 /*
-	Custom elements for cards and containers.
+  Custom elements for cards and containers.
 */
 .card.fluid {
   max-width: 100%;
@@ -1202,7 +1202,7 @@ mark.inline-block {
 }
 
 /*
-	Custom contextual background elements and alerts.
+  Custom contextual background elements and alerts.
 */
 mark.secondary {
   background: #e53935;
@@ -1267,7 +1267,7 @@ progress[value="1000"]::-moz-progress-bar {
 }
 
 /*
-	Custom elements for progress elements and spinners.
+  Custom elements for progress elements and spinners.
 */
 progress.inline {
   display: inline-block;
@@ -1320,7 +1320,7 @@ progress.tertiary::-moz-progress-bar {
 }
 
 /*
-	Custom elements for utilities and helper classes.
+  Custom elements for utilities and helper classes.
 */
 .bordered {
   border: 1px solid rgba(0, 0, 0, 0.25) !important;

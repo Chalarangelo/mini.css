@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.3.1
+
+- Fixed an issue with `<select>` elements on certain devices (#80, #82).
+- Fixed an issue with `<input>` elements' padding on certain devices (#81, #83).
+- Updated codebase from tabs to spaces, should now look better on Github.
+
 ## v2.3.0
 
 - Added a new `.modal` component, which allows you to show modal dialogs (`contextual`).

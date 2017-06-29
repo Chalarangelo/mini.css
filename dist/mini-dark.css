@@ -3,10 +3,10 @@
   Flavor name: Dark (mini-dark)
   Author: Angelos Chalaris (chalarangelo@gmail.com)
   Maintainers: Angelos Chalaris
-  mini.css version: v2.3.1
+  mini.css version: v2.3.2
 */
 /*
-	Browsers resets and base typography.
+  Browsers resets and base typography.
 */
 html {
   font-size: 16px;
@@ -206,7 +206,7 @@ figcaption {
 }
 
 /*
-	Definitions for the grid system.
+  Definitions for the grid system.
 */
 .container {
   margin: 0 auto;
@@ -679,7 +679,7 @@ figcaption {
 }
 
 /*
-	Definitions for forms and input elements.
+  Definitions for forms and input elements.
 */
 form {
   background: #1c2529;
@@ -814,16 +814,15 @@ input:not([type="button"]):not([type="submit"]):not([type="reset"])[readonly], t
 
 select {
   padding-right: 1.5rem;
-  background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="%23d0d0d0" d="M.25.75h.5L.5 1"/></svg>'), url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" style="background:%2339444a"/>');
-  background-position: right, left;
-  background-repeat: no-repeat, repeat;
-  -moz-appearance: none;
+  background: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="%23d0d0d0" d="M.25.75h.5L.5 1"/></svg>') no-repeat right;
+  background-color: #39444a;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
 select[readonly] {
-  background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="%23d0d0d0" d="M.25.75h.5L.5 1"/></svg>'), url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" style="background:%23263238"/>');
+  background-color: #263238;
 }
 
 ::-webkit-input-placeholder {
@@ -1106,7 +1105,7 @@ button.large, [type="button"].large, [type="submit"].large,
 }
 
 /*
-	Definitions for navigation elements.
+  Definitions for navigation elements.
 */
 header {
   display: block;
@@ -1293,7 +1292,7 @@ footer.sticky {
 }
 
 /*
-	Definitions for the responsive table component.
+  Definitions for the responsive table component.
 */
 table {
   border-collapse: separate;
@@ -1613,7 +1612,7 @@ table.striped tr:nth-of-type(2n) > td {
 }
 
 /*
-	Definitions for cards and containers.
+  Definitions for cards and containers.
 */
 .card {
   display: -webkit-box;
@@ -1723,7 +1722,7 @@ table.striped tr:nth-of-type(2n) > td {
 }
 
 /*
-	Definitions for tabs/horizontal accordions.
+  Definitions for tabs/horizontal accordions.
 */
 .tabs {
   width: 100%;
@@ -1867,7 +1866,7 @@ table.striped tr:nth-of-type(2n) > td {
 }
 
 /*
-	Definitions for contextual background elements, toasts and tooltips.
+  Definitions for contextual background elements, toasts and tooltips.
 */
 mark {
   background: #0277bd;
@@ -2030,7 +2029,7 @@ mark.inline-block {
 }
 
 /*
-	Definitions for progress elements and spinners.
+  Definitions for progress elements and spinners.
 */
 progress {
   display: block;
@@ -2151,7 +2150,7 @@ progress.tertiary::-moz-progress-bar {
 }
 
 /*
-	Definitions for utilities and helper classes.
+  Definitions for utilities and helper classes.
 */
 .hidden {
   display: none !important;

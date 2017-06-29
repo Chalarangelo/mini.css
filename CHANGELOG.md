@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.3.2
+
+- Improved the styling of `select` to be a bit lighter in terms of size.
+- Added a condition allowing the `select` fix not to be applied.
+- Updated `mini-lite` to not include the `select` fix.
+
 ## v2.3.1
 
 - Fixed an issue with `<select>` elements on certain devices (#80, #82).

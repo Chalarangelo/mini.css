@@ -1266,3 +1266,11 @@
 - Used `svg` tricks to resolve the `select` issue, file size is now `6.90KB` gzipped, which is just below the maximum limit of the framework.
 - Updated flavor files and source code to use spaces instead of tabs. Should now look better on Github.
 - Released update to deal with bugs.
+
+# v2.3.2 Development Log
+
+## 20170629
+
+- Added `$apply-select-fix` to the `input_control` module, disabled the fix for `mini-lite` to make the flavor lighter.
+- Updated `select` styles to utilize some smart tricks, reducing size by a sliver (about `0.03KB` less when gzipped).
+- Released the **v2.3.2** hotfix.

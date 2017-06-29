@@ -7,7 +7,7 @@
   Flavor name: Lite (mini-lite)
   Author: Angelos Chalaris (chalarangelo@gmail.com)
   Maintainers: Angelos Chalaris
-  mini.css version: v2.3.1
+  mini.css version: v2.3.2
 */
 //  Basic rules for body and typography
 $fore-color:            #212121;                  // Text and general foreground color
@@ -172,7 +172,7 @@ $input-disabled-opacity:      0.75;                // Opacity for disabled input
 $input-readonly-back-color:   #e5e5e5;             // Background color for readonly input
 $input-readonly-border-color: #c9c9c9;             // Border color for readonly input
 $input-placeholder-fore-color:#616161;             // Text color for input placeholder
-$select-padding-right:   1.5rem;                   // Right padding for select element
+$apply-select-fix:       false;                    // [Hidden flag override] Should the styles that fix <select> styling be applied? (`true`/`false`)
 $button-back-color:      #dcdcdc;                  // Back color for button elements
 $button-back-opacity:    0.75;                     // Background opacity for button elements
 $button-hover-back-opacity: 1;                     // Background opacity for button elements on hover or focus

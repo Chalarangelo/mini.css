@@ -1,6 +1,6 @@
 {
   "name": "mini.css",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "A minimal, responsive, style-agnostic CSS framework.",
   "main": "dist/mini-default.min.css",
   "directories": {

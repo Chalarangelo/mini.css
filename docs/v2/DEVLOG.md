@@ -1274,3 +1274,9 @@
 - Added `$apply-select-fix` to the `input_control` module, disabled the fix for `mini-lite` to make the flavor lighter.
 - Updated `select` styles to utilize some smart tricks, reducing size by a sliver (about `0.03KB` less when gzipped).
 - Released the **v2.3.2** hotfix.
+
+# v2.3.3 Development Log
+
+## 20170715
+
+- Worked on the `mini-pwa` flavor. Updated everything and released `v2.3.3`.

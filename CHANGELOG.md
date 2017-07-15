@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.3.3
+
+- Added a new `mini-pwa` flavor, targeting Android and mobile devices in general.
+
 ## v2.3.2
 
 - Improved the styling of `select` to be a bit lighter in terms of size.

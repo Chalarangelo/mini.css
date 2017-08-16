@@ -3,7 +3,7 @@
   Flavor name: Nord (mini-nord)
   Author: tphecca (https://github.com/tphecca)
   Maintainers: tphecca
-  mini.css version: v2.3.3
+  mini.css version: v2.3.4
 */
 /*
   Browsers resets and base typography.
@@ -820,7 +820,7 @@ input:not([type="button"]):not([type="submit"]):not([type="reset"])[readonly], t
   border-color: #bdbdbd;
 }
 
-select {
+select:not([multiple]) {
   padding-right: 20px;
   background: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="%232E3440" d="M.25.75h.5L.5 1"/></svg>') no-repeat right;
   background-color: #E5E9F0;
@@ -829,7 +829,7 @@ select {
   appearance: none;
 }
 
-select[readonly] {
+select:not([multiple])[readonly] {
   background-color: #e0e0e0;
 }
 

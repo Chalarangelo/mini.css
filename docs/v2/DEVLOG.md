@@ -1280,3 +1280,16 @@
 ## 20170715
 
 - Worked on the `mini-pwa` flavor. Updated everything and released `v2.3.3`.
+
+# v2.3.4 Development Log
+
+## 20170816
+
+- Resolved issue #94 by applying the suggested changes to the `navigation` module.
+- Resolved issue #93 by fixing the link, obviously.
+- Applied a new layout to the `Forms & input` card of `input_control`, should resolve a long-standing problem with layout on certain screens.
+- Added `:not([multiple])` to the custom `select` style, fixing a problem with multi-value `select` elements.
+- Added example for `:invalid` `input` in `input_control` as requested in #92.
+- Updated all flavors to the latest version.
+- Removed Scrimba screencast from `index.html`, now it's only in its respective module. Should make loading somewhat faster.
+- Released update.

@@ -37,9 +37,7 @@ $button-border-style: 1px solid transparent !default;  // [External variable - i
 header {
   display: block;    // Correct display for older versions of IE.
   height: $header-height;
-  @if $header-back-color != $back-color {
-    background: $header-back-color;
-  }
+  background: $header-back-color; // Always apply background color to avoid shine through
   @if $header-fore-color != $fore-color {
     color: $header-fore-color;
   }

@@ -268,7 +268,7 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 }
 // Correct background styling in Safari
 @if $apply-select-fix {
-  select {
+  select:not([multiple]) {
     padding-right: $select-padding-right;
     background: url(selectArrow()) no-repeat right;
     background-color: $input-back-color;

@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.3.4
+
+- Fixed an edge-case that could cause trouble with `<header>` elements (#94).
+- Fixes some issues in the documentation (#92, #93).
+- Added some more specificity to the custom styling for `<select>` elements.
+
 ## v2.3.3
 
 - Added a new `mini-pwa` flavor, targeting Android and mobile devices in general.

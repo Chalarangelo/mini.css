@@ -3,7 +3,7 @@
   Flavor name: Default (mini-default)
   Author: Angelos Chalaris (chalarangelo@gmail.com)
   Maintainers: Angelos Chalaris
-  mini.css version: v2.3.3
+  mini.css version: v2.3.4
 */
 /*
   Browsers resets and base typography.
@@ -811,7 +811,7 @@ input:not([type="button"]):not([type="submit"]):not([type="reset"])[readonly], t
   border-color: #c9c9c9;
 }
 
-select {
+select:not([multiple]) {
   padding-right: 1.5rem;
   background: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="%23212121" d="M.25.75h.5L.5 1"/></svg>') no-repeat right;
   background-color: #fafafa;
@@ -820,7 +820,7 @@ select {
   appearance: none;
 }
 
-select[readonly] {
+select:not([multiple])[readonly] {
   background-color: #e5e5e5;
 }
 

@@ -107,7 +107,7 @@
           <div class="card fluid">
             <div class="section"><h2>Forms &amp; input</h2></div>
             <div class="section row">
-              <div class="col-sm-12 col-sm-last col-lg-4 col-md-normal">
+              <div class="col-sm-12 col-sm-last col-md-normal col-lg-8 col-lg-offset-2">
               <form>
               <fieldset>
                 <legend>Inline form (default style)</legend>
@@ -137,8 +137,17 @@
                     <label for="number">Number</label>
                   </div>
                   <div class="col-sm-12 col-md">
-                    <input type="number" value="4" id="number" style="width:85%;">
+                    <input type="number" value="42" id="number" style="width:85%;">
                   </div>
+                </div>
+                <div class="row responsive-label">
+                  <div class="col-sm-12 col-md-3">
+                    <label for="invalid">Invalid</label>
+                  </div>
+                  <div class="col-sm-12 col-md">
+                    <input value="invalid" id="invalid" style="width:85%;">
+                  </div>
+                  <script>document.getElementById("invalid").setCustomValidity("This field is invalid");</script>
                 </div>
                 <div class="row responsive-label">
                   <div class="col-sm-12 col-md-3">
@@ -167,7 +176,7 @@
               </fieldset>
               </form>
               </div>
-              <div class="col-sm-12 col-sm-first col-lg-8 col-md-normal">
+              <div class="col-sm-12 col-sm-first col-md-normal">
                 <p style="text-align: justify;">Forms are structured the same way you would structure a normal form in HTML5. Simply create a root <code>&lt;form&gt;</code> element and add your <code>&lt;input&gt;</code> elements inside. Link them to <code>&lt;label&gt;</code> elements for ease of access and you are pretty much set. We highly recommend using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements to annotate your forms as well, but you can skip them if you wish.</p>
                 <p style="text-align: justify;">Forms are inline by default. Use the <code>.input-group</code> class on a <code>&lt;div&gt;</code> wrapping inside it an <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> pair to make sure they always display together in one line. You can make your <code>.input-group</code>s respond to viewport changes, by adding the <code>.fluid</code> class to them or you can align them vertically by adding the <code>.vertical</code> class. Finally, if you want to create aligned forms with a preset layout, you can utilize the <a href="grid"><strong>grid</strong></a> module's rows and columns.</p>
                 <h3>Sample code</h3>

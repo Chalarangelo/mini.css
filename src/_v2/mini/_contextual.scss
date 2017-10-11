@@ -1,0 +1,265 @@
+/*
+  Definitions for contextual background elements, toasts and tooltips.
+*/
+// Contextual background elements use the mark element as their base.
+$mark-inline-block-name:  'inline-block' !default;  // Class name for <mark> inline block styling.
+$include-toast:           true !default;            // [Hidden flag] Should toasts be included? (`true`/`false`)
+$toast-name:              'toast' !default;         // Class name for the toasts.
+$include-tooltip:         true !default;            // Should tooltips be included? (`true`/`false`)
+$tooltip-name:            'tooltip' !default;       // Class name for the tooltips.
+$tooltip-bottom-name:     'bottom' !default;        // Bottom tooltip class name.
+$include-modal:           true !default;            // Should modals be included? (`true`/`false`)
+$modal-name:              'modal' !default;         // Class name for the modals.
+$modal-close-name:        'close' !default;         // Class name of the close element for the modal component.
+// External variables' defaults are used only if you import this module on its own, without the rest of the framework.
+$back-color:              white !default;           // [External variable - core] Background color for everything.
+$fore-color:              black !default;           // [External variable - core] Foreground color for everything.
+$base-line-height:        1 !default;               // [External variable - core] Line height for everything.
+$style-link-active-state: false !default;           // [External flag - core] Should the :active state of <a> elements be stylized, same as the :hover state (`true`/`false`).
+// Check the `_contextual_mixins.scss` file to find this module's mixins.
+@import 'contextual_mixins';
+// Default styling for mark. Use mixins for alternate styles.
+mark {
+  @if $mark-back-color != $back-color {
+    background: $mark-back-color;
+  }
+  @if $mark-fore-color != $fore-color {
+    color: $mark-fore-color;
+  }
+  @if $mark-font-size != 100% {
+    font-size: $mark-font-size;
+  }
+  @if $mark-line-height != $base-line-height {
+    line-height: $mark-line-height;
+  }
+  @if $mark-border-style != 0 {
+    border: $mark-border-style;
+  }
+  @if $mark-border-radius != 0 {
+    border-radius: $mark-border-radius;
+  }
+  @if $mark-padding != 0 {
+    padding: $mark-padding;
+  }
+  @if $mark-margin != 0 {
+    margin: $mark-margin;
+  }
+  @if $mark-box-shadow != none {
+    box-shadow: $mark-box-shadow;
+  }
+  &.#{$mark-inline-block-name}{
+    display: inline-block; // Can be used to deal with some problems.
+  }
+}
+// Default styling for toasts. Use mixins for alternate styles
+@if $include-toast {
+  .#{$toast-name} {
+    position: fixed;
+    background: $toast-back-color;
+    bottom: $toast-bottom;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @if $toast-fore-color != $fore-color {
+      color: $toast-fore-color;
+    }
+    @if $toast-border-style != 0 {
+      border: $toast-border-style;
+    }
+    @if $toast-border-radius != 0 {
+      border-radius: $toast-border-radius;
+    }
+    @if $toast-padding != 0 {
+      padding: $toast-padding;
+    }
+    @if $toast-box-shadow != none {
+      box-shadow: $toast-box-shadow;
+    }
+    z-index: 1111;
+  }
+}
+// Default styling for tooltips. Use mixins for alternate styles
+@if $include-tooltip {
+  .#{$tooltip-name} {
+    position: relative;
+    display: inline-block;
+    &:before, &:after {
+      position: absolute;
+      opacity: 0;
+      clip: rect(0 0 0 0);
+      -webkit-clip-path: inset(100%);
+              clip-path: inset(100%);
+      transition: all 0.3s;
+      // Remember to keep this index a lower value than the one used for stickies.
+      z-index: 1010;  // Deals with certain problems when combined with cards and tables.
+      left: 50%;
+    }
+    &:not(.#{$tooltip-bottom-name}):before, &:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
+      bottom: 75%;
+    }
+    &.#{$tooltip-bottom-name}:before, &.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
+      top: 75%;
+    }
+    @if $style-link-active-state {
+      &:hover, &:focus, &:active {
+        &:before, &:after {
+        opacity: 1;
+        clip: auto;
+        -webkit-clip-path: inset(0%);
+                clip-path: inset(0%);
+        }
+      }
+    }
+    @else {
+      &:hover, &:focus {
+        &:before, &:after {
+        opacity: 1;
+        clip: auto;
+        -webkit-clip-path: inset(0%);
+                clip-path: inset(0%);
+        }
+      }
+    }
+    &:before {  // This is the little tooltip triangle
+      content: '';
+      background: transparent;
+      border: $tooltip-tail-size solid transparent;
+      // Older browsers will almost center the tooltip's tail
+      left: 50%;
+      // Newer browsers will center the tail properly
+      left: calc(50% - #{$tooltip-tail-size});
+    }
+    &:not(.#{$tooltip-bottom-name}):before { // Top (default) tooltip styling
+      border-top-color: $tooltip-back-color;
+    }
+    &.#{$tooltip-bottom-name}:before { // Bottom tooltip styling
+      border-bottom-color: $tooltip-back-color;
+    }
+    &:after {  // This is the actual tooltip's text block
+      content: attr(aria-label);
+      background: $tooltip-back-color;
+      @if $tooltip-border-radius != 0 {
+        border-radius: $tooltip-border-radius;
+      }
+      @if $tooltip-fore-color != $fore-color {
+        color: $tooltip-fore-color;
+      }
+      @if $tooltip-padding != 0 {
+        padding: $tooltip-padding;
+      }
+      @if $tooltip-box-shadow != none {
+        box-shadow: $tooltip-box-shadow;
+      }
+      white-space: nowrap;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+    &:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
+      margin-bottom: 2 * $tooltip-tail-size;
+    }
+    &.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
+      margin-top: 2 * $tooltip-tail-size;
+    }
+  }
+}
+@if $include-modal {
+  .#{$modal-name} {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba($modal-back-color, $modal-back-opacity);
+    & .card {
+      margin: 0 auto;
+      max-height: 50vh;
+      overflow: auto;
+      & .#{$modal-close-name} {
+        position: absolute;
+        top: $modal-close-top;
+        right: $modal-close-right;
+        padding: 0; // Fixes the extra padding added from <label> styling.
+      }
+    }
+  }
+  :checked + .#{$modal-name} {
+    // Old syntax
+    display: -webkit-box;
+    -webkit-box-flex: 0;
+    // New syntax
+    display:   -webkit-flex;
+    display:          flex;
+    -webkit-flex: 0 1 auto;
+            flex: 0 1 auto;
+    z-index: 1200;
+    & .card {
+      & .#{$modal-close-name} {
+        z-index: 1211;
+      }
+    }
+  }
+}
+// [WARNING: As of v2.2.0, the alert component is deprecated and no longer maintained.]
+$include-alerts:          false !default;            // [Hidden flag] Should alerts be included? (`true`/`false`)
+// Animation definition for animated alerts (included if wanted)
+@if $include-alerts {      // Turn on if you want to enable the alert component.
+  $alert-name:              'alert' !default;          // Class name for the alerts.
+  $alert-include-animated:   false !default;            // Should animated alerts be included? (`true`/`false`)
+  $alert-animated-name:      'animated' !default;      // Class name for animated alerts.
+  $alert-back-color:        #d1e6f3 !default;          // Background color for alerts
+  $alert-fore-color:        $fore-color !default;      // Text color for alerts
+  $alert-border-style:    1px solid #d0d0d0 !default;  // Border style for alerts
+  $alert-border-radius:      0 !default;                // Border radius for alerts
+  $alert-padding:            0.75rem !default;          // Padding for alerts
+  $alert-margin:            0.5rem !default;          // Margin for alerts
+  $alert-box-shadow:        none !default;            // Box shadow for alerts
+  @if $alert-include-animated {
+    @-webkit-keyframes alert-anim {
+      45%   {    -webkit-transform: scale(1);      -webkit-transform-origin: 50% 50%;  }
+      50%   {    -webkit-transform: scale(1.005);  -webkit-transform-origin: 50% 50%;  }
+      55%   {    -webkit-transform: scale(1);      -webkit-transform-origin: 50% 50%;  }
+    }
+    @keyframes alert-anim {
+      45%   {            transform: scale(1);              transform-origin: 50% 50%;  }
+      50%   {            transform: scale(1.005);          transform-origin: 50% 50%;  }
+      55%   {            transform: scale(1);              transform-origin: 50% 50%;  }
+    }
+  }
+  // Default styling for alerts. Use mixins for alternate styles
+  .#{$alert-name} {
+    display: block;
+    @if $alert-back-color != $back-color {
+      background: $alert-back-color;
+    }
+    @if $alert-fore-color != $fore-color {
+      color: $alert-fore-color;
+    }
+    @if $alert-border-style != 0 {
+      border: $alert-border-style;
+    }
+    @if $alert-border-radius != 0 {
+      border-radius: $alert-border-radius;
+    }
+    @if $alert-margin != 0 {
+      margin: $alert-margin;
+    }
+    @if $alert-padding != 0 {
+      padding: $alert-padding;
+    }
+    @if $alert-box-shadow != none {
+      box-shadow: $alert-box-shadow;
+    }
+    @if $alert-include-animated {
+      &.#{$alert-animated-name} {
+        // Try to make the animated alert not blurry
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        // Apply the animation
+        -webkit-animation: alert-anim 6s linear infinite;
+                animation: alert-anim 6s linear infinite;
+      }
+    }
+  }
+}

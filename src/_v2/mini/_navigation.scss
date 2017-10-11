@@ -1,0 +1,294 @@
+/*
+  Definitions for navigation elements.
+*/
+// Different elements are styled based on the same set of rules.
+$button-class-name:       'button' !default;        // Class name for the button-like elements.
+$header-logo-name:        'logo' !default;          // Class name for <header>'s logo.
+$header-colorize-svgs:    true !default;            // [Hidden flag] Colorizes SVGs in the <header> element's logo (`true`/`false`).
+$include-header-sticky:   false !default;           // Should the sticky class for <header> elements be included (`true`/`false`).
+$header-sticky-name:      'sticky' !default;        // Class name for sticky <header>.
+$include-footer-sticky:   false !default;           // Should the sticky class for <footer> elements be included (`true`/`false`).
+$footer-sticky-name:      'sticky' !default;        // Class name for sticky <footer>.
+$include-nav-styles:      true !default;            // [Hidden flag] Should <nav> elements by stylized? (`true`/`false`)
+$nav-sublink-prefix:      'sublink' !default;       // Prefix for the subcategory tabs in nav.
+$nav-sublink-depth:       2 !default;               // Amount of subcategory classes to add.
+$nav-sublink-padding-left:12px !default;            // Left padding to add to subcategories.
+$nav-include-sublink-bar: false !default;           // Should a border be added to the subcategories? (`true`/`false`)
+$include-drawer:          true !default;            // [Hidden flag] Should the drawer component be included? (`true`/`false`)
+$drawer-name:             'drawer' !default;        // Class name for the drawer component.
+$drawer-toggle-name:      'drawer-toggle' !default; // Class name for the drawer component's toggle.
+$drawer-mobile-breakpoint:768px !default;           // Mobile breakpoint for the drawer component.
+$drawer-right-name:       'right' !default;         // Class name for the right variant of the drawer component.
+$drawer-persistent-name:  'persistent' !default;    // Class name for the persisten variant of the drawer component.
+$drawer-width:            320px !default;           // Width of the drawer component.
+$drawer-close-name:       'close' !default;         // Class name of the close element for the drawer component.
+// External variables' defaults are used only if you import this module on its own, without the rest of the framework.
+$back-color:              white !default;           // [External variable - core] Background color for everything.
+$fore-color:              black !default;           // [External variable - core] Foreground color for everything.
+// Policy for below external flag is `ALWAYS_TRUE`. This is done due to links being underlined by default and as a safeguard from ugly branding.
+$apply-link-underline:    true !default;            // [External flag - core] Should underlining be applied to <a> elements? (`true`/`false`)
+$style-link-active-state: false !default;           // [External flag - core] Should the :active state of <a> elements be stylized, same as the :hover state (`true`/`false`).
+// The below variable is used to fix the display problem of the <header> element when used as a responsive row
+$grid-row-name:           'row' !default;           // [External flag - grid] Class name for the grid system rows.
+$button-class-name:       'button' !default;        // [External variable - input_control] Name of the button-like element styling class.
+$button-box-shadow:0 1px 3px rgba(0,0,0, 0.1) !default;// [External variable - input_control] Value of button's box-shadow.
+$button-border-style: 1px solid transparent !default;  // [External variable - input_control] Value of button's border-style.
+// Header styling.
+header {
+  display: block;    // Correct display for older versions of IE.
+  height: $header-height;
+  background: $header-back-color; // Always apply background color to avoid shine through
+  @if $header-fore-color != $fore-color {
+    color: $header-fore-color;
+  }
+  @if $header-border-style != 0 {
+    border: $header-border-style;
+  }
+  @if $header-margin != 0 {
+    margin: $header-margin;
+  }
+  @if $header-padding != 0 {
+    padding: $header-padding;
+  }
+  @if $header-box-shadow != none {
+    box-shadow: $header-box-shadow;
+  }
+  // Responsiveness for smaller displays, scrolls horizontally.
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  // Header logo styling.
+  .#{$header-logo-name} {
+    @if $header-colorize-svgs {     // Deals with SVG colorization in case people use SVGs.
+      color: $header-fore-color;    // Only toggle off if you know what you're doing.
+    }
+    @if $header-logo-font-size != $base-font-size {
+      font-size: $header-logo-font-size;
+    }
+    @if $header-logo-line-height != $base-line-height {
+      line-height: $header-logo-line-height;
+    }
+    @if $header-logo-margin != 0 {
+      margin: $header-logo-margin;
+    }
+    @if $header-logo-padding != 0 {
+      padding: $header-logo-padding;
+    }
+    @if $apply-link-hover-fade {
+      transition: opacity 0.3s ;
+    }
+  }
+  // Link styling.
+  button, [type="button"],
+  a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name},
+  a[role="button"], label[role="button"], [role="button"] {
+    background: $header-back-color;        // Apply color regardless to override styling from other things.
+    color: $header-fore-color;
+    vertical-align: top;                  // Alignemt, really important to make this work well.
+    @if $header-link-margin != 0 {
+      margin: $header-link-margin;
+    }
+    @if $style-link-active-state {
+      &:hover, &:focus, &:active {
+        background: $header-link-hover-color;
+      }
+    }
+    @else {
+      &:hover, &:focus {
+        background: $header-link-hover-color;
+      }
+    }
+    @if $button-box-shadow != none {  // Override for buttons when shadow is enabled.
+      box-shadow: none;
+    }
+    @if $button-border-style != 0 {  // Override for buttons when border-style is enabled.
+      border: 0;
+    }
+  }
+  @if $apply-link-underline {        // Override for links if underline is enabled.
+    .#{$header-logo-name}, a.#{$button-class-name}, a[role="button"] {
+      text-decoration: none;
+    }
+  }
+  // Fix for responsive header, using the grid system's row and column alignment.
+  &.#{$grid-row-name} {
+    box-sizing: content-box;
+  }
+}
+// Navigation sidebar styling.
+@if $include-nav-styles {            // Unless you want unstylized <nav> elements, keep this flag on.
+  nav {
+    display: block;                  // Correct display for older versions of IE.
+    @if $nav-back-color != $back-color {
+      background: $nav-back-color;
+    }
+    @if $nav-fore-color != $fore-color {
+      color: $nav-fore-color;
+    }
+    @if $nav-border-style != 0 {
+      border: $nav-border-style;
+    }
+    @if $nav-border-radius != 0 {
+      border-radius: $nav-border-radius;
+    }
+    @if $nav-margin != 0 {
+      margin: $nav-margin;
+    }
+    @if $nav-padding != 0 {
+      padding: $nav-padding;
+    }
+    @if $nav-box-shadow != none {
+      box-shadow: $nav-box-shadow;
+    }
+    a, a:visited {
+      display: block;
+      color: $nav-link-fore-color;    // Apply regardless to de-stylize visited links.
+      text-decoration: none;
+    }
+    // Subcategories in navigation.
+    @for $i from 1 through $nav-sublink-depth {
+      .#{$nav-sublink-prefix}-#{$i} {
+        padding-left: $i * $nav-sublink-padding-left;
+        position: relative;
+        @if $nav-include-sublink-bar {
+          &:before {
+            position: absolute;
+            left: $nav-sublink-bar-left-position;
+            top: -$nav-sublink-bar-width;
+            content: '';
+            height: 100%;
+            border: $nav-sublink-bar-width solid $nav-sublink-bar-color;
+            border-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+// Footer styling.
+footer {
+  display: block;    // Correct display for older versions of IE.
+  @if $footer-back-color != $back-color {
+    background: $footer-back-color;
+  }
+  @if $footer-fore-color != $fore-color {
+    color: $footer-fore-color;
+  }
+  @if $footer-border-style != 0 {
+    border: $footer-border-style;
+  }
+  @if $footer-margin != 0 {
+    margin: $footer-margin;
+  }
+  @if $footer-padding != 0 {
+    padding: $footer-padding;
+  }
+  font-size: $footer-font-size;
+  a, a:visited {
+    color: $footer-link-fore-color;
+  }
+}
+// Sticky headers and footers.
+@if $include-header-sticky and $include-footer-sticky {
+  header.#{$header-sticky-name}, footer.#{$footer-sticky-name} {
+    position: -webkit-sticky;
+    position:          sticky;
+    z-index: 1101;  // Deals with certain problems when combined with cards and tables.
+  }
+  header.#{$header-sticky-name} {
+    top: 0;
+  }
+  footer.#{$footer-sticky-name} {
+    bottom: 0;
+  }
+}
+@else if $include-header-sticky {
+  header.#{$header-sticky-name} {
+    position: -webkit-sticky;
+    position:          sticky;
+    top: 0;
+    z-index: 1101;  // Deals with certain problems when combined with cards and tables.
+  }
+}
+@else if $include-footer-sticky {
+  footer.#{$footer-sticky-name} {
+    position: -webkit-sticky;
+    position:          sticky;
+    bottom: 0;
+    z-index: 1101;  // Deals with certain problems when combined with cards and tables.
+  }
+}
+// Responsive drawer component
+@if $include-drawer {
+  .#{$drawer-toggle-name}:before {
+    position: relative;
+    top: $drawer-toggle-top;
+    font-family: sans-serif;
+    font-size: $drawer-toggle-font-size;
+    line-height: $drawer-toggle-line-height;
+    content: '\2261';
+  }
+  .#{$drawer-name} {
+    display: block;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: $drawer-width;
+    height: 100vh;
+    overflow-y: auto;
+    background: $drawer-back-color;
+    @if $drawer-border-style != 0 {
+      border: $drawer-border-style;
+    }
+    @if $drawer-border-radius != 0 {
+      border-radius: $drawer-border-radius;
+    }
+    margin: 0;
+    @if $drawer-padding != 0 {
+      padding: $drawer-padding;
+    }
+    @if $drawer-box-shadow != none {
+      box-shadow: $drawer-box-shadow;
+    }
+    z-index: 1110;
+    &:not(.#{$drawer-right-name}) {
+      left: -$drawer-width;
+      transition: left 0.3s;
+    }
+    &.#{$drawer-right-name} {
+      right: -$drawer-width;
+      transition: right 0.3s;
+    }
+    & .#{$drawer-close-name} {
+      position: absolute;
+      top: $drawer-close-top;
+      right: $drawer-close-right;
+      z-index: 1111;
+      padding: 0; // Fixes the extra padding added from <label> styling.
+    }
+  }
+  @media screen and (max-width: #{$drawer-width}) {
+    .#{$drawer-name} {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: #{$drawer-mobile-breakpoint}){
+    .#{$drawer-name}:not(.#{$drawer-persistent-name}) {
+      position: static;
+      height: 100%;
+      z-index: 1100;
+      & .#{$drawer-close-name} {
+        display: none;
+      }
+    }
+    .#{$drawer-toggle-name}:not(.#{$drawer-persistent-name}) {
+      display: none;
+    }
+  }
+  :checked + .#{$drawer-name}:not(.#{$drawer-right-name}) {
+    left: 0;
+  }
+  :checked + .#{$drawer-name}.#{$drawer-right-name} {
+    right: 0;
+  }
+}

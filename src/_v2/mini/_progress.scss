@@ -1,0 +1,86 @@
+/*
+  Definitions for progress elements and spinners.
+*/
+// Progress elements use the progress element as their base.
+$progress-max-value:      100 !default;             // Arithmetic max value of <progress> - use integer values.
+$progress-height:         14px !default;            // Height of <progress>.
+$include-spinner-donut:   true !default;            // [Hidden flag] Should spinner donuts be enabled? (`true`/`false`)
+$spinner-donut-name:  'spinner-donut' !default;     // Class name for donut spinner.
+// Check the `_progress_mixins.scss` file to find this module's mixins.
+@import 'progress_mixins';
+// Default styling for progress. Use mixins for alternate styles.
+progress {
+  display: block;
+  vertical-align: baseline;  // Correct vertical alignment in certain browsers.
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      appearance: none;
+  height: $progress-height;
+  // Older browsers will sort not display progress properly, but that's ok
+  width: 90%;
+  // Newer browsers will calculate the proper width
+  width: calc(100% - #{$progress-left-right-margin*2});
+  margin: $progress-top-bottom-margin $progress-left-right-margin;
+  border: $progress-border-style;
+  @if $progress-border-radius != 0 {
+    border-radius: $progress-border-radius;
+  }
+  @if $progress-box-shadow != none {
+    box-shadow: $progress-box-shadow;
+  }
+  background: $progress-back-color;    // Background color of the element (IE 10+ and Firefox).
+  color: $progress-fore-color;      // Foreground of the element (IE 10+).
+  &::-webkit-progress-value {        // Foreground of the element (webkit browsers).
+    background: $progress-fore-color;
+    @if $progress-border-radius != 0 {
+      border-top-left-radius: $progress-border-radius;
+      border-bottom-left-radius: $progress-border-radius;
+    }
+  }
+  &::-webkit-progress-bar {        // Background of the element (webkit browsers).
+    background: $progress-back-color;
+  }
+  &::-moz-progress-bar {           // Foreground of the element (Firefox).
+    background: $progress-fore-color;
+    @if $progress-border-radius != 0 {
+      border-top-left-radius: $progress-border-radius;
+      border-bottom-left-radius: $progress-border-radius;
+    }
+  }
+  &[value="#{$progress-max-value}"] {
+    &::-webkit-progress-value {
+      @if $progress-border-radius != 0 {
+        border-radius: $progress-border-radius;
+      }
+    }
+    &::-moz-progress-bar {
+      @if $progress-border-radius != 0 {
+        border-radius: $progress-border-radius;
+      }
+    }
+  }
+}
+@if $include-spinner-donut {  // Turn off to disable spinner donuts.
+// Animation definition for donut spinner
+  @-webkit-keyframes spinner-donut-anim {
+      0% {   -webkit-transform: rotate(0deg);  }
+    100% {   -webkit-transform: rotate(360deg);}
+  }
+          @keyframes spinner-donut-anim {
+      0% {          transform: rotate(0deg);  }
+    100% {          transform: rotate(360deg);}
+  }
+}
+@if $include-spinner-donut {  // Turn off to disable spinner donuts.
+  // Style for donut spinner
+  .#{$spinner-donut-name} {
+    display: inline-block;
+    border: $spinner-donut-border-thickness solid $spinner-donut-back-color;
+    border-left: $spinner-donut-border-thickness solid $spinner-donut-fore-color;
+    border-radius: 50%;
+    width: $spinner-donut-size;
+    height: $spinner-donut-size;
+    -webkit-animation: spinner-donut-anim 1.2s linear infinite;
+            animation: spinner-donut-anim 1.2s linear infinite;
+  }
+}

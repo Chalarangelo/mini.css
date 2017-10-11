@@ -1,0 +1,261 @@
+/*
+  Definitions for tabs/horizontal accordions.
+*/
+// Dependency: This module is somewhat dependent on the grid system.
+$tab-container-name:      'tabs' !default;          // Class name for the tabs container.
+$include-stacked-tabs:    true !default;            // [Hidden flag] Should stacked tabs be included? (`true`/`false`).
+$tab-stacked-name:        'stacked' !default;       // Class name for stacked tabs container.
+$tab-stacked-breakpoint:  767px !default;           // Breakpoint for tabs layout (stacked/horizontal)
+// External variables' defaults are used only if you import this module on its own, without the rest of the framework.
+$back-color:              white !default;           // [External variable - core] Background color for everything.
+$fore-color:              black !default;           // [External variable - core] Foreground color for everything.
+// Tab styling
+.#{$tab-container-name} {
+  width: 100%;
+  opacity: 1;
+  // Old syntax
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  // New syntax
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  @if $tab-container-box-shadow != none {
+    box-shadow: $tab-container-box-shadow;
+  }
+  // Tab label styling
+  & > label {
+    // Old syntax
+    -webkit-box-flex: 1;
+    // New syntax
+    -webkit-flex-grow: 1;
+            flex-grow: 1;
+    // Make tab labels stay at the top on large displays
+    -webkit-order: 1;
+            order: 1;
+    // Actual styling
+    display: inline-block;
+    height: $tab-label-height;
+    cursor: pointer;
+    transition: background 0.3s;
+    @if $tab-label-back-color != $back-color {
+      background: $tab-label-back-color;
+    }
+    @if $tab-label-fore-color != $fore-color {
+      color: $tab-label-fore-color;
+    }
+    @if $tab-border-style != 0 {
+      border: $tab-border-style;
+    }
+    @if $tab-label-padding != 0 {
+      padding: $tab-label-padding;
+    }
+    @if $tab-border-radius != 0 {  // Style first and last tabs' labels' top corners as needed
+      &:first-of-type {
+        border-top-left-radius: $tab-border-radius;
+      }
+      &:last-of-type {
+        border-top-right-radius: $tab-border-radius;
+      }
+    }
+    // Hover styling for tabs' labels
+    &:hover, &:focus {
+      background: rgba($tab-label-back-color, $tab-label-hover-opacity);
+    }
+  }
+  // Tab radio styling
+  & > [type="radio"], & > [type="checkbox"] {
+    display: none;
+    visibility: hidden;
+  }
+  // Tab content styling
+  & > label + div {
+    // New syntax
+    -webkit-flex-basis: auto;
+            flex-basis: auto;
+    // Make tab panels display after all the labels on larger displays
+    -webkit-order: 2;
+            order: 2;
+    // Hide content, while allowing accessibility
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    // Presentation
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    transition: -webkit-transform 0.3s,
+                        transform 0.3s;
+    @if $tab-border-radius != 0 {
+      border-bottom-left-radius: $tab-border-radius;
+      border-bottom-right-radius: $tab-border-radius;
+    }
+  }
+  // Style for tab labels except the first
+  @if $tab-border-style != 0 {
+    & > label:not(:first-of-type) {
+      border-left: 0;
+    }
+  }
+  // Tab label styling for open tab
+  & > :checked + label {
+    @if $tab-label-selected-back-color != $tab-label-back-color {
+      background: $tab-label-selected-back-color;
+      &:hover, &:focus {
+        background: rgba($tab-label-selected-back-color, $tab-label-hover-opacity);
+      }
+    }
+    @if $tab-label-selected-fore-color != $tab-label-fore-color {
+      color: $tab-label-selected-fore-color;
+    }
+    border-bottom-color: $tab-selected-border-color;
+  }
+  // Tab content styling (open tab)
+  & > :checked + label + div {
+    box-sizing: border-box;
+    position: relative;
+    height: $tab-panel-height;
+    width: 100%;
+    overflow: auto;
+    margin: 0;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    @if $tab-panel-back-color != $back-color {
+      background: $tab-panel-back-color;
+    }
+    @if $tab-panel-fore-color != $fore-color {
+      color: $tab-panel-fore-color;
+    }
+    @if $tab-border-style != 0 {
+      border: $tab-border-style;
+      border-top: 0;
+    }
+    @if $tab-panel-padding != 0 {
+      padding: $tab-panel-padding;
+    }
+    // Fix display for some browsers
+    clip: auto;
+    -webkit-clip-path: inset(0%);
+            clip-path: inset(0%);
+  }
+}
+// Stacked tabs
+@if $include-stacked-tabs { // Turn off if you don't want stacked tabs enabled (except on smaller screens for responsiveness)
+  .#{$tab-container-name}.#{$tab-stacked-name} {
+    // Old syntax
+    -webkit-box-orient: vertical;
+    // New syntax
+    -webkit-flex-direction: column;
+            flex-direction: column;
+    & > label {
+      -webkit-order: initial;    // Reset order to show stacked tabs properly
+              order: initial;
+      @if $tab-border-radius != 0 {  // Style first and last tabs' labels' corners as needed
+        &:last-of-type {
+          border-top-right-radius: 0;
+          border-bottom-left-radius: $tab-border-radius;
+          border-bottom-right-radius: $tab-border-radius;
+        }
+        // Keep :first-of-type below :last-of-type to make sure that single collapses get proper radiuses
+        &:first-of-type {
+          border-top-right-radius: $tab-border-radius;
+        }
+      }
+    }
+    & > :checked + label {
+      @if $tab-border-style != 0 {
+        border: $tab-border-style;
+      }
+      @if $tab-border-radius != 0 {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+    & > label + div {
+      -webkit-order: initial;    // Reset order to show stacked tabs properly
+              order: initial;
+      // Presentation
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      @if $tab-border-radius != 0 {
+        border-radius: 0;
+      }
+    }
+    & > label:not(:first-of-type) {
+      @if $tab-border-style != 0 {
+        border: $tab-border-style;
+        border-top: 0;
+      }
+    }
+    & > :checked + label + div {
+      height: auto;
+    }
+    @if $tab-border-radius != 0 {
+      & > label + div:last-of-type {
+        border-bottom-left-radius: $tab-border-radius;
+        border-bottom-right-radius: $tab-border-radius;
+      }
+    }
+  }
+}
+// Responsiveness
+@media screen and (max-width: #{$tab-stacked-breakpoint}) {
+  .#{$tab-container-name} {
+    // Old syntax
+    -webkit-box-orient: vertical;
+    // New syntax
+    -webkit-flex-direction: column;
+            flex-direction: column;
+    & > label {
+      -webkit-order: initial;    // Reset order to show stacked tabs properly
+              order: initial;
+      @if $tab-border-radius != 0 {  // Style first and last tabs' labels' corners as needed
+        &:first-of-type {
+          border-top-right-radius: $tab-border-radius;
+        }
+        &:last-of-type {
+          border-top-right-radius: 0;
+          border-bottom-left-radius: $tab-border-radius;
+          border-bottom-right-radius: $tab-border-radius;
+        }
+      }
+    }
+    & > :checked + label {
+      @if $tab-border-style != 0 {
+        border: $tab-border-style;
+      }
+      @if $tab-border-radius != 0 {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+    & > label + div {
+      -webkit-order: initial;    // Reset order to show stacked tabs properly
+              order: initial;
+      @if $tab-border-radius != 0 {
+        border-radius: 0;
+      }
+    }
+    & > label:not(:first-of-type) {
+      @if $tab-border-style != 0 {
+        border: $tab-border-style;
+        border-top: 0;
+      }
+    }
+    @if $tab-border-radius != 0 {
+      & > label + div:last-of-type {
+        border-bottom-left-radius: $tab-border-radius;
+        border-bottom-right-radius: $tab-border-radius;
+      }
+    }
+  }
+}

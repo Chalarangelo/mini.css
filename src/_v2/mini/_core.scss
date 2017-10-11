@@ -1,0 +1,466 @@
+/*
+  Browsers resets and base typography.
+*/
+$apply-defaults-to-all:        true !default;        // Should default values be applied to all elements? (`true`/`false`).
+$base-root-font-size:          16px !default;        // Root font sizing for all elements - Should only be specified in `px` units!
+$_1px:  (1px/$base-root-font-size) * 1rem !default;  // Calculated rem value of 1px.
+$use-fluid-typography:         false !default;       // Should fluid typography be used at the root element? (`true`/`false`)
+$fluid-type-start-breakpoint:  320px !default;       // Breakpoint where fluid typography scaling starts.
+$fluid-type-end-breakpoint:    1600px !default;      // Breakpoint where fluid typography scaling ends.
+$fluid-type-small-type:        14px !default;        // Smallest root font size for fluid typography.
+$fluid-type-large-type:        18px !default;        // Largest root font size for fluid typography.
+$include-dfn-fix:              true !default;        // Fix display of <dfn> element in older versions of Android.
+$make-heading-smalltext-block: false !default;       // Should <small> elements in headings be displayed as blocks (`true`/`false`).
+$horizontal-rule-fancy-style:  false !default;       // Should a fancy styling be applied for the <hr> element (`true`/`false`).
+$add-pre-element-sidebar:      false !default;       // Should a fancy sidebar be added to the left side of <pre> (`true`/`false`).
+$apply-link-underline:         true !default;        // Should an underline be applied to all <a> elements? (`true`/`false`).
+$apply-link-hover-fade:        true !default;        // Should the :hover and :focus state of <a> elements use fade-out instead of a different color (`true`/`false`).
+$style-link-active-state:      false !default;       // [Hidden flag] Should the :active state of <a> elements be stylized, same as the :hover state (`true`/`false`).
+// Base typography rules
+@if $use-fluid-typography {
+  // Calculation of local variables (unitless values needed for the calculation of fluid typography)
+  $_fluid-type-unitless-size-change:  ($fluid-type-large-type - $fluid-type-small-type)/($fluid-type-small-type * 0 + 1);
+  $_fluid-type-unitless-distance:  ($fluid-type-end-breakpoint - $fluid-type-start-breakpoint)/($fluid-type-start-breakpoint * 0 + 1);
+  html {
+    font-size: #{$fluid-type-small-type};
+  }
+  @media screen and (min-width: #{$fluid-type-start-breakpoint}) {
+    html {
+      font-size: $base-root-font-size; // If the below calculation does not work, this is the fallback.
+      font-size: calc(#{$fluid-type-small-type} + #{$_fluid-type-unitless-size-change} * ((100vw - #{$fluid-type-start-breakpoint}) / #{$_fluid-type-unitless-distance}));
+    }
+  }
+  @media screen and (min-width: #{$fluid-type-end-breakpoint}) {
+    html {
+      font-size: #{$fluid-type-large-type};
+    }
+  }
+}
+@else {
+  html {
+    font-size: $base-root-font-size;  // Set root's font sizing.
+  }
+}
+
+@if $apply-defaults-to-all {
+  html, * {
+    font-family: #{$base-font-family};
+    line-height: $base-line-height;
+    // Prevent adjustments of font size after orientation changes in mobile.
+    -webkit-text-size-adjust: 100%;
+  }
+  * {
+    font-size: $base-font-size;
+  }
+}
+@else {
+  html {
+    font-family: #{$base-font-family};
+    line-height: $base-line-height;
+    // Prevent adjustments of font size after orientation changes in mobile.
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+body {
+  margin: $body-margin;
+  color: $fore-color;
+  background: $back-color;
+}
+
+// Correct display for older versions of IE. Fix display of some elements in other browsers as well.
+article, aside, section, figcaption, figure, main, details, menu {
+  display: block;
+}
+
+// Correct display in all browsers.
+summary {
+  display: list-item;
+}
+
+// Abbreviations
+abbr[title] {
+  border-bottom: none;           // Remove bottom border in Firefox 39-.
+  text-decoration: underline;   // Opinionated style-fix for all browsers.
+}
+
+// Correct display for older versions of IE.
+audio, video {
+  display: inline-block;
+}
+
+// Hide overflow in IE.
+svg:not(:root) {
+  overflow: hidden;
+}
+
+// Show overflow in IE.
+input {
+  overflow: visible;
+}
+
+// Make images responsive by default.
+img {
+  max-width: 100%;
+   height: auto;
+}
+
+// Fix display of <dfn> element in older versions of Android.
+@if $include-dfn-fix {
+  dfn {
+    font-style: italic;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: $heading-line-height;
+  margin: $heading-margin;
+  font-weight: $heading-font-weight;
+  small {
+    color: $heading-smalltext-fore-color;
+    @if $make-heading-smalltext-block {
+      display: block;
+      @if $heading-smalltext-b-top-margin != 0 {
+        margin-top: $heading-smalltext-b-top-margin;
+      }
+      @if $heading-smalltext-b-font-size != $small-font-size {
+        font-size: $heading-smalltext-b-font-size;
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+h2 {
+  font-size: $h2-font-size;
+}
+h3 {
+  font-size: $h3-font-size;
+}
+h4 {
+  font-size: $h4-font-size;
+}
+h5 {
+  font-size: $h5-font-size;
+}
+h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  margin: $paragraph-margin;
+}
+
+ol, ul {
+  margin: $list-margin;
+  padding-left: $list-left-padding;
+}
+
+b, strong {
+  font-weight: $bold-font-weight;
+}
+
+hr {
+  // Fixes and defaults for styling
+  box-sizing: content-box;
+  border: 0;
+  overflow: visible;
+  // Actual styling using variables
+  line-height: $horizontal-rule-line-height;
+  margin: $horizontal-rule-margin;
+  @if $horizontal-rule-fancy-style {
+    height: $_1px;
+    background: linear-gradient(#{$horizontal-rule-fancy-gradient});
+  }
+  @else {
+    height: 0;
+    border-top: $horizontal-rule-border-style;
+  }
+}
+
+blockquote {
+  display: block;
+  position: relative;
+  font-style: italic;
+  @if $blockquote-back-color != $back-color {
+    background: $blockquote-back-color;
+  }
+  @if $blockquote-fore-color != $fore-color {
+    color: $blockquote-fore-color;
+  }
+  // Overwrite defaults
+  margin: $blockquote-margin;
+  padding: $blockquote-padding;
+  @if $blockquote-border-style != 0 {
+    border: $blockquote-border-style;
+  }
+  @if $blockquote-sidebar-style != 0 {
+    border-left: $blockquote-sidebar-style;
+  }
+  @if $blockquote-border-radius != 0 {
+    border-radius: $blockquote-border-radius;
+  }
+  @if $blockquote-box-shadow != none {
+    box-shadow: $blockquote-box-shadow;
+  }
+  &:after {
+    position: absolute;
+    font-style: normal;
+    font-size: $blockquote-cite-font-size;
+    @if $blockquote-cite-fore-color != $blockquote-fore-color {
+      color: $blockquote-cite-fore-color;
+    }
+    left: $blockquote-cite-left-position;
+    bottom: $blockquote-cite-bottom-position;
+    content: '\2014 \2009'attr(cite);
+  }
+}
+
+$use-default-code-fonts: true !default;
+@if $use-default-code-fonts {
+  code, kbd, pre, samp{
+    font-family: monospace, monospace;  // Applies display fix for all code elements
+  }
+}
+@else {
+  code, kbd, pre, samp{
+    font-family: $code-font-family;     // Display fix should be applied manually!
+  }
+}
+
+code {
+  @if $code-element-border-style != 0{
+    border: $code-element-border-style;
+  }
+  @if $code-element-border-radius != 0 {
+    border-radius: $code-element-border-radius;
+  }
+  @if $code-element-back-color != $back-color {
+    background: $code-element-back-color;
+  }
+  @if $code-element-fore-color != $fore-color {
+    color: $code-element-fore-color;
+  }
+  @if $code-element-padding != 0 {
+    padding: $code-element-padding;
+  }
+  @if $code-element-box-shadow != none {
+    box-shadow: $code-element-box-shadow;
+  }
+}
+
+pre {
+  overflow: auto; // Responsiveness
+  @if $pre-element-border-style != 0 {
+    border: $pre-element-border-style;
+  }
+  @if $pre-element-border-radius != 0 {
+    border-radius: $pre-element-border-radius;
+  }
+  @if $pre-element-back-color != $back-color {
+    background: $pre-element-back-color;
+  }
+  @if $pre-element-fore-color != $fore-color {
+    color: $pre-element-fore-color;
+  }
+  @if $pre-element-padding != 0 {
+    padding: $pre-element-padding;
+  }
+  @if $pre-element-margin != 0 {
+    margin: $pre-element-margin;
+  }
+  @if $add-pre-element-sidebar {
+    border-left: $pre-element-sidebar-style;
+  }
+  @if $pre-element-box-shadow != none {
+    box-shadow: $pre-element-box-shadow;
+  }
+}
+
+kbd {
+  @if $kbd-element-border-style != 0 {
+    border: $kbd-element-border-style;
+  }
+  @if $kbd-element-border-radius != 0 {
+    border-radius: $kbd-element-border-radius;
+  }
+  @if $kbd-element-back-color != $back-color {
+    background: $kbd-element-back-color;
+  }
+  @if $kbd-element-fore-color != $fore-color {
+    color: $kbd-element-fore-color;
+  }
+  @if $kbd-element-padding != 0 {
+    padding: $kbd-element-padding;
+  }
+  @if $kbd-element-box-shadow != none {
+    box-shadow: $kbd-element-box-shadow;
+  }
+}
+
+$style-samp-element: false !default;
+@if $style-samp-element {
+  samp{
+    @if $samp-element-border-style != 0 {
+      border: $samp-element-border-style;
+    }
+    @if $samp-element-border-radius != 0 {
+      border-radius: $samp-element-border-radius;
+    }
+    @if $samp-element-back-color != $back-color {
+      background: $samp-element-back-color;
+    }
+    @if $samp-element-fore-color != $fore-color {
+      color: $samp-element-fore-color;
+    }
+    @if $samp-element-padding != 0 {
+      padding: $samp-element-padding;
+    }
+    @if $samp-element-box-shadow != none {
+      box-shadow: $samp-element-box-shadow;
+    }
+  }
+}
+
+@if $small-font-size == $sub-font-size and $small-font-size == $sup-font-size {
+  small, sup, sub {
+    font-size: $small-font-size;
+  }
+  sup {
+    top: $sup-top;
+  }
+  sub{
+    bottom: $sub-bottom;
+  }
+  sup, sub {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+}
+@else if $small-font-size == $sub-font-size {
+  small, sub {
+    font-size: $small-font-size;
+  }
+  sup {
+    font-size: $sup-font-size;
+    top: $sup-top;
+  }
+  sub {
+    bottom: $sub-bottom;
+  }
+  sup, sub {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+}
+@else if $small-font-size == $sup-font-size {
+  small, sup {
+    font-size: $small-font-size;
+  }
+  sup {
+    top: $sup-top;
+  }
+  sub {
+    font-size: $sub-font-size;
+    bottom: $sub-bottom;
+  }
+  sup, sub {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+}
+@else if $sup-font-size == $sub-font-size {
+  small {
+    font-size: $small-font-size;
+  }
+  sup, sub {
+    font-size: $sup-font-size;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sup {
+    top: $sup-top;
+  }
+  sub{
+    bottom: $sub-bottom;
+  }
+}
+@else {
+  small {
+     font-size: $small-font-size;
+  }
+  sup {
+    font-size: $sup-font-size;
+    top: $sup-top;
+  }
+  sub{
+    font-size: $sub-font-size;
+    bottom: $sub-bottom;
+  }
+  sup, sub {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+}
+
+// Link styling
+a{
+  color: $link-fore-color;
+  @if $apply-link-underline {
+    text-decoration: underline;
+  }
+  @else {
+    text-decoration: none;
+  }
+  @if $link-font-weight != 500 {
+    font-weight: $link-font-weight;
+  }
+  @if $apply-link-hover-fade {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  &:visited {
+    color: $link-visited-fore-color;
+  }
+  @if $apply-link-hover-fade {
+    @if $style-link-active-state {
+      &:hover, &:focus, &:active {
+        opacity: 0.75;
+      }
+    }
+    @else {
+      &:hover, &:focus {
+        opacity: 0.75;
+      }
+    }
+  }
+  @else {
+    @if $style-link-active-state {
+      &:hover, &:focus, &:active {
+        color: $link-hover-fore-color;
+      }
+    }
+    @else {
+      &:hover, &:focus {
+        color: $link-hover-fore-color;
+      }
+    }
+  }
+}
+
+// Captions for figures
+figcaption {
+  @if $figcaption-font-size != 100% {
+    font-size: $figcaption-font-size;
+  }
+  @if $figcaption-fore-color != $fore-color {
+    color: $figcaption-fore-color;
+  }
+}

@@ -1,0 +1,167 @@
+/*
+  Definitions for utilities and helper classes.
+*/
+$hidden-name:           'hidden' !default;          // Class name for hidden elements.
+$visually-hidden-name:  'visually-hidden' !default; // Class name for visually hidden elements.
+$include-breadcrumbs:   true !default;              // [Hidden flag] Should breadcrumbs be included? (`true`/`false`)
+$breadcrumbs-name:      'breadcrumbs' !default;     // Class name for breadcrumbs.
+$include-close-icon:    true !default;              // [Hidden flag] Should the close icon be included? (`true`/`false`)
+$close-icon-name:       'close'!default;            // Class name for close icon.
+// The floats, clearfix and center-block flags are for legacy features.
+$include-floats:        false !default;             // Should floats be included? (`true`/`false`)
+$include-clearfix:      false !default;             // Should clearfix be included? (`true`/`false`)
+$include-center-block:  false !default;             // Should center block be included? (`true`/`false`)
+$style-link-active-state:    false !default;        // [External flag - core] Should the :active state of <a> elements be stylized, same as the :hover state (`true`/`false`).
+// Check the `_utility_mixins.scss` file to find this module's mixins.
+@import 'utility_mixins';
+// Hidden elements class. ATTENTION: Uses !important.
+.#{$hidden-name}{
+  display: none !important;
+}
+// Visually hidden elements class. ATTENTION: Uses !important.
+.#{$visually-hidden-name} {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(100%) !important;
+          clip-path: inset(100%) !important;
+  overflow: hidden !important;
+}
+@if $include-breadcrumbs {  // Turn off if you do not want breadcrumbs to be included.
+  // Breadcrumbs
+  ul.#{$breadcrumbs-name} {
+    // Old syntax
+    display: -webkit-box;
+    // New syntax
+    display:   -webkit-flex;
+    display:            flex;
+    list-style: none;
+    // Apply margin from styling
+    @if $breadcrumbs-margin != 0 {
+      margin: $breadcrumbs-margin;
+    }
+    @else {  // Reset margins from list styling
+      margin-left: 0;
+      margin-right: 0;
+    }
+    padding: 0;        // Remove unnecessary left and right empty space
+    @if $breadcrumbs-border-style !=0 {
+      border: $breadcrumbs-border-style;
+    }
+    @if $breadcrumbs-border-radius != 0 {
+      border-radius: $breadcrumbs-border-radius;
+    }
+    @if $breadcrumbs-box-shadow != none {
+      box-shadow: $breadcrumbs-box-shadow;
+    }
+    li {
+      // Old syntax
+      -webkit-box-flex: 1;
+      max-width: 100%;
+      // New syntax
+      -webkit-flex-grow: 1;
+              flex-grow: 1;
+      -webkit-flex-basis: 0;
+              flex-basis: 0;
+      position: relative;
+      text-align: center;
+      background: $breadcrumbs-back-color;
+      height: $breadcrumbs-height;
+      line-height: $breadcrumbs-height;
+      margin-right: ($breadcrumbs-height/2) + $breadcrumbs-separator-width;
+      &:before, &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border: 0 solid $breadcrumbs-back-color;
+        border-width: ($breadcrumbs-height/2) ceil($breadcrumbs-height/4);
+      }
+      &:before {
+        left: -($breadcrumbs-height/2);
+        border-left-color: transparent;
+      }
+      &:after {
+        left: 100%;
+        border-color: transparent;
+        border-left-color: $breadcrumbs-back-color;
+      }
+      &:first-child {
+        &:before {
+          border: 0;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+        &:after {
+          border: 0;
+        }
+      }
+    }
+  }
+}
+@if $include-close-icon { // Turn off if you do not want to include the close icon
+  // Close icon
+  .#{$close-icon-name}{
+    display: inline-block;
+    width: $close-icon-size;
+    font-family: sans-serif;
+    font-size: $close-icon-size;
+    line-height: 1;
+    font-weight: 700;
+    border-radius: 2rem;
+    background: rgba($close-icon-back-color,0);
+    vertical-align: top;
+    cursor: pointer;
+    transition: background 0.3s;
+    @if $style-link-active-state {
+      &:hover, &:focus, &:active {
+        background: rgba($close-icon-back-color,1);
+      }
+    }
+    @else {
+      &:hover, &:focus {
+        background: rgba($close-icon-back-color,1);
+      }
+    }
+    &:before {
+      content: "\00D7";
+      display: block;
+      text-align: center;
+    }
+  }
+}
+// Floats. ATTENTION: Uses !important.
+// NOTE: Might be obsolete and not play well with others.
+@if $include-floats {
+  .#{$float-prefix}-left {
+    float: left !important;
+  }
+  .#{$float-prefix}-right {
+    float: right !important;
+  }
+}
+// Clearfix mixin. ATTENTION: Uses !important.
+// NOTE: Might be obsolete and not play well with others.
+@if $include-clearfix {
+  .#{$clearfix-name} {
+    &:before, &:after {
+      content: ' ' !important;
+      display: table !important;
+      clear: both !important;
+    }
+  }
+}
+// Center block. ATTENTION: Uses !important.
+@if $include-center-block {
+  .#{$center-block-name} {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}

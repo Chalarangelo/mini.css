@@ -48,6 +48,7 @@ table {
     @if $table-body-fore-color != $fore-color {
       color: $table-body-fore-color;
     }
+    min-height: 1.5rem;
   }
   thead th {
     border-top: 0;

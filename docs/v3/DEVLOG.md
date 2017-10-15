@@ -1,5 +1,7 @@
 # mini.css v3 (Gluon) Development Log
 
+# v3.0.0-alpha.1
+
 ## 20171011
 
 - Moved all WIP to `gluon` branch, seems like the right choice.
@@ -16,3 +18,10 @@
 - Removed fix for `svg:not(:root)`, as it was IE-based.
 - Completely removed the `dfn` fix, as it's a rarely (if ever) used element and it targets an older version of Android, meaning it's not a really meaningful fix to anyone.
 - Stopped right before the headings, these will be updated and built next time.
+
+## 20171015
+
+- Cleaned up `docs` folder to be able to cherry pick into `master` branch for the new version documentation.
+- Built up the heading elements (`h1` - `h6`), using CSS variables (`--heading-ratio` for universal heading ratio scaling).
+- Added `--secondary-fore-color` for things like `small` in `h1`, which is set to `#424242`. Avoided using the term `--fore-color-lighter` as it could cause ambiguity in reverse-color-palette flavors.
+- `small` elements in headings are now by defauly displayed in blocks. I haven't seen many use cases for the old style and the codebase could use the cleanup, so there's that.

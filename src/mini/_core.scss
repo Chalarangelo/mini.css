@@ -11,11 +11,24 @@ $base-line-height:        1.5 !default;         // Line height for most elements
 $base-font-size:          1rem !default;        // Font sizing for all elements
 $_body-margin:            0 !default;           // [Hidden] Margin for body
 $fore-color:              #212121 !default;     // Text & foreground color
+$secondary-fore-color:    #424242 !default;     // Secondary text & foreground color
 $back-color:              #f8f8f8 !default;     // Background color
+$heading-line-height:     1.2 !default;         // Line height for headings
+$heading-ratio:           1.19 !default;        // Ratio for headings (strictly unitless)
+$subheading-font-size:    0.75em !default;      // Font sizing for <small> elements in headings
+$subheading-top-margin:   -0.25rem !default;    // Top margin of <small> elements in headings
 
+$small-font-size:         0.75em !default;      // Font sizing for <small> elements
+// TODO: universalize
+$heading-margin:      0.75rem 0.5rem !default;  // Margin for headers, use universal
+$heading-font-weight: 500 !default;             // Font weight for headings
+
+/* Core module CSS variable definitions */
 :root {
   --fore-color: $fore-color;
+  --secondary-fore-color: $secondary-fore-color;
   --back-color: $back-color;
+  --heading-ratio: $heading-ratio;
 }
 html {
   font-size: $base-root-font-size;  // Set root's font sizing.
@@ -72,4 +85,39 @@ input {
 img {
   max-width: 100%;
   height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: $heading-line-height;
+  margin: $heading-margin;
+  font-weight: $heading-font-weight;
+  small {
+    color: var(--secondary-fore-color);
+    display: block;
+    @if $subheading-top-margin != 0 {
+      margin-top: $subheading-top-margin;
+    }
+    @if $subheading-font-size != $small-font-size {
+      font-size: $subheading-font-size;
+    }
+  }
+}
+
+h1 {
+  font-size: calc(1rem * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio));
+}
+h2 {
+  font-size: calc(1rem * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio));
+}
+h3 {
+  font-size: calc(1rem * var(--heading-ratio) * var(--heading-ratio));
+}
+h4 {
+  font-size: calc(1rem * var(--heading-ratio));
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: calc(1rem / var(--heading-ratio));
 }

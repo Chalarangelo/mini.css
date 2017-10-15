@@ -3,7 +3,7 @@
   Flavor name: Progressive Web App (mini-pw)
   Author: Angelos Chalaris (chalarangelo@gmail.com)
   Maintainers: Angelos Chalaris
-  mini.css version: v2.3.4
+  mini.css version: v2.3.5
 */
 /*
   Browsers resets and base typography.
@@ -1215,6 +1215,7 @@ table th:first-child, table td:first-child {
     border: 0;
     border-bottom: 0.0625rem solid #bdbdbd;
     text-align: right;
+    min-height: 1.5rem;
   }
   table:not(.preset) td:before {
     content: attr(data-label);

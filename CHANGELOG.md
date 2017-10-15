@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.3.5
+
+- Fixes a bug caused by empty `<td>` elements, causing mobile tables to not display as intended.
+
 ## v2.3.4
 
 - Fixed an edge-case that could cause trouble with `<header>` elements (#94).

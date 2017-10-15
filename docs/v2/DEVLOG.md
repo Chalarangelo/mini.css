@@ -1293,3 +1293,13 @@
 - Updated all flavors to the latest version.
 - Removed Scrimba screencast from `index.html`, now it's only in its respective module. Should make loading somewhat faster.
 - Released update.
+
+# v2.3.5 Development Log
+
+## 20171015
+
+- Merged PR #102 to fix #101.
+- Updated `table` to properly fix #101 and allow for customization.
+- Rebuilt flavors to latest version.
+- Updated docs.
+- Released patch.

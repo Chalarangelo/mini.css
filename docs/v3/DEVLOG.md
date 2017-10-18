@@ -35,3 +35,10 @@
 - The old *fancy style* of `hr` is now the default and only styling choice. Seems easier that way. Manual tweaking can resolve this for certain flavors.
 - Added `--border-color` to use for universal border colors.
 - Applied a new gradient style to `hr`, one that uses `transparent` and the `--border-color`. Hopefully, it works as expected.
+- Completely remodelled the `blockquote` element, using CSS variables, a cleaner styling and some extra tricks. It should now behave better when there is no `[cite]` attribute present, improving presentation.
+- After a couple hours of research on web safe monospaced fonts and fonts that are actually up-to-date, a cup of coffe and a terrible headache, I ended up with the shortest possible `font-family` native font stack for monospaced fonts for `code, pre, kbd`. The only useful article was [this](https://www.client9.com/css-system-font-stack---monospace-v1/), due to the fact that it was posted in the last year. Honestly, the last version used just `monospace`, worst-case scenario there is no improvement whatsoever, but at least I tried. Preliminary results show that this looks pretty decent on Windows.
+- `box-shadow` has been dropped entirely for now, it will be added at a later time during a later alpha. For now, I want a quick and dirty solution for the most part.
+- Quick and dirty `code` and `kbd` element implementation, tweaks might be required later down the line.
+- `pre` element styling now has a sidebar by default and uses a CSS variable for this.
+- `samp` element styling removed (at least for now).
+- Tested and debugged code up to this point.

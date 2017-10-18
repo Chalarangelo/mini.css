@@ -1303,3 +1303,7 @@
 - Rebuilt flavors to latest version.
 - Updated docs.
 - Released patch.
+
+## 20171018
+
+- Fixed a typo in the `flavors` doc page.

@@ -30,3 +30,8 @@
 
 - Added universal margin variable `--universal-margin` for an easy way to align content and elements.
 - Converted all hardcoded CSS variable names to SCSS variables that are then converted into the final variables. This will allow for an extra layer of customization and help alleviate conflict problems (also allows for code minification in tiny flavor files that require variables names with simpler names).
+- Added styling for `p`, `ol` and `ul`, used universal margin and applied its double to the `padding-left` of the lists, so that it is reasonably consistent. Hope this wasn't a mistake.
+- Removed the `overflow: visible;` fix that was applied to `hr` for IE (legacy).
+- The old *fancy style* of `hr` is now the default and only styling choice. Seems easier that way. Manual tweaking can resolve this for certain flavors.
+- Added `--border-color` to use for universal border colors.
+- Applied a new gradient style to `hr`, one that uses `transparent` and the `--border-color`. Hopefully, it works as expected.

@@ -13,31 +13,42 @@ $_body-margin:            0 !default;           // [Hidden] Margin for body
 $fore-color:              #212121 !default;     // Text & foreground color
 $secondary-fore-color:    #424242 !default;     // Secondary text & foreground color
 $back-color:              #f8f8f8 !default;     // Background color
+$blockquote-color:        #f57c00 !default;     // <blockquote> sidebar and quotation color
 $border-color:            #acacac !default;     // Border color
+$secondary-border-color:  #c9c9c9 !default;     // Secondary border color
 $heading-line-height:     1.2 !default;         // Line height for headings
 $heading-ratio:           1.19 !default;        // Ratio for headings (strictly unitless)
 $subheading-font-size:    0.75em !default;      // Font sizing for <small> elements in headings
 $subheading-top-margin:   -0.25rem !default;    // Top margin of <small> elements in headings
 $universal-margin:        0.5rem !default;      // Universal margin for the most elements
+$universal-border-radius: 0.125rem !default;    // Universal border-radius for most elements
 $small-font-size:         0.75em !default;      // Font sizing for <small> elements
 $heading-font-weight:     500 !default;         // Font weight for headings
 $bold-font-weight:        700;                  // Font weight for <b> and <strong>
 $horizontal-rule-line-height:  1.25em;          // <hr> line height
+$blockquote-quotation-size:    3rem;            // Font size for the quotation of <blockquote>
+$blockquote-cite-size:         0.75em;          // Font size for the [cite] of <blockquote>
 // CSS variable name definitions [exercise caution if modifying these]
 $fore-color-var:                '--fore-color';
 $secondary-fore-color-var:      '--secondary-fore-color';
 $back-color-var:                '--back-color';
+$blockquote-color-var:          '--blockquote-color';
 $border-color-var:              '--border-color';
+$secondary-border-color-var:    '--secondary-border-color';
 $heading-ratio-var:             '--heading-ratio';
 $universal-margin-var:          '--universal-margin';
+$universal-border-radius-var:   '--universal-border-radius';
 /* Core module CSS variable definitions */
 :root {
   #{$fore-color-var}: $fore-color;
   #{$secondary-fore-color-var}: $secondary-fore-color;
   #{$back-color-var}: $back-color;
+  #{$blockquote-color-var}: $blockquote-color;
   #{$border-color-var}: $border-color;
+  #{$secondary-border-color-var}: $secondary-border-color;
   #{$heading-ratio-var}: $heading-ratio;
-  #{$side-margin-var}: $side-margin;
+  #{$universal-margin-var}: $universal-margin;
+  #{$universal-border-radius-var}: $universal-border-radius;
 }
 html {
   font-size: $base-root-font-size;  // Set root's font sizing.
@@ -153,4 +164,33 @@ hr {
   margin: var(#{$universal-margin-var});
   height: $_1px;
   background: linear-gradient(transparent, var(#{$border-color-var}) 20%, var(#{$border-color-var}) 80%, transparent);
+}
+
+blockquote {  // Doesn't have a back color yet...
+  display: block;
+  position: relative;
+  font-style: italic;
+  color: var(#{$secondary-fore-color-var});
+  margin: var(#{$universal-margin-var});
+  padding: calc(3 * var(#{$universal-margin-var}));
+  border: $__1px solid var(#{$secondary-border-color-var});
+  border-left: 6*$__1px solid var(#{$blockquote-color-var});
+  border-radius: 0 var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}) 0;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: sans-serif;
+    font-size: $blockquote-quotation-size;
+    font-weight: 700;
+    content: "\201c";
+    color: var(#{$blockquote-color-var});
+  }
+  &[cite]:after{
+    font-style: normal;
+    font-size: $blockquote-cite-size;
+    font-weight: 700;
+    content: "\a—  " attr(cite);
+    white-space: pre;
+  }
 }

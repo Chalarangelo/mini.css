@@ -25,3 +25,8 @@
 - Built up the heading elements (`h1` - `h6`), using CSS variables (`--heading-ratio` for universal heading ratio scaling).
 - Added `--secondary-fore-color` for things like `small` in `h1`, which is set to `#424242`. Avoided using the term `--fore-color-lighter` as it could cause ambiguity in reverse-color-palette flavors.
 - `small` elements in headings are now by defauly displayed in blocks. I haven't seen many use cases for the old style and the codebase could use the cleanup, so there's that.
+
+## 20171018
+
+- Added universal margin variable `--universal-margin` for an easy way to align content and elements.
+- Converted all hardcoded CSS variable names to SCSS variables that are then converted into the final variables. This will allow for an extra layer of customization and help alleviate conflict problems (also allows for code minification in tiny flavor files that require variables names with simpler names).

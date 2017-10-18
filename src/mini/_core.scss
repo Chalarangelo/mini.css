@@ -13,21 +13,21 @@ $_body-margin:            0 !default;           // [Hidden] Margin for body
 $fore-color:              #212121 !default;     // Text & foreground color
 $secondary-fore-color:    #424242 !default;     // Secondary text & foreground color
 $back-color:              #f8f8f8 !default;     // Background color
+$border-color:            #acacac !default;     // Border color
 $heading-line-height:     1.2 !default;         // Line height for headings
 $heading-ratio:           1.19 !default;        // Ratio for headings (strictly unitless)
 $subheading-font-size:    0.75em !default;      // Font sizing for <small> elements in headings
 $subheading-top-margin:   -0.25rem !default;    // Top margin of <small> elements in headings
 $universal-margin:        0.5rem !default;      // Universal margin for the most elements
 $small-font-size:         0.75em !default;      // Font sizing for <small> elements
-// TODO: universalize
-$heading-margin:      0.75rem 0.5rem !default;  // Margin for headers, use universal
-$heading-font-weight: 500 !default;             // Font weight for headings
-
-
+$heading-font-weight:     500 !default;         // Font weight for headings
+$bold-font-weight:        700;                  // Font weight for <b> and <strong>
+$horizontal-rule-line-height:  1.25em;          // <hr> line height
 // CSS variable name definitions [exercise caution if modifying these]
 $fore-color-var:                '--fore-color';
 $secondary-fore-color-var:      '--secondary-fore-color';
 $back-color-var:                '--back-color';
+$border-color-var:              '--border-color';
 $heading-ratio-var:             '--heading-ratio';
 $universal-margin-var:          '--universal-margin';
 /* Core module CSS variable definitions */
@@ -35,6 +35,7 @@ $universal-margin-var:          '--universal-margin';
   #{$fore-color-var}: $fore-color;
   #{$secondary-fore-color-var}: $secondary-fore-color;
   #{$back-color-var}: $back-color;
+  #{$border-color-var}: $border-color;
   #{$heading-ratio-var}: $heading-ratio;
   #{$side-margin-var}: $side-margin;
 }
@@ -128,4 +129,28 @@ h5 {
 }
 h6 {
   font-size: calc(1rem / var(#{$heading-ratio-var}));
+}
+
+p {
+  margin: var(#{$universal-margin-var});
+}
+
+ol, ul {
+  margin: var(#{$universal-margin-var});
+  padding-left: calc(2 * var(#{$universal-margin-var}));
+}
+
+b, strong {
+  font-weight: $bold-font-weight;
+}
+
+hr {
+  // Fixes and defaults for styling
+  box-sizing: content-box;
+  border: 0;
+  // Actual styling using variables
+  line-height: $horizontal-rule-line-height;
+  margin: var(#{$universal-margin-var});
+  height: $_1px;
+  background: linear-gradient(transparent, var(#{$border-color-var}) 20%, var(#{$border-color-var}) 80%, transparent);
 }

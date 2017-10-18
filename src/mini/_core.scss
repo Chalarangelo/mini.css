@@ -17,18 +17,26 @@ $heading-line-height:     1.2 !default;         // Line height for headings
 $heading-ratio:           1.19 !default;        // Ratio for headings (strictly unitless)
 $subheading-font-size:    0.75em !default;      // Font sizing for <small> elements in headings
 $subheading-top-margin:   -0.25rem !default;    // Top margin of <small> elements in headings
-
+$universal-margin:        0.5rem !default;      // Universal margin for the most elements
 $small-font-size:         0.75em !default;      // Font sizing for <small> elements
 // TODO: universalize
 $heading-margin:      0.75rem 0.5rem !default;  // Margin for headers, use universal
 $heading-font-weight: 500 !default;             // Font weight for headings
 
+
+// CSS variable name definitions [exercise caution if modifying these]
+$fore-color-var:                '--fore-color';
+$secondary-fore-color-var:      '--secondary-fore-color';
+$back-color-var:                '--back-color';
+$heading-ratio-var:             '--heading-ratio';
+$universal-margin-var:          '--universal-margin';
 /* Core module CSS variable definitions */
 :root {
-  --fore-color: $fore-color;
-  --secondary-fore-color: $secondary-fore-color;
-  --back-color: $back-color;
-  --heading-ratio: $heading-ratio;
+  #{$fore-color-var}: $fore-color;
+  #{$secondary-fore-color-var}: $secondary-fore-color;
+  #{$back-color-var}: $back-color;
+  #{$heading-ratio-var}: $heading-ratio;
+  #{$side-margin-var}: $side-margin;
 }
 html {
   font-size: $base-root-font-size;  // Set root's font sizing.
@@ -56,8 +64,8 @@ html {
 
 body {
   margin: $_body-margin;
-  color: var(--fore-color);
-  background: var(--back-color);
+  color: var(#{$fore-color-var});
+  background: var(#{$back-color-var});
 }
 
 // Correct display for Edge & Firefox.
@@ -89,10 +97,10 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: $heading-line-height;
-  margin: $heading-margin;
+  margin: calc(1.5 * var(#{$universal-margin-var})) var(#{$universal-margin-var});
   font-weight: $heading-font-weight;
   small {
-    color: var(--secondary-fore-color);
+    color: var(#{$secondary-fore-color-var});
     display: block;
     @if $subheading-top-margin != 0 {
       margin-top: $subheading-top-margin;
@@ -104,20 +112,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: calc(1rem * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio));
+  font-size: calc(1rem * var(#{$heading-ratio-var}) * var(#{$heading-ratio-var}) * var(#{$heading-ratio-var}) * var(#{$heading-ratio-var}));
 }
 h2 {
-  font-size: calc(1rem * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio));
+  font-size: calc(1rem * var(#{$heading-ratio-var}) * var(#{$heading-ratio-var}) * var(#{$heading-ratio-var}));
 }
 h3 {
-  font-size: calc(1rem * var(--heading-ratio) * var(--heading-ratio));
+  font-size: calc(1rem * var(#{$heading-ratio-var}) * var(#{$heading-ratio-var}));
 }
 h4 {
-  font-size: calc(1rem * var(--heading-ratio));
+  font-size: calc(1rem * var(#{$heading-ratio-var}));
 }
 h5 {
   font-size: 1rem;
 }
 h6 {
-  font-size: calc(1rem / var(--heading-ratio));
+  font-size: calc(1rem / var(#{$heading-ratio-var}));
 }

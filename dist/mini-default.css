@@ -7,9 +7,13 @@
 /*
   Browsers resets and base typography.
 */
+/* Core module CSS variable definitions */
 :root {
   --fore-color: #212121;
+  --secondary-fore-color: #424242;
   --back-color: #f8f8f8;
+  --heading-ratio: 1.19;
+  --side-margin: 0.5rem;
 }
 
 html {
@@ -52,4 +56,40 @@ input {
 img {
   max-width: 100%;
   height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin: calc(1.5 * var(--side-margin)) var(--side-margin);
+  font-weight: 500;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  color: var(--secondary-fore-color);
+  display: block;
+  margin-top: -0.25rem;
+}
+
+h1 {
+  font-size: calc(1rem * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio));
+}
+
+h2 {
+  font-size: calc(1rem * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio));
+}
+
+h3 {
+  font-size: calc(1rem * var(--heading-ratio) * var(--heading-ratio));
+}
+
+h4 {
+  font-size: calc(1rem * var(--heading-ratio));
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: calc(1rem / var(--heading-ratio));
 }

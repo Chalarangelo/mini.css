@@ -27,24 +27,31 @@ $universal-padding:       0.5rem !default;      // Universal padding for the mos
 $universal-border-radius: 0.125rem !default;    // Universal border-radius for most elements
 $small-font-size:         0.75em !default;      // Font sizing for <small> elements
 $heading-font-weight:     500 !default;         // Font weight for headings
-$bold-font-weight:        700;                  // Font weight for <b> and <strong>
-$horizontal-rule-line-height:  1.25em;          // <hr> line height
-$blockquote-quotation-size:    3rem;            // Font size for the quotation of <blockquote>
-$blockquote-cite-size:         0.75em;          // Font size for the [cite] of <blockquote>
-$code-font-family: 'Menlo, Consolas, monospace' !default;   // Font stack for code elements
+$bold-font-weight:        700 !default;         // Font weight for <b> and <strong>
+$horizontal-rule-line-height:  1.25em !default; // <hr> line height
+$blockquote-quotation-size:    3rem !default;   // Font size for the quotation of <blockquote>
+$blockquote-cite-size:         0.75em !default; // Font size for the [cite] of <blockquote>
+$code-font-family: 'Menlo, Consolas, monospace' !default; // Font stack for code elements
+$small-element-font-size:     0.75em !default;  // Font size for <small>, <sub>, <sup>
+$sup-top:                  -0.5em !default;     // <sup> top
+$sub-bottom:               -0.25em !default;    // <sub> bottom
+$a-link-color:             #0277bd !default;    // Color for <a>:link
+$a-visited-color:          #01579b !default;    // Color for <a>:visited
 // CSS variable name definitions [exercise caution if modifying these]
 $fore-color-var:                '--fore-color';
-$secondary-fore-color-var:      '--secondary-fore-color';
-$back-color-var:                '--back-color';
-$secondary-back-color-var:      '--secondary-back-color';
-$blockquote-color-var:          '--blockquote-color';
-$pre-color-var:                 '--pre-color';
-$border-color-var:              '--border-color';
-$secondary-border-color-var:    '--secondary-border-color';
-$heading-ratio-var:             '--heading-ratio';
-$universal-margin-var:          '--universal-margin';
-$universal-padding-var:         '--universal-padding';
-$universal-border-radius-var:   '--universal-border-radius';
+$secondary-fore-color-var:      '--secondary-fore-color' !default;
+$back-color-var:                '--back-color' !default;
+$secondary-back-color-var:      '--secondary-back-color' !default;
+$blockquote-color-var:          '--blockquote-color' !default;
+$pre-color-var:                 '--pre-color' !default;
+$border-color-var:              '--border-color' !default;
+$secondary-border-color-var:    '--secondary-border-color' !default;
+$heading-ratio-var:             '--heading-ratio' !default;
+$universal-margin-var:          '--universal-margin' !default;
+$universal-padding-var:         '--universal-padding' !default;
+$universal-border-radius-var:   '--universal-border-radius' !default;
+$a-link-color-var:              '--a-link-color' !default;
+$a-visited-color-var:           '--a-visited-color' !default;
 /* Core module CSS variable definitions */
 :root {
   #{$fore-color-var}: $fore-color;
@@ -59,6 +66,8 @@ $universal-border-radius-var:   '--universal-border-radius';
   #{$universal-margin-var}: $universal-margin;
   #{$universal-padding-var}: $universal-padding;
   #{$universal-border-radius-var}: $universal-border-radius;
+  #{$a-link-color-var} : $a-link-color;
+  #{$a-visited-color-var} : $a-visited-color;
 }
 html {
   font-size: $base-root-font-size;  // Set root's font sizing.
@@ -205,7 +214,7 @@ blockquote {  // Doesn't have a back color yet, as well as no shadow...
   }
 }
 
-code, kbd, pre, samp{
+code, kbd, pre, samp {
   font-family: #{$code-font-family};     // Display fix should be applied manually!
 }
 
@@ -231,4 +240,42 @@ pre { // Fore color is the default, as well as no shadow...
   margin: var(#{$universal-margin-var});
   border: $__1px solid var(#{$secondary-border-color-var});
   border-left: 4*$__1px solid var(#{$pre-color-var});
+}
+
+// Prevent elements from affecting the line height in all browsers.
+sup, sub {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+small, sup, sub {
+  font-size: $small-element-font-size;
+}
+
+sup {
+  top: $sup-top;
+}
+sub {
+  bottom: $sub-bottom;
+}
+
+a {
+  text-decoration: underline;
+  opacity: 1;
+  transition: opacity 0.3s;
+  &:link{
+    color: var(#{$a-link-color-var});
+  }
+  &:visited {
+    color: var(#{$a-visited-color-var});
+  }
+  &:hover, &:focus {
+    opacity: 0.75;
+  }
+}
+
+figcaption {
+    font-size: $small-element-font-size;
+    color: var(#{$secondary-fore-color-var});
 }

@@ -42,3 +42,10 @@
 - `pre` element styling now has a sidebar by default and uses a CSS variable for this.
 - `samp` element styling removed (at least for now).
 - Tested and debugged code up to this point.
+
+## 20171019
+
+- Added styling for `small, sub, sup`. Their `font-size` is now tied to one variable for consistency.
+- Styled links, quite simplified but should be easier to work with for now.
+- Added styling for `figcaption`, tied color and size to `small`'s size for consistency.
+- The revamped `core` module seems to be about `200bytes` heavier than the old one, but certain things will probably be optimized over time.

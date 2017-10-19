@@ -22,6 +22,8 @@
   --universal-margin: 0.5rem;
   --universal-padding: 0.5rem;
   --universal-border-radius: 0.125rem;
+  --a-link-color: #0277bd;
+  --a-visited-color: #01579b;
 }
 
 html {
@@ -179,4 +181,45 @@ pre {
   margin: var(--universal-margin);
   border: 0.0625rem solid var(--secondary-border-color);
   border-left: 0.25rem solid var(--pre-color);
+}
+
+sup, sub {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+small, sup, sub {
+  font-size: 0.75em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+a {
+  text-decoration: underline;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+a:link {
+  color: var(--a-link-color);
+}
+
+a:visited {
+  color: var(--a-visited-color);
+}
+
+a:hover, a:focus {
+  opacity: 0.75;
+}
+
+figcaption {
+  font-size: 0.75em;
+  color: var(--secondary-fore-color);
 }

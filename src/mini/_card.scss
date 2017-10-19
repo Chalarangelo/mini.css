@@ -30,9 +30,7 @@ $fore-color:               black !default;           // [External variable - cor
   position: relative;
   width: 100%;
   // Actual styling for the cards
-  @if $card-back-color != $back-color {
-    background: $card-back-color;
-  }
+  background: $card-back-color; // Do not use conditions on this, causes transparency issues
   @if $card-fore-color != $fore-color {
     color: $card-fore-color;
   }

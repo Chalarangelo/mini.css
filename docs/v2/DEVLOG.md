@@ -1307,3 +1307,12 @@
 ## 20171018
 
 - Fixed a typo in the `flavors` doc page.
+
+# v2.3.6 Development Log
+
+## 20171019
+
+- Fixed a documentation problem with `.modal`s. (#104)
+- Rebuilt flavors to latest version.
+- Updated docs.
+- Released patch.

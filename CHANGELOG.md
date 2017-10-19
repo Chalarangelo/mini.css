@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.3.6
+
+- Fixes a bug that caused transparency in `.modal`s that use `.card`s (#104).
+- Documentation update for `.modal`s.
+
 ## v2.3.5
 
 - Fixes a bug caused by empty `<td>` elements, causing mobile tables to not display as intended.

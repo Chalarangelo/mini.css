@@ -5,7 +5,7 @@
   Flavor name: Sucroa (mini-sucroa)
   Author: Angeliki Daskalakis
   Maintainers: Angeliki Daskalakis, Angelos Chalaris (chalarangelo@gmail.com)
-  mini.css version: v2.3.5
+  mini.css version: v2.3.6
 */
 // Google Fonts imports and usage
 @import url('https://fonts.googleapis.com/css?family=Cousine:400,400i,700|Libre+Baskerville:400,400i,700&subset=latin-ext');
@@ -13,7 +13,7 @@
 // font-family: 'Cousine', monospace;
 //  Basic rules for body and typography
 $fore-color:            #211423;                    // Text and general foreground color
-$back-color:           #fffcc9;                     // Body background color
+$back-color:            #fffcc9;                    // Body background color
 $base-font-family:      'Libre Baskerville', serif; // Default font stack for all elements:
 $base-root-font-size:   16px;                       // Root font sizing for all elements [1]
 $base-font-size:        1em;                        // Default font sizing for all elements [2]

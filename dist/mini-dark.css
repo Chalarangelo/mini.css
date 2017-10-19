@@ -3,7 +3,7 @@
   Flavor name: Dark (mini-dark)
   Author: Angelos Chalaris (chalarangelo@gmail.com)
   Maintainers: Angelos Chalaris
-  mini.css version: v2.3.5
+  mini.css version: v2.3.6
 */
 /*
   Browsers resets and base typography.
@@ -1630,6 +1630,7 @@ table.striped tr:nth-of-type(2n) > td {
   align-self: center;
   position: relative;
   width: 100%;
+  background: #232e33;
   border: 0.0625rem solid #616161;
   margin: 0.5rem;
   overflow: hidden;

@@ -10,14 +10,14 @@ $base-font-family: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Ubu
 $base-line-height:        1.5 !default;         // Line height for most elements
 $base-font-size:          1rem !default;        // Font sizing for all elements
 $_body-margin:            0 !default;           // [Hidden] Margin for body
-$fore-color:              #212121 !default;     // Text & foreground color
-$secondary-fore-color:    #424242 !default;     // Secondary text & foreground color
+$fore-color:              #111 !default;        // Text & foreground color
+$secondary-fore-color:    #444 !default;        // Secondary text & foreground color
 $back-color:              #f8f8f8 !default;     // Background color
-$secondary-back-color:    #e6e6e6 !default;     // Secondary background color
+$secondary-back-color:    #eee !default;        // Secondary background color
 $blockquote-color:        #f57c00 !default;     // <blockquote> sidebar and quotation color
 $pre-color:               #1565c0 !default;     // <pre> sidebar color
-$border-color:            #acacac !default;     // Border color
-$secondary-border-color:  #c9c9c9 !default;     // Secondary border color
+$border-color:            #aaa !default;        // Border color
+$secondary-border-color:  #ddd !default;        // Secondary border color
 $heading-line-height:     1.2 !default;         // Line height for headings
 $heading-ratio:           1.19 !default;        // Ratio for headings (strictly unitless)
 $subheading-font-size:    0.75em !default;      // Font sizing for <small> elements in headings
@@ -32,6 +32,7 @@ $horizontal-rule-line-height:  1.25em !default; // <hr> line height
 $blockquote-quotation-size:    3rem !default;   // Font size for the quotation of <blockquote>
 $blockquote-cite-size:         0.75em !default; // Font size for the [cite] of <blockquote>
 $code-font-family: 'Menlo, Consolas, monospace' !default; // Font stack for code elements
+$code-font-size:           0.85em;              // Font size for <code>, <kbd>
 $small-element-font-size:     0.75em !default;  // Font size for <small>, <sub>, <sup>
 $sup-top:                  -0.5em !default;     // <sup> top
 $sub-bottom:               -0.25em !default;    // <sub> bottom
@@ -181,7 +182,7 @@ hr {
   // Actual styling using variables
   line-height: $horizontal-rule-line-height;
   margin: var(#{$universal-margin-var});
-  height: $__1px;
+  height: 0.5 * $__1px;
   background: linear-gradient(to right, transparent, var(#{$border-color-var}) 20%, var(#{$border-color-var}) 80%, transparent);
 }
 
@@ -216,6 +217,7 @@ blockquote {  // Doesn't have a back color yet, as well as no shadow...
 
 code, kbd, pre, samp {
   font-family: #{$code-font-family};     // Display fix should be applied manually!
+  font-size: $code-font-size;
 }
 
 code { // No border color yet and fore color is the default, as well as no shadow...
@@ -240,16 +242,17 @@ pre { // Fore color is the default, as well as no shadow...
   margin: var(#{$universal-margin-var});
   border: $__1px solid var(#{$secondary-border-color-var});
   border-left: 4*$__1px solid var(#{$pre-color-var});
+  border-radius: 0 var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}) 0;
 }
 
 // Prevent elements from affecting the line height in all browsers.
-sup, sub {
+sup, sub, code, kbd {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
-small, sup, sub {
+small, sup, sub, figcaption {
   font-size: $small-element-font-size;
 }
 
@@ -260,10 +263,12 @@ sub {
   bottom: $sub-bottom;
 }
 
+figcaption {
+    color: var(#{$secondary-fore-color-var});
+}
+
 a {
-  text-decoration: underline;
-  opacity: 1;
-  transition: opacity 0.3s;
+  text-decoration: none;
   &:link{
     color: var(#{$a-link-color-var});
   }
@@ -271,11 +276,6 @@ a {
     color: var(#{$a-visited-color-var});
   }
   &:hover, &:focus {
-    opacity: 0.75;
+    text-decoration: underline;
   }
-}
-
-figcaption {
-    font-size: $small-element-font-size;
-    color: var(#{$secondary-fore-color-var});
 }

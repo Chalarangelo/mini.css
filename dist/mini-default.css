@@ -10,8 +10,8 @@
 */
 /* Core module CSS variable definitions */
 :root {
-  --fore-color: #212121;
-  --secondary-fore-color: #424242;
+  --fore-color: #111;
+  --secondary-fore-color: #444;
   --back-color: #f8f8f8;
   --secondary-back-color: #e6e6e6;
   --blockquote-color: #f57c00;
@@ -122,7 +122,7 @@ hr {
   border: 0;
   line-height: 1.25em;
   margin: var(--universal-margin);
-  height: 0.0625rem;
+  height: 0.03125rem;
   background: linear-gradient(to right, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent);
 }
 
@@ -159,6 +159,7 @@ blockquote[cite]:after {
 
 code, kbd, pre, samp {
   font-family: Menlo, Consolas, monospace;
+  font-size: 0.85em;
 }
 
 code {
@@ -181,15 +182,16 @@ pre {
   margin: var(--universal-margin);
   border: 0.0625rem solid var(--secondary-border-color);
   border-left: 0.25rem solid var(--pre-color);
+  border-radius: 0 var(--universal-border-radius) var(--universal-border-radius) 0;
 }
 
-sup, sub {
+sup, sub, code, kbd {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
-small, sup, sub {
+small, sup, sub, figcaption {
   font-size: 0.75em;
 }
 
@@ -201,10 +203,12 @@ sub {
   bottom: -0.25em;
 }
 
+figcaption {
+  color: var(--secondary-fore-color);
+}
+
 a {
   text-decoration: underline;
-  opacity: 1;
-  transition: opacity 0.3s;
 }
 
 a:link {
@@ -216,10 +220,5 @@ a:visited {
 }
 
 a:hover, a:focus {
-  opacity: 0.75;
-}
-
-figcaption {
-  font-size: 0.75em;
-  color: var(--secondary-fore-color);
+  text-decoration: underline;
 }

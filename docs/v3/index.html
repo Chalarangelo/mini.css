@@ -5,6 +5,7 @@
   <!-- TODO: Update meta information when about to release -->
   <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:400,400i,500,700,700i&amp;subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="./style.min.css">
+  <script src="./vinf.js"></script>
   <title>mini.css - Minimal, responsive, style-agnostic CSS framework</title>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
@@ -16,10 +17,47 @@
   <meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
   </head>
   <body>
-    <div class="index-splash">
+  <div class="index-splash">
+    <div class="index-splash-image no-filter"></div>
     <div class="index-splash-image"></div>
     <h1 class="splash">mini<small>.css</small></h1>
     <p class="splash">minimal, responsive, style-agnostic <br>CSS framework</p>
+    <p id="version-info">v3</p>
   </div>
+  <!-- TODO: Add CTA ghost button and a link (?) in splash -->
+  <header>Home</header>
+  <div class="container">
+    <div class="row padded">
+      <div class="col-sm-12 col-md-8 col-md-offset-1">
+        <h2>Minimal&nbsp;<small>Size matters!</small></h2>
+        <p><strong>mini.css</strong> aims to provide as much functionality as possible in less than 10KB gzipped. This very small footprint means that your websites and web applications will load faster, while still looking great utilising the modern components we provide!</p>
+      </div>
+      <div class="col-sm-12 col-md-2 col-sm-first col-md-normal" style="text-align: center;">
+        <img src="icons/wings.svg" width="128px" height="128px"/><br/><br/>
+      </div>
+    </div>
+    <div class="row padded">
+      <div class="col-sm-12 col-md-8 col-md-offset-1">
+        <h2>Responsive&nbsp;<small>Think mobile!</small></h2>
+        <p><strong>mini.css</strong> is crafted with both desktops and mobile devices in mind. All of its components are well-tested on different devices and will respond to any changes in the viewport, allowing for an experience tailored to each user's device!</p>
+      </div>
+      <div class="col-sm-12 col-md-2 col-sm-first col-md-normal" style="text-align: center;">
+        <img src="icons/magnetism.svg" width="128px" height="128px"/><br/><br/>
+      </div>
+    </div>
+    <div class="row padded">
+      <div class="col-sm-12 col-md-8 col-md-offset-1">
+        <h2>Style-agnostic&nbsp;<small>Infinitely customizable!</small></h2>
+        <p><strong>mini.css</strong> provides you with a customizable flavor system, allowing you to be a designer without all the hard work. This way you can create your own custom design and personalize your websites any way you want!</p>
+      </div>
+      <div class="col-sm-12 col-md-2 col-sm-first col-md-normal" style="text-align: center;">
+        <img src="icons/meteor.svg" width="128px" height="128px"/><br/><br/>
+      </div>
+    </div>
+  </div>
+  <!-- TODO: Add browser support -->
+  <!-- TODO: Add footer with credits for icons and splash image -->
+  <!-- Scripts -->
+  <script>document.getElementById('version-info').innerHTML = version();</script>
   </body>
 </html>

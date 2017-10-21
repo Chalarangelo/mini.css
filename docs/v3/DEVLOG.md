@@ -49,3 +49,11 @@
 - Styled links, quite simplified but should be easier to work with for now.
 - Added styling for `figcaption`, tied color and size to `small`'s size for consistency.
 - The revamped `core` module seems to be about `200bytes` heavier than the old one, but certain things will probably be optimized over time.
+
+## 20171020
+
+- Merged PR #105, upgrading aesthetics.
+
+## 20171021
+
+- Started working on the **Gluon** website, just to get a taste for what it will look like and get some feedback.

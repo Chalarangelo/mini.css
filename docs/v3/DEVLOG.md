@@ -57,3 +57,5 @@
 ## 20171021
 
 - Started working on the **Gluon** website, just to get a taste for what it will look like and get some feedback.
+- *TODO* Retake picture after the splash has been tweaked, right before release.
+- Tweaked the splash screen, looks a bit better now and is easier to read.

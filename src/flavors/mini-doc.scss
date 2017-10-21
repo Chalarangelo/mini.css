@@ -2,6 +2,10 @@
 
 @import '../mini/core';
 
+// Use the old grid for a little bit - TODO: Replace when grid is done
+
+@import '../_v2/mini/grid';
+
 :not(.doc) {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, sans-serif;
 }
@@ -22,7 +26,9 @@ code:not(.doc), kbd:not(.doc), pre:not(.doc), samp:not(.doc) {
   width: 100%;
   height: 100%;
   position: absolute;
-  filter: blur(2px);
+  &:not(.no-filter){
+    filter: blur(2px);
+  }
 }
 
 h1.splash {
@@ -56,4 +62,43 @@ p.splash {
   width: 100%;
   text-align: center;
   padding-top: 40vh;
+}
+
+#version-info {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.25);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #dc2b1e;
+  right: 8px;
+  font-weight: 500;
+}
+
+// TODO: Replace with actual header when ready
+header {
+  display: block;
+  height: 3.25rem;
+  background: #f8f8f8;
+  color: #444;
+  padding: 0.125rem 0.5rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: sticky;
+  border-bottom: 1px solid #ddd;
+  top: 0;
+  text-transform: uppercase;
+  // Rough testing draft, not for production use
+  line-height: 3.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  &:hover {
+    color: #111;
+  }
+}
+
+.row.padded {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }

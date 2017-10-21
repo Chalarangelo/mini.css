@@ -182,7 +182,7 @@ hr {
   // Actual styling using variables
   line-height: $horizontal-rule-line-height;
   margin: var(#{$universal-margin-var});
-  height: 0.5 * $__1px;
+  height: $__1px;
   background: linear-gradient(to right, transparent, var(#{$border-color-var}) 20%, var(#{$border-color-var}) 80%, transparent);
 }
 

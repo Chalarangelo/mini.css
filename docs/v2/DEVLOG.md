@@ -1316,3 +1316,14 @@
 - Rebuilt flavors to latest version.
 - Updated docs.
 - Released patch.
+
+# v2.3.7 Development Log
+
+## 20171023
+
+- Fixed the bugs found due to #108. `select` elements should now be pretty decently stylized and work across all browsers and environments.
+- Fixed the bugs found due to #107. Custom checkboxes and radio buttons should now behave as expected. Also, updated the customization docs to reflect said changes.
+- Size has increased to a total of `6.9KB`, should look into optimizing to trim off some bytes.
+- Rebuilt flavors to latest version.
+- Updated docs.
+- Released patch.

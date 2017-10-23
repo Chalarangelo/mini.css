@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.3.7
+
+- Fixes a couple of bugs with `checkbox` and `radio` elements.
+- Fixes a multitude of bugs with `select` and `option` elements.
+- Updated documentation to reflect the changes made.
+
 ## v2.3.6
 
 - Fixes a bug that caused transparency in `.modal`s that use `.card`s (#104).

@@ -268,7 +268,7 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 }
 // Correct background styling in Safari
 @if $apply-select-fix {
-  select:not([multiple]) {
+  select:not([multiple]):not([size]) {
     padding-right: $select-padding-right;
     background: url(selectArrow()) no-repeat right;
     background-color: $input-back-color;
@@ -279,6 +279,14 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
       background-color: $input-readonly-back-color;
     }
   }
+}
+// Make select respect parent width, stylize options
+select {
+  max-width: 100%;
+}
+option {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 // Placeholder styling (keep browser-specific definitions separated, they do not play well together).
 ::-webkit-input-placeholder {

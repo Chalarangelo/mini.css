@@ -3,7 +3,7 @@
   Flavor name: Sucroa (mini-sucroa)
   Author: Angeliki Daskalakis
   Maintainers: Angeliki Daskalakis, Angelos Chalaris (chalarangelo@gmail.com)
-  mini.css version: v2.3.6
+  mini.css version: v2.3.7
 */
 @import url("https://fonts.googleapis.com/css?family=Cousine:400,400i,700|Libre+Baskerville:400,400i,700&subset=latin-ext");
 /*
@@ -824,7 +824,7 @@ input:not([type="button"]):not([type="submit"]):not([type="reset"])[readonly], t
   border-color: #a9a2ba;
 }
 
-select:not([multiple]) {
+select:not([multiple]):not([size]) {
   padding-right: 20px;
   background: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.5"><path fill="%23211423" d="M.25.75h.5L.5 1"/></svg>') no-repeat right;
   background-color: #f2edff;
@@ -833,8 +833,17 @@ select:not([multiple]) {
   appearance: none;
 }
 
-select:not([multiple])[readonly] {
+select:not([multiple]):not([size])[readonly] {
   background-color: #eae1ff;
+}
+
+select {
+  max-width: 100%;
+}
+
+option {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 ::-webkit-input-placeholder {
@@ -970,6 +979,7 @@ input[type="file"] {
 
 .input-group [type="checkbox"] + label, .input-group [type="radio"] + label {
   position: relative;
+  display: inline-block;
   margin-left: 20px;
   cursor: pointer;
 }
@@ -977,7 +987,7 @@ input[type="file"] {
 .input-group [type="checkbox"] + label:before, .input-group [type="radio"] + label:before {
   display: inline-block;
   position: absolute;
-  bottom: 3px;
+  top: 3px;
   left: 0;
   width: 16px;
   height: 16px;
@@ -1018,7 +1028,7 @@ input[type="file"] {
   background: #211423;
   content: '';
   margin-left: -20px;
-  bottom: 7px;
+  top: 7px;
   left: 4px;
   width: 10px;
   height: 10px;

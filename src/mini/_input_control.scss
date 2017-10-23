@@ -501,6 +501,7 @@ a[role="button"], label[role="button"], [role="button"] {
   // Label styling based on the specifics of the checkbox/radio variables.
   [type="checkbox"] + label, [type="radio"] + label {
     position: relative;
+    display: inline-block;
     $_unit: $checkbox-size*0 +1;    // Used to check if the unit is `px` or `rem/em`
     @if $_unit == 1px {
       margin-left: floor($checkbox-size + floor($checkbox-size * 0.25));
@@ -513,7 +514,7 @@ a[role="button"], label[role="button"], [role="button"] {
     &:before {
       display: inline-block;
       position: absolute;
-      bottom: $checkbox-bottom-spacing;
+      top: $checkbox-bottom-spacing;
       left: 0;
       width: $checkbox-size;
       height: $checkbox-size;
@@ -568,14 +569,14 @@ a[role="button"], label[role="button"], [role="button"] {
       $_unit: $checkbox-size*0 +1;    // Used to check if the unit is `px` or `rem/em`
       @if $_unit == 1px {
         margin-left: - floor($checkbox-size + floor($checkbox-size * 0.25));
-        bottom: floor($checkbox-size * 0.25) + $checkbox-bottom-spacing;
+        top: floor($checkbox-size * 0.25) + $checkbox-bottom-spacing;
         left: floor($checkbox-size * 0.25);
         width: floor($checkbox-size * 0.5) + floor($checkbox-border-thickness * 2);
         height: floor($checkbox-size * 0.5) + floor($checkbox-border-thickness * 2);
       }
       @else {
         margin-left: - ($checkbox-size * 1.25);
-        bottom: $checkbox-size * 0.25 + $checkbox-bottom-spacing;
+        top: $checkbox-size * 0.25 + $checkbox-bottom-spacing;
         left: $checkbox-size * 0.25;
         width: $checkbox-size * 0.5 + $checkbox-border-thickness * 2;
         height: $checkbox-size * 0.5 + $checkbox-border-thickness * 2;
@@ -591,7 +592,7 @@ a[role="button"], label[role="button"], [role="button"] {
       // Styling for the bar part of the switch
       &:before {
         @if $switch-bottom-spacing != $checkbox-bottom-spacing {
-          bottom: $switch-bottom-spacing;
+          top: $switch-bottom-spacing;
         }
         width: $switch-bar-width;
         height: $switch-bar-height;
@@ -629,11 +630,11 @@ a[role="button"], label[role="button"], [role="button"] {
         }
         $_unit: $switch-bar-width*0 +1;    // Used to check if the unit is `px` or `rem/em`
         @if $_unit == 1px {
-          bottom: floor((2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2);
+          top: floor((2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2);
           margin-left: - floor($switch-bar-width + $switch-knob-width);
         }
         @else {
-          bottom: (2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2;
+          top: (2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2;
           margin-left: - ($switch-bar-width + $switch-knob-width);
         }
         @if $switch-knob-box-shadow != none {
@@ -660,11 +661,11 @@ a[role="button"], label[role="button"], [role="button"] {
         height: $switch-knob-height;
         $_unit: $switch-bar-width*0 +1;    // Used to check if the unit is `px` or `rem/em`
         @if $_unit == 1px {
-          bottom: floor((2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2);
+          top: floor((2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2);
           margin-left: - floor($switch-bar-width + $switch-knob-width);
         }
         @else {
-          bottom: (2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2;
+          top: (2*$switch-bottom-spacing + $switch-bar-height - $switch-knob-height)/2;
           margin-left: - ($switch-bar-width + $switch-knob-width);
         }
         @if $switch-on-knob-back-color != $switch-knob-back-color {

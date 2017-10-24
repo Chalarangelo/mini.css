@@ -1,3 +1,5 @@
+* Framework Version:
+* Flavor used:
 * Operating System/Browser:
 * Code to reproduce:
 * Screenshots:

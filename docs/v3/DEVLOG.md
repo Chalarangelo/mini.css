@@ -66,3 +66,5 @@
 
 - Copied `grid` module from the **Fermion** branch, removed 4-step system with `xs` screen size.
 - Removed legacy code from `grid`, specifically the one targeting `box-flex` (old syntax). - This trimmed the module size from `940bytes` down to `848bytes`.
+- Removed legacy support for prefixed flexbox (`-webkit-`), trimmed off another `91bytes`.
+- Improved indentation for `grid` module, now that prefixed code is gone.

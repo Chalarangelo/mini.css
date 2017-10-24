@@ -13,11 +13,11 @@
   --fore-color: #111;
   --secondary-fore-color: #444;
   --back-color: #f8f8f8;
-  --secondary-back-color: #e6e6e6;
+  --secondary-back-color: #eee;
   --blockquote-color: #f57c00;
   --pre-color: #1565c0;
-  --border-color: #acacac;
-  --secondary-border-color: #c9c9c9;
+  --border-color: #aaa;
+  --secondary-border-color: #ddd;
   --heading-ratio: 1.19;
   --universal-margin: 0.5rem;
   --universal-padding: 0.5rem;
@@ -122,7 +122,7 @@ hr {
   border: 0;
   line-height: 1.25em;
   margin: var(--universal-margin);
-  height: 0.03125rem;
+  height: 0.0625rem;
   background: linear-gradient(to right, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent);
 }
 
@@ -208,7 +208,7 @@ figcaption {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:link {

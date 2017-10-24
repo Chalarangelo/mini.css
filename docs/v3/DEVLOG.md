@@ -61,3 +61,8 @@
 - Tweaked the splash screen, looks a bit better now and is easier to read.
 - Reverted the `hr` fix, as it caused problems.
 - Moved some of the documentation from the old website to the `/docs/v3` website.
+
+## 20171024
+
+- Copied `grid` module from the **Fermion** branch, removed 4-step system with `xs` screen size.
+- Removed legacy code from `grid`, specifically the one targeting `box-flex` (old syntax). - This trimmed the module size from `940bytes` down to `848bytes`.

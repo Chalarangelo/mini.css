@@ -2,27 +2,34 @@
   Definitions for the grid system.
 */
 // The grid system uses the flexbox module, meaning it might be incompatible with certain browsers.
-$include-parent-layout:        true !default;         // Flag for rows defining column layouts (`true`/`false`).
+$_include-parent-layout:        true !default;        // [Hidden] Flag for rows defining column layouts (`true`/`false`).
+$grid-column-count:            12 !default;           // Number of columns in the grid (integer value only).
 $grid-container-name:          'container' !default;  // Class name for the grid system container.
-$grid-container-side-padding:  0.75rem !default;      // Padding for the grid container (left and right only).
 $grid-row-name:                'row' !default;        // Class name for the grid system rows.
 $grid-row-parent-layout-prefix:'cols' !default;       // Class name prefix for the grid's row parents.
 $grid-column-prefix:           'col' !default;        // Class name prefix for the grid's columns.
 $grid-column-offset-suffix:    'offset' !default;     // Class name suffix for the grid's offsets.
-$grid-column-count:            12 !default;           // Number of columns in the grid (integer value only).
-$grid-column-padding:          0 0.25rem !default;    // Padding for the columns of the grid.
 $grid-order-normal-suffix:     'normal' !default;     // Class name suffix for grid columns with normal priority.
 $grid-order-first-suffix:      'first' !default;      // Class name suffix for grid columns with highest priority.
 $grid-order-last-suffix:       'last' !default;       // Class name suffix for grid columns with lowest priorty.
 $grid-small-prefix:            'sm' !default;         // Small screen class prefix for grid.
-$grid-medium-breakpoint:       768px !default;        // Medium screen breakpoint for grid.
 $grid-medium-prefix:           'md' !default;         // Medium screen class prefix for grid.
-$grid-large-breakpoint:        1280px !default;       // Large screen breakpoint for grid.
 $grid-large-prefix:            'lg' !default;         // Large screen class prefix for grid.
+$grid-medium-breakpoint:       768px !default;        // Medium screen breakpoint for grid.
+$grid-large-breakpoint:        1280px !default;       // Large screen breakpoint for grid.
+// == Uncomment below code if this module is used on its own ==
+//
+// $universal-padding:       0.5rem !default;
+// $universal-padding-var:   '--universal-padding' !default;
+// :root {
+//   #{$universal-padding-var}: $universal-padding;
+// }
+//
+// ============================================================
 // Fluid grid system container definition.
 .#{$grid-container-name} {
   margin: 0 auto;
-  padding: 0 $grid-container-side-padding;
+  padding: 0 calc(1.5 * var(#{$universal-padding-var}));
 }
 // Grid row definition.
 .#{$grid-row-name} {
@@ -33,14 +40,14 @@ $grid-large-prefix:            'lg' !default;         // Large screen class pref
 }
 // Inline mixin, used to generate class definitions for each grid step.
 @mixin generate-grid-size ($size-prefix){
-  @if $include-parent-layout {
+  @if $_include-parent-layout {
     .#{$grid-column-prefix}-#{$size-prefix},
     [class^='#{$grid-column-prefix}-#{$size-prefix}-'],
     [class^='#{$grid-column-prefix}-#{$size-prefix}-#{$grid-column-offset-suffix}-'],
     .#{$grid-row-name}[class*='#{$grid-row-parent-layout-prefix}-#{$size-prefix}-'] > * {
       box-sizing: border-box;
       flex: 0 0 auto;
-      padding: $grid-column-padding;
+      padding: 0 calc(var(#{$universal-padding-var}) / 2);
     }
     // Grid column specific definition for flexible column.
     .#{$grid-column-prefix}-#{$size-prefix},
@@ -56,7 +63,7 @@ $grid-large-prefix:            'lg' !default;         // Large screen class pref
     [class^='#{$grid-column-prefix}-#{$size-prefix}-'],
     [class^='#{$grid-column-prefix}-#{$size-prefix}-#{$grid-column-offset-suffix}-'] {
       flex: 0 0 auto;
-      padding: $grid-column-padding;
+      padding: 0 calc(var(#{$universal-padding-var}) / 2);
     }
     // Grid column specific definition for flexible column.
     .#{$grid-column-prefix}-#{$size-prefix} {
@@ -67,7 +74,7 @@ $grid-large-prefix:            'lg' !default;         // Large screen class pref
   }
   // Grid column specific definitions for predefined columns.
   @for $i from 1 through $grid-column-count {
-    @if $include-parent-layout {
+    @if $_include-parent-layout {
       .#{$grid-column-prefix}-#{$size-prefix}-#{$i},
       .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$size-prefix}-#{$i} > * {
         flex-basis: #{($i * 100% / $grid-column-count)};

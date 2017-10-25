@@ -2,21 +2,18 @@
   Definitions for the grid system.
 */
 // The grid system uses the flexbox module, meaning it might be incompatible with certain browsers.
-$use-four-step-grid:           false !default;        // Flag for the grid system choice (`true`/`false`).
 $include-parent-layout:        true !default;         // Flag for rows defining column layouts (`true`/`false`).
 $grid-container-name:          'container' !default;  // Class name for the grid system container.
-$grid-container-side-padding:  20px !default;         // Padding for the grid container (left and right only).
+$grid-container-side-padding:  0.75rem !default;      // Padding for the grid container (left and right only).
 $grid-row-name:                'row' !default;        // Class name for the grid system rows.
 $grid-row-parent-layout-prefix:'cols' !default;       // Class name prefix for the grid's row parents.
 $grid-column-prefix:           'col' !default;        // Class name prefix for the grid's columns.
 $grid-column-offset-suffix:    'offset' !default;     // Class name suffix for the grid's offsets.
 $grid-column-count:            12 !default;           // Number of columns in the grid (integer value only).
-$grid-column-padding:          0 4px !default;        // Padding for the columns of the grid.
+$grid-column-padding:          0 0.25rem !default;    // Padding for the columns of the grid.
 $grid-order-normal-suffix:     'normal' !default;     // Class name suffix for grid columns with normal priority.
 $grid-order-first-suffix:      'first' !default;      // Class name suffix for grid columns with highest priority.
 $grid-order-last-suffix:       'last' !default;       // Class name suffix for grid columns with lowest priorty.
-$grid-extra-small-prefix:      'xs' !default;         // Extra small screen class prefix for grid (four-step-grid-only).
-$grid-small-breakpoint:        480px !default;        // Small screen breakpoint for grid (four-step-grid-only).
 $grid-small-prefix:            'sm' !default;         // Small screen class prefix for grid.
 $grid-medium-breakpoint:       768px !default;        // Medium screen breakpoint for grid.
 $grid-medium-prefix:           'md' !default;         // Medium screen class prefix for grid.
@@ -30,217 +27,85 @@ $grid-large-prefix:            'lg' !default;         // Large screen class pref
 // Grid row definition.
 .#{$grid-row-name} {
   box-sizing: border-box;
-  display:   -webkit-flex;
-  display:          flex;
+  display: flex;
   flex: 0 1 auto;
   flex-flow: row wrap;
 }
-// Small screen grid definitions.
-@if $include-parent-layout {
-  // Grid column generic definitions for small screens.
-  .#{$grid-column-prefix}-#{$grid-small-prefix},
-  [class^='#{$grid-column-prefix}-#{$grid-small-prefix}-'],
-  [class^='#{$grid-column-prefix}-#{$grid-small-prefix}-#{$grid-column-offset-suffix}-'],
-  .#{$grid-row-name}[class*='#{$grid-row-parent-layout-prefix}-#{$grid-small-prefix}-'] > * {
-    box-sizing: border-box;
-    flex: 0 0 auto;
-    padding: $grid-column-padding;
-  }
-  // Grid column specific definition for flexible column.
-  .#{$grid-column-prefix}-#{$grid-small-prefix},
-  .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$grid-small-prefix} > *  {
-    // max-width: 100%; -- TODO: Are we certain we don't need this?
-    flex-grow: 1;
-    flex-basis: 0;
-  }
-}
-@else {
-  // Grid column generic definitions for small screens.
-  .#{$grid-column-prefix}-#{$grid-small-prefix},
-  [class^='#{$grid-column-prefix}-#{$grid-small-prefix}-'],
-  [class^='#{$grid-column-prefix}-#{$grid-small-prefix}-#{$grid-column-offset-suffix}-'] {
-    flex: 0 0 auto;
-    padding: $grid-column-padding;
-  }
-  // Grid column specific definition for flexible column.
-  .#{$grid-column-prefix}-#{$grid-small-prefix} {
-    // max-width: 100%; -- TODO: Are we certain we don't need this?
-    flex-grow: 1;
-    flex-basis: 0;
-  }
-}
-// Grid column specific definitions for predefined columns.
-@for $i from 1 through $grid-column-count {
+// Inline mixin, used to generate class definitions for each grid step.
+@mixin generate-grid-size ($size-prefix){
   @if $include-parent-layout {
-    .#{$grid-column-prefix}-#{$grid-small-prefix}-#{$i},
-    .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$grid-small-prefix}-#{$i} > * {
-      flex-basis: #{($i * 100% / $grid-column-count)};
+    .#{$grid-column-prefix}-#{$size-prefix},
+    [class^='#{$grid-column-prefix}-#{$size-prefix}-'],
+    [class^='#{$grid-column-prefix}-#{$size-prefix}-#{$grid-column-offset-suffix}-'],
+    .#{$grid-row-name}[class*='#{$grid-row-parent-layout-prefix}-#{$size-prefix}-'] > * {
+      box-sizing: border-box;
+      flex: 0 0 auto;
+      padding: $grid-column-padding;
+    }
+    // Grid column specific definition for flexible column.
+    .#{$grid-column-prefix}-#{$size-prefix},
+    .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$size-prefix} > *  {
+      // max-width: 100%; -- TODO: Are we certain we don't need this?
+      flex-grow: 1;
+      flex-basis: 0;
     }
   }
   @else {
-    .#{$grid-column-prefix}-#{$grid-small-prefix}-#{$i} {
-      flex-basis: #{($i * 100% / $grid-column-count)};
+    // Grid column generic definitions.
+    .#{$grid-column-prefix}-#{$size-prefix},
+    [class^='#{$grid-column-prefix}-#{$size-prefix}-'],
+    [class^='#{$grid-column-prefix}-#{$size-prefix}-#{$grid-column-offset-suffix}-'] {
+      flex: 0 0 auto;
+      padding: $grid-column-padding;
+    }
+    // Grid column specific definition for flexible column.
+    .#{$grid-column-prefix}-#{$size-prefix} {
+      // max-width: 100%; -- TODO: Are we certain we don't need this?
+      flex-grow: 1;
+      flex-basis: 0;
     }
   }
-}
-// Grid column specific definitions for offset columns.
-@for $i from 0 through ($grid-column-count - 1) {
-  .#{$grid-column-prefix}-#{$grid-small-prefix}-#{$grid-column-offset-suffix}-#{$i} {
-    @if $i == 0 {
-      margin-left: 0;
+  // Grid column specific definitions for predefined columns.
+  @for $i from 1 through $grid-column-count {
+    @if $include-parent-layout {
+      .#{$grid-column-prefix}-#{$size-prefix}-#{$i},
+      .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$size-prefix}-#{$i} > * {
+        flex-basis: #{($i * 100% / $grid-column-count)};
+      }
     }
     @else {
-      margin-left: #{($i * 100% / $grid-column-count)};
+      .#{$grid-column-prefix}-#{$size-prefix}-#{$i} {
+        flex-basis: #{($i * 100% / $grid-column-count)};
+      }
+    }
+    // Offest definitions.
+    .#{$grid-column-prefix}-#{$size-prefix}-#{$grid-column-offset-suffix}-#{($i - 1)} {
+      @if ($i - 1) == 0 {
+        margin-left: 0;
+      }
+      @else {
+        margin-left: #{(($i - 1) * 100% / $grid-column-count)};
+      }
     }
   }
+  // Reordering definitions.
+  .#{$grid-column-prefix}-#{$size-prefix}-#{$grid-order-normal-suffix} {
+    order: initial;
+  }
+  .#{$grid-column-prefix}-#{$size-prefix}-#{$grid-order-first-suffix}  {
+    order: -999;
+  }
+  .#{$grid-column-prefix}-#{$size-prefix}-#{$grid-order-last-suffix} {
+    order: 999;
+  }
 }
-.#{$grid-column-prefix}-#{$grid-small-prefix}-#{$grid-order-normal-suffix} {
-  order: initial;
-}
-.#{$grid-column-prefix}-#{$grid-small-prefix}-#{$grid-order-first-suffix}  {
-  order: -999;
-}
-.#{$grid-column-prefix}-#{$grid-small-prefix}-#{$grid-order-last-suffix} {
-  order: 999;
-}
-// Medium screen breakpoint.
+// Definitions for smaller screens.
+@include generate-grid-size($grid-small-prefix);
+// Definitions for mediium screens.
 @media screen and (min-width: #{$grid-medium-breakpoint}){
-  @if $include-parent-layout {
-    // Grid column generic definitions for medium screens.
-    .#{$grid-column-prefix}-#{$grid-medium-prefix},
-    [class^='#{$grid-column-prefix}-#{$grid-medium-prefix}-'],
-    [class^='#{$grid-column-prefix}-#{$grid-medium-prefix}-#{$grid-column-offset-suffix}-'], .#{$grid-row-name}[class*='#{$grid-row-parent-layout-prefix}-#{$grid-medium-prefix}-'] > * {
-      box-sizing: border-box;
-      flex: 0 0 auto;
-      padding: $grid-column-padding;
-    }
-    // Grid column specific definition for flexible column.
-    .#{$grid-column-prefix}-#{$grid-medium-prefix},
-    .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$grid-medium-prefix} > *  {
-      // max-width: 100%; -- TODO: Are we certain we don't need this?
-      flex-grow: 1;
-      flex-basis: 0;
-    }
-  }
-  @else {
-    // Grid column generic definitions for medium screens.
-    .#{$grid-column-prefix}-#{$grid-medium-prefix},
-    [class^='#{$grid-column-prefix}-#{$grid-medium-prefix}-'],
-    [class^='#{$grid-column-prefix}-#{$grid-medium-prefix}-#{$grid-column-offset-suffix}-'] {
-      box-sizing: border-box;
-      flex: 0 0 auto;
-      padding: $grid-column-padding;
-    }
-    // Grid column specific definition for flexible column.
-    .#{$grid-column-prefix}-#{$grid-medium-prefix} {
-      // max-width: 100%; -- TODO: Are we certain we don't need this?
-      flex-grow: 1;
-      flex-basis: 0;
-    }
-  }
-  // Grid column specific definitions for predefined columns.
-  @for $i from 1 through $grid-column-count {
-    @if $include-parent-layout {
-      .#{$grid-column-prefix}-#{$grid-medium-prefix}-#{$i},
-      .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$grid-medium-prefix}-#{$i} > * {
-        flex-basis: #{($i * 100% / $grid-column-count)};
-      }
-    }
-    @else {
-      .#{$grid-column-prefix}-#{$grid-medium-prefix}-#{$i} {
-        flex-basis: #{($i * 100% / $grid-column-count)};
-      }
-    }
-  }
-  // Grid column specific definitions for offset columns.
-  @for $i from 0 through ($grid-column-count - 1) {
-    .#{$grid-column-prefix}-#{$grid-medium-prefix}-#{$grid-column-offset-suffix}-#{$i} {
-      @if $i == 0 {
-        margin-left: 0;
-      }
-      @else {
-        margin-left: #{($i * 100% / $grid-column-count)};
-      }
-    }
-  }
-  .#{$grid-column-prefix}-#{$grid-medium-prefix}-#{$grid-order-normal-suffix} {
-    order: initial;
-  }
-  .#{$grid-column-prefix}-#{$grid-medium-prefix}-#{$grid-order-first-suffix}  {
-    order: -999;
-  }
-  .#{$grid-column-prefix}-#{$grid-medium-prefix}-#{$grid-order-last-suffix} {
-    order: 999;
-  }
+  @include generate-grid-size($grid-medium-prefix);
 }
-// Large screen breakpoint.
+// Definitions for large screens.
 @media screen and (min-width: #{$grid-large-breakpoint}){
-  @if $include-parent-layout {
-    // Grid column generic definitions for large screens.
-    .#{$grid-column-prefix}-#{$grid-large-prefix},
-    [class^='#{$grid-column-prefix}-#{$grid-large-prefix}-'],
-    [class^='#{$grid-column-prefix}-#{$grid-large-prefix}-#{$grid-column-offset-suffix}-'],
-    .#{$grid-row-name}[class*='#{$grid-row-parent-layout-prefix}-#{$grid-large-prefix}-'] > * {
-      box-sizing: border-box;
-      flex: 0 0 auto;
-      padding: $grid-column-padding;
-    }
-    // Grid column specific definition for flexible column.
-    .#{$grid-column-prefix}-#{$grid-large-prefix},
-    .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$grid-large-prefix} > *  {
-      // max-width: 100%; -- TODO: Are we certain we don't need this?
-      flex-grow: 1;
-      flex-basis: 0;
-    }
-  }
-  @else {
-    // Grid column generic definitions for large screens.
-    .#{$grid-column-prefix}-#{$grid-large-prefix},
-    [class^='#{$grid-column-prefix}-#{$grid-large-prefix}-'],
-    [class^='#{$grid-column-prefix}-#{$grid-large-prefix}-#{$grid-column-offset-suffix}-'] {
-      box-sizing: border-box;
-      flex: 0 0 auto;
-      padding: $grid-column-padding;
-    }
-    // Grid column specific definition for flexible column.
-    .#{$grid-column-prefix}-#{$grid-large-prefix} {
-      // max-width: 100%; -- TODO: Are we certain we don't need this?
-      flex-grow: 1;
-      flex-basis: 0;
-    }
-  }
-  // Grid column specific definitions for predefined columns.
-  @for $i from 1 through $grid-column-count {
-    @if $include-parent-layout {
-      .#{$grid-column-prefix}-#{$grid-large-prefix}-#{$i},
-      .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$grid-large-prefix}-#{$i} > * {
-        flex-basis: #{($i * 100% / $grid-column-count)};
-      }
-    }
-    @else {
-      .#{$grid-column-prefix}-#{$grid-large-prefix}-#{$i} {
-        flex-basis: #{($i * 100% / $grid-column-count)};
-      }
-    }
-  }
-  // Grid column specific definitions for offset columns.
-  @for $i from 0 through ($grid-column-count - 1) {
-    .#{$grid-column-prefix}-#{$grid-large-prefix}-#{$grid-column-offset-suffix}-#{$i} {
-      @if $i == 0 {
-        margin-left: 0;
-      }
-      @else {
-        margin-left: #{($i * 100% / $grid-column-count)};
-      }
-    }
-  }
-  .#{$grid-column-prefix}-#{$grid-large-prefix}-#{$grid-order-normal-suffix} {
-    order: initial;
-  }
-  .#{$grid-column-prefix}-#{$grid-large-prefix}-#{$grid-order-first-suffix}  {
-    order: -999;
-  }
-  .#{$grid-column-prefix}-#{$grid-large-prefix}-#{$grid-order-last-suffix} {
-    order: 999;
-  }
+  @include generate-grid-size($grid-large-prefix);
 }

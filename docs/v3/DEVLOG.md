@@ -68,3 +68,8 @@
 - Removed legacy code from `grid`, specifically the one targeting `box-flex` (old syntax). - This trimmed the module size from `940bytes` down to `848bytes`.
 - Removed legacy support for prefixed flexbox (`-webkit-`), trimmed off another `91bytes`.
 - Improved indentation for `grid` module, now that prefixed code is gone.
+
+## 20171025
+
+- Improved the `grid` module by creating a simple `@mixin` to generate each grid step. Complexity is significantly lower now.
+- Properly configured the `grid` module for defaults, without anything stored in CSS variables it now weighs a nice `750bytes`. This will probably grow ever so slightly as soon as I get to add CSS variables.

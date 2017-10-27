@@ -90,6 +90,40 @@ p.splash {
   margin-left: 0;
 }
 
+.alt-back {
+  background: #f3f3f3;
+}
+
+.primary-section {
+  background: #f22f21;
+  color: #fff;
+  a {
+    &:link{
+      color: #76FF03;
+    }
+    &:visited {
+      color: #64DD17;
+    }
+    &.centered {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  // TODO: Actually convert to a link, stylize as button, utilize module
+  button {
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #fff;
+    font-size: 1.25rem;
+    display: block;
+    margin: 20px auto 8px;
+    cursor: pointer;
+  }
+}
+
 // TODO: Replace with actual header when ready
 header {
   display: block;

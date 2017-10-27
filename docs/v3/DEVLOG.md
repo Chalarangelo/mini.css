@@ -83,3 +83,5 @@
 - Changed a lot of the layout and choices made in the `index.html` page, mainly to create a better and more coherent landing page.
 - Designed and added `responsive.svg`.
 - Created the responsiveness and speed section.
+- Created tailored section.
+- Landing page is mostly complete, footer and some minor changes are missing, I can start working on the rest of the docs now.

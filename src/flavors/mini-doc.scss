@@ -72,6 +72,23 @@ p.splash {
   font-weight: 500;
 }
 
+.row.padded {
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+#responsive-image {
+  display: block;
+  margin: 50px auto 20px;
+  @media screen and (min-width: 768px){
+    height: 400px;
+  }
+}
+
+#responsive-header {
+  margin-left: 0;
+}
+
 // TODO: Replace with actual header when ready
 header {
   display: block;
@@ -93,9 +110,4 @@ header {
   &:hover {
     color: #111;
   }
-}
-
-.row.padded {
-  padding-top: 16px;
-  padding-bottom: 16px;
 }

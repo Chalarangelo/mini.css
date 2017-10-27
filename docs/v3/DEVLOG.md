@@ -77,3 +77,9 @@
 - Made `$_include-parent-layout` a hidden variable in `grid`.
 - Added scaffolding code in `grid` module, just in case someone decides to use it without any other modules.
 - Oddly enough, a flavor file with the default values and clean code is `1.82KB` gzipped, compared to `1.83KB` gzipped in **Fermion**, which means the variables and changes didn't really mess up size so far. Some changes need to be made and some things added, so it's quite probable that this will not be the final number, but still I am very happy about the results so far.
+
+## 20171027
+
+- Changed a lot of the layout and choices made in the `index.html` page, mainly to create a better and more coherent landing page.
+- Designed and added `responsive.svg`.
+- Created the responsiveness and speed section.

@@ -77,7 +77,7 @@ p.splash {
   padding-bottom: 80px;
 }
 
-#responsive-image {
+.feature-image {
   display: block;
   margin: 50px auto 20px;
   @media screen and (min-width: 768px){
@@ -85,7 +85,8 @@ p.splash {
   }
 }
 
-#responsive-header {
+.feature-header {
+  text-align: center;
   margin-left: 0;
 }
 

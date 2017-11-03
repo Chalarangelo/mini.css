@@ -34,7 +34,7 @@ bower install mini.css
 
 #### Method 2: Use GitCDN
 
-**mini.css** is also hosted on [GitCDN](http://gitcdn.link/), an open-source service, so you can easily grab the latest release's distributables. Simply link to your preferred flavor inside your HTML page's `<head>` tag:
+**mini.css** is also hosted on [GitCDN](https://gitcdn.link/), an open-source service, so you can easily grab the latest release's distributables. Simply link to your preferred flavor inside your HTML page's `<head>` tag:
 ```html
 <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/{mini-flavor}.css" />
 ```

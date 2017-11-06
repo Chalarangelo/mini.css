@@ -25,6 +25,7 @@ $subheading-top-margin:   -0.25rem !default;    // Top margin of <small> element
 $universal-margin:        0.5rem !default;      // Universal margin for the most elements
 $universal-padding:       0.5rem !default;      // Universal padding for the most elements
 $universal-border-radius: 0.125rem !default;    // Universal border-radius for most elements
+$universal-box-shadow:    none !default;        // Universal box-shadow for most elements
 $small-font-size:         0.75em !default;      // Font sizing for <small> elements
 $heading-font-weight:     500 !default;         // Font weight for headings
 $bold-font-weight:        700 !default;         // Font weight for <b> and <strong>
@@ -51,6 +52,7 @@ $heading-ratio-var:             '--heading-ratio' !default;
 $universal-margin-var:          '--universal-margin' !default;
 $universal-padding-var:         '--universal-padding' !default;
 $universal-border-radius-var:   '--universal-border-radius' !default;
+$universal-box-shadow-var:      '--universal-box-shadow' !default;
 $a-link-color-var:              '--a-link-color' !default;
 $a-visited-color-var:           '--a-visited-color' !default;
 /* Core module CSS variable definitions */
@@ -69,6 +71,9 @@ $a-visited-color-var:           '--a-visited-color' !default;
   #{$universal-border-radius-var}: $universal-border-radius;
   #{$a-link-color-var} : $a-link-color;
   #{$a-visited-color-var} : $a-visited-color;
+  @if $universal-box-shadow != none {
+    #{$universal-box-shadow-var}: $universal-box-shadow;
+  }
 }
 html {
   font-size: $base-root-font-size;  // Set root's font sizing.
@@ -186,7 +191,7 @@ hr {
   background: linear-gradient(to right, transparent, var(#{$border-color-var}) 20%, var(#{$border-color-var}) 80%, transparent);
 }
 
-blockquote {  // Doesn't have a back color yet, as well as no shadow...
+blockquote {  // Doesn't have a back color by default, can be added manually.
   display: block;
   position: relative;
   font-style: italic;
@@ -196,6 +201,9 @@ blockquote {  // Doesn't have a back color yet, as well as no shadow...
   border: $__1px solid var(#{$secondary-border-color-var});
   border-left: 6*$__1px solid var(#{$blockquote-color-var});
   border-radius: 0 var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}) 0;
+  @if $universal-box-shadow != none {
+    box-shadow: var(#{$universal-box-shadow-var});
+  }
   &:before {
     position: absolute;
     top: calc(0rem - var(#{$universal-padding-var}));
@@ -220,29 +228,38 @@ code, kbd, pre, samp {
   font-size: $code-font-size;
 }
 
-code { // No border color yet and fore color is the default, as well as no shadow...
+code { // No border color by default and fore color is the default for text, can be altered manually.
   background: var(#{$secondary-back-color-var});
   border-radius: var(#{$universal-border-radius-var});
   // This could be a bit counterintuitive and burden the codebase a bit, look into it again?
   padding: calc(var(#{$universal-padding-var}) / 4) calc(var(#{$universal-padding-var}) / 2);
+  @if $universal-box-shadow != none {
+    box-shadow: var(#{$universal-box-shadow-var});
+  }
 }
 
-kbd { // No border color yet and no shadow, colors might want to be tweaked a bit...
+kbd { // No border color by default, can be altered manually.
   background: var(#{$fore-color-var});
   color: var(#{$back-color-var});
   border-radius: var(#{$universal-border-radius-var});
   // This could be a bit counterintuitive and burden the codebase a bit, look into it again?
   padding: calc(var(#{$universal-padding-var}) / 4) calc(var(#{$universal-padding-var}) / 2);
+  @if $universal-box-shadow != none {
+    box-shadow: var(#{$universal-box-shadow-var});
+  }
 }
 
-pre { // Fore color is the default, as well as no shadow...
+pre { // Fore color is the default, can be altered manually.
   overflow: auto; // Responsiveness
   background: var(#{$secondary-back-color-var});
   padding: calc(1.5 * var(#{$universal-padding-var}));
   margin: var(#{$universal-margin-var});
   border: $__1px solid var(#{$secondary-border-color-var});
   border-left: 4*$__1px solid var(#{$pre-color-var});
-  border-radius: 0 var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}) 0;
+  border-radius: 0 var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}) 0;  
+  @if $universal-box-shadow != none {
+    box-shadow: var(#{$universal-box-shadow-var});
+  }
 }
 
 // Prevent elements from affecting the line height in all browsers.

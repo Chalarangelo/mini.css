@@ -16,7 +16,7 @@ code:not(.doc), kbd:not(.doc), pre:not(.doc), samp:not(.doc) {
   height: 100vh;
 }
 .index-splash-image {
-  background-image: url('./index-splash.jpg');
+  background-image: url('%PUBLIC_URL%/index-splash.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -145,4 +145,178 @@ header {
   &:hover {
     color: #111;
   }
+}
+
+// TODO: Use module, copied from v2
+
+[type="checkbox"], [type="radio"] {
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+nav {
+  display: block;
+  background: #eceff1;
+  border: 0.0625rem solid #c9c9c9;
+  margin: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+nav a, nav a:visited {
+  display: block;
+  color: #145caf;
+  text-decoration: none;
+}
+
+nav .sublink-1 {
+  padding-left: 1rem;
+  position: relative;
+}
+
+nav .sublink-1:before {
+  position: absolute;
+  left: 0.1875rem;
+  top: -0.0625rem;
+  content: '';
+  height: 100%;
+  border: 0.0625rem solid #bdbdbd;
+  border-left: 0;
+}
+
+nav .sublink-2 {
+  padding-left: 2rem;
+  position: relative;
+}
+
+nav .sublink-2:before {
+  position: absolute;
+  left: 0.1875rem;
+  top: -0.0625rem;
+  content: '';
+  height: 100%;
+  border: 0.0625rem solid #bdbdbd;
+  border-left: 0;
+}
+
+.drawer-toggle:before {
+  position: relative;
+  top: 0.4375rem;
+  font-family: sans-serif;
+  font-size: 2.5rem;
+  line-height: 0.125;
+  content: '\2261';
+}
+
+.drawer {
+  display: block;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 320px;
+  height: 100vh;
+  overflow-y: auto;
+  background: #eceff1;
+  border: 0.0625rem solid #c9c9c9;
+  margin: 0;
+  z-index: 1110;
+}
+
+.drawer:not(.right) {
+  left: -320px;
+  transition: left 0.3s;
+}
+
+.drawer.right {
+  right: -320px;
+  transition: right 0.3s;
+}
+
+.drawer .close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.25rem;
+  z-index: 1111;
+  padding: 0;
+}
+
+@media screen and (max-width: 320px) {
+  .drawer {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .drawer:not(.persistent) {
+    position: static;
+    height: 100%;
+    z-index: 1100;
+  }
+  .drawer:not(.persistent) .close {
+    display: none;
+  }
+  .drawer-toggle:not(.persistent) {
+    display: none;
+  }
+}
+
+:checked + .drawer:not(.right) {
+  left: 0;
+}
+
+:checked + .drawer.right {
+  right: 0;
+}
+
+.close {
+  display: inline-block;
+  width: 1.5rem;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 700;
+  border-radius: 2rem;
+  background: rgba(230, 230, 230, 0);
+  vertical-align: top;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.close:hover, .close:focus {
+  background: #e6e6e6;
+}
+
+.close:before {
+  content: "\00D7";
+  display: block;
+  text-align: center;
+}
+
+#root, #App {
+  height: 100vh;
+}
+
+#doc-wrapper {
+  height: calc(100vh - 3.5625rem);
+  overflow: hidden;
+}
+
+#doc-drawer {
+  height: 100vh;
+  overflow-y: auto;
+  @media screen and (min-width:768px){
+    height: 100%;
+    border-top: 0;
+    border-bottom: 0;
+  }
+}
+
+#doc-content {
+  height: 100%;
+  overflow-y: auto;
 }

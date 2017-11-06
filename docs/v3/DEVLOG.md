@@ -85,3 +85,9 @@
 - Created the responsiveness and speed section.
 - Created tailored section.
 - Landing page is mostly complete, footer and some minor changes are missing, I can start working on the rest of the docs now.
+
+## 20171106
+
+- Scraped the old website to get content for new documentation.
+- Started development of the new website app in `v3_dev`. This is going to be where the docs app is going to be created in.
+- Initial scaffolding of the documentation UI.

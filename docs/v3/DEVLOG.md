@@ -91,3 +91,6 @@
 - Scraped the old website to get content for new documentation.
 - Started development of the new website app in `v3_dev`. This is going to be where the docs app is going to be created in.
 - Initial scaffolding of the documentation UI.
+- Added conditions for `box-shadow` values in `core`. The module is mostly complete, apart from extra features that I might want to add in the future.
+- Decided not to add the `select` fix in `input_control`. Browsers are pretty wild around the element and its use cases are causing a ton of complications. It is possible, but quite unlikely that it will be rebuilt in the old way in the future, but most likely it will just follow the OS/Browser/Native UI as it should have done originally. It's debatable if this is for the best, but quite frankly it saves me a lot of time and effort for a single element and a lot of bytes in the codebase. I would rather not style it and provide an outside fix for safety, one that goes a bit against semantics to provide better styling. If you are reading this and want to tell me why this was a bad choice and led to the demise of the **hugging cat**, kindly do!
+- Added styling for `form` elements, simplified the values of `padding` to make them more reasonable and uniform.

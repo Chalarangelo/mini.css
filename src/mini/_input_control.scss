@@ -1,0 +1,19 @@
+/*
+  Definitions for forms and input elements.
+*/
+// Different elements are styled based on the same set of rules.
+
+// Check the `_input_control_mixins.scss` file to find this module's mixins.
+// @import 'input_control_mixins';
+// TODO: Uncomment above as soon as mixins are ready to be used.
+// Base form styling
+form {  // Text color is the default, this can be changed manually.
+  background: var(#{$secondary-back-color-var});
+  border:  $__1px solid var(#{$secondary-border-color-var});
+  border-radius: var(#{$universal-border-radius-var});
+  margin: var(#{$universal-margin-var});
+  padding: calc(2 * var(#{$universal-padding-var})) var(#{$universal-padding-var});
+  @if $universal-box-shadow != none {
+    box-shadow: var(#{$universal-box-shadow-var});
+  }
+}

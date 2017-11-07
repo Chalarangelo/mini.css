@@ -127,27 +127,27 @@ p.splash {
 }
 
 // TODO: Replace with actual header when ready
-header {
-  display: block;
-  height: 3.25rem;
-  background: #f8f8f8;
-  color: #444;
-  padding: 0.125rem 0.5rem;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  position: sticky;
-  border-bottom: 1px solid #ddd;
-  top: 0;
-  text-transform: uppercase;
-  // Rough testing draft, not for production use
-  line-height: 3.5rem;
-  font-weight: 500;
-  cursor: pointer;
-  &:hover {
-    color: #111;
-  }
-}
+// header {
+//   display: block;
+//   height: 3.25rem;
+//   background: #f8f8f8;
+//   color: #444;
+//   padding: 0.125rem 0.5rem;
+//   white-space: nowrap;
+//   overflow-x: auto;
+//   overflow-y: hidden;
+//   position: sticky;
+//   border-bottom: 1px solid #ddd;
+//   top: 0;
+//   text-transform: uppercase;
+//   // Rough testing draft, not for production use
+//   line-height: 3.5rem;
+//   font-weight: 500;
+//   cursor: pointer;
+//   &:hover {
+//     color: #111;
+//   }
+// }
 
 // TODO: Use module, copied from v2
 

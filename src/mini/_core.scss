@@ -40,7 +40,7 @@ $sub-bottom:               -0.25em !default;    // <sub> bottom
 $a-link-color:             #0277bd !default;    // Color for <a>:link
 $a-visited-color:          #01579b !default;    // Color for <a>:visited
 // CSS variable name definitions [exercise caution if modifying these]
-$fore-color-var:                '--fore-color';
+$fore-color-var:                '--fore-color' !default;
 $secondary-fore-color-var:      '--secondary-fore-color' !default;
 $back-color-var:                '--back-color' !default;
 $secondary-back-color-var:      '--secondary-back-color' !default;

@@ -1,0 +1,105 @@
+/*
+  Definitions for navigation elements.
+*/
+// Different elements are styled based on the same set of rules.
+$header-height:     3.1875rem !default;      // Height of the header element.
+$header-back-color: #f8f8f8 !default;        // Background color for the header element.
+$header-hover-back-color: #f0f0f0 !default;  // Background color for the header element (hover).
+$header-fore-color: #444 !default;           // Text color for the header element.
+$header-border-color: #ddd !default;         // Border color for the header element.
+$_header-only-bottom-border:  true !default; // [Hidden] Apply styling only to the bottom border of header? (boolean)
+$_header-links-uppercase:     true !default; // [Hidden] Should header links and buttons be uppercase? (boolean)
+$sticky-name:         'sticky' !default;     // Class name for sticky headers and footers.
+// CSS variable name definitions [exercise caution if modifying these]
+$header-fore-color-var:          '--header-fore-color' !default;
+$header-back-color-var:          '--header-back-color' !default;
+$header-hover-back-color-var:    '--header-hover-back-color' !default;
+$header-border-color-var:        '--header-border-color' !default;
+/* Navigation module CSS variable definitions */
+:root {
+  #{$header-back-color-var}: $header-back-color;
+  #{$header-hover-back-color-var}: $header-hover-back-color;
+  #{$header-fore-color-var}: $header-fore-color;
+  #{$header-border-color-var}: $header-border-color;
+}
+// Header styling. - No box-shadow as it causes lots of weird bugs in Chrome. No margin as it shouldn't have any.
+header {
+  height: $header-height;
+  background: var(#{$header-back-color-var}); // Always apply background color to avoid shine through
+  color: var(#{$header-fore-color-var});
+  @if $_header-only-bottom-border {
+    border-bottom: $__1px solid var(#{$header-border-color-var});
+  }
+  @else {
+    border: $__1px solid var(#{$header-border-color-var});
+  }
+  padding: calc(var(#{$universal-padding-var}) / 4) 0;
+  // Responsiveness for smaller displays, scrolls horizontally.
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  // Fix for responsive header, using the grid system's row and column alignment.
+  &.#{$grid-row-name} {
+    box-sizing: content-box;
+  }
+  // Header logo styling.
+  // .#{$header-logo-name} {
+  //   @if $header-colorize-svgs {     // Deals with SVG colorization in case people use SVGs.
+  //     color: $header-fore-color;    // Only toggle off if you know what you're doing.
+  //   }
+  //   @if $header-logo-font-size != $base-font-size {
+  //     font-size: $header-logo-font-size;
+  //   }
+  //   @if $header-logo-line-height != $base-line-height {
+  //     line-height: $header-logo-line-height;
+  //   }
+  //   @if $header-logo-margin != 0 {
+  //     margin: $header-logo-margin;
+  //   }
+  //   @if $header-logo-padding != 0 {
+  //     padding: $header-logo-padding;
+  //   }
+  //   @if $apply-link-hover-fade {
+  //     transition: opacity 0.3s ;
+  //   }
+  // }
+  // Link styling.
+  button, [type="button"],
+  a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name},
+  a[role="button"], label[role="button"], [role="button"] {
+    position: relative;
+    top: calc(0rem - var(#{$universal-padding-var}) / 4);  // Use universal-padding to offset the padding of the header.
+    height: calc(100% + var(#{$universal-padding-var}) / 2);  // Fill header.
+    background: var(#{$header-back-color-var});        // Apply color regardless to override styling from other things.
+    color: var(#{$header-fore-color-var});
+    border: 0;
+    border-radius: 0;
+    vertical-align: top;                  // Alignemt, really important to make this work well.
+    margin: 0;
+    @if $_header-links-uppercase {
+      text-transform: uppercase;
+    }
+    &:hover, &:focus {
+      background: var(#{$header-hover-back-color-var});
+    }
+  }
+  // @if $apply-link-underline {        // Override for links if underline is enabled.
+  //   .#{$header-logo-name}, a.#{$button-class-name}, a[role="button"] {
+  //     text-decoration: none;
+  //   }
+  // }
+}
+// TODO: Add footer definitions here.
+// Definitions for sticky headers and footers.
+header.#{$sticky-name} {
+  position: -webkit-sticky; // One of the rare instances where prefixes are necessary.
+  position: sticky;
+  z-index: 1101;  // Deals with certain problems when combined with cards and tables.
+  top: 0;
+}
+footer.#{$sticky-name} {
+  position: -webkit-sticky; // One of the rare instances where prefixes are necessary.
+  position: sticky;
+  z-index: 1101;  // Deals with certain problems when combined with cards and tables.
+  bottom: 0;
+}

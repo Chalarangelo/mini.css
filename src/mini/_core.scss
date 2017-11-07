@@ -78,6 +78,9 @@ $a-visited-color-var:           '--a-visited-color' !default;
 html {
   font-size: $base-root-font-size;  // Set root's font sizing.
 }
+a, b, del, em, i, ins, q, span, strong, u {
+  font-size: 1em; // Fix for elements inside headings not displaying properly.
+}
 
 @if $_apply-defaults-to-all {
   html, * {

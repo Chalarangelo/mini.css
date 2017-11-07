@@ -108,3 +108,5 @@
 - Created proper variables for `button`-like elements, built element syling on CSS variables.
 - Tested CSS variables for button, should allow for easy customization and additional styles, meaning it will be a breeze to add all the extra stuff as soon as possible.
 - Bundled up `[disabled]` styling for all elements in `input_control` as this should now be the default behavior of the code.
+- Dealt with #114. It shouldn't be a problem anymore.
+- Added mixins for `button` elements in `input_control`. They should now be perfectly usable.

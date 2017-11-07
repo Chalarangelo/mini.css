@@ -26,8 +26,8 @@ $button-hover-fore-color-var: '--button-hover-fore-color' !default;
 $button-border-color-var:       '--button-border-color' !default;
 $button-hover-border-color-var: '--button-hover-border-color' !default;
 // Check the `_input_control_mixins.scss` file to find this module's mixins.
-// @import 'input_control_mixins';
-// TODO: Uncomment above as soon as mixins are ready to be used.
+@import 'input_control_mixins';
+// TODO: Add a mixin for the switches.
 /* Input_control module CSS variable definitions */
 :root {
   #{$input-focus-color-var}: $input-focus-color;

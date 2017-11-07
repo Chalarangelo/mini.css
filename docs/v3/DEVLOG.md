@@ -105,3 +105,6 @@
 - Used CSS variables for most of the form `input` custmization, these should be easy to change.
 - Replaced old `::placeholder` definitions with `:placeholder-shown` for most browsers, kept the `-ms-` prefixed one for Edge. Using `:placeholder-shown` is following the latest standards, it has a high implementation rate, does not conflict with the browser support **Gluon** is targeting and, if it does not work, the code will default to what browsers usually do, which is pretty much what I am doing, too. It also simplifies the code a bit. `::-ms-placeholder` simulates the default behavior, so all browsers should get a similar styling.
 - Copied over all the fixes for `button` and similar elements, as they were up-to-date.
+- Created proper variables for `button`-like elements, built element syling on CSS variables.
+- Tested CSS variables for button, should allow for easy customization and additional styles, meaning it will be a breeze to add all the extra stuff as soon as possible.
+- Bundled up `[disabled]` styling for all elements in `input_control` as this should now be the default behavior of the code.

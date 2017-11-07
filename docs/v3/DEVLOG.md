@@ -98,4 +98,10 @@
 
 ## 20171107
 
-- Built `.input-group`s from the ground up, cleaning legacy code and making sure everything works just like before. 
+- Built `.input-group`s from the ground up, cleaning legacy code and making sure everything works just like before.
+- Copied over the fix for `number` `input`s, still valid.
+- Removed the `textarea` fix, as it only applies to IE.
+- Copied over fixes for `search` elements, as they seem to apply to modern browsers.
+- Used CSS variables for most of the form `input` custmization, these should be easy to change.
+- Replaced old `::placeholder` definitions with `:placeholder-shown` for most browsers, kept the `-ms-` prefixed one for Edge. Using `:placeholder-shown` is following the latest standards, it has a high implementation rate, does not conflict with the browser support **Gluon** is targeting and, if it does not work, the code will default to what browsers usually do, which is pretty much what I am doing, too. It also simplifies the code a bit. `::-ms-placeholder` simulates the default behavior, so all browsers should get a similar styling.
+- Copied over all the fixes for `button` and similar elements, as they were up-to-date.

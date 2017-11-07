@@ -2,7 +2,11 @@
   Definitions for forms and input elements.
 */
 // Different elements are styled based on the same set of rules.
-
+$input-group-name:           'input-group' !default;  // Class name for input groups.
+$_include-fluid-input-group: true !default;           // [Hidden] Should fluid input groups be included? (boolean)
+$input-group-fluid-name:     'fluid' !default;        // Class name for fluid input groups.
+$input-group-vertical-name:  'vertical' !default;     // Class name for vertical input groups.
+$input-group-mobile-breakpoint:   767px !default;     // Breakpoint for fluid input group mobile view.
 // Check the `_input_control_mixins.scss` file to find this module's mixins.
 // @import 'input_control_mixins';
 // TODO: Uncomment above as soon as mixins are ready to be used.
@@ -39,4 +43,35 @@ legend {
 // Label syling. - Basically just padding, but there might be more in the future.
 label {
   padding: calc(var(#{$universal-padding-var}) / 2) var(#{$universal-padding-var});
+}
+// Input group styling.
+.#{$input-group-name} {
+  display: inline-block;
+  // Fluid input groups
+  @if $_include-fluid-input-group {
+    &.#{$input-group-fluid-name} {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & > input {
+        flex-grow: 1;
+        flex-basis: 0px;
+      }
+      // On mobile
+      @media screen and (max-width: #{$input-group-mobile-breakpoint}) {
+        align-items: stretch;
+        flex-direction: column;
+      }
+    }
+    // Verical input groups
+    &.#{$input-group-vertical-name} {
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+      & > input {
+        flex-grow: 1;
+        flex-basis: 0px;
+      }
+    }
+  }
 }

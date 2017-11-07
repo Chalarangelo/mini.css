@@ -110,3 +110,6 @@
 - Bundled up `[disabled]` styling for all elements in `input_control` as this should now be the default behavior of the code.
 - Dealt with #114. It shouldn't be a problem anymore.
 - Added mixins for `button` elements in `input_control`. They should now be perfectly usable.
+- Removed `header` `display` fix as it was targeting IE 9-.
+- Implemented `header` and links/buttons in it, `logo` is still missing.
+- Implemented `.sticky` for all `navigation` elements that needed it.

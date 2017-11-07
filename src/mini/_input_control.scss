@@ -7,12 +7,24 @@ $_include-fluid-input-group: true !default;           // [Hidden] Should fluid i
 $input-group-fluid-name:     'fluid' !default;        // Class name for fluid input groups.
 $input-group-vertical-name:  'vertical' !default;     // Class name for vertical input groups.
 $input-group-mobile-breakpoint:   767px !default;     // Breakpoint for fluid input group mobile view.
+$button-class-name:           'button' !default;      // Class name for elements styled as buttons.
 $input-disabled-opacity:      0.75 !default;          // Opacity for input elements when disabled.
 $input-focus-color:           #0288d1 !default;       // Border color for focused input elements.
 $input-invalid-color:         #d32f2f !default;       // Border color for invalid input elements.
+$button-back-color:           #e2e2e2 !default;       // Background color for buttons.
+$button-hover-back-color:     #dcdcdc !default;       // Background color for buttons (hover).
+$button-fore-color:           #212121 !default;       // Text color for buttons.
+$button-border-color:         transparent !default;   // Border color for buttons.
+$button-hover-border-color:   transparent !default;   // Border color for buttons (hover).
 // CSS variable name definitions [exercise caution if modifying these]
 $input-focus-color-var:       '--input-focus-color' !default;
 $input-invalid-color-var:     '--input-invalid-color' !default;
+$button-back-color-var:       '--button-back-color' !default;
+$button-hover-back-color-var: '--button-hover-back-color' !default;
+$button-fore-color-var:       '--button-fore-color' !default;
+$button-hover-fore-color-var: '--button-hover-fore-color' !default;
+$button-border-color-var:       '--button-border-color' !default;
+$button-hover-border-color-var: '--button-hover-border-color' !default;
 // Check the `_input_control_mixins.scss` file to find this module's mixins.
 // @import 'input_control_mixins';
 // TODO: Uncomment above as soon as mixins are ready to be used.
@@ -20,6 +32,11 @@ $input-invalid-color-var:     '--input-invalid-color' !default;
 :root {
   #{$input-focus-color-var}: $input-focus-color;
   #{$input-invalid-color-var}: $input-invalid-color;
+  #{$button-back-color-var}: $button-back-color;
+  #{$button-hover-back-color-var}: $button-hover-back-color;
+  #{$button-fore-color-var}: $button-fore-color;
+  #{$button-border-color-var}: $button-border-color;
+  #{$button-hover-border-color-var}: $button-hover-border-color;
 }
 // Base form styling
 form {  // Text color is the default, this can be changed manually.
@@ -118,10 +135,6 @@ input:not([type="button"]):not([type="submit"]):not([type="reset"]), textarea, s
     border-color: var(#{$input-focus-color-var});
     box-shadow: none;
   }
-  &:disabled, &[disabled] {
-    cursor: not-allowed;
-    opacity: $input-disabled-opacity;
-  }
   &:invalid, &:focus:invalid{
     border-color: var(#{$input-invalid-color-var});
     box-shadow: none;
@@ -161,4 +174,31 @@ button, html [type="button"], [type="reset"], [type="submit"] {
 button {
   overflow: visible;      // Show the overflow in IE.
   text-transform: none;    // Remove inheritance of text-transform in Edge, Firefox, and IE.
+}
+// Default styling
+button, [type="button"], [type="submit"], [type="reset"],
+a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name},
+a[role="button"], label[role="button"], [role="button"] {
+  display: inline-block;
+  background: var(#{$button-back-color-var});
+  color: var(#{$button-fore-color-var});
+  border: $__1px solid var(#{$button-border-color-var});
+  border-radius: var(#{$universal-border-radius-var});
+  padding: var(#{$universal-padding-var}) calc(1.5 * var(#{$universal-padding-var}));
+  margin: var(#{$universal-margin-var});
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  &:hover, &:focus {
+    background: var(#{$button-hover-back-color-var});
+    border-color: var(#{$button-hover-border-color-var});
+  }
+}
+// Disabled styling for input and button elements.
+input, textarea, select, button, .#{$button-class-name}, [role="button"] {
+  // .button[disabled] is actually higher specificity than a.button, so no need for more than that
+  &:disabled, &[disabled] {
+    cursor: not-allowed;
+    opacity: $input-disabled-opacity;
+  }
 }

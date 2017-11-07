@@ -13,7 +13,7 @@ $_body-margin:            0 !default;           // [Hidden] Margin for body
 $fore-color:              #111 !default;        // Text & foreground color
 $secondary-fore-color:    #444 !default;        // Secondary text & foreground color
 $back-color:              #f8f8f8 !default;     // Background color
-$secondary-back-color:    #eee !default;        // Secondary background color
+$secondary-back-color:    #f0f0f0 !default;     // Secondary background color
 $blockquote-color:        #f57c00 !default;     // <blockquote> sidebar and quotation color
 $pre-color:               #1565c0 !default;     // <pre> sidebar color
 $border-color:            #aaa !default;        // Border color
@@ -256,7 +256,7 @@ pre { // Fore color is the default, can be altered manually.
   margin: var(#{$universal-margin-var});
   border: $__1px solid var(#{$secondary-border-color-var});
   border-left: 4*$__1px solid var(#{$pre-color-var});
-  border-radius: 0 var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}) 0;  
+  border-radius: 0 var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}) 0;
   @if $universal-box-shadow != none {
     box-shadow: var(#{$universal-box-shadow-var});
   }

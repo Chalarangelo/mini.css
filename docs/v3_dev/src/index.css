@@ -778,6 +778,11 @@ input:disabled, input[disabled], textarea:disabled, textarea[disabled], select:d
   --nav-hover-back-color: #f0f0f0;
   --nav-fore-color: #444;
   --nav-border-color: #ddd;
+  --nav-link-color: #0277bd;
+  --footer-fore-color: #444;
+  --footer-back-color: #f8f8f8;
+  --footer-border-color: #ddd;
+  --footer-link-color: #0277bd;
   --drawer-back-color: #f8f8f8;
   --drawer-hover-back-color: #f0f0f0;
   --drawer-border-color: #ddd;
@@ -838,7 +843,7 @@ nav * {
 
 nav a, nav a:visited {
   display: block;
-  color: var(--a-link-color);
+  color: var(--nav-link-color);
   border-radius: var(--universal-border-radius);
   transition: background 0.3s;
 }
@@ -876,6 +881,18 @@ nav .sublink-2:before {
   height: 100%;
   border: 0.0625rem solid var(--nav-border-color);
   border-left: 0;
+}
+
+footer {
+  background: var(--footer-back-color);
+  color: var(--footer-fore-color);
+  border-top: 0.0625rem solid var(--footer-border-color);
+  padding: calc(2 * var(--universal-padding)) var(--universal-padding);
+  font-size: 0.875rem;
+}
+
+footer a, footer a:visited {
+  color: var(--footer-link-color);
 }
 
 header.sticky {

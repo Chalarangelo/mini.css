@@ -120,3 +120,5 @@
 - Realized that `header` button-like elements don't need that high a specificity, provided that they should always appear after the definitions of `input_control`, thus lowered the specificity. This will trim off a couple of bytes, but it might eventually cause problems. Remember this decision should that happen and blame the **hugging cat**.
 - Figured out the `line-height` thing for the afforementioned elements.
 - Styled `.logo` in `header`. The styling is now far simpler and easier to use.
+- Removed `display:block` fix from `nav` as it was targeting IE 9-.
+- Tweaked and rebuilt the styling of `nav` elements. It should now be more mobile-friendly, too, especially when used in combination with a `.drawer`.

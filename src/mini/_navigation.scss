@@ -7,22 +7,36 @@ $header-back-color: #f8f8f8 !default;        // Background color for the header 
 $header-hover-back-color: #f0f0f0 !default;  // Background color for the header element (hover).
 $header-fore-color:   #444 !default;         // Text color for the header element.
 $header-border-color: #ddd !default;         // Border color for the header element.
+$nav-back-color:      #f8f8f8 !default;      // Background color for the header element.
+$nav-hover-back-color: #f0f0f0 !default;     // Background color for the header element (hover).
+$nav-fore-color:      #444 !default;         // Text color for the header element.
+$nav-border-color:    #ddd !default;         // Border color for the header element.
 $_header-only-bottom-border:  true !default; // [Hidden] Apply styling only to the bottom border of header? (boolean)
 $_header-links-uppercase:     true !default; // [Hidden] Should header links and buttons be uppercase? (boolean)
 $header-logo-name:    'logo' !default;       // Class name for the header logo element.
 $header-logo-font-size: 1.75rem !default;    // Font ize for the header logo element.
+$nav-sublink-prefix:   'sublink' !default;   // Prefix for the subcategory tabs in nav.
+$nav-sublink-depth:    2 !default;           // Amount of subcategory classes to add.
 $sticky-name:         'sticky' !default;     // Class name for sticky headers and footers.
 // CSS variable name definitions [exercise caution if modifying these]
 $header-fore-color-var:          '--header-fore-color' !default;
 $header-back-color-var:          '--header-back-color' !default;
 $header-hover-back-color-var:    '--header-hover-back-color' !default;
 $header-border-color-var:        '--header-border-color' !default;
+$nav-fore-color-var:             '--nav-fore-color' !default;
+$nav-back-color-var:             '--nav-back-color' !default;
+$nav-hover-back-color-var:       '--nav-hover-back-color' !default;
+$nav-border-color-var:           '--nav-border-color' !default;
 /* Navigation module CSS variable definitions */
 :root {
   #{$header-back-color-var}: $header-back-color;
   #{$header-hover-back-color-var}: $header-hover-back-color;
   #{$header-fore-color-var}: $header-fore-color;
   #{$header-border-color-var}: $header-border-color;
+  #{$nav-back-color-var}: $nav-back-color;
+  #{$nav-hover-back-color-var}: $nav-hover-back-color;
+  #{$nav-fore-color-var}: $nav-fore-color;
+  #{$nav-border-color-var}: $nav-border-color;
 }
 // Header styling. - No box-shadow as it causes lots of weird bugs in Chrome. No margin as it shouldn't have any.
 header {
@@ -69,6 +83,47 @@ header {
     }
     &:hover, &:focus {
       background: var(#{$header-hover-back-color-var});
+    }
+  }
+}
+// Navigation sidebar styling.
+nav {
+  background: var(#{$nav-back-color-var});
+  color: var(#{$nav-fore-color-var});
+  border: $__1px solid var(#{$nav-border-color-var});
+  border-radius: var(#{$universal-border-radius-var});
+  margin: var(#{$universal-margin-var});
+  padding: 0;
+  @if $universal-box-shadow != none {
+    box-shadow: var(#{$universal-box-shadow-var});
+  }
+  * {
+    padding: var(#{$universal-padding-var}) calc(1.5 * var(#{$universal-padding-var}));
+  }
+  a, a:visited {
+    display: block;
+    color: var(#{$a-link-color-var});    // Apply regardless to de-stylize visited links.
+    border-radius: var(#{$universal-border-radius-var});
+    transition: background 0.3s;
+    &:hover, &:focus {
+      text-decoration: none;
+      background: var(#{$a-hover-back-color-var});
+    }
+  }
+  // Subcategories in navigation.
+  @for $i from 1 through $nav-sublink-depth {
+    .#{$nav-sublink-prefix}-#{$i} {
+      position: relative;
+      margin-left: calc(#{$i * 2} * var(#{$universal-padding-var}));
+      &:before {
+        position: absolute;
+        left: calc(var(#{$universal-padding-var}) - #{1 + ($i - 1)*2} * var(#{$universal-padding-var}));
+        top: -#{$__1px};
+        content: '';
+        height: 100%;
+        border: $__1px solid var(#{$nav-border-color-var});
+        border-left: 0;
+      }
     }
   }
 }

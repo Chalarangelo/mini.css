@@ -791,27 +791,44 @@ header.row {
   box-sizing: content-box;
 }
 
-header button, header [type="button"],
-header a.button, header label.button, header .button,
-header a[role="button"], header label[role="button"], header [role="button"] {
+header .logo {
+  color: var(--header-fore-color);
+  font-size: 1.75rem;
+  padding: var(--universal-padding) calc(2 * var(--universal-padding));
+  text-decoration: none;
+}
+
+header button, header [type="button"], header .button, header [role="button"] {
+  box-sizing: border-box;
   position: relative;
   top: calc(0rem - var(--universal-padding) / 4);
-  height: calc(100% + var(--universal-padding) / 2);
+  height: calc(3.1875rem + var(--universal-padding) / 2);
   background: var(--header-back-color);
+  line-height: calc(3.1875rem - var(--universal-padding) * 1.5);
+  text-align: center;
   color: var(--header-fore-color);
   border: 0;
   border-radius: 0;
-  vertical-align: top;
   margin: 0;
   text-transform: uppercase;
 }
 
-header button:hover, header button:focus, header [type="button"]:hover, header [type="button"]:focus,
-header a.button:hover,
-header a.button:focus, header label.button:hover, header label.button:focus, header .button:hover, header .button:focus,
-header a[role="button"]:hover,
-header a[role="button"]:focus, header label[role="button"]:hover, header label[role="button"]:focus, header [role="button"]:hover, header [role="button"]:focus {
+header button:hover, header button:focus, header [type="button"]:hover, header [type="button"]:focus, header .button:hover, header .button:focus, header [role="button"]:hover, header [role="button"]:focus {
   background: var(--header-hover-back-color);
+}
+
+header.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1101;
+  top: 0;
+}
+
+footer.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1101;
+  bottom: 0;
 }
 
 :not(.doc) {

@@ -5,10 +5,12 @@
 $header-height:     3.1875rem !default;      // Height of the header element.
 $header-back-color: #f8f8f8 !default;        // Background color for the header element.
 $header-hover-back-color: #f0f0f0 !default;  // Background color for the header element (hover).
-$header-fore-color: #444 !default;           // Text color for the header element.
+$header-fore-color:   #444 !default;         // Text color for the header element.
 $header-border-color: #ddd !default;         // Border color for the header element.
 $_header-only-bottom-border:  true !default; // [Hidden] Apply styling only to the bottom border of header? (boolean)
 $_header-links-uppercase:     true !default; // [Hidden] Should header links and buttons be uppercase? (boolean)
+$header-logo-name:    'logo' !default;       // Class name for the header logo element.
+$header-logo-font-size: 1.75rem !default;    // Font ize for the header logo element.
 $sticky-name:         'sticky' !default;     // Class name for sticky headers and footers.
 // CSS variable name definitions [exercise caution if modifying these]
 $header-fore-color-var:          '--header-fore-color' !default;
@@ -43,38 +45,24 @@ header {
     box-sizing: content-box;
   }
   // Header logo styling.
-  // .#{$header-logo-name} {
-  //   @if $header-colorize-svgs {     // Deals with SVG colorization in case people use SVGs.
-  //     color: $header-fore-color;    // Only toggle off if you know what you're doing.
-  //   }
-  //   @if $header-logo-font-size != $base-font-size {
-  //     font-size: $header-logo-font-size;
-  //   }
-  //   @if $header-logo-line-height != $base-line-height {
-  //     line-height: $header-logo-line-height;
-  //   }
-  //   @if $header-logo-margin != 0 {
-  //     margin: $header-logo-margin;
-  //   }
-  //   @if $header-logo-padding != 0 {
-  //     padding: $header-logo-padding;
-  //   }
-  //   @if $apply-link-hover-fade {
-  //     transition: opacity 0.3s ;
-  //   }
-  // }
+  .#{$header-logo-name} {
+    color: var(#{$header-fore-color-var});
+    font-size: $header-logo-font-size;
+    padding: var(#{$universal-padding-var}) calc(2 * var(#{$universal-padding-var}));
+    text-decoration: none;
+  }
   // Link styling.
-  button, [type="button"],
-  a.#{$button-class-name}, label.#{$button-class-name}, .#{$button-class-name},
-  a[role="button"], label[role="button"], [role="button"] {
+  button, [type="button"], .#{$button-class-name}, [role="button"] {
+    box-sizing: border-box;
     position: relative;
     top: calc(0rem - var(#{$universal-padding-var}) / 4);  // Use universal-padding to offset the padding of the header.
-    height: calc(100% + var(#{$universal-padding-var}) / 2);  // Fill header.
+    height: calc(#{$header-height} + var(#{$universal-padding-var}) / 2);  // Fill header.
     background: var(#{$header-back-color-var});        // Apply color regardless to override styling from other things.
+    line-height: calc(#{$header-height} - var(#{$universal-padding-var}) * 1.5);
+    text-align: center;
     color: var(#{$header-fore-color-var});
     border: 0;
     border-radius: 0;
-    vertical-align: top;                  // Alignemt, really important to make this work well.
     margin: 0;
     @if $_header-links-uppercase {
       text-transform: uppercase;
@@ -83,11 +71,6 @@ header {
       background: var(#{$header-hover-back-color-var});
     }
   }
-  // @if $apply-link-underline {        // Override for links if underline is enabled.
-  //   .#{$header-logo-name}, a.#{$button-class-name}, a[role="button"] {
-  //     text-decoration: none;
-  //   }
-  // }
 }
 // TODO: Add footer definitions here.
 // Definitions for sticky headers and footers.

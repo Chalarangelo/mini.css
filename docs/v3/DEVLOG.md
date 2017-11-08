@@ -113,3 +113,10 @@
 - Removed `header` `display` fix as it was targeting IE 9-.
 - Implemented `header` and links/buttons in it, `logo` is still missing.
 - Implemented `.sticky` for all `navigation` elements that needed it.
+
+## 20171108
+
+- Started debugging the extremely problematic `header` `.button`s. Figured out that `line-height: 2.4375` can fix the issue, no clue why that is, but I am going to use it for a little while.
+- Realized that `header` button-like elements don't need that high a specificity, provided that they should always appear after the definitions of `input_control`, thus lowered the specificity. This will trim off a couple of bytes, but it might eventually cause problems. Remember this decision should that happen and blame the **hugging cat**.
+- Figured out the `line-height` thing for the afforementioned elements.
+- Styled `.logo` in `header`. The styling is now far simpler and easier to use.

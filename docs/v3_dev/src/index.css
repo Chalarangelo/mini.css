@@ -774,6 +774,10 @@ input:disabled, input[disabled], textarea:disabled, textarea[disabled], select:d
   --header-hover-back-color: #f0f0f0;
   --header-fore-color: #444;
   --header-border-color: #ddd;
+  --nav-back-color: #f8f8f8;
+  --nav-hover-back-color: #f0f0f0;
+  --nav-fore-color: #444;
+  --nav-border-color: #ddd;
 }
 
 header {
@@ -815,6 +819,61 @@ header button, header [type="button"], header .button, header [role="button"] {
 
 header button:hover, header button:focus, header [type="button"]:hover, header [type="button"]:focus, header .button:hover, header .button:focus, header [role="button"]:hover, header [role="button"]:focus {
   background: var(--header-hover-back-color);
+}
+
+nav {
+  background: var(--nav-back-color);
+  color: var(--nav-fore-color);
+  border: 0.0625rem solid var(--nav-border-color);
+  border-radius: var(--universal-border-radius);
+  margin: var(--universal-margin);
+  padding: 0;
+}
+
+nav * {
+  padding: var(--universal-padding) calc(1.5 * var(--universal-padding));
+}
+
+nav a, nav a:visited {
+  display: block;
+  color: var(--a-link-color);
+  border-radius: var(--universal-border-radius);
+  transition: background 0.3s;
+}
+
+nav a:hover, nav a:focus, nav a:visited:hover, nav a:visited:focus {
+  text-decoration: none;
+  background: var(--nav-hover-back-color);
+}
+
+nav .sublink-1 {
+  position: relative;
+  margin-left: calc(2 * var(--universal-padding));
+}
+
+nav .sublink-1:before {
+  position: absolute;
+  left: calc(var(--universal-padding) - 1 * var(--universal-padding));
+  top: -0.0625rem;
+  content: '';
+  height: 100%;
+  border: 0.0625rem solid var(--nav-border-color);
+  border-left: 0;
+}
+
+nav .sublink-2 {
+  position: relative;
+  margin-left: calc(4 * var(--universal-padding));
+}
+
+nav .sublink-2:before {
+  position: absolute;
+  left: calc(var(--universal-padding) - 3 * var(--universal-padding));
+  top: -0.0625rem;
+  content: '';
+  height: 100%;
+  border: 0.0625rem solid var(--nav-border-color);
+  border-left: 0;
 }
 
 header.sticky {
@@ -968,50 +1027,6 @@ p.splash {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-}
-
-nav {
-  display: block;
-  background: #eceff1;
-  border: 0.0625rem solid #c9c9c9;
-  margin: 0.5rem;
-  padding: 0.75rem 1rem;
-}
-
-nav a, nav a:visited {
-  display: block;
-  color: #145caf;
-  text-decoration: none;
-}
-
-nav .sublink-1 {
-  padding-left: 1rem;
-  position: relative;
-}
-
-nav .sublink-1:before {
-  position: absolute;
-  left: 0.1875rem;
-  top: -0.0625rem;
-  content: '';
-  height: 100%;
-  border: 0.0625rem solid #bdbdbd;
-  border-left: 0;
-}
-
-nav .sublink-2 {
-  padding-left: 2rem;
-  position: relative;
-}
-
-nav .sublink-2:before {
-  position: absolute;
-  left: 0.1875rem;
-  top: -0.0625rem;
-  content: '';
-  height: 100%;
-  border: 0.0625rem solid #bdbdbd;
-  border-left: 0;
 }
 
 .drawer-toggle:before {

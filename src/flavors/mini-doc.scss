@@ -126,31 +126,6 @@ p.splash {
   }
 }
 
-// TODO: Replace with actual header when ready
-// header {
-//   display: block;
-//   height: 3.25rem;
-//   background: #f8f8f8;
-//   color: #444;
-//   padding: 0.125rem 0.5rem;
-//   white-space: nowrap;
-//   overflow-x: auto;
-//   overflow-y: hidden;
-//   position: sticky;
-//   border-bottom: 1px solid #ddd;
-//   top: 0;
-//   text-transform: uppercase;
-//   // Rough testing draft, not for production use
-//   line-height: 3.5rem;
-//   font-weight: 500;
-//   cursor: pointer;
-//   &:hover {
-//     color: #111;
-//   }
-// }
-
-// TODO: Use module, copied from v2
-
 [type="checkbox"], [type="radio"] {
   height: 1px;
   width: 1px;
@@ -162,49 +137,6 @@ p.splash {
   clip-path: inset(100%);
 }
 
-nav {
-  display: block;
-  background: #eceff1;
-  border: 0.0625rem solid #c9c9c9;
-  margin: 0.5rem;
-  padding: 0.75rem 1rem;
-}
-
-nav a, nav a:visited {
-  display: block;
-  color: #145caf;
-  text-decoration: none;
-}
-
-nav .sublink-1 {
-  padding-left: 1rem;
-  position: relative;
-}
-
-nav .sublink-1:before {
-  position: absolute;
-  left: 0.1875rem;
-  top: -0.0625rem;
-  content: '';
-  height: 100%;
-  border: 0.0625rem solid #bdbdbd;
-  border-left: 0;
-}
-
-nav .sublink-2 {
-  padding-left: 2rem;
-  position: relative;
-}
-
-nav .sublink-2:before {
-  position: absolute;
-  left: 0.1875rem;
-  top: -0.0625rem;
-  content: '';
-  height: 100%;
-  border: 0.0625rem solid #bdbdbd;
-  border-left: 0;
-}
 
 .drawer-toggle:before {
   position: relative;

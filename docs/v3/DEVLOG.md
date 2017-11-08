@@ -122,3 +122,5 @@
 - Styled `.logo` in `header`. The styling is now far simpler and easier to use.
 - Removed `display:block` fix from `nav` as it was targeting IE 9-.
 - Tweaked and rebuilt the styling of `nav` elements. It should now be more mobile-friendly, too, especially when used in combination with a `.drawer`.
+- Rebuilt `.drawer`, breaking changes in the old code, but managable as far as I can tell.
+- `.drawer` will now be either left or right, no option for both. This can be altered in the code or by hand (if I make a tool, I should remember to add an option - *TODO*).

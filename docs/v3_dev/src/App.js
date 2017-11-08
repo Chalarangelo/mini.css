@@ -9,11 +9,12 @@ class App extends Component {
           <button id='button'>Docs</button>
 <a class='button' href='#'>Get started</a>
 <input class='button' type='submit' value='github' />
-        {/*<label htmlFor="doc-drawer-checkbox" className="button drawer-toggle hide"></label>*/}
+        <label htmlFor="doc-drawer-checkbox" className="button drawer-toggle">menu</label>
         </header>
         <div className="row" id="doc-wrapper">
-          <input type="checkbox" id="doc-drawer-checkbox" />
+          <input type="checkbox" id="doc-drawer-checkbox" class="drawer" />
           <nav>
+          <label htmlFor="doc-drawer-checkbox" className="drawer-close"></label>
   <a href="#">Home</a>
   <span>News</span>
   <a href="#" class="sublink-1">New Courses</a>

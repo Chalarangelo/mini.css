@@ -769,3 +769,237 @@ input:disabled, input[disabled], textarea:disabled, textarea[disabled], select:d
   cursor: not-allowed;
   opacity: 0.75;
 }
+
+/*
+  Definitions for navigation elements.
+*/
+/* Navigation module CSS variable definitions */
+:root {
+  --header-back-color: #f8f8f8;
+  --header-hover-back-color: #f0f0f0;
+  --header-fore-color: #444;
+  --header-border-color: #ddd;
+  --nav-back-color: #f8f8f8;
+  --nav-hover-back-color: #f0f0f0;
+  --nav-fore-color: #444;
+  --nav-border-color: #ddd;
+  --nav-link-color: #0277bd;
+  --footer-fore-color: #444;
+  --footer-back-color: #f8f8f8;
+  --footer-border-color: #ddd;
+  --footer-link-color: #0277bd;
+  --drawer-back-color: #f8f8f8;
+  --drawer-hover-back-color: #f0f0f0;
+  --drawer-border-color: #ddd;
+}
+
+header {
+  height: 3.1875rem;
+  background: var(--header-back-color);
+  color: var(--header-fore-color);
+  border-bottom: 0.0625rem solid var(--header-border-color);
+  padding: calc(var(--universal-padding) / 4) 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+header.row {
+  box-sizing: content-box;
+}
+
+header .logo {
+  color: var(--header-fore-color);
+  font-size: 1.75rem;
+  padding: var(--universal-padding) calc(2 * var(--universal-padding));
+  text-decoration: none;
+}
+
+header button, header [type="button"], header .button, header [role="button"] {
+  box-sizing: border-box;
+  position: relative;
+  top: calc(0rem - var(--universal-padding) / 4);
+  height: calc(3.1875rem + var(--universal-padding) / 2);
+  background: var(--header-back-color);
+  line-height: calc(3.1875rem - var(--universal-padding) * 1.5);
+  text-align: center;
+  color: var(--header-fore-color);
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+header button:hover, header button:focus, header [type="button"]:hover, header [type="button"]:focus, header .button:hover, header .button:focus, header [role="button"]:hover, header [role="button"]:focus {
+  background: var(--header-hover-back-color);
+}
+
+nav {
+  background: var(--nav-back-color);
+  color: var(--nav-fore-color);
+  border: 0.0625rem solid var(--nav-border-color);
+  border-radius: var(--universal-border-radius);
+  margin: var(--universal-margin);
+}
+
+nav * {
+  padding: var(--universal-padding) calc(1.5 * var(--universal-padding));
+}
+
+nav a, nav a:visited {
+  display: block;
+  color: var(--nav-link-color);
+  border-radius: var(--universal-border-radius);
+  transition: background 0.3s;
+}
+
+nav a:hover, nav a:focus, nav a:visited:hover, nav a:visited:focus {
+  text-decoration: none;
+  background: var(--nav-hover-back-color);
+}
+
+nav .sublink-1 {
+  position: relative;
+  margin-left: calc(2 * var(--universal-padding));
+}
+
+nav .sublink-1:before {
+  position: absolute;
+  left: calc(var(--universal-padding) - 1 * var(--universal-padding));
+  top: -0.0625rem;
+  content: '';
+  height: 100%;
+  border: 0.0625rem solid var(--nav-border-color);
+  border-left: 0;
+}
+
+nav .sublink-2 {
+  position: relative;
+  margin-left: calc(4 * var(--universal-padding));
+}
+
+nav .sublink-2:before {
+  position: absolute;
+  left: calc(var(--universal-padding) - 3 * var(--universal-padding));
+  top: -0.0625rem;
+  content: '';
+  height: 100%;
+  border: 0.0625rem solid var(--nav-border-color);
+  border-left: 0;
+}
+
+footer {
+  background: var(--footer-back-color);
+  color: var(--footer-fore-color);
+  border-top: 0.0625rem solid var(--footer-border-color);
+  padding: calc(2 * var(--universal-padding)) var(--universal-padding);
+  font-size: 0.875rem;
+}
+
+footer a, footer a:visited {
+  color: var(--footer-link-color);
+}
+
+header.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1101;
+  top: 0;
+}
+
+footer.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1101;
+  bottom: 0;
+}
+
+.drawer-toggle:before {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  vertical-align: text-top;
+  content: '';
+  background: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>') no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .drawer-toggle:not(.persistent) {
+    display: none;
+  }
+}
+
+[type="checkbox"].drawer {
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+[type="checkbox"].drawer + * {
+  display: block;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 320px;
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--drawer-back-color);
+  border: 0.0625rem solid var(--drawer-border-color);
+  border-radius: 0;
+  margin: 0;
+  z-index: 1110;
+  right: -320px;
+  transition: right 0.3s;
+}
+
+[type="checkbox"].drawer + * .drawer-close {
+  position: absolute;
+  top: var(--universal-margin);
+  right: var(--universal-margin);
+  z-index: 1111;
+  border-radius: var(--universal-border-radius);
+  padding: var(--universal-padding);
+  margin: 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+[type="checkbox"].drawer + * .drawer-close:before {
+  display: block;
+  background: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>') no-repeat;
+  content: '';
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+[type="checkbox"].drawer + * .drawer-close:hover, [type="checkbox"].drawer + * .drawer-close:focus {
+  background: var(--drawer-hover-back-color);
+}
+
+@media screen and (max-width: 320px) {
+  [type="checkbox"].drawer + * {
+    width: 100%;
+  }
+}
+
+[type="checkbox"].drawer:checked + * {
+  right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  [type="checkbox"].drawer:not(.persistent) + * {
+    position: static;
+    height: 100%;
+    z-index: 1100;
+  }
+  [type="checkbox"].drawer:not(.persistent) + * .drawer-close {
+    display: none;
+  }
+}

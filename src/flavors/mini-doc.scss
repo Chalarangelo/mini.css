@@ -1,7 +1,7 @@
 /* DO NOT USE - THIS IS A FLAVOR BUILT FOR THE DOCUMENTATION AND CONTAINS A LOT OF EXTRA CODE!!! */
 
 @import '../mini/core';
-@import '../mini/grid';
+@import '../mini/layout';
 @import '../mini/input_control';
 @import '../mini/navigation';
 
@@ -149,3 +149,34 @@ p.splash {
   height: 100%;
   overflow-y: auto;
 }
+
+$card-size1-name:              'large';            // Class name for large cards
+$card-size1-width:             480px;              // Width for large cards
+$card-size2-name:              'small';            // Class name for small cards
+$card-size2-width:             240px;              // Width for small cards
+$card-size3-name:              'fluid';            // Class name for fluid cards
+$card-size3-width:             100%;               // Width for fluid cards
+$card-style1-name:             'warning';          // Class name for card style 1
+$card-style1-back-color:       #ffca28;            // Background color for card style 1
+$card-style1-fore-color:       #111;               // Text color for card style 1
+$card-style1-border-color:     #e8b825;            // Border style for card style 1
+$card-style2-name:             'error';            // Class name for card style 2
+$card-style2-back-color:       #b71c1c;            // Background color for card style 2
+$card-style2-fore-color:       #fafafa;            // Text color for card style 2
+$card-style2-border-color:     #a71a1a;            // Border style for card style 2
+$card-section-style1-name:        'dark';          // Class name for card section style 1
+$card-section-style1-back-color:  #e0e0e0;         // Background color for card section style 1
+$card-section-style1-fore-color:  #111;            // Text color for card section style 1
+$card-section-style2-name:        'darker';        // Class name for card section style 2
+$card-section-style2-back-color:  #bdbdbd;         // Background color for card section style 2
+$card-section-style2-fore-color:  #111;            // Text color for card section style 2
+$card-section-padding1-name:    'double-padded';   // Class name for card section padding style 1
+$card-section-padding1-padding:  0.75rem;          // Padding for card section padding style 1
+@include make-card-alt-size ($card-size1-name, $card-size1-width);
+@include make-card-alt-size ($card-size2-name, $card-size2-width);
+@include make-card-alt-size ($card-size3-name, $card-size3-width);
+@include make-card-alt-color ($card-style1-name, $card-style1-back-color, $card-style1-fore-color, $card-style1-border-color);
+@include make-card-alt-color ($card-style2-name, $card-style2-back-color, $card-style2-fore-color, $card-style2-border-color);
+@include make-card-section-alt-color ($card-section-style1-name, $card-section-style1-back-color, $card-section-style1-fore-color);
+@include make-card-section-alt-color ($card-section-style2-name, $card-section-style2-back-color, $card-section-style2-fore-color);
+@include make-card-section-alt-style ($card-section-padding1-name, $card-section-padding1-padding);

@@ -1,5 +1,5 @@
 /*
-  Definitions for the grid system.
+  Definitions for the grid system, cards and containers.
 */
 // The grid system uses the flexbox module, meaning it might be incompatible with certain browsers.
 $_include-parent-layout:        true !default;        // [Hidden] Flag for rows defining column layouts (`true`/`false`).
@@ -17,6 +17,18 @@ $grid-medium-prefix:           'md' !default;         // Medium screen class pre
 $grid-large-prefix:            'lg' !default;         // Large screen class prefix for grid.
 $grid-medium-breakpoint:       768px !default;        // Medium screen breakpoint for grid.
 $grid-large-breakpoint:        1280px !default;       // Large screen breakpoint for grid.
+$card-name:                    'card' !default;       // Class name for the cards.
+$card-section-name:            'section' !default;    // Class name for the cards' sections.
+$card-section-media-name:      'media' !default;      // Class name for the cards' sections (media cotent).
+$card-normal-width:            320px !default;        // Width for normal cards.
+$card-section-media-height:    200px !default;        // Height for cards' media sections.
+$card-fore-color:              #111 !default;         // Text color for the cards.
+$card-back-color:              #f8f8f8 !default;      // Background color for the cards.
+$card-border-color:            #ddd !default;         // Border color for the cards.
+// CSS variable name definitions [exercise caution if modifying these]
+$card-fore-color-var:          '--card-fore-color' !default;
+$card-back-color-var:          '--card-back-color' !default;
+$card-border-color-var:        '--card-border-color' !default;
 // == Uncomment below code if this module is used on its own ==
 //
 // $universal-padding:       0.5rem !default;
@@ -26,6 +38,8 @@ $grid-large-breakpoint:        1280px !default;       // Large screen breakpoint
 // }
 //
 // ============================================================
+// Check the `_layout_mixins.scss` file to find this module's mixins.
+@import 'layout_mixins';
 // Fluid grid system container definition.
 .#{$grid-container-name} {
   margin: 0 auto;
@@ -115,4 +129,58 @@ $grid-large-breakpoint:        1280px !default;       // Large screen breakpoint
 // Definitions for large screens.
 @media screen and (min-width: #{$grid-large-breakpoint}){
   @include generate-grid-size($grid-large-prefix);
+}
+/* Card component CSS variable definitions */
+:root {
+  #{$card-back-color-var}: $card-back-color;
+  #{$card-fore-color-var}: $card-fore-color;
+  #{$card-border-color-var}: $card-border-color;
+}
+// Card styling
+.#{$card-name} {
+  // New syntax
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  position: relative;
+  width: 100%;
+  // Actual styling for the cards
+  background: var(#{$card-back-color-var});
+  color: var(#{$card-fore-color-var});
+  border: $__1px solid var(#{$card-border-color-var});
+  border-radius: var(#{$universal-border-radius-var});
+  margin: var(#{$universal-margin-var});
+  @if $universal-box-shadow != none {
+    box-shadow: var(#{$universal-box-shadow-var});
+  }
+  overflow: hidden;   // Hide overflow from section borders
+  // Responsiveness (if the screen is larger than card, set max-width)
+  @media screen and (min-width: #{$card-normal-width}) {
+    max-width: $card-normal-width;
+  }
+  // Card sections
+  & > .#{$card-section-name} {
+    // Reapply background and foreground colors, so that mixins can be applied properly.
+    background: var(#{$card-back-color-var});
+    color: var(#{$card-fore-color-var});
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;        // Clean borders and radiuses for any element-based sections
+    border-radius: 0; // Clean borders and radiuses for any element-based sections
+    border-bottom: $__1px solid var(#{$card-border-color-var});
+    padding: var(#{$universal-padding-var});
+    width: 100%;
+    // Card media sections
+    &.#{$card-section-media-name} {
+      height: $card-section-media-height;
+      padding: 0;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+  }
+  // Card sections - last
+  & > .#{$card-section-name}:last-child {
+    border-bottom: 0;  // Clean the extra border for last section
+  }
 }

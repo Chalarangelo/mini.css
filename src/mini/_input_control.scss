@@ -27,7 +27,22 @@ $button-border-color-var:       '--button-border-color' !default;
 $button-hover-border-color-var: '--button-hover-border-color' !default;
 // Check the `_input_control_mixins.scss` file to find this module's mixins.
 @import 'input_control_mixins';
-// TODO: Add a mixin for the switches.
+// Necessary functions for certain elements (mainly the icon used for the checkbox)
+/// Courtesy of: https://css-tricks.com/snippets/sass/str-replace-function/
+/// -----------------------------------------------------------------------
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
 /* Input_control module CSS variable definitions */
 :root {
   #{$input-focus-color-var}: $input-focus-color;
@@ -119,7 +134,7 @@ label {
 }
 // Common textual input styling. - Avoid using box-shadow with these.
 input:not([type]), [type="text"], [type="email"], [type="number"], [type="search"],
-[type="password"], [type="url"], [type="tel"], textarea, select {
+[type="password"], [type="url"], [type="tel"], [type="checkbox"], [type="radio"], textarea, select {
   box-sizing: border-box;
   // Background, color and border should not be unassigned, as the browser defaults will apply.
   background: var(#{$back-color-var});
@@ -150,6 +165,43 @@ select {
 option {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+// Styling for checkboxes and radio buttons.
+[type="checkbox"], [type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  height: calc(1rem + var(#{$universal-padding-var}) / 2);
+  width: calc(1rem + var(#{$universal-padding-var}) / 2);
+  vertical-align: text-bottom;
+  padding: 0; // Remove padding added from previous styles.
+  flex-basis: 1.25rem !important; // Override fluid input-group styling.
+  flex-grow: 0 !important;  // Using with fluid input-groups is not recommended.
+  &:checked:before {
+    position: absolute;
+  }
+}
+[type="checkbox"] {
+  &:checked:before {
+    content: '\2713';
+    font-family: sans-serif;
+    font-size: calc(1rem + var(#{$universal-padding-var}) / 2);
+    top: calc(0rem - var(#{$universal-padding-var}));
+    left: calc(var(#{$universal-padding-var}) / 4);
+  }
+}
+[type="radio"] {
+  border-radius: 100%;
+  &:checked:before {
+    border-radius: 100%;
+    content: '';
+    top: calc(#{$__1px} + var(#{$universal-padding-var}) / 2);
+    left: calc(#{$__1px} + var(#{$universal-padding-var}) / 2);
+    background: $fore-color;
+    width: 0.5rem;
+    height: 0.5rem;
+  }
 }
 // Placeholder styling (keep browser-specific definitions separated, they do not play well together).
 :placeholder-shown {

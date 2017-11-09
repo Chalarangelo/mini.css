@@ -223,7 +223,7 @@ a:hover, a:focus {
 }
 
 /*
-  Definitions for the grid system.
+  Definitions for the grid system, cards and containers.
 */
 .container {
   margin: 0 auto;
@@ -588,6 +588,57 @@ a:hover, a:focus {
   .col-lg-last {
     order: 999;
   }
+}
+
+/* Card component CSS variable definitions */
+:root {
+  --card-back-color: #f8f8f8;
+  --card-fore-color: #111;
+  --card-border-color: #ddd;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  position: relative;
+  width: 100%;
+  background: var(--card-back-color);
+  color: var(--card-fore-color);
+  border: 0.0625rem solid var(--card-border-color);
+  border-radius: var(--universal-border-radius);
+  margin: var(--universal-margin);
+  overflow: hidden;
+}
+
+@media screen and (min-width: 320px) {
+  .card {
+    max-width: 320px;
+  }
+}
+
+.card > .section {
+  background: var(--card-back-color);
+  color: var(--card-fore-color);
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 0.0625rem solid var(--card-border-color);
+  padding: var(--universal-padding);
+  width: 100%;
+}
+
+.card > .section.media {
+  height: 200px;
+  padding: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.card > .section:last-child {
+  border-bottom: 0;
 }
 
 /*
@@ -1152,4 +1203,44 @@ p.splash {
 #doc-content {
   height: 100%;
   overflow-y: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .card.large {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 240px) {
+  .card.small {
+    max-width: 240px;
+  }
+}
+
+.card.fluid {
+  max-width: 100%;
+  width: auto;
+}
+
+.card.warning {
+  --card-back-color: #ffca28;
+  --card-border-color: #e8b825;
+}
+
+.card.error {
+  --card-back-color: #b71c1c;
+  --card-fore-color: #fafafa;
+  --card-border-color: #a71a1a;
+}
+
+.card > .section.dark {
+  --card-back-color: #e0e0e0;
+}
+
+.card > .section.darker {
+  --card-back-color: #bdbdbd;
+}
+
+.card > .section.double-padded {
+  padding: 0.75rem;
 }

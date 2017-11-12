@@ -9,6 +9,12 @@ $input-group-vertical-name:  'vertical' !default;     // Class name for vertical
 $input-group-mobile-breakpoint:   767px !default;     // Breakpoint for fluid input group mobile view.
 $button-class-name:           'button' !default;      // Class name for elements styled as buttons.
 $input-disabled-opacity:      0.75 !default;          // Opacity for input elements when disabled.
+$form-back-color:             #f0f0f0 !default;       // Background color for forms.
+$form-fore-color:             #111 !default;          // Text color for forms.
+$form-border-color:           #ddd !default;          // Border color for forms.
+$input-back-color:            #f8f8f8 !default;       // Background color for input elements.
+$input-fore-color:            #111 !default;          // Text color for input elements.
+$input-border-color:          #ddd !default;          // Border color for input elements.
 $input-focus-color:           #0288d1 !default;       // Border color for focused input elements.
 $input-invalid-color:         #d32f2f !default;       // Border color for invalid input elements.
 $button-back-color:           #e2e2e2 !default;       // Background color for buttons.
@@ -17,6 +23,12 @@ $button-fore-color:           #212121 !default;       // Text color for buttons.
 $button-border-color:         transparent !default;   // Border color for buttons.
 $button-hover-border-color:   transparent !default;   // Border color for buttons (hover).
 // CSS variable name definitions [exercise caution if modifying these]
+$form-back-color-var:         '--form-back-color' !default;
+$form-fore-color-var:         '--form-fore-color' !default;
+$form-border-color-var:       '--form-border-color' !default;
+$input-back-color-var:        '--input-back-color' !default;
+$input-fore-color-var:        '--input-fore-color' !default;
+$input-border-color-var:      '--input-border-color' !default;
 $input-focus-color-var:       '--input-focus-color' !default;
 $input-invalid-color-var:     '--input-invalid-color' !default;
 $button-back-color-var:       '--button-back-color' !default;
@@ -27,24 +39,14 @@ $button-border-color-var:       '--button-border-color' !default;
 $button-hover-border-color-var: '--button-hover-border-color' !default;
 // Check the `_input_control_mixins.scss` file to find this module's mixins.
 @import 'input_control_mixins';
-// Necessary functions for certain elements (mainly the icon used for the checkbox)
-/// Courtesy of: https://css-tricks.com/snippets/sass/str-replace-function/
-/// -----------------------------------------------------------------------
-/// Replace `$search` with `$replace` in `$string`
-/// @author Hugo Giraudel
-/// @param {String} $string - Initial string
-/// @param {String} $search - Substring to replace
-/// @param {String} $replace ('') - New value
-/// @return {String} - Updated string
-@function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-  @return $string;
-}
 /* Input_control module CSS variable definitions */
 :root {
+  #{$form-back-color-var}: $form-back-color;
+  #{$form-fore-color-var}: $form-fore-color;
+  #{$form-border-color-var}: $form-border-color;
+  #{$input-back-color-var}: $input-back-color;
+  #{$input-fore-color-var}: $input-fore-color;
+  #{$input-border-color-var}: $input-border-color;
   #{$input-focus-color-var}: $input-focus-color;
   #{$input-invalid-color-var}: $input-invalid-color;
   #{$button-back-color-var}: $button-back-color;
@@ -55,8 +57,9 @@ $button-hover-border-color-var: '--button-hover-border-color' !default;
 }
 // Base form styling
 form {  // Text color is the default, this can be changed manually.
-  background: var(#{$secondary-back-color-var});
-  border: $__1px solid var(#{$secondary-border-color-var});
+  background: var(#{$form-back-color-var});
+  color: var(#{$form-fore-color-var});
+  border: $__1px solid var(#{$form-border-color-var});
   border-radius: var(#{$universal-border-radius-var});
   margin: var(#{$universal-margin-var});
   padding: calc(2 * var(#{$universal-padding-var})) var(#{$universal-padding-var});
@@ -67,7 +70,7 @@ form {  // Text color is the default, this can be changed manually.
 // Fieldset styling
 fieldset {
   // Apply always to overwrite defaults for all of the below.
-  border: $__1px solid var(#{$secondary-border-color-var});
+  border: $__1px solid var(#{$form-border-color-var});
   border-radius: var(#{$universal-border-radius-var});
   margin: calc(var(#{$universal-margin-var}) / 4);
   padding: var(#{$universal-padding-var});
@@ -137,9 +140,9 @@ input:not([type]), [type="text"], [type="email"], [type="number"], [type="search
 [type="password"], [type="url"], [type="tel"], [type="checkbox"], [type="radio"], textarea, select {
   box-sizing: border-box;
   // Background, color and border should not be unassigned, as the browser defaults will apply.
-  background: var(#{$back-color-var});
-  color: var(#{$fore-color-var});
-  border: $__1px solid var(#{$secondary-border-color-var});
+  background: var(#{$input-back-color-var});
+  color: var(#{$input-fore-color-var});
+  border: $__1px solid var(#{$input-border-color-var});
   border-radius: var(#{$universal-border-radius-var});
   margin: calc(var(#{$universal-margin-var}) / 2);
   padding: var(#{$universal-padding-var}) calc(1.5 * var(#{$universal-padding-var}));
@@ -198,17 +201,17 @@ option {
     content: '';
     top: calc(#{$__1px} + var(#{$universal-padding-var}) / 2);
     left: calc(#{$__1px} + var(#{$universal-padding-var}) / 2);
-    background: $fore-color;
+    background: var(#{$input-fore-color-var});
     width: 0.5rem;
     height: 0.5rem;
   }
 }
 // Placeholder styling (keep browser-specific definitions separated, they do not play well together).
 :placeholder-shown {
-  color: var(#{$fore-color-var});
+  color: var(#{$input-fore-color-var});
 }
 ::-ms-placeholder {
-  color: var(#{$fore-color-var});
+  color: var(#{$input-fore-color-var});
   opacity: 0.54;
 }
 // Definitions for the button and button-like elements.

@@ -19,6 +19,7 @@ $footer-link-color:   #0277bd !default;      // Color for link in the footer ele
 $drawer-back-color:   #f8f8f8 !default;      // Background color for the drawer component.
 $drawer-border-color: #ddd !default;         // Border color for the drawer component.
 $drawer-hover-back-color: #f0f0f0 !default;  // Background color for the drawer component's close (hover).
+$drawer-close-color:  #444 !default;         // Color of the close element for the drawer component.
 $_header-only-bottom-border:  true !default; // [Hidden] Apply styling only to the bottom border of header? (boolean)
 $_header-links-uppercase:     true !default; // [Hidden] Should header links and buttons be uppercase? (boolean)
 $header-logo-name:    'logo' !default;       // Class name for the header logo element.
@@ -30,11 +31,13 @@ $footer-font-size:    0.875rem !default;     // Font size for text in footer ele
 $sticky-name:         'sticky' !default;     // Class name for sticky headers and footers.
 $drawer-name:         'drawer' !default;     // Class name for the drawer component.
 $drawer-toggle-name: 'drawer-toggle' !default; // Class name for the drawer component's toggle.
+$drawer-toggle-font-size: 1.5em !default;    // Font size for the drawer component's toggle. (prefer em units)
 $drawer-mobile-breakpoint: 768px !default;   // Mobile breakpoint for the drawer component.
 $_drawer-right:     true !default;           // [Hidden] Should the drawer appear on the right side of the screen?
 $drawer-persistent-name: 'persistent' !default; // Class name for the persisten variant of the drawer component.
 $drawer-width:      320px !default;          // Width of the drawer component.
 $drawer-close-name: 'drawer-close' !default; // Class name of the close element for the drawer component.
+$drawer-close-size: 2rem !default;           // Size of the close element for the drawer component.
 $drawer-icons-color:  #212121 !default;      // Color for the icons used in the drawer component.
 // CSS variable name definitions [exercise caution if modifying these]
 $header-fore-color-var:          '--header-fore-color' !default;
@@ -53,22 +56,7 @@ $footer-link-color-var:          '--footer-link-color' !default;
 $drawer-back-color-var:          '--drawer-back-color' !default;
 $drawer-border-color-var:        '--drawer-border-color' !default;
 $drawer-hover-back-color-var:    '--drawer-hover-back-color' !default;
-// Necessary functions for certain elements (mainly the icons used for the drawer)
-/// Courtesy of: https://css-tricks.com/snippets/sass/str-replace-function/
-/// -----------------------------------------------------------------------
-/// Replace `$search` with `$replace` in `$string`
-/// @author Hugo Giraudel
-/// @param {String} $string - Initial string
-/// @param {String} $search - Substring to replace
-/// @param {String} $replace ('') - New value
-/// @return {String} - Updated string
-@function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-  @return $string;
-}
+$drawer-close-color-var:         '--drawer-close-color' !default;
 /* Navigation module CSS variable definitions */
 :root {
   #{$header-back-color-var}: $header-back-color;
@@ -87,6 +75,7 @@ $drawer-hover-back-color-var:    '--drawer-hover-back-color' !default;
   #{$drawer-back-color-var}: $drawer-back-color;
   #{$drawer-hover-back-color-var}: $drawer-hover-back-color;
   #{$drawer-border-color-var}: $drawer-border-color;
+  #{$drawer-close-color-var}: $drawer-close-color;
 }
 // Header styling. - No box-shadow as it causes lots of weird bugs in Chrome. No margin as it shouldn't have any.
 header {
@@ -207,16 +196,14 @@ footer.#{$sticky-name} {
   bottom: 0;
 }
 // Responsive drawer component.
-
 .#{$drawer-toggle-name} {
-  &:before {
+  &:before {  // No color specified, should use the color of its surroundings!
     display: inline-block;
     position: relative;
-    width: 24px;
-    height: 24px;
-    vertical-align: text-top;
-    content: '';
-    background: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="'+str-replace(#{$drawer-icons-color}, '#', '%23')+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>') no-repeat;
+    vertical-align: bottom;
+    content: '\00a0\2261\00a0'; // Spaces ensure compatibility with buttons that have text and that textless buttons will have some extra padding.
+    font-family: sans-serif;
+    font-size: $drawer-toggle-font-size;   // Almost hardcoded, should be fully compatible with its surroundings.
   }
   @media screen and (min-width: #{$drawer-mobile-breakpoint}){
     &:not(.#{$drawer-persistent-name}) {
@@ -262,18 +249,22 @@ footer.#{$sticky-name} {
       top: var(#{$universal-margin-var});
       right: var(#{$universal-margin-var});
       z-index: 1111;
+      width: $drawer-close-size;
+      height: $drawer-close-size;
       border-radius: var(#{$universal-border-radius-var});
       padding: var(#{$universal-padding-var});
       margin: 0; // Fixes the offset from label
       cursor: pointer;
       transition: background 0.3s;
-      &:before {
+      &:before {    // Transparent background unless hovered over. Does not block text behind it.
         display: block;
-        background: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="'+str-replace(#{$drawer-icons-color}, '#', '%23')+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>') no-repeat;
-        content: '';
+        content: '\00D7';
+        color: var(#{$drawer-close-color-var});
         position: relative;
-        width: 24px;
-        height: 24px;
+        font-family: sans-serif;
+        font-size: $drawer-close-size;
+        line-height: 1;   // Setting to 1 seems to center the 'X' properly.
+        text-align: center;
       }
       &:hover, &:focus {
         background: var(#{$drawer-hover-back-color-var});

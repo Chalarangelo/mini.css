@@ -1,9 +1,11 @@
 # mini.css
+
 A minimal, responsive, style-agnostic CSS framework
 
 [![npm](https://img.shields.io/npm/v/mini.css.svg)](https://www.npmjs.com/package/mini.css)
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/Chalarangelo/mini.css/blob/master/LICENSE)
 [![website](https://img.shields.io/badge/website-online-green.svg)](https://chalarangelo.github.io/mini.css/)
+[![Gitter](https://img.shields.io/gitter/room/minicss/Lobby.svg)](https://gitter.im/minicss/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![Logo](/docs/page_thumb.png)
 

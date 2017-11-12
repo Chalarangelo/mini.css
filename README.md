@@ -1,4 +1,6 @@
 # mini.css
+
+[![Join the chat at https://gitter.im/minicss/Lobby](https://badges.gitter.im/minicss/Lobby.svg)](https://gitter.im/minicss/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A minimal, responsive, style-agnostic CSS framework
 
 [![npm](https://img.shields.io/npm/v/mini.css.svg)](https://www.npmjs.com/package/mini.css)

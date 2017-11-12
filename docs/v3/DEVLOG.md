@@ -132,8 +132,10 @@
 - Renamed `grid` to `layout`. It will now house the `card` module, too. This is done to make sure that cards are never used without the grid system, as they wouldn't work too well without it.
 - Fully implemented the `card` module into `layout`, gave me no trouble. It's fully operational and tested. Some color tweaking might be required, but everything is pretty much ready for deployment in the `layout` module.
 - Customized `checkbox` and `radio` input elements, they should work pretty much fine.
-- *TODO* Add variables to customize `input_control` further, except buttons. Add all missing values much like I have done in `layout` module.
+- *TODO* Add all missing values to modules much like I have done in `layout` module.
 
 ## 20171112
 
 - Updated `navigation` module to use Unicode symbols instead of icons. This will allow for more customization of the icons used in terms of color and alignment.
+- Modularized colorization of `form` and `input` elements, everything should now work fine by itself.
+- *TODO* Add button groups, deal with `checkbox` and `radio` sizing in a proper manner.

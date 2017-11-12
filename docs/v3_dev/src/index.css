@@ -646,6 +646,12 @@ a:hover, a:focus {
 */
 /* Input_control module CSS variable definitions */
 :root {
+  --form-back-color: #f0f0f0;
+  --form-fore-color: #111;
+  --form-border-color: #ddd;
+  --input-back-color: #f8f8f8;
+  --input-fore-color: #111;
+  --input-border-color: #ddd;
   --input-focus-color: #0288d1;
   --input-invalid-color: #d32f2f;
   --button-back-color: #e2e2e2;
@@ -656,15 +662,16 @@ a:hover, a:focus {
 }
 
 form {
-  background: var(--secondary-back-color);
-  border: 0.0625rem solid var(--secondary-border-color);
+  background: var(--form-back-color);
+  color: var(--form-fore-color);
+  border: 0.0625rem solid var(--form-border-color);
   border-radius: var(--universal-border-radius);
   margin: var(--universal-margin);
   padding: calc(2 * var(--universal-padding)) var(--universal-padding);
 }
 
 fieldset {
-  border: 0.0625rem solid var(--secondary-border-color);
+  border: 0.0625rem solid var(--form-border-color);
   border-radius: var(--universal-border-radius);
   margin: calc(var(--universal-margin) / 4);
   padding: var(--universal-padding);
@@ -733,9 +740,9 @@ label {
 input:not([type]), [type="text"], [type="email"], [type="number"], [type="search"],
 [type="password"], [type="url"], [type="tel"], [type="checkbox"], [type="radio"], textarea, select {
   box-sizing: border-box;
-  background: var(--back-color);
-  color: var(--fore-color);
-  border: 0.0625rem solid var(--secondary-border-color);
+  background: var(--input-back-color);
+  color: var(--input-fore-color);
+  border: 0.0625rem solid var(--input-border-color);
   border-radius: var(--universal-border-radius);
   margin: calc(var(--universal-margin) / 2);
   padding: var(--universal-padding) calc(1.5 * var(--universal-padding));
@@ -798,17 +805,17 @@ option {
   content: '';
   top: calc(0.0625rem + var(--universal-padding) / 2);
   left: calc(0.0625rem + var(--universal-padding) / 2);
-  background: #111;
+  background: var(--input-fore-color);
   width: 0.5rem;
   height: 0.5rem;
 }
 
 :placeholder-shown {
-  color: var(--fore-color);
+  color: var(--input-fore-color);
 }
 
 ::-ms-placeholder {
-  color: var(--fore-color);
+  color: var(--input-fore-color);
   opacity: 0.54;
 }
 

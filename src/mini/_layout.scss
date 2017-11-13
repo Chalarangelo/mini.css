@@ -31,10 +31,21 @@ $card-back-color-var:          '--card-back-color' !default;
 $card-border-color-var:        '--card-border-color' !default;
 // == Uncomment below code if this module is used on its own ==
 //
-// $universal-padding:       0.5rem !default;
-// $universal-padding-var:   '--universal-padding' !default;
+// $universal-margin:        0.5rem !default;      // Universal margin for the most elements
+// $universal-padding:       0.5rem !default;      // Universal padding for the most elements
+// $universal-border-radius: 0.125rem !default;    // Universal border-radius for most elements
+// $universal-box-shadow:    none !default;        // Universal box-shadow for most elements
+// $universal-margin-var:          '--universal-margin' !default;
+// $universal-padding-var:         '--universal-padding' !default;
+// $universal-border-radius-var:   '--universal-border-radius' !default;
+// $universal-box-shadow-var:      '--universal-box-shadow' !default;
 // :root {
-//   #{$universal-padding-var}: $universal-padding;
+//  #{$universal-margin-var}: $universal-margin;
+//  #{$universal-padding-var}: $universal-padding;
+//  #{$universal-border-radius-var}: $universal-border-radius;
+//  @if $universal-box-shadow != none {
+//   #{$universal-box-shadow-var}: $universal-box-shadow;
+//  }
 // }
 //
 // ============================================================
@@ -66,7 +77,6 @@ $card-border-color-var:        '--card-border-color' !default;
     // Grid column specific definition for flexible column.
     .#{$grid-column-prefix}-#{$size-prefix},
     .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$size-prefix} > *  {
-      // max-width: 100%; -- TODO: Are we certain we don't need this?
       flex-grow: 1;
       flex-basis: 0;
     }
@@ -81,7 +91,6 @@ $card-border-color-var:        '--card-border-color' !default;
     }
     // Grid column specific definition for flexible column.
     .#{$grid-column-prefix}-#{$size-prefix} {
-      // max-width: 100%; -- TODO: Are we certain we don't need this?
       flex-grow: 1;
       flex-basis: 0;
     }
@@ -122,7 +131,7 @@ $card-border-color-var:        '--card-border-color' !default;
 }
 // Definitions for smaller screens.
 @include generate-grid-size($grid-small-prefix);
-// Definitions for mediium screens.
+// Definitions for medium screens.
 @media screen and (min-width: #{$grid-medium-breakpoint}){
   @include generate-grid-size($grid-medium-prefix);
 }

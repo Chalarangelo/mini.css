@@ -30,10 +30,10 @@ $card-error-fore-color:        #f8f8f8;            // Text color for card error 
 $card-error-border-color:      #a71a1a;            // Border style for card error color variant.
 @include make-card-alt-color ($card-error-name, $card-error-back-color, $card-error-fore-color, $card-error-border-color);
 
-$card-section-special-name:        'special';      // Class name and background color for card special section variant.
-$card-section-special-back-color:  linear-gradient(135deg, #18FFFF 10%, #1565C0 100%);
-$card-section-special-fore-color:  #111;           // Text color for card special section variant.
-@include make-card-section-alt-color ($card-section-special-name, $card-section-special-back-color, $card-section-special-fore-color);
+$card-section-dark-name:        'dark';            // Class name and background color for card dark section variant.
+$card-section-dark-back-color:  linear-gradient(135deg, #eceff1 10%, #90a4ae 100%);
+$card-section-dark-fore-color:  #111;              // Text color for card dark section variant.
+@include make-card-section-alt-color ($card-section-dark-name, $card-section-dark-back-color, $card-section-dark-fore-color);
 
 $card-section-double-padded-name:    'double-padded';   // Class name for card double-padded section variant.
 $card-section-double-padded-padding:  calc(1.5 * var(#{$universal-padding-var}));  // Padding for card sectiondouble-padded section variant.

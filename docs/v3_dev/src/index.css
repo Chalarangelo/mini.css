@@ -642,6 +642,45 @@ a:hover, a:focus {
 }
 
 /*
+  Custom elements for card elements.
+*/
+@media screen and (min-width: 240px) {
+  .card.small {
+    max-width: 240px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .card.large {
+    max-width: 480px;
+  }
+}
+
+.card.fluid {
+  max-width: 100%;
+  width: auto;
+}
+
+.card.warning {
+  --card-back-color: #ffca28;
+  --card-border-color: #e8b825;
+}
+
+.card.error {
+  --card-back-color: #b71c1c;
+  --card-fore-color: #f8f8f8;
+  --card-border-color: #a71a1a;
+}
+
+.card > .section.dark {
+  --card-back-color: linear-gradient(135deg, #eceff1 10%, #90a4ae 100%);
+}
+
+.card > .section.double-padded {
+  padding: calc(1.5 * var(--universal-padding));
+}
+
+/*
   Definitions for forms and input elements.
 */
 /* Input_control module CSS variable definitions */
@@ -892,6 +931,55 @@ input:disabled, input[disabled], textarea:disabled, textarea[disabled], select:d
     border: 0;
     border-top: 0.0625rem solid var(--button-group-border-color);
   }
+}
+
+/*
+  Custom elements for forms and input elements.
+*/
+button.primary, [type="button"].primary, [type="submit"].primary, [type="reset"].primary, .button.primary, [role="button"].primary {
+  --button-back-color: #1976d2;
+  --button-fore-color: #f8f8f8;
+}
+
+button.primary:hover, button.primary:focus, [type="button"].primary:hover, [type="button"].primary:focus, [type="submit"].primary:hover, [type="submit"].primary:focus, [type="reset"].primary:hover, [type="reset"].primary:focus, .button.primary:hover, .button.primary:focus, [role="button"].primary:hover, [role="button"].primary:focus {
+  --button-hover-back-color: #1565c0;
+}
+
+button.secondary, [type="button"].secondary, [type="submit"].secondary, [type="reset"].secondary, .button.secondary, [role="button"].secondary {
+  --button-back-color: #d32f2f;
+  --button-fore-color: #f8f8f8;
+}
+
+button.secondary:hover, button.secondary:focus, [type="button"].secondary:hover, [type="button"].secondary:focus, [type="submit"].secondary:hover, [type="submit"].secondary:focus, [type="reset"].secondary:hover, [type="reset"].secondary:focus, .button.secondary:hover, .button.secondary:focus, [role="button"].secondary:hover, [role="button"].secondary:focus {
+  --button-hover-back-color: #c62828;
+}
+
+button.tertiary, [type="button"].tertiary, [type="submit"].tertiary, [type="reset"].tertiary, .button.tertiary, [role="button"].tertiary {
+  --button-back-color: #308732;
+  --button-fore-color: #f8f8f8;
+}
+
+button.tertiary:hover, button.tertiary:focus, [type="button"].tertiary:hover, [type="button"].tertiary:focus, [type="submit"].tertiary:hover, [type="submit"].tertiary:focus, [type="reset"].tertiary:hover, [type="reset"].tertiary:focus, .button.tertiary:hover, .button.tertiary:focus, [role="button"].tertiary:hover, [role="button"].tertiary:focus {
+  --button-hover-back-color: #277529;
+}
+
+button.inverse, [type="button"].inverse, [type="submit"].inverse, [type="reset"].inverse, .button.inverse, [role="button"].inverse {
+  --button-back-color: #212121;
+  --button-fore-color: #f8f8f8;
+}
+
+button.inverse:hover, button.inverse:focus, [type="button"].inverse:hover, [type="button"].inverse:focus, [type="submit"].inverse:hover, [type="submit"].inverse:focus, [type="reset"].inverse:hover, [type="reset"].inverse:focus, .button.inverse:hover, .button.inverse:focus, [role="button"].inverse:hover, [role="button"].inverse:focus {
+  --button-hover-back-color: #111;
+}
+
+button.small, [type="button"].small, [type="submit"].small, [type="reset"].small, .button.small, [role="button"].small {
+  padding: calc(0.5 * var(--universal-padding)) calc(0.75 * var(--universal-padding));
+  margin: var(--universal-margin);
+}
+
+button.large, [type="button"].large, [type="submit"].large, [type="reset"].large, .button.large, [role="button"].large {
+  padding: calc(1.5 * var(--universal-padding)) calc(2 * var(--universal-padding));
+  margin: var(--universal-margin);
 }
 
 /*
@@ -1285,44 +1373,4 @@ p.splash {
 #doc-content {
   height: 100%;
   overflow-y: auto;
-}
-
-@media screen and (min-width: 480px) {
-  .card.large {
-    max-width: 480px;
-  }
-}
-
-@media screen and (min-width: 240px) {
-  .card.small {
-    max-width: 240px;
-  }
-}
-
-.card.fluid {
-  max-width: 100%;
-  width: auto;
-}
-
-.card.warning {
-  --card-back-color: #ffca28;
-  --card-border-color: #e8b825;
-}
-
-.card.error {
-  --card-back-color: #b71c1c;
-  --card-fore-color: #fafafa;
-  --card-border-color: #a71a1a;
-}
-
-.card > .section.dark {
-  --card-back-color: #e0e0e0;
-}
-
-.card > .section.darker {
-  --card-back-color: #bdbdbd;
-}
-
-.card > .section.double-padded {
-  padding: 0.75rem;
 }

@@ -677,8 +677,8 @@ a:hover, a:focus {
   --card-border-color: #a71a1a;
 }
 
-.card > .section.special {
-  --card-back-color: linear-gradient(135deg, #18FFFF 10%, #1565C0 100%);
+.card > .section.dark {
+  --card-back-color: linear-gradient(135deg, #eceff1 10%, #90a4ae 100%);
 }
 
 .card > .section.double-padded {

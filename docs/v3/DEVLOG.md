@@ -142,3 +142,4 @@
 
 - Properly applied variable styling to `checkbox` and `radio` elements. They now use the `base-font-size` Sass variable to get their size, which makes sense.
 - Added `.button-group`s, they seem to behave properly, `border-color` could use some tweaking maybe.
+- Added external Sass variables to all modules (hopefully I didn't miss any), so that they can be used on their own now (not recommended, but doable).

@@ -57,6 +57,26 @@ $drawer-back-color-var:          '--drawer-back-color' !default;
 $drawer-border-color-var:        '--drawer-border-color' !default;
 $drawer-hover-back-color-var:    '--drawer-hover-back-color' !default;
 $drawer-close-color-var:         '--drawer-close-color' !default;
+// == Uncomment below code if this module is used on its own ==
+//
+// $universal-margin:        0.5rem !default;      // Universal margin for the most elements
+// $universal-padding:       0.5rem !default;      // Universal padding for the most elements
+// $universal-border-radius: 0.125rem !default;    // Universal border-radius for most elements
+// $universal-box-shadow:    none !default;        // Universal box-shadow for most elements
+// $universal-margin-var:          '--universal-margin' !default;
+// $universal-padding-var:         '--universal-padding' !default;
+// $universal-border-radius-var:   '--universal-border-radius' !default;
+// $universal-box-shadow-var:      '--universal-box-shadow' !default;
+// :root {
+//  #{$universal-margin-var}: $universal-margin;
+//  #{$universal-padding-var}: $universal-padding;
+//  #{$universal-border-radius-var}: $universal-border-radius;
+//  @if $universal-box-shadow != none {
+//   #{$universal-box-shadow-var}: $universal-box-shadow;
+//  }
+// }
+//
+// ============================================================
 /* Navigation module CSS variable definitions */
 :root {
   #{$header-back-color-var}: $header-back-color;

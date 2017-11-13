@@ -41,6 +41,27 @@ $button-hover-fore-color-var: '--button-hover-fore-color' !default;
 $button-border-color-var:       '--button-border-color' !default;
 $button-hover-border-color-var: '--button-hover-border-color' !default;
 $button-group-border-color-var: '--button-group-border-color' !default;
+// == Uncomment below code if this module is used on its own ==
+//
+// $base-font-size:          1rem !default;        // Font sizing for all elements
+// $universal-margin:        0.5rem !default;      // Universal margin for the most elements
+// $universal-padding:       0.5rem !default;      // Universal padding for the most elements
+// $universal-border-radius: 0.125rem !default;    // Universal border-radius for most elements
+// $universal-box-shadow:    none !default;        // Universal box-shadow for most elements
+// $universal-margin-var:          '--universal-margin' !default;
+// $universal-padding-var:         '--universal-padding' !default;
+// $universal-border-radius-var:   '--universal-border-radius' !default;
+// $universal-box-shadow-var:      '--universal-box-shadow' !default;
+// :root {
+//  #{$universal-margin-var}: $universal-margin;
+//  #{$universal-padding-var}: $universal-padding;
+//  #{$universal-border-radius-var}: $universal-border-radius;
+//  @if $universal-box-shadow != none {
+//   #{$universal-box-shadow-var}: $universal-box-shadow;
+//  }
+// }
+//
+// ============================================================
 // Check the `_input_control_mixins.scss` file to find this module's mixins.
 @import 'input_control_mixins';
 /* Input_control module CSS variable definitions */

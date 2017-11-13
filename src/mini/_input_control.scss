@@ -9,6 +9,8 @@ $input-group-vertical-name:  'vertical' !default;     // Class name for vertical
 $input-group-mobile-breakpoint:   767px !default;     // Breakpoint for fluid input group mobile view.
 $button-class-name:           'button' !default;      // Class name for elements styled as buttons.
 $input-disabled-opacity:      0.75 !default;          // Opacity for input elements when disabled.
+$button-group-name:         'button-group' !default;  // Class name for button groups.
+$button-group-mobile-breakpoint: 767px !default;      // Mobile breakpoint for button groups.
 $form-back-color:             #f0f0f0 !default;       // Background color for forms.
 $form-fore-color:             #111 !default;          // Text color for forms.
 $form-border-color:           #ddd !default;          // Border color for forms.
@@ -22,6 +24,7 @@ $button-hover-back-color:     #dcdcdc !default;       // Background color for bu
 $button-fore-color:           #212121 !default;       // Text color for buttons.
 $button-border-color:         transparent !default;   // Border color for buttons.
 $button-hover-border-color:   transparent !default;   // Border color for buttons (hover).
+$button-group-border-color:  rgba(124,124,124, 0.54) !default;  // Border color for button groups.
 // CSS variable name definitions [exercise caution if modifying these]
 $form-back-color-var:         '--form-back-color' !default;
 $form-fore-color-var:         '--form-fore-color' !default;
@@ -37,6 +40,7 @@ $button-fore-color-var:       '--button-fore-color' !default;
 $button-hover-fore-color-var: '--button-hover-fore-color' !default;
 $button-border-color-var:       '--button-border-color' !default;
 $button-hover-border-color-var: '--button-hover-border-color' !default;
+$button-group-border-color-var: '--button-group-border-color' !default;
 // Check the `_input_control_mixins.scss` file to find this module's mixins.
 @import 'input_control_mixins';
 /* Input_control module CSS variable definitions */
@@ -54,6 +58,7 @@ $button-hover-border-color-var: '--button-hover-border-color' !default;
   #{$button-fore-color-var}: $button-fore-color;
   #{$button-border-color-var}: $button-border-color;
   #{$button-hover-border-color-var}: $button-hover-border-color;
+  #{$button-group-border-color-var}: $button-group-border-color;
 }
 // Base form styling
 form {  // Text color is the default, this can be changed manually.
@@ -175,11 +180,11 @@ option {
   -moz-appearance: none;
   appearance: none;
   position: relative;
-  height: calc(1rem + var(#{$universal-padding-var}) / 2);
-  width: calc(1rem + var(#{$universal-padding-var}) / 2);
+  height: calc(#{$base-font-size} + var(#{$universal-padding-var}) / 2);
+  width: calc(#{$base-font-size} + var(#{$universal-padding-var}) / 2);
   vertical-align: text-bottom;
   padding: 0; // Remove padding added from previous styles.
-  flex-basis: 1.25rem !important; // Override fluid input-group styling.
+  flex-basis: calc(#{$base-font-size} + var(#{$universal-padding-var}) / 2) !important; // Override fluid input-group styling.
   flex-grow: 0 !important;  // Using with fluid input-groups is not recommended.
   &:checked:before {
     position: absolute;
@@ -189,7 +194,7 @@ option {
   &:checked:before {
     content: '\2713';
     font-family: sans-serif;
-    font-size: calc(1rem + var(#{$universal-padding-var}) / 2);
+    font-size: calc(#{$base-font-size} + var(#{$universal-padding-var}) / 2);
     top: calc(0rem - var(#{$universal-padding-var}));
     left: calc(var(#{$universal-padding-var}) / 4);
   }
@@ -255,5 +260,35 @@ input, textarea, select, button, .#{$button-class-name}, [role="button"] {
   &:disabled, &[disabled] {
     cursor: not-allowed;
     opacity: $input-disabled-opacity;
+  }
+}
+// Button group styling.
+.#{$button-group-name} {
+  display: flex;
+  border: $__1px solid var(#{$button-group-border-color-var});
+  border-radius: var(#{$universal-border-radius-var});
+  margin: var(#{$universal-margin-var});
+  @if $universal-box-shadow != none {
+    box-shadow: var(#{$universal-box-shadow-var});
+  }
+  & > button, [type="button"], & > [type="submit"], & > [type="reset"],
+  & > .#{$button-class-name}, & > [role="button"] {
+    margin: 0;
+    flex: 1 1 auto;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  & > :not(:first-child) {
+    border-left: $__1px solid var(#{$button-group-border-color-var});
+  }
+  // Responsiveness for button groups
+  @media screen and (max-width: #{$button-group-mobile-breakpoint}) {
+    flex-direction: column;
+    & > :not(:first-child) {
+      border: 0;    // Reapply to remove the left border from elements.
+      border-top: $__1px solid var(#{$button-group-border-color-var});
+    }
   }
 }

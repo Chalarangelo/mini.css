@@ -659,6 +659,7 @@ a:hover, a:focus {
   --button-fore-color: #212121;
   --button-border-color: transparent;
   --button-hover-border-color: transparent;
+  --button-group-border-color: rgba(124, 124, 124, 0.54);
 }
 
 form {
@@ -780,7 +781,7 @@ option {
   width: calc(1rem + var(--universal-padding) / 2);
   vertical-align: text-bottom;
   padding: 0;
-  flex-basis: 1.25rem !important;
+  flex-basis: calc(1rem + var(--universal-padding) / 2) !important;
   flex-grow: 0 !important;
 }
 
@@ -860,6 +861,37 @@ a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:focus, 
 input:disabled, input[disabled], textarea:disabled, textarea[disabled], select:disabled, select[disabled], button:disabled, button[disabled], .button:disabled, .button[disabled], [role="button"]:disabled, [role="button"][disabled] {
   cursor: not-allowed;
   opacity: 0.75;
+}
+
+.button-group {
+  display: flex;
+  border: 0.0625rem solid var(--button-group-border-color);
+  border-radius: var(--universal-border-radius);
+  margin: var(--universal-margin);
+}
+
+.button-group > button, .button-group [type="button"], .button-group > [type="submit"], .button-group > [type="reset"],
+.button-group > .button, .button-group > [role="button"] {
+  margin: 0;
+  flex: 1 1 auto;
+  text-align: center;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.button-group > :not(:first-child) {
+  border-left: 0.0625rem solid var(--button-group-border-color);
+}
+
+@media screen and (max-width: 767px) {
+  .button-group {
+    flex-direction: column;
+  }
+  .button-group > :not(:first-child) {
+    border: 0;
+    border-top: 0.0625rem solid var(--button-group-border-color);
+  }
 }
 
 /*

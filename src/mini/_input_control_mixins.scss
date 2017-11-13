@@ -13,20 +13,20 @@
     button, [type="button"], [type="submit"], [type="reset"], .#{$button-class-name}, [role="button"] {
       &.#{$button-alt-name} {
         @if $button-alt-back-color != $button-back-color {
-          background: var(#{$button-alt-back-color-var});
+          #{$button-back-color-var}: $button-alt-back-color;
         }
         @if $button-alt-fore-color != $button-fore-color{
-          color: var(#{$button-alt-fore-color-var});
+          #{$button-fore-color-var}: $button-alt-fore-color;
         }
         @if $button-alt-border-color != $button-border-color{
-          border-color: var(#{$button-alt-border-color-var});
+          #{$button-border-color-var}: $button-alt-border-color;
         }
         &:hover, &:focus {
           @if $button-alt-hover-back-color != $button-hover-back-color{
-            background: var(#{$button-alt-hover-back-color-var});
+            #{$button-hover-back-color-var}: $button-alt-hover-back-color;
           }
           @if $button-alt-hover-border-color != $button-hover-border-color{
-            border-color: var(#{$button-alt-hover-border-color-var});
+            #{$button-hover-border-color-var}: $button-alt-hover-border-color;
           }
         }
       }

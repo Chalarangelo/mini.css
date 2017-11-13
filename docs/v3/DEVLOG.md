@@ -143,3 +143,8 @@
 - Properly applied variable styling to `checkbox` and `radio` elements. They now use the `base-font-size` Sass variable to get their size, which makes sense.
 - Added `.button-group`s, they seem to behave properly, `border-color` could use some tweaking maybe.
 - Added external Sass variables to all modules (hopefully I didn't miss any), so that they can be used on their own now (not recommended, but doable).
+- Updated color palettes that should have better contrasts (slight deviation from the old ones, but this might change before release).
+- Added all necessary variants for `.button`-like elements.
+- Added custom styles necessary for `.card` elements.
+- After compilation of the completed modules, the size is `4.58KB`, whereas the size of the **Fermion** branch with the same things (meaning the switches and other ditched components were not included) was `4.56KB`. This is unbelievable and makes the **hugging cat** really happy.
+- Recompiled the `mini-default` flavor files. They should be mostly ready for release by now.

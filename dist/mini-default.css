@@ -228,7 +228,7 @@ a:hover, a:focus {
 }
 
 /*
-  Definitions for the grid system.
+  Definitions for the grid system, cards and containers.
 */
 .container {
   margin: 0 auto;
@@ -595,11 +595,107 @@ a:hover, a:focus {
   }
 }
 
+/* Card component CSS variable definitions */
+:root {
+  --card-back-color: #f8f8f8;
+  --card-fore-color: #111;
+  --card-border-color: #ddd;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  position: relative;
+  width: 100%;
+  background: var(--card-back-color);
+  color: var(--card-fore-color);
+  border: 0.0625rem solid var(--card-border-color);
+  border-radius: var(--universal-border-radius);
+  margin: var(--universal-margin);
+  overflow: hidden;
+}
+
+@media screen and (min-width: 320px) {
+  .card {
+    max-width: 320px;
+  }
+}
+
+.card > .section {
+  background: var(--card-back-color);
+  color: var(--card-fore-color);
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 0.0625rem solid var(--card-border-color);
+  padding: var(--universal-padding);
+  width: 100%;
+}
+
+.card > .section.media {
+  height: 200px;
+  padding: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.card > .section:last-child {
+  border-bottom: 0;
+}
+
+/*
+  Custom elements for card elements.
+*/
+@media screen and (min-width: 240px) {
+  .card.small {
+    max-width: 240px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .card.large {
+    max-width: 480px;
+  }
+}
+
+.card.fluid {
+  max-width: 100%;
+  width: auto;
+}
+
+.card.warning {
+  --card-back-color: #ffca28;
+  --card-border-color: #e8b825;
+}
+
+.card.error {
+  --card-back-color: #b71c1c;
+  --card-fore-color: #f8f8f8;
+  --card-border-color: #a71a1a;
+}
+
+.card > .section.special {
+  --card-back-color: linear-gradient(135deg, #18FFFF 10%, #1565C0 100%);
+}
+
+.card > .section.double-padded {
+  padding: calc(1.5 * var(--universal-padding));
+}
+
 /*
   Definitions for forms and input elements.
 */
 /* Input_control module CSS variable definitions */
 :root {
+  --form-back-color: #f0f0f0;
+  --form-fore-color: #111;
+  --form-border-color: #ddd;
+  --input-back-color: #f8f8f8;
+  --input-fore-color: #111;
+  --input-border-color: #ddd;
   --input-focus-color: #0288d1;
   --input-invalid-color: #d32f2f;
   --button-back-color: #e2e2e2;
@@ -607,18 +703,20 @@ a:hover, a:focus {
   --button-fore-color: #212121;
   --button-border-color: transparent;
   --button-hover-border-color: transparent;
+  --button-group-border-color: rgba(124, 124, 124, 0.54);
 }
 
 form {
-  background: var(--secondary-back-color);
-  border: 0.0625rem solid var(--secondary-border-color);
+  background: var(--form-back-color);
+  color: var(--form-fore-color);
+  border: 0.0625rem solid var(--form-border-color);
   border-radius: var(--universal-border-radius);
   margin: var(--universal-margin);
   padding: calc(2 * var(--universal-padding)) var(--universal-padding);
 }
 
 fieldset {
-  border: 0.0625rem solid var(--secondary-border-color);
+  border: 0.0625rem solid var(--form-border-color);
   border-radius: var(--universal-border-radius);
   margin: calc(var(--universal-margin) / 4);
   padding: var(--universal-padding);
@@ -685,11 +783,11 @@ label {
 }
 
 input:not([type]), [type="text"], [type="email"], [type="number"], [type="search"],
-[type="password"], [type="url"], [type="tel"], textarea, select {
+[type="password"], [type="url"], [type="tel"], [type="checkbox"], [type="radio"], textarea, select {
   box-sizing: border-box;
-  background: var(--back-color);
-  color: var(--fore-color);
-  border: 0.0625rem solid var(--secondary-border-color);
+  background: var(--input-back-color);
+  color: var(--input-fore-color);
+  border: 0.0625rem solid var(--input-border-color);
   border-radius: var(--universal-border-radius);
   margin: calc(var(--universal-margin) / 2);
   padding: var(--universal-padding) calc(1.5 * var(--universal-padding));
@@ -718,12 +816,51 @@ option {
   text-overflow: ellipsis;
 }
 
+[type="checkbox"], [type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  height: calc(1rem + var(--universal-padding) / 2);
+  width: calc(1rem + var(--universal-padding) / 2);
+  vertical-align: text-bottom;
+  padding: 0;
+  flex-basis: calc(1rem + var(--universal-padding) / 2) !important;
+  flex-grow: 0 !important;
+}
+
+[type="checkbox"]:checked:before, [type="radio"]:checked:before {
+  position: absolute;
+}
+
+[type="checkbox"]:checked:before {
+  content: '\2713';
+  font-family: sans-serif;
+  font-size: calc(1rem + var(--universal-padding) / 2);
+  top: calc(0rem - var(--universal-padding));
+  left: calc(var(--universal-padding) / 4);
+}
+
+[type="radio"] {
+  border-radius: 100%;
+}
+
+[type="radio"]:checked:before {
+  border-radius: 100%;
+  content: '';
+  top: calc(0.0625rem + var(--universal-padding) / 2);
+  left: calc(0.0625rem + var(--universal-padding) / 2);
+  background: var(--input-fore-color);
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
 :placeholder-shown {
-  color: var(--fore-color);
+  color: var(--input-fore-color);
 }
 
 ::-ms-placeholder {
-  color: var(--fore-color);
+  color: var(--input-fore-color);
   opacity: 0.54;
 }
 
@@ -770,6 +907,86 @@ input:disabled, input[disabled], textarea:disabled, textarea[disabled], select:d
   opacity: 0.75;
 }
 
+.button-group {
+  display: flex;
+  border: 0.0625rem solid var(--button-group-border-color);
+  border-radius: var(--universal-border-radius);
+  margin: var(--universal-margin);
+}
+
+.button-group > button, .button-group [type="button"], .button-group > [type="submit"], .button-group > [type="reset"],
+.button-group > .button, .button-group > [role="button"] {
+  margin: 0;
+  flex: 1 1 auto;
+  text-align: center;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.button-group > :not(:first-child) {
+  border-left: 0.0625rem solid var(--button-group-border-color);
+}
+
+@media screen and (max-width: 767px) {
+  .button-group {
+    flex-direction: column;
+  }
+  .button-group > :not(:first-child) {
+    border: 0;
+    border-top: 0.0625rem solid var(--button-group-border-color);
+  }
+}
+
+/*
+  Custom elements for forms and input elements.
+*/
+button.primary, [type="button"].primary, [type="submit"].primary, [type="reset"].primary, .button.primary, [role="button"].primary {
+  --button-back-color: #1976d2;
+  --button-fore-color: #f8f8f8;
+}
+
+button.primary:hover, button.primary:focus, [type="button"].primary:hover, [type="button"].primary:focus, [type="submit"].primary:hover, [type="submit"].primary:focus, [type="reset"].primary:hover, [type="reset"].primary:focus, .button.primary:hover, .button.primary:focus, [role="button"].primary:hover, [role="button"].primary:focus {
+  --button-hover-back-color: #1565c0;
+}
+
+button.secondary, [type="button"].secondary, [type="submit"].secondary, [type="reset"].secondary, .button.secondary, [role="button"].secondary {
+  --button-back-color: #d32f2f;
+  --button-fore-color: #f8f8f8;
+}
+
+button.secondary:hover, button.secondary:focus, [type="button"].secondary:hover, [type="button"].secondary:focus, [type="submit"].secondary:hover, [type="submit"].secondary:focus, [type="reset"].secondary:hover, [type="reset"].secondary:focus, .button.secondary:hover, .button.secondary:focus, [role="button"].secondary:hover, [role="button"].secondary:focus {
+  --button-hover-back-color: #c62828;
+}
+
+button.tertiary, [type="button"].tertiary, [type="submit"].tertiary, [type="reset"].tertiary, .button.tertiary, [role="button"].tertiary {
+  --button-back-color: #308732;
+  --button-fore-color: #f8f8f8;
+}
+
+button.tertiary:hover, button.tertiary:focus, [type="button"].tertiary:hover, [type="button"].tertiary:focus, [type="submit"].tertiary:hover, [type="submit"].tertiary:focus, [type="reset"].tertiary:hover, [type="reset"].tertiary:focus, .button.tertiary:hover, .button.tertiary:focus, [role="button"].tertiary:hover, [role="button"].tertiary:focus {
+  --button-hover-back-color: #277529;
+}
+
+button.inverse, [type="button"].inverse, [type="submit"].inverse, [type="reset"].inverse, .button.inverse, [role="button"].inverse {
+  --button-back-color: #212121;
+  --button-fore-color: #f8f8f8;
+}
+
+button.inverse:hover, button.inverse:focus, [type="button"].inverse:hover, [type="button"].inverse:focus, [type="submit"].inverse:hover, [type="submit"].inverse:focus, [type="reset"].inverse:hover, [type="reset"].inverse:focus, .button.inverse:hover, .button.inverse:focus, [role="button"].inverse:hover, [role="button"].inverse:focus {
+  --button-hover-back-color: #111;
+}
+
+button.small, [type="button"].small, [type="submit"].small, [type="reset"].small, .button.small, [role="button"].small {
+  padding: calc(0.5 * var(--universal-padding)) calc(0.75 * var(--universal-padding));
+  margin: var(--universal-margin);
+}
+
+button.large, [type="button"].large, [type="submit"].large, [type="reset"].large, .button.large, [role="button"].large {
+  padding: calc(1.5 * var(--universal-padding)) calc(2 * var(--universal-padding));
+  margin: var(--universal-margin);
+}
+
 /*
   Definitions for navigation elements.
 */
@@ -791,6 +1008,7 @@ input:disabled, input[disabled], textarea:disabled, textarea[disabled], select:d
   --drawer-back-color: #f8f8f8;
   --drawer-hover-back-color: #f0f0f0;
   --drawer-border-color: #ddd;
+  --drawer-close-color: #444;
 }
 
 header {
@@ -917,11 +1135,10 @@ footer.sticky {
 .drawer-toggle:before {
   display: inline-block;
   position: relative;
-  width: 24px;
-  height: 24px;
-  vertical-align: text-top;
-  content: '';
-  background: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>') no-repeat;
+  vertical-align: bottom;
+  content: '\00a0\2261\00a0';
+  font-family: sans-serif;
+  font-size: 1.5em;
 }
 
 @media screen and (min-width: 768px) {
@@ -963,6 +1180,8 @@ footer.sticky {
   top: var(--universal-margin);
   right: var(--universal-margin);
   z-index: 1111;
+  width: 2rem;
+  height: 2rem;
   border-radius: var(--universal-border-radius);
   padding: var(--universal-padding);
   margin: 0;
@@ -972,11 +1191,13 @@ footer.sticky {
 
 [type="checkbox"].drawer + * .drawer-close:before {
   display: block;
-  background: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>') no-repeat;
-  content: '';
+  content: '\00D7';
+  color: var(--drawer-close-color);
   position: relative;
-  width: 24px;
-  height: 24px;
+  font-family: sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  text-align: center;
 }
 
 [type="checkbox"].drawer + * .drawer-close:hover, [type="checkbox"].drawer + * .drawer-close:focus {

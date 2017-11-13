@@ -2,7 +2,82 @@
 
 @import '../mini/core';
 @import '../mini/layout';
+
+/*
+  Custom elements for card elements.
+*/
+$card-small-name:              'small';            // Class name for small cards.
+$card-small-width:             240px;              // Width for small cards.
+@include make-card-alt-size ($card-small-name, $card-small-width);
+
+$card-large-name:              'large';            // Class name for large cards.
+$card-large-width:             480px;              // Width for large cards.
+@include make-card-alt-size ($card-large-name, $card-large-width);
+
+$card-fluid-name:              'fluid';            // Class name for fluid cards.
+$card-fluid-width:             100%;               // Width for fluid cards.
+@include make-card-alt-size ($card-fluid-name, $card-fluid-width);
+
+$card-warning-name:            'warning';          // Class name for card warnging color variant.
+$card-warning-back-color:      #ffca28;            // Background color for card warnging color variant.
+$card-warning-fore-color:      #111;               // Text color for card warnging color variant.
+$card-warning-border-color:    #e8b825;            // Border style for card warnging color variant.
+@include make-card-alt-color ($card-warning-name, $card-warning-back-color, $card-warning-fore-color, $card-warning-border-color);
+
+$card-error-name:              'error';            // Class name for card error color variant.
+$card-error-back-color:        #b71c1c;            // Background color for card error color variant.
+$card-error-fore-color:        #f8f8f8;            // Text color for card error color variant.
+$card-error-border-color:      #a71a1a;            // Border style for card error color variant.
+@include make-card-alt-color ($card-error-name, $card-error-back-color, $card-error-fore-color, $card-error-border-color);
+
+$card-section-special-name:        'special';      // Class name and background color for card special section variant.
+$card-section-special-back-color:  linear-gradient(135deg, #18FFFF 10%, #1565C0 100%);
+$card-section-special-fore-color:  #111;           // Text color for card special section variant.
+@include make-card-section-alt-color ($card-section-special-name, $card-section-special-back-color, $card-section-special-fore-color);
+
+$card-section-double-padded-name:    'double-padded';   // Class name for card double-padded section variant.
+$card-section-double-padded-padding:  calc(1.5 * var(#{$universal-padding-var}));  // Padding for card sectiondouble-padded section variant.
+@include make-card-section-alt-style ($card-section-double-padded-name, $card-section-double-padded-padding);
+
 @import '../mini/input_control';
+
+/*
+  Custom elements for forms and input elements.
+*/
+$button-primary-name:            'primary';   // Class name for primary button color variant.
+$button-primary-back-color:      #1976d2;     // Background color for primary button color variant.
+$button-primary-hover-back-color:#1565c0;     // Background color for primary button color variant (hover).
+$button-primary-fore-color:      #f8f8f8;     // Text color for primary button color variant.
+@include make-button-alt-color ($button-primary-name, $button-primary-back-color, $button-primary-hover-back-color, $button-primary-fore-color);
+
+$button-secondary-name:            'secondary'; // Class name for secondary button color variant.
+$button-secondary-back-color:      #d32f2f;     // Background color for secondary button color variant.
+$button-secondary-hover-back-color:#c62828;     // Background color for secondary button color variant (hover).
+$button-secondary-fore-color:      #f8f8f8;     // Text color for secondary button color variant.
+@include make-button-alt-color ($button-secondary-name, $button-secondary-back-color, $button-secondary-hover-back-color, $button-secondary-fore-color);
+
+$button-tertiary-name:            'tertiary';  // Class name for tertiary button color variant.
+$button-tertiary-back-color:      #308732;     // Background color for tertiary button color variant.
+$button-tertiary-hover-back-color:#277529;     // Background color for tertiary button color variant (hover).
+$button-tertiary-fore-color:      #f8f8f8;     // Text color for tertiary button color variant.
+@include make-button-alt-color ($button-tertiary-name, $button-tertiary-back-color, $button-tertiary-hover-back-color, $button-tertiary-fore-color);
+
+$button-inverse-name:            'inverse';   // Class name for inverse button color variant.
+$button-inverse-back-color:      #212121;     // Background color for inverse button color variant.
+$button-inverse-hover-back-color:#111;        // Background color for inverse button color variant (hover).
+$button-inverse-fore-color:      #f8f8f8;     // Text color for inverse button color variant.
+@include make-button-alt-color ($button-inverse-name, $button-inverse-back-color, $button-inverse-hover-back-color, $button-inverse-fore-color);
+
+$button-small-name:    'small';              // Class name, padding and margin for small button size variant.
+$button-small-padding: calc(0.5 * var(#{$universal-padding-var})) calc(0.75 * var(#{$universal-padding-var}));
+$button-small-margin:  var(#{$universal-margin-var});
+@include make-button-alt-size ($button-small-name, $button-small-padding, $button-small-margin);
+
+$button-large-name:    'large';              // Class name, padding and margin for large button size variant.
+$button-large-padding: calc(1.5 * var(#{$universal-padding-var})) calc(2 * var(#{$universal-padding-var}));
+$button-large-margin:  var(#{$universal-margin-var});
+@include make-button-alt-size ($button-large-name, $button-large-padding, $button-large-margin);
+
 @import '../mini/navigation';
 
 :not(.doc) {
@@ -149,34 +224,3 @@ p.splash {
   height: 100%;
   overflow-y: auto;
 }
-
-$card-size1-name:              'large';            // Class name for large cards
-$card-size1-width:             480px;              // Width for large cards
-$card-size2-name:              'small';            // Class name for small cards
-$card-size2-width:             240px;              // Width for small cards
-$card-size3-name:              'fluid';            // Class name for fluid cards
-$card-size3-width:             100%;               // Width for fluid cards
-$card-style1-name:             'warning';          // Class name for card style 1
-$card-style1-back-color:       #ffca28;            // Background color for card style 1
-$card-style1-fore-color:       #111;               // Text color for card style 1
-$card-style1-border-color:     #e8b825;            // Border style for card style 1
-$card-style2-name:             'error';            // Class name for card style 2
-$card-style2-back-color:       #b71c1c;            // Background color for card style 2
-$card-style2-fore-color:       #fafafa;            // Text color for card style 2
-$card-style2-border-color:     #a71a1a;            // Border style for card style 2
-$card-section-style1-name:        'dark';          // Class name for card section style 1
-$card-section-style1-back-color:  #e0e0e0;         // Background color for card section style 1
-$card-section-style1-fore-color:  #111;            // Text color for card section style 1
-$card-section-style2-name:        'darker';        // Class name for card section style 2
-$card-section-style2-back-color:  #bdbdbd;         // Background color for card section style 2
-$card-section-style2-fore-color:  #111;            // Text color for card section style 2
-$card-section-padding1-name:    'double-padded';   // Class name for card section padding style 1
-$card-section-padding1-padding:  0.75rem;          // Padding for card section padding style 1
-@include make-card-alt-size ($card-size1-name, $card-size1-width);
-@include make-card-alt-size ($card-size2-name, $card-size2-width);
-@include make-card-alt-size ($card-size3-name, $card-size3-width);
-@include make-card-alt-color ($card-style1-name, $card-style1-back-color, $card-style1-fore-color, $card-style1-border-color);
-@include make-card-alt-color ($card-style2-name, $card-style2-back-color, $card-style2-fore-color, $card-style2-border-color);
-@include make-card-section-alt-color ($card-section-style1-name, $card-section-style1-back-color, $card-section-style1-fore-color);
-@include make-card-section-alt-color ($card-section-style2-name, $card-section-style2-back-color, $card-section-style2-fore-color);
-@include make-card-section-alt-style ($card-section-padding1-name, $card-section-padding1-padding);

@@ -7,7 +7,8 @@
     "lib": "src/mini"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-docs": "node ./docs/build-docs.js"
   },
   "repository": {
     "type": "git",

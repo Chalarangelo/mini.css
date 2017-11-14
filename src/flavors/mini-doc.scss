@@ -93,7 +93,7 @@ code:not(.doc), kbd:not(.doc), pre:not(.doc), samp:not(.doc) {
   height: 100vh;
 }
 .index-splash-image {
-  background-image: url('%PUBLIC_URL%/index-splash.jpg');
+  background-image: url('./index-splash.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -223,4 +223,28 @@ p.splash {
 #doc-content {
   height: 100%;
   overflow-y: auto;
+}
+
+[type="checkbox"].drawer:not(.persistent) + nav {
+  border-top: 0;
+}
+
+
+// TODO: Actually add from framework when utility is done.
+@media screen and (max-width: 767px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hidden-lg {
+    display: none !important;
+  }
 }

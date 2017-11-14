@@ -101,11 +101,13 @@ $card-border-color-var:        '--card-border-color' !default;
       .#{$grid-column-prefix}-#{$size-prefix}-#{$i},
       .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$size-prefix}-#{$i} > * {
         flex-basis: #{($i * 100% / $grid-column-count)};
+        max-width: #{($i * 100% / $grid-column-count)};
       }
     }
     @else {
       .#{$grid-column-prefix}-#{$size-prefix}-#{$i} {
         flex-basis: #{($i * 100% / $grid-column-count)};
+        max-width: #{($i * 100% / $grid-column-count)};
       }
     }
     // Offest definitions.

@@ -1,9 +1,6 @@
-export default const doNotUseThisThisIsJustATemplateForHowToMakeDocumentationFragments = {
+module.exports = {
   id: '',
-  alphaId: '',
-  moduleId: '',
   title: '',
-  tag: '',
   keywords: [],
   description: '',
   example: '',
@@ -12,7 +9,7 @@ export default const doNotUseThisThisIsJustATemplateForHowToMakeDocumentationFra
   customization: [],
   modifiers: [],
   dos: [],
-  donts: [],
+  donts: []
 }
 
 /*

@@ -260,6 +260,7 @@ a:hover, a:focus {
 .col-sm-1,
 .row.cols-sm-1 > * {
   flex-basis: 8.33333%;
+  max-width: 8.33333%;
 }
 
 .col-sm-offset-0 {
@@ -269,6 +270,7 @@ a:hover, a:focus {
 .col-sm-2,
 .row.cols-sm-2 > * {
   flex-basis: 16.66667%;
+  max-width: 16.66667%;
 }
 
 .col-sm-offset-1 {
@@ -278,6 +280,7 @@ a:hover, a:focus {
 .col-sm-3,
 .row.cols-sm-3 > * {
   flex-basis: 25%;
+  max-width: 25%;
 }
 
 .col-sm-offset-2 {
@@ -287,6 +290,7 @@ a:hover, a:focus {
 .col-sm-4,
 .row.cols-sm-4 > * {
   flex-basis: 33.33333%;
+  max-width: 33.33333%;
 }
 
 .col-sm-offset-3 {
@@ -296,6 +300,7 @@ a:hover, a:focus {
 .col-sm-5,
 .row.cols-sm-5 > * {
   flex-basis: 41.66667%;
+  max-width: 41.66667%;
 }
 
 .col-sm-offset-4 {
@@ -305,6 +310,7 @@ a:hover, a:focus {
 .col-sm-6,
 .row.cols-sm-6 > * {
   flex-basis: 50%;
+  max-width: 50%;
 }
 
 .col-sm-offset-5 {
@@ -314,6 +320,7 @@ a:hover, a:focus {
 .col-sm-7,
 .row.cols-sm-7 > * {
   flex-basis: 58.33333%;
+  max-width: 58.33333%;
 }
 
 .col-sm-offset-6 {
@@ -323,6 +330,7 @@ a:hover, a:focus {
 .col-sm-8,
 .row.cols-sm-8 > * {
   flex-basis: 66.66667%;
+  max-width: 66.66667%;
 }
 
 .col-sm-offset-7 {
@@ -332,6 +340,7 @@ a:hover, a:focus {
 .col-sm-9,
 .row.cols-sm-9 > * {
   flex-basis: 75%;
+  max-width: 75%;
 }
 
 .col-sm-offset-8 {
@@ -341,6 +350,7 @@ a:hover, a:focus {
 .col-sm-10,
 .row.cols-sm-10 > * {
   flex-basis: 83.33333%;
+  max-width: 83.33333%;
 }
 
 .col-sm-offset-9 {
@@ -350,6 +360,7 @@ a:hover, a:focus {
 .col-sm-11,
 .row.cols-sm-11 > * {
   flex-basis: 91.66667%;
+  max-width: 91.66667%;
 }
 
 .col-sm-offset-10 {
@@ -359,6 +370,7 @@ a:hover, a:focus {
 .col-sm-12,
 .row.cols-sm-12 > * {
   flex-basis: 100%;
+  max-width: 100%;
 }
 
 .col-sm-offset-11 {
@@ -394,6 +406,7 @@ a:hover, a:focus {
   .col-md-1,
   .row.cols-md-1 > * {
     flex-basis: 8.33333%;
+    max-width: 8.33333%;
   }
   .col-md-offset-0 {
     margin-left: 0;
@@ -401,6 +414,7 @@ a:hover, a:focus {
   .col-md-2,
   .row.cols-md-2 > * {
     flex-basis: 16.66667%;
+    max-width: 16.66667%;
   }
   .col-md-offset-1 {
     margin-left: 8.33333%;
@@ -408,6 +422,7 @@ a:hover, a:focus {
   .col-md-3,
   .row.cols-md-3 > * {
     flex-basis: 25%;
+    max-width: 25%;
   }
   .col-md-offset-2 {
     margin-left: 16.66667%;
@@ -415,6 +430,7 @@ a:hover, a:focus {
   .col-md-4,
   .row.cols-md-4 > * {
     flex-basis: 33.33333%;
+    max-width: 33.33333%;
   }
   .col-md-offset-3 {
     margin-left: 25%;
@@ -422,6 +438,7 @@ a:hover, a:focus {
   .col-md-5,
   .row.cols-md-5 > * {
     flex-basis: 41.66667%;
+    max-width: 41.66667%;
   }
   .col-md-offset-4 {
     margin-left: 33.33333%;
@@ -429,6 +446,7 @@ a:hover, a:focus {
   .col-md-6,
   .row.cols-md-6 > * {
     flex-basis: 50%;
+    max-width: 50%;
   }
   .col-md-offset-5 {
     margin-left: 41.66667%;
@@ -436,6 +454,7 @@ a:hover, a:focus {
   .col-md-7,
   .row.cols-md-7 > * {
     flex-basis: 58.33333%;
+    max-width: 58.33333%;
   }
   .col-md-offset-6 {
     margin-left: 50%;
@@ -443,6 +462,7 @@ a:hover, a:focus {
   .col-md-8,
   .row.cols-md-8 > * {
     flex-basis: 66.66667%;
+    max-width: 66.66667%;
   }
   .col-md-offset-7 {
     margin-left: 58.33333%;
@@ -450,6 +470,7 @@ a:hover, a:focus {
   .col-md-9,
   .row.cols-md-9 > * {
     flex-basis: 75%;
+    max-width: 75%;
   }
   .col-md-offset-8 {
     margin-left: 66.66667%;
@@ -457,6 +478,7 @@ a:hover, a:focus {
   .col-md-10,
   .row.cols-md-10 > * {
     flex-basis: 83.33333%;
+    max-width: 83.33333%;
   }
   .col-md-offset-9 {
     margin-left: 75%;
@@ -464,6 +486,7 @@ a:hover, a:focus {
   .col-md-11,
   .row.cols-md-11 > * {
     flex-basis: 91.66667%;
+    max-width: 91.66667%;
   }
   .col-md-offset-10 {
     margin-left: 83.33333%;
@@ -471,6 +494,7 @@ a:hover, a:focus {
   .col-md-12,
   .row.cols-md-12 > * {
     flex-basis: 100%;
+    max-width: 100%;
   }
   .col-md-offset-11 {
     margin-left: 91.66667%;
@@ -503,6 +527,7 @@ a:hover, a:focus {
   .col-lg-1,
   .row.cols-lg-1 > * {
     flex-basis: 8.33333%;
+    max-width: 8.33333%;
   }
   .col-lg-offset-0 {
     margin-left: 0;
@@ -510,6 +535,7 @@ a:hover, a:focus {
   .col-lg-2,
   .row.cols-lg-2 > * {
     flex-basis: 16.66667%;
+    max-width: 16.66667%;
   }
   .col-lg-offset-1 {
     margin-left: 8.33333%;
@@ -517,6 +543,7 @@ a:hover, a:focus {
   .col-lg-3,
   .row.cols-lg-3 > * {
     flex-basis: 25%;
+    max-width: 25%;
   }
   .col-lg-offset-2 {
     margin-left: 16.66667%;
@@ -524,6 +551,7 @@ a:hover, a:focus {
   .col-lg-4,
   .row.cols-lg-4 > * {
     flex-basis: 33.33333%;
+    max-width: 33.33333%;
   }
   .col-lg-offset-3 {
     margin-left: 25%;
@@ -531,6 +559,7 @@ a:hover, a:focus {
   .col-lg-5,
   .row.cols-lg-5 > * {
     flex-basis: 41.66667%;
+    max-width: 41.66667%;
   }
   .col-lg-offset-4 {
     margin-left: 33.33333%;
@@ -538,6 +567,7 @@ a:hover, a:focus {
   .col-lg-6,
   .row.cols-lg-6 > * {
     flex-basis: 50%;
+    max-width: 50%;
   }
   .col-lg-offset-5 {
     margin-left: 41.66667%;
@@ -545,6 +575,7 @@ a:hover, a:focus {
   .col-lg-7,
   .row.cols-lg-7 > * {
     flex-basis: 58.33333%;
+    max-width: 58.33333%;
   }
   .col-lg-offset-6 {
     margin-left: 50%;
@@ -552,6 +583,7 @@ a:hover, a:focus {
   .col-lg-8,
   .row.cols-lg-8 > * {
     flex-basis: 66.66667%;
+    max-width: 66.66667%;
   }
   .col-lg-offset-7 {
     margin-left: 58.33333%;
@@ -559,6 +591,7 @@ a:hover, a:focus {
   .col-lg-9,
   .row.cols-lg-9 > * {
     flex-basis: 75%;
+    max-width: 75%;
   }
   .col-lg-offset-8 {
     margin-left: 66.66667%;
@@ -566,6 +599,7 @@ a:hover, a:focus {
   .col-lg-10,
   .row.cols-lg-10 > * {
     flex-basis: 83.33333%;
+    max-width: 83.33333%;
   }
   .col-lg-offset-9 {
     margin-left: 75%;
@@ -573,6 +607,7 @@ a:hover, a:focus {
   .col-lg-11,
   .row.cols-lg-11 > * {
     flex-basis: 91.66667%;
+    max-width: 91.66667%;
   }
   .col-lg-offset-10 {
     margin-left: 83.33333%;
@@ -580,6 +615,7 @@ a:hover, a:focus {
   .col-lg-12,
   .row.cols-lg-12 > * {
     flex-basis: 100%;
+    max-width: 100%;
   }
   .col-lg-offset-11 {
     margin-left: 91.66667%;

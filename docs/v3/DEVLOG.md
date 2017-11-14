@@ -148,3 +148,10 @@
 - Added custom styles necessary for `.card` elements.
 - After compilation of the completed modules, the size is `4.58KB`, whereas the size of the **Fermion** branch with the same things (meaning the switches and other ditched components were not included) was `4.56KB`. This is unbelievable and makes the **hugging cat** really happy.
 - Recompiled the `mini-default` flavor files. They should be mostly ready for release by now.
+
+## 20171114
+
+- Struggled for a couple of hours with the whole docs architecture, finally moved to a new customized build system.
+- Added the `getting-started` section to the documentation, this should now start to look like a real website.
+- Worked on documentation and custom tool, it should now support a lot of the data that is thrown at it.
+- Fixed a huge bug that I expected to blow up in my face eventually, where I had removed the `max-width` propert from `.col-` elements. Everything should be bug-free in the `grid` components now.

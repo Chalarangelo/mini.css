@@ -60,6 +60,25 @@
 <span class="code-line">}</span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;Avoid altering the base font size of <code>16px</code> directly in your CSS code, as it can cause problems with the display of certain elements.</p></div></div></div>
   
   <div class="section double-padded"><h3>Customization</h3><ul><li>Text color can be changed globally by changing the value of the <code>--fore-color</code> variable.</li><li>Background color can be changed globally by changing the value of the <code>--back-color</code> variable.</li><li>Border color can be changed globally by changing the value of the <code>--border-color</code> variable. This affects the color of <code>&lt;hr&gt;</code> elements.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li><li>You can change the color of links by changing the values of the <code>--a-link-color</code> and <code>--a-visited-color</code> variables.</li></ul></div>
+</div><br/><div id="heading" class="card fluid">
+  <h2 class="section double-padded">Headings</h2>
+  <div class="section"><p>All of the HTML5 heading elements are styled, using a customizable ratio and simple rules, providing a clean base for your web app's titles. Apart from the headings themselves, customized rules are provided for displaying subheadings or explanatory text below your web app's headings.</p></div>
+  <div class="section"><h3>Example</h3><div class="row"><div class="col-sm-12 col-md-6 col-md-first"><h1 class="doc">Heading 1<small class="doc">Subheading</small></h1></div>
+  <div class="col-sm-12 col-md-6"><h2 class="doc">Heading 2<small class="doc">Subheading</small></h2></div>
+  <div class="col-sm-12 col-md-6 col-md-last"><h3 class="doc">Heading 3<small class="doc">Subheading</small></h3></div>
+  <div class="col-sm-12 col-md-6 col-md-first"><h4 class="doc">Heading 4<small class="doc">Subheading</small></h4></div>
+  <div class="col-sm-12 col-md-6"><h5 class="doc">Heading 5<small class="doc">Subheading</small></h5></div>
+  <div class="col-sm-12 col-md-6 col-md-last"><h6 class="doc">Heading 6<small class="doc">Subheading</small></h6></div></div></div>
+  <div class="section double-padded"><h3>Sample code</h3><pre><span class="code-line"><span class="highlight-a">&lt;h1&gt;</span>Heading 1 <span class="highlight-a">&lt;small&gt;</span>Subheading<span class="highlight-a">&lt;/small&gt;&lt;/h1&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;h2&gt;</span>Heading 2 <span class="highlight-a">&lt;small&gt;</span>Subheading<span class="highlight-a">&lt;/small&gt;&lt;/h2&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;h3&gt;</span>Heading 3 <span class="highlight-a">&lt;small&gt;</span>Subheading<span class="highlight-a">&lt;/small&gt;&lt;/h3&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;h4&gt;</span>Heading 4 <span class="highlight-a">&lt;small&gt;</span>Subheading<span class="highlight-a">&lt;/small&gt;&lt;/h4&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;h5&gt;</span>Heading 5 <span class="highlight-a">&lt;small&gt;</span>Subheading<span class="highlight-a">&lt;/small&gt;&lt;/h5&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;h6&gt;</span>Heading 6 <span class="highlight-a">&lt;small&gt;</span>Subheading<span class="highlight-a">&lt;/small&gt;&lt;/h6&gt;</span></span></pre>
+</div>
+  
+  
+  <div class="section double-padded"><h3>Customization</h3><ul><li>Text color can be changed globally by changing the value of the <code>--fore-color</code> variable. This will affect the color of the headings' main text.</li><li>Secondary text color can be changed globally by changing the value of the <code>--secondary-fore-color</code> variable. This will affect the color of subheadings.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>You can change the ratio of headings' size by chaning the value of the <code>--heading-ratio</code> variable. Bear in mind that the value of this variable must be unitless to work properly.</li></ul></div>
 </div><br/><div id="images-captions" class="card fluid">
   <h2 class="section double-padded">Images &amp; captions</h2>
   <div class="section"><p>Image elements are responsive by default, without the need for any special classes or anything similar. They automatically scale down as necessary to display properly on smaller devices, while retaining their original aspect ratio, while they will never scale above their original size.</p>

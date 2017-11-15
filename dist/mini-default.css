@@ -207,6 +207,10 @@ sub {
   bottom: -0.25em;
 }
 
+figure {
+  margin: var(--universal-margin);
+}
+
 figcaption {
   color: var(--secondary-fore-color);
 }

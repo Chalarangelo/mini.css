@@ -162,3 +162,4 @@
 - Documented code and quotations.
 - Documented lists.
 - Documented images.
+- Added `margin` to `figcaption` elements to reset the browser defaults.

@@ -53,7 +53,7 @@ function buildFragment(fragment){
   <h2 class="section double-padded">${fragment.title}</h2>
   <div class="section">${fragment.description}</div>
   ${fragment.example?`<div class="section"><h3>Example</h3>${fragment.example}</div>`:''}
-  ${fragment.samples.length?`<div class="section double-padded"><h3>Sample code</h3>${fragment.samples.join('<br/>')}</div>`:''}
+  ${fragment.samples.length?`<div class="section double-padded"><h3>Sample code</h3>${fragment.samples.join('')}</div>`:''}
   ${fragment.dos.length||fragment.donts.length?
     `<div class="section double-padded"><h3>Best practices</h3>${[fragment.dos.map(d => `<div class="row dodos"><div class="col-sm-12 col-md-6">${d.sample}</div><div class="col-sm-12 col-md-6"><p><mark class="do">Do:</mark>&nbsp;${d.description}</p></div></div>`).join('<br/>'),fragment.donts.map(d => `<div class="row dodos"><div class="col-sm-12 col-md-6">${d.sample}</div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;${d.description}</p></div></div>`).join('<br/>')].join('')}</div>`
   :''}

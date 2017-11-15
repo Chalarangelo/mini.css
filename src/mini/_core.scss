@@ -283,6 +283,9 @@ sub {
   bottom: $sub-bottom;
 }
 
+figure {
+  margin: var(#{$universal-margin-var});
+}
 figcaption {
     color: var(#{$secondary-fore-color-var});
 }

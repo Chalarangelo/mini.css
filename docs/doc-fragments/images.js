@@ -12,7 +12,8 @@ module.exports = {
 <span class="code-line"><span class="highlight-a">&lt;/figure&gt;</span></span></pre>`],
   notes: [`While not mandatory, it is considered a good practice to always add a <code>alt</code> attribute to image elements on your web apps.`],
   customization: [
-    `You can change the text color of <code>&lt;figcaption&gt;</code> elements by changing the value of the <code>--secondary-fore-color</code> variable.`
+    `You can change the text color of <code>&lt;figcaption&gt;</code> elements by changing the value of the <code>--secondary-fore-color</code> variable.`,
+    `Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.`
   ],
   modifiers: [],
   dos: [],

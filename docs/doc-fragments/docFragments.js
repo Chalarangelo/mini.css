@@ -6,5 +6,5 @@ var images = require('./images');
 var codeAndQuotations = require('./codeAndQuotations');
 
 module.exports = [
-  gettingStarted, commonTextualElements, images, lists, codeAndQuotations
+  gettingStarted, commonTextualElements, headings, images, lists, codeAndQuotations
 ]

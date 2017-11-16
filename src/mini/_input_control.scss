@@ -126,6 +126,7 @@ label {
       align-items: center;
       justify-content: center;
       & > input {
+        max-width: 100%;
         flex-grow: 1;
         flex-basis: 0px;
       }
@@ -135,12 +136,13 @@ label {
         flex-direction: column;
       }
     }
-    // Verical input groups
+    // Vertical input groups
     &.#{$input-group-vertical-name} {
       display: flex;
       align-items: stretch;
       flex-direction: column;
       & > input {
+        max-width: 100%;
         flex-grow: 1;
         flex-basis: 0px;
       }
@@ -295,6 +297,7 @@ input, textarea, select, button, .#{$button-class-name}, [role="button"] {
   & > button, [type="button"], & > [type="submit"], & > [type="reset"],
   & > .#{$button-class-name}, & > [role="button"] {
     margin: 0;
+    max-width: 100%;
     flex: 1 1 auto;
     text-align: center;
     border: 0;

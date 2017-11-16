@@ -43,6 +43,7 @@
   
   
   
+  
 </div><br/><div id="common-textual-elements" class="card fluid">
   <h2 class="section double-padded">Common textual elements</h2>
   <div class="section"><p><strong>mini.css</strong> utilizes the ruleset of <a href="http://necolas.github.io/normalize.css/" targe="_blank">Normalize.css</a> v7.0.0 to reliably deal with inconsistencies between browsers, ensuring that your web apps will look beatiful no matter on what browser or device you're at. On top of these rules, we have applied some tasteful rules, such as using <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/" target="_blank">native font stack</a> to figure out the best font for each device, slightly altering the background and foreground colors, as well as setting the size of the text to <code>16px</code> and its line height to <code>1.5</code>.</p>
@@ -54,6 +55,7 @@
 <span class="code-line"><span class="highlight-a">&lt;sub&gt;</span>Subscript<span class="highlight-a">&lt;/sub&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;sup&gt;</span>Superscript<span class="highlight-a">&lt;/sup&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;hr/&gt;</span></span></pre></div>
+  
   <div class="section double-padded"><h3>Best practices</h3><div class="row dodos"><div class="col-sm-12 col-md-6"><pre><span class="code-line"><span class="highlight-c">/* Do not do this (use Sass instead) */</span></span>
 <span class="code-line"><span class="highlight-a">html</span> {</span>
 <span class="code-line">  font-size: <span class="highlight-b">14px</span>;</span>
@@ -78,6 +80,7 @@
 </div>
   
   
+  
   <div class="section double-padded"><h3>Customization</h3><ul><li>Text color can be changed globally by changing the value of the <code>--fore-color</code> variable. This will affect the color of the headings' main text.</li><li>Secondary text color can be changed globally by changing the value of the <code>--secondary-fore-color</code> variable. This will affect the color of subheadings.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>You can change the ratio of headings' size by chaning the value of the <code>--heading-ratio</code> variable. Bear in mind that the value of this variable must be unitless to work properly.</li></ul></div>
 </div><br/><div id="images-captions" class="card fluid">
   <h2 class="section double-padded">Images &amp; captions</h2>
@@ -88,6 +91,7 @@
 <span class="code-line">  <span class="highlight-a">&lt;img</span> <span class="highlight-b">src</span>=<span class="highlight-c">&quot;image.png&quot;</span> <span class="highlight-b">alt</span>=<span class="highlight-c">&quot;Image description&quot;</span><span class="highlight-a">/&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;figcaption&gt;</span>Image caption<span class="highlight-a">&lt;/figcaption&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;/figure&gt;</span></span></pre></div>
+  
   
   <div class="section double-padded"><h3>Notes</h3><ul><li>While not mandatory, it is considered a good practice to always add a <code>alt</code> attribute to image elements on your web apps.</li></ul></div>
   <div class="section double-padded"><h3>Customization</h3><ul><li>You can change the text color of <code>&lt;figcaption&gt;</code> elements by changing the value of the <code>--secondary-fore-color</code> variable.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li></ul></div>
@@ -108,6 +112,7 @@
 <span class="code-line"><span class="highlight-a">&lt;/ol&gt;</span></span></pre></div>
   
   
+  
   <div class="section double-padded"><h3>Customization</h3><ul><li>Text color can be changed globally by changing the value of the <code>--fore-color</code> variable.</li><li>Background color can be changed globally by changing the value of the <code>--back-color</code> variable.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li></ul></div>
 </div><br/><div id="code-and-quotations" class="card fluid">
   <h2 class="section double-padded">Code &amp; quotations</h2>
@@ -123,7 +128,146 @@
 <span class="code-line">}<span class="highlight-a">&lt;/pre&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;blockquote</span> <span class="highlight-b">cite</span>=<span class="highlight-c">&quot;www.quotation.source&quot;</span><span class="highlight-a">&gt;</span>This is some text quoted from elsewhere.<span class="highlight-a">&lt;/blockquote&gt;</span></span></pre></div>
   
+  
   <div class="section double-padded"><h3>Notes</h3><ul><li>The <code>cite</code> attribute of <code>&lt;blockquote&gt;</code> elements is not mandatory and can be omitted. The element's sizing will be automatically adjusted according to the presence of the <code>cite</code> attribute.</li></ul></div>
   <div class="section double-padded"><h3>Customization</h3><ul><li>Text color can be changed globally by changing the value of the <code>--fore-color</code> variable. This will affect the text color of <code>&lt;code&gt</code> and <code>&lt;pre&gt</code> elements and background color of <code>&lt;kbd&gt;</code> elements.</li><li>Background color can be changed globally by changing the value of the <code>--back-color</code> variable. This will affect the background color of <code>&lt;blockquote&gt</code> elements and text color of <code>&lt;kbd&gt</code>.</li><li>You can change the background color of <code>&lt;code&gt</code> and <code>&lt;pre&gt</code> elements by changing the value of the <code>--secondary-back-color</code> variable.</li><li>You can change the text color of <code>&lt;blockquote&gt;</code> elements by changing the value of the <code>--secondary-fore-color</code> variable.</li><li>You can change the border color of <code>&lt;pre&gt;</code> and <code>&lt;blockquote&gt;</code> elements by changing the value of the <code>--secondary-border-color</code> variable.</li><li>You can change the border color of the left border of <code>&lt;pre&gt;</code> elements by changing the value of the <code>--pre-color</code> variable.</li><li>You can change the border color of the left border of <code>&lt;blockquote&gt;</code> elements by changing the value of the <code>--blockquote-color</code> variable.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li><li>Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.</li></ul></div>
+</div><br/><div id="grid" class="card fluid">
+  <h2 class="section double-padded">Grid system</h2>
+  <div class="section"><p>The grid system of <strong>mini.css</strong> utilizes the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" targe="_blank">Flexbox layout</a> to provide you with a simple, modern, responsive layout system for your web apps. Like most modern CSS frameworks' grid systems, it is composed of three main components - containers, rows and columns:</p>
+  <ul><li>The container (<code>.container</code>) is the outermost layer of the grid system and serves as a fluid wrapper, which can be used as the basis for your layout.</li>
+  <li>Inside the container, you can add one or more rows (<code>.row</code>), which will in turn house the columns.</li>
+  <li>Columns (<code>col-*-*</code>) are placed inside rows and they can be customized to display differently on different screen sizes, make use of fluid layouts, use offsets or change ordering.</li></ul></div>
+  <div class="section"><h3>Example</h3><div class="container" style="padding: 0.25rem">
+    <div class="row"><div class="col-sm-1"><div class="box-colored">1</div></div><div class="col-sm-11"><div class="box-colored">11</div></div></div>
+    <div class="row"><div class="col-sm-2"><div class="box-colored">2</div></div><div class="col-sm-10"><div class="box-colored">10</div></div></div>
+    <div class="row"><div class="col-sm-3"><div class="box-colored">3</div></div><div class="col-sm-9"><div class="box-colored">9</div></div></div>
+    <div class="row"><div class="col-sm-4"><div class="box-colored">4</div></div><div class="col-sm-8"><div class="box-colored">8</div></div></div>
+    <div class="row"><div class="col-sm-5"><div class="box-colored">5</div></div><div class="col-sm-7"><div class="box-colored">7</div></div></div>
+    <div class="row"><div class="col-sm-6"><div class="box-colored">6</div></div><div class="col-sm-6"><div class="box-colored">6</div></div></div>
+    <div class="row"><div class="col-sm-12"><div class="box-colored">12</div></div></div>
+    <div class="row"><div class="col-sm"><div class="box-colored">fluid</div></div><div class="col-sm"><div class="box-colored">fluid</div></div></div>
+  </div></div>
+  <div class="section double-padded"><h3>Sample code</h3>
+<pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;container&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-1&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span>  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-11&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-2&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span>  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-10&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-3&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span>  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-9&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-4&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span>  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-8&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-5&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span>  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-7&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-6&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span>  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-6&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-12&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span>  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm&quot;</span><span class="highlight-a">&gt;</span><span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre>
+  </div>
+  <div class="section double-padded"><h3>Modifiers</h3>
+    <h4>Screen sizes and width</h4><p>Each column class is defined by specifying a screen size (small - <code>sm</code>, medium - <code>md</code> or large - <code>lg</code>) and a column width (a value between <code>1</code> and <code>12</code> or you can omit it for a fluid column), separated by dashes (e.g. <code>.col-sm-6</code> for a 6-wide column on a small screen). Using these you can apply different layouts for different screen sizes, by altering the width of columns, using multiple classes. Note that column widths are applied recursively, meaning that if you do not specify a width for a specific screen size the column will use the width applied for the previous largest screen size.</p><h5>Example</h5><div class="container" style="padding: 0.25rem">
+      <div class="row">
+      <div class="col-sm-12 col-md">
+      <div class="row"><div class="col-sm"><h6 style="text-align:center">Small screen layout</h6></div></div>
+      <div class="row"><div class="col-sm"><div class="box-colored">sm-12</div></div></div>
+      <div class="row"><div class="col-sm-12"><div class="box-colored" style="height: 3.75rem">sm-12 md-8</div></div><div class="col-sm-12"><div class="box-colored" style="height: 2rem">sm-12 md-4</div></div></div>
+      <div class="row"><div class="col-sm"><div class="box-colored">sm-12</div></div></div>
+      </div>
+      <div class="col-sm-12 col-md">
+      <div class="row"><div class="col-sm"><h6 style="text-align:center">Medium/Large screen layout</h6></div></div>
+      <div class="row"><div class="col-sm"><div class="box-colored">sm-12</div></div></div>
+      <div class="row"><div class="col-sm-8"><div class="box-colored" style="height: 8rem">sm-12 md-8</div></div><div class="col-sm-4"><div class="box-colored" style="height: 8rem">sm-12 md-4</div></div></div>
+      <div class="row"><div class="col-sm"><div class="box-colored">sm-12</div></div></div>
+      </div>
+      </div>
+      </div><h5>Sample code</h5><pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;container&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-12 col-md-3 col-lg-2&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-12 col-md-5 col-lg-7&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-12 col-md-4 col-lg-3&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span>&gt;</span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm col-lg-10&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-4 col-md&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre><br/><h4>Predefined layouts</h4><p>Rows can be modified to apply predefined layouts to the columns inside them, effectively reducing the amount of work required for simple layouts. To create a predefined layout, you can add a class to a row (<code>.cols-*-*</code>), specifying a screen size and width for the columns inside it (or omitting the width for fluid columns), similarly to the way columns are defined (e.g. <code>.row.cols-sm-6</code> will cause all elements inside the row to be 6-wide on a small screen). Columns inside a predefined layout do not require any further classes to display and, much like normal column layouts, their widths are applied recursively.</p><h5>Sample code</h5><pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row cols-sm-6&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;p&gt;</span>This paragraph is inside a 6-wide column.<span class="highlight-a">&lt;/p&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;p&gt;</span>This paragraph is inside a 6-wide column.<span class="highlight-a">&lt;/p&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre><br/><h4>Column offsets</h4><p>Columns can be moved to the right, by applying offset classes (<code>.col-*-offset-*</code>), defining a screen size and an offset (a value between <code>0</code> and <code>11</code>, e.g. <code>.col-sm-offset-3</code> will move a column 25% to the right on a small screen). Like all other column modifiers, offsets are applied recursively.</p><h5>Example</h5><div class="container" style="padding: 0.25rem">
+        <div class="row"><div class="col-sm col-sm-offset-11"><div class="box-colored">11</div></div></div>
+        <div class="row"><div class="col-sm col-sm-offset-10"><div class="box-colored">10</div></div></div>
+        <div class="row"><div class="col-sm col-sm-offset-9"><div class="box-colored">9</div></div></div>
+        <div class="row"><div class="col-sm col-sm-offset-8"><div class="box-colored">8</div></div></div>
+        <div class="row"><div class="col-sm col-sm-offset-7"><div class="box-colored">7</div></div></div>
+        <div class="row"><div class="col-sm col-sm-offset-6"><div class="box-colored">6</div></div></div>
+        <div class="row"><div class="col-sm col-sm-offset-5"><div class="box-colored">5</div></div></div>
+        <div class="row"><div class="col-sm col-sm-offset-4"><div class="box-colored">4</div></div></div>
+        <div class="row"><div class="col-sm col-sm-offset-3"><div class="box-colored">3</div></div></div>
+        <div class="row"><div class="col-sm col-sm-offset-2"><div class="box-colored">2</div></div></div>
+        <div class="row"><div class="col-sm col-sm-offset-1"><div class="box-colored">1</div></div></div>
+        <div class="row"><div class="col-sm col-sm-offset-0"><div class="box-colored">0</div></div></div>
+      </div><h5>Sample code</h5><pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-8 col-sm-offset-2 col-md-offset-1 col-lg-offset-0&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;&lt;/div&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm col-sm-offset-3 col-md-offset-4 col-lg-offset-0&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-4 col-md-offset-5&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre><br/><h4>Column reordering</h4><p>Columns can be reordered on different screen sizes, by applying a reordering class (<code>.col-*-*</code>), defining a screen size and the order (first, normal or last, e.g. <code>.col-sm-last</code> will move a column to the end of its row on a small screen). Like all other column modifiers, reordering is applied recursively.</p><h5>Example</h5><div class="container" style="padding: 0.25rem">
+      <div class="row">
+      <div class="col-sm-12 col-md">
+      <div class="row"><div class="col-sm"><h6 style="text-align:center">Small screen layout</h6></div></div>
+      <div class="row"><div class="col-sm-4"><div class="box-colored">md-last</div></div><div class="col-sm-4"><div class="box-colored">&nbsp;</div></div><div class="col-sm-4"><div class="box-colored">md-first</div></div></div>
+      </div>
+      <div class="col-sm-12 col-md">
+      <div class="row"><div class="col-sm"><h6 style="text-align:center">Medium/Large screen layout</h6></div></div>
+      <div class="row"><div class="col-sm-4"><div class="box-colored">md-first</div></div><div class="col-sm-4"><div class="box-colored">&nbsp;</div></div><div class="col-sm-4"><div class="box-colored">md-last</div></div></div>
+      </div>
+      </div>
+      </div><h5>Sample code</h5><pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm col-md-last col-lg-normal&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm col-sm-first col-md-last&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm col-md-first col-lg-normal&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre></div>
+  
+  <div class="section double-padded"><h3>Notes</h3><ul><li><strong>mini.css</strong> uses a mobile-first approach in its grid system, so you do not have to rewrite the same layout for all three screen sizes. Leaving a column's size, offset or order unspecified for a screen size will use the style applied for the previous largest screen size recursively. This also applies to predefined layouts.</li><li>The specific breakpoints for small, medium and large screen sizes are as follows:
+      <ul>
+        <li>small: less than <code>768px</code> wide</li>
+        <li>medium: more than or equal to <code>768px</code> wide and less than <code>1280px</code> wide</li>
+        <li>large: <code>1280px</code> wide or more</li>
+      </ul></li><li>You can use fluid columns to create columns whose wide is not a multiple of 1/12th of the screen's width (e.g. if you have 7 fluid columns in a row, each one of them will be 1/7th of the screen's width).</li><li>Predefined layouts can be combined with most of the features of the grid system, such as offsets and reordering, however they do not combine very well with regular columns.</li><li>You should only apply offset and reordering modifiers to the columns that you need and for the screen sizes that are necessary. Remember to also specify a column width or use a predefined layout before applying these modifiers.</li></ul></div>
+  <div class="section double-padded"><h3>Customization</h3><ul><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable. This only affects the padding of the container.</li></ul></div>
+</div><br/><div id="cards" class="card fluid">
+  <h2 class="section double-padded">Cards</h2>
+  <div class="section"></div>
+  
+  
+  
+  
+  
+  
+</div><br/><div id="card-sections" class="card fluid">
+  <h2 class="section double-padded">Card sections</h2>
+  <div class="section"></div>
+  
+  
+  
+  
+  
+  
 </div></main>
   </div></div></body></html>

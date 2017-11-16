@@ -77,6 +77,7 @@ $card-border-color-var:        '--card-border-color' !default;
     // Grid column specific definition for flexible column.
     .#{$grid-column-prefix}-#{$size-prefix},
     .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$size-prefix} > *  {
+      max-width: 100%;
       flex-grow: 1;
       flex-basis: 0;
     }
@@ -91,6 +92,7 @@ $card-border-color-var:        '--card-border-color' !default;
     }
     // Grid column specific definition for flexible column.
     .#{$grid-column-prefix}-#{$size-prefix} {
+      max-width: 100%;
       flex-grow: 1;
       flex-basis: 0;
     }
@@ -100,14 +102,14 @@ $card-border-color-var:        '--card-border-color' !default;
     @if $_include-parent-layout {
       .#{$grid-column-prefix}-#{$size-prefix}-#{$i},
       .#{$grid-row-name}.#{$grid-row-parent-layout-prefix}-#{$size-prefix}-#{$i} > * {
-        flex-basis: #{($i * 100% / $grid-column-count)};
         max-width: #{($i * 100% / $grid-column-count)};
+        flex-basis: #{($i * 100% / $grid-column-count)};
       }
     }
     @else {
       .#{$grid-column-prefix}-#{$size-prefix}-#{$i} {
-        flex-basis: #{($i * 100% / $grid-column-count)};
         max-width: #{($i * 100% / $grid-column-count)};
+        flex-basis: #{($i * 100% / $grid-column-count)};
       }
     }
     // Offest definitions.

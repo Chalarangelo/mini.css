@@ -163,3 +163,11 @@
 - Documented lists.
 - Documented images.
 - Added `margin` to `figcaption` elements to reset the browser defaults.
+
+## 20171116
+
+- Updated `layout` to make sure everything is bug-free. The `grid` in particular is not very friendly lately.
+- Fixed a couple of bugs in `input_control` as well.
+- Improved the build script to actually render the `modifiers` section, it should be complete now, I think.
+- Documented `grid`. The whole old module has been merged into one long card with all the information readily available. Hopefully it's less complicated now.
+- Changed the color of `main` in the documentation to help the cards pop out a little bit more.

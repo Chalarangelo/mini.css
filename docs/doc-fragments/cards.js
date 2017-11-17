@@ -1,8 +1,8 @@
 module.exports = {
   id: 'cards',
   title: 'Cards',
-  keywords: [`card`, `row`, `section`, `container`, `col`, `column`],
-  description: `<p><strong>mini.css</strong> provides you with cards, general-purpose containers that help you organize the content of your web apps. Cards should be used in combination with the <a href="#grid">grid system</a>, meaning that they need to be placed inside the grid's rows to work properly. Layouts created with cards are responsive, realigning according to the available size on the screen.</p>`,
+  keywords: [`card`, `row`, `section`, `container`, `col`, `column`, `small`, `large`, `fluid`, `warning`, `error`],
+  description: `<p><strong>mini.css</strong> provides you with cards (<code>.card</code>), general-purpose containers that help you organize the content of your web apps. Cards should be used in combination with the <a href="#grid">grid system</a>, meaning that they need to be placed inside the grid's rows to work properly. Layouts created with cards are responsive, realigning according to the available size on the screen.</p>`,
   example: `<div class="container" style="padding: 0.25rem"><div class="row">
       <div class="card"><div class="section"><h3 class="doc">Card 1</h3><p class="doc">This is a basic card with some sample content.</p></div></div>
       <div class="card"><div class="section"><h3 class="doc">Card 2</h3><p class="doc">This is another card with some sample content.</p></div></div>
@@ -16,7 +16,7 @@ module.exports = {
   customization: [
     `Text color for cards can be changed by changing the value of the <code>--card-fore-color</code> variable.`,
     `Background color for cards can be changed by changing the value of the <code>--card-back-color</code> variable.`,
-    `Border color for caards can be changed by changing the value of the <code>--card-border-color</code> variable.`,
+    `Border color for cards can be changed by changing the value of the <code>--card-border-color</code> variable.`,
     `Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.`,
     `Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.`
   ],

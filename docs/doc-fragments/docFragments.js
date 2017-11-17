@@ -7,9 +7,11 @@ var codeAndQuotations = require('./codeAndQuotations');
 var grid = require('./grid');
 var cards = require('./cards');
 var cardSections = require('./cardSections');
+var formsAndInput = require('./formsAndInput');
 
 module.exports = [
   gettingStarted,
   commonTextualElements, headings, images, lists, codeAndQuotations,
-  grid, cards, cardSections
+  grid, cards, cardSections,
+  formsAndInput
 ]

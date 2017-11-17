@@ -2,7 +2,7 @@ module.exports = {
   id: 'cards',
   title: 'Cards',
   keywords: [`card`, `row`, `section`, `container`, `col`, `column`, `small`, `large`, `fluid`, `warning`, `error`],
-  description: `<p><strong>mini.css</strong> provides you with cards (<code>.card</code>), general-purpose containers that help you organize the content of your web apps. Cards should be used in combination with the <a href="#grid">grid system</a>, meaning that they need to be placed inside the grid's rows to work properly. Layouts created with cards are responsive, realigning according to the available size on the screen.</p>`,
+  description: `<p><strong>mini.css</strong> provides you with cards (<code>.card</code>), general-purpose containers that help you organize the content of your web apps. Cards should be used in combination with the <a href="#grid">grid system</a>, meaning that they need to be placed inside a grid's rows to work properly. Layouts created with cards are responsive, realigning according to the available size on the screen.</p>`,
   example: `<div class="container" style="padding: 0.25rem"><div class="row">
       <div class="card"><div class="section"><h3 class="doc">Card 1</h3><p class="doc">This is a basic card with some sample content.</p></div></div>
       <div class="card"><div class="section"><h3 class="doc">Card 2</h3><p class="doc">This is another card with some sample content.</p></div></div>

@@ -2,7 +2,7 @@ module.exports = {
   id: 'code-and-quotations',
   title: 'Code &amp; quotations',
   keywords: [`code`, `pre`, `kbd`, `blockquote`, `quotation`],
-  description: '<p>Code blocks and quotation elements are styled using custom rules that help make them stand out from the rest of the text, while inline code and keyboard input tags are styled in a similar manner, while aiming not to break the flow of regular text.</p>',
+  description: '<p>Code blocks and quotation elements are styled using custom rules that help make them stand out from the rest of the text, while inline code and keyboard input tags are minimally styled, aiming not to break the flow of regular text.</p>',
   example: `<p class="doc">This is some text with some inline <code class="doc">source code</code> and some keyboard <kbd class="doc">input</kbd>.</p>
   <pre class="doc">function sum(num1, num2){
   return num1 + num2;

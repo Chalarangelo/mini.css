@@ -1,6 +1,3 @@
-/*
-<div id="root"><div class="App"><header class="row"><span href="#" class="logo col-md-2 hidden-sm">mini.css</span><a class="button col-sm-2" href="https://github.com/Chalarangelo/mini.css">Github</a><label for="doc-drawer-checkbox" class="button drawer-toggle col-sm-2"></label></header><div class="row" id="doc-wrapper"><input id="doc-drawer-checkbox" class="drawer" value="on" type="checkbox"><nav><div><input style="width: 100%; margin: 0px;" placeholder="Search..." type="search"></div></nav><main class="col-sm-12 col-md-8 col-lg-9" id="doc-content"><button>Home</button><a href="#" class="button">News</a></main></div></div></div>
-*/
 var fs = require('fs');
 
 var docFragments = require('./doc-fragments/docFragments'); // Gets all document fragments as a list.

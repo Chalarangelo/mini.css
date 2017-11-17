@@ -175,3 +175,4 @@
 ## 20171117
 
 - Documented `card` and `card section` to complete the `layout` module's docs.
+- Altered the `dark` section colors, didn't really like them.

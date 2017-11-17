@@ -2,7 +2,7 @@ module.exports = {
   id: 'card-sections',
   title: 'Card sections',
   keywords: [`card`, `row`, `section`, `container`, `col`, `column`, `media`, `double-padded`, `dark`],
-  description: '<p>Card content is usually organized in smaller sections (<code>.section</code>) to be more easily digestible. A card section can be any valid HTML5 element with the apropriate class applied to it.</p>',
+  description: '<p>Card content is usually organized in smaller sections (<code>.section</code>) to be more easily digestible. A card section can be any valid HTML5 element with the appropriate class applied to it.</p>',
   example: `<div class="container" style="padding: 0.25rem"><div class="row"><div class="col-sm-12">
       <div class="card fluid" style="margin: 0.5rem 0.25rem"><h3 class="doc section">Title section</h3><p class="doc section">This is a section with some textual content.</p></div>
     </div></div></div>`,
@@ -28,8 +28,8 @@ module.exports = {
       title : 'Media sections',
       description: '<p>You can create sections for media (<code>.media</code>), such as images or videos (using an <code>&lt;img&gt;</code> or a <code>&lt;iframe&gt;</code> element respectively). These sections are styled appropriately for presentation of media content, meaning that the content will scale appropriately to fill up the available space.</p>',
       example: `<div class="container" style="padding: 0.25rem;"><div class="row">
-            <div class="card"><div class="section"><h3>Card with image</h3></div><img class="section media" src="https://placehold.it/800x600" alt="placeholder"></div>
-            <div class="card"><div class="section"><h3>Card with video</h3></div><iframe class="section media" width="1280" height="720" src="https://www.youtube.com/embed/ScMzIvxBSi4"></iframe></div>
+            <div class="card"><div class="section"><h3 class="doc">Card with image</h3></div><img class="section media" src="https://placehold.it/800x600" alt="placeholder"></div>
+            <div class="card"><div class="section"><h3 class="doc">Card with video</h3></div><iframe class="section media" width="1280" height="720" src="https://www.youtube.com/embed/ScMzIvxBSi4"></iframe></div>
           </div></div>`,
       samples: [`<pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;card&quot;</span><span class="highlight-a">&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;img</span> <span class="highlight-b">src</span>=<span class="highlight-c">&quot;image.png&quot;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;section media&quot;</span><span class="highlight-a">/&gt;</span></span>
@@ -39,7 +39,7 @@ module.exports = {
       title : 'Color variants',
       description: '<p>You can create sections with a darker (<code>.dark</code>) background, by applying the appropriate modifier.</p>',
       example: `<div class="container" style="padding: 0.25rem;"><div class="row">
-            <div class="card"><div class="section"><h3>Normal section</h3></div><div class="section dark"><h3>Dark section</h3></div></div>
+            <div class="card"><div class="section"><h3 class="doc">Normal section</h3></div><div class="section dark"><h3 class="doc">Dark section</h3></div></div>
           </div></div>`,
       samples: [`<pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;card&quot;</span><span class="highlight-a">&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;section dark&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>
@@ -49,7 +49,7 @@ module.exports = {
       title : 'Additional spacing',
       description: '<p>You can create sections with additional spacing (<code>.double-padded</code>), by applying the appropriate modifier.</p>',
       example: `<div class="container" style="padding: 0.25rem;"><div class="row">
-            <div class="card"><div class="section"><h3>Normal spacing</h3></div><div class="section double-padded"><h3>Additional spacing</h3></div></div>
+            <div class="card"><div class="section"><h3 class="doc">Normal spacing</h3></div><div class="section double-padded"><h3 class="doc">Additional spacing</h3></div></div>
           </div></div>`,
       samples: [`<pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;card&quot;</span><span class="highlight-a">&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;section double-padded&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>

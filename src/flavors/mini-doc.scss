@@ -259,7 +259,7 @@ $cc-line-name:                  'code-line' !default;    // Class name for code 
 $cc-code-fonts:'Inconsolata', Menlo, Consolas, monospace;// Fonts used for code. -- Has been customized.
 $cc-code-font-size:             0.85rem !default;        // Font size for code.
 $cc-padding-left:               3.5rem !default;         // Left padding for code lines.
-$cc-number-left:                1rem !default;           // Left position of the line numbers.
+$cc-number-left:                1.75rem !default;        // Left position of the line numbers. -- Has been customized.
 $cc-number-width:               2rem !default;           // Width of the line numbers.
 $cc-highlight-a-name:           'highlight-a' !default;  // Class name for highlight A.
 $cc-highlight-b-name:           'highlight-b' !default;  // Class name for highlight B.
@@ -293,6 +293,7 @@ pre {
     font-family: $cc-code-fonts; // Reapply to avoid problems
     padding-left: var(#{$cc-padding-left-var});
     &:before {
+      background: #eee;     // This was manually applied, it's a bit of a hack!
       counter-increment: #{$cc-counter-name};
       content: counter(#{$cc-counter-name});
       display: inline-block;
@@ -358,3 +359,6 @@ mark.dont {
 main {
   background: #eee;
 }
+
+.responsive-label {align-items: center;}
+@media (min-width: 768px) { .responsive-label .col-md-3 {text-align: right;}}

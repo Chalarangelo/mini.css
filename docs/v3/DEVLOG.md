@@ -176,3 +176,4 @@
 
 - Documented `card` and `card section` to complete the `layout` module's docs.
 - Altered the `dark` section colors, didn't really like them.
+- Cleaned up certain parts of the docs just a little bit.

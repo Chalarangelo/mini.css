@@ -171,3 +171,7 @@
 - Improved the build script to actually render the `modifiers` section, it should be complete now, I think.
 - Documented `grid`. The whole old module has been merged into one long card with all the information readily available. Hopefully it's less complicated now.
 - Changed the color of `main` in the documentation to help the cards pop out a little bit more.
+
+## 20171117
+
+- Documented `card` and `card section` to complete the `layout` module's docs.

@@ -426,7 +426,7 @@
 </div><br/><div id="buttons" class="card fluid">
   <h2 class="section double-padded">Buttons</h2>
   <div class="section"><p>Buttons and button-like input elements have been styled by default to be consistent across browsers. You can also style other elements, such as links or form labels, to look like buttons, using the appropriate class (<code>.button</code>) or the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role" target="_blank">button</a> role.</p></div>
-  <div class="section"><h3>Example</h3><button class="doc">Button</button><a href="#" class="button doc">Link</a><label class="button doc">Label</label><button disabled>Disabled</button></div>
+  <div class="section"><h3>Example</h3><button class="doc">Button</button><a href="#" class="button doc">Link</a><label class="button doc">Label</label><button disabled class="doc">Disabled</button></div>
   <div class="section double-padded"><h3>Sample code</h3><pre><span class="code-line"><span class="highlight-a">&lt;button&gt;</span>Button<span class="highlight-a">&lt;/button&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;button&quot;</span> <span class="highlight-b">value</span>=<span class="highlight-c">&quot;Button&quot;</span><span class="highlight-a"> /&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;reset&quot;</span> <span class="highlight-b">value</span>=<span class="highlight-c">&quot;Button&quot;</span><span class="highlight-a"> /&gt;</span></span>
@@ -445,18 +445,18 @@
 <span class="code-line"><span class="highlight-a">&lt;label</span> <span class="highlight-b">for</span>=<span class="highlight-c">&quot;file-input&quot;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;button&quot;</span><span class="highlight-a">&gt;</span>Upload file<span class="highlight-a">&lt;/label&gt;</span></span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="do">Do:</mark>&nbsp;File upload inputs are not styled by default, due to inconsistencies in how browsers handle them. If you want them to look like other buttons, you can hide them and use a linked label.</p></div></div><div class="row dodos"><div class="col-sm-12 col-md-6"><pre><span class="code-line"><span class="highlight-a">&lt;button</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;primary inverse&quot;</span><span class="highlight-a">&gt;</span>Button<span class="highlight-a">&lt;/button&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;button</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;small large&quot;</span><span class="highlight-a">&gt;</span>Button<span class="highlight-a">&lt;/button&gt;</span></span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;Avoid applying multiple modifiers of the same type on the same button.</p></div></div></div>
   <div class="section double-padded"><h3>Notes</h3><ul><li>It is recommended to use the button role instead of the provided class, if you want your custom buttons to be fully accessible.</li></ul></div>
-  <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for buttons can be changed by changing the value of the <code>--button-fore-color</code> variable.</li><li>Background color for buttons can be changed by changing the value of the <code>--button-back-color</code> variable.</li><li>Border color for buttons can be changed by changing the value of the <code>--button-border-color</code> variable.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Background and border color for focused buttons can be changed by chaning the values of the <code>--button-hover-back-color</code> and <code>--button-hover-border-color</code> variables respectively.</li><li>You can customize the colors of different color variants by changing the values of the related variables in their respective definitions.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li><li>Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.</li></ul></div>
+  <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for buttons can be changed by changing the value of the <code>--button-fore-color</code> variable.</li><li>Background color for buttons can be changed by changing the value of the <code>--button-back-color</code> variable.</li><li>Border color for buttons can be changed by changing the value of the <code>--button-border-color</code> variable.</li><li>Background and border color for focused buttons can be changed by changing the values of the <code>--button-hover-back-color</code> and <code>--button-hover-border-color</code> variables respectively.</li><li>You can customize the colors of different color variants by changing the values of the related variables in their respective definitions.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li><li>Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.</li></ul></div>
 </div><br/><div id="input-grouping" class="card fluid">
   <h2 class="section double-padded">Input grouping</h2>
   <div class="section"><p>You can ensure that input elements and labels display together on the same line, by grouping them together (<code>.input-group</code>). You can also group buttons together, using a different grouping class (<code>.button-group</code>).</p></div>
   <div class="section"><h3>Example</h3><form>
   <fieldset>
-    <legend>Grouped inputs</legend>
-    <div class="input-group"><label for="gi1-un">Username</label> <input type="email" value="" id="gi1-un" placeholder="Username"></div><br/>
-    <div class="input-group"><label for="gi1-pwd">Password</label> <input type="password" value="" id="gi1-pwd" placeholder="Password"></div>
+    <legend class="doc">Grouped inputs</legend>
+    <div class="input-group"><label for="gi1-un" class="doc">Username</label> <input type="email" value="" id="gi1-un" placeholder="Username" class="doc"></div><br/>
+    <div class="input-group"><label for="gi1-pwd" class="doc">Password</label> <input type="password" value="" id="gi1-pwd" placeholder="Password" class="doc"></div>
   </fieldset>
   </form>
-  <div class="button-group"><button>Buttons</button><button>can be</button><button>grouped</button></div></div>
+  <div class="button-group"><button class="doc">Buttons</button><button class="doc">can be</button><button class="doc">grouped</button></div></div>
   <div class="section double-padded"><h3>Sample code</h3><pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;input-group&quot;</span><span class="highlight-a">&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;label</span> <span class="highlight-b">for</span>=<span class="highlight-c">&quot;username&quot;</span><span class="highlight-a">&gt;</span>Username<span class="highlight-a">&lt;/label&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;text&quot;</span> <span class="highlight-b">id</span>=<span class="highlight-c">&quot;Username&quot;</span> <span class="highlight-b">placeholder</span>=<span class="highlight-c">&quot;Username&quot;</span><span class="highlight-a">/&gt;</span></span>
@@ -468,16 +468,16 @@
   <div class="section double-padded"><h3>Modifiers</h3>
     <h4>Fluid &amp; vertical grouping</h4><p>You can make your input groups fluid (<code>.fluid</code>) or vertical (<code>.vertical</code>), by applying the appropriate modifiers.</p><h5>Example</h5><form>
       <fieldset>
-        <legend>Fluid input groups</legend>
-        <div class="input-group fluid"><label for="gi2-un">Username</label> <input type="email" value="" id="gi2-un" placeholder="Username"></div>
-        <div class="input-group fluid"><label for="gi2-pwd">Password</label> <input type="password" value="" id="gi2-pwd" placeholder="Password"></div>
+        <legend class="doc">Fluid input groups</legend>
+        <div class="input-group fluid"><label for="gi2-un" class="doc">Username</label> <input type="email" value="" id="gi2-un" placeholder="Username" class="doc"></div>
+        <div class="input-group fluid"><label for="gi2-pwd" class="doc">Password</label> <input type="password" value="" id="gi2-pwd" placeholder="Password" class="doc"></div>
       </fieldset>
       </form>
       <form>
       <fieldset>
-        <legend>Vertical input groups</legend>
-        <div class="input-group vertical"><label for="gi3-un">Username</label> <input type="email" value="" id="gi3-un" placeholder="Username"></div>
-        <div class="input-group vertical"><label for="gi3-pwd">Password</label> <input type="password" value="" id="gi3-pwd" placeholder="Password"></div>
+        <legend class="doc">Vertical input groups</legend>
+        <div class="input-group vertical"><label for="gi3-un" class="doc">Username</label> <input type="email" value="" id="gi3-un" placeholder="Username" class="doc"></div>
+        <div class="input-group vertical"><label for="gi3-pwd" class="doc">Password</label> <input type="password" value="" id="gi3-pwd" placeholder="Password" class="doc"></div>
       </fieldset>
       </form><h5>Sample code</h5><pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;input-group fluid&quot;</span><span class="highlight-a">&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;label</span> <span class="highlight-b">for</span>=<span class="highlight-c">&quot;username&quot;</span><span class="highlight-a">&gt;</span>Username<span class="highlight-a">&lt;/label&gt;</span></span>
@@ -497,31 +497,64 @@
   
 </div><br/><div id="header" class="card fluid">
   <h2 class="section double-padded">Header</h2>
-  <div class="section"></div>
-  
-  
-  
-  
-  
-  
+  <div class="section"><p>The header element has been minimally styled, allowing you to create modern headers for your web apps. A header can include a logo element (<code>.logo</code>), as well as buttons, links and labels, styled as buttons (<code>.button</code>).</p></div>
+  <div class="section"><h3>Example</h3><header>
+    <a href="#" class="logo" class="doc">Logo</a> <button  class="doc">Home</button>
+    <a href="#" class="button doc">News</a>
+    <button  class="doc">About</button> <button  class="doc">Contact</button>
+  </header></div>
+  <div class="section double-padded"><h3>Sample code</h3><pre><span class="code-line"><span class="highlight-a">&lt;header&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;logo&quot;</span><span class="highlight-a">&gt;</span>Logo<span class="highlight-a">&lt;/a&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;button&quot;</span><span class="highlight-a">&gt;</span>Home<span class="highlight-a">&lt;/a&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;button&gt;</span>Download<span class="highlight-a">&lt;/button&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/header&gt;</span></span></pre></div>
+  <div class="section double-padded"><h3>Modifiers</h3>
+    <h4>Sticky header</h4><p>You can make your web app's header sticky (<code>.sticky</code>), by applying the appropriate modifier.</p><h5>Sample code</h5><pre><span class="code-line"><span class="highlight-a">&lt;header</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;sticky&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;logo&quot;</span><span class="highlight-a">&gt;</span>Logo<span class="highlight-a">&lt;/a&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;button&quot;</span><span class="highlight-a">&gt;</span>Home<span class="highlight-a">&lt;/a&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;button&gt;</span>Download<span class="highlight-a">&lt;/button&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/header&gt;</span></span></pre></div>
+  <div class="section double-padded"><h3>Best practices</h3><div class="row dodos"><div class="col-sm-12 col-md-6"><pre><span class="code-line"><span class="highlight-a">&lt;header&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;button logo&quot;</span><span class="highlight-a">&gt;</span>Logo<span class="highlight-a">&lt;/a&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span><span class="highlight-a">&gt;</span>Home<span class="highlight-a">&lt;/a&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/header&gt;</span></span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;You should not apply a <code>.button</code> class to the logo of your header, but you must make sure that all other elements inside the header are styled as buttons.</p></div></div></div>
+  <div class="section double-padded"><h3>Notes</h3><ul><li>The header element is partially responsive on smaller screens, displaying a scrollbar indicating that there is more content off-screen.</li><li>The header element can be a row in a <a href="grid">grid system</a>, allowing you to create responsive headers.</li></ul></div>
+  <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for the header can be changed by changing the value of the <code>--header-fore-color</code> variable.</li><li>Background color for the header can be changed by changing the value of the <code>--header-back-color</code> variable.</li><li>Border color for the header can be changed by changing the value of the <code>--header-border-color</code> variable.</li><li>Background color for focused buttons inside the header can be changed by changing the value of the <code>--header-hover-back-color</code> variable.</li></ul></div>
 </div><br/><div id="navigation-bar" class="card fluid">
   <h2 class="section double-padded">Navigation bar</h2>
-  <div class="section"></div>
+  <div class="section"><p>The navigation bar element has been minimally styled, allowing you to create simple vertical navigation menus for your web apps. Apart from styling from links, custom classes (<code>/sublink-1</code> and <code>/sublink-2</code>) are provided for creating navigation trees.</p></div>
+  <div class="section"><h3>Example</h3><nav>
+    <a href="#" class="doc">Home</a> <span  class="doc">News</span>
+    <a href="#" class="sublink-1 doc">New Courses</a> <a href="#" class="sublink-1 doc">Certifications</a>
+    <span class="sublink-1 doc">Events</span> <a href="#" class="sublink-2 doc">Course Showcase - 12th, Dec</a>
+    <a href="#" class="sublink-2 doc">Staff AMA - 16th, Dec</a> <a href="#" class="sublink-1 doc">Policy Update</a>
+    <a href="#"  class="doc">About</a> <a href="#"  class="doc">Contact</a>
+  </nav></div>
+  <div class="section double-padded"><h3>Sample code</h3><pre><span class="code-line"><span class="highlight-a">&lt;nav&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span><span class="highlight-a">&gt;</span>Category 1<span class="highlight-a">&lt;/a&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;span&gt;</span>Category 2<span class="highlight-a">&lt;/span&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;sublink-1&quot;</span><span class="highlight-a">&gt;</span>Item 2.1<span class="highlight-a">&lt;/a&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;span</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;sublink-1&quot;</span><span class="highlight-a">&gt;</span>Category 2.2<span class="highlight-a">&lt;/span&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;sublink-2&quot;</span><span class="highlight-a">&gt;</span>Item 2.2.1<span class="highlight-a">&lt;/a&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/nav&gt;</span></span></pre></div>
   
   
-  
-  
-  
-  
+  <div class="section double-padded"><h3>Notes</h3><ul><li>It is recommended that you combine the navigation bar element with the <a href="#grid">grid system</a> to create responsive navigation menus for your web apps.</li></ul></div>
+  <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for navigation bars can be changed by changing the value of the <code>--nav-fore-color</code> variable.</li><li>Background color for navigation bars can be changed by changing the value of the <code>--nav-back-color</code> variable.</li><li>Border color for navigation bars can be changed by changing the value of the <code>--nav-border-color</code> variable.</li><li>Background color for focused buttons inside navigation bars can be changed by changing the value of the <code>--nav-hover-back-color</code> variable.</li><li>Text color for links inside navigation bars can be changed by changing the value of the <code>--nav-link-color</code> variable.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li><li>Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.</li></ul></div>
 </div><br/><div id="footer" class="card fluid">
   <h2 class="section double-padded">Footer</h2>
-  <div class="section"></div>
+  <div class="section"><p>The footer element has been minimally styled, aiming to provide you with a clean base to create your web apps' footers.</p></div>
+  <div class="section"><h3>Example</h3><footer> <p class="doc">&copy; 2016-2017 Web Corporation | <a href="#"  class="doc">About</a> | <a href="#"  class="doc">Terms of use</a></p> </footer></div>
+  <div class="section double-padded"><h3>Sample code</h3><pre><span class="code-line"><span class="highlight-a">&lt;footer&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;p&gt;</span>Footer text<span class="highlight-a">&lt;/p&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/footer&gt;</span></span></pre></div>
+  <div class="section double-padded"><h3>Modifiers</h3>
+    <h4>Sticky footer</h4><p>You can make your web app's footer sticky (<code>.sticky</code>), by applying the appropriate modifier.</p><h5>Sample code</h5><pre><span class="code-line"><span class="highlight-a">&lt;footer</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;sticky&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;p&gt;</span>Footer text<span class="highlight-a">&lt;/p&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/footer&gt;</span></span></pre></div>
   
   
-  
-  
-  
-  
+  <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for the footer can be changed by changing the value of the <code>--footer-fore-color</code> variable.</li><li>Background color for the footer can be changed by changing the value of the <code>--footer-back-color</code> variable.</li><li>Border color for the footer can be changed by changing the value of the <code>--footer-border-color</code> variable.</li><li>Text color for links inside the footer can be changed by changing the value of the <code>--footer-link-color</code> variable.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li></ul></div>
 </div><br/><div id="drawer" class="card fluid">
   <h2 class="section double-padded">Menu drawer</h2>
   <div class="section"></div>

@@ -17,6 +17,7 @@ module.exports = {
     `Text color for cards can be changed by changing the value of the <code>--card-fore-color</code> variable.`,
     `Background color for cards can be changed by changing the value of the <code>--card-back-color</code> variable.`,
     `Border color for cards can be changed by changing the value of the <code>--card-border-color</code> variable.`,
+    `You can customize the colors of different color variants by changing the values of the related variables in their respective definitions.`,
     `Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.`,
     `Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.`
   ],

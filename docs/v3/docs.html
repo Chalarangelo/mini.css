@@ -338,7 +338,7 @@
 <span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;card fluid&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;Try not to combine fixed-width and fluid cards. Instead, combine fixed-width cards with columns and place fluid cards inside them.</p></div></div><br/><div class="row dodos"><div class="col-sm-12 col-md-6"><pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;card warning error&quot;</span><span class="highlight-a">&gt;&lt;/div&gt;</span></span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;Avoid applying two color modifiers on the same card.</p></div></div></div>
   <div class="section double-padded"><h3>Notes</h3><ul><li>Due to the fact that fluid cards stretch to fill their parent container, they might not fully respect their margins sometimes, although this should not cause any noticable problems in your web apps' layouts.</li></ul></div>
-  <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for cards can be changed by changing the value of the <code>--card-fore-color</code> variable.</li><li>Background color for cards can be changed by changing the value of the <code>--card-back-color</code> variable.</li><li>Border color for cards can be changed by changing the value of the <code>--card-border-color</code> variable.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.</li></ul></div>
+  <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for cards can be changed by changing the value of the <code>--card-fore-color</code> variable.</li><li>Background color for cards can be changed by changing the value of the <code>--card-back-color</code> variable.</li><li>Border color for cards can be changed by changing the value of the <code>--card-border-color</code> variable.</li><li>You can customize the colors of different color variants by changing the values of the related variables in their respective definitions.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.</li></ul></div>
 </div><br/><div id="card-sections" class="card fluid">
   <h2 class="section double-padded">Card sections</h2>
   <div class="section"><p>Card content is usually organized in smaller sections (<code>.section</code>) to be more easily digestible. A card section can be any valid HTML5 element with the appropriate class applied to it.</p></div>
@@ -369,7 +369,7 @@
 <span class="code-line">  <span class="highlight-a">&lt;p&gt;</span>This should have been a section!<span class="highlight-a">&lt;/p&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;Avoid mixing regular content with content in sections. Instead, wrap all of your card's contents in sections.</p></div></div></div>
   <div class="section double-padded"><h3>Notes</h3><ul><li>While not mandatory, it is highly suggested that you wrap all of your cards' contents in one or more sections.</li><li>Remember that a section can be any valid HTML5 element, so you can apply them to headings, paragraphs, input elements etc.</li><li>Media sections have a default height of <code>200px</code>.</li><li>Due to the media sections using <a href="http://caniuse.com/#feat=object-fit"><code>object-fit</code></a>, you might want to use a polyfill for better browser support (recommended: <a href="https://github.com/bfred-it/object-fit-images">image polyfill</a>, <a href="https://github.com/jonathantneal/fitie">video polyfill</a>).</li><li>Depending on the source website, some embedded videos might not display properly as media sections.</li></ul></div>
-  <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for cards and card sections can be changed by changing the value of the <code>--card-fore-color</code> variable.</li><li>Background color for cards and card sections can be changed by changing the value of the <code>--card-back-color</code> variable.</li><li>Border color for cards and card sections can be changed by changing the value of the <code>--card-border-color</code> variable.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li></ul></div>
+  <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for cards and card sections can be changed by changing the value of the <code>--card-fore-color</code> variable.</li><li>Background color for cards and card sections can be changed by changing the value of the <code>--card-back-color</code> variable.</li><li>Border color for cards and card sections can be changed by changing the value of the <code>--card-border-color</code> variable.</li><li>You can customize the colors of different color variants by changing the values of the related variables in their respective definitions.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li></ul></div>
 </div><br/><div id="forms-and-input" class="card fluid">
   <h2 class="section double-padded">Forms &amp; input</h2>
   <div class="section"><p>Forms, labels and common HTML5 input elements have been styled using clean, modern rules, improving the accessibility and usability of your web apps' forms.</p></div>
@@ -423,5 +423,113 @@
 <span class="code-line"><span class="highlight-a">&lt;/form&gt;</span></span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="do">Do:</mark>&nbsp;Form inputs are inline by defaut, however you can combine forms with the <a href="#grid">grid system</a> to create aligned forms.</p></div></div></div>
   <div class="section double-padded"><h3>Notes</h3><ul><li>Using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements is highly recommended, as it improves semantic markup and accessibility.</li><li>Some input elements, such as date &amp; time, color and range types, are not supported and, as a result, do not have a default style defined for them. You can define said styles manually if you need to use them in your web app.</li></ul></div>
   <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for forms and legend elements can be changed by changing the value of the <code>--form-fore-color</code> variable.</li><li>Background color for forms can be changed by changing the value of the <code>--form-back-color</code> variable.</li><li>Border color for forms and fieldset elements can be changed by changing the value of the <code>--form-border-color</code> variable.</li><li>Text color for input elements can be changed by changing the value of the <code>--input-fore-color</code> variable.</li><li>Background color for input elements can be changed by changing the value of the <code>--input-back-color</code> variable.</li><li>Border color for input elements can be changed by changing the value of the <code>--input-border-color</code> variable.</li><li>Border color for focused and invalid input elements can be changed by changing the value of the <code>--input-focus-color</code> and <code>--input-invalid-color</code> variables respectively.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li><li>Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.</li></ul></div>
+</div><br/><div id="buttons" class="card fluid">
+  <h2 class="section double-padded">Buttons</h2>
+  <div class="section"><p>Buttons and button-like input elements have been styled by default to be consistent across browsers. You can also style other elements, such as links or form labels, to look like buttons, using the appropriate class (<code>.button</code>) or the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role" target="_blank">button</a> role.</p></div>
+  <div class="section"><h3>Example</h3><button class="doc">Button</button><a href="#" class="button doc">Link</a><label class="button doc">Label</label><button disabled>Disabled</button></div>
+  <div class="section double-padded"><h3>Sample code</h3><pre><span class="code-line"><span class="highlight-a">&lt;button&gt;</span>Button<span class="highlight-a">&lt;/button&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;button&quot;</span> <span class="highlight-b">value</span>=<span class="highlight-c">&quot;Button&quot;</span><span class="highlight-a"> /&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;reset&quot;</span> <span class="highlight-b">value</span>=<span class="highlight-c">&quot;Button&quot;</span><span class="highlight-a"> /&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;submit&quot;</span> <span class="highlight-b">value</span>=<span class="highlight-c">&quot;Button&quot;</span><span class="highlight-a"> /&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;button&quot;</span><span class="highlight-a">&gt;</span>Link<span class="highlight-a">&lt;/a&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span> <span class="highlight-b">role</span>=<span class="highlight-c">&quot;button&quot;</span><span class="highlight-a">&gt;</span>Link<span class="highlight-a">&lt;/a&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;label</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;button&quot;</span><span class="highlight-a">&gt;</span>Label<span class="highlight-a">&lt;/label&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;label</span> <span class="highlight-b">role</span>=<span class="highlight-c">&quot;button&quot;</span><span class="highlight-a">&gt;</span>Label<span class="highlight-a">&lt;/label&gt;</span></span></pre></div>
+  <div class="section double-padded"><h3>Modifiers</h3>
+    <h4>Color variants</h4><p>To make your buttons stand out, you can give them a primary (<code>.primary</code>), secondary (<code>.secondary</code>), tertiary (<code>.tertiary</code>) or inversed (<code>.inverse</code>) color palette.</p><h5>Example</h5><button class="primary doc">Primary</button><button class="secondary doc">Secondary</button><button class="tertiary doc">Tertiary</button><button class="inverse doc">Inverse</button><h5>Sample code</h5><pre><span class="code-line"><span class="highlight-a">&lt;button</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;primary&quot;</span><span class="highlight-a">&gt;</span>Primary<span class="highlight-a">&lt;/button&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;button</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;secondary&quot;</span><span class="highlight-a">&gt;</span>Secondary<span class="highlight-a">&lt;/button&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;button</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;tertiary&quot;</span><span class="highlight-a">&gt;</span>Tertiary<span class="highlight-a">&lt;/button&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;button</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;inverse&quot;</span><span class="highlight-a">&gt;</span>Inverse<span class="highlight-a">&lt;/button&gt;</span></span></pre><br/><h4>Size variants</h4><p>You can make buttons smaller (<code>.small</code>) or larger (<code>.large</code>), by applying the appropriate modifier.</p><h5>Example</h5><button class="small doc">Small</button><button class="large doc">Large</button><h5>Sample code</h5><pre><span class="code-line"><span class="highlight-a">&lt;button</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;small&quot;</span><span class="highlight-a">&gt;</span>Small<span class="highlight-a">&lt;/button&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;button</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;large&quot;</span><span class="highlight-a">&gt;</span>Large<span class="highlight-a">&lt;/button&gt;</span></span></pre></div>
+  <div class="section double-padded"><h3>Best practices</h3><div class="row dodos"><div class="col-sm-12 col-md-6"><pre><span class="code-line"><span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;file&quot;</span> <span class="highlight-b">id</span>=<span class="highlight-c">&quot;file-input&quot;</span> <span class="highlight-b">style</span>=<span class="highlight-c">&quot;display:none&quot;</span><span class="highlight-a"> /&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;label</span> <span class="highlight-b">for</span>=<span class="highlight-c">&quot;file-input&quot;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;button&quot;</span><span class="highlight-a">&gt;</span>Upload file<span class="highlight-a">&lt;/label&gt;</span></span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="do">Do:</mark>&nbsp;File upload inputs are not styled by default, due to inconsistencies in how browsers handle them. If you want them to look like other buttons, you can hide them and use a linked label.</p></div></div><div class="row dodos"><div class="col-sm-12 col-md-6"><pre><span class="code-line"><span class="highlight-a">&lt;button</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;primary inverse&quot;</span><span class="highlight-a">&gt;</span>Button<span class="highlight-a">&lt;/button&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;button</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;small large&quot;</span><span class="highlight-a">&gt;</span>Button<span class="highlight-a">&lt;/button&gt;</span></span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;Avoid applying multiple modifiers of the same type on the same button.</p></div></div></div>
+  <div class="section double-padded"><h3>Notes</h3><ul><li>It is recommended to use the button role instead of the provided class, if you want your custom buttons to be fully accessible.</li></ul></div>
+  <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for buttons can be changed by changing the value of the <code>--button-fore-color</code> variable.</li><li>Background color for buttons can be changed by changing the value of the <code>--button-back-color</code> variable.</li><li>Border color for buttons can be changed by changing the value of the <code>--button-border-color</code> variable.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Background and border color for focused buttons can be changed by chaning the values of the <code>--button-hover-back-color</code> and <code>--button-hover-border-color</code> variables respectively.</li><li>You can customize the colors of different color variants by changing the values of the related variables in their respective definitions.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li><li>Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.</li></ul></div>
+</div><br/><div id="input-grouping" class="card fluid">
+  <h2 class="section double-padded">Input grouping</h2>
+  <div class="section"><p>You can ensure that input elements and labels display together on the same line, by grouping them together (<code>.input-group</code>). You can also group buttons together, using a different grouping class (<code>.button-group</code>).</p></div>
+  <div class="section"><h3>Example</h3><form>
+  <fieldset>
+    <legend>Grouped inputs</legend>
+    <div class="input-group"><label for="gi1-un">Username</label> <input type="email" value="" id="gi1-un" placeholder="Username"></div><br/>
+    <div class="input-group"><label for="gi1-pwd">Password</label> <input type="password" value="" id="gi1-pwd" placeholder="Password"></div>
+  </fieldset>
+  </form>
+  <div class="button-group"><button>Buttons</button><button>can be</button><button>grouped</button></div></div>
+  <div class="section double-padded"><h3>Sample code</h3><pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;input-group&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;label</span> <span class="highlight-b">for</span>=<span class="highlight-c">&quot;username&quot;</span><span class="highlight-a">&gt;</span>Username<span class="highlight-a">&lt;/label&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;text&quot;</span> <span class="highlight-b">id</span>=<span class="highlight-c">&quot;Username&quot;</span> <span class="highlight-b">placeholder</span>=<span class="highlight-c">&quot;Username&quot;</span><span class="highlight-a">/&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre><pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;button-group&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;button&gt;</span>Button<span class="highlight-a">&lt;/button&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;button&gt;</span>Button<span class="highlight-a">&lt;/button&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;button&gt;</span>Button<span class="highlight-a">&lt;/button&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre></div>
+  <div class="section double-padded"><h3>Modifiers</h3>
+    <h4>Fluid &amp; vertical grouping</h4><p>You can make your input groups fluid (<code>.fluid</code>) or vertical (<code>.vertical</code>), by applying the appropriate modifiers.</p><h5>Example</h5><form>
+      <fieldset>
+        <legend>Fluid input groups</legend>
+        <div class="input-group fluid"><label for="gi2-un">Username</label> <input type="email" value="" id="gi2-un" placeholder="Username"></div>
+        <div class="input-group fluid"><label for="gi2-pwd">Password</label> <input type="password" value="" id="gi2-pwd" placeholder="Password"></div>
+      </fieldset>
+      </form>
+      <form>
+      <fieldset>
+        <legend>Vertical input groups</legend>
+        <div class="input-group vertical"><label for="gi3-un">Username</label> <input type="email" value="" id="gi3-un" placeholder="Username"></div>
+        <div class="input-group vertical"><label for="gi3-pwd">Password</label> <input type="password" value="" id="gi3-pwd" placeholder="Password"></div>
+      </fieldset>
+      </form><h5>Sample code</h5><pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;input-group fluid&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;label</span> <span class="highlight-b">for</span>=<span class="highlight-c">&quot;username&quot;</span><span class="highlight-a">&gt;</span>Username<span class="highlight-a">&lt;/label&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;text&quot;</span> <span class="highlight-b">id</span>=<span class="highlight-c">&quot;Username&quot;</span> <span class="highlight-b">placeholder</span>=<span class="highlight-c">&quot;Username&quot;</span><span class="highlight-a">/&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;input-group vertical&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;label</span> <span class="highlight-b">for</span>=<span class="highlight-c">&quot;username&quot;</span><span class="highlight-a">&gt;</span>Username<span class="highlight-a">&lt;/label&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;text&quot;</span> <span class="highlight-b">id</span>=<span class="highlight-c">&quot;Username&quot;</span> <span class="highlight-b">placeholder</span>=<span class="highlight-c">&quot;Username&quot;</span><span class="highlight-a">/&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre></div>
+  <div class="section double-padded"><h3>Best practices</h3><div class="row dodos"><div class="col-sm-12 col-md-6"><pre><span class="code-line"><span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;input-group row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;label</span> <span class="highlight-b">for</span>=<span class="highlight-c">&quot;username&quot;</span><span class="highlight-a">&gt;</span>Username<span class="highlight-a">&lt;/label&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;text&quot;</span> <span class="highlight-b">id</span>=<span class="highlight-c">&quot;Username&quot;</span> <span class="highlight-b">placeholder</span>=<span class="highlight-c">&quot;Username&quot;</span><span class="highlight-a">/&gt;</span></span>
+<span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
+<span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;Avoid combining input groups with the <a href="#grid">grid system</a>, as there might be overlapping styles.</p></div></div></div>
+  <div class="section double-padded"><h3>Notes</h3><ul><li>It is highly recommended that you do not place checkboxes or radio buttons inside fluid or vertical input groups.</li><li>Button groups will display horizontally on medium and large screens, but collapse into a vertical view on small screens.</li></ul></div>
+  
+</div><br/><div id="header" class="card fluid">
+  <h2 class="section double-padded">Header</h2>
+  <div class="section"></div>
+  
+  
+  
+  
+  
+  
+</div><br/><div id="navigation-bar" class="card fluid">
+  <h2 class="section double-padded">Navigation bar</h2>
+  <div class="section"></div>
+  
+  
+  
+  
+  
+  
+</div><br/><div id="footer" class="card fluid">
+  <h2 class="section double-padded">Footer</h2>
+  <div class="section"></div>
+  
+  
+  
+  
+  
+  
+</div><br/><div id="drawer" class="card fluid">
+  <h2 class="section double-padded">Menu drawer</h2>
+  <div class="section"></div>
+  
+  
+  
+  
+  
+  
 </div></main>
   </div></div></body></html>

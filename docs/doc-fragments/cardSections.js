@@ -21,6 +21,7 @@ module.exports = {
     `Text color for cards and card sections can be changed by changing the value of the <code>--card-fore-color</code> variable.`,
     `Background color for cards and card sections can be changed by changing the value of the <code>--card-back-color</code> variable.`,
     `Border color for cards and card sections can be changed by changing the value of the <code>--card-border-color</code> variable.`,
+    `You can customize the colors of different color variants by changing the values of the related variables in their respective definitions.`,
     `Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.`
   ],
   modifiers: [

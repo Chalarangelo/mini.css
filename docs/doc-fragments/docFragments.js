@@ -8,10 +8,17 @@ var grid = require('./grid');
 var cards = require('./cards');
 var cardSections = require('./cardSections');
 var formsAndInput = require('./formsAndInput');
+var buttons = require('./buttons');
+var inputGrouping = require('./inputGrouping');
+var header = require('./header');
+var navigationBar = require('./navigationBar');
+var footer = require('./footer');
+var drawer = require('./drawer');
 
 module.exports = [
   gettingStarted,
   commonTextualElements, headings, images, lists, codeAndQuotations,
   grid, cards, cardSections,
-  formsAndInput
+  formsAndInput, buttons, inputGrouping,
+  header, navigationBar, footer, drawer
 ]

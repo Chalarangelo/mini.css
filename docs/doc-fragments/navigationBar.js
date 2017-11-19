@@ -2,7 +2,7 @@ module.exports = {
   id: 'navigation-bar',
   title: 'Navigation bar',
   keywords: [`navigation`, `bar`, `nav`, `link`],
-  description: `<p>The navigation bar element has been minimally styled, allowing you to create simple vertical navigation menus for your web apps. Apart from styling from links, custom classes (<code>/sublink-1</code> and <code>/sublink-2</code>) are provided for creating navigation trees.</p>`,
+  description: `<p>The navigation bar element has been minimally styled, allowing you to create simple vertical navigation menus for your web apps. Apart from styling from links, custom classes (<code>.sublink-1</code> and <code>.sublink-2</code>) are provided for creating navigation trees.</p>`,
   example: `<nav>
     <a href="#" class="doc">Home</a> <span  class="doc">News</span>
     <a href="#" class="sublink-1 doc">New Courses</a> <a href="#" class="sublink-1 doc">Certifications</a>

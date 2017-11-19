@@ -3,6 +3,7 @@
 <!-- TODO: Update meta information when about to release -->
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:400,400i,500,700,700i&amp;subset=latin-ext" rel="stylesheet">
 <link rel="stylesheet" href="./style.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js"></script>
 <title>mini.css - Minimal, responsive, style-agnostic CSS framework</title>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
@@ -19,7 +20,7 @@
 </header>
 <div class="row" id="doc-wrapper">
     <input id="doc-drawer-checkbox" class="drawer" value="on" type="checkbox">
-<nav class="col-md-4 col-lg-3"><div><input style="width: 100%; margin: 0px;" placeholder="Search..." type="search"></div></nav>
+<nav class="col-md-4 col-lg-3" id="nav-drawer"><div><input style="width: 100%; margin: 0px;" placeholder="Search..." type="search" id="search-bar" oninput="search()"></div><a href="#getting-started" id="link-to-getting-started">Getting started</a><a href="#common-textual-elements" id="link-to-common-textual-elements">Common textual elements</a><a href="#heading" id="link-to-heading">Headings</a><a href="#images-captions" id="link-to-images-captions">Images &amp; captions</a><a href="#lists" id="link-to-lists">Lists</a><a href="#code-and-quotations" id="link-to-code-and-quotations">Code &amp; quotations</a><a href="#grid" id="link-to-grid">Grid system</a><a href="#cards" id="link-to-cards">Cards</a><a href="#card-sections" id="link-to-card-sections">Card sections</a><a href="#forms-and-input" id="link-to-forms-and-input">Forms &amp; input</a><a href="#buttons" id="link-to-buttons">Buttons</a><a href="#input-grouping" id="link-to-input-grouping">Input grouping</a><a href="#header" id="link-to-header">Header</a><a href="#navigation-bar" id="link-to-navigation-bar">Navigation bar</a><a href="#footer" id="link-to-footer">Footer</a><a href="#drawer" id="link-to-drawer">Menu drawer</a><span id="no-results">No results found</span></nav>
     <main class="col-sm-12 col-md-8 col-lg-9" id="doc-content"><div id="getting-started" class="card fluid">
   <h2 class="section double-padded">Getting started</h2>
   <div class="section"><p>You can get started using <strong>mini.css</strong> in one of many ways. It is published on <strong>npm</strong> and <strong>yarn</strong>, so you can easily download it, using your preferred package manager:</p>
@@ -602,4 +603,30 @@
   <div class="section double-padded"><h3>Notes</h3><ul><li>Drawer menus are responsive by default and will expand into normal containers on screens larger or equal to <code>768px</code> wide.</li><li>It is highly recommended to place your drawer's toggle button inside your web app's header element.</li><li>You can combine the navigation bar element with the drawer menu for better results.</li><li>Remember to apply the appropriate classes to any and all elements, as indicated in the examples. Failing to do so will result in the drawer menu not rendering or behaving properly.</li></ul></div>
   
 </div></main>
-  </div></div></body></html>
+  </div></div>
+  <script>
+  var docs= [{id: "getting-started", keys: ["html","viewport","head","meta","getting started","introduction","browser support","installation","usage","setup","cdn","npm","yarn"]  },{id: "common-textual-elements", keys: ["p","paragraph","text","textual elements","strong","bold","b","em","i","emphasis","italics","small","a","link","hr","horizontal rule","sub","subscript","sup","exponent","superscript","normalize","reset"]  },{id: "heading", keys: ["heading","h1","h2","h3","h4","h5","h6","small","title","subtitle","subheading"]  },{id: "images-captions", keys: ["img","image","responsive","responsiveness","caption","figure","figcaption"]  },{id: "lists", keys: ["list","ul","ol","li"]  },{id: "code-and-quotations", keys: ["code","pre","kbd","blockquote","quotation"]  },{id: "grid", keys: ["grid","grid system","col","column","layout","row","container","small","medium","large","sm","md","lg","cols","predefined","offset","order","reorder","first","last","normal"]  },{id: "cards", keys: ["card","row","section","container","col","column","small","large","fluid","warning","error"]  },{id: "card-sections", keys: ["card","row","section","container","col","column","media","double-padded","dark"]  },{id: "forms-and-input", keys: ["form","fieldset","legend","input","type","text","checkbox","radio","email","password","tel","input-group","input group","row","col","column","vertical","fluid","file","upload","select","textarea","option","label"]  },{id: "buttons", keys: ["button","input","reset","submit","link","a","label","primary","secondary","tertiary","aria","small","large","inverse"]  },{id: "input-grouping", keys: ["input group","input-group","vertical","fluid","input","button","button group","button-group"]  },{id: "header", keys: ["navigation","header","sticky","button","logo","link"]  },{id: "navigation-bar", keys: ["navigation","bar","nav","link"]  },{id: "footer", keys: ["navigation","footer","sticky","link"]  },{id: "drawer", keys: ["drawer","checkbox","toggle","close","drawer-toggle","drawer-close","menu","navigation","hamburger"]  }];
+  var options = {threshold:0.4, keys:["keys"]};
+  var fuse = new Fuse(docs,options);
+  function search(){
+    var query = document.getElementById('search-bar').value;
+    if(query.length){
+      var result = fuse.search(query);
+      if(result.length){
+        var resIds = result.map(function(item){
+          return ':not(#link-to-'+item.id+')';
+        }).join('');
+        document.getElementById('search-style').innerHTML = '#no-results{display:none;}#nav-drawer a'+resIds+'{display:none;}';
+      }
+      else {
+        document.getElementById('search-style').innerHTML = '#nav-drawer a{display:none;}#no-results{display:block;}';
+      }
+      console.log(result);
+    }
+    else{
+      document.getElementById('search-style').innerHTML = '#no-results{display:none;}';
+    }
+  }
+</script>
+<style id="search-style"></style>
+  </body></html>

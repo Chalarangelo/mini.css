@@ -8,6 +8,7 @@ var documentStart = `<!DOCTYPE html><html lang="en"><head>
 <!-- TODO: Update meta information when about to release -->
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:400,400i,500,700,700i&amp;subset=latin-ext" rel="stylesheet">
 <link rel="stylesheet" href="./style.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js"></script>
 <title>mini.css - Minimal, responsive, style-agnostic CSS framework</title>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
@@ -29,19 +30,46 @@ var appShellStart = `<div id="root"><header>
 var appShellEnd = `</div></div>`;
 
 var appSidebarStart = `<input id="doc-drawer-checkbox" class="drawer" value="on" type="checkbox">
-<nav class="col-md-4 col-lg-3"><div><input style="width: 100%; margin: 0px;" placeholder="Search..." type="search"></div>`;
-var appSidebarEnd = `</nav>`;
+<nav class="col-md-4 col-lg-3" id="nav-drawer"><div><input style="width: 100%; margin: 0px;" placeholder="Search..." type="search" id="search-bar" oninput="search()"></div>`;
+var appSidebarEnd = `<span id="no-results">No results found</span></nav>`;
 
 var mainStart = `<main class="col-sm-12 col-md-8 col-lg-9" id="doc-content">`;
 var mainEnd = `</main>`;
 
 var documentationFragments = docFragments.map(f => buildFragment(f)).join('<br/>');
+var documentationLinks = docFragments.map(f => buildLink(f)).join('');
+var documentationSearch = `<script>
+  var docs= [${docFragments.map(f => stripData(f))}];
+  var options = {threshold:0.4, keys:["keys"]};
+  var fuse = new Fuse(docs,options);
+  function search(){
+    var query = document.getElementById('search-bar').value;
+    if(query.length){
+      var result = fuse.search(query);
+      if(result.length){
+        var resIds = result.map(function(item){
+          return ':not(#link-to-'+item.id+')';
+        }).join('');
+        document.getElementById('search-style').innerHTML = '#no-results{display:none;}#nav-drawer a'+resIds+'{display:none;}';
+      }
+      else {
+        document.getElementById('search-style').innerHTML = '#nav-drawer a{display:none;}#no-results{display:block;}';
+      }
+    }
+    else{
+      document.getElementById('search-style').innerHTML = '#no-results{display:none;}';
+    }
+  }
+</script>
+<style id="search-style"></style>`;
 
 fs.writeFile(outputPath,
   `${documentStart}${appShellStart}
-    ${appSidebarStart}${appSidebarEnd}
+    ${appSidebarStart}${documentationLinks}${appSidebarEnd}
     ${mainStart}${documentationFragments}${mainEnd}
-  ${appShellEnd}${documentEnd}`,
+  ${appShellEnd}
+  ${documentationSearch}
+  ${documentEnd}`,
   function(err) { if(err) return console.log(err);  console.log("The file was saved!"); }
 );
 
@@ -61,4 +89,12 @@ function buildFragment(fragment){
   ${fragment.customization.length?`<div class="section double-padded"><h3>Customization</h3><ul>${fragment.customization.map(s => `<li>${s}</li>`).join('')}</ul></div>`:''}
 </div>`;
   return fragmentHtml;
+}
+
+function buildLink(fragment){
+  return `<a href="#${fragment.id}" id="link-to-${fragment.id}">${fragment.title}</a>`;
+}
+
+function stripData(fragment){
+  return `{id: "${fragment.id}", keys: [${fragment.keywords.map(k=>`"${k}"`)}]  }`;
 }

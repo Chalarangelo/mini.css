@@ -45,12 +45,12 @@
   <div class="col-sm" style="text-align:center; background: #FF6E6E; padding: 1rem;"><img src="browser-logos/opera_128x128.png" alt="opera"><br/><h3><small>&nbsp;Opera</small>36</h3></div>
   <div class="col-sm" style="text-align:center; background: #0F98E0; padding: 1rem;"><img src="browser-logos/android_128x128.png" alt="android"><br/><h3><small>&nbsp;Android</small>56</h3></div>
 </div><figcaption>Browser versions officially supported</figcaption></figure><br/></div>
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
 </div><br/><div id="common-textual-elements" class="card fluid">
   <h2 class="section double-padded">Common textual elements</h2>
   <div class="section"><p><strong>mini.css</strong> utilizes the ruleset of <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a> v7.0.0 to reliably deal with inconsistencies between browsers, while applying some tasteful defaults on top, such as using <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/" target="_blank">native font stack</a> to figure out the best font for each device, setting the background and foreground colors, as well as the size of the text to <code>16px</code> and its line height to <code>1.5</code>.</p>
@@ -62,12 +62,12 @@
 <span class="code-line"><span class="highlight-a">&lt;sub&gt;</span>Subscript<span class="highlight-a">&lt;/sub&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;sup&gt;</span>Superscript<span class="highlight-a">&lt;/sup&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;hr/&gt;</span></span></pre></div>
-  
+
   <div class="section double-padded"><h3>Best practices</h3><div class="row dodos"><div class="col-sm-12 col-md-6"><pre><span class="code-line"><span class="highlight-c">/* Do not do this (use Sass instead) */</span></span>
 <span class="code-line"><span class="highlight-a">html</span> {</span>
 <span class="code-line">  font-size: <span class="highlight-b">14px</span>;</span>
 <span class="code-line">}</span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;Avoid altering the base font size of <code>16px</code> directly in your CSS code, as it can cause problems with the display of certain elements.</p></div></div></div>
-  
+
   <div class="section double-padded"><h3>Customization</h3><ul><li>Text color can be changed globally by changing the value of the <code>--fore-color</code> variable.</li><li>Background color can be changed globally by changing the value of the <code>--back-color</code> variable.</li><li>Border color can be changed globally by changing the value of the <code>--border-color</code> variable. This affects the color of <code>&lt;hr&gt;</code> elements.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li><li>You can change the color of links by changing the values of the <code>--a-link-color</code> and <code>--a-visited-color</code> variables.</li></ul></div>
 </div><br/><div id="heading" class="card fluid">
   <h2 class="section double-padded">Headings</h2>
@@ -85,9 +85,9 @@
 <span class="code-line"><span class="highlight-a">&lt;h5&gt;</span>Heading 5 <span class="highlight-a">&lt;small&gt;</span>Subheading<span class="highlight-a">&lt;/small&gt;&lt;/h5&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;h6&gt;</span>Heading 6 <span class="highlight-a">&lt;small&gt;</span>Subheading<span class="highlight-a">&lt;/small&gt;&lt;/h6&gt;</span></span></pre>
 </div>
-  
-  
-  
+
+
+
   <div class="section double-padded"><h3>Customization</h3><ul><li>Text color can be changed globally by changing the value of the <code>--fore-color</code> variable. This will affect the color of the headings' main text.</li><li>Secondary text color can be changed globally by changing the value of the <code>--secondary-fore-color</code> variable. This will affect the color of subheadings.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>You can change the ratio of headings' size by chaning the value of the <code>--heading-ratio</code> variable. Bear in mind that the value of this variable must be unitless to work properly.</li></ul></div>
 </div><br/><div id="images-captions" class="card fluid">
   <h2 class="section double-padded">Images &amp; captions</h2>
@@ -98,8 +98,8 @@
 <span class="code-line">  <span class="highlight-a">&lt;img</span> <span class="highlight-b">src</span>=<span class="highlight-c">&quot;image.png&quot;</span> <span class="highlight-b">alt</span>=<span class="highlight-c">&quot;Image description&quot;</span><span class="highlight-a">/&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;figcaption&gt;</span>Image caption<span class="highlight-a">&lt;/figcaption&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;/figure&gt;</span></span></pre></div>
-  
-  
+
+
   <div class="section double-padded"><h3>Notes</h3><ul><li>While not mandatory, it is considered a good practice to always add a <code>alt</code> attribute to image elements on your web apps.</li></ul></div>
   <div class="section double-padded"><h3>Customization</h3><ul><li>You can change the text color of <code>&lt;figcaption&gt;</code> elements by changing the value of the <code>--secondary-fore-color</code> variable.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li></ul></div>
 </div><br/><div id="lists" class="card fluid">
@@ -117,9 +117,9 @@
 <span class="code-line">  <span class="highlight-a">&lt;li&gt;</span>Eat breakfast<span class="highlight-a">&lt;/li&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;li&gt;</span>Go to work<span class="highlight-a">&lt;/li&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;/ol&gt;</span></span></pre></div>
-  
-  
-  
+
+
+
   <div class="section double-padded"><h3>Customization</h3><ul><li>Text color can be changed globally by changing the value of the <code>--fore-color</code> variable.</li><li>Background color can be changed globally by changing the value of the <code>--back-color</code> variable.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li></ul></div>
 </div><br/><div id="code-and-quotations" class="card fluid">
   <h2 class="section double-padded">Code &amp; quotations</h2>
@@ -134,8 +134,8 @@
 <span class="code-line">  return num1 + num2;</span>
 <span class="code-line">}<span class="highlight-a">&lt;/pre&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;blockquote</span> <span class="highlight-b">cite</span>=<span class="highlight-c">&quot;www.quotation.source&quot;</span><span class="highlight-a">&gt;</span>This is some text quoted from elsewhere.<span class="highlight-a">&lt;/blockquote&gt;</span></span></pre></div>
-  
-  
+
+
   <div class="section double-padded"><h3>Notes</h3><ul><li>The <code>cite</code> attribute of <code>&lt;blockquote&gt;</code> elements is not mandatory and can be omitted. The element's sizing will be automatically adjusted according to the presence of the <code>cite</code> attribute.</li></ul></div>
   <div class="section double-padded"><h3>Customization</h3><ul><li>Text color can be changed globally by changing the value of the <code>--fore-color</code> variable. This will affect the text color of <code>&lt;code&gt</code> and <code>&lt;pre&gt</code> elements and background color of <code>&lt;kbd&gt;</code> elements.</li><li>Background color can be changed globally by changing the value of the <code>--back-color</code> variable. This will affect the background color of <code>&lt;blockquote&gt</code> elements and text color of <code>&lt;kbd&gt</code>.</li><li>You can change the background color of <code>&lt;code&gt</code> and <code>&lt;pre&gt</code> elements by changing the value of the <code>--secondary-back-color</code> variable.</li><li>You can change the text color of <code>&lt;blockquote&gt;</code> elements by changing the value of the <code>--secondary-fore-color</code> variable.</li><li>You can change the border color of <code>&lt;pre&gt;</code> and <code>&lt;blockquote&gt;</code> elements by changing the value of the <code>--secondary-border-color</code> variable.</li><li>You can change the border color of the left border of <code>&lt;pre&gt;</code> elements by changing the value of the <code>--pre-color</code> variable.</li><li>You can change the border color of the left border of <code>&lt;blockquote&gt;</code> elements by changing the value of the <code>--blockquote-color</code> variable.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li><li>Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.</li></ul></div>
 </div><br/><div id="grid" class="card fluid">
@@ -412,7 +412,7 @@
 <span class="code-line">    <span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;password&quot;</span> <span class="highlight-b">id</span>=<span class="highlight-c">&quot;password&quot;</span> <span class="highlight-b">placeholder</span>=<span class="highlight-c">&quot;Password&quot;</span><span class="highlight-a">/&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;/fieldset&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;/form&gt;</span></span></pre></div>
-  
+
   <div class="section double-padded"><h3>Best practices</h3><div class="row dodos"><div class="col-sm-12 col-md-6"><pre><span class="code-line"><span class="highlight-a">&lt;form&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;fieldset&gt;</span></span>
 <span class="code-line">    <span class="highlight-a">&lt;legend&gt;</span>Simple form<span class="highlight-a">&lt;/legend&gt;</span></span>
@@ -501,7 +501,7 @@
 <span class="code-line">  <span class="highlight-a">&lt;/div&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;Avoid combining input groups with the <a href="#grid">grid system</a>, as there might be overlapping styles.</p></div></div></div>
   <div class="section double-padded"><h3>Notes</h3><ul><li>It is highly recommended that you do not place checkboxes or radio buttons inside fluid or vertical input groups.</li><li>Button groups will display horizontally on medium and large screens, but collapse into a vertical view on small screens.</li></ul></div>
-  
+
 </div><br/><div id="header" class="card fluid">
   <h2 class="section double-padded">Header</h2>
   <div class="section"><p>The header element has been minimally styled, allowing you to create modern headers for your web apps. A header can include a logo element (<code>.logo</code>), as well as buttons, links and labels, styled as buttons (<code>.button</code>).</p></div>
@@ -529,7 +529,7 @@
   <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for the header can be changed by changing the value of the <code>--header-fore-color</code> variable.</li><li>Background color for the header can be changed by changing the value of the <code>--header-back-color</code> variable.</li><li>Border color for the header can be changed by changing the value of the <code>--header-border-color</code> variable.</li><li>Background color for focused buttons inside the header can be changed by changing the value of the <code>--header-hover-back-color</code> variable.</li></ul></div>
 </div><br/><div id="navigation-bar" class="card fluid">
   <h2 class="section double-padded">Navigation bar</h2>
-  <div class="section"><p>The navigation bar element has been minimally styled, allowing you to create simple vertical navigation menus for your web apps. Apart from styling from links, custom classes (<code>/sublink-1</code> and <code>/sublink-2</code>) are provided for creating navigation trees.</p></div>
+  <div class="section"><p>The navigation bar element has been minimally styled, allowing you to create simple vertical navigation menus for your web apps. Apart from styling from links, custom classes (<code>.sublink-1</code> and <code>.sublink-2</code>) are provided for creating navigation trees.</p></div>
   <div class="section"><h3>Example</h3><nav>
     <a href="#" class="doc">Home</a> <span  class="doc">News</span>
     <a href="#" class="sublink-1 doc">New Courses</a> <a href="#" class="sublink-1 doc">Certifications</a>
@@ -544,8 +544,8 @@
 <span class="code-line">  <span class="highlight-a">&lt;span</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;sublink-1&quot;</span><span class="highlight-a">&gt;</span>Category 2.2<span class="highlight-a">&lt;/span&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;sublink-2&quot;</span><span class="highlight-a">&gt;</span>Item 2.2.1<span class="highlight-a">&lt;/a&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;/nav&gt;</span></span></pre></div>
-  
-  
+
+
   <div class="section double-padded"><h3>Notes</h3><ul><li>It is recommended that you combine the navigation bar element with the <a href="#grid">grid system</a> to create responsive navigation menus for your web apps.</li></ul></div>
   <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for navigation bars can be changed by changing the value of the <code>--nav-fore-color</code> variable.</li><li>Background color for navigation bars can be changed by changing the value of the <code>--nav-back-color</code> variable.</li><li>Border color for navigation bars can be changed by changing the value of the <code>--nav-border-color</code> variable.</li><li>Background color for focused buttons inside navigation bars can be changed by changing the value of the <code>--nav-hover-back-color</code> variable.</li><li>Text color for links inside navigation bars can be changed by changing the value of the <code>--nav-link-color</code> variable.</li><li>Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li><li>Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.</li></ul></div>
 </div><br/><div id="footer" class="card fluid">
@@ -559,8 +559,8 @@
     <h4>Sticky footer</h4><p>You can make your web app's footer sticky (<code>.sticky</code>), by applying the appropriate modifier.</p><h5>Sample code</h5><pre><span class="code-line"><span class="highlight-a">&lt;footer</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;sticky&quot;</span><span class="highlight-a">&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;p&gt;</span>Footer text<span class="highlight-a">&lt;/p&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;/footer&gt;</span></span></pre></div>
-  
-  
+
+
   <div class="section double-padded"><h3>Customization</h3><ul><li>Text color for the footer can be changed by changing the value of the <code>--footer-fore-color</code> variable.</li><li>Background color for the footer can be changed by changing the value of the <code>--footer-back-color</code> variable.</li><li>Border color for the footer can be changed by changing the value of the <code>--footer-border-color</code> variable.</li><li>Text color for links inside the footer can be changed by changing the value of the <code>--footer-link-color</code> variable.</li><li>Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.</li></ul></div>
 </div><br/><div id="drawer" class="card fluid">
   <h2 class="section double-padded">Menu drawer</h2>
@@ -607,7 +607,7 @@
 <span class="code-line">  <span class="highlight-a">&lt;a</span> <span class="highlight-b">href</span>=<span class="highlight-c">&quot;#&quot;</span><span class="highlight-a">&gt;</span>Home<span class="highlight-a">&lt;/a&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;/div&gt;</span></span></pre></div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;You should not place anything between the checkbox controlling the drawer and the container.</p></div></div></div>
   <div class="section double-padded"><h3>Notes</h3><ul><li>Drawer menus are responsive by default and will expand into normal containers on screens larger or equal to <code>768px</code> wide.</li><li>It is highly recommended to place your drawer's toggle button inside your web app's header element.</li><li>You can combine the navigation bar element with the drawer menu for better results.</li><li>Remember to apply the appropriate classes to any and all elements, as indicated in the examples. Failing to do so will result in the drawer menu not rendering or behaving properly.</li></ul></div>
-  
+
 </div><footer><p><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo" target="_blank">@Chalarangelo</a>. Source code licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>.</p><p>Icons provided by <a href="https://feathericons.com/" target="_blank">Feather</a>. Search powered by <a href="http://fusejs.io/" target="_blank">Fuse.js</a>.</p></footer></main>
   </div></div>
   <script>

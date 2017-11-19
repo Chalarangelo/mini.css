@@ -191,14 +191,14 @@ p.splash {
     }
   }
   // TODO: Actually convert to a link, stylize as button, utilize module
-  button {
+  a.button {
     background: transparent;
     border: 1px solid #fff;
     border-radius: 4px;
     padding: 4px 8px;
     color: #fff;
     font-size: 1.25rem;
-    display: block;
+    display: inline-block;
     margin: 20px auto 8px;
     cursor: pointer;
   }
@@ -362,3 +362,39 @@ main {
 
 .responsive-label {align-items: center;}
 @media (min-width: 768px) { .responsive-label .col-md-3 {text-align: right;}}
+
+#nav-drawer {
+  h3 {
+    text-align:center;
+    @media (min-width: 768px) {
+      display:none;
+    }
+  }
+}
+
+main footer {
+  position: relative;
+  margin-top: 1.5rem;
+  left: -0.25rem;
+  width: calc(100% - 0.5rem);
+}
+
+header.row a span {
+  display: none;
+  @media (min-width: 768px) {
+    display: inline;
+  }
+}
+
+// I removed this, it seemed unnecessary, but keep it here just in case I want it back in later on?
+// header .logo{
+//   padding-top: 0.1875rem;
+//   &::first-letter {
+//     font-size: 1.25em;
+//     line-height: 1.25;
+//     color: #fff;
+//     background: #f22f21;
+//     border-radius: 6px;
+//     padding: 0 6px;
+//   }
+// }

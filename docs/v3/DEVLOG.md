@@ -181,3 +181,10 @@
 - Documented `header`, `footer` and `nav`.
 - Documented `drawer`.
 - Implemented search functionality, using `fuse`. It all works pretty well.
+- Added `index.html` generation code in the build file, this will allow me to not load a script for the versioning.
+- Polished menus with icons, updated menus.
+- Updated splash page with all the necessary thing and buttons.
+- Optimized all images to make the pages lighter.
+- Updated links to open in new tabs when they are external.
+- Generated new favicons.
+- Everything should be ready to release `v3.0.0-alpha.1` tomorrow.

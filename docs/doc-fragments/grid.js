@@ -2,7 +2,7 @@ module.exports = {
   id: 'grid',
   title: 'Grid system',
   keywords: [`grid`, `grid system`, `col`, `column`, `layout`, `row`, `container`, `small`, `medium`, `large`, `sm`, `md`, `lg`, `cols`, `predefined`, `offset`, `order`, `reorder`, `first`, `last`, `normal`],
-  description: `<p>The grid system of <strong>mini.css</strong> utilizes the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" targe="_blank">Flexbox layout</a> to provide you with a simple, modern, responsive layout system for your web apps. Like most modern CSS frameworks' grid systems, it is composed of three main components - containers, rows and columns:</p>
+  description: `<p>The grid system of <strong>mini.css</strong> utilizes the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox layout</a> to provide you with a simple, modern, responsive layout system for your web apps. Like most modern CSS frameworks' grid systems, it is composed of three main components - containers, rows and columns:</p>
   <ul><li>The container (<code>.container</code>) is the outermost layer of the grid system and serves as a fluid wrapper, which can be used as the basis for your layout.</li>
   <li>Inside the container, you can add one or more rows (<code>.row</code>), which will in turn house the columns.</li>
   <li>Columns (<code>col-*-*</code>) are placed inside rows and they can be customized to display differently on different screen sizes, make use of fluid layouts, use offsets or change ordering.</li></ul>`,

@@ -141,6 +141,31 @@ p.splash {
   text-align: justify;
 }
 
+a.button.splash {
+  position: absolute;
+  top: 65vh;
+  width: 50vw;
+  left: 25vw;
+  text-align: center;
+  font-size: 1.25rem;
+  border-color: #f22f21;
+  background: rgba(255,255,255,0.35);
+  transition: all 0.3s;
+  &:hover {
+    background: #f22f21;
+    color: #f8f8f8;
+    border-color: #f22f21;
+  }
+  @media screen and (min-width: 768px){
+    width: 30vw;
+    left: 35vw;
+  }
+  @media screen and (min-width: 1280px){
+    width: 25vw;
+    left: 37.5vw;
+  }
+}
+
 #version-info {
   position: absolute;
   bottom: 0;

@@ -179,3 +179,4 @@
 - Cleaned up certain parts of the docs just a little bit.
 - Documented `button` elements and input grouping.
 - Documented `header`, `footer` and `nav`.
+- Documented `drawer`.

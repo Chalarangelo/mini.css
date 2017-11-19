@@ -180,3 +180,4 @@
 - Documented `button` elements and input grouping.
 - Documented `header`, `footer` and `nav`.
 - Documented `drawer`.
+- Implemented search functionality, using `fuse`. It all works pretty well.

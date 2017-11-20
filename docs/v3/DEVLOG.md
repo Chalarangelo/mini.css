@@ -177,8 +177,13 @@
 - Documented `card` and `card section` to complete the `layout` module's docs.
 - Altered the `dark` section colors, didn't really like them.
 - Cleaned up certain parts of the docs just a little bit.
+
+## 20171118
 - Documented `button` elements and input grouping.
 - Documented `header`, `footer` and `nav`.
+
+## 20171119
+
 - Documented `drawer`.
 - Implemented search functionality, using `fuse`. It all works pretty well.
 - Added `index.html` generation code in the build file, this will allow me to not load a script for the versioning.
@@ -188,3 +193,10 @@
 - Updated links to open in new tabs when they are external.
 - Generated new favicons.
 - Everything should be ready to release `v3.0.0-alpha.1` tomorrow.
+
+## 20171120
+
+- Updated `.drawer` documentation to include customization.
+- Recompiled default flavor just in case.
+- Fixed the devlog showing wrong dates. **Hugging cat** was at it again, it seems!
+- Unleashed the first **Gluon** alpha unto the world!

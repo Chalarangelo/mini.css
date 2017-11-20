@@ -29,7 +29,16 @@ module.exports = {
     `You can combine the navigation bar element with the drawer menu for better results.`,
     `Remember to apply the appropriate classes to any and all elements, as indicated in the examples. Failing to do so will result in the drawer menu not rendering or behaving properly.`
   ],
-  customization: [],
+  customization: [
+    `Text color can be changed globally by changing the value of the <code>--fore-color</code> variable. This will affect the text color of the toggle button and items inside the drawer container.`,
+    `Background color for the drawer container can be changed by changing the value of the <code>--drawer-back-color</code> variable.`,
+    `Border color for the drawer container can be changed by changing the value of the <code>--drawer-border-color</code> variable.`,
+    `Text color for the drawer close button can be changed by changing the values of the <code>--drawer-close-color</code>.`,
+    `Background color for the drawer close button when focused or hovered over can be changed by changing the values of the <code>--drawer-hover-back-color</code>.`,
+    `Universal margin for elements can be changed globally by changing the value of the <code>--universal-margin</code> variable. As a rule of thumb, consider the universal margin to be the distance you want your paragraphs to have from the sides of the screen.`,
+    `Universal padding for elements can be changed globally by changing the value of the <code>--universal-padding</code> variable.`,
+    `Universal border radius for elements can be changed globally by changing the value of the <code>--universal-border-radius</code> variable.`
+  ],
   modifiers: [
     {
       title : `Persistent drawer`,

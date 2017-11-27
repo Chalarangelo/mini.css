@@ -1402,3 +1402,62 @@ mark.inline-block {
   display: block;
   text-align: center;
 }
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.modal .card {
+  margin: 0 auto;
+  max-height: 50vh;
+  width: 100vw;
+  overflow: auto;
+}
+
+:checked + .modal {
+  display: -webkit-box;
+  -webkit-box-flex: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  z-index: 1200;
+}
+
+:checked + .modal .card  {
+  overflow-y: scroll;
+}
+
+:checked + .modal .card .section:last-child {
+  height: 50px;
+}
+
+:checked + .modal .card .close {
+  z-index: 1211;
+}
+
+.close {
+  width: 3.5rem;
+}
+
+.modal .card .close {
+    position: relative;
+    top: 0.85rem;
+    left: calc(100% - 4.5rem);
+    padding: 10px;
+}
+
+.close:before {
+    content: "Dismiss";
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

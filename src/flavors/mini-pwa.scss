@@ -350,7 +350,7 @@ $toast-padding:             0.75rem 1.5rem;        // Padding for toasts
 $toast-box-shadow:                                 // Box shadow for toasts
   0 2*$_1px 2*$_1px 0 rgba(0, 0, 0, 0.14), 0 1*$_1px 5*$_1px 0 rgba(0, 0, 0, 0.12), 0 3*$_1px 1*$_1px -2*$_1px rgba(0, 0, 0, 0.2);
 $include-tooltip:            false;                // Should tooltips be included? (`true`/`false`) [1]
-$include-modal:              false;                // Should modals be included? (`true`/`false`) [1]
+$include-modal:              true;                // Should modals be included? (`true`/`false`) [1]
 //   Notes:
 // [1] - Due to the values of $include-tooltip and $include-modal being set
 //  to `false`, no styling is provided for these elements. If you want to enable them, please
@@ -457,10 +457,77 @@ th, td {
 @import '../mini/contextual';
 /*
   Custom style fixes and tweaks for contextual elements.
-*/
-.toast {
-  font-size: 0.875rem;
+  */
+  .toast {
+    font-size: 0.875rem;
+  }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+
+  .card {
+    margin: 0 auto;
+    max-height: 50vh;
+    width: 100vw;
+    overflow: auto;
+
+    .close {
+      position: relative;
+      top: 0.85rem;
+      left: calc(100% - 4.5rem);
+      padding: 10px;
+    }
+  }
 }
+
+
+:checked + .modal {
+  display: -webkit-box;
+  -webkit-box-flex: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  z-index: 1200;
+
+  .card  {
+    overflow-y: scroll;
+  
+    .section:last-child {
+      height: 50px;
+    }
+  
+    .close {
+      z-index: 1211;
+    }
+  }
+}
+
+
+
+
+.close {
+  width: 3.5rem;
+
+  &:before {
+    content: "Dismiss";
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+
 //  ---  ---  ---
 // Progress module is disabled for this flavor.
 // @import '../mini/progress';

@@ -79,6 +79,25 @@ $button-large-margin:  var(#{$universal-margin-var});
 @include make-button-alt-size ($button-large-name, $button-large-padding, $button-large-margin);
 
 @import '../mini/navigation';
+@import '../mini/contextual';
+
+/*
+  Custom elements for contextual background elements, toasts and tooltips.
+*/
+$mark-secondary-name:            'secondary'; // Class name for secondary <mark> color variant.
+$mark-secondary-back-color:      #d32f2f;     // Background color for secondary <mark> color variant.
+@include make-mark-alt-color ($mark-secondary-name, $mark-secondary-back-color);
+
+$mark-tertiary-name:            'tertiary';  // Class name for tertiary <mark> color variant.
+$mark-tertiary-back-color:      #308732;     // Background color for tertiary <mark> color variant.
+@include make-mark-alt-color ($mark-tertiary-name, $mark-tertiary-back-color);
+
+$mark-tag-name:                 'tag';       // Class name, padding and border radius for tag <mark> size variant.
+$mark-tag-padding:      calc(var(#{$universal-padding-var})/2) var(#{$universal-padding-var});
+$mark-tag-border-radius:        1em;
+@include make-mark-alt-size ($mark-tag-name, $mark-tag-padding, $mark-tag-border-radius);
+
+// Custom elements for his flavor.
 
 :not(.doc) {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, sans-serif;

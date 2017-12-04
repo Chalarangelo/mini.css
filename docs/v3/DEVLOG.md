@@ -200,3 +200,13 @@
 - Recompiled default flavor just in case.
 - Fixed the devlog showing wrong dates. **Hugging cat** was at it again, it seems!
 - Unleashed the first **Gluon** alpha unto the world!
+
+## 20171204
+
+- Started working on `contextual` module.
+- Removed the `margin` property from `mark` elements, it seemed particularly irrelevant, provided they are usually inlined inside text. This can be added manually now, but I don't think nobody will have a use for it.
+- Removed `border` styling from `mark` elements, it also seemed reasonably irrelevant. Easy to add, generic borders will help here, when I add them back in `utility`.
+- Slightly altered `inline-block` version of `mark` to match the styling of the rest of the elements.
+- Worked on `contextual_mixins` to get the `mark` variants ready. Slightly altered the mixins from the old version.
+- Used mixins to add `secondary`, `tertiary` and `tag` `mark` variants.
+- Fed **hugging cat**.

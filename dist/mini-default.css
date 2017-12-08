@@ -1278,6 +1278,10 @@ footer.sticky {
 :root {
   --mark-back-color: #0277bd;
   --mark-fore-color: #fafafa;
+  --toast-back-color: #424242;
+  --toast-fore-color: #fafafa;
+  --tooltip-back-color: #212121;
+  --tooltip-fore-color: #fafafa;
 }
 
 mark {
@@ -1294,6 +1298,82 @@ mark.inline-block {
   font-size: 1em;
   line-height: 1.5;
   padding: calc(var(--universal-padding) / 2) var(--universal-padding);
+}
+
+.toast {
+  position: fixed;
+  bottom: calc(var(--universal-margin) * 3);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1111;
+  color: var(--toast-fore-color);
+  background: var(--toast-back-color);
+  border-radius: calc(var(--universal-border-radius) * 16);
+  padding: var(--universal-padding) calc(var(--universal-padding) * 3);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip:before, .tooltip:after {
+  position: absolute;
+  opacity: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  transition: all 0.3s;
+  z-index: 1010;
+  left: 50%;
+}
+
+.tooltip:not(.bottom):before, .tooltip:not(.bottom):after {
+  bottom: 75%;
+}
+
+.tooltip.bottom:before, .tooltip.bottom:after {
+  top: 75%;
+}
+
+.tooltip:hover:before, .tooltip:hover:after, .tooltip:focus:before, .tooltip:focus:after {
+  opacity: 1;
+  clip: auto;
+  -webkit-clip-path: inset(0%);
+  clip-path: inset(0%);
+}
+
+.tooltip:before {
+  content: '';
+  background: transparent;
+  border: var(--universal-margin) solid transparent;
+  left: calc(50% - var(--universal-margin));
+}
+
+.tooltip:not(.bottom):before {
+  border-top-color: #212121;
+}
+
+.tooltip.bottom:before {
+  border-bottom-color: #212121;
+}
+
+.tooltip:after {
+  content: attr(aria-label);
+  color: var(--tooltip-fore-color);
+  background: var(--tooltip-back-color);
+  border-radius: var(--universal-border-radius);
+  padding: var(--universal-padding);
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.tooltip:not(.bottom):after {
+  margin-bottom: calc(2 * var(--universal-margin));
+}
+
+.tooltip.bottom:after {
+  margin-top: calc(2 * var(--universal-margin));
 }
 
 /*

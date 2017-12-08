@@ -210,3 +210,10 @@
 - Worked on `contextual_mixins` to get the `mark` variants ready. Slightly altered the mixins from the old version.
 - Used mixins to add `secondary`, `tertiary` and `tag` `mark` variants.
 - Fed **hugging cat**.
+
+## 20171208
+
+- Added `tooltip` and `toast`. Their mixins were rarely ever used as far as I can tell, so they will not make into **Gluon**, at least for now. If the need arises, they can be easily added back in at a later date.
+- Apparently the `-webkit-clip-path` is necessary for best support. Remind **hugging cat** every time from now on.
+- Removed legacy support from `tooltip`'s tail. I mean everything uses `calc` now, so what's the use to keep that in?
+- I am removing `-webkit-transform`, it seems unnecessary now.

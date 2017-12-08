@@ -3,12 +3,25 @@
 */
 $mark-back-color:        #0277bd !default;       // Background color for <mark>
 $mark-fore-color:        #fafafa !default;       // Text color for <mark>
-$mark-font-size:         0.95em;                 // Font size for <mark>
-$mark-line-height:       1em;                    // Line height for <mark>
-$mark-inline-block-name: 'inline-block';         // Class name for inline-block <mark>
+$mark-font-size:         0.95em !default;        // Font size for <mark>
+$mark-line-height:       1em !default;           // Line height for <mark>
+$mark-inline-block-name: 'inline-block' !default;// Class name for inline-block <mark>
+$_include-toast:         true !default;          // [Hidden] Should toasts be included? (boolean)
+$toast-name:             'toast' !default;       // Class name for toast component
+$toast-back-color:       #424242 !default;       // Background color for toast component
+$toast-fore-color:       #fafafa !default;       // Text color for toast component
+$_include-tooltip:       true !default;          // [Hidden] Should tooltips be included? (boolean)
+$tooltip-name:           'tooltip' !default;     // Class name for tooltip component
+$tooltip-bottom-name:    'bottom' !default;      // Bottom tooltip class name
+$tooltip-back-color:       #212121 !default;     // Background color for tooltip component
+$tooltip-fore-color:       #fafafa !default;     // Text color for tooltip component
 // CSS variable name definitions [exercise caution if modifying these]
 $mark-back-color-var:         '--mark-back-color' !default;
 $mark-fore-color-var:         '--mark-fore-color' !default;
+$toast-back-color-var:        '--toast-back-color' !default;
+$toast-fore-color-var:        '--toast-fore-color' !default;
+$tooltip-back-color-var:      '--tooltip-back-color' !default;
+$tooltip-fore-color-var:      '--tooltip-fore-color' !default;
 // == Uncomment below code if this module is used on its own ==
 //
 // $base-line-height:        1.5 !default;         // Line height for most elements
@@ -36,6 +49,10 @@ $mark-fore-color-var:         '--mark-fore-color' !default;
 :root {
   #{$mark-back-color-var}: $mark-back-color;
   #{$mark-fore-color-var}: $mark-fore-color;
+  #{$toast-back-color-var}: $toast-back-color;
+  #{$toast-fore-color-var}: $toast-fore-color;
+  #{$tooltip-back-color-var}: $tooltip-back-color;
+  #{$tooltip-fore-color-var}: $tooltip-fore-color;
 }
 // Default styling for mark. Use mixins for alternate styles.
 mark {
@@ -55,5 +72,85 @@ mark {
     // Line height is reset to the normal line-height from `core`. Also hardcoded for same reasons.
     line-height: $base-line-height;
     padding: calc(var(#{$universal-padding-var}) / 2) var(#{$universal-padding-var});
+  }
+}
+// Styling for toasts.  - No border styling, I think it's unnecessary anyways.
+@if $_include-toast {
+  .#{$toast-name} {
+    position: fixed;
+    bottom: calc(var(#{$universal-margin-var}) * 3);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1111;
+    color: var(#{$toast-fore-color-var});
+    background: var(#{$toast-back-color-var});
+    border-radius: calc(var(#{$universal-border-radius-var}) * 16);
+    padding: var(#{$universal-padding-var}) calc(var(#{$universal-padding-var}) * 3);
+    @if $universal-box-shadow != none {
+      box-shadow: var(#{$universal-box-shadow-var});
+    }
+  }
+}
+// Styling for tooltips.
+@if $_include-tooltip {
+  .#{$tooltip-name} {
+    position: relative;
+    display: inline-block;
+    &:before, &:after {
+      position: absolute;
+      opacity: 0;
+      clip: rect(0 0 0 0);
+      -webkit-clip-path: inset(100%);
+              clip-path: inset(100%);
+      transition: all 0.3s;
+      // Remember to keep this index a lower value than the one used for stickies.
+      z-index: 1010;  // Deals with certain problems when combined with cards and tables.
+      left: 50%;
+    }
+    &:not(.#{$tooltip-bottom-name}):before, &:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
+      bottom: 75%;
+    }
+    &.#{$tooltip-bottom-name}:before, &.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
+      top: 75%;
+    }
+    &:hover, &:focus {
+      &:before, &:after {
+      opacity: 1;
+      clip: auto;
+      -webkit-clip-path: inset(0%);
+              clip-path: inset(0%);
+      }
+    }
+    &:before {  // This is the little tooltip triangle
+      content: '';
+      background: transparent;
+      border: var(#{$universal-margin-var}) solid transparent;
+      // Newer browsers will center the tail properly
+      left: calc(50% - var(#{$universal-margin-var}));
+    }
+    &:not(.#{$tooltip-bottom-name}):before { // Top (default) tooltip styling
+      border-top-color: $tooltip-back-color;
+    }
+    &.#{$tooltip-bottom-name}:before { // Bottom tooltip styling
+      border-bottom-color: $tooltip-back-color;
+    }
+    &:after {  // This is the actual tooltip's text block
+      content: attr(aria-label);
+      color: var(#{$tooltip-fore-color-var});
+      background: var(#{$tooltip-back-color-var});
+      border-radius: var(#{$universal-border-radius-var});
+      padding: var(#{$universal-padding-var});
+      @if $universal-box-shadow != none {
+        box-shadow: var(#{$universal-box-shadow-var});
+      }
+      white-space: nowrap;
+      transform: translateX(-50%);
+    }
+    &:not(.#{$tooltip-bottom-name}):after { // Top (default) tooltip styling
+      margin-bottom: calc(2 * var(#{$universal-margin-var}));
+    }
+    &.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
+      margin-top: calc(2 * var(#{$universal-margin-var}));
+    }
   }
 }

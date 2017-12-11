@@ -22,6 +22,17 @@ $modal-close-name:        'modal-close' !default;// Class name for modal dialog 
 $modal-close-color:       #444 !default;         // Text color for the close button of the modal dialog component
 $modal-close-hover-back-color: #f0f0f0 !default; // Background color for the close button of the modal dialog component (on hover/focus)
 $modal-close-size:        1.75rem !default;      // Font size for the close button of the modal dialog component
+$_include-collapse:       true !default;         // [Hidden] Should collapse components be included? (boolean)
+$collapse-name:           'collapse' !default;   // Class name for collapse component
+$collapse-label-height:   1.5rem !default;       // Height for the labels in the collapse component
+$collapse-content-max-height: 400px !default;    // Max height for the content panes in the collapse component
+$collapse-label-back-color:     #e8e8e8 !default;// Background color for labels in the collapse component
+$collapse-label-fore-color:     #212121 !default;// Text color for labels in the collapse component
+$collapse-label-hover-back-color:#f0f0f0 !default;// Background color for labels in the collapse component (hover)
+$collapse-selected-label-back-color:#ececec !default;// Background color for selected labels in the collapse component
+$collapse-border-color:   #ddd !default;          // Border color for collapse component
+$collapse-selected-label-border-color:   #0277bd !default;  // Border color for collapse component's selected labels
+$collapse-content-back-color: #fafafa !default;   // Background color for collapse component's content panes
 // CSS variable name definitions [exercise caution if modifying these]
 $mark-back-color-var:         '--mark-back-color' !default;
 $mark-fore-color-var:         '--mark-fore-color' !default;
@@ -32,6 +43,13 @@ $tooltip-fore-color-var:      '--tooltip-fore-color' !default;
 $modal-overlay-color-var:     '--modal-overlay-color' !default;
 $modal-close-color-var:       '--modal-close-color' !default;
 $modal-close-hover-back-color-var: '--modal-close-hover-color' !default;
+$collapse-label-back-color-var:    '--collapse-label-back-color' !default;
+$collapse-label-fore-color-var:    '--collapse-label-fore-color' !default;
+$collapse-label-hover-back-color-var:    '--collapse-label-hover-back-color' !default;
+$collapse-selected-label-back-color-var: '--collapse-selected-label-back-color' !default;
+$collapse-border-color-var:        '--collapse-border-color' !default;
+$collapse-content-back-color-var:  '--collapse-content-back-color' !default;
+$collapse-selected-label-border-color-var: '--collapse-selected-label-border-color' !default;
 // == Uncomment below code if this module is used on its own ==
 //
 // $base-line-height:        1.5 !default;         // Line height for most elements
@@ -66,6 +84,13 @@ $modal-close-hover-back-color-var: '--modal-close-hover-color' !default;
   #{$modal-overlay-color-var}: $modal-overlay-color;
   #{$modal-close-color-var}: $modal-close-color;
   #{$modal-close-hover-back-color-var}: $modal-close-hover-back-color;
+  #{$collapse-label-back-color-var}:  $collapse-label-back-color;
+  #{$collapse-label-fore-color-var}:  $collapse-label-fore-color;
+  #{$collapse-label-hover-back-color-var}:  $collapse-label-hover-back-color;
+  #{$collapse-selected-label-back-color-var}: $collapse-selected-label-back-color;
+  #{$collapse-border-color-var}: $collapse-border-color;
+  #{$collapse-content-back-color-var} : $collapse-content-back-color;
+  #{$collapse-selected-label-border-color-var}: $collapse-selected-label-border-color;
 }
 // Default styling for mark. Use mixins for alternate styles.
 mark {
@@ -167,7 +192,7 @@ mark {
     }
   }
 }
-// Styling for modal dialogs
+// Styling for modal dialogs.
 @if $_include-modal {
   [type="checkbox"].#{$modal-name} {
     height: 1px;
@@ -225,6 +250,93 @@ mark {
         & .#{$modal-close-name} {
           z-index: 1211;
         }
+      }
+    }
+  }
+}
+// Styling for collapse.
+@if $_include-collapse {
+  .#{$collapse-name} {
+    width: calc(100% - 2 * var(#{$universal-margin-var}));
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    margin: var(#{$universal-margin-var});
+    border-radius: var(#{$universal-border-radius-var});
+    @if $universal-box-shadow != none {
+      box-shadow: var(#{$universal-box-shadow-var});
+    }
+    & > [type="radio"], & > [type="checkbox"] {
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      overflow: hidden;
+      position: absolute;
+      clip: rect(0 0 0 0);
+      -webkit-clip-path: inset(100%);
+      clip-path: inset(100%);
+    }
+    & > label {
+      flex-grow: 1;
+      display: inline-block;
+      height: $collapse-label-height;
+      cursor: pointer;
+      transition: background 0.3s;
+      color: var(#{$collapse-label-fore-color-var});
+      background: var(#{$collapse-label-back-color-var});
+      border: $__1px solid var(#{$collapse-border-color-var});
+      padding: calc(1.5 * var(#{$universal-padding-var}));
+      &:hover, &:focus {
+        background: var(#{$collapse-label-hover-back-color-var});
+      }
+      + div {
+        flex-basis: auto;
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
+        transition: max-height 0.3s;
+        max-height: 1px;  // for transition
+      }
+    }
+    > :checked + label {
+      background: var(#{$collapse-selected-label-back-color-var});
+      // border: 0.0625rem solid #bdbdbd; // var it
+      border-bottom-color: var(#{$collapse-selected-label-border-color-var});
+      & + div {
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        margin: 0;
+        background: var(#{$collapse-content-back-color-var});
+        border: $__1px solid var(#{$collapse-border-color-var});
+        border-top: 0;
+        padding: var(#{$universal-padding-var});
+        clip: auto;
+        -webkit-clip-path: inset(0%);
+        clip-path: inset(0%);
+        max-height: $collapse-content-max-height;
+      }
+    }
+    & > label:not(:first-of-type) { // Keep these down here, as it overrides some other styles.
+      border-top: 0;
+    }
+    & > label:first-of-type {
+      border-radius: var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}) 0 0; // universalize
+    }
+    & > label:last-of-type {
+      border-radius: 0 0 var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}); // universalize
+    }
+    & > :checked:last-of-type + label {
+      border-radius: 0;
+      + div {
+        border-radius: 0 0 var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}); // universalize
       }
     }
   }

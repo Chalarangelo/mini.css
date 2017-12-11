@@ -1285,6 +1285,13 @@ footer.sticky {
   --modal-overlay-color: rgba(0, 0, 0, 0.45);
   --modal-close-color: #444;
   --modal-close-hover-color: #f0f0f0;
+  --collapse-label-back-color: #e8e8e8;
+  --collapse-label-fore-color: #212121;
+  --collapse-label-hover-back-color: #f0f0f0;
+  --collapse-selected-label-back-color: #ececec;
+  --collapse-border-color: #ddd;
+  --collapse-content-back-color: #fafafa;
+  --collapse-selected-label-border-color: #0277bd;
 }
 
 mark {
@@ -1442,6 +1449,98 @@ mark.inline-block {
 
 [type="checkbox"].modal:checked + div .card .modal-close {
   z-index: 1211;
+}
+
+.collapse {
+  width: calc(100% - 2 * var(--universal-margin));
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  margin: var(--universal-margin);
+  border-radius: var(--universal-border-radius);
+}
+
+.collapse > [type="radio"], .collapse > [type="checkbox"] {
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.collapse > label {
+  flex-grow: 1;
+  display: inline-block;
+  height: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: var(--collapse-label-fore-color);
+  background: var(--collapse-label-back-color);
+  border: 0.0625rem solid var(--collapse-border-color);
+  padding: calc(1.5 * var(--universal-padding));
+}
+
+.collapse > label:hover, .collapse > label:focus {
+  background: var(--collapse-label-hover-back-color);
+}
+
+.collapse > label + div {
+  flex-basis: auto;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  transition: max-height 0.3s;
+  max-height: 1px;
+}
+
+.collapse > :checked + label {
+  background: var(--collapse-selected-label-back-color);
+  border-bottom-color: var(--collapse-selected-label-border-color);
+}
+
+.collapse > :checked + label + div {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  margin: 0;
+  background: var(--collapse-content-back-color);
+  border: 0.0625rem solid var(--collapse-border-color);
+  border-top: 0;
+  padding: var(--universal-padding);
+  clip: auto;
+  -webkit-clip-path: inset(0%);
+  clip-path: inset(0%);
+  max-height: 400px;
+}
+
+.collapse > label:not(:first-of-type) {
+  border-top: 0;
+}
+
+.collapse > label:first-of-type {
+  border-radius: var(--universal-border-radius) var(--universal-border-radius) 0 0;
+}
+
+.collapse > label:last-of-type {
+  border-radius: 0 0 var(--universal-border-radius) var(--universal-border-radius);
+}
+
+.collapse > :checked:last-of-type + label {
+  border-radius: 0;
+}
+
+.collapse > :checked:last-of-type + label + div {
+  border-radius: 0 0 var(--universal-border-radius) var(--universal-border-radius);
 }
 
 /*

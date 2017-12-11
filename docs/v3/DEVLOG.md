@@ -229,3 +229,4 @@
 - Documented `mark` elements.
 - Fixed a broken link in `index.html`.
 - Added the appropriate script for generating Codepen links dynamically. Oh, yeah!
+- Documented `.toast` messages.

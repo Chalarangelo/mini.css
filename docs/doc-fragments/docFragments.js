@@ -15,6 +15,7 @@ var navigationBar = require('./navigationBar');
 var footer = require('./footer');
 var drawer = require('./drawer');
 var textHighlighting = require('./textHighlighting');
+var toasts = require('./toasts');
 
 module.exports = [
   gettingStarted,
@@ -22,5 +23,5 @@ module.exports = [
   grid, cards, cardSections,
   formsAndInput, buttons, inputGrouping,
   header, navigationBar, footer, drawer,
-  textHighlighting
+  textHighlighting, toasts
 ]

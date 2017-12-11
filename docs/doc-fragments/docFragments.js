@@ -14,11 +14,13 @@ var header = require('./header');
 var navigationBar = require('./navigationBar');
 var footer = require('./footer');
 var drawer = require('./drawer');
+var textHighlighting = require('./textHighlighting');
 
 module.exports = [
   gettingStarted,
   commonTextualElements, headings, images, lists, codeAndQuotations,
   grid, cards, cardSections,
   formsAndInput, buttons, inputGrouping,
-  header, navigationBar, footer, drawer
+  header, navigationBar, footer, drawer,
+  textHighlighting
 ]

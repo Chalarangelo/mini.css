@@ -1,5 +1,6 @@
 var fs = require('fs');
 var version = require('./vinf');                            // Gets version info.
+var frameworkUrl = '"https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.0-alpha.1/mini-default.css"';
 
 // INDEX
 
@@ -25,7 +26,7 @@ var indexHtml = `<!DOCTYPE html>
     <h1 class="splash">mini<small>.css</small></h1>
     <p class="splash">minimal, responsive, style-agnostic <br>CSS framework</p>
     <p id="version-info">${version.version}</p>
-    <a class="button splash">Get started</a>
+    <a class="button splash" href="docs">Get started</a>
   </div>
   <header class="row sticky">
     <span class="col-md-1 col-lg-2"></span>
@@ -123,6 +124,7 @@ var mainEnd = `<footer><p><strong>mini.css</strong> was designed and built by <a
 var documentationFragments = docFragments.map(f => buildFragment(f)).join('<br/>');
 var documentationLinks = docFragments.map(f => buildLink(f)).join('');
 var documentationSearch = `<script>
+  // Search script
   var docs= [${docFragments.map(f => stripData(f))}];
   var options = {threshold:0.4, keys:["keys"]};
   var fuse = new Fuse(docs,options);
@@ -144,6 +146,16 @@ var documentationSearch = `<script>
       document.getElementById('search-style').innerHTML = '#no-results{display:none;}';
     }
   }
+  // Codepen prefill script
+  var el = document.querySelectorAll('.prefiller-example > pre');
+  el.forEach(e => e.innerHTML = '<form action="https://codepen.io/pen/define" method="POST" target="_blank" class="codepen-form">' +
+    '<input type="hidden" name="data" value=\\\'' + JSON.stringify({
+      html               : e.innerText,
+      css_external       : ${frameworkUrl}
+    }).replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;") + '\\\'>' +
+    '<input type="image" class="codepen-link" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23424242%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolygon%20points%3D%2212%202%2022%208.5%2022%2015.5%2012%2022%202%2015.5%202%208.5%2012%202%22%3E%3C%2Fpolygon%3E%3Cline%20x1%3D%2212%22%20y1%3D%2222%22%20x2%3D%2212%22%20y2%3D%2215.5%22%3E%3C%2Fline%3E%3Cpolyline%20points%3D%2222%208.5%2012%2015.5%202%208.5%22%3E%3C%2Fpolyline%3E%3Cpolyline%20points%3D%222%2015.5%2012%208.5%2022%2015.5%22%3E%3C%2Fpolyline%3E%3Cline%20x1%3D%2212%22%20y1%3D%222%22%20x2%3D%2212%22%20y2%3D%228.5%22%3E%3C%2Fline%3E%3C%2Fsvg%3E" width="40" height="40" value="Open in Codepen">' +
+  '</form>' + e.innerHTML);
 </script>
 <style id="search-style">#no-results{display:none;}</style>`;
 
@@ -152,9 +164,9 @@ function buildFragment(fragment){
   <h2 class="section double-padded">${fragment.title}</h2>
   <div class="section">${fragment.description}</div>
   ${fragment.example?`<div class="section"><h3>Example</h3>${fragment.example}</div>`:''}
-  ${fragment.samples.length?`<div class="section double-padded"><h3>Sample code</h3>${fragment.samples.join('')}</div>`:''}
+  ${fragment.samples.length?`<div class="section double-padded prefiller-example"><h3>Sample code</h3>${fragment.samples.join('')}</div>`:''}
   ${fragment.modifiers.length?
-    `<div class="section double-padded"><h3>Modifiers</h3>
+    `<div class="section double-padded prefiller-example"><h3>Modifiers</h3>
     ${fragment.modifiers.map(m => `<h4>${m.title}</h4>${m.description}${m.example?`<h5>Example</h5>${m.example}`:''}${m.samples.length?`<h5>Sample code</h5>${m.samples.join('')}`:''}`).join('<br/>')}</div>`:''}
   ${fragment.dos.length||fragment.donts.length?
     `<div class="section double-padded"><h3>Best practices</h3>${[fragment.dos.map(d => `<div class="row dodos"><div class="col-sm-12 col-md-6">${d.sample}</div><div class="col-sm-12 col-md-6"><p><mark class="do">Do:</mark>&nbsp;${d.description}</p></div></div>`).join('<br/>'),fragment.donts.map(d => `<div class="row dodos"><div class="col-sm-12 col-md-6">${d.sample}</div><div class="col-sm-12 col-md-6"><p><mark class="dont">Don't:</mark>&nbsp;${d.description}</p></div></div>`).join('<br/>')].join('')}</div>`

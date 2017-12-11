@@ -430,6 +430,31 @@ header.row a span {
   }
 }
 
+.codepen-form {
+  border: 0;
+  padding: 0;
+  position: relative;
+  height: 0;
+  overflow: visible;
+}
+
+.codepen-link {
+  border-radius: 0.125rem;
+  border: 0.0625rem solid #ddd;
+  background: #f0f0f0;
+  transition: background 0.3s;
+  cursor: pointer;
+  padding: 0.25rem;
+  top: -1.25rem;
+  right: -1.25rem;
+  position: absolute;
+  width: 1.75rem;
+  height: 1.75rem;
+  &:hover, &:focus {
+    background: #fafafa;
+  }
+}
+
 // I removed this, it seemed unnecessary, but keep it here just in case I want it back in later on?
 // header .logo{
 //   padding-top: 0.1875rem;

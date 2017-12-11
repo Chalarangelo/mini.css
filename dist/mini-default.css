@@ -3,7 +3,7 @@
   Flavor name: Default (mini-default)
   Author: Angelos Chalaris (chalarangelo@gmail.com)
   Maintainers: Angelos Chalaris
-  mini.css version: v3.0.0-alpha.1
+  mini.css version: v3.0.0-alpha.2
 */
 /*
   Browsers resets and base typography.
@@ -1278,20 +1278,6 @@ footer.sticky {
 :root {
   --mark-back-color: #0277bd;
   --mark-fore-color: #fafafa;
-  --toast-back-color: #424242;
-  --toast-fore-color: #fafafa;
-  --tooltip-back-color: #212121;
-  --tooltip-fore-color: #fafafa;
-  --modal-overlay-color: rgba(0, 0, 0, 0.45);
-  --modal-close-color: #444;
-  --modal-close-hover-color: #f0f0f0;
-  --collapse-label-back-color: #e8e8e8;
-  --collapse-label-fore-color: #212121;
-  --collapse-label-hover-back-color: #f0f0f0;
-  --collapse-selected-label-back-color: #ececec;
-  --collapse-border-color: #ddd;
-  --collapse-content-back-color: #fafafa;
-  --collapse-selected-label-border-color: #0277bd;
 }
 
 mark {
@@ -1310,6 +1296,11 @@ mark.inline-block {
   padding: calc(var(--universal-padding) / 2) var(--universal-padding);
 }
 
+:root {
+  --toast-back-color: #424242;
+  --toast-fore-color: #fafafa;
+}
+
 .toast {
   position: fixed;
   bottom: calc(var(--universal-margin) * 3);
@@ -1320,6 +1311,11 @@ mark.inline-block {
   background: var(--toast-back-color);
   border-radius: calc(var(--universal-border-radius) * 16);
   padding: var(--universal-padding) calc(var(--universal-padding) * 3);
+}
+
+:root {
+  --tooltip-back-color: #212121;
+  --tooltip-fore-color: #fafafa;
 }
 
 .tooltip {
@@ -1386,6 +1382,12 @@ mark.inline-block {
   margin-top: calc(2 * var(--universal-margin));
 }
 
+:root {
+  --modal-overlay-color: rgba(0, 0, 0, 0.45);
+  --modal-close-color: #444;
+  --modal-close-hover-color: #f0f0f0;
+}
+
 [type="checkbox"].modal {
   height: 1px;
   width: 1px;
@@ -1449,6 +1451,16 @@ mark.inline-block {
 
 [type="checkbox"].modal:checked + div .card .modal-close {
   z-index: 1211;
+}
+
+:root {
+  --collapse-label-back-color: #e8e8e8;
+  --collapse-label-fore-color: #212121;
+  --collapse-label-hover-back-color: #f0f0f0;
+  --collapse-selected-label-back-color: #ececec;
+  --collapse-border-color: #ddd;
+  --collapse-content-back-color: #fafafa;
+  --collapse-selected-label-border-color: #0277bd;
 }
 
 .collapse {

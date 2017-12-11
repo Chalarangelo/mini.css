@@ -77,20 +77,6 @@ $collapse-selected-label-border-color-var: '--collapse-selected-label-border-col
 :root {
   #{$mark-back-color-var}: $mark-back-color;
   #{$mark-fore-color-var}: $mark-fore-color;
-  #{$toast-back-color-var}: $toast-back-color;
-  #{$toast-fore-color-var}: $toast-fore-color;
-  #{$tooltip-back-color-var}: $tooltip-back-color;
-  #{$tooltip-fore-color-var}: $tooltip-fore-color;
-  #{$modal-overlay-color-var}: $modal-overlay-color;
-  #{$modal-close-color-var}: $modal-close-color;
-  #{$modal-close-hover-back-color-var}: $modal-close-hover-back-color;
-  #{$collapse-label-back-color-var}:  $collapse-label-back-color;
-  #{$collapse-label-fore-color-var}:  $collapse-label-fore-color;
-  #{$collapse-label-hover-back-color-var}:  $collapse-label-hover-back-color;
-  #{$collapse-selected-label-back-color-var}: $collapse-selected-label-back-color;
-  #{$collapse-border-color-var}: $collapse-border-color;
-  #{$collapse-content-back-color-var} : $collapse-content-back-color;
-  #{$collapse-selected-label-border-color-var}: $collapse-selected-label-border-color;
 }
 // Default styling for mark. Use mixins for alternate styles.
 mark {
@@ -114,6 +100,10 @@ mark {
 }
 // Styling for toasts.  - No border styling, I think it's unnecessary anyways.
 @if $_include-toast {
+  :root {
+    #{$toast-back-color-var}: $toast-back-color;
+    #{$toast-fore-color-var}: $toast-fore-color;
+  }
   .#{$toast-name} {
     position: fixed;
     bottom: calc(var(#{$universal-margin-var}) * 3);
@@ -131,6 +121,10 @@ mark {
 }
 // Styling for tooltips.
 @if $_include-tooltip {
+  :root {
+    #{$tooltip-back-color-var}: $tooltip-back-color;
+    #{$tooltip-fore-color-var}: $tooltip-fore-color;
+  }
   .#{$tooltip-name} {
     position: relative;
     display: inline-block;
@@ -194,6 +188,11 @@ mark {
 }
 // Styling for modal dialogs.
 @if $_include-modal {
+  :root {
+    #{$modal-overlay-color-var}: $modal-overlay-color;
+    #{$modal-close-color-var}: $modal-close-color;
+    #{$modal-close-hover-back-color-var}: $modal-close-hover-back-color;
+  }
   [type="checkbox"].#{$modal-name} {
     height: 1px;
     width: 1px;
@@ -256,6 +255,15 @@ mark {
 }
 // Styling for collapse.
 @if $_include-collapse {
+  :root {
+    #{$collapse-label-back-color-var}:  $collapse-label-back-color;
+    #{$collapse-label-fore-color-var}:  $collapse-label-fore-color;
+    #{$collapse-label-hover-back-color-var}:  $collapse-label-hover-back-color;
+    #{$collapse-selected-label-back-color-var}: $collapse-selected-label-back-color;
+    #{$collapse-border-color-var}: $collapse-border-color;
+    #{$collapse-content-back-color-var} : $collapse-content-back-color;
+    #{$collapse-selected-label-border-color-var}: $collapse-selected-label-border-color;
+  }
   .#{$collapse-name} {
     width: calc(100% - 2 * var(#{$universal-margin-var}));
     opacity: 1;

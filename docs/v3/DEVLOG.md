@@ -194,6 +194,8 @@
 - Generated new favicons.
 - Everything should be ready to release `v3.0.0-alpha.1` tomorrow.
 
+# v3.0.0-alpha.2
+
 ## 20171120
 
 - Updated `.drawer` documentation to include customization.
@@ -222,3 +224,5 @@
 
 - Added `.modal` component. Breaking changes to comply with the new guidelines (i.e. apply the class on the `checkbox` element, not the element after it, much like `.drawer`). Cleaned up a little bit, dealt with a few problems here and there. Custom styling for the `.modal-close`, not bound to anything else.
 - Moved vertical version of `.tabs` into `contextual` under `.collapse`. Reduced complexity, improved performance and generally a better feel to them.
+- **Hugging cat** was messing with the `DEVLOG`, good thing I noticed and fixed it.
+- Moved component-specific variable definitions in `contextual` under the related conditionals.

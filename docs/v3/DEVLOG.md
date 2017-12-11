@@ -221,3 +221,4 @@
 ## 20171211
 
 - Added `.modal` component. Breaking changes to comply with the new guidelines (i.e. apply the class on the `checkbox` element, not the element after it, much like `.drawer`). Cleaned up a little bit, dealt with a few problems here and there. Custom styling for the `.modal-close`, not bound to anything else.
+- Moved vertical version of `.tabs` into `contextual` under `.collapse`. Reduced complexity, improved performance and generally a better feel to them.

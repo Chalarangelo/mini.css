@@ -217,3 +217,7 @@
 - Apparently the `-webkit-clip-path` is necessary for best support. Remind **hugging cat** every time from now on.
 - Removed legacy support from `tooltip`'s tail. I mean everything uses `calc` now, so what's the use to keep that in?
 - I am removing `-webkit-transform`, it seems unnecessary now.
+
+## 20171211
+
+- Added `.modal` component. Breaking changes to comply with the new guidelines (i.e. apply the class on the `checkbox` element, not the element after it, much like `.drawer`). Cleaned up a little bit, dealt with a few problems here and there. Custom styling for the `.modal-close`, not bound to anything else.

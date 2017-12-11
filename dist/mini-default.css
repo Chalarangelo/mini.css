@@ -1282,6 +1282,9 @@ footer.sticky {
   --toast-fore-color: #fafafa;
   --tooltip-back-color: #212121;
   --tooltip-fore-color: #fafafa;
+  --modal-overlay-color: rgba(0, 0, 0, 0.45);
+  --modal-close-color: #444;
+  --modal-close-hover-color: #f0f0f0;
 }
 
 mark {
@@ -1374,6 +1377,71 @@ mark.inline-block {
 
 .tooltip.bottom:after {
   margin-top: calc(2 * var(--universal-margin));
+}
+
+[type="checkbox"].modal {
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+[type="checkbox"].modal + div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: var(--modal-overlay-color);
+}
+
+[type="checkbox"].modal + div .card {
+  margin: 0 auto;
+  max-height: 50vh;
+  overflow: auto;
+}
+
+[type="checkbox"].modal + div .card .modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--universal-border-radius);
+  padding: var(--universal-padding);
+  margin: 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+[type="checkbox"].modal + div .card .modal-close:before {
+  display: block;
+  content: '\00D7';
+  color: var(--modal-close-color);
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.75rem;
+  line-height: 1;
+  text-align: center;
+}
+
+[type="checkbox"].modal + div .card .modal-close:hover, [type="checkbox"].modal + div .card .modal-close:focus {
+  background: var(--modal-close-hover-color);
+}
+
+[type="checkbox"].modal:checked + div {
+  display: flex;
+  flex: 0 1 auto;
+  z-index: 1200;
+}
+
+[type="checkbox"].modal:checked + div .card .modal-close {
+  z-index: 1211;
 }
 
 /*

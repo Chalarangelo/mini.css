@@ -13,8 +13,15 @@ $toast-fore-color:       #fafafa !default;       // Text color for toast compone
 $_include-tooltip:       true !default;          // [Hidden] Should tooltips be included? (boolean)
 $tooltip-name:           'tooltip' !default;     // Class name for tooltip component
 $tooltip-bottom-name:    'bottom' !default;      // Bottom tooltip class name
-$tooltip-back-color:       #212121 !default;     // Background color for tooltip component
-$tooltip-fore-color:       #fafafa !default;     // Text color for tooltip component
+$tooltip-back-color:      #212121 !default;      // Background color for tooltip component
+$tooltip-fore-color:      #fafafa !default;      // Text color for tooltip component
+$_include-modal:          true !default;         // [Hidden] Should modal dialogs be included? (boolean)
+$modal-name:              'modal' !default;      // Class name for modal dialog component
+$modal-overlay-color: rgba(0, 0, 0, 0.45) !default; // Overlay color for modal dialog component
+$modal-close-name:        'modal-close' !default;// Class name for modal dialog close button
+$modal-close-color:       #444 !default;         // Text color for the close button of the modal dialog component
+$modal-close-hover-back-color: #f0f0f0 !default; // Background color for the close button of the modal dialog component (on hover/focus)
+$modal-close-size:        1.75rem !default;      // Font size for the close button of the modal dialog component
 // CSS variable name definitions [exercise caution if modifying these]
 $mark-back-color-var:         '--mark-back-color' !default;
 $mark-fore-color-var:         '--mark-fore-color' !default;
@@ -22,6 +29,9 @@ $toast-back-color-var:        '--toast-back-color' !default;
 $toast-fore-color-var:        '--toast-fore-color' !default;
 $tooltip-back-color-var:      '--tooltip-back-color' !default;
 $tooltip-fore-color-var:      '--tooltip-fore-color' !default;
+$modal-overlay-color-var:     '--modal-overlay-color' !default;
+$modal-close-color-var:       '--modal-close-color' !default;
+$modal-close-hover-back-color-var: '--modal-close-hover-color' !default;
 // == Uncomment below code if this module is used on its own ==
 //
 // $base-line-height:        1.5 !default;         // Line height for most elements
@@ -53,6 +63,9 @@ $tooltip-fore-color-var:      '--tooltip-fore-color' !default;
   #{$toast-fore-color-var}: $toast-fore-color;
   #{$tooltip-back-color-var}: $tooltip-back-color;
   #{$tooltip-fore-color-var}: $tooltip-fore-color;
+  #{$modal-overlay-color-var}: $modal-overlay-color;
+  #{$modal-close-color-var}: $modal-close-color;
+  #{$modal-close-hover-back-color-var}: $modal-close-hover-back-color;
 }
 // Default styling for mark. Use mixins for alternate styles.
 mark {
@@ -151,6 +164,68 @@ mark {
     }
     &.#{$tooltip-bottom-name}:after { // Bottom tooltip styling
       margin-top: calc(2 * var(#{$universal-margin-var}));
+    }
+  }
+}
+// Styling for modal dialogs
+@if $_include-modal {
+  [type="checkbox"].#{$modal-name} {
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    & + div {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      background: var(#{$modal-overlay-color-var});
+      & .card {
+        margin: 0 auto;
+        max-height: 50vh;
+        overflow: auto;
+        & .#{$modal-close-name} {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: $modal-close-size;
+          height: $modal-close-size;
+          border-radius: var(#{$universal-border-radius-var});
+          padding: var(#{$universal-padding-var});
+          margin: 0;
+          cursor: pointer;
+          transition: background 0.3s;
+          &:before {
+            display: block;
+            content: '\00D7';
+            color: var(#{$modal-close-color-var});
+            position: relative;
+            font-family: sans-serif;
+            font-size: $modal-close-size;
+            line-height: 1;
+            text-align: center;
+          }
+          &:hover, &:focus {
+            background: var(#{$modal-close-hover-back-color-var});
+          }
+        }
+      }
+    }
+    &:checked + div {
+      display: flex;
+      flex: 0 1 auto;
+      z-index: 1200;
+      & .card {
+        & .#{$modal-close-name} {
+          z-index: 1211;
+        }
+      }
     }
   }
 }

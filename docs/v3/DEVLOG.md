@@ -226,3 +226,4 @@
 - Moved vertical version of `.tabs` into `contextual` under `.collapse`. Reduced complexity, improved performance and generally a better feel to them.
 - **Hugging cat** was messing with the `DEVLOG`, good thing I noticed and fixed it.
 - Moved component-specific variable definitions in `contextual` under the related conditionals.
+- Documented `mark` elements.

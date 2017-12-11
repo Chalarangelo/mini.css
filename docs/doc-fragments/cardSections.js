@@ -14,7 +14,7 @@ module.exports = {
     `While not mandatory, it is highly suggested that you wrap all of your cards' contents in one or more sections.`,
     `Remember that a section can be any valid HTML5 element, so you can apply them to headings, paragraphs, input elements etc.`,
     `Media sections have a default height of <code>200px</code>.`,
-    `Due to the media sections using <a href="http://caniuse.com/#feat=object-fit" target="_blank><code>object-fit</code></a>, you might want to use a polyfill for better browser support (recommended: <a href="https://github.com/bfred-it/object-fit-images" target="_blank>image polyfill</a>, <a href="https://github.com/jonathantneal/fitie" target="_blank>video polyfill</a>).`,
+    `Due to the media sections using <a href="http://caniuse.com/#feat=object-fit" target="_blank"><code>object-fit</code></a>, you might want to use a polyfill for better browser support (recommended: <a href="https://github.com/bfred-it/object-fit-images" target="_blank">image polyfill</a>, <a href="https://github.com/jonathantneal/fitie" target="_blank">video polyfill</a>).`,
     `Depending on the source website, some embedded videos might not display properly as media sections.`
   ],
   customization: [

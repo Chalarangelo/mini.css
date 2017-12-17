@@ -1,7 +1,7 @@
 module.exports = {
   id: 'toasts',
   title: 'Toasts',
-  keywords: [`span`, `highlight`, `text highlighting`, `tag`, `primary`, `secondary`, `tertiary`, `inline-block`],
+  keywords: [`span`, `toast`, `mobile`, `contextual`, `message`],
   description: `<p><strong>mini.css</strong> provides you with toast messages (<code>.toast</code>), allowing you to display native-looking notifications on mobile devices.</p>`,
   example: `<div class="container" style="height: 8rem; position: relative;"><span class="toast doc" style="position: absolute;">This is a toast message!</span></div>`,
   samples: [`<pre><span class="code-line"><span class="highlight-a">&lt;span</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;toast&quot;</span><span class="highlight-a">&gt;</span>This is a toast message!<span class="highlight-a">&lt;/span&gt;</span></span></pre>`],

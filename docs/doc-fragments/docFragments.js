@@ -16,6 +16,8 @@ var footer = require('./footer');
 var drawer = require('./drawer');
 var textHighlighting = require('./textHighlighting');
 var toasts = require('./toasts');
+var tooltips = require('./tooltips');
+var modalDialogs = require('./modalDialogs');
 
 module.exports = [
   gettingStarted,
@@ -23,5 +25,5 @@ module.exports = [
   grid, cards, cardSections,
   formsAndInput, buttons, inputGrouping,
   header, navigationBar, footer, drawer,
-  textHighlighting, toasts
+  textHighlighting, toasts, tooltips,// modalDialogs
 ]

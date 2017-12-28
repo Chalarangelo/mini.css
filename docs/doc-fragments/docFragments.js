@@ -25,5 +25,5 @@ module.exports = [
   grid, cards, cardSections,
   formsAndInput, buttons, inputGrouping,
   header, navigationBar, footer, drawer,
-  textHighlighting, toasts, tooltips,// modalDialogs
+  textHighlighting, toasts, tooltips, modalDialogs
 ]

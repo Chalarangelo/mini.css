@@ -238,3 +238,4 @@
 ## 20171228
 
 - Documented `.modal`.
+- Documented `.collapse`.

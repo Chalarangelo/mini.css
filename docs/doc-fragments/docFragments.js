@@ -18,6 +18,7 @@ var textHighlighting = require('./textHighlighting');
 var toasts = require('./toasts');
 var tooltips = require('./tooltips');
 var modalDialogs = require('./modalDialogs');
+var spoilersAndAccordions = require('./spoilersAndAccordions');
 
 module.exports = [
   gettingStarted,
@@ -25,5 +26,5 @@ module.exports = [
   grid, cards, cardSections,
   formsAndInput, buttons, inputGrouping,
   header, navigationBar, footer, drawer,
-  textHighlighting, toasts, tooltips, modalDialogs
+  textHighlighting, toasts, tooltips, modalDialogs, spoilersAndAccordions
 ]

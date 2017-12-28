@@ -234,3 +234,7 @@
 ## 20171217
 
 - Documented `.tooltip`.
+
+## 20171228
+
+- Documented `.modal`.

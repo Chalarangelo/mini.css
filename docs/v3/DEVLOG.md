@@ -239,3 +239,12 @@
 
 - Documented `.modal`.
 - Documented `.collapse`.
+
+## 20171229
+
+- Coded `progress` module. Everything is pretty much the same as before.
+- Renamed `.spinner-donut` to `.spinner`.
+- Added a default variant to `progress` and `.spinner`, so that we can have `.primary`, `.secondary` and `.tertiary`.
+- Added alternative color mixins for `progress` and `.spinner`.
+- Removed size variants and the inline variant mixin from `progress` and `.spinner`.
+- Updated flavor file with the `progress` module and mixed-in variants.

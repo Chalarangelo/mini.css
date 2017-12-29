@@ -1574,3 +1574,109 @@ mark.tag {
   padding: calc(var(--universal-padding)/2) var(--universal-padding);
   border-radius: 1em;
 }
+
+/*
+  Definitions for progress elements and spinners.
+*/
+/* Progess module CSS variable definitions */
+:root {
+  --progress-back-color: #ddd;
+  --progress-fore-color: #555;
+}
+
+progress {
+  display: block;
+  vertical-align: baseline;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 0.75rem;
+  width: calc(100% - 2 * var(--universal-margin));
+  margin: var(--universal-margin);
+  border: 0;
+  border-radius: calc(2 * var(--universal-border-radius));
+  background: var(--progress-back-color);
+  color: var(--progress-fore-color);
+}
+
+progress::-webkit-progress-value {
+  background: var(--progress-fore-color);
+  border-top-left-radius: calc(2 * var(--universal-border-radius));
+  border-bottom-left-radius: calc(2 * var(--universal-border-radius));
+}
+
+progress::-webkit-progress-bar {
+  background: var(#ddd);
+}
+
+progress::-moz-progress-bar {
+  background: var(--progress-fore-color);
+  border-top-left-radius: calc(2 * var(--universal-border-radius));
+  border-bottom-left-radius: calc(2 * var(--universal-border-radius));
+}
+
+progress[value="1000"]::-webkit-progress-value {
+  border-radius: calc(2 * var(--universal-border-radius));
+}
+
+progress[value="1000"]::-moz-progress-bar {
+  border-radius: calc(2 * var(--universal-border-radius));
+}
+
+progress.inline {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+}
+
+:root {
+  --spinner-back-color: #ddd;
+  --spinner-fore-color: #555;
+}
+
+@keyframes spinner-donut-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  margin: var(--universal-margin);
+  border: 0.25rem solid var(--spinner-back-color);
+  border-left: 0.25rem solid var(--spinner-fore-color);
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  animation: spinner-donut-anim 1.2s linear infinite;
+}
+
+/*
+  Custom elements for progress bars and spinners.
+*/
+progress.primary {
+  --progress-fore-color: #1976d2;
+}
+
+progress.secondary {
+  --progress-fore-color: #d32f2f;
+}
+
+progress.tertiary {
+  --progress-fore-color: #308732;
+}
+
+.spinner.primary {
+  --spinner-fore-color: #1976d2;
+}
+
+.spinner.secondary {
+  --spinner-fore-color: #d32f2f;
+}
+
+.spinner.tertiary {
+  --spinner-fore-color: #308732;
+}

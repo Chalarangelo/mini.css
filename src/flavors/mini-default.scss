@@ -103,3 +103,32 @@ $mark-tag-name:                 'tag';       // Class name, padding and border r
 $mark-tag-padding:      calc(var(#{$universal-padding-var})/2) var(#{$universal-padding-var});
 $mark-tag-border-radius:        1em;
 @include make-mark-alt-size ($mark-tag-name, $mark-tag-padding, $mark-tag-border-radius);
+
+@import '../mini/progress';
+
+/*
+  Custom elements for progress bars and spinners.
+*/
+$progress-primary-name:         'primary';   // Class name for primary <progress> color variant.
+$progress-primary-fore-color:   #1976d2;     // Foreground color for primary <progress> color variant.
+@include make-progress-alt-color ($progress-primary-name, $progress-primary-fore-color);
+
+$progress-secondary-name:     'secondary';   // Class name for secondary <progress> color variant.
+$progress-secondary-fore-color: #d32f2f;     // Foreground color for secondary <progress> color variant.
+@include make-progress-alt-color ($progress-secondary-name, $progress-secondary-fore-color);
+
+$progress-tertiary-name:       'tertiary';   // Class name for tertiary <progress> color variant.
+$progress-tertiary-fore-color:   #308732;    // Foreground color for tertiary <progress> color variant.
+@include make-progress-alt-color ($progress-tertiary-name, $progress-tertiary-fore-color);
+
+$spinner-donut-primary-name:         'primary';   // Class name for primary spinner donutcolor variant.
+$spinner-donut-primary-fore-color:   #1976d2;     // Foreground color for primary spinner donut color variant.
+@include make-spinner-donut-alt-color ($spinner-donut-primary-name, $spinner-donut-primary-fore-color);
+
+$spinner-donut-secondary-name:     'secondary';   // Class name for secondary spinner donut color variant.
+$spinner-donut-secondary-fore-color: #d32f2f;     // Foreground color for secondary spinner donut color variant.
+@include make-spinner-donut-alt-color ($spinner-donut-secondary-name, $spinner-donut-secondary-fore-color);
+
+$spinner-donut-tertiary-name:       'tertiary';   // Class name for tertiary spinner donut color variant.
+$spinner-donut-tertiary-fore-color:   #308732;    // Foreground color for tertiary spinner donut color variant.
+@include make-spinner-donut-alt-color ($spinner-donut-tertiary-name, $spinner-donut-tertiary-fore-color);

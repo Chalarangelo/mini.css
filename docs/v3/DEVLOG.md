@@ -248,3 +248,7 @@
 - Added alternative color mixins for `progress` and `.spinner`.
 - Removed size variants and the inline variant mixin from `progress` and `.spinner`.
 - Updated flavor file with the `progress` module and mixed-in variants.
+
+## 20171230
+
+- Documented `progress` element.

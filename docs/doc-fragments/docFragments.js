@@ -20,6 +20,7 @@ var tooltips = require('./tooltips');
 var modalDialogs = require('./modalDialogs');
 var spoilersAndAccordions = require('./spoilersAndAccordions');
 var progressBars = require('./progressBars');
+var donutSpinners = require('./donutSpinners');
 
 module.exports = [
   gettingStarted,
@@ -28,5 +29,5 @@ module.exports = [
   formsAndInput, buttons, inputGrouping,
   header, navigationBar, footer, drawer,
   textHighlighting, toasts, tooltips, modalDialogs, spoilersAndAccordions,
-  progressBars
+  progressBars, donutSpinners
 ]

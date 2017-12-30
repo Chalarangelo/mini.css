@@ -252,3 +252,4 @@
 ## 20171230
 
 - Documented `progress` element.
+- Documented `spinner` component.

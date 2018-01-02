@@ -253,3 +253,8 @@
 
 - Documented `progress` element.
 - Documented `spinner` component.
+
+## 20180102
+
+- Started working on `table` module. Tables are now scrollable by default.
+- Coded desktop view for `table`, no `@media` queries in there yet, but there will be more sooner rather than later.

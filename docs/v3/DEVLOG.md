@@ -258,3 +258,4 @@
 
 - Started working on `table` module. Tables are now scrollable by default.
 - Coded desktop view for `table`, no `@media` queries in there yet, but there will be more sooner rather than later.
+- Added mobile view for tables, fully functional, no problems, still missing `.horizontal` and `.striped` (also `.hoverable` ?) and variablization.

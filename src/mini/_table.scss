@@ -18,10 +18,11 @@ $table-striped-name:         'striped' !default;    // Class name for striped ta
 $back-color:              white !default;           // [External variable - core] Background color for everything.
 $fore-color:              black !default;           // [External variable - core] Foreground color for everything.
 */
-
+$table-mobile-breakpoint:     768px !default;
 $table-max-height: 400px !default;
 $table-caption-font-size: 1.5rem !default;
-
+$table-mobile-card-label: 'data-label' !default;
+$table-mobile-label-font-weight: 600 !default;
 
 $table-border-color: #aaa !default;
 
@@ -86,7 +87,7 @@ table {
   }
   tbody {
     border-top: 0;
-    margin-top: calc(0 - var(#{$universal-margin-var}));
+    margin-top: calc(0 - var(#{$universal-margin-var})); // might be useless
     border-radius: 0 0 var(--universal-border-radius) var(--universal-border-radius);
   }
   tr {
@@ -107,10 +108,59 @@ table {
     color: #111;          // vars
   }
   td {
-    background: #fafafa;     // use variables, this is a test
+    background: #fafafa;     // use variables, this is a test (body)
     border-top: $__1px solid var(#{$table-border-color-var});
   }
   tbody tr:first-child td {
     border-top: 0;
   }
 }
+// Mobile
+@media screen and (max-width: #{$table-mobile-breakpoint - 1px}){
+  table {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    display: table;
+    // Accessibility (element is not visible, but screen readers read it normally)
+    thead, th {
+      border: 0;
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      clip: rect(0 0 0 0);
+      -webkit-clip-path: inset(100%);
+      clip-path: inset(100%);
+    }
+    tbody {
+      display: table-row-group;
+    }
+    tr {
+      display: block;
+      border: $__1px solid var(#{$table-border-color-var});
+      border-radius: var(#{$universal-border-radius-var});
+      @if $universal-box-shadow != none {
+        box-shadow: var(#{$universal-box-shadow-var});
+      }
+      background: #fafafa;     // use variables, this is a test (body)
+      padding: var(#{$universal-padding-var});
+      margin: var(#{$universal-margin-var});
+      margin-bottom: calc(2 * var(#{$universal-margin-var}));
+    }
+    td {
+      display: block;
+      border: 0;
+      text-align: right;
+    }
+    td:before {
+      content: attr(#{$table-mobile-card-label});
+      float: left;
+      font-weight: $table-mobile-label-font-weight;
+    }
+  }
+}
+
+// Missing horizontal tables and striped tables

@@ -25,10 +25,14 @@ $table-mobile-card-label: 'data-label' !default;
 $table-mobile-label-font-weight: 600 !default;
 
 $table-border-color: #aaa !default;
+$table-border-separator-color: #666 !default;
 
+$_include-horizontal-table: true !default;
+$table-horizontal-name: 'horizontal' !default;
 
 // CSS variable name definitions [exercise caution if modifying these]
 $table-border-color-var: '--table-border-color' !default;
+$table-border-separator-color-var: '--table-border-separator-color' !default;
 // == Uncomment below code if this module is used on its own ==
 //
 // $universal-margin:        0.5rem !default;      // Universal margin for the most elements
@@ -52,6 +56,7 @@ $table-border-color-var: '--table-border-color' !default;
 /* Table module CSS variable definitions. */
 :root {
   #{$table-border-color-var}: $table-border-color;
+  #{$table-border-separator-color-var}: $table-border-separator-color;
 }
 // Desktop view.
 table {
@@ -63,8 +68,10 @@ table {
   flex-flow: row wrap;
   padding: var(#{$universal-padding-var});
   padding-top: 0;
-  overflow: auto;
-  max-height: $table-max-height;
+  @if not($_include-horizontal-table) {
+    overflow: auto;
+    max-height: $table-max-height;
+  }
   caption {
     font-size: $table-caption-font-size;
     margin: calc(2 * var(#{$universal-margin-var})) 0;
@@ -73,17 +80,21 @@ table {
   }
   thead, tbody {
     display: flex;
-    max-width: 100%;
     flex-flow: row wrap;
-    flex: 0 0 100%;
     border: $__1px solid var(#{$table-border-color-var});
+    @if not($_include-horizontal-table) {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
   }
   thead {
     z-index: 999;  // Fixes the visibility of the element.
-    position: sticky;
-    top: 0;
     border-radius: var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}) 0 0;
-    border-bottom: 0.0625rem solid #666; // var This
+    border-bottom: $__1px solid var(#{$table-border-separator-color-var}); // var This
+    @if not($_include-horizontal-table) {
+      position: sticky;
+      top: 0;
+    }
   }
   tbody {
     border-top: 0;
@@ -92,15 +103,19 @@ table {
   }
   tr {
     display: flex;
-    flex-flow: row wrap;
-    flex: 0 0 100%;
     padding: 0; // Apply always to overwrite default.
+    @if not($_include-horizontal-table) {
+      flex-flow: row wrap;
+      flex: 0 0 100%;
+    }
   }
   th, td {
-    padding: calc(2 * var(#{$universal-margin-var}));    // Apply always to overwrite default.
-    flex: 1 0 0%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: calc(2 * var(#{$universal-padding-var}));    // Apply always to overwrite default.
+    @if not($_include-horizontal-table) {
+      flex: 1 0 0%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
   th {
     text-align: left;
@@ -111,56 +126,196 @@ table {
     background: #fafafa;     // use variables, this is a test (body)
     border-top: $__1px solid var(#{$table-border-color-var});
   }
-  tbody tr:first-child td {
-    border-top: 0;
+  @if not($_include-horizontal-table) {
+    tbody tr:first-child td {
+      border-top: 0;
+    }
+  }
+}
+// Styling for horizntal tables
+@if $_include-horizontal-table {
+  table:not(.#{$table-horizontal-name}) {
+    overflow: auto;
+    max-height: $table-max-height;
+    thead, tbody {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+    tr {
+      flex-flow: row wrap;
+      flex: 0 0 100%;
+    }
+    th, td {
+      flex: 1 0 0%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    thead {
+      position: sticky;
+      top: 0;
+    }
+    tbody tr:first-child td {
+      border-top: 0;
+    }
+  }
+  table.#{$table-horizontal-name} {
+    border: 0;
+    thead, tbody {
+      border: 0;
+      flex-flow: row nowrap;
+    }
+    tbody {
+      overflow: auto;
+      justify-content: space-between;
+      flex: 1 0 0;
+      margin-left: calc( 4 * var(#{$universal-margin-var}));
+      padding-bottom: calc(var(#{$universal-padding-var}) / 4);
+    }
+    tr {
+      flex-direction: column;
+      flex: 1 0 auto;
+    }
+    th, td {
+      width: 100%;
+      border: 0;
+      border-bottom: $__1px solid var(#{$table-border-color-var});
+      &:not(:first-child){
+        border-top: 0;
+      }
+    }
+    th {
+      text-align: right;
+      border-left: $__1px solid var(#{$table-border-color-var});
+      border-right: $__1px solid var(#{$table-border-separator-color-var});
+    }
+    thead {
+      tr:first-child {
+        padding-left: 0;
+      }
+    }
+    th:first-child, td:first-child {
+      border-top: $__1px solid var(#{$table-border-color-var});
+    }
+    tbody tr:last-child td {
+      border-right: 1px solid #aaa;
+      &:first-child{
+        border-top-right-radius: 0.25rem;
+      }
+      &:last-child{
+        border-bottom-right-radius: 0.25rem;
+      }
+    }
+    thead tr:first-child th {
+      &:first-child{
+        border-top-left-radius: 0.25rem;
+      }
+      &:last-child{
+        border-bottom-left-radius: 0.25rem;
+      }
+    }
   }
 }
 // Mobile
 @media screen and (max-width: #{$table-mobile-breakpoint - 1px}){
-  table {
-    border-collapse: collapse;
-    border: 0;
-    width: 100%;
-    display: table;
-    // Accessibility (element is not visible, but screen readers read it normally)
-    thead, th {
+  @if $_include-horizontal-table {
+    table, table.#{$table-horizontal-name} {
+      border-collapse: collapse;
       border: 0;
-      height: 1px;
-      width: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      clip: rect(0 0 0 0);
-      -webkit-clip-path: inset(100%);
-      clip-path: inset(100%);
-    }
-    tbody {
-      display: table-row-group;
-    }
-    tr {
-      display: block;
-      border: $__1px solid var(#{$table-border-color-var});
-      border-radius: var(#{$universal-border-radius-var});
-      @if $universal-box-shadow != none {
-        box-shadow: var(#{$universal-box-shadow-var});
+      width: 100%;
+      display: table;
+      // Accessibility (element is not visible, but screen readers read it normally)
+      thead, th {
+        border: 0;
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
       }
-      background: #fafafa;     // use variables, this is a test (body)
-      padding: var(#{$universal-padding-var});
-      margin: var(#{$universal-margin-var});
-      margin-bottom: calc(2 * var(#{$universal-margin-var}));
+      tbody {
+        display: table-row-group;
+      }
+      tr {
+        display: block;
+        border: $__1px solid var(#{$table-border-color-var});
+        border-radius: var(#{$universal-border-radius-var});
+        @if $universal-box-shadow != none {
+          box-shadow: var(#{$universal-box-shadow-var});
+        }
+        background: #fafafa;     // use variables, this is a test (body)
+        padding: var(#{$universal-padding-var});
+        margin: var(#{$universal-margin-var});
+        margin-bottom: calc(2 * var(#{$universal-margin-var}));
+      }
+      th, td {
+        width: auto;
+      }
+      td {
+        display: block;
+        border: 0;
+        text-align: right;
+      }
+      td:before {
+        content: attr(#{$table-mobile-card-label});
+        float: left;
+        font-weight: $table-mobile-label-font-weight;
+      }
+      th:first-child, td:first-child {
+        border-top: 0;
+      }
+      tbody tr:last-child td {
+        border-right: 0;
+      }
     }
-    td {
-      display: block;
+  }
+  @else {
+    table {
+      border-collapse: collapse;
       border: 0;
-      text-align: right;
-    }
-    td:before {
-      content: attr(#{$table-mobile-card-label});
-      float: left;
-      font-weight: $table-mobile-label-font-weight;
+      width: 100%;
+      display: table;
+      // Accessibility (element is not visible, but screen readers read it normally)
+      thead, th {
+        border: 0;
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
+      }
+      tbody {
+        display: table-row-group;
+      }
+      tr {
+        display: block;
+        border: $__1px solid var(#{$table-border-color-var});
+        border-radius: var(#{$universal-border-radius-var});
+        @if $universal-box-shadow != none {
+          box-shadow: var(#{$universal-box-shadow-var});
+        }
+        background: #fafafa;     // use variables, this is a test (body)
+        padding: var(#{$universal-padding-var});
+        margin: var(#{$universal-margin-var});
+        margin-bottom: calc(2 * var(#{$universal-margin-var}));
+      }
+      td {
+        display: block;
+        border: 0;
+        text-align: right;
+      }
+      td:before {
+        content: attr(#{$table-mobile-card-label});
+        float: left;
+        font-weight: $table-mobile-label-font-weight;
+      }
     }
   }
 }
-
-// Missing horizontal tables and striped tables

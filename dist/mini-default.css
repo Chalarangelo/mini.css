@@ -1714,8 +1714,6 @@ table {
   flex-flow: row wrap;
   padding: var(--universal-padding);
   padding-top: 0;
-  overflow: auto;
-  max-height: 400px;
 }
 
 table caption {
@@ -1727,16 +1725,12 @@ table caption {
 
 table thead, table tbody {
   display: flex;
-  max-width: 100%;
   flex-flow: row wrap;
-  flex: 0 0 100%;
   border: 0.0625rem solid var(--table-border-color);
 }
 
 table thead {
   z-index: 999;
-  position: sticky;
-  top: 0;
   border-radius: var(--universal-border-radius) var(--universal-border-radius) 0 0;
   border-bottom: 0.0625rem solid #666;
 }
@@ -1749,16 +1743,11 @@ table tbody {
 
 table tr {
   display: flex;
-  flex-flow: row wrap;
-  flex: 0 0 100%;
   padding: 0;
 }
 
 table th, table td {
-  padding: calc(2 * var(--universal-margin));
-  flex: 1 0 0%;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding: calc(2 * var(--universal-padding));
 }
 
 table th {
@@ -1772,18 +1761,110 @@ table td {
   border-top: 0.0625rem solid var(--table-border-color);
 }
 
-table tbody tr:first-child td {
+table:not(.horizontal) {
+  overflow: auto;
+  max-height: 400px;
+}
+
+table:not(.horizontal) thead, table:not(.horizontal) tbody {
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+table:not(.horizontal) tr {
+  flex-flow: row wrap;
+  flex: 0 0 100%;
+}
+
+table:not(.horizontal) th, table:not(.horizontal) td {
+  flex: 1 0 0%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table:not(.horizontal) thead {
+  position: sticky;
+  top: 0;
+}
+
+table:not(.horizontal) tbody tr:first-child td {
   border-top: 0;
 }
 
+table.horizontal {
+  border: 0;
+}
+
+table.horizontal thead, table.horizontal tbody {
+  border: 0;
+  flex-flow: row nowrap;
+}
+
+table.horizontal tbody {
+  overflow: auto;
+  justify-content: space-between;
+  flex: 1 0 0;
+  margin-left: calc( 4 * var(--universal-margin));
+  padding-bottom: calc(var(--universal-padding) / 4);
+}
+
+table.horizontal tr {
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+table.horizontal th, table.horizontal td {
+  width: 100%;
+  border: 0;
+  border-bottom: 0.0625rem solid var(--table-border-color);
+}
+
+table.horizontal th:not(:first-child), table.horizontal td:not(:first-child) {
+  border-top: 0;
+}
+
+table.horizontal th {
+  text-align: right;
+  border-left: 0.0625rem solid var(--table-border-color);
+  border-right: 0.0625rem solid #666;
+}
+
+table.horizontal thead tr:first-child {
+  padding-left: 0;
+}
+
+table.horizontal th:first-child, table.horizontal td:first-child {
+  border-top: 0.0625rem solid var(--table-border-color);
+}
+
+table.horizontal tbody tr:last-child td {
+  border-right: 1px solid #aaa;
+}
+
+table.horizontal tbody tr:last-child td:first-child {
+  border-top-right-radius: 0.25rem;
+}
+
+table.horizontal tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0.25rem;
+}
+
+table.horizontal thead tr:first-child th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+table.horizontal thead tr:first-child th:last-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
 @media screen and (max-width: 767px) {
-  table {
+  table, table.horizontal {
     border-collapse: collapse;
     border: 0;
     width: 100%;
     display: table;
   }
-  table thead, table th {
+  table thead, table th, table.horizontal thead, table.horizontal th {
     border: 0;
     height: 1px;
     width: 1px;
@@ -1795,10 +1876,10 @@ table tbody tr:first-child td {
     -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
   }
-  table tbody {
+  table tbody, table.horizontal tbody {
     display: table-row-group;
   }
-  table tr {
+  table tr, table.horizontal tr {
     display: block;
     border: 0.0625rem solid var(--table-border-color);
     border-radius: var(--universal-border-radius);
@@ -1807,14 +1888,23 @@ table tbody tr:first-child td {
     margin: var(--universal-margin);
     margin-bottom: calc(2 * var(--universal-margin));
   }
-  table td {
+  table th, table td, table.horizontal th, table.horizontal td {
+    width: auto;
+  }
+  table td, table.horizontal td {
     display: block;
     border: 0;
     text-align: right;
   }
-  table td:before {
+  table td:before, table.horizontal td:before {
     content: attr(data-label);
     float: left;
     font-weight: 600;
+  }
+  table th:first-child, table td:first-child, table.horizontal th:first-child, table.horizontal td:first-child {
+    border-top: 0;
+  }
+  table tbody tr:last-child td, table.horizontal tbody tr:last-child td {
+    border-right: 0;
   }
 }

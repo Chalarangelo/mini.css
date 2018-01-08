@@ -268,3 +268,4 @@
 
 - Updated tables, variables cleanup.
 - Added `.striped` and `.hoverable` `table` styles.
+- Documented `table` module.

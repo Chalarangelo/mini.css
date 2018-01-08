@@ -14,6 +14,7 @@ var header = require('./header');
 var navigationBar = require('./navigationBar');
 var footer = require('./footer');
 var drawer = require('./drawer');
+var tables = require('./tables');
 var textHighlighting = require('./textHighlighting');
 var toasts = require('./toasts');
 var tooltips = require('./tooltips');
@@ -28,6 +29,7 @@ module.exports = [
   grid, cards, cardSections,
   formsAndInput, buttons, inputGrouping,
   header, navigationBar, footer, drawer,
+  tables,
   textHighlighting, toasts, tooltips, modalDialogs, spoilersAndAccordions,
   progressBars, donutSpinners
 ]

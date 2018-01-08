@@ -1458,6 +1458,7 @@ table.horizontal thead tr:first-child th:last-child {
     clip-path: inset(100%);
   }
   table tbody, table.horizontal tbody {
+    border: 0;
     display: table-row-group;
   }
   table tr, table.horizontal tr {

@@ -498,3 +498,181 @@ header.row a span {
 //     padding: 0 6px;
 //   }
 // }
+@media screen and (max-width: #{$table-mobile-breakpoint - 1px}){
+  table.doc {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+    display: flex;
+    flex: 0 1 auto;
+    flex-flow: row wrap;
+    padding: var(#{$universal-padding-var});
+    padding-top: 0;
+    @if not($_include-horizontal-table) {
+      overflow: auto;
+      max-height: $table-max-height;
+    }
+    caption {
+      font-size: $table-caption-font-size;
+      margin: calc(2 * var(#{$universal-margin-var})) 0;
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+    thead, tbody {
+      display: flex;
+      flex-flow: row wrap;
+      border: $__1px solid var(#{$table-border-color-var});
+      @if not($_include-horizontal-table) {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+    }
+    thead {
+      z-index: 999;  // Fixes the visibility of the element.
+      border-radius: var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}) 0 0;
+      border-bottom: $__1px solid var(#{$table-border-separator-color-var});
+      @if not($_include-horizontal-table) {
+        position: sticky;
+        top: 0;
+      }
+    }
+    tbody {
+      border-top: 0;
+      margin-top: calc(0 - var(#{$universal-margin-var}));
+      border-radius: 0 0 var(--universal-border-radius) var(--universal-border-radius);
+    }
+    tr {
+      display: flex;
+      padding: 0; // Apply always to overwrite default.
+      @if not($_include-horizontal-table) {
+        flex-flow: row wrap;
+        flex: 0 0 100%;
+      }
+    }
+    th, td {
+      padding: calc(2 * var(#{$universal-padding-var}));    // Apply always to overwrite default.
+      @if not($_include-horizontal-table) {
+        flex: 1 0 0%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    th {
+      text-align: left;
+      background: var(#{$table-th-back-color-var});
+      color: var(#{$table-th-fore-color-var});
+    }
+    td {
+      background: var(#{$table-td-back-color-var});
+      color: var(#{$table-td-fore-color-var});
+      border-top: $__1px solid var(#{$table-border-color-var});
+    }
+    @if not($_include-horizontal-table) {
+      tbody tr:first-child td {
+        border-top: 0;
+      }
+    }
+  }
+  table.#{$table-horizontal-name}.doc {
+    border: 0;
+    thead, tbody {
+      border: 0;
+      flex-flow: row nowrap;
+    }
+    tbody {
+      overflow: auto;
+      justify-content: space-between;
+      flex: 1 0 0;
+      margin-left: calc( 4 * var(#{$universal-margin-var}));
+      padding-bottom: calc(var(#{$universal-padding-var}) / 4);
+    }
+    tr {
+      flex-direction: column;
+      flex: 1 0 auto;
+    }
+    th, td {
+      width: 100%;
+      border: 0;
+      border-bottom: $__1px solid var(#{$table-border-color-var});
+      &:not(:first-child){
+        border-top: 0;
+      }
+    }
+    th {
+      text-align: right;
+      border-left: $__1px solid var(#{$table-border-color-var});
+      border-right: $__1px solid var(#{$table-border-separator-color-var});
+    }
+    thead {
+      tr:first-child {
+        padding-left: 0;
+      }
+    }
+    th:first-child, td:first-child {
+      border-top: $__1px solid var(#{$table-border-color-var});
+    }
+    tbody tr:last-child td {
+      border-right: $__1px solid var(#{$table-border-color-var});
+      &:first-child{
+        border-top-right-radius: 0.25rem;
+      }
+      &:last-child{
+        border-bottom-right-radius: 0.25rem;
+      }
+    }
+    thead tr:first-child th {
+      &:first-child{
+        border-top-left-radius: 0.25rem;
+      }
+      &:last-child{
+        border-bottom-left-radius: 0.25rem;
+      }
+    }
+  }
+}
+
+table.doc.cardized {
+  border-collapse: collapse;
+  border: 0;
+  width: 100%;
+  display: table;
+  // Accessibility (element is not visible, but screen readers read it normally)
+  thead, th {
+    border: 0;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+  }
+  tbody {
+    display: table-row-group;
+    border: 0;
+  }
+  tr {
+    display: block;
+    border: $__1px solid var(#{$table-border-color-var});
+    border-radius: var(#{$universal-border-radius-var});
+    @if $universal-box-shadow != none {
+      box-shadow: var(#{$universal-box-shadow-var});
+    }
+    background: #fafafa;     // use variables, this is a test (body)
+    padding: var(#{$universal-padding-var});
+    margin: var(#{$universal-margin-var});
+    margin-bottom: calc(2 * var(#{$universal-margin-var}));
+  }
+  td {
+    display: block;
+    border: 0;
+    text-align: right;
+  }
+  td:before {
+    content: attr(#{$table-mobile-card-label});
+    float: left;
+    font-weight: $table-mobile-label-font-weight;
+  }
+}

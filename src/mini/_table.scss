@@ -1,38 +1,35 @@
 /*
   Definitions for the responsive table component.
 */
-// The tables use the common table elements and syntax.
-/*
-$table-mobile-breakpoint:     767px !default;       // Breakpoint for table mobile view.
-$table-mobile-card-spacing:   10px !default;        // Space between <tr> cards - mobile view.
-$table-mobile-card-label:     'data-label' !default;// Attribute used to replace column headers in mobile view.
-$table-not-responsive-name:   'preset' !default;    // Class name for table non-responsive view.
-$include-horizontal-table:    true !default;        // Should horizontal tables be included? (`true`/`false`)
-$table-horizontal-name:       'horizontal' !default;// Class name for table horizontal view.
-$include-scrollable-table:    true !default;        // Should scrollable tables be included? (`true`/`false`)
-$table-scrollable-name:       'scrollable' !default;// Class name for table scrollable view.
-$table-scrollable-height:     400px !default;       // Height for table scrollable view.
-$include-striped-table:       true !default;        // [Hidden flag] Should striped tables be included? (`true`/`false`)
-$table-striped-name:         'striped' !default;    // Class name for striped table.
-// External variables' defaults are used only if you import this module on its own, without the rest of the framework.
-$back-color:              white !default;           // [External variable - core] Background color for everything.
-$fore-color:              black !default;           // [External variable - core] Foreground color for everything.
-*/
-$table-mobile-breakpoint:     768px !default;
-$table-max-height: 400px !default;
-$table-caption-font-size: 1.5rem !default;
-$table-mobile-card-label: 'data-label' !default;
-$table-mobile-label-font-weight: 600 !default;
-
-$table-border-color: #aaa !default;
-$table-border-separator-color: #666 !default;
-
-$_include-horizontal-table: true !default;
-$table-horizontal-name: 'horizontal' !default;
-
+// The tables use the common table elements and syntax - <tfoot> is not supported.
+$table-mobile-breakpoint:     768px !default;       // Breakpoint for <table> mobile view.
+$table-max-height:            400px !default;       // Maximum height of <table> elements (non-horizontal).
+$table-caption-font-size:     1.5rem !default;      // Font size for <caption> elements.
+$table-mobile-card-label:  'data-label' !default;   // Attribute used to replace column headers in mobile view.
+$table-mobile-label-font-weight: 600 !default;      // Font weight for column header labels in mobile view.
+$table-border-color:           #aaa !default;       // Border color for <table> elements.
+$table-border-separator-color: #666 !default;       // Border color for the border between <thead> and <tbody>.
+$table-th-back-color:          #e6e6e6 !default;    // Background color for <th> elements.
+$table-th-fore-color:          #111 !default;       // Text color for <th> elements.
+$table-td-back-color:          #f8f8f8 !default;    // Background color for <td> elements.
+$table-td-fore-color:          #111 !default;       // Text color for <td> elements.
+$_include-horizontal-table:    true !default;       // [Hidden] Flag for horizontal tables (`true`/`false`).
+$table-horizontal-name: 'horizontal' !default;      // Class name for horizontal <table> elements.
+$_include-striped-table:       true !default;       // [Hidden] Flag for striped tables.
+$table-striped-name: 'striped' !default;            // Class name for striped <table> elements.
+$table-td-alt-back-color:      #eee !default;       // Alternative background color for <td> elements in striped tables.
+$_include-hoverable-table:     true !default;       // [Hidden] Flag for striped tables.
+$table-hoverable-name: 'hoverable' !default;        // Class name for hoverable <table> elements.
+$table-td-hover-back-color:    #90caf9 !default;    // Hover background color for <td> elements in hoverable tables.
 // CSS variable name definitions [exercise caution if modifying these]
-$table-border-color-var: '--table-border-color' !default;
+$table-border-color-var:           '--table-border-color' !default;
 $table-border-separator-color-var: '--table-border-separator-color' !default;
+$table-th-back-color-var:          '--table-head-back-color' !default;
+$table-th-fore-color-var:          '--table-head-fore-color' !default;
+$table-td-back-color-var:          '--table-body-back-color' !default;
+$table-td-fore-color-var:          '--table-body-fore-color' !default;
+$table-td-alt-back-color-var:      '--table-body-alt-back-color' !default;
+$table-td-hover-back-color-var:      '--table-body-hover-back-color' !default;
 // == Uncomment below code if this module is used on its own ==
 //
 // $universal-margin:        0.5rem !default;      // Universal margin for the most elements
@@ -57,8 +54,13 @@ $table-border-separator-color-var: '--table-border-separator-color' !default;
 :root {
   #{$table-border-color-var}: $table-border-color;
   #{$table-border-separator-color-var}: $table-border-separator-color;
+  #{$table-th-back-color-var}: $table-th-back-color;
+  #{$table-th-fore-color-var}: $table-th-fore-color;
+  #{$table-td-back-color-var}: $table-td-back-color;
+  #{$table-td-fore-color-var}: $table-td-fore-color;
+  #{$table-td-alt-back-color-var}: $table-td-alt-back-color;
 }
-// Desktop view.
+// Desktop view (scrollable vertical tables).
 table {
   border-collapse: separate;
   border-spacing: 0;
@@ -90,7 +92,7 @@ table {
   thead {
     z-index: 999;  // Fixes the visibility of the element.
     border-radius: var(#{$universal-border-radius-var}) var(#{$universal-border-radius-var}) 0 0;
-    border-bottom: $__1px solid var(#{$table-border-separator-color-var}); // var This
+    border-bottom: $__1px solid var(#{$table-border-separator-color-var});
     @if not($_include-horizontal-table) {
       position: sticky;
       top: 0;
@@ -98,7 +100,7 @@ table {
   }
   tbody {
     border-top: 0;
-    margin-top: calc(0 - var(#{$universal-margin-var})); // might be useless
+    margin-top: calc(0 - var(#{$universal-margin-var}));
     border-radius: 0 0 var(--universal-border-radius) var(--universal-border-radius);
   }
   tr {
@@ -119,11 +121,12 @@ table {
   }
   th {
     text-align: left;
-    background: #e6e6e6;        // use vars
-    color: #111;          // vars
+    background: var(#{$table-th-back-color-var});
+    color: var(#{$table-th-fore-color-var});
   }
   td {
-    background: #fafafa;     // use variables, this is a test (body)
+    background: var(#{$table-td-back-color-var});
+    color: var(#{$table-td-fore-color-var});
     border-top: $__1px solid var(#{$table-border-color-var});
   }
   @if not($_include-horizontal-table) {
@@ -132,7 +135,7 @@ table {
     }
   }
 }
-// Styling for horizntal tables
+// Styling for horizontal tables
 @if $_include-horizontal-table {
   table:not(.#{$table-horizontal-name}) {
     overflow: auto;
@@ -197,7 +200,7 @@ table {
       border-top: $__1px solid var(#{$table-border-color-var});
     }
     tbody tr:last-child td {
-      border-right: 1px solid #aaa;
+      border-right: $__1px solid var(#{$table-border-color-var});
       &:first-child{
         border-top-right-radius: 0.25rem;
       }
@@ -315,6 +318,51 @@ table {
         content: attr(#{$table-mobile-card-label});
         float: left;
         font-weight: $table-mobile-label-font-weight;
+      }
+    }
+  }
+}
+// Striped tables.
+@if $_include-striped-table {
+  :root {
+    #{$table-td-alt-back-color-var} : $table-td-alt-back-color;
+  }
+  table.#{$table-striped-name} {
+    tr:nth-of-type(2n) > td {
+      background: var(#{$table-td-alt-back-color-var});
+    }
+  }
+  // Responsiveness for striped tables.
+  @media screen and (max-width: #{$table-mobile-breakpoint}) {
+    table.#{$table-striped-name} {
+      tr:nth-of-type(2n) {
+        background: var(#{$table-td-alt-back-color-var});
+      }
+    }
+  }
+}
+// Hoverable tables.
+@if $_include-striped-table {
+  :root {
+    #{$table-td-hover-back-color-var} : $table-td-hover-back-color;
+  }
+  table.#{$table-hoverable-name} {
+    tr {
+      &:hover, &:focus {
+        &, & > td {
+          background: var(#{$table-td-hover-back-color-var});
+        }
+      }
+    }
+  }
+  @media screen and (max-width: #{$table-mobile-breakpoint}) {
+    table.#{$table-hoverable-name} {
+      tr {
+        &:hover, &:focus {
+          &, & > td {
+            background: var(#{$table-td-hover-back-color-var});
+          }
+        }
       }
     }
   }

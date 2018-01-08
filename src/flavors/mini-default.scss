@@ -86,7 +86,7 @@ $button-large-margin:  var(#{$universal-margin-var});
 @include make-button-alt-size ($button-large-name, $button-large-padding, $button-large-margin);
 
 @import '../mini/navigation';
-// @import '../mini/table';
+@import '../mini/table';
 @import '../mini/contextual';
 
 /*
@@ -133,5 +133,3 @@ $spinner-donut-secondary-fore-color: #d32f2f;     // Foreground color for second
 $spinner-donut-tertiary-name:       'tertiary';   // Class name for tertiary spinner donut color variant.
 $spinner-donut-tertiary-fore-color:   #308732;    // Foreground color for tertiary spinner donut color variant.
 @include make-spinner-donut-alt-color ($spinner-donut-tertiary-name, $spinner-donut-tertiary-fore-color);
-
-@import '../mini/table';

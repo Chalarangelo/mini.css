@@ -79,6 +79,7 @@ $button-large-margin:  var(#{$universal-margin-var});
 @include make-button-alt-size ($button-large-name, $button-large-padding, $button-large-margin);
 
 @import '../mini/navigation';
+@import '../mini/table';
 @import '../mini/contextual';
 
 /*

@@ -263,3 +263,8 @@
 ## 20180103
 
 - Added `.horizontal` `table` elements, optimized for minimal size. Some variables are missing and unset but overall both normal and `.horizontal` tables should work properly now on desktop as well as on mobile.
+
+## 20180108
+
+- Updated tables, variables cleanup.
+- Added `.striped` and `.hoverable` `table` styles.

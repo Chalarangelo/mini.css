@@ -269,3 +269,9 @@
 - Updated tables, variables cleanup.
 - Added `.striped` and `.hoverable` `table` styles.
 - Documented `table` module.
+
+## 20180115
+
+- Updated menus to not include a dead `blog` link no more. Sorry, **hugging cat**!
+- Updated tag for `v3.0.0-alpha.2`.
+- Released the new alpha.

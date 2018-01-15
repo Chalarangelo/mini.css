@@ -3,7 +3,7 @@
   Flavor name: Default (mini-default)
   Author: Angelos Chalaris (chalarangelo@gmail.com)
   Maintainers: Angelos Chalaris
-  mini.css version: v3.0.0-alpha.1
+  mini.css version: v3.0.0-alpha.2
 */
 /*
   Browsers resets and base typography.
@@ -1269,4 +1269,662 @@ footer.sticky {
   [type="checkbox"].drawer:not(.persistent) + * .drawer-close {
     display: none;
   }
+}
+
+/*
+  Definitions for the responsive table component.
+*/
+/* Table module CSS variable definitions. */
+:root {
+  --table-border-color: #aaa;
+  --table-border-separator-color: #666;
+  --table-head-back-color: #e6e6e6;
+  --table-head-fore-color: #111;
+  --table-body-back-color: #f8f8f8;
+  --table-body-fore-color: #111;
+  --table-body-alt-back-color: #eee;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row wrap;
+  padding: var(--universal-padding);
+  padding-top: 0;
+}
+
+table caption {
+  font-size: 1.5rem;
+  margin: calc(2 * var(--universal-margin)) 0;
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+table thead, table tbody {
+  display: flex;
+  flex-flow: row wrap;
+  border: 0.0625rem solid var(--table-border-color);
+}
+
+table thead {
+  z-index: 999;
+  border-radius: var(--universal-border-radius) var(--universal-border-radius) 0 0;
+  border-bottom: 0.0625rem solid var(--table-border-separator-color);
+}
+
+table tbody {
+  border-top: 0;
+  margin-top: calc(0 - var(--universal-margin));
+  border-radius: 0 0 var(--universal-border-radius) var(--universal-border-radius);
+}
+
+table tr {
+  display: flex;
+  padding: 0;
+}
+
+table th, table td {
+  padding: calc(2 * var(--universal-padding));
+}
+
+table th {
+  text-align: left;
+  background: var(--table-head-back-color);
+  color: var(--table-head-fore-color);
+}
+
+table td {
+  background: var(--table-body-back-color);
+  color: var(--table-body-fore-color);
+  border-top: 0.0625rem solid var(--table-border-color);
+}
+
+table:not(.horizontal) {
+  overflow: auto;
+  max-height: 400px;
+}
+
+table:not(.horizontal) thead, table:not(.horizontal) tbody {
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+table:not(.horizontal) tr {
+  flex-flow: row wrap;
+  flex: 0 0 100%;
+}
+
+table:not(.horizontal) th, table:not(.horizontal) td {
+  flex: 1 0 0%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table:not(.horizontal) thead {
+  position: sticky;
+  top: 0;
+}
+
+table:not(.horizontal) tbody tr:first-child td {
+  border-top: 0;
+}
+
+table.horizontal {
+  border: 0;
+}
+
+table.horizontal thead, table.horizontal tbody {
+  border: 0;
+  flex-flow: row nowrap;
+}
+
+table.horizontal tbody {
+  overflow: auto;
+  justify-content: space-between;
+  flex: 1 0 0;
+  margin-left: calc( 4 * var(--universal-margin));
+  padding-bottom: calc(var(--universal-padding) / 4);
+}
+
+table.horizontal tr {
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+table.horizontal th, table.horizontal td {
+  width: 100%;
+  border: 0;
+  border-bottom: 0.0625rem solid var(--table-border-color);
+}
+
+table.horizontal th:not(:first-child), table.horizontal td:not(:first-child) {
+  border-top: 0;
+}
+
+table.horizontal th {
+  text-align: right;
+  border-left: 0.0625rem solid var(--table-border-color);
+  border-right: 0.0625rem solid var(--table-border-separator-color);
+}
+
+table.horizontal thead tr:first-child {
+  padding-left: 0;
+}
+
+table.horizontal th:first-child, table.horizontal td:first-child {
+  border-top: 0.0625rem solid var(--table-border-color);
+}
+
+table.horizontal tbody tr:last-child td {
+  border-right: 0.0625rem solid var(--table-border-color);
+}
+
+table.horizontal tbody tr:last-child td:first-child {
+  border-top-right-radius: 0.25rem;
+}
+
+table.horizontal tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0.25rem;
+}
+
+table.horizontal thead tr:first-child th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+table.horizontal thead tr:first-child th:last-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
+@media screen and (max-width: 767px) {
+  table, table.horizontal {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    display: table;
+  }
+  table thead, table th, table.horizontal thead, table.horizontal th {
+    border: 0;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+  }
+  table tbody, table.horizontal tbody {
+    border: 0;
+    display: table-row-group;
+  }
+  table tr, table.horizontal tr {
+    display: block;
+    border: 0.0625rem solid var(--table-border-color);
+    border-radius: var(--universal-border-radius);
+    background: #fafafa;
+    padding: var(--universal-padding);
+    margin: var(--universal-margin);
+    margin-bottom: calc(2 * var(--universal-margin));
+  }
+  table th, table td, table.horizontal th, table.horizontal td {
+    width: auto;
+  }
+  table td, table.horizontal td {
+    display: block;
+    border: 0;
+    text-align: right;
+  }
+  table td:before, table.horizontal td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 600;
+  }
+  table th:first-child, table td:first-child, table.horizontal th:first-child, table.horizontal td:first-child {
+    border-top: 0;
+  }
+  table tbody tr:last-child td, table.horizontal tbody tr:last-child td {
+    border-right: 0;
+  }
+}
+
+:root {
+  --table-body-alt-back-color: #eee;
+}
+
+table.striped tr:nth-of-type(2n) > td {
+  background: var(--table-body-alt-back-color);
+}
+
+@media screen and (max-width: 768px) {
+  table.striped tr:nth-of-type(2n) {
+    background: var(--table-body-alt-back-color);
+  }
+}
+
+:root {
+  --table-body-hover-back-color: #90caf9;
+}
+
+table.hoverable tr:hover, table.hoverable tr:hover > td, table.hoverable tr:focus, table.hoverable tr:focus > td {
+  background: var(--table-body-hover-back-color);
+}
+
+@media screen and (max-width: 768px) {
+  table.hoverable tr:hover, table.hoverable tr:hover > td, table.hoverable tr:focus, table.hoverable tr:focus > td {
+    background: var(--table-body-hover-back-color);
+  }
+}
+
+/*
+  Definitions for contextual background elements, toasts and tooltips.
+*/
+/* Contextual module CSS variable definitions */
+:root {
+  --mark-back-color: #0277bd;
+  --mark-fore-color: #fafafa;
+}
+
+mark {
+  background: var(--mark-back-color);
+  color: var(--mark-fore-color);
+  font-size: 0.95em;
+  line-height: 1em;
+  border-radius: var(--universal-border-radius);
+  padding: calc(var(--universal-padding) / 4) calc(var(--universal-padding) / 2);
+}
+
+mark.inline-block {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.5;
+  padding: calc(var(--universal-padding) / 2) var(--universal-padding);
+}
+
+:root {
+  --toast-back-color: #424242;
+  --toast-fore-color: #fafafa;
+}
+
+.toast {
+  position: fixed;
+  bottom: calc(var(--universal-margin) * 3);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1111;
+  color: var(--toast-fore-color);
+  background: var(--toast-back-color);
+  border-radius: calc(var(--universal-border-radius) * 16);
+  padding: var(--universal-padding) calc(var(--universal-padding) * 3);
+}
+
+:root {
+  --tooltip-back-color: #212121;
+  --tooltip-fore-color: #fafafa;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip:before, .tooltip:after {
+  position: absolute;
+  opacity: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  transition: all 0.3s;
+  z-index: 1010;
+  left: 50%;
+}
+
+.tooltip:not(.bottom):before, .tooltip:not(.bottom):after {
+  bottom: 75%;
+}
+
+.tooltip.bottom:before, .tooltip.bottom:after {
+  top: 75%;
+}
+
+.tooltip:hover:before, .tooltip:hover:after, .tooltip:focus:before, .tooltip:focus:after {
+  opacity: 1;
+  clip: auto;
+  -webkit-clip-path: inset(0%);
+  clip-path: inset(0%);
+}
+
+.tooltip:before {
+  content: '';
+  background: transparent;
+  border: var(--universal-margin) solid transparent;
+  left: calc(50% - var(--universal-margin));
+}
+
+.tooltip:not(.bottom):before {
+  border-top-color: #212121;
+}
+
+.tooltip.bottom:before {
+  border-bottom-color: #212121;
+}
+
+.tooltip:after {
+  content: attr(aria-label);
+  color: var(--tooltip-fore-color);
+  background: var(--tooltip-back-color);
+  border-radius: var(--universal-border-radius);
+  padding: var(--universal-padding);
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.tooltip:not(.bottom):after {
+  margin-bottom: calc(2 * var(--universal-margin));
+}
+
+.tooltip.bottom:after {
+  margin-top: calc(2 * var(--universal-margin));
+}
+
+:root {
+  --modal-overlay-color: rgba(0, 0, 0, 0.45);
+  --modal-close-color: #444;
+  --modal-close-hover-color: #f0f0f0;
+}
+
+[type="checkbox"].modal {
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+[type="checkbox"].modal + div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: var(--modal-overlay-color);
+}
+
+[type="checkbox"].modal + div .card {
+  margin: 0 auto;
+  max-height: 50vh;
+  overflow: auto;
+}
+
+[type="checkbox"].modal + div .card .modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--universal-border-radius);
+  padding: var(--universal-padding);
+  margin: 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+[type="checkbox"].modal + div .card .modal-close:before {
+  display: block;
+  content: '\00D7';
+  color: var(--modal-close-color);
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.75rem;
+  line-height: 1;
+  text-align: center;
+}
+
+[type="checkbox"].modal + div .card .modal-close:hover, [type="checkbox"].modal + div .card .modal-close:focus {
+  background: var(--modal-close-hover-color);
+}
+
+[type="checkbox"].modal:checked + div {
+  display: flex;
+  flex: 0 1 auto;
+  z-index: 1200;
+}
+
+[type="checkbox"].modal:checked + div .card .modal-close {
+  z-index: 1211;
+}
+
+:root {
+  --collapse-label-back-color: #e8e8e8;
+  --collapse-label-fore-color: #212121;
+  --collapse-label-hover-back-color: #f0f0f0;
+  --collapse-selected-label-back-color: #ececec;
+  --collapse-border-color: #ddd;
+  --collapse-content-back-color: #fafafa;
+  --collapse-selected-label-border-color: #0277bd;
+}
+
+.collapse {
+  width: calc(100% - 2 * var(--universal-margin));
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  margin: var(--universal-margin);
+  border-radius: var(--universal-border-radius);
+}
+
+.collapse > [type="radio"], .collapse > [type="checkbox"] {
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.collapse > label {
+  flex-grow: 1;
+  display: inline-block;
+  height: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: var(--collapse-label-fore-color);
+  background: var(--collapse-label-back-color);
+  border: 0.0625rem solid var(--collapse-border-color);
+  padding: calc(1.5 * var(--universal-padding));
+}
+
+.collapse > label:hover, .collapse > label:focus {
+  background: var(--collapse-label-hover-back-color);
+}
+
+.collapse > label + div {
+  flex-basis: auto;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  transition: max-height 0.3s;
+  max-height: 1px;
+}
+
+.collapse > :checked + label {
+  background: var(--collapse-selected-label-back-color);
+  border-bottom-color: var(--collapse-selected-label-border-color);
+}
+
+.collapse > :checked + label + div {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  margin: 0;
+  background: var(--collapse-content-back-color);
+  border: 0.0625rem solid var(--collapse-border-color);
+  border-top: 0;
+  padding: var(--universal-padding);
+  clip: auto;
+  -webkit-clip-path: inset(0%);
+  clip-path: inset(0%);
+  max-height: 400px;
+}
+
+.collapse > label:not(:first-of-type) {
+  border-top: 0;
+}
+
+.collapse > label:first-of-type {
+  border-radius: var(--universal-border-radius) var(--universal-border-radius) 0 0;
+}
+
+.collapse > label:last-of-type:not(:first-of-type) {
+  border-radius: 0 0 var(--universal-border-radius) var(--universal-border-radius);
+}
+
+.collapse > label:last-of-type:first-of-type {
+  border-radius: var(--universal-border-radius);
+}
+
+.collapse > :checked:last-of-type:not(:first-of-type) + label {
+  border-radius: 0;
+}
+
+.collapse > :checked:last-of-type + label + div {
+  border-radius: 0 0 var(--universal-border-radius) var(--universal-border-radius);
+}
+
+/*
+  Custom elements for contextual background elements, toasts and tooltips.
+*/
+mark.secondary {
+  --mark-back-color: #d32f2f;
+}
+
+mark.tertiary {
+  --mark-back-color: #308732;
+}
+
+mark.tag {
+  padding: calc(var(--universal-padding)/2) var(--universal-padding);
+  border-radius: 1em;
+}
+
+/*
+  Definitions for progress elements and spinners.
+*/
+/* Progess module CSS variable definitions */
+:root {
+  --progress-back-color: #ddd;
+  --progress-fore-color: #555;
+}
+
+progress {
+  display: block;
+  vertical-align: baseline;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 0.75rem;
+  width: calc(100% - 2 * var(--universal-margin));
+  margin: var(--universal-margin);
+  border: 0;
+  border-radius: calc(2 * var(--universal-border-radius));
+  background: var(--progress-back-color);
+  color: var(--progress-fore-color);
+}
+
+progress::-webkit-progress-value {
+  background: var(--progress-fore-color);
+  border-top-left-radius: calc(2 * var(--universal-border-radius));
+  border-bottom-left-radius: calc(2 * var(--universal-border-radius));
+}
+
+progress::-webkit-progress-bar {
+  background: var(#ddd);
+}
+
+progress::-moz-progress-bar {
+  background: var(--progress-fore-color);
+  border-top-left-radius: calc(2 * var(--universal-border-radius));
+  border-bottom-left-radius: calc(2 * var(--universal-border-radius));
+}
+
+progress[value="1000"]::-webkit-progress-value {
+  border-radius: calc(2 * var(--universal-border-radius));
+}
+
+progress[value="1000"]::-moz-progress-bar {
+  border-radius: calc(2 * var(--universal-border-radius));
+}
+
+progress.inline {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+}
+
+:root {
+  --spinner-back-color: #ddd;
+  --spinner-fore-color: #555;
+}
+
+@keyframes spinner-donut-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  margin: var(--universal-margin);
+  border: 0.25rem solid var(--spinner-back-color);
+  border-left: 0.25rem solid var(--spinner-fore-color);
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  animation: spinner-donut-anim 1.2s linear infinite;
+}
+
+/*
+  Custom elements for progress bars and spinners.
+*/
+progress.primary {
+  --progress-fore-color: #1976d2;
+}
+
+progress.secondary {
+  --progress-fore-color: #d32f2f;
+}
+
+progress.tertiary {
+  --progress-fore-color: #308732;
+}
+
+.spinner.primary {
+  --spinner-fore-color: #1976d2;
+}
+
+.spinner.secondary {
+  --spinner-fore-color: #d32f2f;
+}
+
+.spinner.tertiary {
+  --spinner-fore-color: #308732;
 }

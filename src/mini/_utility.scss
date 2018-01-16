@@ -1,0 +1,169 @@
+/*
+  Definitions for utilities and helper classes.
+*/
+$hidden-name:           'hidden' !default;          // Class name for hidden elements.
+$visually-hidden-name:  'visually-hidden' !default; // Class name for visually hidden elements.
+$border-generic-name:   'bordered' !default;        // Class name for bordered elements.
+$border-generic-color:   rgba(0,0,0, 0.3) !default; // Border color for bordered elements.
+$border-rounded-name:   'rounded' !default;         // Class name for rounded-border elements.
+$border-circular-name:   'circular' !default;       // Class name for circular-border elements.
+$box-shadow-generic-name:'shadowed' !default;       // Class name for box-shadow elements.
+$box-shadow-generic: 0 4*$__1px 4*$__1px 0 rgba(0, 0, 0, 0.125),  0 2*$__1px 2*$__1px -2*$__1px rgba(0, 0, 0, 0.25);
+$responsive-margin-name: 'responsive-margin' !default; //Class name for responsive margin elements.
+$responsive-margin-medium-breakpoint: 768px !default; // Medium screen breakpoint for responsive margin elements.
+$responsive-margin-large-breakpoint: 1280px !default; // Medium screen breakpoint for responsive margin elements.
+$responsive-padding-name: 'responsive-padding' !default; //Class name for responsive padding elements.
+$responsive-padding-medium-breakpoint: 768px !default; // Medium screen breakpoint for responsive padding elements.
+$responsive-padding-large-breakpoint: 1280px !default; // Medium screen breakpoint for responsive padding elements.
+$hidden-prefix:           'hidden' !default;           // Class prefix for responsive hidden elements.
+$hidden-small-suffix:     'sm' !default;               // Class suffix for responsive hidden elements.
+$hidden-medium-breakpoint: 768px !default;             // Medium screen breakpoint for responsive hidden elements.
+$hidden-medium-suffix:     'md' !default;              // Class suffix for responsive hidden elements.
+$hidden-large-breakpoint: 1280px !default;             // Medium screen breakpoint for responsive hidden elements.
+$hidden-large-suffix:     'lg' !default;               // Class suffix for responsive hidden elements.
+$visually-hidden-prefix:  'visually-hidden' !default;  // Class prefix for responsive visually hidden elements.
+$visually-hidden-small-suffix:   'sm' !default;        // Class suffix for responsive hidden elements.
+$visually-hidden-medium-breakpoint: 768px !default;    // Medium screen breakpoint for responsive visually hidden elements.
+$visually-hidden-medium-suffix:   'md' !default;       // Class suffix for responsive hidden elements.
+$visually-hidden-large-breakpoint: 1280px !default;    // Medium screen breakpoint for responsive visually hidden elements.
+$visually-hidden-large-suffix:  'lg' !default;         // Class suffix for responsive hidden elements.
+// CSS variable name definitions [exercise caution if modifying these]
+$border-generic-color-var:        '--generic-border-color' !default;
+$box-shadow-generic-var:          '--generic-box-shadow' !default;
+// == Uncomment below code if this module is used on its own ==
+//
+// $universal-margin:        0.5rem !default;      // Universal margin for the most elements
+// $universal-padding:       0.5rem !default;      // Universal padding for the most elements
+// $universal-border-radius: 0.125rem !default;    // Universal border-radius for most elements
+// $universal-box-shadow:    none !default;        // Universal box-shadow for most elements
+// $universal-margin-var:          '--universal-margin' !default;
+// $universal-padding-var:         '--universal-padding' !default;
+// $universal-border-radius-var:   '--universal-border-radius' !default;
+// $universal-box-shadow-var:      '--universal-box-shadow' !default;
+// :root {
+//  #{$universal-margin-var}: $universal-margin;
+//  #{$universal-padding-var}: $universal-padding;
+//  #{$universal-border-radius-var}: $universal-border-radius;
+//  @if $universal-box-shadow != none {
+//   #{$universal-box-shadow-var}: $universal-box-shadow;
+//  }
+// }
+//
+// ============================================================
+/* Utility module CSS variable definitions */
+:root {
+  #{$border-generic-color-var}: $border-generic-color;
+  #{$box-shadow-generic-var}: $box-shadow-generic;
+}
+// Hidden elements class. NOTE: Uses !important.
+.#{$hidden-name}{
+  display: none !important;
+}
+// Visually hidden elements class. NOTE: Uses !important.
+.#{$visually-hidden-name} {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(100%) !important;
+  clip-path: inset(100%) !important;
+  overflow: hidden !important;
+}
+// Generic bordered element class. NOTE: Uses !important.
+.#{$border-generic-name} {
+  border: $__1px solid var(#{$border-generic-color-var}) !important;
+}
+// Generic rounded-border element class. NOTE: Uses !important.
+.#{$border-rounded-name} {
+  border-radius: var(#{$universal-border-radius-var}) !important;
+}
+// Generic circular-border element class. NOTE: Uses !important.
+.#{$border-circular-name} {
+  border-radius: 50% !important;
+}
+// Generic box-shadow element class. NOTE: Uses !important.
+.#{$box-shadow-generic-name} {
+  box-shadow: var(#{$box-shadow-generic-var}) !important;
+}
+// Responsive margin class. NOTE: Uses !important.
+.#{$responsive-margin-name} {
+  margin: calc(var(#{$universal-margin-var}) / 4) !important;
+  @media screen and (min-width: #{$responsive-margin-medium-breakpoint}) {
+    margin: calc(var(#{$universal-margin-var}) / 2) !important;
+  }
+  @media screen and (min-width: #{$responsive-margin-large-breakpoint}) {
+    margin: var(#{$universal-margin-var}) !important;
+  }
+}
+// Responsive padding class. NOTE: Uses !important.
+.#{$responsive-padding-name} {
+  padding: calc(var(#{$universal-padding-var}) / 4) !important;
+  @media screen and (min-width: #{$responsive-padding-medium-breakpoint}) {
+    padding: calc(var(#{$universal-padding-var}) / 2) !important;
+  }
+  @media screen and (min-width: #{$responsive-padding-large-breakpoint}) {
+    padding: var(#{$universal-padding-var}) !important;
+  }
+}
+// Responsive hidden element class. NOTE: Uses !important.
+@media screen and (max-width: #{$hidden-medium-breakpoint}-1px) {
+  .#{$hidden-prefix}-#{$hidden-small-suffix} {
+    display: none !important;
+  }
+}
+@media screen and (min-width: #{$hidden-medium-breakpoint}) and (max-width: #{$hidden-large-breakpoint}-1px) {
+  .#{$hidden-prefix}-#{$hidden-medium-suffix} {
+    display: none !important;
+  }
+}
+@media screen and (min-width: #{$hidden-large-breakpoint}) {
+  .#{$hidden-prefix}-#{$hidden-large-suffix} {
+    display: none !important;
+  }
+}
+// Responsive visually hidden element class. NOTE: Uses !important.
+@media screen and (max-width: #{$visually-hidden-medium-breakpoint}-1px) {
+  .#{$visually-hidden-prefix}-#{$visually-hidden-small-suffix} {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    overflow: hidden !important;
+  }
+}
+@media screen and (min-width: #{$visually-hidden-medium-breakpoint}) and (max-width: #{$visually-hidden-large-breakpoint}-1px) {
+  .#{$visually-hidden-prefix}-#{$visually-hidden-medium-suffix} {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    overflow: hidden !important;
+  }
+}
+@media screen and (min-width: #{$visually-hidden-large-breakpoint}) {
+  .#{$visually-hidden-prefix}-#{$visually-hidden-large-suffix} {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    overflow: hidden !important;
+  }
+}

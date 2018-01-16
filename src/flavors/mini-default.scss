@@ -133,3 +133,5 @@ $spinner-donut-secondary-fore-color: #d32f2f;     // Foreground color for second
 $spinner-donut-tertiary-name:       'tertiary';   // Class name for tertiary spinner donut color variant.
 $spinner-donut-tertiary-fore-color:   #308732;    // Foreground color for tertiary spinner donut color variant.
 @include make-spinner-donut-alt-color ($spinner-donut-tertiary-name, $spinner-donut-tertiary-fore-color);
+
+@import '../mini/utility';

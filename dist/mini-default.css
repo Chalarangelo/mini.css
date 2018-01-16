@@ -1928,3 +1928,140 @@ progress.tertiary {
 .spinner.tertiary {
   --spinner-fore-color: #308732;
 }
+
+/*
+  Definitions for utilities and helper classes.
+*/
+/* Utility module CSS variable definitions */
+:root {
+  --generic-border-color: rgba(0, 0, 0, 0.3);
+  --generic-box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.125), 0 0.125rem 0.125rem -0.125rem rgba(0, 0, 0, 0.25);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(100%) !important;
+  clip-path: inset(100%) !important;
+  overflow: hidden !important;
+}
+
+.bordered {
+  border: 0.0625rem solid var(--generic-border-color) !important;
+}
+
+.rounded {
+  border-radius: var(--universal-border-radius) !important;
+}
+
+.circular {
+  border-radius: 50% !important;
+}
+
+.shadowed {
+  box-shadow: var(--generic-box-shadow) !important;
+}
+
+.responsive-margin {
+  margin: calc(var(--universal-margin) / 4) !important;
+}
+
+@media screen and (min-width: 768px) {
+  .responsive-margin {
+    margin: calc(var(--universal-margin) / 2) !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .responsive-margin {
+    margin: var(--universal-margin) !important;
+  }
+}
+
+.responsive-padding {
+  padding: calc(var(--universal-padding) / 4) !important;
+}
+
+@media screen and (min-width: 768px) {
+  .responsive-padding {
+    padding: calc(var(--universal-padding) / 2) !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .responsive-padding {
+    padding: var(--universal-padding) !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .visually-hidden-sm {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    overflow: hidden !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .visually-hidden-md {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    overflow: hidden !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .visually-hidden-lg {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    overflow: hidden !important;
+  }
+}

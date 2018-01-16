@@ -275,3 +275,12 @@
 - Updated menus to not include a dead `blog` link no more. Sorry, **hugging cat**!
 - Updated tag for `v3.0.0-alpha.2`.
 - Released the new alpha.
+
+# v3.0.0-alpha.3
+
+## 20180116
+
+- Started working on `utility` module.
+- Moved all old mixins from `utility_mixins` to the base `utility` module.
+- Removed `close`, `breadcrumbs` and legacy utility helper classes.
+- Everything including `utility` module, but no icons is `6.75KB`, which is quite good, considering everything.

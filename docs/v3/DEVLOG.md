@@ -284,3 +284,11 @@
 - Moved all old mixins from `utility_mixins` to the base `utility` module.
 - Removed `close`, `breadcrumbs` and legacy utility helper classes.
 - Everything including `utility` module, but no icons is `6.75KB`, which is quite good, considering everything.
+
+## 20180122
+
+- Started implementing the `icon` module. Made some changes in the icon set (removed `x` and `menu`, added `phone` and `rss`).
+- Due to decisions on using `filter: invert(100)` for icon coloring, the minimum supported version of Firefox will now be `35` instead of `31`.
+- Added all icons.
+- Added `.inverse` and `.secondary` filters for icons.
+- Total size with icons is `8.17KB` gzipped.

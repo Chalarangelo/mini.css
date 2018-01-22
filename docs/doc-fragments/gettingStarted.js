@@ -13,7 +13,7 @@ module.exports = {
   <br/><p><strong>mini.css</strong> is crafted with long-term support in mind, so expect it to be compatible with all modern browsers, as well as their future versions. However, most legacy and proxy browsers, such as Internet Explorer, Opera Mini, IE Mobile and UC Browser are not officially supported, meaning certain features may not be displayed properly or behave exactly as expected.</p><br/>
   <figure class="container"><div class="row">
   <div class="col-sm" style="text-align:center; background: #35BCE6; padding: 1rem;"><img src="browser-logos/edge_128x128.png" alt="edge"><br/><h3><small>&nbsp;&nbsp;Edge<sup style="-0.675em"><i class="fa fa-lg fa-exclamation" aria-hidden="true" style="font-size: 80%;"></i></sup></small>15</h3></div>
-  <div class="col-sm" style="text-align:center; background: #FF742E; padding: 1rem;"><img src="browser-logos/firefox_128x128.png" alt="firefox"><br/><h3><small>&nbsp;Firefox</small>31</h3></div>
+  <div class="col-sm" style="text-align:center; background: #FF742E; padding: 1rem;"><img src="browser-logos/firefox_128x128.png" alt="firefox"><br/><h3><small>&nbsp;Firefox</small>35</h3></div>
   <div class="col-sm" style="text-align:center; background: #FFE270; padding: 1rem;"><img src="browser-logos/chrome_128x128.png" alt="chrome"><br/><h3><small>&nbsp;Chrome</small>49</h3></div>
   <div class="col-sm" style="text-align:center; background: #00D0FF; padding: 1rem;"><img src="browser-logos/safari_128x128.png" alt="safari"><br/><h3><small>&nbsp;Safari</small>9.1</h3></div>
   <div class="col-sm" style="text-align:center; background: #FF6E6E; padding: 1rem;"><img src="browser-logos/opera_128x128.png" alt="opera"><br/><h3><small>&nbsp;Opera</small>36</h3></div>

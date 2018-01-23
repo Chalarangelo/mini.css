@@ -292,3 +292,8 @@
 - Added all icons.
 - Added `.inverse` and `.secondary` filters for icons.
 - Total size with icons is `8.17KB` gzipped.
+
+## 20180123
+
+- Updated `icon` module to have the variables definitions in comments (in case of standalone use).
+- Documented `icon` module in its entirety and retested everything. It's all good.

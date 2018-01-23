@@ -79,6 +79,8 @@ fs.writeFile(indexOutputPath,
 var docFragments = require('./doc-fragments/docFragments'); // Gets all document fragments as a list.
 var docOutputPath = './docs/v3/docs.html';                  // This path is relative to package.json.
 
+const FEATHER_BANNER = `<a href="https://feathericons.com/" class="section double-padded" id="feather-banner" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f8f8f8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17" y1="15" x2="9" y2="15"></line></svg>&nbsp;Powered by Feather</a>`;
+
 var documentStart = `<!DOCTYPE html><html lang="en"><head>
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:400,400i,500,700,700i&amp;subset=latin-ext" rel="stylesheet">
 <link rel="stylesheet" href="./style.min.css">
@@ -156,6 +158,7 @@ var documentationSearch = `<script>
 function buildFragment(fragment){
   var fragmentHtml = `<div id="${fragment.id}" class="card fluid">
   <h2 class="section double-padded">${fragment.title}</h2>
+  ${fragment.id === 'icons'?FEATHER_BANNER:''}
   <div class="section">${fragment.description}</div>
   ${fragment.example?`<div class="section"><h3>Example</h3>${fragment.example}</div>`:''}
   ${fragment.samples.length?`<div class="section double-padded prefiller-example"><h3>Sample code</h3>${fragment.samples.join('')}</div>`:''}

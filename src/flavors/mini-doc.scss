@@ -127,6 +127,7 @@ $spinner-donut-tertiary-name:       'tertiary';   // Class name for tertiary spi
 $spinner-donut-tertiary-fore-color:   #308732;    // Foreground color for tertiary spinner donut color variant.
 @include make-spinner-donut-alt-color ($spinner-donut-tertiary-name, $spinner-donut-tertiary-fore-color);
 
+@import '../mini/icon';
 @import '../mini/utility';
 
 // Custom elements for his flavor.
@@ -675,5 +676,30 @@ table.doc.cardized {
     content: attr(#{$table-mobile-card-label});
     float: left;
     font-weight: $table-mobile-label-font-weight;
+  }
+}
+
+a#feather-banner {
+  background: #1976d2;
+  color: #f8f8f8;
+  font-size: 1.25rem;
+  text-align:center;
+  transition: background 0.3s;
+  &:hover, &:focus {
+    text-decoration: none;
+    background: #1565c0;
+  }
+  svg {
+    vertical-align: -0.25rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.row.icon-row {
+  padding: 0.25rem;
+  p {
+    margin: 0.125rem;
+    padding: 0.25rem;
+    text-align: center;
   }
 }

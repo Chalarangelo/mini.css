@@ -37,6 +37,18 @@ $icon-inverse-color-name: 'inverse' !default;    // Class name for inverse color
   }
   @return $string;
 }
+// == Uncomment below code if this module is used on its own ==
+//
+// $universal-margin:        0.5rem !default;      // Universal margin for the most elements
+// $fore-color:              #111 !default;        // Text & foreground color
+// $universal-margin-var:          '--universal-margin' !default;
+// $fore-color-var:                '--fore-color' !default;
+// :root {
+//  #{$universal-margin-var}: $universal-margin;
+//  #{$fore-color-var}: $fore-color;
+// }
+//
+// ============================================================
 // Base styling for icons.
 span[class^='#{$icon-prefix}-'] {
   display: inline-block;

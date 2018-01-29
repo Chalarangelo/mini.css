@@ -24,6 +24,8 @@ var progressBars = require('./progressBars');
 var donutSpinners = require('./donutSpinners');
 var icons = require('./icons');
 var visibilityHelpers = require('./visibilityHelpers');
+var elementDecorators = require('./elementDecorators');
+var responsiveSpacingAndSizing = require('./responsiveSpacingAndSizing');
 
 module.exports = [
   gettingStarted,
@@ -35,5 +37,5 @@ module.exports = [
   textHighlighting, toasts, tooltips, modalDialogs, spoilersAndAccordions,
   progressBars, donutSpinners,
   icons,
-  visibilityHelpers
+  visibilityHelpers, elementDecorators, responsiveSpacingAndSizing
 ]

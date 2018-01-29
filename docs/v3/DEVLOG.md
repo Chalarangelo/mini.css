@@ -301,3 +301,6 @@
 ## 20180129
 
 - Documented visibility helpers.
+- Documented element decorators.
+- Documented responsive spacing and sizing modifiers.
+- Updated version info to `v3.0.0-alpha.3`, soon ready to be released as the final alpha.

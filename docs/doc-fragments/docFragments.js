@@ -23,6 +23,7 @@ var spoilersAndAccordions = require('./spoilersAndAccordions');
 var progressBars = require('./progressBars');
 var donutSpinners = require('./donutSpinners');
 var icons = require('./icons');
+var visibilityHelpers = require('./visibilityHelpers');
 
 module.exports = [
   gettingStarted,
@@ -33,5 +34,6 @@ module.exports = [
   tables,
   textHighlighting, toasts, tooltips, modalDialogs, spoilersAndAccordions,
   progressBars, donutSpinners,
-  icons
+  icons,
+  visibilityHelpers
 ]

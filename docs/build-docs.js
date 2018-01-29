@@ -1,7 +1,6 @@
 var fs = require('fs');
 var version = require('./vinf');                            // Gets version info.
-var frameworkUrl = '"https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.0-alpha.1/mini-default.css"';
-
+var frameworkUrl = `"https://cdnjs.cloudflare.com/ajax/libs/mini.css/${version.version.slice(1)}/mini-default.css"`;
 // INDEX
 
 var indexHtml = `<!DOCTYPE html>

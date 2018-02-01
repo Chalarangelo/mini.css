@@ -194,9 +194,118 @@
 - Generated new favicons.
 - Everything should be ready to release `v3.0.0-alpha.1` tomorrow.
 
+# v3.0.0-alpha.2
+
 ## 20171120
 
 - Updated `.drawer` documentation to include customization.
 - Recompiled default flavor just in case.
 - Fixed the devlog showing wrong dates. **Hugging cat** was at it again, it seems!
 - Unleashed the first **Gluon** alpha unto the world!
+
+## 20171204
+
+- Started working on `contextual` module.
+- Removed the `margin` property from `mark` elements, it seemed particularly irrelevant, provided they are usually inlined inside text. This can be added manually now, but I don't think nobody will have a use for it.
+- Removed `border` styling from `mark` elements, it also seemed reasonably irrelevant. Easy to add, generic borders will help here, when I add them back in `utility`.
+- Slightly altered `inline-block` version of `mark` to match the styling of the rest of the elements.
+- Worked on `contextual_mixins` to get the `mark` variants ready. Slightly altered the mixins from the old version.
+- Used mixins to add `secondary`, `tertiary` and `tag` `mark` variants.
+- Fed **hugging cat**.
+
+## 20171208
+
+- Added `tooltip` and `toast`. Their mixins were rarely ever used as far as I can tell, so they will not make into **Gluon**, at least for now. If the need arises, they can be easily added back in at a later date.
+- Apparently the `-webkit-clip-path` is necessary for best support. Remind **hugging cat** every time from now on.
+- Removed legacy support from `tooltip`'s tail. I mean everything uses `calc` now, so what's the use to keep that in?
+- I am removing `-webkit-transform`, it seems unnecessary now.
+
+## 20171211
+
+- Added `.modal` component. Breaking changes to comply with the new guidelines (i.e. apply the class on the `checkbox` element, not the element after it, much like `.drawer`). Cleaned up a little bit, dealt with a few problems here and there. Custom styling for the `.modal-close`, not bound to anything else.
+- Moved vertical version of `.tabs` into `contextual` under `.collapse`. Reduced complexity, improved performance and generally a better feel to them.
+- **Hugging cat** was messing with the `DEVLOG`, good thing I noticed and fixed it.
+- Moved component-specific variable definitions in `contextual` under the related conditionals.
+- Documented `mark` elements.
+- Fixed a broken link in `index.html`.
+- Added the appropriate script for generating Codepen links dynamically. Oh, yeah!
+- Documented `.toast` messages.
+
+## 20171217
+
+- Documented `.tooltip`.
+
+## 20171228
+
+- Documented `.modal`.
+- Documented `.collapse`.
+
+## 20171229
+
+- Coded `progress` module. Everything is pretty much the same as before.
+- Renamed `.spinner-donut` to `.spinner`.
+- Added a default variant to `progress` and `.spinner`, so that we can have `.primary`, `.secondary` and `.tertiary`.
+- Added alternative color mixins for `progress` and `.spinner`.
+- Removed size variants and the inline variant mixin from `progress` and `.spinner`.
+- Updated flavor file with the `progress` module and mixed-in variants.
+
+## 20171230
+
+- Documented `progress` element.
+- Documented `spinner` component.
+
+## 20180102
+
+- Started working on `table` module. Tables are now scrollable by default.
+- Coded desktop view for `table`, no `@media` queries in there yet, but there will be more sooner rather than later.
+- Added mobile view for tables, fully functional, no problems, still missing `.horizontal` and `.striped` (also `.hoverable` ?) and variablization.
+
+## 20180103
+
+- Added `.horizontal` `table` elements, optimized for minimal size. Some variables are missing and unset but overall both normal and `.horizontal` tables should work properly now on desktop as well as on mobile.
+
+## 20180108
+
+- Updated tables, variables cleanup.
+- Added `.striped` and `.hoverable` `table` styles.
+- Documented `table` module.
+
+## 20180115
+
+- Updated menus to not include a dead `blog` link no more. Sorry, **hugging cat**!
+- Updated tag for `v3.0.0-alpha.2`.
+- Released the new alpha.
+
+# v3.0.0-alpha.3
+
+## 20180116
+
+- Started working on `utility` module.
+- Moved all old mixins from `utility_mixins` to the base `utility` module.
+- Removed `close`, `breadcrumbs` and legacy utility helper classes.
+- Everything including `utility` module, but no icons is `6.75KB`, which is quite good, considering everything.
+
+## 20180122
+
+- Started implementing the `icon` module. Made some changes in the icon set (removed `x` and `menu`, added `phone` and `rss`).
+- Due to decisions on using `filter: invert(100)` for icon coloring, the minimum supported version of Firefox will now be `35` instead of `31`.
+- Added all icons.
+- Added `.inverse` and `.secondary` filters for icons.
+- Total size with icons is `8.17KB` gzipped.
+
+## 20180123
+
+- Updated `icon` module to have the variables definitions in comments (in case of standalone use).
+- Documented `icon` module in its entirety and retested everything. It's all good.
+
+## 20180129
+
+- Documented visibility helpers.
+- Documented element decorators.
+- Documented responsive spacing and sizing modifiers.
+- Updated version info to `v3.0.0-alpha.3`, soon ready to be released as the final alpha.
+
+## 20180201
+
+- Prepared everything for `v3.0.0-alpha.3`.
+- Released the new alpha.

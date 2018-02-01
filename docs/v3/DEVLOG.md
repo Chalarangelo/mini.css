@@ -304,3 +304,8 @@
 - Documented element decorators.
 - Documented responsive spacing and sizing modifiers.
 - Updated version info to `v3.0.0-alpha.3`, soon ready to be released as the final alpha.
+
+## 20180201
+
+- Prepared everything for `v3.0.0-alpha.3`.
+- Released the new alpha.

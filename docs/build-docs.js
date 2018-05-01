@@ -190,3 +190,62 @@ fs.writeFile(docOutputPath,
   ${documentEnd}`,
   function(err) { if(err) return console.log(err);  console.log("Documentation file generated!"); }
 );
+
+// CUSTOMIZATION
+var custFragments = require('./doc-fragments/customizationFragments'); // Gets all customization fragments as a list.
+var custOutputPath = './docs/v3/flavors.html';                  // This path is relative to package.json.
+
+var customizationStart = `<!DOCTYPE html><html lang="en"><head>
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:400,400i,500,700,700i&amp;subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="./style.min.css">
+<title>mini.css - Flavors</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites.">
+<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, toolkit">
+<meta name="author" content="Angelos Chalaris (chalarangelo)">
+<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+<meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.png">
+<meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
+</head><body>`;
+var customizationEnd = `</body></html>`;
+
+var customizationAppShellStart = `<div id="root"><header class="row">
+  <span class="logo col-sm-3 col-md">mini.css</span>
+  <a class="button col-sm col-md" href="https://github.com/Chalarangelo/mini.css" target="_blank">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height: 20px; vertical-align: text-top;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+  <span>&nbsp;Github</span></a>
+  <a class="button col-sm col-md" href="#">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height: 20px; vertical-align: text-top;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+  <span>&nbsp;Docs</span></a>
+  <label for="doc-drawer-checkbox" class="button drawer-toggle col-sm"></label>
+</header>
+<div class="row" id="doc-wrapper">`;
+var customizationAppShellEnd = `</div></div>`;
+
+var customizationAppSidebarStart = `<input id="doc-drawer-checkbox" class="drawer" value="on" type="checkbox">
+<nav class="col-md-4 col-lg-3" id="nav-drawer"><h3>Menu</h3><label for="doc-drawer-checkbox" class="button drawer-close"></label>`;
+var customizationAppSidebarEnd = `</nav>`;
+
+var customizationMainStart = `<main class="col-sm-12 col-md-8 col-lg-9" id="doc-content">`;
+var customizationMainEnd = `<footer><p><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo" target="_blank">@Chalarangelo</a>. Source code licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>.</p><p>Icons provided by <a href="https://feathericons.com/" target="_blank">Feather</a>.</p></footer></main>`;
+
+var customizationFragments = custFragments.map(f => buildCustomizationFragment(f)).join('<br/>');
+var customizationLinks = [buildLink(custFragments[0]), '<hr style="padding:0;"/>', ...custFragments[1].sections.map(f => buildLink(f))].join('');
+
+function buildCustomizationFragment(fragment){
+  var fragmentHtml = `<div id="${fragment.id}" class="card fluid">
+  <h2 class="section double-padded">${fragment.title}</h2>
+  <div class="section">${fragment.content}</div>
+</div>`;
+  return fragmentHtml;
+}
+
+fs.writeFile(custOutputPath,
+  `${customizationStart}${customizationAppShellStart}
+    ${customizationAppSidebarStart}${customizationLinks}${customizationAppSidebarEnd}
+    ${customizationMainStart}${customizationFragments}${customizationMainEnd}
+  ${customizationAppShellEnd}
+  ${customizationEnd}`,
+  function(err) { if(err) return console.log(err);  console.log("Flavors file generated!"); }
+);

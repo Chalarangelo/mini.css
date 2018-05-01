@@ -309,3 +309,9 @@
 
 - Prepared everything for `v3.0.0-alpha.3`.
 - Released the new alpha.
+
+## 20180501
+
+- Started working on the tool for flavors. Made an initial draft of all the needed variables.
+- Coded the base architecture behind the flavors page.
+- Coded the `core` module's inputs for the flavors page.

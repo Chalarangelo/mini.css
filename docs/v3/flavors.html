@@ -29,7 +29,7 @@
   <h2 class="section double-padded">Build your own flavor</h2><div class="section">
     <h3>Core module</h3>
     <p>The <strong>Core</strong> module contains styling rules for common textual elements, headings, quotations and code, as well as rules for universal styling and color palettes. This module is always enabled, as many other modules and components depend on it.</p>
-    <form>
+    <form id="core">
       <fieldset>
         <legend id="textual-content">Textual content</legend>
         <div class="input-group vertical">
@@ -195,13 +195,65 @@
         </div>
         <div class="input-group vertical">
           <label for="mobileBreakpoint">Mobile breakpoint (px):</label>
-          <input type="number" id="mobileBreakpoint" style="width:calc(100% - 0.5rem);" value="0.125" min="0.001" step="0.001"/>
+          <input type="number" id="mobileBreakpoint" style="width:calc(100% - 0.5rem);" value="768" min="1"/>
           <p><small>Breakpoint between mobile screen and desktops, in pixels</small></p>
         </div>
         <div class="input-group vertical">
           <label for="largeScreenBreakpoint">Large screen breakpoint (px):</label>
-          <input type="number" id="largeScreenBreakpoint" style="width:calc(100% - 0.5rem);" value="0.125" min="0.001" step="0.001"/>
+          <input type="number" id="largeScreenBreakpoint" style="width:calc(100% - 0.5rem);" value="1280" min="1"/>
           <p><small>Breakpoint between desktops and large screens, in pixels</small></p>
+        </div>
+      </fieldset>
+    </form>
+    <h3>Layout module</h3>
+    <p>The <strong>Layout</strong> module contains rules and functionality for the grid and card systems. This module is not always enabled, but it's highly recommended that you enable it, as many other components depend on its functionality to work properly.</p>
+    <form id="layout">
+      <div class="input-group">
+        <label for="layoutEnabled">Module enabled? (recommended)</label>
+        <input type="checkbox" checked autocomplete="off" id="layoutEnabled"/>
+      </div>
+      <fieldset>
+        <legend id="grid">Grid</legend>
+        <div class="input-group vertical">
+          <label for="gridColumnCount">Grid column count:</label>
+          <input type="number" id="gridColumnCount" style="width:calc(100% - 0.5rem);" value="12" min="1"/>
+          <p><small>Number of horizontal column partitions for the grid system (default 12)</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="gridMediumBreakpoint">Grid medium screen breakpoint (px):</label>
+          <input type="number" id="gridMediumBreakpoint" style="width:calc(100% - 0.5rem);" value="768" min="1"/>
+          <p><small>Breakpoint between small and medium screens, in pixels</small></p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend id="cards">Cards</legend>
+        <div class="input-group vertical">
+          <label for="cardNormalWidth">Card normal width (px):</label>
+          <input type="number" id="cardNormalWidth" style="width:calc(100% - 0.5rem);" value="320" min="1"/>
+          <p><small>Width of normal cards, in pixels</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardSectionMediaHeight">Card media section height (px):</label>
+          <input type="number" id="cardSectionMediaHeight" style="width:calc(100% - 0.5rem);" value="200" min="1"/>
+          <p><small>Height of card media sections, in pixels</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardForeColor">Card foreground color:</label>
+          <input type="text" id="cardForeColor" value="#111" autocomplete="off"/>
+          <span id="cardForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#111; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for cards</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardBackColor">Card background color:</label>
+          <input type="text" id="cardBackColor" value="#f8f8f8" autocomplete="off"/>
+          <span id="cardBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f8f8f8; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for cards</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardBorderColor">Card border color:</label>
+          <input type="text" id="cardBorderColor" value="#ddd" autocomplete="off"/>
+          <span id="cardBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for cards</small></p>
         </div>
       </fieldset>
     </form>
@@ -218,6 +270,9 @@
       document.getElementById('preSidebarColor').addEventListener('input', function(e){ updateColorPreview('preSidebarColorPreview', e.target.value) });
       document.getElementById('aLinkColor').addEventListener('input', function(e){ updateColorPreview('aLinkColorPreview', e.target.value) });
       document.getElementById('aVisitedColor').addEventListener('input', function(e){ updateColorPreview('aVisitedColorPreview', e.target.value) });
+      document.getElementById('cardForeColor').addEventListener('input', function(e){ updateColorPreview('cardForeColorPreview', e.target.value) });
+      document.getElementById('cardBackColor').addEventListener('input', function(e){ updateColorPreview('cardBackColorPreview', e.target.value) });
+      document.getElementById('cardBorderColor').addEventListener('input', function(e){ updateColorPreview('cardBorderColorPreview', e.target.value) });
     }
     function updateColorPreview(element, value) { document.getElementById(element).style.background = value }
   </script>

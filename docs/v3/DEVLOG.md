@@ -315,3 +315,7 @@
 - Started working on the tool for flavors. Made an initial draft of all the needed variables.
 - Coded the base architecture behind the flavors page.
 - Coded the `core` module's inputs for the flavors page.
+
+## 20180502
+
+- Coded the `layout` module's inputs for the flavors page.

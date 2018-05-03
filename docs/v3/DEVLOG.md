@@ -319,3 +319,7 @@
 ## 20180502
 
 - Coded the `layout` module's inputs for the flavors page.
+
+## 20180503
+
+- Coded the `input_control` module's inputs for the flavors page.

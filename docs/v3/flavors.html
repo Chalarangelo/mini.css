@@ -257,6 +257,104 @@
         </div>
       </fieldset>
     </form>
+    <h3>Input control module</h3>
+    <p>The <strong>Input control</strong> module contains styling rules for forms, input elements and buttons. This module is not always enabled, but it's highly recommended that you enable it, as some other components depend on its functionality to work properly.</p>
+    <form id="input_control">
+      <div class="input-group">
+        <label for="layoutEnabled">Module enabled? (recommended)</label>
+        <input type="checkbox" checked autocomplete="off" id="layoutEnabled"/>
+      </div>
+      <fieldset>
+        <legend id="forms-and-input">Forms &amp; input</legend>
+        <div class="input-group vertical">
+          <label for="formForeColor">Form foreground color:</label>
+          <input type="text" id="formForeColor" value="#111" autocomplete="off"/>
+          <span id="formForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#111; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for forms</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="formBackColor">Form background color:</label>
+          <input type="text" id="formBackColor" value="#f0f0f0" autocomplete="off"/>
+          <span id="formBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f0f0f0; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for forms</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="formBorderColor">Form border color:</label>
+          <input type="text" id="formBorderColor" value="#ddd" autocomplete="off"/>
+          <span id="formBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for forms</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="inputForeColor">Input foreground color:</label>
+          <input type="text" id="inputForeColor" value="#111" autocomplete="off"/>
+          <span id="inputForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#111; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for input elements</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="inputBackColor">Input background color:</label>
+          <input type="text" id="inputBackColor" value="#f8f8f8" autocomplete="off"/>
+          <span id="inputBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f8f8f8; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for input elements</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="inputBorderColor">Input border color:</label>
+          <input type="text" id="inputBorderColor" value="#ddd" autocomplete="off"/>
+          <span id="inputBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for input elements</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="inputFocusColor">Input border color (focused):</label>
+          <input type="text" id="inputFocusColor" value="#0288d1" autocomplete="off"/>
+          <span id="inputFocusColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#0288d1; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for focused input elements</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="inputInvalidColor">Input border color (invalid):</label>
+          <input type="text" id="inputInvalidColor" value="#d32f2f" autocomplete="off"/>
+          <span id="inputInvalidColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#d32f2f; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for invalid input elements</small></p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend id="buttons">Buttons</legend>
+        <div class="input-group vertical">
+          <label for="buttonForeColor">Button foreground color:</label>
+          <input type="text" id="buttonForeColor" value="#212121" autocomplete="off"/>
+          <span id="buttonForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#212121; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for buttons</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="buttonBackColor">Button background color:</label>
+          <input type="text" id="buttonBackColor" value="#e2e2e2" autocomplete="off"/>
+          <span id="buttonBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#e2e2e2; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for buttons</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="buttonBorderColor">Button border color:</label>
+          <input type="text" id="buttonBorderColor" value="transparent" autocomplete="off"/>
+          <span id="buttonBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:transparent; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for buttons</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="buttonHoverBackColor">Button background color (hover):</label>
+          <input type="text" id="buttonHoverBackColor" value="#dcdcdc" autocomplete="off"/>
+          <span id="buttonHoverBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#dcdcdc; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for buttons</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="buttonHoverBorderColor">Button border color (hover):</label>
+          <input type="text" id="buttonHoverBorderColor" value="transparent" autocomplete="off"/>
+          <span id="buttonHoverBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:transparent; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for buttons</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="buttonGroupBorderColor">Button group border color:</label>
+          <input type="text" id="buttonGroupBorderColor" value="rgba(124,124,124,0.54)" autocomplete="off"/>
+          <span id="buttonGroupBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:rgba(124,124,124,0.54); display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for buttons</small></p>
+        </div>
+      </fieldset>
+    </form>
   </div>
   <script>
     window.onload = function(){
@@ -273,6 +371,20 @@
       document.getElementById('cardForeColor').addEventListener('input', function(e){ updateColorPreview('cardForeColorPreview', e.target.value) });
       document.getElementById('cardBackColor').addEventListener('input', function(e){ updateColorPreview('cardBackColorPreview', e.target.value) });
       document.getElementById('cardBorderColor').addEventListener('input', function(e){ updateColorPreview('cardBorderColorPreview', e.target.value) });
+      document.getElementById('formForeColor').addEventListener('input', function(e){ updateColorPreview('formForeColorPreview', e.target.value) });
+      document.getElementById('formBackColor').addEventListener('input', function(e){ updateColorPreview('formBackColorPreview', e.target.value) });
+      document.getElementById('formBorderColor').addEventListener('input', function(e){ updateColorPreview('formBorderColorPreview', e.target.value) });
+      document.getElementById('inputForeColor').addEventListener('input', function(e){ updateColorPreview('inputForeColorPreview', e.target.value) });
+      document.getElementById('inputBackColor').addEventListener('input', function(e){ updateColorPreview('inputBackColorPreview', e.target.value) });
+      document.getElementById('inputBorderColor').addEventListener('input', function(e){ updateColorPreview('inputBorderColorPreview', e.target.value) });
+      document.getElementById('inputFocusColor').addEventListener('input', function(e){ updateColorPreview('inputFocusColorPreview', e.target.value) });
+      document.getElementById('inputInvalidColor').addEventListener('input', function(e){ updateColorPreview('inputInvalidColorPreview', e.target.value) });
+      document.getElementById('buttonForeColor').addEventListener('input', function(e){ updateColorPreview('buttonForeColorPreview', e.target.value) });
+      document.getElementById('buttonBackColor').addEventListener('input', function(e){ updateColorPreview('buttonBackColorPreview', e.target.value) });
+      document.getElementById('buttonBorderColor').addEventListener('input', function(e){ updateColorPreview('buttonBorderColorPreview', e.target.value) });
+      document.getElementById('buttonHoverBackColor').addEventListener('input', function(e){ updateColorPreview('buttonHoverBackColorPreview', e.target.value) });
+      document.getElementById('buttonHoverBorderColor').addEventListener('input', function(e){ updateColorPreview('buttonHoverBorderColorPreview', e.target.value) });
+      document.getElementById('buttonGroupBorderColor').addEventListener('input', function(e){ updateColorPreview('buttonGroupBorderColorPreview', e.target.value) });
     }
     function updateColorPreview(element, value) { document.getElementById(element).style.background = value }
   </script>

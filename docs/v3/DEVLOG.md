@@ -323,3 +323,5 @@
 ## 20180503
 
 - Coded the `input_control` module's inputs for the flavors page.
+- Coded the `icons` module's inputs for the flavors page.
+- Coded the `utility` module's inputs for the flavors page.

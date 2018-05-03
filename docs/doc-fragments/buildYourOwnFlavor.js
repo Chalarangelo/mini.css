@@ -235,7 +235,7 @@ module.exports = {
     </form>
     <h3>Input control module</h3>
     <p>The <strong>Input control</strong> module contains styling rules for forms, input elements and buttons. This module is not always enabled, but it's highly recommended that you enable it, as some other components depend on its functionality to work properly.</p>
-    <form id="input_control">
+    <form id="inputControl">
       <div class="input-group">
         <label for="layoutEnabled">Module enabled? (recommended)</label>
         <input type="checkbox" checked autocomplete="off" id="layoutEnabled"/>
@@ -331,6 +331,37 @@ module.exports = {
         </div>
       </fieldset>
     </form>
+    <h3>Icons module</h3>
+    <p>The <strong>Icons</strong> module contains styling rules for icons. This module is not always enabled and it's recommended to enable it only if you're planning to use the icon set provided.</p>
+    <form id="icons">
+      <div class="input-group">
+        <label for="iconsEnabled">Module enabled?</label>
+        <input type="checkbox" autocomplete="off" id="iconsEnabled"/>
+      </div>
+    </form>
+    <h3>Utility module</h3>
+    <p>The <strong>Utility</strong> module contains styling rules for utility classes. This module is not always enabled, but it's recommended to enable it as it contains some features that can be useful in most designs.</p>
+    <form id="utility">
+      <div class="input-group">
+        <label for="utilityEnabled">Module enabled? (recommended)</label>
+        <input type="checkbox" autocomplete="off" checked id="utilityEnabled"/>
+      </div>
+      <fieldset>
+        <legend id="utility">Utilities</legend>
+        <div class="input-group vertical">
+          <label for="genericBorderColor">Generic border color:</label>
+          <input type="text" id="genericBorderColor" value="rgba(0,0,0,0.3)" autocomplete="off"/>
+          <span id="genericBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:rgba(0,0,0,0.3); display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for the generic border utility class</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="genericBoxShadowColor">Generic box shadow color:</label>
+          <input type="text" id="genericBoxShadowColor" value="rgba(0,0,0,0.125)" autocomplete="off"/>
+          <span id="genericBoxShadowColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:rgba(0,0,0,0.125); display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Box shadow color for the generic box shadow utility class</small></p>
+        </div>
+      </fieldset>
+    </form>
   </div>
   <script>
     window.onload = function(){
@@ -361,6 +392,8 @@ module.exports = {
       document.getElementById('buttonHoverBackColor').addEventListener('input', function(e){ updateColorPreview('buttonHoverBackColorPreview', e.target.value) });
       document.getElementById('buttonHoverBorderColor').addEventListener('input', function(e){ updateColorPreview('buttonHoverBorderColorPreview', e.target.value) });
       document.getElementById('buttonGroupBorderColor').addEventListener('input', function(e){ updateColorPreview('buttonGroupBorderColorPreview', e.target.value) });
+      document.getElementById('genericBorderColor').addEventListener('input', function(e){ updateColorPreview('genericBorderColorPreview', e.target.value) });
+      document.getElementById('genericBoxShadowColor').addEventListener('input', function(e){ updateColorPreview('genericBoxShadowColorPreview', e.target.value) });
     }
     function updateColorPreview(element, value) { document.getElementById(element).style.background = value }
   </script>`,

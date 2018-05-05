@@ -325,3 +325,9 @@
 - Coded the `input_control` module's inputs for the flavors page.
 - Coded the `icons` module's inputs for the flavors page.
 - Coded the `utility` module's inputs for the flavors page.
+
+## 20180505
+
+- Hooked up all color-based events for the flavors page.
+- Coded the `navigation` module's inputs for the flavors page.
+- Coded the `table` module's inputs for the flavors page.

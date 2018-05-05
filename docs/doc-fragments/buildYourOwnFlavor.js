@@ -315,19 +315,255 @@ module.exports = {
           <label for="buttonHoverBackColor">Button background color (hover):</label>
           <input type="text" id="buttonHoverBackColor" value="#dcdcdc" autocomplete="off"/>
           <span id="buttonHoverBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#dcdcdc; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
-          <p style="margin-top: -1rem"><small>Background color for buttons</small></p>
+          <p style="margin-top: -1rem"><small>Background color for buttons on hover</small></p>
         </div>
         <div class="input-group vertical">
           <label for="buttonHoverBorderColor">Button border color (hover):</label>
           <input type="text" id="buttonHoverBorderColor" value="transparent" autocomplete="off"/>
           <span id="buttonHoverBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:transparent; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
-          <p style="margin-top: -1rem"><small>Border color for buttons</small></p>
+          <p style="margin-top: -1rem"><small>Border color for buttons on hover</small></p>
         </div>
         <div class="input-group vertical">
           <label for="buttonGroupBorderColor">Button group border color:</label>
           <input type="text" id="buttonGroupBorderColor" value="rgba(124,124,124,0.54)" autocomplete="off"/>
           <span id="buttonGroupBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:rgba(124,124,124,0.54); display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
           <p style="margin-top: -1rem"><small>Border color for buttons</small></p>
+        </div>
+      </fieldset>
+    </form>
+    <h3>Navigation module</h3>
+    <p>The <strong>Navigation</strong> module contains styling rules for headers, footers, navigation bars and menu drawers. This module is not always enabled, but it's recommended that you enable it, as it contains functionality that is useful for most designs and layouts.</p>
+    <form id="navigation">
+      <div class="input-group">
+        <label for="navigationEnabled">Module enabled? (recommended)</label>
+        <input type="checkbox" autocomplete="off" checked id="navigationEnabled"/>
+      </div>
+      <fieldset>
+        <legend id="header">Header</legend>
+        <div class="input-group vertical">
+          <label for="headerheight">Header height (rem):</label>
+          <input type="number" id="headerheight" style="width:calc(100% - 0.5rem);" value="3.1875" min="0.0001" step="0.0001"/>
+          <p><small>Height for header elements, relative to root</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="headerLogoFontSize">Header logo font size (rem):</label>
+          <input type="number" id="headerLogoFontSize" style="width:calc(100% - 0.5rem);" value="1.75" min="0.001" step="0.001"/>
+          <p><small>Font size of header elements, relative to root</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="headerForeColor">Header foreground color:</label>
+          <input type="text" id="headerForeColor" value="#444" autocomplete="off"/>
+          <span id="headerForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#444; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for header elements</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="headerBackColor">Header background color:</label>
+          <input type="text" id="headerBackColor" value="#f8f8f8" autocomplete="off"/>
+          <span id="headerBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f8f8f8; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for header elements</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="headerBorderColor">Header border color:</label>
+          <input type="text" id="headerBorderColor" value="#ddd" autocomplete="off"/>
+          <span id="headerBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for header elements</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="headerHoverBackColor">Header background color (hover):</label>
+          <input type="text" id="headerHoverBackColor" value="#f0f0f0" autocomplete="off"/>
+          <span id="headerHoverBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f0f0f0; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for header elements on hover</small></p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend id="navbar">Navigation bar</legend>
+        <div class="input-group vertical">
+          <label for="navSublinkDepth">Depth of navigation bar:</label>
+          <input type="number" id="navSublinkDepth" style="width:calc(100% - 0.5rem);" value="2" min="1"/>
+          <p><small>Maximum number of navigation bar levels</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="navForeColor">Navigation bar foreground color:</label>
+          <input type="text" id="navForeColor" value="#444" autocomplete="off"/>
+          <span id="navForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#444; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for navigation bars</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="navBackColor">Navigation bar background color:</label>
+          <input type="text" id="navBackColor" value="#f8f8f8" autocomplete="off"/>
+          <span id="navBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f8f8f8; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for navigation bars</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="navBorderColor">Navigation bar border color:</label>
+          <input type="text" id="navBorderColor" value="#ddd" autocomplete="off"/>
+          <span id="navBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for navigation bars</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="navHoverBackColor">Navigation bar background color (hover):</label>
+          <input type="text" id="navHoverBackColor" value="#f0f0f0" autocomplete="off"/>
+          <span id="navHoverBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f0f0f0; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for navigation bars on hover</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="navLinkColor">Navigation bar link color:</label>
+          <input type="text" id="navLinkColor" value="#0277bd" autocomplete="off"/>
+          <span id="navLinkColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#0277bd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for navigation bar links</small></p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend id="footer">Footer</legend>
+        <div class="input-group vertical">
+          <label for="footerFontSize">Footer font size (rem):</label>
+          <input type="number" id="footerFontSize" style="width:calc(100% - 0.5rem);" value="0.875" min="0.001" step="0.001"/>
+          <p><small>Font size for footers, relative to root</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="footerForeColor">Footer foreground color:</label>
+          <input type="text" id="footerForeColor" value="#444" autocomplete="off"/>
+          <span id="footerForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#444; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for footers</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="footerBackColor">Footer background color:</label>
+          <input type="text" id="footerBackColor" value="#f8f8f8" autocomplete="off"/>
+          <span id="footerBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f8f8f8; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for footers</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="footerBorderColor">Footer border color:</label>
+          <input type="text" id="footerBorderColor" value="#ddd" autocomplete="off"/>
+          <span id="footerBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for footers</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="footerLinkColor">Footer link color:</label>
+          <input type="text" id="footerLinkColor" value="#0277bd" autocomplete="off"/>
+          <span id="footerLinkColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#0277bd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for footer links</small></p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend id="menu-drawer">Menu Drawer</legend>
+        <div class="input-group vertical">
+          <label for="drawerWidth">Menu drawer width (px):</label>
+          <input type="number" id="drawerWidth" style="width:calc(100% - 0.5rem);" value="320" min="1"/>
+          <p><small>Width of menu drawers, in pixels</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="drawerToggleFontSize">Menu drawer toggle font size (em):</label>
+          <input type="number" id="drawerToggleFontSize" style="width:calc(100% - 0.5rem);" value="1.5" min="0.001" step="0.001"/>
+          <p><small>Font size for menu drawer toggle control, relative to context</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="drawerCloseSize">Menu drawer close size (rem):</label>
+          <input type="number" id="drawerCloseSize" style="width:calc(100% - 0.5rem);" value="2" min="0.001" step="0.001"/>
+          <p><small>Font size for menu drawer close, relative to root</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="drawerBackColor">Menu drawer background color:</label>
+          <input type="text" id="drawerBackColor" value="#f8f8f8" autocomplete="off"/>
+          <span id="drawerBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f8f8f8; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for menu drawers</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="drawerBorderColor">Menu drawer border color:</label>
+          <input type="text" id="drawerBorderColor" value="#ddd" autocomplete="off"/>
+          <span id="drawerBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for menu drawers</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="drawerHoverBackColor">Menu drawer background color (hover):</label>
+          <input type="text" id="drawerHoverBackColor" value="#f0f0f0" autocomplete="off"/>
+          <span id="drawerHoverBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f0f0f0; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for menu drawers on hover</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="drawerCloseColor">Menu drawer close color:</label>
+          <input type="text" id="drawerCloseColor" value="#444" autocomplete="off"/>
+          <span id="drawerCloseColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#444; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Close color for menu drawers</small></p>
+        </div>
+      </fieldset>
+    </form>
+    <h3>Table module</h3>
+    <p>The <strong>Table</strong> module contains styling rules for tables. This module is not always enabled and it's recommended to enable it only if you're planning to use tables for displaying data.</p>
+    <form id="table">
+      <div class="input-group">
+        <label for="tableEnabled">Module enabled?</label>
+        <input type="checkbox" autocomplete="off" checked id="tableEnabled"/>
+      </div>
+      <fieldset>
+        <legend id="tables">Tables</legend>
+        <div class="input-group vertical">
+          <label for="maxHeight">Table max height (px):</label>
+          <input type="number" id="maxHeight" style="width:calc(100% - 0.5rem);" value="400" min="1"/>
+          <p><small>Table max height, in pixels</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="captionFontSize">Caption font size (rem):</label>
+          <input type="number" id="captionFontSize" style="width:calc(100% - 0.5rem);" value="1.5" min="0.001" step="0.001"/>
+          <p><small>Font size of table captions, relative to root</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="mobileCardLabel">Mobile card label:</label>
+          <input type="text" id="mobileCardLabel" style="width:calc(100% - 0.5rem);" value="data-label"/>
+          <p><small>Attribute name for tables' mobile card labels</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="mobileLabelFontWeight">Mobile card label font weight:</label>
+          <input type="number" id="mobileLabelFontWeight" style="width:calc(100% - 0.5rem);" value="16" min="1"/>
+          <p><small>Font weight for tables' mobile card labels (400 is normal, 700 is bold)</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="tableBorderColor">Table border color:</label>
+          <input type="text" id="tableBorderColor" value="#aaa" autocomplete="off"/>
+          <span id="tableBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#aaa; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for tables</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="tableBorderSeparatorColor">Table separtor border color:</label>
+          <input type="text" id="tableBorderSeparatorColor" value="#666" autocomplete="off"/>
+          <span id="tableBorderSeparatorColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#666; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Separator border color for tables</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="thForeColor">Table heading foreground color:</label>
+          <input type="text" id="thForeColor" value="#111" autocomplete="off"/>
+          <span id="thForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#111; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for table headings</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="thBackColor">Table heading background color:</label>
+          <input type="text" id="thBackColor" value="#e6e6e6" autocomplete="off"/>
+          <span id="thBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#e6e6e6; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for table headings</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="tdForeColor">Table data foreground color:</label>
+          <input type="text" id="tdForeColor" value="#111" autocomplete="off"/>
+          <span id="tdForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#111; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for table data</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="tdBackColor">Table data background color:</label>
+          <input type="text" id="tdBackColor" value="#f8f8f8" autocomplete="off"/>
+          <span id="tdBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f8f8f8; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for table data</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="tdAltBackColor">Table data alternative background color:</label>
+          <input type="text" id="tdAltBackColor" value="#eee" autocomplete="off"/>
+          <span id="tdAltBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#eee; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Alternative background color for table data</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="tdHoverBackColor">Table data background color (hover):</label>
+          <input type="text" id="tdHoverBackColor" value="#90caf9" autocomplete="off"/>
+          <span id="tdHoverBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#90caf9; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for table data on hover</small></p>
         </div>
       </fieldset>
     </form>
@@ -395,6 +631,7 @@ module.exports = {
       document.getElementById('headerForeColor').addEventListener('input', function(e){ updateColorPreview('headerForeColorPreview', e.target.value) });
       document.getElementById('headerBackColor').addEventListener('input', function(e){ updateColorPreview('headerBackColorPreview', e.target.value) });
       document.getElementById('headerBorderColor').addEventListener('input', function(e){ updateColorPreview('headerBorderColorPreview', e.target.value) });
+      document.getElementById('headerHoverBackColor').addEventListener('input', function(e){ updateColorPreview('headerHoverBackColorPreview', e.target.value) });
       document.getElementById('navForeColor').addEventListener('input', function(e){ updateColorPreview('navForeColorPreview', e.target.value) });
       document.getElementById('navBackColor').addEventListener('input', function(e){ updateColorPreview('navBackColorPreview', e.target.value) });
       document.getElementById('navHoverBackColor').addEventListener('input', function(e){ updateColorPreview('navHoverBackColorPreview', e.target.value) });
@@ -414,8 +651,8 @@ module.exports = {
       document.getElementById('thBackColor').addEventListener('input', function(e){ updateColorPreview('thBackColorPreview', e.target.value) });
       document.getElementById('tdForeColor').addEventListener('input', function(e){ updateColorPreview('tdForeColorPreview', e.target.value) });
       document.getElementById('tdBackColor').addEventListener('input', function(e){ updateColorPreview('tdBackColorPreview', e.target.value) });
-      document.getElementById('tdAltForeColor').addEventListener('input', function(e){ updateColorPreview('tdAltForeColorPreview', e.target.value) });
       document.getElementById('tdAltBackColor').addEventListener('input', function(e){ updateColorPreview('tdAltBackColorPreview', e.target.value) });
+      document.getElementById('tdHoverBackColor').addEventListener('input', function(e){ updateColorPreview('tdHoverBackColorPreview', e.target.value) });
       document.getElementById('markForeColor').addEventListener('input', function(e){ updateColorPreview('markForeColorPreview', e.target.value) });
       document.getElementById('markBackColor').addEventListener('input', function(e){ updateColorPreview('markBackColorPreview', e.target.value) });
       document.getElementById('toastForeColor').addEventListener('input', function(e){ updateColorPreview('toastForeColorPreview', e.target.value) });

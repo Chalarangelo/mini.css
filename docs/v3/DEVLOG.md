@@ -331,3 +331,7 @@
 - Hooked up all color-based events for the flavors page.
 - Coded the `navigation` module's inputs for the flavors page.
 - Coded the `table` module's inputs for the flavors page.
+
+## 20180515
+
+- Coded the `contextual` module's inputs for the flavors page.

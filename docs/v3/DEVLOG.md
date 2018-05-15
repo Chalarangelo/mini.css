@@ -336,3 +336,6 @@
 
 - Coded the `contextual` module's inputs for the flavors page.
 - Coded the `progress` module's inputs for the flavors page.
+- Generalized flavor page previews.
+- Hooked up most of the flavor page automatic updates.
+- Updated flavor page with `autocomplete="off"` for all `input` fields.

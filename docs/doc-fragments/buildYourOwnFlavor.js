@@ -10,77 +10,77 @@ module.exports = {
         <legend id="textual-content">Textual content</legend>
         <div class="input-group vertical">
           <label for="baseRootFontSize">Base root font size (px):</label>
-          <input type="number" id="baseRootFontSize" style="width:calc(100% - 0.5rem);" value="16" min="1"/>
+          <input type="number" id="baseRootFontSize" style="width:calc(100% - 0.5rem);" value="16" min="1" autocomplete="off"/>
           <p><small>Base font size for all text elements, in pixels</small></p>
         </div>
         <div class="input-group vertical">
           <label for="baseLineHeight">Base line height:</label>
-          <input type="number" id="baseLineHeight" style="width:calc(100% - 0.5rem);" value="1.5" min="0.01" step="0.001"/>
+          <input type="number" id="baseLineHeight" style="width:calc(100% - 0.5rem);" value="1.5" min="0.01" step="0.001" autocomplete="off"/>
           <p><small>Base line height for all text elements (unitless)</small></p>
         </div>
         <div class="input-group vertical">
           <label for="boldFontWeight">Heading font weight:</label>
-          <input type="number" id="boldFontWeight" style="width:calc(100% - 0.5rem);" value="700" min="100" step="100" max="900"/>
+          <input type="number" id="boldFontWeight" style="width:calc(100% - 0.5rem);" value="700" min="100" step="100" max="900" autocomplete="off"/>
           <p><small>Font weight for headings (400 is normal, 700 is bold)</small></p>
         </div>
         <div class="input-group vertical">
           <label for="headingRatio">Heading ratio:</label>
-          <input type="number" id="headingRatio" style="width:calc(100% - 0.5rem);" value="1.19" min="0.001" step="0.001"/>
+          <input type="number" id="headingRatio" style="width:calc(100% - 0.5rem);" value="1.19" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Ratio for headings</small></p>
         </div>
         <div class="input-group vertical">
           <label for="headingLineHeight">Heading line height:</label>
-          <input type="number" id="headingLineHeight" style="width:calc(100% - 0.5rem);" value="1.2" min="0.001" step="0.001"/>
+          <input type="number" id="headingLineHeight" style="width:calc(100% - 0.5rem);" value="1.2" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Line height for headings</small></p>
         </div>
         <div class="input-group vertical">
           <label for="headingFontWeight">Heading font weight:</label>
-          <input type="number" id="headingFontWeight" style="width:calc(100% - 0.5rem);" value="500" min="100" step="100" max="900"/>
+          <input type="number" id="headingFontWeight" style="width:calc(100% - 0.5rem);" value="500" min="100" step="100" max="900" autocomplete="off"/>
           <p><small>Font weight for headings (400 is normal, 700 is bold)</small></p>
         </div>
         <div class="input-group vertical">
           <label for="subheadingFontSize">Subheading font size (em):</label>
-          <input type="number" id="subheadingFontSize" style="width:calc(100% - 0.5rem);" value="0.75" min="0.001" step="0.001"/>
+          <input type="number" id="subheadingFontSize" style="width:calc(100% - 0.5rem);" value="0.75" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Font size for subheadings, relative to context</small></p>
         </div>
         <div class="input-group vertical">
           <label for="subheadingTopMargin">Subheading top margin (rem):</label>
-          <input type="number" id="subheadingTopMargin" style="width:calc(100% - 0.5rem);" value="-0.25" step="0.001"/>
+          <input type="number" id="subheadingTopMargin" style="width:calc(100% - 0.5rem);" value="-0.25" step="0.001" autocomplete="off"/>
           <p><small>Top margin for subheadings, relative to root</small></p>
         </div>
         <div class="input-group vertical">
           <label for="smallFontSize">Small text font size (em):</label>
-          <input type="number" id="smallFontSize" style="width:calc(100% - 0.5rem);" value="0.75" min="0.001" step="0.001"/>
+          <input type="number" id="smallFontSize" style="width:calc(100% - 0.5rem);" value="0.75" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Font size for small text, relative to context</small></p>
         </div>
         <div class="input-group vertical">
           <label for="horizontalRuleLineHeight">Horizontal rule line height:</label>
-          <input type="number" id="horizontalRuleLineHeight" style="width:calc(100% - 0.5rem);" value="1.25" min="0.001" step="0.001"/>
+          <input type="number" id="horizontalRuleLineHeight" style="width:calc(100% - 0.5rem);" value="1.25" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Line height for headings</small></p>
         </div>
         <div class="input-group vertical">
           <label for="codeFontSize">Code font size (em):</label>
-          <input type="number" id="codeFontSize" style="width:calc(100% - 0.5rem);" value="0.85" min="0.001" step="0.001"/>
+          <input type="number" id="codeFontSize" style="width:calc(100% - 0.5rem);" value="0.85" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Font size for code elements, relative to context</small></p>
         </div>
         <div class="input-group vertical">
           <label for="supTop">Superscript top position (em):</label>
-          <input type="number" id="supTop" style="width:calc(100% - 0.5rem);" value="-0.5" step="0.001"/>
+          <input type="number" id="supTop" style="width:calc(100% - 0.5rem);" value="-0.5" step="0.001" autocomplete="off"/>
           <p><small>Top position for superscript, relative to context</small></p>
         </div>
         <div class="input-group vertical">
           <label for="subBottom">Subscript bottom position (em):</label>
-          <input type="number" id="subBottom" style="width:calc(100% - 0.5rem);" value="0.25" step="0.001"/>
+          <input type="number" id="subBottom" style="width:calc(100% - 0.5rem);" value="0.25" step="0.001" autocomplete="off"/>
           <p><small>Bottom position for subscript, relative to context</small></p>
         </div>
         <div class="input-group vertical">
           <label for="blockquoteQuotationSize">Code font size (rem):</label>
-          <input type="number" id="blockquoteQuotationSize" style="width:calc(100% - 0.5rem);" value="3" min="0.001" step="0.001"/>
+          <input type="number" id="blockquoteQuotationSize" style="width:calc(100% - 0.5rem);" value="3" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Font size for the quotation of blockquotes, relative to root</small></p>
         </div>
         <div class="input-group vertical">
           <label for="blockquoteCiteSize">Code font size (rem):</label>
-          <input type="number" id="blockquoteCiteSize" style="width:calc(100% - 0.5rem);" value="0.75" min="0.001" step="0.001"/>
+          <input type="number" id="blockquoteCiteSize" style="width:calc(100% - 0.5rem);" value="0.75" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Font size for the citation of blockquotes, relative to root</small></p>
         </div>
       </fieldset>
@@ -119,7 +119,7 @@ module.exports = {
         <div class="input-group vertical">
           <label for="secondaryBorderColor">Secondary border color:</label>
           <input type="text" id="secondaryBorderColor" value="#ddd" autocomplete="off"/>
-          <span id="backColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <span id="secondaryBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
           <p style="margin-top: -1rem"><small>Secondary border color for certain elements</small></p>
         </div>
         <div class="input-group vertical">
@@ -151,32 +151,32 @@ module.exports = {
         <legend id="universal-styles">Universal styles</legend>
         <div class="input-group vertical">
           <label for="universalPadding">Universal padding (rem):</label>
-          <input type="number" id="universalPadding" style="width:calc(100% - 0.5rem);" value="0.5" min="0.001" step="0.001"/>
+          <input type="number" id="universalPadding" style="width:calc(100% - 0.5rem);" value="0.5" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Universal padding for most elements, relative to root</small></p>
         </div>
         <div class="input-group vertical">
           <label for="universalMargin">Universal margin (rem):</label>
-          <input type="number" id="universalMargin" style="width:calc(100% - 0.5rem);" value="0.5" step="0.001"/>
+          <input type="number" id="universalMargin" style="width:calc(100% - 0.5rem);" value="0.5" step="0.001" autocomplete="off"/>
           <p><small>Universal margin for most elements, relative to root</small></p>
         </div>
         <div class="input-group vertical">
           <label for="universalBorderRadius">Universal border radius (rem):</label>
-          <input type="number" id="universalBorderRadius" style="width:calc(100% - 0.5rem);" value="0.125" min="0.001" step="0.001"/>
+          <input type="number" id="universalBorderRadius" style="width:calc(100% - 0.5rem);" value="0.125" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Universal border radius for most elements, relative to root</small></p>
         </div>
         <div class="input-group vertical">
           <label for="universalBoxShadow">Universal box shadow:</label>
-          <select id="universalBoxShadow" style="width:calc(100% - 0.5rem);"> <option selected value="0">Disabled</option> <option value="1">Enabled</option> </select>
+          <select id="universalBoxShadow" style="width:calc(100% - 0.5rem);"> <option selected value="0" autocomplete="off">Disabled</option> <option value="1">Enabled</option> </select>
           <p><small>Universal box shadow for most elements</small></p>
         </div>
         <div class="input-group vertical">
           <label for="mobileBreakpoint">Mobile breakpoint (px):</label>
-          <input type="number" id="mobileBreakpoint" style="width:calc(100% - 0.5rem);" value="768" min="1"/>
+          <input type="number" id="mobileBreakpoint" style="width:calc(100% - 0.5rem);" value="768" min="1" autocomplete="off"/>
           <p><small>Breakpoint between mobile screen and desktops, in pixels</small></p>
         </div>
         <div class="input-group vertical">
           <label for="largeScreenBreakpoint">Large screen breakpoint (px):</label>
-          <input type="number" id="largeScreenBreakpoint" style="width:calc(100% - 0.5rem);" value="1280" min="1"/>
+          <input type="number" id="largeScreenBreakpoint" style="width:calc(100% - 0.5rem);" value="1280" min="1" autocomplete="off"/>
           <p><small>Breakpoint between desktops and large screens, in pixels</small></p>
         </div>
       </fieldset>
@@ -192,25 +192,30 @@ module.exports = {
         <legend id="grid">Grid</legend>
         <div class="input-group vertical">
           <label for="gridColumnCount">Grid column count:</label>
-          <input type="number" id="gridColumnCount" style="width:calc(100% - 0.5rem);" value="12" min="1"/>
+          <input type="number" id="gridColumnCount" style="width:calc(100% - 0.5rem);" value="12" min="1" autocomplete="off"/>
           <p><small>Number of horizontal column partitions for the grid system (default 12)</small></p>
         </div>
         <div class="input-group vertical">
           <label for="gridMediumBreakpoint">Grid medium screen breakpoint (px):</label>
-          <input type="number" id="gridMediumBreakpoint" style="width:calc(100% - 0.5rem);" value="768" min="1"/>
+          <input type="number" id="gridMediumBreakpoint" style="width:calc(100% - 0.5rem);" value="768" min="1" autocomplete="off"/>
           <p><small>Breakpoint between small and medium screens, in pixels</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="gridLargeBreakpoint">Grid large screen breakpoint (px):</label>
+          <input type="number" id="gridLargeBreakpoint" style="width:calc(100% - 0.5rem);" value="1280" min="1" autocomplete="off"/>
+          <p><small>Breakpoint between medium and large screens, in pixels</small></p>
         </div>
       </fieldset>
       <fieldset>
         <legend id="cards">Cards</legend>
         <div class="input-group vertical">
           <label for="cardNormalWidth">Card normal width (px):</label>
-          <input type="number" id="cardNormalWidth" style="width:calc(100% - 0.5rem);" value="320" min="1"/>
+          <input type="number" id="cardNormalWidth" style="width:calc(100% - 0.5rem);" value="320" min="1" autocomplete="off"/>
           <p><small>Width of normal cards, in pixels</small></p>
         </div>
         <div class="input-group vertical">
           <label for="cardSectionMediaHeight">Card media section height (px):</label>
-          <input type="number" id="cardSectionMediaHeight" style="width:calc(100% - 0.5rem);" value="200" min="1"/>
+          <input type="number" id="cardSectionMediaHeight" style="width:calc(100% - 0.5rem);" value="200" min="1" autocomplete="off"/>
           <p><small>Height of card media sections, in pixels</small></p>
         </div>
         <div class="input-group vertical">
@@ -342,12 +347,12 @@ module.exports = {
         <legend id="header">Header</legend>
         <div class="input-group vertical">
           <label for="headerheight">Header height (rem):</label>
-          <input type="number" id="headerheight" style="width:calc(100% - 0.5rem);" value="3.1875" min="0.0001" step="0.0001"/>
+          <input type="number" id="headerheight" style="width:calc(100% - 0.5rem);" value="3.1875" min="0.0001" step="0.0001" autocomplete="off"/>
           <p><small>Height for header elements, relative to root</small></p>
         </div>
         <div class="input-group vertical">
           <label for="headerLogoFontSize">Header logo font size (rem):</label>
-          <input type="number" id="headerLogoFontSize" style="width:calc(100% - 0.5rem);" value="1.75" min="0.001" step="0.001"/>
+          <input type="number" id="headerLogoFontSize" style="width:calc(100% - 0.5rem);" value="1.75" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Font size of header elements, relative to root</small></p>
         </div>
         <div class="input-group vertical">
@@ -379,7 +384,7 @@ module.exports = {
         <legend id="navbar">Navigation bar</legend>
         <div class="input-group vertical">
           <label for="navSublinkDepth">Depth of navigation bar:</label>
-          <input type="number" id="navSublinkDepth" style="width:calc(100% - 0.5rem);" value="2" min="1"/>
+          <input type="number" id="navSublinkDepth" style="width:calc(100% - 0.5rem);" value="2" min="1" autocomplete="off"/>
           <p><small>Maximum number of navigation bar levels</small></p>
         </div>
         <div class="input-group vertical">
@@ -417,7 +422,7 @@ module.exports = {
         <legend id="footer">Footer</legend>
         <div class="input-group vertical">
           <label for="footerFontSize">Footer font size (rem):</label>
-          <input type="number" id="footerFontSize" style="width:calc(100% - 0.5rem);" value="0.875" min="0.001" step="0.001"/>
+          <input type="number" id="footerFontSize" style="width:calc(100% - 0.5rem);" value="0.875" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Font size for footers, relative to root</small></p>
         </div>
         <div class="input-group vertical">
@@ -449,17 +454,17 @@ module.exports = {
         <legend id="menu-drawer">Menu Drawer</legend>
         <div class="input-group vertical">
           <label for="drawerWidth">Menu drawer width (px):</label>
-          <input type="number" id="drawerWidth" style="width:calc(100% - 0.5rem);" value="320" min="1"/>
+          <input type="number" id="drawerWidth" style="width:calc(100% - 0.5rem);" value="320" min="1" autocomplete="off"/>
           <p><small>Width of menu drawers, in pixels</small></p>
         </div>
         <div class="input-group vertical">
           <label for="drawerToggleFontSize">Menu drawer toggle font size (em):</label>
-          <input type="number" id="drawerToggleFontSize" style="width:calc(100% - 0.5rem);" value="1.5" min="0.001" step="0.001"/>
+          <input type="number" id="drawerToggleFontSize" style="width:calc(100% - 0.5rem);" value="1.5" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Font size for menu drawer toggle control, relative to context</small></p>
         </div>
         <div class="input-group vertical">
           <label for="drawerCloseSize">Menu drawer close size (rem):</label>
-          <input type="number" id="drawerCloseSize" style="width:calc(100% - 0.5rem);" value="2" min="0.001" step="0.001"/>
+          <input type="number" id="drawerCloseSize" style="width:calc(100% - 0.5rem);" value="2" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Font size for menu drawer close, relative to root</small></p>
         </div>
         <div class="input-group vertical">
@@ -499,22 +504,22 @@ module.exports = {
         <legend id="tables">Tables</legend>
         <div class="input-group vertical">
           <label for="maxHeight">Table max height (px):</label>
-          <input type="number" id="maxHeight" style="width:calc(100% - 0.5rem);" value="400" min="1"/>
+          <input type="number" id="maxHeight" style="width:calc(100% - 0.5rem);" value="400" min="1" autocomplete="off"/>
           <p><small>Table max height, in pixels</small></p>
         </div>
         <div class="input-group vertical">
           <label for="captionFontSize">Caption font size (rem):</label>
-          <input type="number" id="captionFontSize" style="width:calc(100% - 0.5rem);" value="1.5" min="0.001" step="0.001"/>
+          <input type="number" id="captionFontSize" style="width:calc(100% - 0.5rem);" value="1.5" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Font size of table captions, relative to root</small></p>
         </div>
         <div class="input-group vertical">
           <label for="mobileCardLabel">Mobile card label:</label>
-          <input type="text" id="mobileCardLabel" style="width:calc(100% - 0.5rem);" value="data-label"/>
+          <input type="text" id="mobileCardLabel" style="width:calc(100% - 0.5rem);" value="data-label" autocomplete="off"/>
           <p><small>Attribute name for tables' mobile card labels</small></p>
         </div>
         <div class="input-group vertical">
           <label for="mobileLabelFontWeight">Mobile card label font weight:</label>
-          <input type="number" id="mobileLabelFontWeight" style="width:calc(100% - 0.5rem);" value="16" min="1"/>
+          <input type="number" id="mobileLabelFontWeight" style="width:calc(100% - 0.5rem);" value="16" min="1" autocomplete="off"/>
           <p><small>Font weight for tables' mobile card labels (400 is normal, 700 is bold)</small></p>
         </div>
         <div class="input-group vertical">
@@ -567,37 +572,6 @@ module.exports = {
         </div>
       </fieldset>
     </form>
-    <h3>Icons module</h3>
-    <p>The <strong>Icons</strong> module contains styling rules for icons. This module is not always enabled and it's recommended to enable it only if you're planning to use the icon set provided.</p>
-    <form id="icons">
-      <div class="input-group">
-        <label for="iconsEnabled">Module enabled?</label>
-        <input type="checkbox" autocomplete="off" id="iconsEnabled"/>
-      </div>
-    </form>
-    <h3>Utility module</h3>
-    <p>The <strong>Utility</strong> module contains styling rules for utility classes. This module is not always enabled, but it's recommended to enable it as it contains some features that can be useful in most designs.</p>
-    <form id="utility">
-      <div class="input-group">
-        <label for="utilityEnabled">Module enabled? (recommended)</label>
-        <input type="checkbox" autocomplete="off" checked id="utilityEnabled"/>
-      </div>
-      <fieldset>
-        <legend id="utility">Utilities</legend>
-        <div class="input-group vertical">
-          <label for="genericBorderColor">Generic border color:</label>
-          <input type="text" id="genericBorderColor" value="rgba(0,0,0,0.3)" autocomplete="off"/>
-          <span id="genericBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:rgba(0,0,0,0.3); display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
-          <p style="margin-top: -1rem"><small>Border color for the generic border utility class</small></p>
-        </div>
-        <div class="input-group vertical">
-          <label for="genericBoxShadowColor">Generic box shadow color:</label>
-          <input type="text" id="genericBoxShadowColor" value="rgba(0,0,0,0.125)" autocomplete="off"/>
-          <span id="genericBoxShadowColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:rgba(0,0,0,0.125); display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
-          <p style="margin-top: -1rem"><small>Box shadow color for the generic box shadow utility class</small></p>
-        </div>
-      </fieldset>
-    </form>
     <h3>Contextual module</h3>
     <p>The <strong>Contextual</strong> module contains styling rules for text highlighting, toasts, tooltips, modal dialogs, spoilers and accordions. This module is not always enabled, but it's recommended that you enable it, as it contains functionality that is useful for most designs and layouts.</p>
     <form id="contextual">
@@ -621,12 +595,12 @@ module.exports = {
         </div>
         <div class="input-group vertical">
           <label for="markFontSize">Highlight font size (em):</label>
-          <input type="number" id="markFontSize" style="width:calc(100% - 0.5rem);" value="0.95" step="0.001"/>
+          <input type="number" id="markFontSize" style="width:calc(100% - 0.5rem);" value="0.95" step="0.001" autocomplete="off"/>
           <p><small>Font size for highlighted text elements, relative to context</small></p>
         </div>
         <div class="input-group vertical">
           <label for="markLineHeight">Highlight line height:</label>
-          <input type="number" id="markLineHeight" style="width:calc(100% - 0.5rem);" value="1" step="0.001"/>
+          <input type="number" id="markLineHeight" style="width:calc(100% - 0.5rem);" value="1" step="0.001" autocomplete="off"/>
           <p><small>Line height for highlighted text elements</small></p>
         </div>
       </fieldset>
@@ -690,12 +664,12 @@ module.exports = {
         <legend id="collapse">Spoilers &amp; accordions</legend>
         <div class="input-group vertical">
           <label for="collapseLabelHeight">Collapse label height (rem):</label>
-          <input type="number" id="collapseLabelHeight" style="width:calc(100% - 0.5rem);" value="1.5" min="0.001" step="0.001"/>
+          <input type="number" id="collapseLabelHeight" style="width:calc(100% - 0.5rem);" value="1.5" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Label height for spoilers &amp; accordions, relative to root</small></p>
         </div>
         <div class="input-group vertical">
           <label for="collapseContentMaxHeight">Collapse content max height (px):</label>
-          <input type="number" id="collapseContentMaxHeight" style="width:calc(100% - 0.5rem);" value="400" min="1"/>
+          <input type="number" id="collapseContentMaxHeight" style="width:calc(100% - 0.5rem);" value="400" min="1" autocomplete="off"/>
           <p><small>Maximum height for content in spoilers &amp; accordions, in pixels</small></p>
         </div>
         <div class="input-group vertical">
@@ -753,7 +727,7 @@ module.exports = {
         <legend id="progress-bars">Progress bars</legend>
         <div class="input-group vertical">
           <label for="progressHeight">Progress bar height (rem):</label>
-          <input type="number" id="progressHeight" style="width:calc(100% - 0.5rem);" value="0.75" min="0.001" step="0.001"/>
+          <input type="number" id="progressHeight" style="width:calc(100% - 0.5rem);" value="0.75" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Height of progress bars, relative to root</small></p>
         </div>
         <div class="input-group vertical">
@@ -770,12 +744,12 @@ module.exports = {
         </div>
         <div class="input-group vertical">
           <label for="progressMaxValue">Progress bar maximum value:</label>
-          <input type="number" id="progressMaxValue" style="width:calc(100% - 0.5rem);" value="1000" min="2"/>
+          <input type="number" id="progressMaxValue" style="width:calc(100% - 0.5rem);" value="1000" min="2" autocomplete="off"/>
           <p><small>Maximum value for progress bars</small></p>
         </div>
         <div class="input-group vertical">
           <label for="progressInlineWidth">Progress bar inline width (%):</label>
-          <input type="number" id="progressInlineWidth" style="width:calc(100% - 0.5rem);" value="60" min="0.01" step="0.001"/>
+          <input type="number" id="progressInlineWidth" style="width:calc(100% - 0.5rem);" value="60" min="0.01" step="0.001" autocomplete="off"/>
           <p><small>Width for inline progress bars, in percentage</small></p>
         </div>
       </fieldset>
@@ -783,12 +757,12 @@ module.exports = {
         <legend id="donut-spinner">Donut spinners</legend>
         <div class="input-group vertical">
           <label for="spinnerDonutSize">Donut spinner size (rem):</label>
-          <input type="number" id="spinnerDonutSize" style="width:calc(100% - 0.5rem);" value="1.25" min="0.001" step="0.001"/>
+          <input type="number" id="spinnerDonutSize" style="width:calc(100% - 0.5rem);" value="1.25" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Size of donut spinners, relative to root</small></p>
         </div>
         <div class="input-group vertical">
           <label for="spinnerDonutBorderThickness">Donut spinner thickness (rem):</label>
-          <input type="number" id="spinnerDonutBorderThickness" style="width:calc(100% - 0.5rem);" value="0.25" min="0.001" step="0.001"/>
+          <input type="number" id="spinnerDonutBorderThickness" style="width:calc(100% - 0.5rem);" value="0.25" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Thickness of donut spinners, relative to root</small></p>
         </div>
         <div class="input-group vertical">
@@ -805,85 +779,179 @@ module.exports = {
         </div>
       </fieldset>
     </form>
+    <h3>Icons module</h3>
+    <p>The <strong>Icons</strong> module contains styling rules for icons. This module is not always enabled and it's recommended to enable it only if you're planning to use the icon set provided.</p>
+    <form id="icons">
+      <div class="input-group">
+        <label for="iconsEnabled">Module enabled?</label>
+        <input type="checkbox" autocomplete="off" id="iconsEnabled"/>
+      </div>
+    </form>
+    <h3>Utility module</h3>
+    <p>The <strong>Utility</strong> module contains styling rules for utility classes. This module is not always enabled, but it's recommended to enable it as it contains some features that can be useful in most designs.</p>
+    <form id="utility">
+      <div class="input-group">
+        <label for="utilityEnabled">Module enabled? (recommended)</label>
+        <input type="checkbox" autocomplete="off" checked id="utilityEnabled"/>
+      </div>
+      <fieldset>
+        <legend id="utility">Utilities</legend>
+        <div class="input-group vertical">
+          <label for="genericBorderColor">Generic border color:</label>
+          <input type="text" id="genericBorderColor" value="rgba(0,0,0,0.3)" autocomplete="off"/>
+          <span id="genericBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:rgba(0,0,0,0.3); display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for the generic border utility class</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="genericBoxShadowColor">Generic box shadow color:</label>
+          <input type="text" id="genericBoxShadowColor" value="rgba(0,0,0,0.125)" autocomplete="off"/>
+          <span id="genericBoxShadowColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:rgba(0,0,0,0.125); display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Box shadow color for the generic box shadow utility class</small></p>
+        </div>
+      </fieldset>
+    </form>
   </div>
   <script>
     window.onload = function(){
-      document.getElementById('foreColor').addEventListener('input', function(e){ updateColorPreview('foreColorPreview', e.target.value) });
-      document.getElementById('backColor').addEventListener('input', function(e){ updateColorPreview('backColorPreview', e.target.value) });
-      document.getElementById('borderColor').addEventListener('input', function(e){ updateColorPreview('borderColorPreview', e.target.value) });
-      document.getElementById('secondaryBackColor').addEventListener('input', function(e){ updateColorPreview('secondaryBackColorPreview', e.target.value) });
-      document.getElementById('secondaryForeColor').addEventListener('input', function(e){ updateColorPreview('secondaryForeColorPreview', e.target.value) });
-      document.getElementById('secondaryBorderColor').addEventListener('input', function(e){ updateColorPreview('secondaryBorderColorPreview', e.target.value) });
-      document.getElementById('blockquoteSidebarColor').addEventListener('input', function(e){ updateColorPreview('blockquoteSidebarColorPreview', e.target.value) });
-      document.getElementById('preSidebarColor').addEventListener('input', function(e){ updateColorPreview('preSidebarColorPreview', e.target.value) });
-      document.getElementById('aLinkColor').addEventListener('input', function(e){ updateColorPreview('aLinkColorPreview', e.target.value) });
-      document.getElementById('aVisitedColor').addEventListener('input', function(e){ updateColorPreview('aVisitedColorPreview', e.target.value) });
-      document.getElementById('cardForeColor').addEventListener('input', function(e){ updateColorPreview('cardForeColorPreview', e.target.value) });
-      document.getElementById('cardBackColor').addEventListener('input', function(e){ updateColorPreview('cardBackColorPreview', e.target.value) });
-      document.getElementById('cardBorderColor').addEventListener('input', function(e){ updateColorPreview('cardBorderColorPreview', e.target.value) });
-      document.getElementById('formForeColor').addEventListener('input', function(e){ updateColorPreview('formForeColorPreview', e.target.value) });
-      document.getElementById('formBackColor').addEventListener('input', function(e){ updateColorPreview('formBackColorPreview', e.target.value) });
-      document.getElementById('formBorderColor').addEventListener('input', function(e){ updateColorPreview('formBorderColorPreview', e.target.value) });
-      document.getElementById('inputForeColor').addEventListener('input', function(e){ updateColorPreview('inputForeColorPreview', e.target.value) });
-      document.getElementById('inputBackColor').addEventListener('input', function(e){ updateColorPreview('inputBackColorPreview', e.target.value) });
-      document.getElementById('inputBorderColor').addEventListener('input', function(e){ updateColorPreview('inputBorderColorPreview', e.target.value) });
-      document.getElementById('inputFocusColor').addEventListener('input', function(e){ updateColorPreview('inputFocusColorPreview', e.target.value) });
-      document.getElementById('inputInvalidColor').addEventListener('input', function(e){ updateColorPreview('inputInvalidColorPreview', e.target.value) });
-      document.getElementById('buttonForeColor').addEventListener('input', function(e){ updateColorPreview('buttonForeColorPreview', e.target.value) });
-      document.getElementById('buttonBackColor').addEventListener('input', function(e){ updateColorPreview('buttonBackColorPreview', e.target.value) });
-      document.getElementById('buttonBorderColor').addEventListener('input', function(e){ updateColorPreview('buttonBorderColorPreview', e.target.value) });
-      document.getElementById('buttonHoverBackColor').addEventListener('input', function(e){ updateColorPreview('buttonHoverBackColorPreview', e.target.value) });
-      document.getElementById('buttonHoverBorderColor').addEventListener('input', function(e){ updateColorPreview('buttonHoverBorderColorPreview', e.target.value) });
-      document.getElementById('buttonGroupBorderColor').addEventListener('input', function(e){ updateColorPreview('buttonGroupBorderColorPreview', e.target.value) });
-      document.getElementById('headerForeColor').addEventListener('input', function(e){ updateColorPreview('headerForeColorPreview', e.target.value) });
-      document.getElementById('headerBackColor').addEventListener('input', function(e){ updateColorPreview('headerBackColorPreview', e.target.value) });
-      document.getElementById('headerBorderColor').addEventListener('input', function(e){ updateColorPreview('headerBorderColorPreview', e.target.value) });
-      document.getElementById('headerHoverBackColor').addEventListener('input', function(e){ updateColorPreview('headerHoverBackColorPreview', e.target.value) });
-      document.getElementById('navForeColor').addEventListener('input', function(e){ updateColorPreview('navForeColorPreview', e.target.value) });
-      document.getElementById('navBackColor').addEventListener('input', function(e){ updateColorPreview('navBackColorPreview', e.target.value) });
-      document.getElementById('navHoverBackColor').addEventListener('input', function(e){ updateColorPreview('navHoverBackColorPreview', e.target.value) });
-      document.getElementById('navBorderColor').addEventListener('input', function(e){ updateColorPreview('navBorderColorPreview', e.target.value) });
-      document.getElementById('navLinkColor').addEventListener('input', function(e){ updateColorPreview('navLinkColorPreview', e.target.value) });
-      document.getElementById('footerForeColor').addEventListener('input', function(e){ updateColorPreview('footerForeColorPreview', e.target.value) });
-      document.getElementById('footerBackColor').addEventListener('input', function(e){ updateColorPreview('footerBackColorPreview', e.target.value) });
-      document.getElementById('footerBorderColor').addEventListener('input', function(e){ updateColorPreview('footerBorderColorPreview', e.target.value) });
-      document.getElementById('footerLinkColor').addEventListener('input', function(e){ updateColorPreview('footerLinkColorPreview', e.target.value) });
-      document.getElementById('drawerForeColor').addEventListener('input', function(e){ updateColorPreview('drawerForeColorPreview', e.target.value) });
-      document.getElementById('drawerBackColor').addEventListener('input', function(e){ updateColorPreview('drawerBackColorPreview', e.target.value) });
-      document.getElementById('drawerHoverBackColor').addEventListener('input', function(e){ updateColorPreview('drawerHoverBackColorPreview', e.target.value) });
-      document.getElementById('drawerCloseColor').addEventListener('input', function(e){ updateColorPreview('drawerCloseColorPreview', e.target.value) });
-      document.getElementById('tableBorderColor').addEventListener('input', function(e){ updateColorPreview('tableBorderColorPreview', e.target.value) });
-      document.getElementById('tableBorderSeparatorColor').addEventListener('input', function(e){ updateColorPreview('tableBorderSeparatorColorPreview', e.target.value) });
-      document.getElementById('thForeColor').addEventListener('input', function(e){ updateColorPreview('thForeColorPreview', e.target.value) });
-      document.getElementById('thBackColor').addEventListener('input', function(e){ updateColorPreview('thBackColorPreview', e.target.value) });
-      document.getElementById('tdForeColor').addEventListener('input', function(e){ updateColorPreview('tdForeColorPreview', e.target.value) });
-      document.getElementById('tdBackColor').addEventListener('input', function(e){ updateColorPreview('tdBackColorPreview', e.target.value) });
-      document.getElementById('tdAltBackColor').addEventListener('input', function(e){ updateColorPreview('tdAltBackColorPreview', e.target.value) });
-      document.getElementById('tdHoverBackColor').addEventListener('input', function(e){ updateColorPreview('tdHoverBackColorPreview', e.target.value) });
-      document.getElementById('markForeColor').addEventListener('input', function(e){ updateColorPreview('markForeColorPreview', e.target.value) });
-      document.getElementById('markBackColor').addEventListener('input', function(e){ updateColorPreview('markBackColorPreview', e.target.value) });
-      document.getElementById('toastForeColor').addEventListener('input', function(e){ updateColorPreview('toastForeColorPreview', e.target.value) });
-      document.getElementById('toastBackColor').addEventListener('input', function(e){ updateColorPreview('toastBackColorPreview', e.target.value) });
-      document.getElementById('tooltipForeColor').addEventListener('input', function(e){ updateColorPreview('tooltipForeColorPreview', e.target.value) });
-      document.getElementById('tooltipBackColor').addEventListener('input', function(e){ updateColorPreview('tooltipBackColorPreview', e.target.value) });
-      document.getElementById('modalOverlayColor').addEventListener('input', function(e){ updateColorPreview('modalOverlayColorPreview', e.target.value) });
-      document.getElementById('modalCloseColor').addEventListener('input', function(e){ updateColorPreview('modalClosekColorPreview', e.target.value) });
-      document.getElementById('modalCloseHoverBackColor').addEventListener('input', function(e){ updateColorPreview('modalCloseHoverBackColorPreview', e.target.value) });
-      document.getElementById('collapseContentBackColor').addEventListener('input', function(e){ updateColorPreview('collapseContentBackColorPreview', e.target.value) });
-      document.getElementById('collapseLabelForeColor').addEventListener('input', function(e){ updateColorPreview('collapseLabelForeColorPreview', e.target.value) });
-      document.getElementById('collapseLabelBackColor').addEventListener('input', function(e){ updateColorPreview('collapseLabelBackColorPreview', e.target.value) });
-      document.getElementById('collapseLabelHoverBackColor').addEventListener('input', function(e){ updateColorPreview('collapseLabelHoverBackColorPreview', e.target.value) });
-      document.getElementById('collapseSelectedLabelBackColor').addEventListener('input', function(e){ updateColorPreview('collapseSelectedLabelBackColorPreview', e.target.value) });
-      document.getElementById('collapseBorderColor').addEventListener('input', function(e){ updateColorPreview('collapseBorderColorPreview', e.target.value) });
-      document.getElementById('collapseSelectedLabelBorderColor').addEventListener('input', function(e){ updateColorPreview('collapseSelectedLabelBorderColorPreview', e.target.value) });
-      document.getElementById('progressForeColor').addEventListener('input', function(e){ updateColorPreview('progressForeColorPreview', e.target.value) });
-      document.getElementById('progressBackColor').addEventListener('input', function(e){ updateColorPreview('progressBackColorPreview', e.target.value) });
-      document.getElementById('spinnerDonutForeColor').addEventListener('input', function(e){ updateColorPreview('spinnerDonutForeColorPreview', e.target.value) });
-      document.getElementById('spinnerDonutBackColor').addEventListener('input', function(e){ updateColorPreview('spinnerDonutBackColorPreview', e.target.value) });
-      document.getElementById('genericBorderColor').addEventListener('input', function(e){ updateColorPreview('genericBorderColorPreview', e.target.value) });
-      document.getElementById('genericBoxShadowColor').addEventListener('input', function(e){ updateColorPreview('genericBoxShadowColorPreview', e.target.value) });
+      previewPairs.forEach(function(v){
+        autoPreview(document.getElementById(v[0]), v[1]);
+      });
+      autoUpdatePairs.forEach(function(v){
+        autoUpdate(document.getElementById(v[0]), document.getElementById(v[1]));
+      });
     }
+    var previewPairs = [
+      ['foreColor','foreColorPreview'],
+      ['backColor','backColorPreview'],
+      ['borderColor','borderColorPreview'],
+      ['secondaryBackColor','secondaryBackColorPreview'],
+      ['secondaryForeColor','secondaryForeColorPreview'],
+      ['secondaryBorderColor','secondaryBorderColorPreview'],
+      ['blockquoteSidebarColor','blockquoteSidebarColorPreview'],
+      ['preSidebarColor','preSidebarColorPreview'],
+      ['aLinkColor','aLinkColorPreview'],
+      ['aVisitedColor','aVisitedColorPreview'],
+      ['cardForeColor','cardForeColorPreview'],
+      ['cardBackColor','cardBackColorPreview'],
+      ['cardBorderColor','cardBorderColorPreview'],
+      ['formForeColor','formForeColorPreview'],
+      ['formBackColor','formBackColorPreview'],
+      ['formBorderColor','formBorderColorPreview'],
+      ['inputForeColor','inputForeColorPreview'],
+      ['inputBackColor','inputBackColorPreview'],
+      ['inputBorderColor','inputBorderColorPreview'],
+      ['inputFocusColor','inputFocusColorPreview'],
+      ['inputInvalidColor','inputInvalidColorPreview'],
+      ['buttonForeColor','buttonForeColorPreview'],
+      ['buttonBackColor','buttonBackColorPreview'],
+      ['buttonBorderColor','buttonBorderColorPreview'],
+      ['buttonHoverBackColor','buttonHoverBackColorPreview'],
+      ['buttonHoverBorderColor','buttonHoverBorderColorPreview'],
+      ['buttonGroupBorderColor','buttonGroupBorderColorPreview'],
+      ['headerForeColor','headerForeColorPreview'],
+      ['headerBackColor','headerBackColorPreview'],
+      ['headerBorderColor','headerBorderColorPreview'],
+      ['headerHoverBackColor','headerHoverBackColorPreview'],
+      ['navForeColor','navForeColorPreview'],
+      ['navBackColor','navBackColorPreview'],
+      ['navHoverBackColor','navHoverBackColorPreview'],
+      ['navBorderColor','navBorderColorPreview'],
+      ['navLinkColor','navLinkColorPreview'],
+      ['footerForeColor','footerForeColorPreview'],
+      ['footerBackColor','footerBackColorPreview'],
+      ['footerBorderColor','footerBorderColorPreview'],
+      ['footerLinkColor','footerLinkColorPreview'],
+      ['drawerBackColor','drawerBackColorPreview'],
+      ['drawerHoverBackColor','drawerHoverBackColorPreview'],
+      ['drawerCloseColor','drawerCloseColorPreview'],
+      ['tableBorderColor','tableBorderColorPreview'],
+      ['tableBorderSeparatorColor','tableBorderSeparatorColorPreview'],
+      ['thForeColor','thForeColorPreview'],
+      ['thBackColor','thBackColorPreview'],
+      ['tdForeColor','tdForeColorPreview'],
+      ['tdBackColor','tdBackColorPreview'],
+      ['tdAltBackColor','tdAltBackColorPreview'],
+      ['tdHoverBackColor','tdHoverBackColorPreview'],
+      ['markForeColor','markForeColorPreview'],
+      ['markBackColor','markBackColorPreview'],
+      ['toastForeColor','toastForeColorPreview'],
+      ['toastBackColor','toastBackColorPreview'],
+      ['tooltipForeColor','tooltipForeColorPreview'],
+      ['tooltipBackColor','tooltipBackColorPreview'],
+      ['modalOverlayColor','modalOverlayColorPreview'],
+      ['modalCloseColor','modalCloseColorPreview'],
+      ['modalCloseHoverBackColor','modalCloseHoverBackColorPreview'],
+      ['collapseContentBackColor','collapseContentBackColorPreview'],
+      ['collapseLabelForeColor','collapseLabelForeColorPreview'],
+      ['collapseLabelBackColor','collapseLabelBackColorPreview'],
+      ['collapseLabelHoverBackColor','collapseLabelHoverBackColorPreview'],
+      ['collapseSelectedLabelBackColor','collapseSelectedLabelBackColorPreview'],
+      ['collapseBorderColor','collapseBorderColorPreview'],
+      ['collapseSelectedLabelBorderColor','collapseSelectedLabelBorderColorPreview'],
+      ['progressForeColor','progressForeColorPreview'],
+      ['progressBackColor','progressBackColorPreview'],
+      ['spinnerDonutForeColor','spinnerDonutForeColorPreview'],
+      ['spinnerDonutBackColor','spinnerDonutBackColorPreview'],
+      ['genericBorderColor','genericBorderColorPreview'],
+      ['genericBoxShadowColor','genericBoxShadowColorPreview']
+    ];
+    var autoUpdatePairs = [
+      ['gridMediumBreakpoint', 'mobileBreakpoint'],
+      ['gridLargeBreakpoint', 'largeScreenBreakpoint'],
+      ['cardForeColor', 'foreColor'],
+      ['cardBackColor', 'backColor'],
+      ['cardBorderColor', 'secondaryBorderColor'],
+      ['formBackColor', 'secondaryBackColor'],
+      ['formForeColor', 'foreColor'],
+      ['formBorderColor', 'secondaryBorderColor'],
+      ['inputBackColor', 'backColor'],
+      ['inputForeColor', 'foreColor'],
+      ['inputBorderColor', 'secondaryBorderColor'],
+      ['headerBackColor', 'backColor'],
+      ['headerForeColor', 'secondaryForeColor'],
+      ['headerHoverBackColor', 'secondaryBackColor'],
+      ['headerBorderColor', 'secondaryBorderColor'],
+      ['navBackColor', 'backColor'],
+      ['navForeColor', 'secondaryForeColor'],
+      ['navHoverBackColor', 'secondaryBackColor'],
+      ['navBorderColor', 'secondaryBorderColor'],
+      ['navLinkColor', 'aLinkColor'],
+      ['footerBackColor', 'backColor'],
+      ['footerForeColor', 'secondaryForeColor'],
+      ['footerBorderColor', 'secondaryBorderColor'],
+      ['footerLinkColor', 'aLinkColor'],
+      ['drawerBackColor', 'backColor'],
+      ['drawerHoverBackColor', 'secondaryBackColor'],
+      ['drawerBorderColor', 'secondaryBorderColor'],
+      ['drawerCloseColor', 'secondaryForeColor'],
+      ['tableBorderColor', 'borderColor'],
+      ['thForeColor', 'foreColor'],
+      ['tdBackColor', 'backColor'],
+      ['tdForeColor', 'foreColor'],
+      ['modalCloseColor', 'secondaryForeColor'],
+      ['modalCloseHoverBackColor', 'secondaryBackColor'],
+      ['collapseLabelHoverBackColor', 'secondaryBackColor'],
+      ['collapseBorderColor', 'secondaryBorderColor'],
+      ['collapseSelectedLabelBorderColor', 'aLinkColor'],
+      ['progressBackColor', 'secondaryBorderColor'],
+      ['spinnerDonutBackColor', 'progressBackColor'],
+      ['spinnerDonutForeColor', 'progressForeColor']
+    ];
     function updateColorPreview(element, value) { document.getElementById(element).style.background = value }
+    function autoPreview(element, previewElement){
+      element.addEventListener('input', function(e){ updateColorPreview(previewElement, e.target.value)});
+      element.addEventListener('change', function(e){ updateColorPreview(previewElement, e.target.value)});
+    }
+    function autoUpdate(element, fromElement){
+      element.setAttribute('autoupdate','true');
+      element.addEventListener('input', function(e){ e.target.setAttribute('autoupdate','false')});
+      fromElement.addEventListener('input', function(e){
+        if(element.getAttribute('autoupdate') === 'true'){
+          element.value = e.target.value;
+          element.dispatchEvent(new Event('change'));
+        }
+      })
+    }
   </script>`,
   sections: [
     {id: 'textual-content', title: 'Textual content'},

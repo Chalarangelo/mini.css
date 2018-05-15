@@ -742,6 +742,69 @@ module.exports = {
         </div>
       </fieldset>
     </form>
+    <h3>Progress module</h3>
+    <p>The <strong>Progress</strong> module contains styling rules for progress bars and donut spinners. This module is not always enabled, but it's recommended that you enable it, as it contains functionality that is useful for most designs and layouts.</p>
+    <form id="progress">
+      <div class="input-group">
+        <label for="progressEnabled">Module enabled?</label>
+        <input type="checkbox" autocomplete="off" checked id="progressEnabled"/>
+      </div>
+      <fieldset>
+        <legend id="progress-bars">Progress bars</legend>
+        <div class="input-group vertical">
+          <label for="progressHeight">Progress bar height (rem):</label>
+          <input type="number" id="progressHeight" style="width:calc(100% - 0.5rem);" value="0.75" min="0.001" step="0.001"/>
+          <p><small>Height of progress bars, relative to root</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="progressForeColor">Progress bar foreground color:</label>
+          <input type="text" id="progressForeColor" value="#555" autocomplete="off"/>
+          <span id="progressForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#555; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for progress bars</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="progressBackColor">Progress bar background color:</label>
+          <input type="text" id="progressBackColor" value="#ddd" autocomplete="off"/>
+          <span id="progressBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for progress bars</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="progressMaxValue">Progress bar maximum value:</label>
+          <input type="number" id="progressMaxValue" style="width:calc(100% - 0.5rem);" value="1000" min="2"/>
+          <p><small>Maximum value for progress bars</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="progressInlineWidth">Progress bar inline width (%):</label>
+          <input type="number" id="progressInlineWidth" style="width:calc(100% - 0.5rem);" value="60" min="0.01" step="0.001"/>
+          <p><small>Width for inline progress bars, in percentage</small></p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend id="donut-spinner">Donut spinners</legend>
+        <div class="input-group vertical">
+          <label for="spinnerDonutSize">Donut spinner size (rem):</label>
+          <input type="number" id="spinnerDonutSize" style="width:calc(100% - 0.5rem);" value="1.25" min="0.001" step="0.001"/>
+          <p><small>Size of donut spinners, relative to root</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="spinnerDonutBorderThickness">Donut spinner thickness (rem):</label>
+          <input type="number" id="spinnerDonutBorderThickness" style="width:calc(100% - 0.5rem);" value="0.25" min="0.001" step="0.001"/>
+          <p><small>Thickness of donut spinners, relative to root</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="spinnerDonutForeColor">Donut spinner foreground color:</label>
+          <input type="text" id="spinnerDonutForeColor" value="#555" autocomplete="off"/>
+          <span id="spinnerDonutForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#555; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for donut spinners</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="spinnerDonutBackColor">Donut spinner background color:</label>
+          <input type="text" id="spinnerDonutBackColor" value="#ddd" autocomplete="off"/>
+          <span id="spinnerDonutBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for donut spinners</small></p>
+        </div>
+      </fieldset>
+    </form>
   </div>
   <script>
     window.onload = function(){
@@ -840,7 +903,7 @@ module.exports = {
       {id: 'tooltips', title: 'Tooltips'},
       {id: 'modals', title: 'Modal dialogs'},
       {id: 'collapse', title: 'Spoilers &amp accordions'},
-    {id: 'progress', title: 'Progress bars'},
+    {id: 'progress-bars', title: 'Progress bars'},
     {id: 'donut-spinner', title: 'Donut spinners'},
       {id: 'icons', title: 'Icons'},
     {id: 'utility', title: 'Utilities'}

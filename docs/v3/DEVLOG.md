@@ -335,3 +335,4 @@
 ## 20180515
 
 - Coded the `contextual` module's inputs for the flavors page.
+- Coded the `progress` module's inputs for the flavors page.

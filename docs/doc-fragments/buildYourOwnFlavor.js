@@ -598,6 +598,150 @@ module.exports = {
         </div>
       </fieldset>
     </form>
+    <h3>Contextual module</h3>
+    <p>The <strong>Contextual</strong> module contains styling rules for text highlighting, toasts, tooltips, modal dialogs, spoilers and accordions. This module is not always enabled, but it's recommended that you enable it, as it contains functionality that is useful for most designs and layouts.</p>
+    <form id="contextual">
+      <div class="input-group">
+        <label for="contextualEnabled">Module enabled?</label>
+        <input type="checkbox" autocomplete="off" checked id="contextualEnabled"/>
+      </div>
+      <fieldset>
+        <legend id="text-highlighting">Text highlighting</legend>
+        <div class="input-group vertical">
+          <label for="markForeColor">Highlight foreground color:</label>
+          <input type="text" id="markForeColor" value="#fafafa" autocomplete="off"/>
+          <span id="markForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#fafafa; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for highlighted text elements</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="markBackColor">Highlight background color:</label>
+          <input type="text" id="markBackColor" value="#0277bd" autocomplete="off"/>
+          <span id="markBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#0277bd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for highlighted text elements</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="markFontSize">Highlight font size (em):</label>
+          <input type="number" id="markFontSize" style="width:calc(100% - 0.5rem);" value="0.95" step="0.001"/>
+          <p><small>Font size for highlighted text elements, relative to context</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="markLineHeight">Highlight line height:</label>
+          <input type="number" id="markLineHeight" style="width:calc(100% - 0.5rem);" value="1" step="0.001"/>
+          <p><small>Line height for highlighted text elements</small></p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend id="toasts">Toasts</legend>
+        <div class="input-group vertical">
+          <label for="toastForeColor">Toast foreground color:</label>
+          <input type="text" id="toastForeColor" value="#fafafa" autocomplete="off"/>
+          <span id="toastForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#fafafa; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for toasts</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="toastBackColor">Toast background color:</label>
+          <input type="text" id="toastBackColor" value="#212121" autocomplete="off"/>
+          <span id="toastBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#212121; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for toasts</small></p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend id="tooltips">Tooltips</legend>
+        <div class="input-group vertical">
+          <label for="tooltipForeColor">Tooltip foreground color:</label>
+          <input type="text" id="tooltipForeColor" value="#fafafa" autocomplete="off"/>
+          <span id="tooltipForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#fafafa; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for tooltips</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="tooltipBackColor">Tooltip background color:</label>
+          <input type="text" id="tooltipBackColor" value="#212121" autocomplete="off"/>
+          <span id="tooltipBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#212121; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for tooltips</small></p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend id="modals">Modal dialogs</legend>
+        <div class="input-group vertical">
+          <label for="modalOverlayColor">Modal overlay color:</label>
+          <input type="text" id="modalOverlayColor" value="rgba(0,0,0,0.45)" autocomplete="off"/>
+          <span id="modalOverlayColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:rgba(0,0,0,0.45); display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Overal color for modal dialogs</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="modalCloseColor">Modal close color:</label>
+          <input type="text" id="modalCloseColor" value="#444" autocomplete="off"/>
+          <span id="modalCloseColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#444; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Close color for modal dialogs</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="modalCloseHoverBackColor">Modal close background color (hover):</label>
+          <input type="text" id="modalCloseHoverBackColor" value="#f0f0f0" autocomplete="off"/>
+          <span id="modalCloseHoverBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f0f0f0; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for modal dialogs' close (on hover)</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="modalCloseSize">Modal close size (rem):</label>
+          <input type="number" id="modalCloseSize" style="width:calc(100% - 0.5rem);" value="1.75" min="0.001" step="0.001"/>
+          <p><small>Modal dialog close size, relative to root</small></p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend id="collapse">Spoilers &amp; accordions</legend>
+        <div class="input-group vertical">
+          <label for="collapseLabelHeight">Collapse label height (rem):</label>
+          <input type="number" id="collapseLabelHeight" style="width:calc(100% - 0.5rem);" value="1.5" min="0.001" step="0.001"/>
+          <p><small>Label height for spoilers &amp; accordions, relative to root</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="collapseContentMaxHeight">Collapse content max height (px):</label>
+          <input type="number" id="collapseContentMaxHeight" style="width:calc(100% - 0.5rem);" value="400" min="1"/>
+          <p><small>Maximum height for content in spoilers &amp; accordions, in pixels</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="collapseContentBackColor">Collapse content background color:</label>
+          <input type="text" id="collapseContentBackColor" value="#fafafa" autocomplete="off"/>
+          <span id="collapseContentBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#fafafa; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for content in spoilers &amp; accordions</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="collapseBorderColor">Collapse border color:</label>
+          <input type="text" id="collapseBorderColor" value="#ddd" autocomplete="off"/>
+          <span id="collapseBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for spoilers &amp; accordions</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="collapseLabelForeColor">Collapse label foreground color:</label>
+          <input type="text" id="collapseLabelForeColor" value="#212121" autocomplete="off"/>
+          <span id="collapseLabelForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#212121; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for labels in spoilers &amp; accordions</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="collapseLabelBackColor">Collapse label background color:</label>
+          <input type="text" id="collapseLabelBackColor" value="#e8e8e8" autocomplete="off"/>
+          <span id="collapseLabelBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#e8e8e8; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for labels in spoilers &amp; accordions</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="collapseLabelHoverBackColor">Collapse label background color (hover):</label>
+          <input type="text" id="collapseLabelHoverBackColor" value="#f0f0f0" autocomplete="off"/>
+          <span id="collapseLabelHoverBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f0f0f0; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for labels in spoilers &amp; accordions (on hover)</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="collapseSelectedLabelBackColor">Collapse selected label background color:</label>
+          <input type="text" id="collapseSelectedLabelBackColor" value="#ececec" autocomplete="off"/>
+          <span id="collapseSelectedLabelBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ececec; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for selected labels in spoilers &amp; accordions</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="collapseSelectedLabelBorderColor">Collapse selected label border color:</label>
+          <input type="text" id="collapseSelectedLabelBorderColor" value="#0277bd" autocomplete="off"/>
+          <span id="collapseSelectedLabelBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#0277bd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for selected labels in spoilers &amp; accordions</small></p>
+        </div>
+      </fieldset>
+    </form>
   </div>
   <script>
     window.onload = function(){
@@ -661,7 +805,7 @@ module.exports = {
       document.getElementById('tooltipBackColor').addEventListener('input', function(e){ updateColorPreview('tooltipBackColorPreview', e.target.value) });
       document.getElementById('modalOverlayColor').addEventListener('input', function(e){ updateColorPreview('modalOverlayColorPreview', e.target.value) });
       document.getElementById('modalCloseColor').addEventListener('input', function(e){ updateColorPreview('modalClosekColorPreview', e.target.value) });
-      document.getElementById('modalHoverBackColor').addEventListener('input', function(e){ updateColorPreview('modalHoverBackColorPreview', e.target.value) });
+      document.getElementById('modalCloseHoverBackColor').addEventListener('input', function(e){ updateColorPreview('modalCloseHoverBackColorPreview', e.target.value) });
       document.getElementById('collapseContentBackColor').addEventListener('input', function(e){ updateColorPreview('collapseContentBackColorPreview', e.target.value) });
       document.getElementById('collapseLabelForeColor').addEventListener('input', function(e){ updateColorPreview('collapseLabelForeColorPreview', e.target.value) });
       document.getElementById('collapseLabelBackColor').addEventListener('input', function(e){ updateColorPreview('collapseLabelBackColorPreview', e.target.value) });

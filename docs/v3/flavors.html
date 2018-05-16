@@ -266,8 +266,8 @@
     <p>The <strong>Input control</strong> module contains styling rules for forms, input elements and buttons. This module is not always enabled, but it's highly recommended that you enable it, as some other components depend on its functionality to work properly.</p>
     <form id="inputControl">
       <div class="input-group">
-        <label for="layoutEnabled">Module enabled? (recommended)</label>
-        <input type="checkbox" checked autocomplete="off" id="layoutEnabled"/>
+        <label for="inputControlEnabled">Module enabled? (recommended)</label>
+        <input type="checkbox" checked autocomplete="off" id="inputControlEnabled"/>
       </div>
       <fieldset>
         <legend id="forms-and-input">Forms &amp; input</legend>
@@ -843,6 +843,9 @@
       autoUpdatePairs.forEach(function(v){
         autoUpdate(document.getElementById(v[0]), document.getElementById(v[1]));
       });
+      controlDisablerPairs.forEach(function(v){
+        changeFormControls(v[0], v[1]);
+      });
     }
     var previewPairs = [
       ['foreColor','foreColorPreview'],
@@ -961,6 +964,24 @@
       ['spinnerDonutBackColor', 'progressBackColor'],
       ['spinnerDonutForeColor', 'progressForeColor']
     ];
+    var controlDisablerPairs = [
+      ['layoutEnabled', 'layout'],
+      ['inputControlEnabled','inputControl'],
+      ['navigationEnabled', 'navigation'],
+      ['tableEnabled', 'table'],
+      ['contextualEnabled', 'contextual'],
+      ['progressEnabled', 'progress'],
+      ['iconsEnabled', 'icons'],
+      ['utilityEnabled', 'utility']
+    ];
+    function changeFormControls(element, form){
+      document.getElementById(element).addEventListener('input', function(e){
+        if(e.target.checked)
+          Array.prototype.slice.call(document.querySelectorAll('#'+form+' :not(#'+element+')')).forEach(v => v.disabled = false);
+        else
+          Array.prototype.slice.call(document.querySelectorAll('#'+form+' :not(#'+element+')')).forEach(v => v.disabled = true);
+      });
+    }
     function updateColorPreview(element, value) { document.getElementById(element).style.background = value }
     function autoPreview(element, previewElement){
       element.addEventListener('input', function(e){ updateColorPreview(previewElement, e.target.value)});

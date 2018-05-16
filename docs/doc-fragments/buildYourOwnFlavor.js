@@ -74,12 +74,12 @@ module.exports = {
           <p><small>Bottom position for subscript, relative to context</small></p>
         </div>
         <div class="input-group vertical">
-          <label for="blockquoteQuotationSize">Code font size (rem):</label>
+          <label for="blockquoteQuotationSize">Blockquote quotation size (rem):</label>
           <input type="number" id="blockquoteQuotationSize" style="width:calc(100% - 0.5rem);" value="3" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Font size for the quotation of blockquotes, relative to root</small></p>
         </div>
         <div class="input-group vertical">
-          <label for="blockquoteCiteSize">Code font size (rem):</label>
+          <label for="blockquoteCiteSize">Blockquote cite size (rem):</label>
           <input type="number" id="blockquoteCiteSize" style="width:calc(100% - 0.5rem);" value="0.75" min="0.001" step="0.001" autocomplete="off"/>
           <p><small>Font size for the citation of blockquotes, relative to root</small></p>
         </div>
@@ -810,6 +810,9 @@ module.exports = {
         </div>
       </fieldset>
     </form>
+    <h3>Get your flavor</h3>
+    <p>Click the button below to get your customized flavor!</p>
+    <button id="generateFlavor">Generate flavor</button>
   </div>
   <script>
     window.onload = function(){
@@ -821,6 +824,9 @@ module.exports = {
       });
       controlDisablerPairs.forEach(function(v){
         changeFormControls(v[0], v[1]);
+      });
+      document.getElementById('generateFlavor').addEventListener('click', function(e){
+        generateFlavor();
       });
     }
     var previewPairs = [
@@ -972,6 +978,69 @@ module.exports = {
           element.dispatchEvent(new Event('change'));
         }
       })
+    }
+    function getFlavorData(){
+      return {
+        core : {
+          baseRootFontSize: document.getElementById('baseRootFontSize').value,
+          baseLineHeight: document.getElementById('baseLineHeight').value,
+          foreColor: document.getElementById('foreColor').value,
+          backColor: document.getElementById('backColor').value,
+          secondaryForeColor: document.getElementById('secondaryForeColor').value,
+          secondaryBackColor: document.getElementById('secondaryBackColor').value,
+          borderColor: document.getElementById('borderColor').value,
+          secondaryBorderColor: document.getElementById('secondaryBorderColor').value,
+          universalMargin: document.getElementById('universalMargin').value,
+          universalPadding: document.getElementById('universalPadding').value,
+          universalBorderRadius: document.getElementById('universalBorderRadius').value,
+          universalBoxShadow: document.getElementById('universalBoxShadow').value,
+          headingLineHeight: document.getElementById('headingLineHeight').value,
+          headingRatio: document.getElementById('headingRatio').value,
+          headingFontWeight: document.getElementById('headingFontWeight').value,
+          subheadingFontSize: document.getElementById('subheadingFontSize').value,
+          subheadingTopMargin: document.getElementById('subheadingTopMargin').value,
+          smallFontSize: document.getElementById('smallFontSize').value,
+          boldFontWeight: document.getElementById('boldFontWeight').value,
+          horizontalRuleLineHeight: document.getElementById('horizontalRuleLineHeight').value,
+          blockquoteSidebarColor: document.getElementById('blockquoteSidebarColor').value,
+          blockquoteQuotationSize: document.getElementById('blockquoteQuotationSize').value,
+          blockquoteCiteSize: document.getElementById('blockquoteCiteSize').value,
+          codeFontSize: document.getElementById('codeFontSize').value,
+          preSidebarColor: document.getElementById('preSidebarColor').value,
+          supTop: document.getElementById('supTop').value,
+          subBottom: document.getElementById('subBottom').value,
+          aLinkColor: document.getElementById('aLinkColor').value,
+          aVisitedColor: document.getElementById('aVisitedColor').value,
+          mobileBreakpoint: document.getElementById('mobileBreakpoint').value,
+          largeScreenBreakpoint: document.getElementById('largeScreenBreakpoint').value,
+        }
+      };
+    }
+    function generateFlavor(){
+      var flavorData = getFlavorData();
+      var flavorFile = '';
+      flavorFile +='//  This is a flavor file. Duplicate it and edit it to create your own flavor. Read instructions carefully.\\n';
+      flavorFile +='//  Single-line comments, starting with \\'//\\' will not be included in your final CSS file. Multiline comments,\\n';
+      flavorFile +='//  structured like the flavor description below, will be included in your final CSS file.\\n';
+      flavorFile +='/*\\n';
+      flavorFile +='  Flavor name: Custom (mini-custom)\\n';
+      flavorFile +='  Author: Undefined \\n';
+      flavorFile +='  mini.css version: v3.0.0\\n';
+      flavorFile +='*/\\n';
+      flavorFile +='$base-root-font-size: '+flavorData.core.baseRootFontSize+'px; // Root font sizing for all elements (\`px\` only)\\n';
+      flavorFile +='$base-line-height: '+flavorData.core.baseLineHeight+'; // Line height for most elements\\n';
+      flavorFile +='$fore-color: '+flavorData.core.foreColor+'; // Text & foreground color\\n';
+      flavorFile +='$secondary-fore-color: '+flavorData.core.secondaryForeColor+'; // Secondary text & foreground color\\n';
+      flavorFile +='$back-color: '+flavorData.core.backColor+'; // Background color\\n';
+      flavorFile +='$secondary-back-color: '+flavorData.core.secondaryBackColor+'; // Secondary background color\\n';
+      flavorFile +='$blockquote-color: '+flavorData.core.blockquoteSidebarColor+'; // <blockquote> sidebar and quotation color\\n';
+      flavorFile +='$pre-color: '+flavorData.core.preSidebarColor+'; // <pre> sidebar color\\n';
+      flavorFile +='$border-color: '+flavorData.core.borderColor+'; // Border color\\n';
+      flavorFile +='$secondary-border-color: '+flavorData.core.secondaryBorderColor+'; // Secondary border color\\n';
+
+      flavorFile +='@import \\'../mini/core\\';\\n';
+      
+      console.log(flavorFile);
     }
   </script>`,
   sections: [

@@ -343,3 +343,4 @@
 ## 20180516
 
 - Made switches disable the controls for each form as necessary in the flavors page.
+- Added some flavor file generation parts, this will take a little while.

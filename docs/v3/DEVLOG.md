@@ -339,3 +339,7 @@
 - Generalized flavor page previews.
 - Hooked up most of the flavor page automatic updates.
 - Updated flavor page with `autocomplete="off"` for all `input` fields.
+
+## 20180516
+
+- Made switches disable the controls for each form as necessary in the flavors page.

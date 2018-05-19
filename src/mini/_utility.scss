@@ -8,7 +8,7 @@ $border-generic-color:   rgba(0,0,0, 0.3) !default; // Border color for bordered
 $border-rounded-name:   'rounded' !default;         // Class name for rounded-border elements.
 $border-circular-name:   'circular' !default;       // Class name for circular-border elements.
 $box-shadow-generic-name:'shadowed' !default;       // Class name for box-shadow elements.
-$box-shadow-generic: 0 4*$__1px 4*$__1px 0 rgba(0, 0, 0, 0.125),  0 2*$__1px 2*$__1px -2*$__1px rgba(0, 0, 0, 0.25);
+$box-shadow-generic: 0 4*$__1px 4*$__1px 0 rgba(0, 0, 0, 0.125),  0 2*$__1px 2*$__1px -2*$__1px rgba(0, 0, 0, 0.25) !default;
 $responsive-margin-name: 'responsive-margin' !default; //Class name for responsive margin elements.
 $responsive-margin-medium-breakpoint: 768px !default; // Medium screen breakpoint for responsive margin elements.
 $responsive-margin-large-breakpoint: 1280px !default; // Medium screen breakpoint for responsive margin elements.

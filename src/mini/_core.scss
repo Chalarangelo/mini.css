@@ -33,7 +33,7 @@ $horizontal-rule-line-height:  1.25em !default; // <hr> line height
 $blockquote-quotation-size:    3rem !default;   // Font size for the quotation of <blockquote>
 $blockquote-cite-size:         0.75em !default; // Font size for the [cite] of <blockquote>
 $code-font-family: 'Menlo, Consolas, monospace' !default; // Font stack for code elements
-$code-font-size:           0.85em;              // Font size for <code>, <kbd>
+$code-font-size:           0.85em !default;     // Font size for <code>, <kbd>
 $small-element-font-size:     0.75em !default;  // Font size for <small>, <sub>, <sup>
 $sup-top:                  -0.5em !default;     // <sup> top
 $sub-bottom:               -0.25em !default;    // <sub> bottom

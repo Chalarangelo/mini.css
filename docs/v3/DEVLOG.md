@@ -344,3 +344,9 @@
 
 - Made switches disable the controls for each form as necessary in the flavors page.
 - Added some flavor file generation parts, this will take a little while.
+
+## 20180519
+
+- Finished Sass variable generation for `core` module in flavors page.
+- Finished Sass variable generation for `icon` module in flavors page.
+- Finished Sass variable generation for `utility` module in flavors page.

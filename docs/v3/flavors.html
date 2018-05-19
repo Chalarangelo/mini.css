@@ -219,16 +219,6 @@
           <input type="number" id="gridColumnCount" style="width:calc(100% - 0.5rem);" value="12" min="1" autocomplete="off"/>
           <p><small>Number of horizontal column partitions for the grid system (default 12)</small></p>
         </div>
-        <div class="input-group vertical">
-          <label for="gridMediumBreakpoint">Grid medium screen breakpoint (px):</label>
-          <input type="number" id="gridMediumBreakpoint" style="width:calc(100% - 0.5rem);" value="768" min="1" autocomplete="off"/>
-          <p><small>Breakpoint between small and medium screens, in pixels</small></p>
-        </div>
-        <div class="input-group vertical">
-          <label for="gridLargeBreakpoint">Grid large screen breakpoint (px):</label>
-          <input type="number" id="gridLargeBreakpoint" style="width:calc(100% - 0.5rem);" value="1280" min="1" autocomplete="off"/>
-          <p><small>Breakpoint between medium and large screens, in pixels</small></p>
-        </div>
       </fieldset>
       <fieldset>
         <legend id="cards">Cards</legend>
@@ -236,6 +226,16 @@
           <label for="cardNormalWidth">Card normal width (px):</label>
           <input type="number" id="cardNormalWidth" style="width:calc(100% - 0.5rem);" value="320" min="1" autocomplete="off"/>
           <p><small>Width of normal cards, in pixels</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardSmallWidth">Card small width (px):</label>
+          <input type="number" id="cardSmallWidth" style="width:calc(100% - 0.5rem);" value="320" min="1" autocomplete="off"/>
+          <p><small>Width of small cards, in pixels</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardLargeWidth">Card large width (px):</label>
+          <input type="number" id="cardLargeWidth" style="width:calc(100% - 0.5rem);" value="320" min="1" autocomplete="off"/>
+          <p><small>Width of large cards, in pixels</small></p>
         </div>
         <div class="input-group vertical">
           <label for="cardSectionMediaHeight">Card media section height (px):</label>
@@ -259,6 +259,54 @@
           <input type="text" id="cardBorderColor" value="#ddd" autocomplete="off"/>
           <span id="cardBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
           <p style="margin-top: -1rem"><small>Border color for cards</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardWarningForeColor">Warning card foreground color:</label>
+          <input type="text" id="cardWarningForeColor" value="#111" autocomplete="off"/>
+          <span id="cardWarningForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#111; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for warning cards</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardWarningBackColor">Warning card background color:</label>
+          <input type="text" id="cardWarningBackColor" value="#ffca28" autocomplete="off"/>
+          <span id="cardWarningBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ffca28; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for warning cards</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardWarningBorderColor">Warning card border color:</label>
+          <input type="text" id="cardWarningBorderColor" value="#e8b825" autocomplete="off"/>
+          <span id="cardWarningBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#e8b825; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for warning cards</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardErrorForeColor">Error card foreground color:</label>
+          <input type="text" id="cardErrorForeColor" value="#f8f8f8" autocomplete="off"/>
+          <span id="cardErrorForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#f8f8f8; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for error cards</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardErrorBackColor">Error card background color:</label>
+          <input type="text" id="cardErrorBackColor" value="#b71c1c" autocomplete="off"/>
+          <span id="cardErrorBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#b71c1c; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for error cards</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardErrorBorderColor">Error card border color:</label>
+          <input type="text" id="cardErrorBorderColor" value="#a71a1a" autocomplete="off"/>
+          <span id="cardErrorBorderColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#a71a1a; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Border color for error cards</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardDarkSectionForeColor">Card dark section foreground color:</label>
+          <input type="text" id="cardDarkSectionForeColor" value="#111" autocomplete="off"/>
+          <span id="cardDarkSectionForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#111; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for card dark sections</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="cardDarkSectionBackColor">Card dark section background color:</label>
+          <input type="text" id="cardDarkSectionBackColor" value="#e0e0e0" autocomplete="off"/>
+          <span id="cardDarkSectionBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#e0e0e0; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Background color for card dark sections</small></p>
         </div>
       </fieldset>
     </form>
@@ -903,6 +951,14 @@
       ['cardForeColor','cardForeColorPreview'],
       ['cardBackColor','cardBackColorPreview'],
       ['cardBorderColor','cardBorderColorPreview'],
+      ['cardWarningBackColor', 'cardWarningBackColorPreview'],
+      ['cardWarningForeColor', 'cardWarningForeColorPreview'],
+      ['cardWarningBorderColor', 'cardWarningBorderColorPreview'],
+      ['cardErrorBackColor', 'cardErrorBackColorPreview'],
+      ['cardErrorForeColor', 'cardErrorForeColorPreview'],
+      ['cardErrorBorderColor', 'cardErrorBorderColorPreview'],
+      ['cardDarkSectionBackColor', 'cardDarkSectionBackColorPreview'],
+      ['cardDarkSectionForeColor', 'cardDarkSectionForeColorPreview'],
       ['formForeColor','formForeColorPreview'],
       ['formBackColor','formBackColorPreview'],
       ['formBorderColor','formBorderColorPreview'],
@@ -971,8 +1027,6 @@
       ['genericBoxShadowColor','genericBoxShadowColorPreview']
     ];
     var autoUpdatePairs = [
-      ['gridMediumBreakpoint', 'mobileBreakpoint'],
-      ['gridLargeBreakpoint', 'largeScreenBreakpoint'],
       ['cardForeColor', 'foreColor'],
       ['cardBackColor', 'backColor'],
       ['cardBorderColor', 'secondaryBorderColor'],
@@ -1082,6 +1136,22 @@
         },
         layout : {
           enabled: document.getElementById('layoutEnabled').checked,
+          gridColumnCount: document.getElementById('gridColumnCount').value,
+          cardNormalWidth: document.getElementById('cardNormalWidth').value,
+          cardSectionMediaHeight: document.getElementById('cardSectionMediaHeight').value,
+          cardBackColor: document.getElementById('cardBackColor').value,
+          cardForeColor: document.getElementById('cardForeColor').value,
+          cardBorderColor: document.getElementById('cardBorderColor').value,
+          cardSmallWidth: document.getElementById('cardSmallWidth').value,
+          cardLargeWidth: document.getElementById('cardLargeWidth').value,
+          cardWarningBackColor: document.getElementById('cardWarningBackColor').value,
+          cardWarningForeColor: document.getElementById('cardWarningForeColor').value,
+          cardWarningBorderColor: document.getElementById('cardWarningBorderColor').value,
+          cardErrorBackColor: document.getElementById('cardErrorBackColor').value,
+          cardErrorForeColor: document.getElementById('cardErrorForeColor').value,
+          cardErrorBorderColor: document.getElementById('cardErrorBorderColor').value,
+          cardDarkSectionBackColor: document.getElementById('cardDarkSectionBackColor').value,
+          cardDarkSectionForeColor: document.getElementById('cardDarkSectionForeColor').value
         },
         inputControl : {
           enabled: document.getElementById('inputControlEnabled').checked,
@@ -1206,10 +1276,49 @@
       flavorFile +='@import \'../mini/core\';\n';
       flavorFile +='\n';
       if(flavorData.layout.enabled){
-
+        flavorFile +='$grid-column-count: '+flavorData.layout.gridColumnCount+'; // Number of columns in the grid (integer value only).\n';
+        flavorFile +='$grid-medium-breakpoint: $mobile-breakpoint; // Medium screen breakpoint for grid.\n';
+        flavorFile +='$grid-large-breakpoint: $large-screen-breakpoint; // Large screen breakpoint for grid.\n';
+        flavorFile +='$card-normal-width: '+flavorData.layout.cardNormalWidth+'px; // Width for normal cards.\n';
+        flavorFile +='$card-section-media-height: '+flavorData.layout.cardSectionMediaHeight+'px; // Height for cards\' media sections.\n';
+        flavorFile +='$card-fore-color: '+flavorData.layout.cardForeColor+'; // Text color for the cards.\n';
+        flavorFile +='$card-back-color: '+flavorData.layout.cardBackColor+'; // Background color for the cards.\n';
+        flavorFile +='$card-border-color: '+flavorData.layout.cardBorderColor+'; // Border color for the cards.\n';
         flavorFile +='\n';
         flavorFile +='@import \'../mini/layout\';\n';
         flavorFile +='\n';
+        flavorFile +='$card-small-name: \'small\'; // Class name for small cards.\n';
+        flavorFile +='$card-small-width: '+flavorData.layout.cardSmallWidth+'px; // Width for small cards.\n';
+        flavorFile +='@include make-card-alt-size ($card-small-name, $card-small-width);\n';
+        flavorFile +='\n';
+        flavorFile +='$card-large-name: \'large\'; // Class name for large cards.\n';
+        flavorFile +='$card-large-width: '+flavorData.layout.cardLargeWidth+'px; // Width for large cards.\n';
+        flavorFile +='@include make-card-alt-size ($card-large-name, $card-large-width);\n';
+        flavorFile +='\n';
+        flavorFile +='$card-fluid-name: \'fluid\'; // Class name for fluid cards.\n';
+        flavorFile +='$card-fluid-width: 100%; // Width for fluid cards.\n';
+        flavorFile +='@include make-card-alt-size ($card-fluid-name, $card-fluid-width);\n';
+        flavorFile +='\n';
+        flavorFile +='$card-warning-name: \'warning\'; // Class name for card warnging color variant.\n';
+        flavorFile +='$card-warning-back-color: '+flavorData.layout.cardWarningBackColor+'; // Background color for card warnging color variant.\n';
+        flavorFile +='$card-warning-fore-color: '+flavorData.layout.cardWarningForeColor+'; // Text color for card warnging color variant.\n';
+        flavorFile +='$card-warning-border-color: '+flavorData.layout.cardWarningBorderColor+'; // Border style for card warnging color variant.\n';
+        flavorFile +='@include make-card-alt-color ($card-warning-name, $card-warning-back-color, $card-warning-fore-color, $card-warning-border-color);\n';
+        flavorFile +='\n';
+        flavorFile +='$card-error-name: \'error\'; // Class name for card error color variant.\n';
+        flavorFile +='$card-error-back-color: '+flavorData.layout.cardErrorBackColor+'; // Background color for card error color variant.\n';
+        flavorFile +='$card-error-fore-color: '+flavorData.layout.cardErrorForeColor+'; // Text color for card error color variant.\n';
+        flavorFile +='$card-error-border-color: '+flavorData.layout.cardErrorBorderColor+'; // Border style for card error color variant.\n';
+        flavorFile +='@include make-card-alt-color ($card-error-name, $card-error-back-color, $card-error-fore-color, $card-error-border-color);\n';
+        flavorFile +='\n';
+        flavorFile +='$card-section-dark-name: \'dark\'; // Class name for card dark section variant.\n';
+        flavorFile +='$card-section-dark-back-color: '+flavorData.layout.cardDarkSectionBackColor+'; // Background color for card dark section variant.\n';
+        flavorFile +='$card-section-dark-fore-color: '+flavorData.layout.cardDarkSectionForeColor+'; // Text color for card dark section variant.\n';
+        flavorFile +='@include make-card-section-alt-color ($card-section-dark-name, $card-section-dark-back-color, $card-section-dark-fore-color);\n';
+        flavorFile +='\n';
+        flavorFile +='$card-section-double-padded-name: \'double-padded\'; // Class name for card double-padded section variant.\n';
+        flavorFile +='$card-section-double-padded-padding: calc(1.5 * var(#{$universal-padding-var}));  // Padding for card sectiondouble-padded section variant.\n';
+        flavorFile +='@include make-card-section-alt-style ($card-section-double-padded-name, $card-section-double-padded-padding);\n';
       }
       if(flavorData.inputControl.enabled){
 

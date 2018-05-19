@@ -352,3 +352,5 @@
 - Finished Sass variable generation for `utility` module in flavors page.
 - Finished Sass variable generation for `table` module in flavors page.
 - Finished Sass variable generation for `navigation` module in flavors page.
+- Added mixin parts to `progress` for flavors page.
+- Finished Sass variable generation for `progress` module in flavors page.

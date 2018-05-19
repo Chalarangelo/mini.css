@@ -743,6 +743,24 @@ module.exports = {
           <p style="margin-top: -1rem"><small>Background color for progress bars</small></p>
         </div>
         <div class="input-group vertical">
+          <label for="progressPrimaryForeColor">Progress bar primary variant foreground color:</label>
+          <input type="text" id="progressPrimaryForeColor" value="#1976d2" autocomplete="off"/>
+          <span id="progressPrimaryForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#1976d2; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for progress bar primary variant</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="progressSecondaryForeColor">Progress bar secondary variant foreground color:</label>
+          <input type="text" id="progressSecondaryForeColor" value="#d32f2f" autocomplete="off"/>
+          <span id="progressSecondaryForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#d32f2f; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for progress bar secondary variant</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="progressTertiaryForeColor">Progress bar tertiary variant foreground color:</label>
+          <input type="text" id="progressTertiaryForeColor" value="#308732" autocomplete="off"/>
+          <span id="progressTertiaryForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#308732; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for progress bar tertiary variant</small></p>
+        </div>
+        <div class="input-group vertical">
           <label for="progressMaxValue">Progress bar maximum value:</label>
           <input type="number" id="progressMaxValue" style="width:calc(100% - 0.5rem);" value="1000" min="2" autocomplete="off"/>
           <p><small>Maximum value for progress bars</small></p>
@@ -776,6 +794,24 @@ module.exports = {
           <input type="text" id="spinnerDonutBackColor" value="#ddd" autocomplete="off"/>
           <span id="spinnerDonutBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#ddd; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
           <p style="margin-top: -1rem"><small>Background color for donut spinners</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="spinnerDonutPrimaryForeColor">Donut spinner primary variant foreground color:</label>
+          <input type="text" id="spinnerDonutPrimaryForeColor" value="#1976d2" autocomplete="off"/>
+          <span id="spinnerDonutPrimaryForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#1976d2; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for donut spinner primary variant</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="spinnerDonutSecondaryForeColor">Donut spinner secondary variant foreground color:</label>
+          <input type="text" id="spinnerDonutSecondaryForeColor" value="#d32f2f" autocomplete="off"/>
+          <span id="spinnerDonutSecondaryForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#d32f2f; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for donut spinner secondary variant</small></p>
+        </div>
+        <div class="input-group vertical">
+          <label for="spinnerDonutTertiaryForeColor">Donut spinner tertiary variant foreground color:</label>
+          <input type="text" id="spinnerDonutTertiaryForeColor" value="#308732" autocomplete="off"/>
+          <span id="spinnerDonutTertiaryForeColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#308732; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <p style="margin-top: -1rem"><small>Foreground color for donut spinner tertiary variant</small></p>
         </div>
       </fieldset>
     </form>
@@ -899,8 +935,14 @@ module.exports = {
       ['collapseSelectedLabelBorderColor','collapseSelectedLabelBorderColorPreview'],
       ['progressForeColor','progressForeColorPreview'],
       ['progressBackColor','progressBackColorPreview'],
+      ['progressPrimaryForeColor','progressPrimaryForeColorPreview'],
+      ['progressSecondaryForeColor','progressSecondaryForeColorPreview'],
+      ['progressTertiaryForeColor','progressTertiaryForeColorPreview'],
       ['spinnerDonutForeColor','spinnerDonutForeColorPreview'],
       ['spinnerDonutBackColor','spinnerDonutBackColorPreview'],
+      ['spinnerDonutPrimaryForeColor','spinnerDonutPrimaryForeColorPreview'],
+      ['spinnerDonutSecondaryForeColor','spinnerDonutSecondaryForeColorPreview'],
+      ['spinnerDonutTertiaryForeColor','spinnerDonutTertiaryForeColorPreview'],
       ['genericBorderColor','genericBorderColorPreview'],
       ['genericBoxShadowColor','genericBoxShadowColorPreview']
     ];
@@ -1067,6 +1109,21 @@ module.exports = {
         },
         progress : {
           enabled: document.getElementById('progressEnabled').checked,
+          progressBackColor: document.getElementById('progressBackColor').value,
+          progressForeColor: document.getElementById('progressForeColor').value,
+          progressPrimaryForeColor: document.getElementById('progressPrimaryForeColor').value,
+          progressSecondaryForeColor: document.getElementById('progressSecondaryForeColor').value,
+          progressTertiaryForeColor: document.getElementById('progressTertiaryForeColor').value,
+          progressHeight: document.getElementById('progressHeight').value,
+          progressMaxValue: document.getElementById('progressMaxValue').value,
+          progressInlineWidth: document.getElementById('progressInlineWidth').value,
+          spinnerDonutSize: document.getElementById('spinnerDonutSize').value,
+          spinnerDonutBorderThickness: document.getElementById('spinnerDonutBorderThickness').value,
+          spinnerDonutBackColor: document.getElementById('spinnerDonutBackColor').value,
+          spinnerDonutForeColor: document.getElementById('spinnerDonutForeColor').value,
+          spinnerDonutPrimaryForeColor: document.getElementById('spinnerDonutPrimaryForeColor').value,
+          spinnerDonutSecondaryForeColor: document.getElementById('spinnerDonutSecondaryForeColor').value,
+          spinnerDonutTertiaryForeColor: document.getElementById('spinnerDonutTertiaryForeColor').value
         },
         icon : {
           enabled: document.getElementById('iconsEnabled').checked
@@ -1191,9 +1248,41 @@ module.exports = {
         flavorFile +='\\n';
       }
       if(flavorData.progress.enabled){
-
+        flavorFile +='$progress-back-color: '+flavorData.progress.progressBackColor+'; // Background color of <progress>.\\n';
+        flavorFile +='$progress-fore-color '+flavorData.progress.progressForeColor+'; // Foreground color of <progress>.\\n';
+        flavorFile +='$progress-height: '+flavorData.progress.progressHeight+'rem; // Height of <progress>.\\n';
+        flavorFile +='$progress-max-value: '+flavorData.progress.progressMaxValue+'; // Arithmetic max value of <progress> - use integer values.\\n';
+        flavorFile +='$progress-inline-width: '+flavorData.progress.progressInlineWidth+'%; // Width of inline <progress> elements.\\n';
+        flavorFile +='$spinner-donut-size: '+flavorData.progress.spinnerDonutSize+'rem; // Size of the spinner donuts\\n';
+        flavorFile +='$spinner-donut-border-thickness: '+flavorData.progress.spinnerDonutBorderThickness+'rem; // Border thickness for spinner donuts\\n';
+        flavorFile +='$spinner-donut-back-color: '+flavorData.progress.spinnerDonutBackColor+'; // Background color for spinner donuts\\n';
+        flavorFile +='$spinner-donut-fore-color: '+flavorData.progress.spinnerDonutForeColor+'; // Foreground color for spinner donuts\\n';
         flavorFile +='\\n';
         flavorFile +='@import \\'../mini/progress\\';\\n';
+        flavorFile +='\\n';
+        flavorFile +='$progress-primary-name:         \\'primary\\';   // Class name for primary <progress> color variant.\\n';
+        flavorFile +='$progress-primary-fore-color:   '+flavorData.progress.progressPrimaryForeColor+';     // Foreground color for primary <progress> color variant.\\n';
+        flavorFile +='@include make-progress-alt-color ($progress-primary-name, $progress-primary-fore-color);\\n';
+        flavorFile +='\\n';
+        flavorFile +='$progress-secondary-name:     \\'secondary\\';   // Class name for secondary <progress> color variant.\\n';
+        flavorFile +='$progress-secondary-fore-color: '+flavorData.progress.progressSecondaryForeColor+';     // Foreground color for secondary <progress> color variant.\\n';
+        flavorFile +='@include make-progress-alt-color ($progress-secondary-name, $progress-secondary-fore-color);\\n';
+        flavorFile +='\\n';
+        flavorFile +='$progress-tertiary-name:       \\'tertiary\\';   // Class name for tertiary <progress> color variant.\\n';
+        flavorFile +='$progress-tertiary-fore-color:   '+flavorData.progress.progressTertiaryForeColor+';    // Foreground color for tertiary <progress> color variant.\\n';
+        flavorFile +='@include make-progress-alt-color ($progress-tertiary-name, $progress-tertiary-fore-color);\\n';
+        flavorFile +='\\n';
+        flavorFile +='$spinner-donut-primary-name:         \\'primary\\';   // Class name for primary spinner donut color variant.\\n';
+        flavorFile +='$spinner-donut-primary-fore-color:   '+flavorData.progress.spinnerDonutPrimaryForeColor+';     // Foreground color for primary spinner donut color variant.\\n';
+        flavorFile +='@include make-spinner-donut-alt-color ($spinner-donut-primary-name, $spinner-donut-primary-fore-color);\\n';
+        flavorFile +='\\n';
+        flavorFile +='$spinner-donut-secondary-name:     \\'secondary\\';   // Class name for secondary spinner donut color variant.\\n';
+        flavorFile +='$spinner-donut-secondary-fore-color: '+flavorData.progress.spinnerDonutSecondaryForeColor+';     // Foreground color for secondary spinner donut color variant.\\n';
+        flavorFile +='@include make-spinner-donut-alt-color ($spinner-donut-secondary-name, $spinner-donut-secondary-fore-color);\\n';
+        flavorFile +='\\n';
+        flavorFile +='$spinner-donut-tertiary-name:       \\'tertiary\\';   // Class name for tertiary spinner donut color variant.\\n';
+        flavorFile +='$spinner-donut-tertiary-fore-color:   '+flavorData.progress.spinnerDonutTertiaryForeColor+';    // Foreground color for tertiary spinner donut color variant.\\n';
+        flavorFile +='@include make-spinner-donut-alt-color ($spinner-donut-tertiary-name, $spinner-donut-tertiary-fore-color);\\n';
         flavorFile +='\\n';
       }
       if(flavorData.icon.enabled){

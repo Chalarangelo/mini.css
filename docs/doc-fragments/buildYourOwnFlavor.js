@@ -1025,6 +1025,18 @@ module.exports = {
         },
         table : {
           enabled: document.getElementById('tableEnabled').checked,
+          maxHeight: document.getElementById('maxHeight').value,
+          captionFontSize: document.getElementById('captionFontSize').value,
+          mobileCardLabel: document.getElementById('mobileCardLabel').value,
+          mobileLabelFontWeight: document.getElementById('mobileLabelFontWeight').value,
+          tableBorderColor: document.getElementById('tableBorderColor').value,
+          tableBorderSeparatorColor: document.getElementById('tableBorderSeparatorColor').value,
+          thBackColor: document.getElementById('thBackColor').value,
+          thForeColor: document.getElementById('thForeColor').value,
+          tdBackColor: document.getElementById('tdBackColor').value,
+          tdForeColor: document.getElementById('tdForeColor').value,
+          tdAltBackColor: document.getElementById('tdAltBackColor').value,
+          tdHoverBackColor: document.getElementById('tdHoverBackColor').value,
         },
         contextual : {
           enabled: document.getElementById('contextualEnabled').checked,
@@ -1083,8 +1095,8 @@ module.exports = {
       flavorFile +='$a-link-color: '+flavorData.core.aLinkColor+'; // Color for <a>:link\\n';
       flavorFile +='$a-visited-color: '+flavorData.core.aVisitedColor+'; // Color for <a>:visited\\n';
       flavorFile +='$bold-font-weight: '+flavorData.core.boldFontWeight+'; // Font weight for <b> and <strong>\\n';
-      flavorFile +='$mobile-breakpoint: '+flavorData.core.mobileBreakpoint+'; // Breakpoint between small and medium screens (px)\\n';
-      flavorFile +='$large-screen-breakpoint: '+flavorData.core.largeScreenBreakpoint+'; // Breakpoint between medium and large screens (px)\\n';
+      flavorFile +='$mobile-breakpoint: '+flavorData.core.mobileBreakpoint+'px; // Breakpoint between small and medium screens (px)\\n';
+      flavorFile +='$large-screen-breakpoint: '+flavorData.core.largeScreenBreakpoint+'px; // Breakpoint between medium and large screens (px)\\n';
       flavorFile +='\\n';
       flavorFile +='@import \\'../mini/core\\';\\n';
       flavorFile +='\\n';
@@ -1107,7 +1119,19 @@ module.exports = {
         flavorFile +='\\n';
       }
       if(flavorData.table.enabled){
-
+        flavorFile +='$table-mobile-breakpoint: $mobile-breakpoint; // Breakpoint for <table> mobile view.\\n';
+        flavorFile +='$table-max-height: '+flavorData.table.maxHeight+'px; // Maximum height of <table> elements (non-horizontal).\\n';
+        flavorFile +='$table-caption-font-size: '+flavorData.table.captionFontSize+'rem; // Font size for <caption> elements.\\n';
+        flavorFile +='$table-mobile-card-label: \\''+flavorData.table.mobileCardLabel+'\\'; // Attribute used to replace column headers in mobile view.\\n';
+        flavorFile +='$table-mobile-label-font-weight: '+flavorData.table.mobileLabelFontWeight+'; // Font weight for column header labels in mobile view.\\n';
+        flavorFile +='$table-border-color: '+flavorData.table.tableBorderColor+'; // Border color for <table> elements.\\n';
+        flavorFile +='$table-border-separator-color: '+flavorData.table.tableBorderSeparatorColor+'; // Border color for the border between <thead> and <tbody>.\\n';
+        flavorFile +='$table-th-back-color:  '+flavorData.table.thBackColor+'; // Background color for <th> elements.\\n';
+        flavorFile +='$table-th-fore-color: '+flavorData.table.thForeColor+'; // Text color for <th> elements.\\n';
+        flavorFile +='$table-td-back-color: '+flavorData.table.tdBackColor+'; // Background color for <td> elements.\\n';
+        flavorFile +='$table-td-fore-color: '+flavorData.table.tdForeColor+'; // Text color for <td> elements.\\n';
+        flavorFile +='$table-td-alt-back-color: '+flavorData.table.tdAltBackColor+'; // Alternative background color for <td> elements in striped tables.\\n';
+        flavorFile +='$table-td-hover-back-color: '+flavorData.table.tdHoverBackColor+'; // Hover background color for <td> elements in hoverable tables.\\n';
         flavorFile +='\\n';
         flavorFile +='@import \\'../mini/table\\';\\n';
         flavorFile +='\\n';
@@ -1130,7 +1154,6 @@ module.exports = {
         flavorFile +='\\n';
       }
       if(flavorData.utility.enabled){
-
         flavorFile +='$box-shadow-generic: 0 4*$__1px 4*$__1px 0 '+flavorData.utility.genericBoxShadowColor+',  0 2*$__1px 2*$__1px -2*$__1px '+flavorData.utility.genericBoxShadowColor+';\\n';
         flavorFile +='$border-generic-color: '+flavorData.utility.genericBorderColor+'; // Border color for bordered elements.\\n';
         flavorFile +='\\n';

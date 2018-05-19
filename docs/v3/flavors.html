@@ -44,7 +44,7 @@
         </div>
         <div class="input-group vertical">
           <label for="boldFontWeight">Heading font weight:</label>
-          <input type="number" id="boldFontWeight" style="width:calc(100% - 0.5rem);" value="700" min="100" step="100" max="900" autocomplete="off"/>
+          <input type="number" id="boldFontWeight" style="width:calc(100% - 0.5rem);" value="500" min="100" step="100" max="900" autocomplete="off"/>
           <p><small>Font weight for headings (400 is normal, 700 is bold)</small></p>
         </div>
         <div class="input-group vertical">
@@ -190,7 +190,7 @@
         </div>
         <div class="input-group vertical">
           <label for="universalBoxShadow">Universal box shadow:</label>
-          <select id="universalBoxShadow" style="width:calc(100% - 0.5rem);"> <option selected value="0" autocomplete="off">Disabled</option> <option value="1">Enabled</option> </select>
+          <input type="text" id="universalBoxShadow" style="width:calc(100% - 0.5rem);" value="none" autocomplete="off">
           <p><small>Universal box shadow for most elements</small></p>
         </div>
         <div class="input-group vertical">
@@ -1037,6 +1037,32 @@
           aVisitedColor: document.getElementById('aVisitedColor').value,
           mobileBreakpoint: document.getElementById('mobileBreakpoint').value,
           largeScreenBreakpoint: document.getElementById('largeScreenBreakpoint').value,
+        },
+        layout : {
+          enabled: document.getElementById('layoutEnabled').checked,
+        },
+        inputControl : {
+          enabled: document.getElementById('inputControlEnabled').checked,
+        },
+        navigation : {
+          enabled: document.getElementById('navigationEnabled').checked,
+        },
+        table : {
+          enabled: document.getElementById('tableEnabled').checked,
+        },
+        contextual : {
+          enabled: document.getElementById('contextualEnabled').checked,
+        },
+        progress : {
+          enabled: document.getElementById('progressEnabled').checked,
+        },
+        icon : {
+          enabled: document.getElementById('iconsEnabled').checked
+        },
+        utility : {
+          enabled: document.getElementById('utilityEnabled').checked,
+          genericBoxShadowColor: document.getElementById('genericBoxShadowColor').value,
+          genericBorderColor: document.getElementById('genericBorderColor').value
         }
       };
     }
@@ -1061,8 +1087,81 @@
       flavorFile +='$pre-color: '+flavorData.core.preSidebarColor+'; // <pre> sidebar color\n';
       flavorFile +='$border-color: '+flavorData.core.borderColor+'; // Border color\n';
       flavorFile +='$secondary-border-color: '+flavorData.core.secondaryBorderColor+'; // Secondary border color\n';
-      
+      flavorFile +='$heading-line-height: '+flavorData.core.headingLineHeight+'; // Line height for headings\n';
+      flavorFile +='$heading-ratio: '+flavorData.core.headingRatio+'; // Ratio for headings (strictly unitless)\n';
+      flavorFile +='$subheading-font-size:'+flavorData.core.subheadingFontSize+'em; // Font sizing for <small> elements in headings\n';
+      flavorFile +='$subheading-top-margin: '+flavorData.core.subheadingTopMargin+'rem; // Top margin of <small> elements in headings\n';
+      flavorFile +='$heading-font-weight: '+flavorData.core.headingFontWeight+'; // Font weight for headings\n';
+      flavorFile +='$horizontal-rule-line-height:  '+flavorData.core.horizontalRuleLineHeight+'em; // <hr> line height\n';
+      flavorFile +='$universal-margin: '+flavorData.core.universalMargin+'rem; // Universal margin for the most elements\n';
+      flavorFile +='$universal-padding: '+flavorData.core.universalPadding+'rem; // Universal padding for the most elements\n';
+      flavorFile +='$universal-border-radius: '+flavorData.core.universalBorderRadius+'rem; // Universal border-radius for most elements\n';
+      flavorFile +='$universal-box-shadow: '+flavorData.core.universalBoxShadow+'; // Universal box-shadow for most elements\n';
+      flavorFile +='$small-element-font-size: '+flavorData.core.smallFontSize+'em; // Font size for <small>, <sub>, <sup>\n';
+      flavorFile +='$small-font-size: '+flavorData.core.smallFontSize+'em; // Font sizing for <small> elements\n';
+      flavorFile +='$blockquote-quotation-size: 3rem;   // Font size for the quotation of <blockquote>\n';
+      flavorFile +='$blockquote-cite-size: 0.75em; // Font size for the [cite] of <blockquote>\n';
+      flavorFile +='$code-font-size: '+flavorData.core.codeFontSize+'em; // Font size for <code>, <kbd>\n';
+      flavorFile +='$sup-top: '+flavorData.core.supTop+'em; // <sup> top\n';
+      flavorFile +='$sub-bottom: '+flavorData.core.subBottom+'em; // <sub> bottom\n';
+      flavorFile +='$a-link-color: '+flavorData.core.aLinkColor+'; // Color for <a>:link\n';
+      flavorFile +='$a-visited-color: '+flavorData.core.aVisitedColor+'; // Color for <a>:visited\n';
+      flavorFile +='$bold-font-weight: '+flavorData.core.boldFontWeight+'; // Font weight for <b> and <strong>\n';
+      flavorFile +='$mobile-breakpoint: '+flavorData.core.mobileBreakpoint+'; // Breakpoint between small and medium screens (px)\n';
+      flavorFile +='$large-screen-breakpoint: '+flavorData.core.largeScreenBreakpoint+'; // Breakpoint between medium and large screens (px)\n';
+      flavorFile +='\n';
       flavorFile +='@import \'../mini/core\';\n';
+      flavorFile +='\n';
+      if(flavorData.layout.enabled){
+
+        flavorFile +='\n';
+        flavorFile +='@import \'../mini/layout\';\n';
+        flavorFile +='\n';
+      }
+      if(flavorData.inputControl.enabled){
+
+        flavorFile +='\n';
+        flavorFile +='@import \'../mini/inputControl\';\n';
+        flavorFile +='\n';
+      }
+      if(flavorData.navigation.enabled){
+
+        flavorFile +='\n';
+        flavorFile +='@import \'../mini/navigation\';\n';
+        flavorFile +='\n';
+      }
+      if(flavorData.table.enabled){
+
+        flavorFile +='\n';
+        flavorFile +='@import \'../mini/table\';\n';
+        flavorFile +='\n';
+      }
+      if(flavorData.contextual.enabled){
+
+        flavorFile +='\n';
+        flavorFile +='@import \'../mini/contextual\';\n';
+        flavorFile +='\n';
+      }
+      if(flavorData.progress.enabled){
+
+        flavorFile +='\n';
+        flavorFile +='@import \'../mini/progress\';\n';
+        flavorFile +='\n';
+      }
+      if(flavorData.icon.enabled){
+        flavorFile +='\n';
+        flavorFile +='@import \'../mini/icon\';\n';
+        flavorFile +='\n';
+      }
+      if(flavorData.utility.enabled){
+
+        flavorFile +='$box-shadow-generic: 0 4*$__1px 4*$__1px 0 '+flavorData.utility.genericBoxShadowColor+',  0 2*$__1px 2*$__1px -2*$__1px '+flavorData.utility.genericBoxShadowColor+';\n';
+        flavorFile +='$border-generic-color: '+flavorData.utility.genericBorderColor+'; // Border color for bordered elements.\n';
+        flavorFile +='\n';
+        flavorFile +='@import \'../mini/utility\';\n';
+        flavorFile +='\n';
+      }
+
       console.log(flavorFile);
     }
   </script>

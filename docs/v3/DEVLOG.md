@@ -351,3 +351,4 @@
 - Finished Sass variable generation for `icon` module in flavors page.
 - Finished Sass variable generation for `utility` module in flavors page.
 - Finished Sass variable generation for `table` module in flavors page.
+- Finished Sass variable generation for `navigation` module in flavors page.

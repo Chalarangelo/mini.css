@@ -346,8 +346,8 @@ module.exports = {
       <fieldset>
         <legend id="header">Header</legend>
         <div class="input-group vertical">
-          <label for="headerheight">Header height (rem):</label>
-          <input type="number" id="headerheight" style="width:calc(100% - 0.5rem);" value="3.1875" min="0.0001" step="0.0001" autocomplete="off"/>
+          <label for="headerHeight">Header height (rem):</label>
+          <input type="number" id="headerHeight" style="width:calc(100% - 0.5rem);" value="3.1875" min="0.0001" step="0.0001" autocomplete="off"/>
           <p><small>Height for header elements, relative to root</small></p>
         </div>
         <div class="input-group vertical">
@@ -1012,7 +1012,7 @@ module.exports = {
           aLinkColor: document.getElementById('aLinkColor').value,
           aVisitedColor: document.getElementById('aVisitedColor').value,
           mobileBreakpoint: document.getElementById('mobileBreakpoint').value,
-          largeScreenBreakpoint: document.getElementById('largeScreenBreakpoint').value,
+          largeScreenBreakpoint: document.getElementById('largeScreenBreakpoint').value
         },
         layout : {
           enabled: document.getElementById('layoutEnabled').checked,
@@ -1022,6 +1022,30 @@ module.exports = {
         },
         navigation : {
           enabled: document.getElementById('navigationEnabled').checked,
+          headerHeight: document.getElementById('headerHeight').value,
+          headerBackColor: document.getElementById('headerBackColor').value,
+          headerHoverBackColor: document.getElementById('headerHoverBackColor').value,
+          headerForeColor: document.getElementById('headerForeColor').value,
+          headerBorderColor: document.getElementById('headerBorderColor').value,
+          navBackColor: document.getElementById('navBackColor').value,
+          navHoverBackColor: document.getElementById('navHoverBackColor').value,
+          navForeColor: document.getElementById('navForeColor').value,
+          navBorderColor: document.getElementById('navBorderColor').value,
+          navLinkColor: document.getElementById('navLinkColor').value,
+          footerForeColor: document.getElementById('footerForeColor').value,
+          footerBackColor: document.getElementById('footerBackColor').value,
+          footerBorderColor: document.getElementById('footerBorderColor').value,
+          footerLinkColor: document.getElementById('footerLinkColor').value,
+          drawerBackColor: document.getElementById('drawerBackColor').value,
+          drawerBorderColor: document.getElementById('drawerBorderColor').value,
+          drawerHoverBackColor: document.getElementById('drawerHoverBackColor').value,
+          drawerCloseColor: document.getElementById('drawerCloseColor').value,
+          headerLogoFontSize: document.getElementById('headerLogoFontSize').value,
+          navSublinkDepth: document.getElementById('navSublinkDepth').value,
+          footerFontSize: document.getElementById('footerFontSize').value,
+          drawerToggleFontSize: document.getElementById('drawerToggleFontSize').value,
+          drawerWidth: document.getElementById('drawerWidth').value,
+          drawerCloseSize: document.getElementById('drawerCloseSize').value
         },
         table : {
           enabled: document.getElementById('tableEnabled').checked,
@@ -1036,7 +1060,7 @@ module.exports = {
           tdBackColor: document.getElementById('tdBackColor').value,
           tdForeColor: document.getElementById('tdForeColor').value,
           tdAltBackColor: document.getElementById('tdAltBackColor').value,
-          tdHoverBackColor: document.getElementById('tdHoverBackColor').value,
+          tdHoverBackColor: document.getElementById('tdHoverBackColor').value
         },
         contextual : {
           enabled: document.getElementById('contextualEnabled').checked,
@@ -1113,7 +1137,31 @@ module.exports = {
         flavorFile +='\\n';
       }
       if(flavorData.navigation.enabled){
-
+        flavorFile +='$header-height: '+flavorData.navigation.headerHeight+'rem; // Height of the header element.\\n';
+        flavorFile +='$header-back-color: '+flavorData.navigation.headerBackColor+'; // Background color for the header element.\\n';
+        flavorFile +='$header-hover-back-color: '+flavorData.navigation.headerHoverBackColor+'; // Background color for the header element (hover).\\n';
+        flavorFile +='$header-fore-color: '+flavorData.navigation.headerForeColor+'; // Text color for the header element.\\n';
+        flavorFile +='$header-border-color: '+flavorData.navigation.headerBorderColor+'; // Border color for the header element.\\n';
+        flavorFile +='$nav-back-color: '+flavorData.navigation.navBackColor+'; // Background color for the nav element.\\n';
+        flavorFile +='$nav-hover-back-color: '+flavorData.navigation.navHoverBackColor+'; // Background color for the nav element (hover).\\n';
+        flavorFile +='$nav-fore-color: '+flavorData.navigation.navForeColor+'; // Text color for the nav element.\\n';
+        flavorFile +='$nav-border-color: '+flavorData.navigation.navBorderColor+'; // Border color for the nav element.\\n';
+        flavorFile +='$nav-link-color: '+flavorData.navigation.navLinkColor+'; / Color for link in the nav element.\\n';
+        flavorFile +='$footer-fore-color: '+flavorData.navigation.footerForeColor+'; // Text color for the footer element.\\n';
+        flavorFile +='$footer-back-color: '+flavorData.navigation.footerBackColor+'; // Background color for footer nav element.\\n';
+        flavorFile +='$footer-border-color: '+flavorData.navigation.footerBorderColor+'; // Border color for the footer element.\\n';
+        flavorFile +='$footer-link-color: '+flavorData.navigation.footerLinkColor+'; // Color for link in the footer element.\\n';
+        flavorFile +='$drawer-back-color: '+flavorData.navigation.drawerBackColor+'; // Background color for the drawer component.\\n';
+        flavorFile +='$drawer-border-color: '+flavorData.navigation.drawerBorderColor+'; // Border color for the drawer component.\\n';
+        flavorFile +='$drawer-hover-back-color: '+flavorData.navigation.drawerHoverBackColor+'; // Background color for the drawer component\\'s close (hover).\\n';
+        flavorFile +='$drawer-close-color: '+flavorData.navigation.drawerCloseColor+'; // Color of the close element for the drawer component.\\n';
+        flavorFile +='$header-logo-font-size: '+flavorData.navigation.headerLogoFontSize+'rem; // Font size for the header logo element.\\n';
+        flavorFile +='$nav-sublink-depth: '+flavorData.navigation.navSublinkDepth+'; // Amount of subcategory classes to add.\\n';
+        flavorFile +='$footer-font-size: '+flavorData.navigation.footerFontSize+'rem; // Font size for text in footer element.\\n';
+        flavorFile +='$drawer-toggle-font-size: '+flavorData.navigation.drawerToggleFontSize+'em; // Font size for the drawer component\\'s toggle. (prefer em units)\\n';
+        flavorFile +='$drawer-width: '+flavorData.navigation.drawerWidth+'px; // Width of the drawer component.\\n';
+        flavorFile +='$drawer-close-size: '+flavorData.navigation.drawerCloseSize+'rem; // Size of the close element for the drawer component.\\n';
+        flavorFile +='$drawer-mobile-breakpoint: $mobile-breakpoint; // Mobile breakpoint for the drawer component.\\n';
         flavorFile +='\\n';
         flavorFile +='@import \\'../mini/navigation\\';\\n';
         flavorFile +='\\n';

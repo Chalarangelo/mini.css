@@ -38,7 +38,6 @@ $drawer-persistent-name: 'persistent' !default; // Class name for the persisten 
 $drawer-width:      320px !default;          // Width of the drawer component.
 $drawer-close-name: 'drawer-close' !default; // Class name of the close element for the drawer component.
 $drawer-close-size: 2rem !default;           // Size of the close element for the drawer component.
-$drawer-icons-color:  #212121 !default;      // Color for the icons used in the drawer component.
 // CSS variable name definitions [exercise caution if modifying these]
 $header-fore-color-var:          '--header-fore-color' !default;
 $header-back-color-var:          '--header-back-color' !default;

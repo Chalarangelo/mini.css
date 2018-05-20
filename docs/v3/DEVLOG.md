@@ -356,3 +356,7 @@
 - Finished Sass variable generation for `progress` module in flavors page.
 - Added mixin parts to `layout` for flavors page.
 - Finished Sass variable generation for `layout` module in flavors page.
+
+## 20180520
+- Finished Sass variable generation for `input_control` module in flavors page.
+- Finished Sass variable generation for `contextual` module in flavors page.

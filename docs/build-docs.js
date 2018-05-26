@@ -207,6 +207,9 @@ var customizationStart = `<!DOCTYPE html><html lang="en"><head>
 <meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
 <meta property="og:type" content="website"/><meta property="og:image" content="page_thumb.png">
 <meta property="og:url" content="https://chalarangelo.github.io/mini.css/"><link rel="icon" type="image/png" href="favicon.png">
+<script src="./jszip.min.js"></script>
+<script src="./FileSaver.min.js"></script>
+<script src="./sass.js"></script>
 </head><body>`;
 var customizationEnd = `</body></html>`;
 

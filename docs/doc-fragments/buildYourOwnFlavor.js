@@ -20,7 +20,7 @@ module.exports = {
         </div>
         <div class="input-group vertical">
           <label for="boldFontWeight">Heading font weight:</label>
-          <input type="number" id="boldFontWeight" style="width:calc(100% - 0.5rem);" value="500" min="100" step="100" max="900" autocomplete="off"/>
+          <input type="number" id="boldFontWeight" style="width:calc(100% - 0.5rem);" value="700" min="100" step="100" max="900" autocomplete="off"/>
           <p><small>Font weight for headings (400 is normal, 700 is bold)</small></p>
         </div>
         <div class="input-group vertical">
@@ -205,12 +205,12 @@ module.exports = {
         </div>
         <div class="input-group vertical">
           <label for="cardSmallWidth">Card small width (px):</label>
-          <input type="number" id="cardSmallWidth" style="width:calc(100% - 0.5rem);" value="320" min="1" autocomplete="off"/>
+          <input type="number" id="cardSmallWidth" style="width:calc(100% - 0.5rem);" value="240" min="1" autocomplete="off"/>
           <p><small>Width of small cards, in pixels</small></p>
         </div>
         <div class="input-group vertical">
           <label for="cardLargeWidth">Card large width (px):</label>
-          <input type="number" id="cardLargeWidth" style="width:calc(100% - 0.5rem);" value="320" min="1" autocomplete="off"/>
+          <input type="number" id="cardLargeWidth" style="width:calc(100% - 0.5rem);" value="480" min="1" autocomplete="off"/>
           <p><small>Width of large cards, in pixels</small></p>
         </div>
         <div class="input-group vertical">
@@ -438,14 +438,14 @@ module.exports = {
         </div>
         <div class="input-group vertical">
           <label for="buttonInverseBackColor">Button inverse variant background color:</label>
-          <input type="text" id="buttonInverseBackColor" value="#111" autocomplete="off"/>
-          <span id="buttonInverseBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#111; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <input type="text" id="buttonInverseBackColor" value="#212121" autocomplete="off"/>
+          <span id="buttonInverseBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#212121; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
           <p style="margin-top: -1rem"><small>Background color for inverse button variant</small></p>
         </div>
         <div class="input-group vertical">
           <label for="buttonInverseHoverBackColor">Button inverse variant background color (hover):</label>
-          <input type="text" id="buttonInverseHoverBackColor" value="#212121" autocomplete="off"/>
-          <span id="buttonInverseHoverBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#212121; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <input type="text" id="buttonInverseHoverBackColor" value="#111" autocomplete="off"/>
+          <span id="buttonInverseHoverBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#111; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
           <p style="margin-top: -1rem"><small>Background color for inverse button variant on hover</small></p>
         </div>
         <div class="input-group vertical">
@@ -639,7 +639,7 @@ module.exports = {
         </div>
         <div class="input-group vertical">
           <label for="mobileLabelFontWeight">Mobile card label font weight:</label>
-          <input type="number" id="mobileLabelFontWeight" style="width:calc(100% - 0.5rem);" value="16" min="1" autocomplete="off"/>
+          <input type="number" id="mobileLabelFontWeight" style="width:calc(100% - 0.5rem);" value="600" min="1" autocomplete="off"/>
           <p><small>Font weight for tables' mobile card labels (400 is normal, 700 is bold)</small></p>
         </div>
         <div class="input-group vertical">
@@ -751,8 +751,8 @@ module.exports = {
         </div>
         <div class="input-group vertical">
           <label for="toastBackColor">Toast background color:</label>
-          <input type="text" id="toastBackColor" value="#212121" autocomplete="off"/>
-          <span id="toastBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#212121; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
+          <input type="text" id="toastBackColor" value="#424242" autocomplete="off"/>
+          <span id="toastBackColorPreview" class="circular bordered" style="width: 24px; height: 24px; background:#424242; display: inline-block; vertical-align:middle; position: relative; top: -2.25rem; right: calc(-100% + 2.5rem); box-sizing: border-box"></span>
           <p style="margin-top: -1rem"><small>Background color for toasts</small></p>
         </div>
       </fieldset>
@@ -1366,8 +1366,8 @@ module.exports = {
       flavorFile +='//  structured like the flavor description below, will be included in your final CSS file.\\n';
       flavorFile +='/*\\n';
       flavorFile +='  Flavor name: Custom (mini-custom)\\n';
-      flavorFile +='  Author: Undefined \\n';
-      flavorFile +='  mini.css version: v3.0.0\\n';
+      flavorFile +='  Generated online - https://minicss.org/flavors\\n';
+      flavorFile +='  mini.css version: ${version}\\n';
       flavorFile +='*/\\n';
       flavorFile +='$base-root-font-size: '+flavorData.core.baseRootFontSize+'px; // Root font sizing for all elements (\`px\` only)\\n';
       flavorFile +='$base-line-height: '+flavorData.core.baseLineHeight+'; // Line height for most elements\\n';
@@ -1416,6 +1416,9 @@ module.exports = {
         flavorFile +='\\n';
         flavorFile +='@import \\'../mini/layout\\';\\n';
         flavorFile +='\\n';
+        flavorFile +='/*\\n';
+        flavorFile +='	 Custom elements for card elements.\\n';
+        flavorFile +='*/\\n';
         flavorFile +='$card-small-name: \\'small\\'; // Class name for small cards.\\n';
         flavorFile +='$card-small-width: '+flavorData.layout.cardSmallWidth+'px; // Width for small cards.\\n';
         flavorFile +='@include make-card-alt-size ($card-small-name, $card-small-width);\\n';
@@ -1467,8 +1470,11 @@ module.exports = {
         flavorFile +='$button-hover-border-color: '+flavorData.inputControl.buttonHoverBorderColor+'; // Border color for buttons (hover).\\n';
         flavorFile +='$button-group-border-color: '+flavorData.inputControl.buttonGroupBorderColor+'; // Border color for button groups.\\n';
         flavorFile +='\\n';
-        flavorFile +='@import \\'../mini/inputControl\\';\\n';
+        flavorFile +='@import \\'../mini/input_control\\';\\n';
         flavorFile +='\\n';
+        flavorFile +='/*\\n';
+        flavorFile +='	 Custom elements for forms and input elements.\\n';
+        flavorFile +='*/\\n';
         flavorFile +='$button-primary-name: \\'primary\\'; // Class name for primary button color variant.\\n';
         flavorFile +='$button-primary-back-color: '+flavorData.inputControl.buttonPrimaryBackColor+';// Background color for primary button color variant.\\n';
         flavorFile +='$button-primary-hover-back-color: '+flavorData.inputControl.buttonPrimaryHoverBackColor+';// Background color for primary button color variant (hover).\\n';
@@ -1514,7 +1520,7 @@ module.exports = {
         flavorFile +='$nav-hover-back-color: '+flavorData.navigation.navHoverBackColor+'; // Background color for the nav element (hover).\\n';
         flavorFile +='$nav-fore-color: '+flavorData.navigation.navForeColor+'; // Text color for the nav element.\\n';
         flavorFile +='$nav-border-color: '+flavorData.navigation.navBorderColor+'; // Border color for the nav element.\\n';
-        flavorFile +='$nav-link-color: '+flavorData.navigation.navLinkColor+'; / Color for link in the nav element.\\n';
+        flavorFile +='$nav-link-color: '+flavorData.navigation.navLinkColor+'; // Color for link in the nav element.\\n';
         flavorFile +='$footer-fore-color: '+flavorData.navigation.footerForeColor+'; // Text color for the footer element.\\n';
         flavorFile +='$footer-back-color: '+flavorData.navigation.footerBackColor+'; // Background color for footer nav element.\\n';
         flavorFile +='$footer-border-color: '+flavorData.navigation.footerBorderColor+'; // Border color for the footer element.\\n';
@@ -1564,8 +1570,8 @@ module.exports = {
         flavorFile +='$modal-overlay-color: '+flavorData.contextual.modalOverlayColor+'; // Overlay color for modal dialog component\\n';
         flavorFile +='$modal-close-color: '+flavorData.contextual.modalCloseColor+'; // Text color for the close button of the modal dialog component\\n';
         flavorFile +='$modal-close-hover-back-color: '+flavorData.contextual.modalCloseHoverBackColor+'; // Background color for the close button of the modal dialog component (on hover/focus)\\n';
-        flavorFile +='$modal-close-size: '+flavorData.contextual.modalCloseSize+'; // Font size for the close button of the modal dialog component\\n';
-        flavorFile +='$collapse-label-height: '+flavorData.contextual.collapseLabelHeight+'; // Height for the labels in the collapse component\\n';
+        flavorFile +='$modal-close-size: '+flavorData.contextual.modalCloseSize+'rem; // Font size for the close button of the modal dialog component\\n';
+        flavorFile +='$collapse-label-height: '+flavorData.contextual.collapseLabelHeight+'rem; // Height for the labels in the collapse component\\n';
         flavorFile +='$collapse-content-max-height: '+flavorData.contextual.collapseContentMaxHeight+'px; // Max height for the content panes in the collapse component\\n';
         flavorFile +='$collapse-label-back-color: '+flavorData.contextual.collapseLabelBackColor+'; // Background color for labels in the collapse component\\n';
         flavorFile +='$collapse-label-fore-color: '+flavorData.contextual.collapseLabelForeColor+'; // Text color for labels in the collapse component\\n';
@@ -1576,6 +1582,10 @@ module.exports = {
         flavorFile +='$collapse-content-back-color: '+flavorData.contextual.collapseContentBackColor+'; // Background color for collapse component\\'s content panes\\n';
         flavorFile +='\\n';
         flavorFile +='@import \\'../mini/contextual\\';\\n';
+        flavorFile +='\\n';
+        flavorFile +='/*\\n';
+        flavorFile +='	 Custom elements for contextual background elements, toasts and tooltips.\\n';
+        flavorFile +='*/\\n';
         flavorFile +='$mark-secondary-name: \\'secondary\\'; // Class name for secondary <mark> color variant.\\n';
         flavorFile +='$mark-secondary-back-color: '+flavorData.contextual.markSecondaryBackColor+'; // Background color for secondary <mark> color variant.\\n';
         flavorFile +='@include make-mark-alt-color ($mark-secondary-name, $mark-secondary-back-color);\\n';
@@ -1592,7 +1602,7 @@ module.exports = {
       }
       if(flavorData.progress.enabled){
         flavorFile +='$progress-back-color: '+flavorData.progress.progressBackColor+'; // Background color of <progress>.\\n';
-        flavorFile +='$progress-fore-color '+flavorData.progress.progressForeColor+'; // Foreground color of <progress>.\\n';
+        flavorFile +='$progress-fore-color: '+flavorData.progress.progressForeColor+'; // Foreground color of <progress>.\\n';
         flavorFile +='$progress-height: '+flavorData.progress.progressHeight+'rem; // Height of <progress>.\\n';
         flavorFile +='$progress-max-value: '+flavorData.progress.progressMaxValue+'; // Arithmetic max value of <progress> - use integer values.\\n';
         flavorFile +='$progress-inline-width: '+flavorData.progress.progressInlineWidth+'%; // Width of inline <progress> elements.\\n';
@@ -1603,6 +1613,9 @@ module.exports = {
         flavorFile +='\\n';
         flavorFile +='@import \\'../mini/progress\\';\\n';
         flavorFile +='\\n';
+        flavorFile +='/*\\n';
+        flavorFile +='	 Custom elements for progress bars and spinners.\\n';
+        flavorFile +='*/\\n';
         flavorFile +='$progress-primary-name:         \\'primary\\';   // Class name for primary <progress> color variant.\\n';
         flavorFile +='$progress-primary-fore-color:   '+flavorData.progress.progressPrimaryForeColor+';     // Foreground color for primary <progress> color variant.\\n';
         flavorFile +='@include make-progress-alt-color ($progress-primary-name, $progress-primary-fore-color);\\n';
@@ -1641,7 +1654,85 @@ module.exports = {
         flavorFile +='\\n';
       }
 
-      console.log(flavorFile);
+      var base = './';
+      var directory = '../';
+      var files = [
+        'mini/_core.scss',
+        'mini/_layout.scss',
+        'mini/_layout_mixins.scss',
+        'mini/_input_control.scss',
+        'mini/_input_control_mixins.scss',
+        'mini/_navigation.scss',
+        'mini/_table.scss',
+        'mini/_contextual.scss',
+        'mini/_contextual_mixins.scss',
+        'mini/_progress.scss',
+        'mini/_progress_mixins.scss',
+        'mini/_icon.scss',
+        'mini/_utility.scss',
+      ];
+      var sass = new Sass();
+      sass.options({style: Sass.style.expanded, precision: -1, comments: false, indent: '  ', linefeed: '\\n'});
+      sass.preloadFiles(base, directory, files, function filesPreloaded() {
+        console.log('Files loaded...');
+        sass.writeFile('flavors/flavor.scss', flavorFile, function filesWritten(r1){
+          console.log('Flavor file created...');
+          sass.compileFile('flavors/flavor.scss', function expandedCompiled(r2){
+            let expandedCSS = r2.text;
+            console.log('Expanded CSS compiled...');
+            sass.compileFile('flavors/flavor.scss', {style: Sass.style.compressed}, function compressedCompiled(r3){
+              let compressedCSS = r3.text;
+              console.log('Compressed CSS compiled...');
+              sass.readFile([
+                  '../mini/_core.scss',
+                  '../mini/_layout.scss',
+                  '../mini/_layout_mixins.scss',
+                  '../mini/_input_control.scss',
+                  '../mini/_input_control_mixins.scss',
+                  '../mini/_navigation.scss',
+                  '../mini/_table.scss',
+                  '../mini/_contextual.scss',
+                  '../mini/_contextual_mixins.scss',
+                  '../mini/_progress.scss',
+                  '../mini/_progress_mixins.scss',
+                  '../mini/_icon.scss',
+                  '../mini/_utility.scss'
+              ], function filesRead(r4){
+                console.log('Read loaded files...');
+                var zip = new JSZip();
+                var flavorsFolder = zip.folder('flavors');
+                var miniFolder = zip.folder('mini');
+                zip.file('mini-custom.css', expandedCSS);
+                zip.file('mini-custom.min.css', compressedCSS);
+                flavorsFolder.file('mini-custom.scss', flavorFile);
+                miniFolder.file('_core.scss', r4['../mini/_core.scss']);
+                miniFolder.file('_layout.scss', r4['../mini/_layout.scss']);
+                miniFolder.file('_layout_mixins.scss', r4['../mini/_layout_mixins.scss']);
+                miniFolder.file('_input_control.scss', r4['../mini/_input_control.scss']);
+                miniFolder.file('_input_control_mixins.scss', r4['../mini/_input_control_mixins.scss']);
+                miniFolder.file('_navigation.scss', r4['../mini/_navigation.scss']);
+                miniFolder.file('_table.scss', r4['../mini/_table.scss']);
+                miniFolder.file('_contextual.scss', r4['../mini/_contextual.scss']);
+                miniFolder.file('_contextual_mixins.scss', r4['../mini/_contextual_mixins.scss']);
+                miniFolder.file('_progress.scss', r4['../mini/_progress.scss']);
+                miniFolder.file('_progress_mixins.scss', r4['../mini/_progress_mixins.scss']);
+                miniFolder.file('_icon.scss', r4['../mini/_icon.scss']);
+                miniFolder.file('_utility.scss', r4['../mini/_utility.scss']);
+                console.log('Files added to zip...');
+                zip.generateAsync({type:"blob"}).then(function(content) {
+                  saveAs(content, "mini-custom.zip");
+                });
+              });
+            });
+          });
+        });
+      });
+
+      // var zip = new JSZip();
+      // zip.file("flavor.sass", flavorFile);
+      // zip.generateAsync({type:"blob"}).then(function(content) {
+      //   saveAs(content, "mini.zip");
+      // });
     }
   </script>`,
   sections: [

@@ -360,3 +360,12 @@
 ## 20180520
 - Finished Sass variable generation for `input_control` module in flavors page.
 - Finished Sass variable generation for `contextual` module in flavors page.
+
+## 20180526
+
+- Added `jszip`, `sass.js` and `file-saver` to `package.json`.
+- Used above tools and some code to finish up the `flavors` page generation process.
+- *TODO* Add links to useful tools.
+- *TODO* Add flavors.
+- *TODO* Auto-compile SCSS to CSS when generating, copy all `src` to the `docs`.
+- *TODO* Rebase and release.

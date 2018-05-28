@@ -234,7 +234,7 @@ var customizationMainStart = `<main class="col-sm-12 col-md-8 col-lg-9" id="doc-
 var customizationMainEnd = `<footer><p><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo" target="_blank">@Chalarangelo</a>. Source code licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>.</p><p>Icons provided by <a href="https://feathericons.com/" target="_blank">Feather</a>.</p></footer></main>`;
 
 var customizationFragments = custFragments.map(f => buildCustomizationFragment(f)).join('<br/>');
-var customizationLinks = [buildLink(custFragments[0]), '<hr style="padding:0;"/>', ...custFragments[1].sections.map(f => buildLink(f))].join('');
+var customizationLinks = [buildLink(custFragments[0]), buildLink(custFragments[1]), '<hr style="padding:0;"/>', ...custFragments[2].sections.map(f => buildLink(f))].join('');
 
 function buildCustomizationFragment(fragment){
   var fragmentHtml = `<div id="${fragment.id}" class="card fluid">

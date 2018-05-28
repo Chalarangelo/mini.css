@@ -372,3 +372,7 @@
 ## 20180528
 
 - Added links to useful tools.
+- Fixed a typo in the flavors forms.
+- Replied to issues on the repo.
+- Updated the flavor generation to show the progress.
+- Fixed documentation links.

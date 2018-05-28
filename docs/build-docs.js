@@ -67,7 +67,7 @@ var indexHtml = `<!DOCTYPE html>
   </body>
 </html>`;
 
-var indexOutputPath = './docs/v3/index.html';               // This path is relative to package.json.
+var indexOutputPath = './docs/index.html';               // This path is relative to package.json.
 
 fs.writeFile(indexOutputPath,
   `${indexHtml}`,
@@ -76,7 +76,7 @@ fs.writeFile(indexOutputPath,
 
 // DOCUMENTATION
 var docFragments = require('./doc-fragments/docFragments'); // Gets all document fragments as a list.
-var docOutputPath = './docs/v3/docs.html';                  // This path is relative to package.json.
+var docOutputPath = './docs/docs.html';                  // This path is relative to package.json.
 
 const FEATHER_BANNER = `<a href="https://feathericons.com/" class="section double-padded" id="feather-banner" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f8f8f8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17" y1="15" x2="9" y2="15"></line></svg>&nbsp;Powered by Feather</a>`;
 
@@ -193,7 +193,7 @@ fs.writeFile(docOutputPath,
 
 // CUSTOMIZATION
 var custFragments = require('./doc-fragments/customizationFragments'); // Gets all customization fragments as a list.
-var custOutputPath = './docs/v3/flavors.html';                  // This path is relative to package.json.
+var custOutputPath = './docs/flavors.html';                  // This path is relative to package.json.
 
 var customizationStart = `<!DOCTYPE html><html lang="en"><head>
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:400,400i,500,700,700i&amp;subset=latin-ext" rel="stylesheet">
@@ -254,12 +254,12 @@ fs.writeFile(custOutputPath,
 
 var miniSassFiles = ['_contextual_mixins', '_contextual', '_core', '_icon', '_input_control_mixins', '_input_control', '_layout_mixins', '_layout', '_navigation', '_progress_mixins', '_progress', '_table', '_utility'];
 
-miniSassFiles.forEach(f => fs.createReadStream(`./src/mini/${f}.scss`).pipe(fs.createWriteStream(`./docs/v3/mini/${f}.scss`)));
+miniSassFiles.forEach(f => fs.createReadStream(`./src/mini/${f}.scss`).pipe(fs.createWriteStream(`./docs/mini/${f}.scss`)));
 
 var flavorFiles = ['mini-default', 'mini-dark', 'mini-nord'];
 
 flavorFiles.forEach(f => {
-  fs.createReadStream(`./src/flavors/${f}.scss`).pipe(fs.createWriteStream(`./docs/v3/flavors/${f}.scss`));
-  fs.createReadStream(`./dist/${f}.css`).pipe(fs.createWriteStream(`./docs/v3/flavors/${f}.css`));
-  fs.createReadStream(`./dist/${f}.min.css`).pipe(fs.createWriteStream(`./docs/v3/flavors/${f}.min.css`));
+  fs.createReadStream(`./src/flavors/${f}.scss`).pipe(fs.createWriteStream(`./docs/flavorFiles/${f}.scss`));
+  fs.createReadStream(`./dist/${f}.css`).pipe(fs.createWriteStream(`./docs/flavorFiles/${f}.css`));
+  fs.createReadStream(`./dist/${f}.min.css`).pipe(fs.createWriteStream(`./docs/flavorFiles/${f}.min.css`));
 });

@@ -375,3 +375,4 @@
 - Updated the flavor generation to show the progress.
 - Fixed documentation links.
 - Updated generator, it now adds and updates the proper folders along with everything else.
+- Rebuilt docs.

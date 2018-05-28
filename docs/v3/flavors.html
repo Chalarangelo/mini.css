@@ -25,9 +25,24 @@
 </header>
 <div class="row" id="doc-wrapper">
     <input id="doc-drawer-checkbox" class="drawer" value="on" type="checkbox">
-<nav class="col-md-4 col-lg-3" id="nav-drawer"><h3>Menu</h3><label for="doc-drawer-checkbox" class="button drawer-close"></label><a href="#prebuilt-flavors" id="link-to-prebuilt-flavors">Prebuilt flavors</a><hr style="padding:0;"/><a href="#textual-content" id="link-to-textual-content">Textual content</a><a href="#color-palette" id="link-to-color-palette">Color palette</a><a href="#universal-styles" id="link-to-universal-styles">Universal styles</a><a href="#grid" id="link-to-grid">Grid</a><a href="#cards" id="link-to-cards">Cards</a><a href="#forms-and-input" id="link-to-forms-and-input">Forms &amp; input</a><a href="#buttons" id="link-to-buttons">Buttons</a><a href="#header" id="link-to-header">Header</a><a href="#navbar" id="link-to-navbar">Navigation bar</a><a href="#footer" id="link-to-footer">Footer</a><a href="#menu-drawer" id="link-to-menu-drawer">Menu drawer</a><a href="#tables" id="link-to-tables">Tables</a><a href="#text-highlighting" id="link-to-text-highlighting">Text highlighting</a><a href="#toasts" id="link-to-toasts">Toasts</a><a href="#tooltips" id="link-to-tooltips">Tooltips</a><a href="#modals" id="link-to-modals">Modal dialogs</a><a href="#collapse" id="link-to-collapse">Spoilers &amp accordions</a><a href="#progress-bars" id="link-to-progress-bars">Progress bars</a><a href="#donut-spinner" id="link-to-donut-spinner">Donut spinners</a><a href="#icons" id="link-to-icons">Icons</a><a href="#utility" id="link-to-utility">Utilities</a></nav>
+<nav class="col-md-4 col-lg-3" id="nav-drawer"><h3>Menu</h3><label for="doc-drawer-checkbox" class="button drawer-close"></label><a href="#prebuilt-flavors" id="link-to-prebuilt-flavors">Prebuilt flavors</a><a href="#flavor-tools" id="link-to-flavor-tools">Complementary tools</a><hr style="padding:0;"/><a href="#textual-content" id="link-to-textual-content">Textual content</a><a href="#color-palette" id="link-to-color-palette">Color palette</a><a href="#universal-styles" id="link-to-universal-styles">Universal styles</a><a href="#grid" id="link-to-grid">Grid</a><a href="#cards" id="link-to-cards">Cards</a><a href="#forms-and-input" id="link-to-forms-and-input">Forms &amp; input</a><a href="#buttons" id="link-to-buttons">Buttons</a><a href="#header" id="link-to-header">Header</a><a href="#navbar" id="link-to-navbar">Navigation bar</a><a href="#footer" id="link-to-footer">Footer</a><a href="#menu-drawer" id="link-to-menu-drawer">Menu drawer</a><a href="#tables" id="link-to-tables">Tables</a><a href="#text-highlighting" id="link-to-text-highlighting">Text highlighting</a><a href="#toasts" id="link-to-toasts">Toasts</a><a href="#tooltips" id="link-to-tooltips">Tooltips</a><a href="#modals" id="link-to-modals">Modal dialogs</a><a href="#collapse" id="link-to-collapse">Spoilers &amp accordions</a><a href="#progress-bars" id="link-to-progress-bars">Progress bars</a><a href="#donut-spinner" id="link-to-donut-spinner">Donut spinners</a><a href="#icons" id="link-to-icons">Icons</a><a href="#utility" id="link-to-utility">Utilities</a></nav>
     <main class="col-sm-12 col-md-8 col-lg-9" id="doc-content"><div id="prebuilt-flavors" class="card fluid">
-  <h2 class="section double-padded">Prebuilt flavors</h2><p>We have some prebuilt flavors:</p><ul><li>Default</li><li>Dark</li></ul>
+  <h2 class="section double-padded">Prebuilt flavors</h2><div class="section"><p><strong>mini.css</strong> comes with a few prebuild flavors out of the box, so you can get started without having to finetune every little aspect of your CSS framework:</p>
+  <ul>
+    <li>Default</li>
+    <li>Lite</li>
+    <li>Dark</li>
+    <li>Nord</li>
+  </ul></div>
+</div><br/><div id="flavor-tools" class="card fluid">
+  <h2 class="section double-padded">Complementary tools</h2><div class="section"><p>Building a custom flavor can be complex, even with the amount of streamlining we have provided. We have hand-picked the following tools to assist you in creating the perfect flavor for your needs:</p>
+  <ul>
+    <li><a href="https://coolors.co/" rel="noopener" target="_blank">Coolors - Color schemes generator</a></li>
+    <li><a href="https://uigradients.com/#PlayingwithReds" rel="noopener" target="_blank">uiGradients - Beautiful colored gradients</a></li>
+    <li><a href="https://www.cssmatic.com/box-shadow" rel="noopener" target="_blank">Box shadow generator</a></li>
+    <li><a href="https://www.webpagefx.com/web-design/hex-to-rgb/" rel="noopener" target="_blank">HEX to RGB converter</a></li>
+    <li><a href="http://www.colorzilla.com/gradient-editor/" rel="noopener" target="_blank">Gradient generator</a></li>
+  </ul></div>
 </div><br/><div id="build-your-own-flavor" class="card fluid">
   <h2 class="section double-padded">Build your own flavor</h2><div class="section">
     <h3>Core module</h3>
@@ -1681,6 +1696,7 @@
         flavorFile +='\n';
       }
 
+      console.log(flavorFile);
       var base = './';
       var directory = '../';
       var files = [

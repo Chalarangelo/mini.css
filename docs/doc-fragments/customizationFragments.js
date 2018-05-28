@@ -1,4 +1,5 @@
 var premadeFlavors = require('./premadeFlavors');
 var buildYourOwn = require('./buildYourOwnFlavor');
+var flavorTools = require('./flavorTools');
 
-module.exports = [premadeFlavors, buildYourOwn]
+module.exports = [premadeFlavors, flavorTools, buildYourOwn]

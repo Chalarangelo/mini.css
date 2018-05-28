@@ -1654,6 +1654,7 @@ module.exports = {
         flavorFile +='\\n';
       }
 
+      console.log(flavorFile);
       var base = './';
       var directory = '../';
       var files = [

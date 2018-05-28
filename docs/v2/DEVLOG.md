@@ -141,7 +141,7 @@
 - Created `mini-core/grid` for flexbox grid system.
 - Opened relevant breaking changes issue (#16).
 - Opened issue for `progress` element's transitions on value change.
-- Started project for feature backlog on GitHub.
+- Started project for feature backlog on Github.
 - Created basis for grid system container (fluid only) - `grid`.
 - Read a lot of the spec, decided on browser support, coded the `row` basis for the grid system.
 - Updated breaking changes issue with more information.
@@ -185,7 +185,7 @@
 
 ## 20161025
 
-- Issue maintenance and minor changes to issue structure on GitHub.
+- Issue maintenance and minor changes to issue structure on Github.
 - Due to implicit labeling (e.g. `<label>Name:<input></label>`) not being correctly handled by some assistive technologies, explicit labels will be used for the `file` `<input>` elements.
 - Added `$hide-file-inputs` flag to decide the styling of `file` `<input>` elements.
 - Softcoded changes and optimized some things in the `button` module.
@@ -364,7 +364,7 @@
 - New module restructure: all modules will be moved to core, some merges might have to be applied (check issue #14). Restructure was applied as follows:
 	- Added the functionality of the new `alert` module to `contextual`. Includes mixin `make-alert-alt-color` for different `alert` color variants.
 	- Restructured folders. `mini-shell` removed, `mini-core` renamed to `mini`. `mini` is the core folder now.
-	- Created branch `v1-neutrino` both locally and on GitHub to support legacy versions in the future. `master` is now the branch for **Fermion** only.
+	- Created branch `v1-neutrino` both locally and on Github to support legacy versions in the future. `master` is now the branch for **Fermion** only.
 	- Aggressive deletion of older files. The following folder are now gone: `scss/mini`, `scss/mini-extra`, `flavors` except for the contents of the `v2` folder and the folder itself.
 	- Renamed `mini.scss` to `core.scss`, moved to the `scss/v2/mini` directory.
 	- Deleted `accordion` module file as it was obsolete.
@@ -1264,7 +1264,7 @@
 - Merged two PRs resolving two issues that have been reported.
 - Added a lot of code in `input_control` module, some exotic functions included. Also added `$select-padding-right` to help solve an issue and update changes.
 - Used `svg` tricks to resolve the `select` issue, file size is now `6.90KB` gzipped, which is just below the maximum limit of the framework.
-- Updated flavor files and source code to use spaces instead of tabs. Should now look better on GitHub.
+- Updated flavor files and source code to use spaces instead of tabs. Should now look better on Github.
 - Released update to deal with bugs.
 
 # v2.3.2 Development Log
@@ -1293,37 +1293,3 @@
 - Updated all flavors to the latest version.
 - Removed Scrimba screencast from `index.html`, now it's only in its respective module. Should make loading somewhat faster.
 - Released update.
-
-# v2.3.5 Development Log
-
-## 20171015
-
-- Merged PR #102 to fix #101.
-- Updated `table` to properly fix #101 and allow for customization.
-- Rebuilt flavors to latest version.
-- Updated docs.
-- Released patch.
-
-## 20171018
-
-- Fixed a typo in the `flavors` doc page.
-
-# v2.3.6 Development Log
-
-## 20171019
-
-- Fixed a documentation problem with `.modal`s. (#104)
-- Rebuilt flavors to latest version.
-- Updated docs.
-- Released patch.
-
-# v2.3.7 Development Log
-
-## 20171023
-
-- Fixed the bugs found due to #108. `select` elements should now be pretty decently stylized and work across all browsers and environments.
-- Fixed the bugs found due to #107. Custom checkboxes and radio buttons should now behave as expected. Also, updated the customization docs to reflect said changes.
-- Size has increased to a total of `6.9KB`, should look into optimizing to trim off some bytes.
-- Rebuilt flavors to latest version.
-- Updated docs.
-- Released patch.

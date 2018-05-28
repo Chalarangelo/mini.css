@@ -309,3 +309,70 @@
 
 - Prepared everything for `v3.0.0-alpha.3`.
 - Released the new alpha.
+
+## 20180501
+
+- Started working on the tool for flavors. Made an initial draft of all the needed variables.
+- Coded the base architecture behind the flavors page.
+- Coded the `core` module's inputs for the flavors page.
+
+## 20180502
+
+- Coded the `layout` module's inputs for the flavors page.
+
+## 20180503
+
+- Coded the `input_control` module's inputs for the flavors page.
+- Coded the `icons` module's inputs for the flavors page.
+- Coded the `utility` module's inputs for the flavors page.
+
+## 20180505
+
+- Hooked up all color-based events for the flavors page.
+- Coded the `navigation` module's inputs for the flavors page.
+- Coded the `table` module's inputs for the flavors page.
+
+## 20180515
+
+- Coded the `contextual` module's inputs for the flavors page.
+- Coded the `progress` module's inputs for the flavors page.
+- Generalized flavor page previews.
+- Hooked up most of the flavor page automatic updates.
+- Updated flavor page with `autocomplete="off"` for all `input` fields.
+
+## 20180516
+
+- Made switches disable the controls for each form as necessary in the flavors page.
+- Added some flavor file generation parts, this will take a little while.
+
+## 20180519
+
+- Finished Sass variable generation for `core` module in flavors page.
+- Finished Sass variable generation for `icon` module in flavors page.
+- Finished Sass variable generation for `utility` module in flavors page.
+- Finished Sass variable generation for `table` module in flavors page.
+- Finished Sass variable generation for `navigation` module in flavors page.
+- Added mixin parts to `progress` for flavors page.
+- Finished Sass variable generation for `progress` module in flavors page.
+- Added mixin parts to `layout` for flavors page.
+- Finished Sass variable generation for `layout` module in flavors page.
+
+## 20180520
+- Finished Sass variable generation for `input_control` module in flavors page.
+- Finished Sass variable generation for `contextual` module in flavors page.
+
+## 20180526
+
+- Added `jszip`, `sass.js` and `file-saver` to `package.json`.
+- Used above tools and some code to finish up the `flavors` page generation process.
+- *TODO* Rebase and release.
+
+## 20180528
+
+- Added links to useful tools.
+- Fixed a typo in the flavors forms.
+- Replied to issues on the repo.
+- Updated the flavor generation to show the progress.
+- Fixed documentation links.
+- Updated generator, it now adds and updates the proper folders along with everything else.
+- Rebuilt docs.

@@ -1,0 +1,131 @@
+/*
+  Definitions for icons - powered by Feather (https://feathericons.com/).
+*/
+$icon-prefix:            'icon' !default;        // Class name prefix for icons.
+$icon-alert-name:        'alert' !default;       // Class name suffix for alert icon.
+$icon-bookmark-name:     'bookmark' !default;    // Class name suffix for bookmark icon.
+$icon-calendar-name:     'calendar' !default;    // Class name suffix for calendar icon.
+$icon-credit-name:       'credit' !default;      // Class name suffix for credit icon.
+$icon-edit-name:         'edit' !default;        // Class name suffix for edit icon.
+$icon-link-name:         'link' !default;        // Class name suffix for link icon.
+$icon-help-name:         'help' !default;        // Class name suffix for help icon.
+$icon-home-name:         'home' !default;        // Class name suffix for home icon.
+$icon-info-name:         'info' !default;        // Class name suffix for info icon.
+$icon-lock-name:         'lock' !default;        // Class name suffix for lock icon.
+$icon-mail-name:         'mail' !default;        // Class name suffix for mail icon.
+$icon-location-name:     'location' !default;    // Class name suffix for location icon.
+$icon-phone-name:        'phone' !default;       // Class name suffix for phone icon.
+$icon-rss-name:          'rss' !default;         // Class name suffix for rss icon.
+$icon-search-name:       'search' !default;      // Class name suffix for search icon.
+$icon-settings-name:     'settings' !default;    // Class name suffix for settings icon.
+$icon-share-name:        'share' !default;       // Class name suffix for share icon.
+$icon-cart-name:         'cart' !default;        // Class name suffix for cart icon.
+$icon-upload-name:       'upload' !default;      // Class name suffix for upload icon.
+$icon-user-name:         'user' !default;        // Class name suffix for user icon.
+$icon-secondary-color-name: 'secondary' !default;// Class name for secondary color icons.
+$icon-inverse-color-name: 'inverse' !default;    // Class name for inverse color icons.
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+// == Uncomment below code if this module is used on its own ==
+//
+// $universal-margin:        0.5rem !default;      // Universal margin for the most elements
+// $fore-color:              #111 !default;        // Text & foreground color
+// $universal-margin-var:          '--universal-margin' !default;
+// $fore-color-var:                '--fore-color' !default;
+// :root {
+//  #{$universal-margin-var}: $universal-margin;
+//  #{$fore-color-var}: $fore-color;
+// }
+//
+// ============================================================
+// Base styling for icons.
+span[class^='#{$icon-prefix}-'] {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  vertical-align: -0.125em; // fixes alignment issues
+  background-size: contain;
+  margin: 0 calc(var(#{$universal-margin-var}) / 4);
+  &.#{$icon-secondary-color-name}{
+    -webkit-filter: invert(25%);
+    filter: invert(25%);
+  }
+  &.#{$icon-inverse-color-name}{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+  }
+}
+span{
+  $stroke-color: str-replace(#{$fore-color}, '#', '%23');
+  &.#{$icon-prefix}-#{$icon-alert-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12' y2='16'%3E%3C/line%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-bookmark-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z'%3E%3C/path%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-calendar-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-credit-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='1' y='4' width='22' height='16' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='1' y1='10' x2='23' y2='10'%3E%3C/line%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-edit-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34'%3E%3C/path%3E%3Cpolygon points='18 2 22 6 12 16 8 16 8 12 18 2'%3E%3C/polygon%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-link-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-help-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3'%3E%3C/path%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='17' x2='12' y2='17'%3E%3C/line%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-home-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'%3E%3C/path%3E%3Cpolyline points='9 22 9 12 15 12 15 22'%3E%3C/polyline%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-info-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='16' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='8' x2='12' y2='8'%3E%3C/line%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-lock-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='11' width='18' height='11' rx='2' ry='2'%3E%3C/rect%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'%3E%3C/path%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-mail-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'%3E%3C/path%3E%3Cpolyline points='22,6 12,13 2,6'%3E%3C/polyline%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-location-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'%3E%3C/path%3E%3Ccircle cx='12' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-phone-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'%3E%3C/path%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-rss-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 11a9 9 0 0 1 9 9'%3E%3C/path%3E%3Cpath d='M4 4a16 16 0 0 1 16 16'%3E%3C/path%3E%3Ccircle cx='5' cy='19' r='1'%3E%3C/circle%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-search-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-settings-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='3'%3E%3C/circle%3E%3Cpath d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'%3E%3C/path%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-share-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='18' cy='5' r='3'%3E%3C/circle%3E%3Ccircle cx='6' cy='12' r='3'%3E%3C/circle%3E%3Ccircle cx='18' cy='19' r='3'%3E%3C/circle%3E%3Cline x1='8.59' y1='13.51' x2='15.42' y2='17.49'%3E%3C/line%3E%3Cline x1='15.41' y1='6.51' x2='8.59' y2='10.49'%3E%3C/line%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-cart-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='21' r='1'%3E%3C/circle%3E%3Ccircle cx='20' cy='21' r='1'%3E%3C/circle%3E%3Cpath d='M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6'%3E%3C/path%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-upload-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'%3E%3C/path%3E%3Cpolyline points='17 8 12 3 7 8'%3E%3C/polyline%3E%3Cline x1='12' y1='3' x2='12' y2='15'%3E%3C/line%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+  &.#{$icon-prefix}-#{$icon-user-name}{
+    background-image: #{str-replace("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E\")",'currentColor',$stroke-color)};
+  }
+}

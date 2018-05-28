@@ -1,11 +1,15 @@
 prepros-6\.config
 
-docs/v3/index-splash-o2\.jpg
-
-docs/v3/index-splash-o1\.jpg
-
 dist/mini-doc\.min\.css
 
 dist/mini-doc\.css
 
+docs/v3/index-splash-o1\.jpg
+
+docs/v3/index-splash-o2\.jpg
+
+docs/v3/responsive-original\.svg
+
 docs/v3/index-splash_original\.jpg
+
+node_modules

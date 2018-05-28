@@ -4,8 +4,7 @@ A minimal, responsive, style-agnostic CSS framework
 
 [![npm](https://img.shields.io/npm/v/mini.css.svg)](https://www.npmjs.com/package/mini.css)
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/Chalarangelo/mini.css/blob/master/LICENSE)
-[![website](https://img.shields.io/badge/website-online-green.svg)](https://chalarangelo.github.io/mini.css/)
-[![Gitter](https://img.shields.io/gitter/room/minicss/Lobby.svg)](https://gitter.im/minicss/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![website](https://img.shields.io/badge/website-online-green.svg)](https://minicss.org)
 
 ![Logo](/docs/page_thumb.png)
 
@@ -30,9 +29,9 @@ npm install mini.css
 yarn add mini.css
 bower install mini.css
 ```
-2. Pick one of the available [flavors](https://chalarangelo.github.io/mini.css/flavors.html) and use its CSS file.
+2. Pick one of the available [flavors](https://minicss.org/flavors) and use its CSS file.
 
-3. Start working on your project. Detailed documentation is available on the framework's [website](https://chalarangelo.github.io/mini.css/modules.html), so be sure to check it out.
+3. Start working on your project. Detailed documentation is available on the framework's [website](https://minicss.org/docs), so be sure to check it out.
 
 #### Method 2: Use GitCDN
 
@@ -58,9 +57,9 @@ If you would rather use an older version of the framework, you should head over 
 
 ## Flavors & customizaton
 
-*Flavors* are one of the key features of **mini.css**, allowing you to customize your website's design and make your project stand out. We provide you with a few pre-defined [flavors](https://chalarangelo.github.io/mini.css/flavors.html) that might suit your needs and will help you figure out how to use the framework and create websites and apps with it.
+*Flavors* are one of the key features of **mini.css**, allowing you to customize your website's design and make your project stand out. We provide you with a few pre-defined [flavors](https://minicss.org/flavors#prebuilt-flavors) that might suit your needs and will help you figure out how to use the framework and create websites and apps with it.
 
-But you can easily build you own flavors by editing a flavor file and customizing almost everything. For more information, head over to the [Customization page](https://chalarangelo.github.io/mini.css/customization/index.html) and build your own flavor the way you like it.
+But you can easily build you own flavors by using our [flavor generator tool](https://minicss.org/flavors#build-your-own-flavor), which allows you to customize almost everything. Take your time and create the perfect flavo to suit your needs.
 
 ---
 
@@ -78,7 +77,6 @@ The team behind **mini.css** is as follows:
 - Angelos Chalaris ([@chalarangelo](https://github.com/Chalarangelo)) - Sass archmage, project manager
 
 Special thanks to these fine folks for helping in the development of **mini.css**:
-- Angeliki Daskalakis ([@angiedaskalakis](https://github.com/AngieDaskalakis)) - Author of the [Sucroa](https://github.com/Chalarangelo/mini.css/blob/master/dist/mini-sucroa.css) flavor
 - [@tphecca](https://github.com/tphecca) - Author of the [Nord](https://github.com/Chalarangelo/mini.css/blob/master/dist/mini-nord.css) flavor
 - [Per Harald Borgen](https://scrimba.com/perborgen) - Introductory video creator
 - Rory Primrose ([@roryprimrose](https://github.com/roryprimrose)) - Code restructure

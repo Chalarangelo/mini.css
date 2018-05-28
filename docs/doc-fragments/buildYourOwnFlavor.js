@@ -984,8 +984,8 @@ module.exports = {
       </fieldset>
     </form>
     <h3>Get your flavor</h3>
-    <p>Click the button below to get your customized flavor!</p>
-    <button id="generateFlavor">Generate flavor</button>
+    <p>Click the button below to get your customized flavor! You will have to be a little patient, as flavor generation can take up to a few minutes. You will be prompted to download a zip file as soon as it's done!</p>
+    <button id="generateFlavor" class="primary">Generate flavor</button>&nbsp;&nbsp;&nbsp;<span id="generatorStatus"></span>
   </div>
   <script>
     window.onload = function(){
@@ -1654,7 +1654,6 @@ module.exports = {
         flavorFile +='\\n';
       }
 
-      console.log(flavorFile);
       var base = './';
       var directory = '../';
       var files = [
@@ -1672,18 +1671,19 @@ module.exports = {
         'mini/_icon.scss',
         'mini/_utility.scss',
       ];
+      document.getElementById('generatorStatus').innerHTML = 'Configuring the generator...';
       var sass = new Sass();
       sass.options({style: Sass.style.expanded, precision: -1, comments: false, indent: '  ', linefeed: '\\n'});
+      document.getElementById('generatorStatus').innerHTML = 'Loading SCSS files...';
       sass.preloadFiles(base, directory, files, function filesPreloaded() {
-        console.log('Files loaded...');
+        document.getElementById('generatorStatus').innerHTML = 'Generating flavor file...';
         sass.writeFile('flavors/flavor.scss', flavorFile, function filesWritten(r1){
-          console.log('Flavor file created...');
+          document.getElementById('generatorStatus').innerHTML = 'Compiling flavor file...';
           sass.compileFile('flavors/flavor.scss', function expandedCompiled(r2){
             let expandedCSS = r2.text;
-            console.log('Expanded CSS compiled...');
             sass.compileFile('flavors/flavor.scss', {style: Sass.style.compressed}, function compressedCompiled(r3){
               let compressedCSS = r3.text;
-              console.log('Compressed CSS compiled...');
+              document.getElementById('generatorStatus').innerHTML = 'Preparing zip file...';
               sass.readFile([
                   '../mini/_core.scss',
                   '../mini/_layout.scss',
@@ -1699,7 +1699,7 @@ module.exports = {
                   '../mini/_icon.scss',
                   '../mini/_utility.scss'
               ], function filesRead(r4){
-                console.log('Read loaded files...');
+                document.getElementById('generatorStatus').innerHTML = 'Almost done...';
                 var zip = new JSZip();
                 var flavorsFolder = zip.folder('flavors');
                 var miniFolder = zip.folder('mini');
@@ -1719,8 +1719,8 @@ module.exports = {
                 miniFolder.file('_progress_mixins.scss', r4['../mini/_progress_mixins.scss']);
                 miniFolder.file('_icon.scss', r4['../mini/_icon.scss']);
                 miniFolder.file('_utility.scss', r4['../mini/_utility.scss']);
-                console.log('Files added to zip...');
                 zip.generateAsync({type:"blob"}).then(function(content) {
+                  document.getElementById('generatorStatus').innerHTML = 'Done!';
                   saveAs(content, "mini-custom.zip");
                 });
               });
@@ -1728,12 +1728,6 @@ module.exports = {
           });
         });
       });
-
-      // var zip = new JSZip();
-      // zip.file("flavor.sass", flavorFile);
-      // zip.generateAsync({type:"blob"}).then(function(content) {
-      //   saveAs(content, "mini.zip");
-      // });
     }
   </script>`,
   sections: [
@@ -1757,6 +1751,7 @@ module.exports = {
     {id: 'progress-bars', title: 'Progress bars'},
     {id: 'donut-spinner', title: 'Donut spinners'},
       {id: 'icons', title: 'Icons'},
-    {id: 'utility', title: 'Utilities'}
+    {id: 'utility', title: 'Utilities'},
+    {id: 'generateFlavor', title: 'Generate flavor'}
   ]
 }

@@ -5,8 +5,8 @@
   Maintainers: tphecca
   mini.css version: v3.0.0
 */
-/*
-  Browsers resets and base typography.
+/*
+  Browsers resets and base typography.
 */
 /* Core module CSS variable definitions */
 :root {
@@ -231,8 +231,8 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-/*
-  Definitions for the grid system, cards and containers.
+/*
+  Definitions for the grid system, cards and containers.
 */
 .container {
   margin: 0 auto;
@@ -727,8 +727,8 @@ a:hover, a:focus {
   padding: calc(1.5 * var(--universal-padding));
 }
 
-/*
-  Definitions for forms and input elements.
+/*
+  Definitions for forms and input elements.
 */
 /* Input_control module CSS variable definitions */
 :root {
@@ -1032,8 +1032,8 @@ button.large, [type="button"].large, [type="submit"].large, [type="reset"].large
   margin: var(--universal-margin);
 }
 
-/*
-  Definitions for navigation elements.
+/*
+  Definitions for navigation elements.
 */
 /* Navigation module CSS variable definitions */
 :root {
@@ -1270,8 +1270,8 @@ footer.sticky {
   }
 }
 
-/*
-  Definitions for the responsive table component.
+/*
+  Definitions for the responsive table component.
 */
 /* Table module CSS variable definitions. */
 :root {
@@ -1518,8 +1518,8 @@ table.hoverable tr:hover, table.hoverable tr:hover > td, table.hoverable tr:focu
   }
 }
 
-/*
-  Definitions for contextual background elements, toasts and tooltips.
+/*
+  Definitions for contextual background elements, toasts and tooltips.
 */
 /* Contextual module CSS variable definitions */
 :root {
@@ -1822,8 +1822,8 @@ mark.tag {
   border-radius: 1em;
 }
 
-/*
-  Definitions for progress elements and spinners.
+/*
+  Definitions for progress elements and spinners.
 */
 /* Progess module CSS variable definitions */
 :root {
@@ -1928,8 +1928,8 @@ progress.tertiary {
   --spinner-fore-color: #a3be8c;
 }
 
-/*
-  Definitions for icons - powered by Feather (https://feathericons.com/).
+/*
+  Definitions for icons - powered by Feather (https://feathericons.com/).
 */
 span[class^='icon-'] {
   display: inline-block;
@@ -2030,8 +2030,8 @@ span.icon-user {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232e3440' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E");
 }
 
-/*
-  Definitions for utilities and helper classes.
+/*
+  Definitions for utilities and helper classes.
 */
 /* Utility module CSS variable definitions */
 :root {

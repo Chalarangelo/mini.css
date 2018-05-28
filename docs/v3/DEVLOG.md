@@ -365,8 +365,6 @@
 
 - Added `jszip`, `sass.js` and `file-saver` to `package.json`.
 - Used above tools and some code to finish up the `flavors` page generation process.
-- *TODO* Add flavors.
-- *TODO* Auto-compile SCSS to CSS when generating, copy all `src` to the `docs`.
 - *TODO* Rebase and release.
 
 ## 20180528
@@ -376,3 +374,4 @@
 - Replied to issues on the repo.
 - Updated the flavor generation to show the progress.
 - Fixed documentation links.
+- Updated generator, it now adds and updates the proper folders along with everything else.

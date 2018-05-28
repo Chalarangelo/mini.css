@@ -1,0 +1,277 @@
+//  This is a flavor file. Duplicate it and edit it to create your own flavor. Read instructions carefully.
+//  Single-line comments, starting with '//' will not be included in your final CSS file. Multiline comments,
+//  structured like the flavor description below, will be included in your final CSS file.
+/*
+  Flavor name: Nord (mini-nord)
+  Author: tphecca (https://github.com/tphecca)
+  Maintainers: tphecca
+  mini.css version: v3.0.0
+*/
+//  This flavor is based on the Nord color palette: https://github.com/arcticicestudio/nord
+$base-root-font-size: 16px; // Root font sizing for all elements (`px` only)
+$base-line-height: 1.5; // Line height for most elements
+$fore-color: #2e3440; // Text & foreground color
+$secondary-fore-color: #3b4252; // Secondary text & foreground color
+$back-color: #eceff4; // Background color
+$secondary-back-color: #e5e9f0; // Secondary background color
+$blockquote-color: #d08770; // <blockquote> sidebar and quotation color
+$pre-color: #b48ead; // <pre> sidebar color
+$border-color: #d8dee9; // Border color
+$secondary-border-color: #e5e9f0; // Secondary border color
+$heading-line-height: 1.2; // Line height for headings
+$heading-ratio: 1.19; // Ratio for headings (strictly unitless)
+$subheading-font-size:0.75em; // Font sizing for <small> elements in headings
+$subheading-top-margin: -0.25rem; // Top margin of <small> elements in headings
+$heading-font-weight: 500; // Font weight for headings
+$horizontal-rule-line-height:  1.25em; // <hr> line height
+$universal-margin: 0.5rem; // Universal margin for the most elements
+$universal-padding: 0.5rem; // Universal padding for the most elements
+$universal-border-radius: 0.125rem; // Universal border-radius for most elements
+$universal-box-shadow: none; // Universal box-shadow for most elements
+$small-element-font-size: 0.75em; // Font size for <small>, <sub>, <sup>
+$small-font-size: 0.75em; // Font sizing for <small> elements
+$blockquote-quotation-size: 3rem;   // Font size for the quotation of <blockquote>
+$blockquote-cite-size: 0.75em; // Font size for the [cite] of <blockquote>
+$code-font-size: 0.85em; // Font size for <code>, <kbd>
+$sup-top: -0.5em; // <sup> top
+$sub-bottom: -0.25em; // <sub> bottom
+$a-link-color: #88c0d0; // Color for <a>:link
+$a-visited-color: #5e81ac; // Color for <a>:visited
+$bold-font-weight: 700; // Font weight for <b> and <strong>
+$mobile-breakpoint: 768px; // Breakpoint between small and medium screens (px)
+$large-screen-breakpoint: 1280px; // Breakpoint between medium and large screens (px)
+
+@import '../mini/core';
+
+$grid-column-count: 12; // Number of columns in the grid (integer value only).
+$grid-medium-breakpoint: $mobile-breakpoint; // Medium screen breakpoint for grid.
+$grid-large-breakpoint: $large-screen-breakpoint; // Large screen breakpoint for grid.
+$card-normal-width: 320px; // Width for normal cards.
+$card-section-media-height: 200px; // Height for cards' media sections.
+$card-fore-color: #2e3440; // Text color for the cards.
+$card-back-color: #eceff4; // Background color for the cards.
+$card-border-color: #e5e9f0; // Border color for the cards.
+
+@import '../mini/layout';
+
+/*
+	 Custom elements for card elements.
+*/
+$card-small-name: 'small'; // Class name for small cards.
+$card-small-width: 240px; // Width for small cards.
+@include make-card-alt-size ($card-small-name, $card-small-width);
+
+$card-large-name: 'large'; // Class name for large cards.
+$card-large-width: 480px; // Width for large cards.
+@include make-card-alt-size ($card-large-name, $card-large-width);
+
+$card-fluid-name: 'fluid'; // Class name for fluid cards.
+$card-fluid-width: 100%; // Width for fluid cards.
+@include make-card-alt-size ($card-fluid-name, $card-fluid-width);
+
+$card-warning-name: 'warning'; // Class name for card warnging color variant.
+$card-warning-back-color: #ebcb8b; // Background color for card warnging color variant.
+$card-warning-fore-color: #2e3440; // Text color for card warnging color variant.
+$card-warning-border-color: #d08770; // Border style for card warnging color variant.
+@include make-card-alt-color ($card-warning-name, $card-warning-back-color, $card-warning-fore-color, $card-warning-border-color);
+
+$card-error-name: 'error'; // Class name for card error color variant.
+$card-error-back-color: #bf616a; // Background color for card error color variant.
+$card-error-fore-color: #2e3440; // Text color for card error color variant.
+$card-error-border-color: #434c5e; // Border style for card error color variant.
+@include make-card-alt-color ($card-error-name, $card-error-back-color, $card-error-fore-color, $card-error-border-color);
+
+$card-section-dark-name: 'dark'; // Class name for card dark section variant.
+$card-section-dark-back-color: #d8dee9; // Background color for card dark section variant.
+$card-section-dark-fore-color: #2e3440; // Text color for card dark section variant.
+@include make-card-section-alt-color ($card-section-dark-name, $card-section-dark-back-color, $card-section-dark-fore-color);
+
+$card-section-double-padded-name: 'double-padded'; // Class name for card double-padded section variant.
+$card-section-double-padded-padding: calc(1.5 * var(#{$universal-padding-var}));  // Padding for card sectiondouble-padded section variant.
+@include make-card-section-alt-style ($card-section-double-padded-name, $card-section-double-padded-padding);
+
+$input-group-mobile-breakpoint: $mobile-breakpoint - 1px; // Breakpoint for fluid input group mobile view.
+$form-back-color: #e5e9f0; // Background color for forms.
+$form-fore-color: #2e3440; // Text color for forms.
+$form-border-color: #e5e9f0; // Border color for forms.
+$input-back-color: #eceff4; // Background color for input elements.
+$input-fore-color: #2e3440; // Text color for input elements.
+$input-border-color: #e5e9f0; // Border color for input elements.
+$input-focus-color: #88c0d0; // Border color for focused input elements.
+$input-invalid-color: #bf616a; // Border color for invalid input elements.
+$button-back-color: #e5e9f0; // Background color for buttons.
+$button-hover-back-color: #d8dee9; // Background color for buttons (hover).
+$button-fore-color: #2e3440; // Text color for buttons.
+$button-border-color: transparent; // Border color for buttons.
+$button-hover-border-color: transparent; // Border color for buttons (hover).
+$button-group-border-color: rgba(124,124,124,0.54); // Border color for button groups.
+
+@import '../mini/input_control';
+
+/*
+	 Custom elements for forms and input elements.
+*/
+$button-primary-name: 'primary'; // Class name for primary button color variant.
+$button-primary-back-color: #5e81ac;// Background color for primary button color variant.
+$button-primary-hover-back-color: #5e81ac;// Background color for primary button color variant (hover).
+$button-primary-fore-color: #eceff4;// Text color for primary button color variant.
+@include make-button-alt-color ($button-primary-name, $button-primary-back-color, $button-primary-hover-back-color, $button-primary-fore-color);
+
+$button-secondary-name: 'secondary'; // Class name for secondary button color variant.
+$button-secondary-back-color: #bf616a;// Background color for secondary button color variant.
+$button-secondary-hover-back-color: #bf616a;// Background color for secondary button color variant (hover).
+$button-secondary-fore-color: #eceff4;// Text color for secondary button color variant.
+@include make-button-alt-color ($button-secondary-name, $button-secondary-back-color, $button-secondary-hover-back-color, $button-secondary-fore-color);
+
+$button-tertiary-name: 'tertiary'; // Class name for tertiary button color variant.
+$button-tertiary-back-color: #a3be8c;// Background color for tertiary button color variant.
+$button-tertiary-hover-back-color: #a3be8c;// Background color for tertiary button color variant (hover).
+$button-tertiary-fore-color: #434c5e;// Text color for tertiary button color variant.
+@include make-button-alt-color ($button-tertiary-name, $button-tertiary-back-color, $button-tertiary-hover-back-color, $button-tertiary-fore-color);
+
+$button-inverse-name: 'inverse'; // Class name for inverse button color variant.
+$button-inverse-back-color: #3b4252;// Background color for inverse button color variant.
+$button-inverse-hover-back-color: #2e3440;// Background color for inverse button color variant (hover).
+$button-inverse-fore-color: #eceff4;// Text color for inverse button color variant.
+@include make-button-alt-color ($button-inverse-name, $button-inverse-back-color, $button-inverse-hover-back-color, $button-inverse-fore-color);
+
+$button-small-name: 'small'; // Class name, padding and margin for small button size variant.
+$button-small-padding: calc(0.5 * var(#{$universal-padding-var})) calc(0.75 * var(#{$universal-padding-var}));
+$button-small-margin:  var(#{$universal-margin-var});
+@include make-button-alt-size ($button-small-name, $button-small-padding, $button-small-margin);
+
+$button-large-name: 'large'; // Class name, padding and margin for large button size variant.
+$button-large-padding: calc(1.5 * var(#{$universal-padding-var})) calc(2 * var(#{$universal-padding-var}));
+$button-large-margin:  var(#{$universal-margin-var});
+@include make-button-alt-size ($button-large-name, $button-large-padding, $button-large-margin);
+
+$header-height: 3.1875rem; // Height of the header element.
+$header-back-color: #eceff4; // Background color for the header element.
+$header-hover-back-color: #e5e9f0; // Background color for the header element (hover).
+$header-fore-color: #3b4252; // Text color for the header element.
+$header-border-color: #e5e9f0; // Border color for the header element.
+$nav-back-color: #eceff4; // Background color for the nav element.
+$nav-hover-back-color: #e5e9f0; // Background color for the nav element (hover).
+$nav-fore-color: #3b4252; // Text color for the nav element.
+$nav-border-color: #e5e9f0; // Border color for the nav element.
+$nav-link-color: #88c0d0; // Color for link in the nav element.
+$footer-fore-color: #3b4252; // Text color for the footer element.
+$footer-back-color: #eceff4; // Background color for footer nav element.
+$footer-border-color: #e5e9f0; // Border color for the footer element.
+$footer-link-color: #88c0d0; // Color for link in the footer element.
+$drawer-back-color: #eceff4; // Background color for the drawer component.
+$drawer-border-color: #e5e9f0; // Border color for the drawer component.
+$drawer-hover-back-color: #e5e9f0; // Background color for the drawer component's close (hover).
+$drawer-close-color: #3b4252; // Color of the close element for the drawer component.
+$header-logo-font-size: 1.75rem; // Font size for the header logo element.
+$nav-sublink-depth: 2; // Amount of subcategory classes to add.
+$footer-font-size: 0.875rem; // Font size for text in footer element.
+$drawer-toggle-font-size: 1.5em; // Font size for the drawer component's toggle. (prefer em units)
+$drawer-width: 320px; // Width of the drawer component.
+$drawer-close-size: 2rem; // Size of the close element for the drawer component.
+$drawer-mobile-breakpoint: $mobile-breakpoint; // Mobile breakpoint for the drawer component.
+
+@import '../mini/navigation';
+
+$table-mobile-breakpoint: $mobile-breakpoint; // Breakpoint for <table> mobile view.
+$table-max-height: 400px; // Maximum height of <table> elements (non-horizontal).
+$table-caption-font-size: 1.5rem; // Font size for <caption> elements.
+$table-mobile-card-label: 'data-label'; // Attribute used to replace column headers in mobile view.
+$table-mobile-label-font-weight: 600; // Font weight for column header labels in mobile view.
+$table-border-color: #d8dee9; // Border color for <table> elements.
+$table-border-separator-color: #434c5e; // Border color for the border between <thead> and <tbody>.
+$table-th-back-color:  #e5e9f0; // Background color for <th> elements.
+$table-th-fore-color: #2e3440; // Text color for <th> elements.
+$table-td-back-color: #eceff4; // Background color for <td> elements.
+$table-td-fore-color: #2e3440; // Text color for <td> elements.
+$table-td-alt-back-color: #e5e9f0; // Alternative background color for <td> elements in striped tables.
+$table-td-hover-back-color: #88c0d0; // Hover background color for <td> elements in hoverable tables.
+
+@import '../mini/table';
+
+$mark-back-color: #5e81ac; // Background color for <mark>
+$mark-fore-color: #fafafa; // Text color for <mark>
+$mark-font-size: 0.95em; // Font size for <mark>
+$mark-line-height: 1em; // Line height for <mark>
+$toast-back-color: #2e3440; // Background color for toast component
+$toast-fore-color: #eceff4; // Text color for toast component
+$tooltip-back-color: #2e3440; // Background color for tooltip component
+$tooltip-fore-color: #eceff4; // Text color for tooltip component
+$modal-overlay-color: rgba(0,0,0,0.45); // Overlay color for modal dialog component
+$modal-close-color: #3b4252; // Text color for the close button of the modal dialog component
+$modal-close-hover-back-color: #e5e9f0; // Background color for the close button of the modal dialog component (on hover/focus)
+$modal-close-size: 1.75rem; // Font size for the close button of the modal dialog component
+$collapse-label-height: 1.5rem; // Height for the labels in the collapse component
+$collapse-content-max-height: 400px; // Max height for the content panes in the collapse component
+$collapse-label-back-color: #e5e9f0; // Background color for labels in the collapse component
+$collapse-label-fore-color: #2e3440; // Text color for labels in the collapse component
+$collapse-label-hover-back-color: #e5e9f0; // Background color for labels in the collapse component (hover)
+$collapse-selected-label-back-color: #e5e9f0; // Background color for selected labels in the collapse component
+$collapse-border-color: #e5e9f0; // Border color for collapse component
+$collapse-selected-label-border-color: #88c0d0; // Border color for collapse component's selected labels
+$collapse-content-back-color: #fafafa; // Background color for collapse component's content panes
+
+@import '../mini/contextual';
+
+/*
+	 Custom elements for contextual background elements, toasts and tooltips.
+*/
+$mark-secondary-name: 'secondary'; // Class name for secondary <mark> color variant.
+$mark-secondary-back-color: #bf616a; // Background color for secondary <mark> color variant.
+@include make-mark-alt-color ($mark-secondary-name, $mark-secondary-back-color);
+
+$mark-tertiary-name: 'tertiary';  // Class name for tertiary <mark> color variant.
+$mark-tertiary-back-color: #a3be8c; // Background color for tertiary <mark> color variant.
+@include make-mark-alt-color ($mark-tertiary-name, $mark-tertiary-back-color);
+
+$mark-tag-name: 'tag'; // Class name, padding and border radius for tag <mark> size variant.
+$mark-tag-padding: calc(var(#{$universal-padding-var})/2) var(#{$universal-padding-var});
+$mark-tag-border-radius: 1em;
+@include make-mark-alt-size ($mark-tag-name, $mark-tag-padding, $mark-tag-border-radius);
+
+$progress-back-color: #e5e9f0; // Background color of <progress>.
+$progress-fore-color: #434c5e; // Foreground color of <progress>.
+$progress-height: 0.75rem; // Height of <progress>.
+$progress-max-value: 1000; // Arithmetic max value of <progress> - use integer values.
+$progress-inline-width: 60%; // Width of inline <progress> elements.
+$spinner-donut-size: 1.25rem; // Size of the spinner donuts
+$spinner-donut-border-thickness: 0.25rem; // Border thickness for spinner donuts
+$spinner-donut-back-color: #d8dee9; // Background color for spinner donuts
+$spinner-donut-fore-color: #434c5e; // Foreground color for spinner donuts
+
+@import '../mini/progress';
+
+/*
+	 Custom elements for progress bars and spinners.
+*/
+$progress-primary-name:         'primary';   // Class name for primary <progress> color variant.
+$progress-primary-fore-color:   #5e81ac;     // Foreground color for primary <progress> color variant.
+@include make-progress-alt-color ($progress-primary-name, $progress-primary-fore-color);
+
+$progress-secondary-name:     'secondary';   // Class name for secondary <progress> color variant.
+$progress-secondary-fore-color: #bf616a;     // Foreground color for secondary <progress> color variant.
+@include make-progress-alt-color ($progress-secondary-name, $progress-secondary-fore-color);
+
+$progress-tertiary-name:       'tertiary';   // Class name for tertiary <progress> color variant.
+$progress-tertiary-fore-color:   #a3be8c;    // Foreground color for tertiary <progress> color variant.
+@include make-progress-alt-color ($progress-tertiary-name, $progress-tertiary-fore-color);
+
+$spinner-donut-primary-name:         'primary';   // Class name for primary spinner donut color variant.
+$spinner-donut-primary-fore-color:   #5e81ac;     // Foreground color for primary spinner donut color variant.
+@include make-spinner-donut-alt-color ($spinner-donut-primary-name, $spinner-donut-primary-fore-color);
+
+$spinner-donut-secondary-name:     'secondary';   // Class name for secondary spinner donut color variant.
+$spinner-donut-secondary-fore-color: #bf616a;     // Foreground color for secondary spinner donut color variant.
+@include make-spinner-donut-alt-color ($spinner-donut-secondary-name, $spinner-donut-secondary-fore-color);
+
+$spinner-donut-tertiary-name:       'tertiary';   // Class name for tertiary spinner donut color variant.
+$spinner-donut-tertiary-fore-color:   #a3be8c;    // Foreground color for tertiary spinner donut color variant.
+@include make-spinner-donut-alt-color ($spinner-donut-tertiary-name, $spinner-donut-tertiary-fore-color);
+
+
+@import '../mini/icon';
+
+$box-shadow-generic: 0 4*$__1px 4*$__1px 0 rgba(0,0,0,0.125),  0 2*$__1px 2*$__1px -2*$__1px rgba(0,0,0,0.125);
+$border-generic-color: rgba(0,0,0,0.3); // Border color for bordered elements.
+
+@import '../mini/utility';

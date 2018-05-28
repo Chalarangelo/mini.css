@@ -251,3 +251,15 @@ fs.writeFile(custOutputPath,
   ${customizationEnd}`,
   function(err) { if(err) return console.log(err);  console.log("Flavors file generated!"); }
 );
+
+var miniSassFiles = ['_contextual_mixins', '_contextual', '_core', '_icon', '_input_control_mixins', '_input_control', '_layout_mixins', '_layout', '_navigation', '_progress_mixins', '_progress', '_table', '_utility'];
+
+miniSassFiles.forEach(f => fs.createReadStream(`./src/mini/${f}.scss`).pipe(fs.createWriteStream(`./docs/v3/mini/${f}.scss`)));
+
+var flavorFiles = ['mini-default', 'mini-dark', 'mini-nord'];
+
+flavorFiles.forEach(f => {
+  fs.createReadStream(`./src/flavors/${f}.scss`).pipe(fs.createWriteStream(`./docs/v3/flavors/${f}.scss`));
+  fs.createReadStream(`./dist/${f}.css`).pipe(fs.createWriteStream(`./docs/v3/flavors/${f}.css`));
+  fs.createReadStream(`./dist/${f}.min.css`).pipe(fs.createWriteStream(`./docs/v3/flavors/${f}.min.css`));
+});

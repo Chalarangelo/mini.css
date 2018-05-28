@@ -30,8 +30,8 @@
   <div class="section"><p>You can get started using <strong>mini.css</strong> in one of many ways. It is published on <strong>npm</strong> and <strong>yarn</strong>, so you can easily download it, using your preferred package manager:</p>
   <div class="row"><div class="col-sm-12 col-md"><pre>npm install mini.css</pre></div><div class="col-sm-12 col-md"><pre>yarn add mini.css</pre></div></div>
   <br/><p>Alternatively, you can use either <strong>rawgit</strong> or <strong>cdnjs</strong> to import <strong>mini.css</strong> into your HTML page's <code>&lt;head&gt;</code> tag:</p>
-  <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.0-alpha.3/dist/mini-default.min.css&quot;&gt;</pre>
-  <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/mini.css/v3.0.0-alpha.3/mini-default.min.css&quot;&gt;</pre>
+  <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.0/dist/mini-default.min.css&quot;&gt;</pre>
+  <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/mini.css/v3.0.0/mini-default.min.css&quot;&gt;</pre>
   <br/><p>After adding <strong>mini.css</strong> to your project, remember to also add the following line inside your HTML page's <code>&lt;head&gt;</code> tag to utilize the viewport meta tag:</p>
   <pre>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</pre>
   <br/><p><strong>mini.css</strong> is crafted with long-term support in mind, so expect it to be compatible with all modern browsers, as well as their future versions. However, most legacy and proxy browsers, such as Internet Explorer, Opera Mini, IE Mobile and UC Browser are not officially supported, meaning certain features may not be displayed properly or behave exactly as expected.</p><br/>
@@ -1059,7 +1059,7 @@
   el.forEach(e => e.innerHTML = '<form action="https://codepen.io/pen/define" method="POST" target="_blank" class="codepen-form">' +
     '<input type="hidden" name="data" value=\'' + JSON.stringify({
       html               : e.innerText,
-      css_external       : "https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.0-alpha.3/mini-default.css"
+      css_external       : "https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.0/mini-default.css"
     }).replace(/"/g, "&quot;")
     .replace(/'/g, "&apos;") + '\'>' +
     '<input type="image" class="codepen-link" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23424242%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolygon%20points%3D%2212%202%2022%208.5%2022%2015.5%2012%2022%202%2015.5%202%208.5%2012%202%22%3E%3C%2Fpolygon%3E%3Cline%20x1%3D%2212%22%20y1%3D%2222%22%20x2%3D%2212%22%20y2%3D%2215.5%22%3E%3C%2Fline%3E%3Cpolyline%20points%3D%2222%208.5%2012%2015.5%202%208.5%22%3E%3C%2Fpolyline%3E%3Cpolyline%20points%3D%222%2015.5%2012%208.5%2022%2015.5%22%3E%3C%2Fpolyline%3E%3Cline%20x1%3D%2212%22%20y1%3D%222%22%20x2%3D%2212%22%20y2%3D%228.5%22%3E%3C%2Fline%3E%3C%2Fsvg%3E" width="40" height="40" value="Open in Codepen">' +

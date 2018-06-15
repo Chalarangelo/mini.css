@@ -67,7 +67,7 @@ progress {
   }
   // Background color on webkit browser
   &::-webkit-progress-bar {
-    background: var(#{$progress-back-color});
+    background: var(#{$progress-back-color-var});
   }
   // Foreground color on Firefox
   &::-moz-progress-bar {

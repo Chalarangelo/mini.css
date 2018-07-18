@@ -19,7 +19,7 @@ You have 4 options when it comes to setting up **mini.css**:
 3. [Use Rawgit](#method-3-use-rawgit)
 4. [Use cdnjs](#method-4-use-cdnjs-preferred-for-older-releases) (preferred for older releases)
 
-For instructions on how to use, best practices, templates and other usage information, please visit the framework's [documentation](http://minicss.org/modules).
+For instructions on how to use, best practices, templates and other usage information, please visit the framework's [documentation](https://minicss.org/docs).
 
 #### Method 1: Use a package manager (recommended)
 

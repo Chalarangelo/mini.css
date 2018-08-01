@@ -120,24 +120,24 @@
   $hidden-large-suffix : 'lg', $hidden-use-four-step-grid : false,
   $hidden-small-breakpoint : 480px, $hidden-extra-small-suffix : 'xs') {
   @if $hidden-use-four-step-grid {
-    @media screen and (max-width: #{$hidden-small-breakpoint}-1px) {
+    @media screen and (max-width: $hidden-small-breakpoint - 1px) {
       .#{$hidden-prefix}-#{$hidden-extra-small-suffix} {
         display: none !important;
       }
     }
-    @media screen and (min-width: #{$hidden-small-breakpoint}) and (max-width: #{$hidden-medium-breakpoint}-1px) {
+    @media screen and (min-width: #{$hidden-small-breakpoint}) and (max-width: $hidden-medium-breakpoint - 1px) {
       .#{$hidden-prefix}-#{$hidden-small-suffix} {
         display: none !important;
       }
     }
   }
   @else {
-    @media screen and (max-width: #{$hidden-medium-breakpoint}-1px) {
+    @media screen and (max-width: $hidden-medium-breakpoint - 1px) {
       .#{$hidden-prefix}-#{$hidden-small-suffix} {
         display: none !important;
       }
     }
-    @media screen and (min-width: #{$hidden-medium-breakpoint}) and (max-width: #{$hidden-large-breakpoint}-1px) {
+    @media screen and (min-width: #{$hidden-medium-breakpoint}) and (max-width: $hidden-large-breakpoint - 1px) {
       .#{$hidden-prefix}-#{$hidden-medium-suffix} {
         display: none !important;
       }
@@ -165,7 +165,7 @@
   $visually-hidden-large-suffix : 'lg', $visually-hidden-use-four-step-grid : false,
   $visually-hidden-small-breakpoint : 480px, $visually-hidden-extra-small-suffix : 'xs') {
   @if $visually-hidden-use-four-step-grid {
-    @media screen and (max-width: #{$visually-hidden-small-breakpoint}-1px) {
+    @media screen and (max-width: $visually-hidden-small-breakpoint - 1px) {
       .#{$visually-hidden-prefix}-#{$visually-hidden-extra-small-suffix} {
         position: absolute !important;
         width: 1px !important;
@@ -179,7 +179,7 @@
         overflow: hidden !important;
       }
     }
-    @media screen and (min-width: #{$visually-hidden-small-breakpoint}) and (max-width: #{$visually-hidden-medium-breakpoint}-1px) {
+    @media screen and (min-width: #{$visually-hidden-small-breakpoint}) and (max-width: $visually-hidden-medium-breakpoint - 1px) {
       .#{$visually-hidden-prefix}-#{$visually-hidden-small-suffix} {
         position: absolute !important;
         width: 1px !important;
@@ -195,7 +195,7 @@
     }
   }
   @else {
-    @media screen and (max-width: #{$visually-hidden-medium-breakpoint}-1px) {
+    @media screen and (max-width: $visually-hidden-medium-breakpoint - 1px) {
       .#{$visually-hidden-prefix}-#{$visually-hidden-small-suffix} {
         position: absolute !important;
         width: 1px !important;
@@ -209,7 +209,7 @@
         overflow: hidden !important;
       }
     }
-    @media screen and (min-width: #{$visually-hidden-medium-breakpoint}) and (max-width: #{$visually-hidden-large-breakpoint}-1px) {
+    @media screen and (min-width: #{$visually-hidden-medium-breakpoint}) and (max-width: $visually-hidden-large-breakpoint - 1px) {
       .#{$visually-hidden-prefix}-#{$visually-hidden-medium-suffix} {
         position: absolute !important;
         width: 1px !important;

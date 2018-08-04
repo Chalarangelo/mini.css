@@ -2,7 +2,7 @@
 
 ## v3.0.0
 
-- Fully rebuilt framework. A ton of work has been put into creating this version to be the best CSS framework experience you have gotten so far.
+- Fully rebuilt framework. A ton of work has been put into creating this version to be the best CSS framework experience you have gotten so far:
   - `core` module - same as before, no breaking changes
   - `layout` module - combination of `grid` and `card`, pretty much same as before, no breaking changes
   - `input_control` - same as before, breaks `checkbox` and `radio` elements

@@ -1,5 +1,21 @@
 # Changelog
 
+## v3.0.0
+
+- Fully rebuilt framework. A ton of work has been put into creating this version to be the best CSS framework experience you have gotten so far.
+  - `core` module - same as before, no breaking changes
+  - `layout` module - combination of `grid` and `card`, pretty much same as before, no breaking changes
+  - `input_control` - same as before, breaks `checkbox` and `radio` elements
+  - `navigation` - same as before, breaks `drawer` element
+  - `table` - same as before, removed `scrollable` and `preset` table styles, added `hoverable` table syle
+  - `contextual` - same as before, includes part of the `tabs` module, breaks `modal` dialog element
+  - `progress` - same as before, some changes in naming conventions and styles
+  - `icon` - new module, adds 20 new icons ot the framework, along with some color variants
+  - `utility` - same as before, some naming convention changes, removed `breadcrumbs` and `close` components
+- Revamped documentation can be found [here](https://minicss.org/docs), making it easy to find what you are looking for.
+- Customization tool can be found [here](https://minicss.org/flavors), allowing you to build your own flavors.
+- Updated documentation to reflect the changes made.
+
 ## v2.3.7
 
 - Fixes a couple of bugs with `checkbox` and `radio` elements.

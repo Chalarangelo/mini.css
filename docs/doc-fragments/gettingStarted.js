@@ -7,7 +7,7 @@ module.exports = {
   <div class="row"><div class="col-sm-12 col-md"><pre>npm install mini.css</pre></div><div class="col-sm-12 col-md"><pre>yarn add mini.css</pre></div></div>
   <br/><p>Alternatively, you can use either <strong>rawgit</strong> or <strong>cdnjs</strong> to import <strong>mini.css</strong> into your HTML page's <code>&lt;head&gt;</code> tag:</p>
   <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.rawgit.com/Chalarangelo/mini.css/${version}/dist/mini-default.min.css&quot;&gt;</pre>
-  <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/mini.css/${version}/mini-default.min.css&quot;&gt;</pre>
+  <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/mini.css/${version.slice(1)}/mini-default.min.css&quot;&gt;</pre>
   <br/><p>After adding <strong>mini.css</strong> to your project, remember to also add the following line inside your HTML page's <code>&lt;head&gt;</code> tag to utilize the viewport meta tag:</p>
   <pre>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</pre>
   <br/><p><strong>mini.css</strong> is crafted with long-term support in mind, so expect it to be compatible with all modern browsers, as well as their future versions. However, most legacy and proxy browsers, such as Internet Explorer, Opera Mini, IE Mobile and UC Browser are not officially supported, meaning certain features may not be displayed properly or behave exactly as expected.</p><br/>

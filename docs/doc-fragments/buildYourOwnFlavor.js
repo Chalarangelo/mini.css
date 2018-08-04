@@ -1674,6 +1674,7 @@ module.exports = {
       document.getElementById('generatorStatus').innerHTML = 'Configuring the generator...';
       var sass = new Sass();
       sass.options({style: Sass.style.expanded, precision: -1, comments: false, indent: '  ', linefeed: '\\n'});
+      console.log(sass);
       document.getElementById('generatorStatus').innerHTML = 'Loading SCSS files...';
       sass.preloadFiles(base, directory, files, function filesPreloaded() {
         document.getElementById('generatorStatus').innerHTML = 'Generating flavor file...';

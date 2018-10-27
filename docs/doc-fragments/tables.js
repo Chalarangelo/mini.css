@@ -54,8 +54,8 @@ module.exports = {
 <span class="code-line"><span class="highlight-a">  &lt;/tbody&gt;</span></span>
 <span class="code-line"><span class="highlight-a">&lt;/table&gt;</span></span></pre>`],
   notes: [`Remember to always specify a <code>data-label</code> attribute for all of your <code>&lt;td&gt;</code> elements, otherwise they will not display properly on mobile.`,
-  `Due to the way tables are displayed, the <code>&lt;tfoot&gt;</code> element is not supported.`,
-  `Tables are vertically scrollable by default, with a <code>max-height</code> property of <code>400px</code>.`],
+  `Due to the way tables are displayed, the <code>&lt;tfoot&gt;</code> element is not supported by default. You can however add <code>table tfoot { order: 3; }</code> to your CSS files to partially support table footers.`,
+  `Tables are vertically scrollable by default, with a <code>max-height</code> property of <code>400px</code>.`,],
   customization: [
     `Text color for <code>&lt;th&gt;</code> and <code>&lt;td&gt;</code> elements can be changed by changing the values of the <code>--table-head-fore-color</code> and <code>--table-body-fore-color</code> variables respectively.`,
     `Background color for <code>&lt;th&gt;</code> and <code>&lt;td&gt;</code> elements can be changed by changing the values of the <code>--table-head-back-color</code> and <code>--table-body-back-color</code> variables respectively.`,

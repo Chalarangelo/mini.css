@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.0.1
+
+- Minor fixes in tables. `.horizontal` tables should now behave a bit better and not display a scrollbar, unless necessary. #145
+
 ## v3.0.0
 
 - Fully rebuilt framework. A ton of work has been put into creating this version to be the best CSS framework experience you have gotten so far:

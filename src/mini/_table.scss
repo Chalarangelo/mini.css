@@ -165,13 +165,14 @@ table {
     border: 0;
     thead, tbody {
       border: 0;
+      flex: .2 0 0;
       flex-flow: row nowrap;
     }
     tbody {
       overflow: auto;
       justify-content: space-between;
-      flex: 1 0 0;
-      margin-left: calc( 4 * var(#{$universal-margin-var}));
+      flex: .8 0 0;
+      margin-left: 0;
       padding-bottom: calc(var(#{$universal-padding-var}) / 4);
     }
     tr {
@@ -179,7 +180,7 @@ table {
       flex: 1 0 auto;
     }
     th, td {
-      width: 100%;
+      width: auto;
       border: 0;
       border-bottom: $__1px solid var(#{$table-border-color-var});
       &:not(:first-child){

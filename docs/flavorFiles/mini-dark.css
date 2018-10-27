@@ -1380,14 +1380,15 @@ table.horizontal {
 
 table.horizontal thead, table.horizontal tbody {
   border: 0;
+  flex: .2 0 0;
   flex-flow: row nowrap;
 }
 
 table.horizontal tbody {
   overflow: auto;
   justify-content: space-between;
-  flex: 1 0 0;
-  margin-left: calc( 4 * var(--universal-margin));
+  flex: .8 0 0;
+  margin-left: 0;
   padding-bottom: calc(var(--universal-padding) / 4);
 }
 
@@ -1397,7 +1398,7 @@ table.horizontal tr {
 }
 
 table.horizontal th, table.horizontal td {
-  width: 100%;
+  width: auto;
   border: 0;
   border-bottom: 0.0625rem solid var(--table-border-color);
 }
@@ -1856,7 +1857,7 @@ progress::-webkit-progress-value {
 }
 
 progress::-webkit-progress-bar {
-  background: var(#aaa);
+  background: var(--progress-back-color);
 }
 
 progress::-moz-progress-bar {

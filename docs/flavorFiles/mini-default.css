@@ -3,7 +3,7 @@
   Flavor name: Default (mini-default)
   Author: Angelos Chalaris (chalarangelo@gmail.com)
   Maintainers: Angelos Chalaris
-  mini.css version: v3.0.0
+  mini.css version: v3.0.0-alpha.3
 */
 /*
   Browsers resets and base typography.
@@ -1854,7 +1854,7 @@ progress::-webkit-progress-value {
 }
 
 progress::-webkit-progress-bar {
-  background: var(#ddd);
+  background: var(--progress-back-color);
 }
 
 progress::-moz-progress-bar {

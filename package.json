@@ -7,8 +7,11 @@
     "lib": "src/mini"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-docs": "node ./docs/build-docs.js"
+    "build-docs": "node ./docs/build-docs.js && node-sass src/flavors/mini-doc.scss docs/style.min.css --output-style compressed",
+    "build-mini-default": "node-sass src/flavors/mini-default.scss dist/mini-default.css --output-style expanded && node-sass src/flavors/mini-default.scss dist/mini-default.min.css --output-style compressed",
+    "build-mini-dark": "node-sass src/flavors/mini-dark.scss dist/mini-dark.css --output-style expanded && node-sass src/flavors/mini-dark.scss dist/mini-dark.min.css --output-style compressed",
+    "build-mini-nord": "node-sass src/flavors/mini-nord.scss dist/mini-nord.css --output-style expanded && node-sass src/flavors/mini-nord.scss dist/mini-nord.min.css --output-style compressed",
+    "build-flavors": "npm run build-mini-default && npm run build-mini-dark && npm run build-mini-nord"
   },
   "repository": {
     "type": "git",

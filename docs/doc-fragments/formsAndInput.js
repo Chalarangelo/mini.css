@@ -54,16 +54,16 @@ module.exports = {
   modifiers: [],
   dos: [
     {
-      description: 'Form inputs are inline by defaut, however you can combine forms with the <a href="#grid">grid system</a> to create aligned forms.',
+      description: 'Form inputs are inline by default, however you can combine forms with the <a href="#grid">grid system</a> to create aligned forms.',
       sample: `<pre><span class="code-line"><span class="highlight-a">&lt;form&gt;</span></span>
 <span class="code-line">  <span class="highlight-a">&lt;fieldset&gt;</span></span>
 <span class="code-line">    <span class="highlight-a">&lt;legend&gt;</span>Simple form<span class="highlight-a">&lt;/legend&gt;</span></span>
-<span class="code-line">    <span class="highlight-a">&lt;div&gt;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
-<span class="code-line">      <span class="highlight-a">&lt;div&gt;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-12 col-md-6&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">    <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;row&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">      <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-12 col-md-6&quot;</span><span class="highlight-a">&gt;</span></span>
 <span class="code-line">        <span class="highlight-a">&lt;label</span> <span class="highlight-b">for</span>=<span class="highlight-c">&quot;username&quot;</span><span class="highlight-a">&gt;</span>Username<span class="highlight-a">&lt;/label&gt;</span></span>
 <span class="code-line">        <span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;text&quot;</span> <span class="highlight-b">id</span>=<span class="highlight-c">&quot;Username&quot;</span> <span class="highlight-b">placeholder</span>=<span class="highlight-c">&quot;Username&quot;</span><span class="highlight-a">/&gt;</span></span>
 <span class="code-line">      <span class="highlight-a">&lt;/div&gt;</span></span>
-<span class="code-line">      <span class="highlight-a">&lt;div&gt;</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-12 col-md-6&quot;</span><span class="highlight-a">&gt;</span></span>
+<span class="code-line">      <span class="highlight-a">&lt;div</span> <span class="highlight-b">class</span>=<span class="highlight-c">&quot;col-sm-12 col-md-6&quot;</span><span class="highlight-a">&gt;</span></span>
 <span class="code-line">        <span class="highlight-a">&lt;label</span> <span class="highlight-b">for</span>=<span class="highlight-c">&quot;password&quot;</span><span class="highlight-a">&gt;</span>Password<span class="highlight-a">&lt;/label&gt;</span></span>
 <span class="code-line">        <span class="highlight-a">&lt;input</span> <span class="highlight-b">type</span>=<span class="highlight-c">&quot;password&quot;</span> <span class="highlight-b">id</span>=<span class="highlight-c">&quot;password&quot;</span> <span class="highlight-b">placeholder</span>=<span class="highlight-c">&quot;Password&quot;</span><span class="highlight-a">/&gt;</span></span>
 <span class="code-line">      <span class="highlight-a">&lt;/div&gt;</span></span>

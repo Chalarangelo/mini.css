@@ -160,6 +160,22 @@ table {
     tbody tr:first-child td {
       border-top: 0;
     }
+    thead tr:first-child th {
+      &:first-child{
+          border-top-left-radius: var(--universal-border-radius);
+      }
+      &:last-child{
+          border-top-right-radius: var(--universal-border-radius);
+      }
+    }
+    tbody tr:last-child td {
+      &:first-child{
+          border-bottom-left-radius: var(--universal-border-radius);
+      }
+      &:last-child{
+          border-bottom-right-radius: var(--universal-border-radius);
+      }
+    }
   }
   table.#{$table-horizontal-name} {
     border: 0;
@@ -215,6 +231,26 @@ table {
       }
       &:last-child{
         border-bottom-left-radius: 0.25rem;
+      }
+    }
+  }
+}
+@else {
+  table {
+    thead tr:first-child th {
+      &:first-child{
+          border-top-left-radius: var(--universal-border-radius);
+      }
+      &:last-child{
+          border-top-right-radius: var(--universal-border-radius);
+      }
+    }
+    tbody tr:last-child td {
+      &:first-child{
+          border-bottom-left-radius: var(--universal-border-radius);
+      }
+      &:last-child{
+          border-bottom-right-radius: var(--universal-border-radius);
       }
     }
   }

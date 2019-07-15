@@ -115,6 +115,9 @@ header {
   // Fix for responsive header, using the grid system's row and column alignment.
   &.#{$grid-row-name} {
     box-sizing: content-box;
+    & .#{$header-logo-name} {
+      line-height: 1;
+    }
   }
   // Header logo styling.
   .#{$header-logo-name} {

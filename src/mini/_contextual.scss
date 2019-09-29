@@ -161,10 +161,10 @@ mark {
       left: calc(50% - var(#{$universal-margin-var}));
     }
     &:not(.#{$tooltip-bottom-name}):before { // Top (default) tooltip styling
-      border-top-color: $tooltip-back-color;
+      border-top-color: var(#{$tooltip-back-color-var});
     }
     &.#{$tooltip-bottom-name}:before { // Bottom tooltip styling
-      border-bottom-color: $tooltip-back-color;
+      border-bottom-color: var(#{$tooltip-back-color-var});
     }
     &:after {  // This is the actual tooltip's text block
       content: attr(aria-label);

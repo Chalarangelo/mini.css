@@ -22,8 +22,8 @@
   --universal-margin: 0.5rem;
   --universal-padding: 0.5rem;
   --universal-border-radius: 0.125rem;
-  --a-link-color: #0277bd;
-  --a-visited-color: #01579b;
+  --a-link-color: #65A0C7;
+  --a-visited-color: #3985B7;
 }
 
 html {
@@ -1074,6 +1074,10 @@ header.row {
   box-sizing: content-box;
 }
 
+header.row .logo {
+  line-height: 1;
+}
+
 header .logo {
   color: var(--header-fore-color);
   font-size: 1.75rem;
@@ -1374,6 +1378,22 @@ table:not(.horizontal) tbody tr:first-child td {
   border-top: 0;
 }
 
+table:not(.horizontal) thead tr:first-child th:first-child {
+  border-top-left-radius: var(--universal-border-radius);
+}
+
+table:not(.horizontal) thead tr:first-child th:last-child {
+  border-top-right-radius: var(--universal-border-radius);
+}
+
+table:not(.horizontal) tbody tr:last-child td:first-child {
+  border-bottom-left-radius: var(--universal-border-radius);
+}
+
+table:not(.horizontal) tbody tr:last-child td:last-child {
+  border-bottom-right-radius: var(--universal-border-radius);
+}
+
 table.horizontal {
   border: 0;
 }
@@ -1608,11 +1628,11 @@ mark.inline-block {
 }
 
 .tooltip:not(.bottom):before {
-  border-top-color: #fafafa;
+  border-top-color: var(--tooltip-back-color);
 }
 
 .tooltip.bottom:before {
-  border-bottom-color: #fafafa;
+  border-bottom-color: var(--tooltip-back-color);
 }
 
 .tooltip:after {

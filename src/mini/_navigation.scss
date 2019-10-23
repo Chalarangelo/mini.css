@@ -126,8 +126,8 @@ header {
     padding: var(#{$universal-padding-var}) calc(2 * var(#{$universal-padding-var}));
     text-decoration: none;
   }
-  // Link styling.
-  button, [type="button"], .#{$button-class-name}, [role="button"] {
+  // Link and span styling.
+  span, button, [type="button"], .#{$button-class-name}, [role="button"] {
     box-sizing: border-box;
     position: relative;
     top: calc(0rem - var(#{$universal-padding-var}) / 4);  // Use universal-padding to offset the padding of the header.
@@ -142,7 +142,9 @@ header {
     @if $_header-links-uppercase {
       text-transform: uppercase;
     }
-    &:hover, &:focus {
+  }
+  button, [type="button"], .#{$button-class-name}, [role="button"] {
+   &:hover, &:focus {
       background: var(#{$header-hover-back-color-var});
     }
   }
